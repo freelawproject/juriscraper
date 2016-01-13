@@ -1,0 +1,299 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180eea120">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02578</identifier>
+<identifier type="local">P0b002ee180eea120</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_04-cv-02578</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_04-cv-02578</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:04-cv-02578</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party fullName="Community Resources Council of Shawnee County, Kansas, Inc." lastName="Community Resources Council of Shawnee County, Kansas, Inc." role="Defendant"></party>
+ <party firstName="Rosemary" fullName="Rosemary E. Harris" lastName="Harris" middleName="E." role="Plaintiff"></party>
+ <party firstName="James" fullName="James L. Olson" lastName="Olson" middleName="L." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al</title>
+ <partNumber>2:04-cv-02578</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02578/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:04-cv-02578;04-2578</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Community Resources Council of Shawnee County, Kansas, Inc.</displayForm>
+ <namePart type="family">Community Resources Council of Shawnee County, Kansas, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rosemary E. Harris</displayForm>
+ <namePart type="family">Harris</namePart>
+ <namePart type="given">Rosemary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James L. Olson</displayForm>
+ <namePart type="family">Olson</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_04-cv-02578</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:04-cv-02578</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party fullName="Community Resources Council of Shawnee County, Kansas, Inc." lastName="Community Resources Council of Shawnee County, Kansas, Inc." role="Defendant"></party>
+ <party firstName="Rosemary" fullName="Rosemary E. Harris" lastName="Harris" middleName="E." role="Plaintiff"></party>
+ <party firstName="James" fullName="James L. Olson" lastName="Olson" middleName="L." role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02578-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-0/mods.xml">
+ <titleInfo>
+  <title>Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al</title>
+  <subTitle>ORDER granting 10 Motion for Discovery. Signed by Magistrate Judge James P. O&apos;Hara on 5/18/05. (hbw, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_04-cv-02578-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f3beec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-0</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02578_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02578/pdf/USCOURTS-ksd-2_04-cv-02578-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02578; Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02578-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-18</dateIssued>
+  <docketText>ORDER granting 10 Motion for Discovery. Signed by Magistrate Judge James P. O&apos;Hara on 5/18/05. (hbw, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02578-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-1/mods.xml">
+ <titleInfo>
+  <title>Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al</title>
+  <subTitle>ORDER overruling 20 Objection(s) filed by Community Resources Council of Shawnee County, Kansas, Inc.,, James L. Olson. See order for details. Signed by Magistrate Judge James P. O&apos;Hara on 6/7/05. (hbw, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_04-cv-02578-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f3bdb6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-1</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02578_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02578/pdf/USCOURTS-ksd-2_04-cv-02578-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02578; Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02578-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-06-07</dateIssued>
+  <docketText>ORDER overruling 20 Objection(s) filed by Community Resources Council of Shawnee County, Kansas, Inc.,, James L. Olson. See order for details. Signed by Magistrate Judge James P. O&apos;Hara on 6/7/05. (hbw, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02578-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-2/mods.xml">
+ <titleInfo>
+  <title>Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al</title>
+  <subTitle>ORDER granting 41 Motion for Leave to File, denying 29 Motion for Bill of Costs. Signed by Magistrate Judge James P. O&apos;Hara on 8/1/05. (hbw)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_04-cv-02578-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f3beea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-2</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02578_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02578/pdf/USCOURTS-ksd-2_04-cv-02578-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02578; Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02578-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-08-01</dateIssued>
+  <docketText>ORDER granting 41 Motion for Leave to File, denying 29 Motion for Bill of Costs. Signed by Magistrate Judge James P. O&apos;Hara on 8/1/05. (hbw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02578-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-3/mods.xml">
+ <titleInfo>
+  <title>Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al</title>
+  <subTitle>ORDER granting 46 Motion for Partial Summary Judgment. Signed by Judge Carlos Murguia on 11/15/2005. (js)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_04-cv-02578-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f3bee8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-3</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02578_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02578/pdf/USCOURTS-ksd-2_04-cv-02578-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02578; Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02578-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-11-15</dateIssued>
+  <docketText>ORDER granting 46 Motion for Partial Summary Judgment. Signed by Judge Carlos Murguia on 11/15/2005. (js)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02578-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-4/mods.xml">
+ <titleInfo>
+  <title>Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al</title>
+  <subTitle>ORDER granting in part/denying in part 95 Motion for Summary Judgment, granting 98 Motion for Summary Judgment, denying 100 Motion for Summary Judgment. Signed by Judge Carlos Murguia on 5/16/2006. (js) Modified on 5/17/2006 to show correct ruling information (yh, ).</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_04-cv-02578-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f3bee9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-4</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02578_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02578/pdf/USCOURTS-ksd-2_04-cv-02578-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02578; Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02578-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-05-16</dateIssued>
+  <docketText>ORDER granting in part/denying in part 95 Motion for Summary Judgment, granting 98 Motion for Summary Judgment, denying 100 Motion for Summary Judgment. Signed by Judge Carlos Murguia on 5/16/2006. (js) Modified on 5/17/2006 to show correct ruling information (yh, ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02578-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-5/mods.xml">
+ <titleInfo>
+  <title>Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al</title>
+  <subTitle>ORDER denying 169 Motion for Order. Signed by Judge Carlos Murguia on 1/23/07. (js)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_04-cv-02578-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f3beeb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-5</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02578_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02578/USCOURTS-ksd-2_04-cv-02578-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02578/pdf/USCOURTS-ksd-2_04-cv-02578-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02578; Harris v. Community Resources Council of Shawnee County, Kansas, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02578-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-01-23</dateIssued>
+  <docketText>ORDER denying 169 Motion for Order. Signed by Judge Carlos Murguia on 1/23/07. (js)</docketText>
+</extension>
+</relatedItem>
+</mods>

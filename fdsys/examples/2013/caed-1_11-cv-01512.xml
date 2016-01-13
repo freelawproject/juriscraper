@@ -1,0 +1,345 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183fb0f9e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-03-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-03-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01512</identifier>
+<identifier type="local">P0b002ee183fb0f9e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-03-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-03-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_11-cv-01512</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-01512</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-01512</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party firstName="Aaron" fullName="Aaron Matityahu" lastName="Matityahu" role="Defendant"></party>
+ <party firstName="Charlotte" fullName="Charlotte Matityahu" lastName="Matityahu" role="Defendant"></party>
+ <party firstName="Eldad" fullName="Eldad Matityahu" lastName="Matityahu" role="Defendant"></party>
+ <party firstName="Nadine" fullName="Nadine Matityahu" lastName="Matityahu" role="Defendant"></party>
+ <party fullName="Tri-Dam" lastName="Tri-Dam" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Tri-Dam v. Matityahu et al</title>
+ <partNumber>1:11-cv-01512</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01512/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-01512;11-1512</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Aaron Matityahu</displayForm>
+ <namePart type="family">Matityahu</namePart>
+ <namePart type="given">Aaron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charlotte Matityahu</displayForm>
+ <namePart type="family">Matityahu</namePart>
+ <namePart type="given">Charlotte</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eldad Matityahu</displayForm>
+ <namePart type="family">Matityahu</namePart>
+ <namePart type="given">Eldad</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nadine Matityahu</displayForm>
+ <namePart type="family">Matityahu</namePart>
+ <namePart type="given">Nadine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tri-Dam</displayForm>
+ <namePart type="family">Tri-Dam</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-01512</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-01512</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party firstName="Aaron" fullName="Aaron Matityahu" lastName="Matityahu" role="Defendant"></party>
+ <party firstName="Charlotte" fullName="Charlotte Matityahu" lastName="Matityahu" role="Defendant"></party>
+ <party firstName="Eldad" fullName="Eldad Matityahu" lastName="Matityahu" role="Defendant"></party>
+ <party firstName="Nadine" fullName="Nadine Matityahu" lastName="Matityahu" role="Defendant"></party>
+ <party fullName="Tri-Dam" lastName="Tri-Dam" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01512-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-0/mods.xml">
+ <titleInfo>
+  <title>Tri-Dam v. Matityahu et al</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Sandra M. Snyder on 7/17/2012 continuing non-expert discovery and non-dispositive motion filing deadlines re 13 Scheduling Order. (Lundstrom, T)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01512-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fb6866</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-0</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01512_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01512/pdf/USCOURTS-caed-1_11-cv-01512-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01512; Tri-Dam v. Matityahu et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01512-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-07-18</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Sandra M. Snyder on 7/17/2012 continuing non-expert discovery and non-dispositive motion filing deadlines re 13 Scheduling Order. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01512-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-1/mods.xml">
+ <titleInfo>
+  <title>Tri-Dam v. Matityahu et al</title>
+  <subTitle>STIPULATION and ORDER GRANTING leave to file the proposed Second Amended Complaint, attached hereto as Exhibit 1, with said complaint to be filed within five court days of entry of this order. It is FURTHER ORDERED that plaintiff&apos;s Second Amended Complaint is deemed filed and served on defendants as of the date of this order. A Scheduling Conference is set for 10/2/2012 at 09:30 AM in Courtroom 1 (SMS) before Magistrate Judge Sandra M. Snyder to discuss possible modification of the existing scheduling deadlines; order signed by Magistrate Judge Sandra M. Snyder on 8/30/2012. (Attachments: # (1) proposed 2nd amended complaint) (Rooney, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01512-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fb6867</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-1</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01512_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01512/pdf/USCOURTS-caed-1_11-cv-01512-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01512; Tri-Dam v. Matityahu et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01512-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-08-30</dateIssued>
+  <docketText>STIPULATION and ORDER GRANTING leave to file the proposed Second Amended Complaint, attached hereto as Exhibit 1, with said complaint to be filed within five court days of entry of this order. It is FURTHER ORDERED that plaintiff&apos;s Second Amended Complaint is deemed filed and served on defendants as of the date of this order. A Scheduling Conference is set for 10/2/2012 at 09:30 AM in Courtroom 1 (SMS) before Magistrate Judge Sandra M. Snyder to discuss possible modification of the existing scheduling deadlines; order signed by Magistrate Judge Sandra M. Snyder on 8/30/2012. (Attachments: # (1) proposed 2nd amended complaint) (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01512-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-2/mods.xml">
+ <titleInfo>
+  <title>Tri-Dam v. Matityahu et al</title>
+  <subTitle>STIPULATION and ORDER regarding the Dispositive Pre-Trial motion filing deadline, signed by Chief Judge Anthony W. Ishii on 10/25/2012. (Kusamura, W)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01512-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fb6863</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-2</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01512_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01512/pdf/USCOURTS-caed-1_11-cv-01512-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01512; Tri-Dam v. Matityahu et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01512-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-10-25</dateIssued>
+  <docketText>STIPULATION and ORDER regarding the Dispositive Pre-Trial motion filing deadline, signed by Chief Judge Anthony W. Ishii on 10/25/2012. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01512-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-3/mods.xml">
+ <titleInfo>
+  <title>Tri-Dam v. Matityahu et al</title>
+  <subTitle>STIPULATION and ORDER GRANTING the parties&apos; request for an extension of the deadline to file dismissal documents. Dismissal documents to be filed by 12/28/2012. Order signed by Magistrate Judge Sandra M. Snyder on 12/3/2012. (Rooney, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01512-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fb6865</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-3</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01512_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01512/pdf/USCOURTS-caed-1_11-cv-01512-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01512; Tri-Dam v. Matityahu et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01512-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-12-03</dateIssued>
+  <docketText>STIPULATION and ORDER GRANTING the parties&apos; request for an extension of the deadline to file dismissal documents. Dismissal documents to be filed by 12/28/2012. Order signed by Magistrate Judge Sandra M. Snyder on 12/3/2012. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01512-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-4/mods.xml">
+ <titleInfo>
+  <title>Tri-Dam v. Matityahu et al</title>
+  <subTitle>STIPULATION and ORDER regarding the deadline to file Notice of Dismissal, signed by District Judge Anthony W. Ishii on 1/2/2013. ( Filing Deadline: 1/25/2013) (Figueroa, O)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01512-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fb6864</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-4</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01512_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01512/pdf/USCOURTS-caed-1_11-cv-01512-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01512; Tri-Dam v. Matityahu et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01512-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>STIPULATION and ORDER regarding the deadline to file Notice of Dismissal, signed by District Judge Anthony W. Ishii on 1/2/2013. ( Filing Deadline: 1/25/2013) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01512-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-5/mods.xml">
+ <titleInfo>
+  <title>Tri-Dam v. Matityahu et al</title>
+  <subTitle>Stipulation and ORDER Regarding the Deadline to File Notice of Dismissal and Mandatory Scheduling Conference,signed by District Judge Anthony W. Ishii on 1/25/13. (Notice of Dismissal Deadline: 3/27/2013; Mandatory Scheduling Conference is Continued to 4/16/2013 at 10:00 AM in Courtroom 1 (SMS) before Magistrate Judge Sandra M. Snyder.) (Marrujo, C)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01512-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fb6868</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-5</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01512_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01512/pdf/USCOURTS-caed-1_11-cv-01512-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01512; Tri-Dam v. Matityahu et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01512-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-01-28</dateIssued>
+  <docketText>Stipulation and ORDER Regarding the Deadline to File Notice of Dismissal and Mandatory Scheduling Conference,signed by District Judge Anthony W. Ishii on 1/25/13. (Notice of Dismissal Deadline: 3/27/2013; Mandatory Scheduling Conference is Continued to 4/16/2013 at 10:00 AM in Courtroom 1 (SMS) before Magistrate Judge Sandra M. Snyder.) (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01512-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-6/mods.xml">
+ <titleInfo>
+  <title>Tri-Dam v. Matityahu et al</title>
+  <subTitle>STIPULATION and ORDER of DISMISSAL Pursuant to Settlement Agreement signed by District Judge Anthony W. Ishii on 3/27/2013. CASE CLOSED. (Sant Agata, S)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01512-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fb677d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-6</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01512_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01512/USCOURTS-caed-1_11-cv-01512-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01512/pdf/USCOURTS-caed-1_11-cv-01512-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01512; Tri-Dam v. Matityahu et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01512-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-03-28</dateIssued>
+  <docketText>STIPULATION and ORDER of DISMISSAL Pursuant to Settlement Agreement signed by District Judge Anthony W. Ishii on 3/27/2013. CASE CLOSED. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

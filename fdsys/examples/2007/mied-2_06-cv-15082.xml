@@ -1,0 +1,195 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18195c794">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-15082</identifier>
+<identifier type="local">P0b002ee18195c794</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_06-cv-15082</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_06-cv-15082</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:06-cv-15082</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Paul" fullName="Paul Craft" lastName="Craft" role="Plaintiff"></party>
+ <party firstName="Marty" fullName="Marty Farnsworth" lastName="Farnsworth" role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven R. Jenkins" lastName="Jenkins" middleName="R." role="Defendant"></party>
+ <party fullName="Mullins" lastName="Mullins" role="Defendant"></party>
+ <party fullName="Riley" lastName="Riley" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Thomas" lastName="Thomas" role="Defendant"></party>
+ <party firstName="Millicent" fullName="Millicent Warren" lastName="Warren" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Craft v. Warren, et al</title>
+ <partNumber>2:06-cv-15082</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-15082/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:06-cv-15082;06-15082</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Paul Craft</displayForm>
+ <namePart type="family">Craft</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Marty Farnsworth</displayForm>
+ <namePart type="family">Farnsworth</namePart>
+ <namePart type="given">Marty</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Steven R. Jenkins</displayForm>
+ <namePart type="family">Jenkins</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mullins</displayForm>
+ <namePart type="family">Mullins</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Riley</displayForm>
+ <namePart type="family">Riley</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eric Thomas</displayForm>
+ <namePart type="family">Thomas</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Millicent Warren</displayForm>
+ <namePart type="family">Warren</namePart>
+ <namePart type="given">Millicent</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_06-cv-15082</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:06-cv-15082</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Paul" fullName="Paul Craft" lastName="Craft" role="Plaintiff"></party>
+ <party firstName="Marty" fullName="Marty Farnsworth" lastName="Farnsworth" role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven R. Jenkins" lastName="Jenkins" middleName="R." role="Defendant"></party>
+ <party fullName="Mullins" lastName="Mullins" role="Defendant"></party>
+ <party fullName="Riley" lastName="Riley" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Thomas" lastName="Thomas" role="Defendant"></party>
+ <party firstName="Millicent" fullName="Millicent Warren" lastName="Warren" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_06-cv-15082-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15082/USCOURTS-mied-2_06-cv-15082-0/mods.xml">
+ <titleInfo>
+  <title>Craft v. Warren, et al</title>
+  <subTitle>ORDER DISMISSING CASE Signed by Honorable Patrick J Duggan. (MOre, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_06-cv-15082-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a6c586</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15082/USCOURTS-mied-2_06-cv-15082-0</identifier>
+ <identifier type="former granule identifier">mied-2_06-cv-15082_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15082/USCOURTS-mied-2_06-cv-15082-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-15082/pdf/USCOURTS-mied-2_06-cv-15082-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-15082; Craft v. Warren, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_06-cv-15082-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-22</dateIssued>
+  <docketText>ORDER DISMISSING CASE Signed by Honorable Patrick J Duggan. (MOre, )</docketText>
+</extension>
+</relatedItem>
+</mods>

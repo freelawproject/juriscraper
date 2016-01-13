@@ -1,0 +1,1922 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186dd174b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263</identifier>
+<identifier type="local">P0b002ee186dd174b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-laed-2_07-cv-01263</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_07-cv-01263</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:07-cv-01263</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>340</natureSuitCode>
+ <natureSuit>Marine Personal Injury</natureSuit>
+ <cause>46:0181 Limitation of Liability</cause>
+ <party fullName="4J Oil &amp; Gas Investments Consultant, L.L.C." lastName="4J Oil &amp; Gas Investments Consultant, L.L.C." role="Counter Defendant"></party>
+ <party fullName="Alpine Exploration Companies, Inc." lastName="Alpine Exploration Companies, Inc." role="Counter Defendant"></party>
+ <party fullName="Alpine Exploration Companies, Inc." lastName="Alpine Exploration Companies, Inc." role="Third Party Defendant"></party>
+ <party fullName="Alpine Exportation Companies, Inc." lastName="Alpine Exportation Companies, Inc." role="Claimant"></party>
+ <party fullName="Alpine Exportation Companies, Inc." lastName="Alpine Exportation Companies, Inc." role="Third Party Plaintiff"></party>
+ <party fullName="American Petroleum, LLC" lastName="American Petroleum, LLC" role="Claimant"></party>
+ <party fullName="American Petroleum, LLC" lastName="American Petroleum, LLC" role="Counter Defendant"></party>
+ <party fullName="American Petroleum, LLC" lastName="American Petroleum, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="Angel Oil, LLC" lastName="Angel Oil, LLC" role="Claimant"></party>
+ <party fullName="Angel Oil, LLC" lastName="Angel Oil, LLC" role="Counter Defendant"></party>
+ <party fullName="Angel Oil, LLC" lastName="Angel Oil, LLC" role="Third Party Plaintiff"></party>
+ <party firstName="George" fullName="George Bejohn" lastName="Bejohn" role="Claimant"></party>
+ <party firstName="George" fullName="George Bejohn" lastName="Bejohn" role="Third Party Plaintiff"></party>
+ <party fullName="Big Sky Operating Companies, Inc." lastName="Big Sky Operating Companies, Inc." role="Claimant"></party>
+ <party fullName="Big Sky Operating Companies, Inc." lastName="Big Sky Operating Companies, Inc." role="Counter Defendant"></party>
+ <party fullName="Big Sky Operating Companies, Inc." lastName="Big Sky Operating Companies, Inc." role="Third Party Plaintiff"></party>
+ <party firstName="Dennis" fullName="Dennis Brehm" lastName="Brehm" role="Movant"></party>
+ <party firstName="Edna" fullName="Edna Carden" lastName="Carden" role="Claimant"></party>
+ <party firstName="Edna" fullName="Edna Carden" lastName="Carden" role="Third Party Plaintiff"></party>
+ <party firstName="Edna" fullName="Edna M. Carden" lastName="Carden" middleName="M." role="Counter Defendant"></party>
+ <party fullName="Carden Oil and Gas, Inc." lastName="Carden Oil and Gas, Inc." role="Claimant"></party>
+ <party fullName="Carden Oil and Gas, Inc." lastName="Carden Oil and Gas, Inc." role="Counter Defendant"></party>
+ <party fullName="Carden Oil and Gas, Inc." lastName="Carden Oil and Gas, Inc." role="Third Party Plaintiff"></party>
+ <party fullName="Certain Underwriters at Lloyd&apos;s of London" lastName="Certain Underwriters at Lloyd&apos;s of London" role="Third Party Defendant"></party>
+ <party firstName="William" fullName="William Conaster" lastName="Conaster" role="Claimant"></party>
+ <party firstName="William" fullName="William Conaster" lastName="Conaster" role="Counter Defendant"></party>
+ <party firstName="William" fullName="William Conaster" lastName="Conaster" role="Third Party Plaintiff"></party>
+ <party firstName="Willis" fullName="Willis Conaster" lastName="Conaster" role="Claimant"></party>
+ <party firstName="Willis" fullName="Willis Conaster" lastName="Conaster" role="Cross Defendant"></party>
+ <party firstName="Willis" fullName="Willis Conaster" lastName="Conaster" role="Third Party Plaintiff"></party>
+ <party firstName="L" fullName="L Jay Cuccia" lastName="Cuccia" middleName="Jay" role="Counter Defendant"></party>
+ <party firstName="Jay" fullName="Jay L. Cuccia" lastName="Cuccia" middleName="L." role="Claimant"></party>
+ <party firstName="Jay" fullName="Jay L. Cuccia" lastName="Cuccia" middleName="L." role="Third Party Plaintiff"></party>
+ <party fullName="DLP Resources, LLC" lastName="DLP Resources, LLC" role="Claimant"></party>
+ <party fullName="DLP Resources, LLC" lastName="DLP Resources, LLC" role="Counter Defendant"></party>
+ <party fullName="DLP Resources, LLC" lastName="DLP Resources, LLC" role="Third Party Plaintiff"></party>
+ <party firstName="Renee" fullName="Renee Davis Davenport" lastName="Davenport" middleName="Davis" role="Claimant"></party>
+ <party firstName="Renee" fullName="Renee Davis Davenport" lastName="Davenport" middleName="Davis" role="Counter Defendant"></party>
+ <party firstName="Renee" fullName="Renee Davis Davenport" lastName="Davenport" middleName="Davis" role="Third Party Plaintiff"></party>
+ <party fullName="Deerfield Energy, LLC" lastName="Deerfield Energy, LLC" role="Claimant"></party>
+ <party fullName="Deerfield Energy, LLC" lastName="Deerfield Energy, LLC" role="Counter Defendant"></party>
+ <party fullName="Deerfield Energy, LLC" lastName="Deerfield Energy, LLC" role="Third Party Plaintiff"></party>
+ <party firstName="Catherine" fullName="Catherine Duplantis" lastName="Duplantis" role="Claimant"></party>
+ <party firstName="Catherine" fullName="Catherine Duplantis" lastName="Duplantis" role="Third Party Plaintiff"></party>
+ <party firstName="Roger" fullName="Roger Duplantis" lastName="Duplantis" role="Claimant"></party>
+ <party firstName="Roger" fullName="Roger Duplantis" lastName="Duplantis" role="Counter Defendant"></party>
+ <party firstName="Roger" fullName="Roger Duplantis" lastName="Duplantis" role="Third Party Plaintiff"></party>
+ <party firstName="Katherine" fullName="Katherine F. Duplantis" lastName="Duplantis" middleName="F." role="Counter Defendant"></party>
+ <party fullName="Duplantis Resources, LLC" lastName="Duplantis Resources, LLC" role="Claimant"></party>
+ <party fullName="Duplantis Resources, LLC" lastName="Duplantis Resources, LLC" role="Counter Defendant"></party>
+ <party fullName="Duplantis Resources, LLC" lastName="Duplantis Resources, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="ExPert Oil &amp; Gas, L.L.C." lastName="ExPert Oil &amp; Gas, L.L.C." role="Claimant"></party>
+ <party fullName="ExPert Oil &amp; Gas, L.L.C." lastName="ExPert Oil &amp; Gas, L.L.C." role="Counter Defendant"></party>
+ <party fullName="ExPert Oil &amp; Gas, L.L.C." lastName="ExPert Oil &amp; Gas, L.L.C." role="Cross Defendant"></party>
+ <party fullName="ExPert Oil &amp; Gas, L.L.C." lastName="ExPert Oil &amp; Gas, L.L.C." role="Third Party Defendant"></party>
+ <party fullName="ExPert Oil &amp; Gas, L.L.C." lastName="ExPert Oil &amp; Gas, L.L.C." role="Third Party Plaintiff"></party>
+ <party fullName="Expert E&amp;P Consultants, LLC" lastName="Expert E&amp;P Consultants, LLC" role="Claimant"></party>
+ <party fullName="Expert E&amp;P Consultants, LLC" lastName="Expert E&amp;P Consultants, LLC" role="Third Party Defendant"></party>
+ <party fullName="Federal Insurance Company" lastName="Federal Insurance Company" role="Counter Defendant"></party>
+ <party fullName="Federal Insurance Company" lastName="Federal Insurance Company" role="Cross Defendant"></party>
+ <party fullName="Federal Insurance Company" lastName="Federal Insurance Company" role="Movant"></party>
+ <party fullName="Federal Insurance Company" lastName="Federal Insurance Company" role="Plaintiff"></party>
+ <party fullName="Federal Insurance Company" lastName="Federal Insurance Company" role="Third Party Defendant"></party>
+ <party fullName="Four J. Oil and Gas Investments/Consultant" lastName="Four J. Oil and Gas Investments/Consultant" role="Claimant"></party>
+ <party fullName="Four J. Oil and Gas Investments/Consultant" lastName="Four J. Oil and Gas Investments/Consultant" role="Third Party Plaintiff"></party>
+ <party fullName="G&amp;C Marine LLC" lastName="G&amp;C Marine LLC" role="Counter Claimant"></party>
+ <party fullName="G&amp;C Marine LLC" lastName="G&amp;C Marine LLC" role="Defendant"></party>
+ <party fullName="George Dejohn, LLC" lastName="George Dejohn, LLC" role="Counter Defendant"></party>
+ <party fullName="Grand Beach Land, Inc." lastName="Grand Beach Land, Inc." role="Claimant"></party>
+ <party fullName="Grand Beach Land, Inc." lastName="Grand Beach Land, Inc." role="Counter Defendant"></party>
+ <party fullName="Grand Beach Land, Inc." lastName="Grand Beach Land, Inc." role="Third Party Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Harper Jr." generation="Jr." lastName="Harper" role="Claimant"></party>
+ <party firstName="Joseph" fullName="Joseph Harper Jr." generation="Jr." lastName="Harper" role="Third Party Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph A. Harper Jr." generation="Jr." lastName="Harper" middleName="A." role="Counter Defendant"></party>
+ <party firstName="Alice" fullName="Alice B. Harper" lastName="Harper" middleName="B." role="Claimant"></party>
+ <party firstName="Alice" fullName="Alice B. Harper" lastName="Harper" middleName="B." role="Counter Defendant"></party>
+ <party firstName="Alice" fullName="Alice B. Harper" lastName="Harper" middleName="B." role="Third Party Plaintiff"></party>
+ <party fullName="Harper Petroleum Company, Inc." lastName="Harper Petroleum Company, Inc." role="Claimant"></party>
+ <party fullName="Harper Petroleum Company, Inc." lastName="Harper Petroleum Company, Inc." role="Counter Defendant"></party>
+ <party fullName="Harper Petroleum Company, Inc." lastName="Harper Petroleum Company, Inc." role="Third Party Plaintiff"></party>
+ <party firstName="Crystal" fullName="Crystal Hinds" lastName="Hinds" role="Claimant"></party>
+ <party firstName="Crystal" fullName="Crystal Hinds" lastName="Hinds" role="Third Party Plaintiff"></party>
+ <party firstName="Crystal" fullName="Crystal Coco Hinds" lastName="Hinds" middleName="Coco" role="Counter Defendant"></party>
+ <party firstName="John" fullName="John L Hinds III" generation="III" lastName="Hinds" middleName="L" role="Counter Defendant"></party>
+ <party firstName="John" fullName="John L. Hinds" lastName="Hinds" middleName="L." role="Claimant"></party>
+ <party firstName="John" fullName="John L. Hinds" lastName="Hinds" middleName="L." role="Third Party Plaintiff"></party>
+ <party fullName="Houston Casualty Company" lastName="Houston Casualty Company" role="Claimant"></party>
+ <party fullName="Island Drilling, LLC" lastName="Island Drilling, LLC" role="Claimant"></party>
+ <party fullName="Island Drilling, LLC" lastName="Island Drilling, LLC" role="Counter Defendant"></party>
+ <party fullName="Island Drilling, LLC" lastName="Island Drilling, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="JC Oil and Gas, LLC" lastName="JC Oil and Gas, LLC" role="Claimant"></party>
+ <party fullName="JC Oil and Gas, LLC" lastName="JC Oil and Gas, LLC" role="Counter Defendant"></party>
+ <party fullName="JC Oil and Gas, LLC" lastName="JC Oil and Gas, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="JMW Energy, LLC" lastName="JMW Energy, LLC" role="Claimant"></party>
+ <party fullName="JMW Energy, LLC" lastName="JMW Energy, LLC" role="Counter Defendant"></party>
+ <party fullName="JMW Energy, LLC" lastName="JMW Energy, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="Lexington Insurance Company" lastName="Lexington Insurance Company" role="Claimant"></party>
+ <party fullName="MKJ Exploration" lastName="MKJ Exploration" role="Claimant"></party>
+ <party fullName="MKJ Exploration" lastName="MKJ Exploration" role="Third Party Plaintiff"></party>
+ <party fullName="MKJ Xploration, Inc." lastName="MKJ Xploration, Inc." role="Counter Defendant"></party>
+ <party fullName="Merron, LC" lastName="Merron, LC" role="Claimant"></party>
+ <party fullName="Merron, LC" lastName="Merron, LC" role="Counter Defendant"></party>
+ <party fullName="Merron, LC" lastName="Merron, LC" role="Third Party Plaintiff"></party>
+ <party fullName="New York Marine &amp; General Insurance Company" lastName="New York Marine &amp; General Insurance Company" role="Counter Defendant"></party>
+ <party fullName="New York Marine &amp; General Insurance Company" lastName="New York Marine &amp; General Insurance Company" role="Cross Defendant"></party>
+ <party fullName="New York Marine &amp; General Insurance Company" lastName="New York Marine &amp; General Insurance Company" role="Movant"></party>
+ <party fullName="New York Marine &amp; General Insurance Company" lastName="New York Marine &amp; General Insurance Company" role="Plaintiff"></party>
+ <party fullName="New York Marine &amp; General Insurance Company" lastName="New York Marine &amp; General Insurance Company" role="Third Party Defendant"></party>
+ <party fullName="North South Oil and Gas, LLC" lastName="North South Oil and Gas, LLC" role="Claimant"></party>
+ <party fullName="North South Oil and Gas, LLC" lastName="North South Oil and Gas, LLC" role="Counter Defendant"></party>
+ <party fullName="North South Oil and Gas, LLC" lastName="North South Oil and Gas, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="Plains Marketing LP" lastName="Plains Marketing LP" role="Third Party Defendant"></party>
+ <party firstName="Robert" fullName="Robert Richard" lastName="Richard" role="Movant"></party>
+ <party firstName="Royal" fullName="Royal Rolf II" generation="II" lastName="Rolf" role="Claimant"></party>
+ <party firstName="Royal" fullName="Royal Rolf II" generation="II" lastName="Rolf" role="Third Party Plaintiff"></party>
+ <party fullName="Royal Wolf II, LP" lastName="Royal Wolf II, LP" role="Counter Defendant"></party>
+ <party firstName="Scott" fullName="Scott M. Schlesinger" lastName="Schlesinger" middleName="M." role="Claimant"></party>
+ <party firstName="Scott" fullName="Scott M. Schlesinger" lastName="Schlesinger" middleName="M." role="Counter Defendant"></party>
+ <party firstName="Scott" fullName="Scott M. Schlesinger" lastName="Schlesinger" middleName="M." role="Third Party Plaintiff"></party>
+ <party fullName="Settoon Marine, LLC" lastName="Settoon Marine, LLC" role="Counter Claimant"></party>
+ <party fullName="Settoon Marine, LLC" lastName="Settoon Marine, LLC" role="Defendant"></party>
+ <party fullName="Settoon Towing LLC" lastName="Settoon Towing LLC" role="Third Party Plaintiff"></party>
+ <party fullName="Settoon Towing, LLC" lastName="Settoon Towing, LLC" role="Counter Claimant"></party>
+ <party fullName="Settoon Towing, LLC" lastName="Settoon Towing, LLC" role="Cross Claimant"></party>
+ <party fullName="Settoon Towing, LLC" lastName="Settoon Towing, LLC" role="Defendant"></party>
+ <party fullName="Settoon Towing, LLC" lastName="Settoon Towing, LLC" role="Petitioner"></party>
+ <party fullName="Settoon Towing, LLC" lastName="Settoon Towing, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="St. Paul Fire and Marine Insurance Company" lastName="St. Paul Fire and Marine Insurance Company" role="Third Party Defendant"></party>
+ <party fullName="St. Paul Surplus Lines Insurance Company" lastName="St. Paul Surplus Lines Insurance Company" role="Claimant"></party>
+ <party fullName="St. Paul Travelers Insurance Company" lastName="St. Paul Travelers Insurance Company" role="Third Party Defendant"></party>
+ <party fullName="State National Insurance Company" lastName="State National Insurance Company" role="Counter Defendant"></party>
+ <party fullName="State National Insurance Company" lastName="State National Insurance Company" role="Cross Defendant"></party>
+ <party fullName="State National Insurance Company" lastName="State National Insurance Company" role="Movant"></party>
+ <party fullName="State National Insurance Company" lastName="State National Insurance Company" role="Plaintiff"></party>
+ <party fullName="State National Insurance Company" lastName="State National Insurance Company" role="Third Party Defendant"></party>
+ <party fullName="Success Energy, LLC" lastName="Success Energy, LLC" role="Claimant"></party>
+ <party fullName="Success Energy, LLC" lastName="Success Energy, LLC" role="Counter Defendant"></party>
+ <party fullName="Success Energy, LLC" lastName="Success Energy, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="Thunder Enterprises, Inc." lastName="Thunder Enterprises, Inc." role="Claimant"></party>
+ <party fullName="Thunder Enterprises, Inc." lastName="Thunder Enterprises, Inc." role="Counter Defendant"></party>
+ <party fullName="Thunder Enterprises, Inc." lastName="Thunder Enterprises, Inc." role="Third Party Plaintiff"></party>
+ <party fullName="Travelers Companies, Inc." lastName="Travelers Companies, Inc." role="Third Party Defendant"></party>
+ <party fullName="Twin D. Energy, LLC" lastName="Twin D. Energy, LLC" role="Claimant"></party>
+ <party fullName="Twin D. Energy, LLC" lastName="Twin D. Energy, LLC" role="Counter Defendant"></party>
+ <party fullName="Twin D. Energy, LLC" lastName="Twin D. Energy, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Claimant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Cross Claimant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Third Party Plaintiff"></party>
+ <party fullName="Wave Exploration Group, LLC" lastName="Wave Exploration Group, LLC" role="Claimant"></party>
+ <party fullName="Wave Exploration Group, LLC" lastName="Wave Exploration Group, LLC" role="Counter Defendant"></party>
+ <party fullName="Wave Exploration Group, LLC" lastName="Wave Exploration Group, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="XL Specialty Insurance Company" lastName="XL Specialty Insurance Company" role="Claimant"></party>
+</extension>
+<titleInfo>
+ <title>In Re Settoon Towing, LLC</title>
+ <partNumber>2:07-cv-01263</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-01263;07-1263</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>New Orleans</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>4J Oil &amp; Gas Investments Consultant, L.L.C.</displayForm>
+ <namePart type="family">4J Oil &amp; Gas Investments Consultant, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alpine Exploration Companies, Inc.</displayForm>
+ <namePart type="family">Alpine Exploration Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alpine Exploration Companies, Inc.</displayForm>
+ <namePart type="family">Alpine Exploration Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alpine Exportation Companies, Inc.</displayForm>
+ <namePart type="family">Alpine Exportation Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Alpine Exportation Companies, Inc.</displayForm>
+ <namePart type="family">Alpine Exportation Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>American Petroleum, LLC</displayForm>
+ <namePart type="family">American Petroleum, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>American Petroleum, LLC</displayForm>
+ <namePart type="family">American Petroleum, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>American Petroleum, LLC</displayForm>
+ <namePart type="family">American Petroleum, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Angel Oil, LLC</displayForm>
+ <namePart type="family">Angel Oil, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Angel Oil, LLC</displayForm>
+ <namePart type="family">Angel Oil, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Angel Oil, LLC</displayForm>
+ <namePart type="family">Angel Oil, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>George Bejohn</displayForm>
+ <namePart type="family">Bejohn</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>George Bejohn</displayForm>
+ <namePart type="family">Bejohn</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Big Sky Operating Companies, Inc.</displayForm>
+ <namePart type="family">Big Sky Operating Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Big Sky Operating Companies, Inc.</displayForm>
+ <namePart type="family">Big Sky Operating Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Big Sky Operating Companies, Inc.</displayForm>
+ <namePart type="family">Big Sky Operating Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Brehm</displayForm>
+ <namePart type="family">Brehm</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Edna Carden</displayForm>
+ <namePart type="family">Carden</namePart>
+ <namePart type="given">Edna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Edna Carden</displayForm>
+ <namePart type="family">Carden</namePart>
+ <namePart type="given">Edna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Edna M. Carden</displayForm>
+ <namePart type="family">Carden</namePart>
+ <namePart type="given">Edna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carden Oil and Gas, Inc.</displayForm>
+ <namePart type="family">Carden Oil and Gas, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Carden Oil and Gas, Inc.</displayForm>
+ <namePart type="family">Carden Oil and Gas, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carden Oil and Gas, Inc.</displayForm>
+ <namePart type="family">Carden Oil and Gas, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Certain Underwriters at Lloyd&apos;s of London</displayForm>
+ <namePart type="family">Certain Underwriters at Lloyd&apos;s of London</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Conaster</displayForm>
+ <namePart type="family">Conaster</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>William Conaster</displayForm>
+ <namePart type="family">Conaster</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Conaster</displayForm>
+ <namePart type="family">Conaster</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Willis Conaster</displayForm>
+ <namePart type="family">Conaster</namePart>
+ <namePart type="given">Willis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Willis Conaster</displayForm>
+ <namePart type="family">Conaster</namePart>
+ <namePart type="given">Willis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Willis Conaster</displayForm>
+ <namePart type="family">Conaster</namePart>
+ <namePart type="given">Willis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>L Jay Cuccia</displayForm>
+ <namePart type="family">Cuccia</namePart>
+ <namePart type="given">L</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jay L. Cuccia</displayForm>
+ <namePart type="family">Cuccia</namePart>
+ <namePart type="given">Jay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Jay L. Cuccia</displayForm>
+ <namePart type="family">Cuccia</namePart>
+ <namePart type="given">Jay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>DLP Resources, LLC</displayForm>
+ <namePart type="family">DLP Resources, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>DLP Resources, LLC</displayForm>
+ <namePart type="family">DLP Resources, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DLP Resources, LLC</displayForm>
+ <namePart type="family">DLP Resources, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Renee Davis Davenport</displayForm>
+ <namePart type="family">Davenport</namePart>
+ <namePart type="given">Renee</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Renee Davis Davenport</displayForm>
+ <namePart type="family">Davenport</namePart>
+ <namePart type="given">Renee</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Renee Davis Davenport</displayForm>
+ <namePart type="family">Davenport</namePart>
+ <namePart type="given">Renee</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Deerfield Energy, LLC</displayForm>
+ <namePart type="family">Deerfield Energy, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Deerfield Energy, LLC</displayForm>
+ <namePart type="family">Deerfield Energy, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Deerfield Energy, LLC</displayForm>
+ <namePart type="family">Deerfield Energy, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Catherine Duplantis</displayForm>
+ <namePart type="family">Duplantis</namePart>
+ <namePart type="given">Catherine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Catherine Duplantis</displayForm>
+ <namePart type="family">Duplantis</namePart>
+ <namePart type="given">Catherine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Roger Duplantis</displayForm>
+ <namePart type="family">Duplantis</namePart>
+ <namePart type="given">Roger</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Roger Duplantis</displayForm>
+ <namePart type="family">Duplantis</namePart>
+ <namePart type="given">Roger</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roger Duplantis</displayForm>
+ <namePart type="family">Duplantis</namePart>
+ <namePart type="given">Roger</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Katherine F. Duplantis</displayForm>
+ <namePart type="family">Duplantis</namePart>
+ <namePart type="given">Katherine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Duplantis Resources, LLC</displayForm>
+ <namePart type="family">Duplantis Resources, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Duplantis Resources, LLC</displayForm>
+ <namePart type="family">Duplantis Resources, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Duplantis Resources, LLC</displayForm>
+ <namePart type="family">Duplantis Resources, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>ExPert Oil &amp; Gas, L.L.C.</displayForm>
+ <namePart type="family">ExPert Oil &amp; Gas, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>ExPert Oil &amp; Gas, L.L.C.</displayForm>
+ <namePart type="family">ExPert Oil &amp; Gas, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ExPert Oil &amp; Gas, L.L.C.</displayForm>
+ <namePart type="family">ExPert Oil &amp; Gas, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ExPert Oil &amp; Gas, L.L.C.</displayForm>
+ <namePart type="family">ExPert Oil &amp; Gas, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ExPert Oil &amp; Gas, L.L.C.</displayForm>
+ <namePart type="family">ExPert Oil &amp; Gas, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Expert E&amp;P Consultants, LLC</displayForm>
+ <namePart type="family">Expert E&amp;P Consultants, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Expert E&amp;P Consultants, LLC</displayForm>
+ <namePart type="family">Expert E&amp;P Consultants, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Federal Insurance Company</displayForm>
+ <namePart type="family">Federal Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Federal Insurance Company</displayForm>
+ <namePart type="family">Federal Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Federal Insurance Company</displayForm>
+ <namePart type="family">Federal Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Federal Insurance Company</displayForm>
+ <namePart type="family">Federal Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Federal Insurance Company</displayForm>
+ <namePart type="family">Federal Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Four J. Oil and Gas Investments/Consultant</displayForm>
+ <namePart type="family">Four J. Oil and Gas Investments/Consultant</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Four J. Oil and Gas Investments/Consultant</displayForm>
+ <namePart type="family">Four J. Oil and Gas Investments/Consultant</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>G&amp;C Marine LLC</displayForm>
+ <namePart type="family">G&amp;C Marine LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>G&amp;C Marine LLC</displayForm>
+ <namePart type="family">G&amp;C Marine LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George Dejohn, LLC</displayForm>
+ <namePart type="family">George Dejohn, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Grand Beach Land, Inc.</displayForm>
+ <namePart type="family">Grand Beach Land, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Grand Beach Land, Inc.</displayForm>
+ <namePart type="family">Grand Beach Land, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Grand Beach Land, Inc.</displayForm>
+ <namePart type="family">Grand Beach Land, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Harper Jr.</displayForm>
+ <namePart type="family">Harper</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Harper Jr.</displayForm>
+ <namePart type="family">Harper</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph A. Harper Jr.</displayForm>
+ <namePart type="family">Harper</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alice B. Harper</displayForm>
+ <namePart type="family">Harper</namePart>
+ <namePart type="given">Alice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Alice B. Harper</displayForm>
+ <namePart type="family">Harper</namePart>
+ <namePart type="given">Alice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alice B. Harper</displayForm>
+ <namePart type="family">Harper</namePart>
+ <namePart type="given">Alice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Harper Petroleum Company, Inc.</displayForm>
+ <namePart type="family">Harper Petroleum Company, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Harper Petroleum Company, Inc.</displayForm>
+ <namePart type="family">Harper Petroleum Company, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harper Petroleum Company, Inc.</displayForm>
+ <namePart type="family">Harper Petroleum Company, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Crystal Hinds</displayForm>
+ <namePart type="family">Hinds</namePart>
+ <namePart type="given">Crystal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Crystal Hinds</displayForm>
+ <namePart type="family">Hinds</namePart>
+ <namePart type="given">Crystal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Crystal Coco Hinds</displayForm>
+ <namePart type="family">Hinds</namePart>
+ <namePart type="given">Crystal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John L Hinds III</displayForm>
+ <namePart type="family">Hinds</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John L. Hinds</displayForm>
+ <namePart type="family">Hinds</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>John L. Hinds</displayForm>
+ <namePart type="family">Hinds</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Houston Casualty Company</displayForm>
+ <namePart type="family">Houston Casualty Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Island Drilling, LLC</displayForm>
+ <namePart type="family">Island Drilling, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Island Drilling, LLC</displayForm>
+ <namePart type="family">Island Drilling, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Island Drilling, LLC</displayForm>
+ <namePart type="family">Island Drilling, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>JC Oil and Gas, LLC</displayForm>
+ <namePart type="family">JC Oil and Gas, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>JC Oil and Gas, LLC</displayForm>
+ <namePart type="family">JC Oil and Gas, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JC Oil and Gas, LLC</displayForm>
+ <namePart type="family">JC Oil and Gas, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>JMW Energy, LLC</displayForm>
+ <namePart type="family">JMW Energy, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>JMW Energy, LLC</displayForm>
+ <namePart type="family">JMW Energy, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JMW Energy, LLC</displayForm>
+ <namePart type="family">JMW Energy, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lexington Insurance Company</displayForm>
+ <namePart type="family">Lexington Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>MKJ Exploration</displayForm>
+ <namePart type="family">MKJ Exploration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>MKJ Exploration</displayForm>
+ <namePart type="family">MKJ Exploration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>MKJ Xploration, Inc.</displayForm>
+ <namePart type="family">MKJ Xploration, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Merron, LC</displayForm>
+ <namePart type="family">Merron, LC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Merron, LC</displayForm>
+ <namePart type="family">Merron, LC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Merron, LC</displayForm>
+ <namePart type="family">Merron, LC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>New York Marine &amp; General Insurance Company</displayForm>
+ <namePart type="family">New York Marine &amp; General Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New York Marine &amp; General Insurance Company</displayForm>
+ <namePart type="family">New York Marine &amp; General Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New York Marine &amp; General Insurance Company</displayForm>
+ <namePart type="family">New York Marine &amp; General Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>New York Marine &amp; General Insurance Company</displayForm>
+ <namePart type="family">New York Marine &amp; General Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>New York Marine &amp; General Insurance Company</displayForm>
+ <namePart type="family">New York Marine &amp; General Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>North South Oil and Gas, LLC</displayForm>
+ <namePart type="family">North South Oil and Gas, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>North South Oil and Gas, LLC</displayForm>
+ <namePart type="family">North South Oil and Gas, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>North South Oil and Gas, LLC</displayForm>
+ <namePart type="family">North South Oil and Gas, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Plains Marketing LP</displayForm>
+ <namePart type="family">Plains Marketing LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Richard</displayForm>
+ <namePart type="family">Richard</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Royal Rolf II</displayForm>
+ <namePart type="family">Rolf</namePart>
+ <namePart type="given">Royal</namePart>
+ <namePart type="termsOfAddress">II</namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Royal Rolf II</displayForm>
+ <namePart type="family">Rolf</namePart>
+ <namePart type="given">Royal</namePart>
+ <namePart type="termsOfAddress">II</namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Royal Wolf II, LP</displayForm>
+ <namePart type="family">Royal Wolf II, LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott M. Schlesinger</displayForm>
+ <namePart type="family">Schlesinger</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott M. Schlesinger</displayForm>
+ <namePart type="family">Schlesinger</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott M. Schlesinger</displayForm>
+ <namePart type="family">Schlesinger</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Settoon Marine, LLC</displayForm>
+ <namePart type="family">Settoon Marine, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Settoon Marine, LLC</displayForm>
+ <namePart type="family">Settoon Marine, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Settoon Towing LLC</displayForm>
+ <namePart type="family">Settoon Towing LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Settoon Towing, LLC</displayForm>
+ <namePart type="family">Settoon Towing, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Settoon Towing, LLC</displayForm>
+ <namePart type="family">Settoon Towing, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Settoon Towing, LLC</displayForm>
+ <namePart type="family">Settoon Towing, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Settoon Towing, LLC</displayForm>
+ <namePart type="family">Settoon Towing, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Settoon Towing, LLC</displayForm>
+ <namePart type="family">Settoon Towing, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>St. Paul Fire and Marine Insurance Company</displayForm>
+ <namePart type="family">St. Paul Fire and Marine Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>St. Paul Surplus Lines Insurance Company</displayForm>
+ <namePart type="family">St. Paul Surplus Lines Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>St. Paul Travelers Insurance Company</displayForm>
+ <namePart type="family">St. Paul Travelers Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State National Insurance Company</displayForm>
+ <namePart type="family">State National Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State National Insurance Company</displayForm>
+ <namePart type="family">State National Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State National Insurance Company</displayForm>
+ <namePart type="family">State National Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>State National Insurance Company</displayForm>
+ <namePart type="family">State National Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>State National Insurance Company</displayForm>
+ <namePart type="family">State National Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Success Energy, LLC</displayForm>
+ <namePart type="family">Success Energy, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Success Energy, LLC</displayForm>
+ <namePart type="family">Success Energy, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Success Energy, LLC</displayForm>
+ <namePart type="family">Success Energy, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Thunder Enterprises, Inc.</displayForm>
+ <namePart type="family">Thunder Enterprises, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Thunder Enterprises, Inc.</displayForm>
+ <namePart type="family">Thunder Enterprises, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thunder Enterprises, Inc.</displayForm>
+ <namePart type="family">Thunder Enterprises, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Travelers Companies, Inc.</displayForm>
+ <namePart type="family">Travelers Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Twin D. Energy, LLC</displayForm>
+ <namePart type="family">Twin D. Energy, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Twin D. Energy, LLC</displayForm>
+ <namePart type="family">Twin D. Energy, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Twin D. Energy, LLC</displayForm>
+ <namePart type="family">Twin D. Energy, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Wave Exploration Group, LLC</displayForm>
+ <namePart type="family">Wave Exploration Group, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Wave Exploration Group, LLC</displayForm>
+ <namePart type="family">Wave Exploration Group, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wave Exploration Group, LLC</displayForm>
+ <namePart type="family">Wave Exploration Group, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>XL Specialty Insurance Company</displayForm>
+ <namePart type="family">XL Specialty Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_07-cv-01263</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:07-cv-01263</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>340</natureSuitCode>
+ <natureSuit>Marine Personal Injury</natureSuit>
+ <cause>46:0181 Limitation of Liability</cause>
+ <party fullName="4J Oil &amp; Gas Investments Consultant, L.L.C." lastName="4J Oil &amp; Gas Investments Consultant, L.L.C." role="Counter Defendant"></party>
+ <party fullName="Alpine Exploration Companies, Inc." lastName="Alpine Exploration Companies, Inc." role="Counter Defendant"></party>
+ <party fullName="Alpine Exploration Companies, Inc." lastName="Alpine Exploration Companies, Inc." role="Third Party Defendant"></party>
+ <party fullName="Alpine Exportation Companies, Inc." lastName="Alpine Exportation Companies, Inc." role="Claimant"></party>
+ <party fullName="Alpine Exportation Companies, Inc." lastName="Alpine Exportation Companies, Inc." role="Third Party Plaintiff"></party>
+ <party fullName="American Petroleum, LLC" lastName="American Petroleum, LLC" role="Claimant"></party>
+ <party fullName="American Petroleum, LLC" lastName="American Petroleum, LLC" role="Counter Defendant"></party>
+ <party fullName="American Petroleum, LLC" lastName="American Petroleum, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="Angel Oil, LLC" lastName="Angel Oil, LLC" role="Claimant"></party>
+ <party fullName="Angel Oil, LLC" lastName="Angel Oil, LLC" role="Counter Defendant"></party>
+ <party fullName="Angel Oil, LLC" lastName="Angel Oil, LLC" role="Third Party Plaintiff"></party>
+ <party firstName="George" fullName="George Bejohn" lastName="Bejohn" role="Claimant"></party>
+ <party firstName="George" fullName="George Bejohn" lastName="Bejohn" role="Third Party Plaintiff"></party>
+ <party fullName="Big Sky Operating Companies, Inc." lastName="Big Sky Operating Companies, Inc." role="Claimant"></party>
+ <party fullName="Big Sky Operating Companies, Inc." lastName="Big Sky Operating Companies, Inc." role="Counter Defendant"></party>
+ <party fullName="Big Sky Operating Companies, Inc." lastName="Big Sky Operating Companies, Inc." role="Third Party Plaintiff"></party>
+ <party firstName="Dennis" fullName="Dennis Brehm" lastName="Brehm" role="Movant"></party>
+ <party firstName="Edna" fullName="Edna Carden" lastName="Carden" role="Claimant"></party>
+ <party firstName="Edna" fullName="Edna Carden" lastName="Carden" role="Third Party Plaintiff"></party>
+ <party firstName="Edna" fullName="Edna M. Carden" lastName="Carden" middleName="M." role="Counter Defendant"></party>
+ <party fullName="Carden Oil and Gas, Inc." lastName="Carden Oil and Gas, Inc." role="Claimant"></party>
+ <party fullName="Carden Oil and Gas, Inc." lastName="Carden Oil and Gas, Inc." role="Counter Defendant"></party>
+ <party fullName="Carden Oil and Gas, Inc." lastName="Carden Oil and Gas, Inc." role="Third Party Plaintiff"></party>
+ <party fullName="Certain Underwriters at Lloyd&apos;s of London" lastName="Certain Underwriters at Lloyd&apos;s of London" role="Third Party Defendant"></party>
+ <party firstName="William" fullName="William Conaster" lastName="Conaster" role="Claimant"></party>
+ <party firstName="William" fullName="William Conaster" lastName="Conaster" role="Counter Defendant"></party>
+ <party firstName="William" fullName="William Conaster" lastName="Conaster" role="Third Party Plaintiff"></party>
+ <party firstName="Willis" fullName="Willis Conaster" lastName="Conaster" role="Claimant"></party>
+ <party firstName="Willis" fullName="Willis Conaster" lastName="Conaster" role="Cross Defendant"></party>
+ <party firstName="Willis" fullName="Willis Conaster" lastName="Conaster" role="Third Party Plaintiff"></party>
+ <party firstName="L" fullName="L Jay Cuccia" lastName="Cuccia" middleName="Jay" role="Counter Defendant"></party>
+ <party firstName="Jay" fullName="Jay L. Cuccia" lastName="Cuccia" middleName="L." role="Claimant"></party>
+ <party firstName="Jay" fullName="Jay L. Cuccia" lastName="Cuccia" middleName="L." role="Third Party Plaintiff"></party>
+ <party fullName="DLP Resources, LLC" lastName="DLP Resources, LLC" role="Claimant"></party>
+ <party fullName="DLP Resources, LLC" lastName="DLP Resources, LLC" role="Counter Defendant"></party>
+ <party fullName="DLP Resources, LLC" lastName="DLP Resources, LLC" role="Third Party Plaintiff"></party>
+ <party firstName="Renee" fullName="Renee Davis Davenport" lastName="Davenport" middleName="Davis" role="Claimant"></party>
+ <party firstName="Renee" fullName="Renee Davis Davenport" lastName="Davenport" middleName="Davis" role="Counter Defendant"></party>
+ <party firstName="Renee" fullName="Renee Davis Davenport" lastName="Davenport" middleName="Davis" role="Third Party Plaintiff"></party>
+ <party fullName="Deerfield Energy, LLC" lastName="Deerfield Energy, LLC" role="Claimant"></party>
+ <party fullName="Deerfield Energy, LLC" lastName="Deerfield Energy, LLC" role="Counter Defendant"></party>
+ <party fullName="Deerfield Energy, LLC" lastName="Deerfield Energy, LLC" role="Third Party Plaintiff"></party>
+ <party firstName="Catherine" fullName="Catherine Duplantis" lastName="Duplantis" role="Claimant"></party>
+ <party firstName="Catherine" fullName="Catherine Duplantis" lastName="Duplantis" role="Third Party Plaintiff"></party>
+ <party firstName="Roger" fullName="Roger Duplantis" lastName="Duplantis" role="Claimant"></party>
+ <party firstName="Roger" fullName="Roger Duplantis" lastName="Duplantis" role="Counter Defendant"></party>
+ <party firstName="Roger" fullName="Roger Duplantis" lastName="Duplantis" role="Third Party Plaintiff"></party>
+ <party firstName="Katherine" fullName="Katherine F. Duplantis" lastName="Duplantis" middleName="F." role="Counter Defendant"></party>
+ <party fullName="Duplantis Resources, LLC" lastName="Duplantis Resources, LLC" role="Claimant"></party>
+ <party fullName="Duplantis Resources, LLC" lastName="Duplantis Resources, LLC" role="Counter Defendant"></party>
+ <party fullName="Duplantis Resources, LLC" lastName="Duplantis Resources, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="ExPert Oil &amp; Gas, L.L.C." lastName="ExPert Oil &amp; Gas, L.L.C." role="Claimant"></party>
+ <party fullName="ExPert Oil &amp; Gas, L.L.C." lastName="ExPert Oil &amp; Gas, L.L.C." role="Counter Defendant"></party>
+ <party fullName="ExPert Oil &amp; Gas, L.L.C." lastName="ExPert Oil &amp; Gas, L.L.C." role="Cross Defendant"></party>
+ <party fullName="ExPert Oil &amp; Gas, L.L.C." lastName="ExPert Oil &amp; Gas, L.L.C." role="Third Party Defendant"></party>
+ <party fullName="ExPert Oil &amp; Gas, L.L.C." lastName="ExPert Oil &amp; Gas, L.L.C." role="Third Party Plaintiff"></party>
+ <party fullName="Expert E&amp;P Consultants, LLC" lastName="Expert E&amp;P Consultants, LLC" role="Claimant"></party>
+ <party fullName="Expert E&amp;P Consultants, LLC" lastName="Expert E&amp;P Consultants, LLC" role="Third Party Defendant"></party>
+ <party fullName="Federal Insurance Company" lastName="Federal Insurance Company" role="Counter Defendant"></party>
+ <party fullName="Federal Insurance Company" lastName="Federal Insurance Company" role="Cross Defendant"></party>
+ <party fullName="Federal Insurance Company" lastName="Federal Insurance Company" role="Movant"></party>
+ <party fullName="Federal Insurance Company" lastName="Federal Insurance Company" role="Plaintiff"></party>
+ <party fullName="Federal Insurance Company" lastName="Federal Insurance Company" role="Third Party Defendant"></party>
+ <party fullName="Four J. Oil and Gas Investments/Consultant" lastName="Four J. Oil and Gas Investments/Consultant" role="Claimant"></party>
+ <party fullName="Four J. Oil and Gas Investments/Consultant" lastName="Four J. Oil and Gas Investments/Consultant" role="Third Party Plaintiff"></party>
+ <party fullName="G&amp;C Marine LLC" lastName="G&amp;C Marine LLC" role="Counter Claimant"></party>
+ <party fullName="G&amp;C Marine LLC" lastName="G&amp;C Marine LLC" role="Defendant"></party>
+ <party fullName="George Dejohn, LLC" lastName="George Dejohn, LLC" role="Counter Defendant"></party>
+ <party fullName="Grand Beach Land, Inc." lastName="Grand Beach Land, Inc." role="Claimant"></party>
+ <party fullName="Grand Beach Land, Inc." lastName="Grand Beach Land, Inc." role="Counter Defendant"></party>
+ <party fullName="Grand Beach Land, Inc." lastName="Grand Beach Land, Inc." role="Third Party Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Harper Jr." generation="Jr." lastName="Harper" role="Claimant"></party>
+ <party firstName="Joseph" fullName="Joseph Harper Jr." generation="Jr." lastName="Harper" role="Third Party Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph A. Harper Jr." generation="Jr." lastName="Harper" middleName="A." role="Counter Defendant"></party>
+ <party firstName="Alice" fullName="Alice B. Harper" lastName="Harper" middleName="B." role="Claimant"></party>
+ <party firstName="Alice" fullName="Alice B. Harper" lastName="Harper" middleName="B." role="Counter Defendant"></party>
+ <party firstName="Alice" fullName="Alice B. Harper" lastName="Harper" middleName="B." role="Third Party Plaintiff"></party>
+ <party fullName="Harper Petroleum Company, Inc." lastName="Harper Petroleum Company, Inc." role="Claimant"></party>
+ <party fullName="Harper Petroleum Company, Inc." lastName="Harper Petroleum Company, Inc." role="Counter Defendant"></party>
+ <party fullName="Harper Petroleum Company, Inc." lastName="Harper Petroleum Company, Inc." role="Third Party Plaintiff"></party>
+ <party firstName="Crystal" fullName="Crystal Hinds" lastName="Hinds" role="Claimant"></party>
+ <party firstName="Crystal" fullName="Crystal Hinds" lastName="Hinds" role="Third Party Plaintiff"></party>
+ <party firstName="Crystal" fullName="Crystal Coco Hinds" lastName="Hinds" middleName="Coco" role="Counter Defendant"></party>
+ <party firstName="John" fullName="John L Hinds III" generation="III" lastName="Hinds" middleName="L" role="Counter Defendant"></party>
+ <party firstName="John" fullName="John L. Hinds" lastName="Hinds" middleName="L." role="Claimant"></party>
+ <party firstName="John" fullName="John L. Hinds" lastName="Hinds" middleName="L." role="Third Party Plaintiff"></party>
+ <party fullName="Houston Casualty Company" lastName="Houston Casualty Company" role="Claimant"></party>
+ <party fullName="Island Drilling, LLC" lastName="Island Drilling, LLC" role="Claimant"></party>
+ <party fullName="Island Drilling, LLC" lastName="Island Drilling, LLC" role="Counter Defendant"></party>
+ <party fullName="Island Drilling, LLC" lastName="Island Drilling, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="JC Oil and Gas, LLC" lastName="JC Oil and Gas, LLC" role="Claimant"></party>
+ <party fullName="JC Oil and Gas, LLC" lastName="JC Oil and Gas, LLC" role="Counter Defendant"></party>
+ <party fullName="JC Oil and Gas, LLC" lastName="JC Oil and Gas, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="JMW Energy, LLC" lastName="JMW Energy, LLC" role="Claimant"></party>
+ <party fullName="JMW Energy, LLC" lastName="JMW Energy, LLC" role="Counter Defendant"></party>
+ <party fullName="JMW Energy, LLC" lastName="JMW Energy, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="Lexington Insurance Company" lastName="Lexington Insurance Company" role="Claimant"></party>
+ <party fullName="MKJ Exploration" lastName="MKJ Exploration" role="Claimant"></party>
+ <party fullName="MKJ Exploration" lastName="MKJ Exploration" role="Third Party Plaintiff"></party>
+ <party fullName="MKJ Xploration, Inc." lastName="MKJ Xploration, Inc." role="Counter Defendant"></party>
+ <party fullName="Merron, LC" lastName="Merron, LC" role="Claimant"></party>
+ <party fullName="Merron, LC" lastName="Merron, LC" role="Counter Defendant"></party>
+ <party fullName="Merron, LC" lastName="Merron, LC" role="Third Party Plaintiff"></party>
+ <party fullName="New York Marine &amp; General Insurance Company" lastName="New York Marine &amp; General Insurance Company" role="Counter Defendant"></party>
+ <party fullName="New York Marine &amp; General Insurance Company" lastName="New York Marine &amp; General Insurance Company" role="Cross Defendant"></party>
+ <party fullName="New York Marine &amp; General Insurance Company" lastName="New York Marine &amp; General Insurance Company" role="Movant"></party>
+ <party fullName="New York Marine &amp; General Insurance Company" lastName="New York Marine &amp; General Insurance Company" role="Plaintiff"></party>
+ <party fullName="New York Marine &amp; General Insurance Company" lastName="New York Marine &amp; General Insurance Company" role="Third Party Defendant"></party>
+ <party fullName="North South Oil and Gas, LLC" lastName="North South Oil and Gas, LLC" role="Claimant"></party>
+ <party fullName="North South Oil and Gas, LLC" lastName="North South Oil and Gas, LLC" role="Counter Defendant"></party>
+ <party fullName="North South Oil and Gas, LLC" lastName="North South Oil and Gas, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="Plains Marketing LP" lastName="Plains Marketing LP" role="Third Party Defendant"></party>
+ <party firstName="Robert" fullName="Robert Richard" lastName="Richard" role="Movant"></party>
+ <party firstName="Royal" fullName="Royal Rolf II" generation="II" lastName="Rolf" role="Claimant"></party>
+ <party firstName="Royal" fullName="Royal Rolf II" generation="II" lastName="Rolf" role="Third Party Plaintiff"></party>
+ <party fullName="Royal Wolf II, LP" lastName="Royal Wolf II, LP" role="Counter Defendant"></party>
+ <party firstName="Scott" fullName="Scott M. Schlesinger" lastName="Schlesinger" middleName="M." role="Claimant"></party>
+ <party firstName="Scott" fullName="Scott M. Schlesinger" lastName="Schlesinger" middleName="M." role="Counter Defendant"></party>
+ <party firstName="Scott" fullName="Scott M. Schlesinger" lastName="Schlesinger" middleName="M." role="Third Party Plaintiff"></party>
+ <party fullName="Settoon Marine, LLC" lastName="Settoon Marine, LLC" role="Counter Claimant"></party>
+ <party fullName="Settoon Marine, LLC" lastName="Settoon Marine, LLC" role="Defendant"></party>
+ <party fullName="Settoon Towing LLC" lastName="Settoon Towing LLC" role="Third Party Plaintiff"></party>
+ <party fullName="Settoon Towing, LLC" lastName="Settoon Towing, LLC" role="Counter Claimant"></party>
+ <party fullName="Settoon Towing, LLC" lastName="Settoon Towing, LLC" role="Cross Claimant"></party>
+ <party fullName="Settoon Towing, LLC" lastName="Settoon Towing, LLC" role="Defendant"></party>
+ <party fullName="Settoon Towing, LLC" lastName="Settoon Towing, LLC" role="Petitioner"></party>
+ <party fullName="Settoon Towing, LLC" lastName="Settoon Towing, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="St. Paul Fire and Marine Insurance Company" lastName="St. Paul Fire and Marine Insurance Company" role="Third Party Defendant"></party>
+ <party fullName="St. Paul Surplus Lines Insurance Company" lastName="St. Paul Surplus Lines Insurance Company" role="Claimant"></party>
+ <party fullName="St. Paul Travelers Insurance Company" lastName="St. Paul Travelers Insurance Company" role="Third Party Defendant"></party>
+ <party fullName="State National Insurance Company" lastName="State National Insurance Company" role="Counter Defendant"></party>
+ <party fullName="State National Insurance Company" lastName="State National Insurance Company" role="Cross Defendant"></party>
+ <party fullName="State National Insurance Company" lastName="State National Insurance Company" role="Movant"></party>
+ <party fullName="State National Insurance Company" lastName="State National Insurance Company" role="Plaintiff"></party>
+ <party fullName="State National Insurance Company" lastName="State National Insurance Company" role="Third Party Defendant"></party>
+ <party fullName="Success Energy, LLC" lastName="Success Energy, LLC" role="Claimant"></party>
+ <party fullName="Success Energy, LLC" lastName="Success Energy, LLC" role="Counter Defendant"></party>
+ <party fullName="Success Energy, LLC" lastName="Success Energy, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="Thunder Enterprises, Inc." lastName="Thunder Enterprises, Inc." role="Claimant"></party>
+ <party fullName="Thunder Enterprises, Inc." lastName="Thunder Enterprises, Inc." role="Counter Defendant"></party>
+ <party fullName="Thunder Enterprises, Inc." lastName="Thunder Enterprises, Inc." role="Third Party Plaintiff"></party>
+ <party fullName="Travelers Companies, Inc." lastName="Travelers Companies, Inc." role="Third Party Defendant"></party>
+ <party fullName="Twin D. Energy, LLC" lastName="Twin D. Energy, LLC" role="Claimant"></party>
+ <party fullName="Twin D. Energy, LLC" lastName="Twin D. Energy, LLC" role="Counter Defendant"></party>
+ <party fullName="Twin D. Energy, LLC" lastName="Twin D. Energy, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Claimant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Cross Claimant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Third Party Plaintiff"></party>
+ <party fullName="Wave Exploration Group, LLC" lastName="Wave Exploration Group, LLC" role="Claimant"></party>
+ <party fullName="Wave Exploration Group, LLC" lastName="Wave Exploration Group, LLC" role="Counter Defendant"></party>
+ <party fullName="Wave Exploration Group, LLC" lastName="Wave Exploration Group, LLC" role="Third Party Plaintiff"></party>
+ <party fullName="XL Specialty Insurance Company" lastName="XL Specialty Insurance Company" role="Claimant"></party>
+ <state>Louisiana</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-0/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER AND REASONS denying 30 Motion to Consolidate Cases; 30 Motion to Bifurcate; 30 Motion to Continue Trial. Signed by Judge Mary Ann Vial Lemmon. (ijg, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd44d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-0</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-02-28</dateIssued>
+  <docketText>ORDER AND REASONS denying 30 Motion to Consolidate Cases; 30 Motion to Bifurcate; 30 Motion to Continue Trial. Signed by Judge Mary Ann Vial Lemmon. (ijg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-1/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER AND REASONS denying 38 Motion to Dismiss the counterclaim of Settoon Towing, LLC filed on behalf of ExPert Oil &amp; Gas, LLC. Signed by Judge Mary Ann Vial Lemmon. (ijg, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd44da</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-1</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-04-18</dateIssued>
+  <docketText>ORDER AND REASONS denying 38 Motion to Dismiss the counterclaim of Settoon Towing, LLC filed on behalf of ExPert Oil &amp; Gas, LLC. Signed by Judge Mary Ann Vial Lemmon. (ijg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-2/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER granting 173 Motion to Quash filed by New York Marine &amp; General Insurance Company, Federal Insurance Company as set forth in document. Signed by Magistrate Judge Sally Shushan. (ijg, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd44db</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-2</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-07-02</dateIssued>
+  <docketText>ORDER granting 173 Motion to Quash filed by New York Marine &amp; General Insurance Company, Federal Insurance Company as set forth in document. Signed by Magistrate Judge Sally Shushan. (ijg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-3/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER AND REASONS denying 160 Motion for Partial Summary Judgment by Settoon Towing, LLC; denying 257 MOTION for APPEAL OF MAGISTRATE JUDGE DECISION to District Court. Signed by Judge Mary Ann Vial Lemmon. (ijg, )(NEF: Judge Shushan)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd44dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-3</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-12-04</dateIssued>
+  <docketText>ORDER AND REASONS denying 160 Motion for Partial Summary Judgment by Settoon Towing, LLC; denying 257 MOTION for APPEAL OF MAGISTRATE JUDGE DECISION to District Court. Signed by Judge Mary Ann Vial Lemmon. (ijg, )(NEF: Judge Shushan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-4/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER AND REASONS granting the USA&apos;s 204 Motion for Partial Summary Judgment to Recover its Removal Costs. Signed by Judge Mary Ann Vial Lemmon. (ijg, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd43cf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-4</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-12-04</dateIssued>
+  <docketText>ORDER AND REASONS granting the USA&apos;s 204 Motion for Partial Summary Judgment to Recover its Removal Costs. Signed by Judge Mary Ann Vial Lemmon. (ijg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-5/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER AND REASONS granting Settoon Towing LLC&apos;s 208 Motion for Partial Summary Judgment to Dismiss the General Maritime Law Claims of the USA. Signed by Judge Mary Ann Vial Lemmon. (ijg, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd43ce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-5</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-12-04</dateIssued>
+  <docketText>ORDER AND REASONS granting Settoon Towing LLC&apos;s 208 Motion for Partial Summary Judgment to Dismiss the General Maritime Law Claims of the USA. Signed by Judge Mary Ann Vial Lemmon. (ijg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-6/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER AND REASONS granting in part and denying in part Settoon Towing, LLC&apos;s 209 Motion for Partial Summary Judgment on ExPert&apos;s Damages as set forth in document. Signed by Judge Mary Ann Vial Lemmon. (ijg, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd44dc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-6</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-12-04</dateIssued>
+  <docketText>ORDER AND REASONS granting in part and denying in part Settoon Towing, LLC&apos;s 209 Motion for Partial Summary Judgment on ExPert&apos;s Damages as set forth in document. Signed by Judge Mary Ann Vial Lemmon. (ijg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-7/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER AND REASONS granting 310 First Motion for Partial Summary Judgment as set forth in document. Signed by Judge Mary Ann Vial Lemmon. (ecm, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd43cc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-7</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-06-16</dateIssued>
+  <docketText>ORDER AND REASONS granting 310 First Motion for Partial Summary Judgment as set forth in document. Signed by Judge Mary Ann Vial Lemmon. (ecm, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-8/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER granting in part and denying in part 330 Motion to Compel; granting in part and denying in part 331 Motion to Quash Discovery as set forth in document. Signed by Magistrate Judge Sally Shushan. (ecm, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd44df</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-8</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2010-06-23</dateIssued>
+  <docketText>ORDER granting in part and denying in part 330 Motion to Compel; granting in part and denying in part 331 Motion to Quash Discovery as set forth in document. Signed by Magistrate Judge Sally Shushan. (ecm, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-9/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER granting in part and denying in part 341 Motion for Reconsideration re 340 Order on Motion to Compel, Order on Motion to Quash. Within fourteen calendar days of the entry of this order, the non-operators shall respond to interrogatory nos. 10 and 20 and category nos. 7 and 17 as set forth in document. Signed by Magistrate Judge Sally Shushan. (Reference: 07-1263)(ecm, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-07-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd44e2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-9</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2010-07-21</dateIssued>
+  <docketText>ORDER granting in part and denying in part 341 Motion for Reconsideration re 340 Order on Motion to Compel, Order on Motion to Quash. Within fourteen calendar days of the entry of this order, the non-operators shall respond to interrogatory nos. 10 and 20 and category nos. 7 and 17 as set forth in document. Signed by Magistrate Judge Sally Shushan. (Reference: 07-1263)(ecm, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-10/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER AND REASONS denying 343 Motion for Summary Judgment filed by Plains Marketing LP. Signed by Judge Mary Ann Vial Lemmon. (Reference 07-1263) (ijg, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd44e0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-10</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2010-08-17</dateIssued>
+  <docketText>ORDER AND REASONS denying 343 Motion for Summary Judgment filed by Plains Marketing LP. Signed by Judge Mary Ann Vial Lemmon. (Reference 07-1263) (ijg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-11/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER AND REASONS denying 378 Motion for Reconsideration re 377 Order as set forth in document. Signed by Judge Mary Ann Vial Lemmon. (Reference: 07-4230)(ecm, )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd44e3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-11</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-11-10</dateIssued>
+  <docketText>ORDER AND REASONS denying 378 Motion for Reconsideration re 377 Order as set forth in document. Signed by Judge Mary Ann Vial Lemmon. (Reference: 07-4230)(ecm, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-12/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>St. Paul&apos;s Motion for Summary Judgment regarding pollution coverage is GRANTED, and Settoon&apos;s claims against St. Paul are DISMISSED WITH PREJUDICE. FURTHERED ORDERED that 489 SNIC&apos;s Motion for Partial Summary Judgment regarding polluORDERED that 402 Settoon&apos;s Motions to Strike are DENIED as to: Paragraph 2(c) on Page 10 of the Complaint for Declaratory Judgment as it Relates to NYMAGIC and Federal; NYMAGIC&apos;s Supplemental and Amending Answer to Interrogatory No. 2; Federal&apos;s Supplemental and Amending Answer to Interrogatory No. 2. FURTHER ORDERED that 411 Settoon&apos;s Cross Motion for Partial Summary Judgment against NYMAGIC and Federal regarding pollution coverage is DENIED. FURTHER ORDERED that 486 tion coverage is GRANTED AS UNOPPOSED as to the marine general liability policy and the hull and machinery/protection and indemnity policy; and DENIED as to the first layer bumbershoot policy. FURTHER ORDERED that 495 Settoon&apos;s Cross Motion for Partial Summary Judgment against SNIC regarding pollution coverage is GRANTED. FURTHER ORDER that 392 NYMAGIC&apos;s and Federal&apos;s Motion for Summary Judgment regarding pollution coverage is GRANTED, and Settoon&apos;s claims against NYMAGIC and Federal are DISMISSED WITH PREJUDICE. FURTHER ORDERED that 496 Settoon&apos;s Cross Motion for Partial Summary Judgment against St. Paul regarding pollution coverage is DENIED. Signed by Judge Mary Ann Vial Lemmon on 9/23/2011. (Reference: All Cases)(clm, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd44e1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-12</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2011-09-23</dateIssued>
+  <docketText>St. Paul&apos;s Motion for Summary Judgment regarding pollution coverage is GRANTED, and Settoon&apos;s claims against St. Paul are DISMISSED WITH PREJUDICE. FURTHERED ORDERED that 489 SNIC&apos;s Motion for Partial Summary Judgment regarding polluORDERED that 402 Settoon&apos;s Motions to Strike are DENIED as to: Paragraph 2(c) on Page 10 of the Complaint for Declaratory Judgment as it Relates to NYMAGIC and Federal; NYMAGIC&apos;s Supplemental and Amending Answer to Interrogatory No. 2; Federal&apos;s Supplemental and Amending Answer to Interrogatory No. 2. FURTHER ORDERED that 411 Settoon&apos;s Cross Motion for Partial Summary Judgment against NYMAGIC and Federal regarding pollution coverage is DENIED. FURTHER ORDERED that 486 tion coverage is GRANTED AS UNOPPOSED as to the marine general liability policy and the hull and machinery/protection and indemnity policy; and DENIED as to the first layer bumbershoot policy. FURTHER ORDERED that 495 Settoon&apos;s Cross Motion for Partial Summary Judgment against SNIC regarding pollution coverage is GRANTED. FURTHER ORDER that 392 NYMAGIC&apos;s and Federal&apos;s Motion for Summary Judgment regarding pollution coverage is GRANTED, and Settoon&apos;s claims against NYMAGIC and Federal are DISMISSED WITH PREJUDICE. FURTHER ORDERED that 496 Settoon&apos;s Cross Motion for Partial Summary Judgment against St. Paul regarding pollution coverage is DENIED. Signed by Judge Mary Ann Vial Lemmon on 9/23/2011. (Reference: All Cases)(clm, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-13/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER AND REASOSN granting 570 Motion for Entry of Judgment under Rule 54(b); denying 571 Motion for Reconsideration ; granting 573 Motion to Alter Judgment; granting 575 Motion for Entry of Judgment under Rule 54(b). Signed by Judge Mary Ann Vial Lemmon. (Reference: Both Cases)(ecm, )</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd43cd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-13</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2011-11-07</dateIssued>
+  <docketText>ORDER AND REASOSN granting 570 Motion for Entry of Judgment under Rule 54(b); denying 571 Motion for Reconsideration ; granting 573 Motion to Alter Judgment; granting 575 Motion for Entry of Judgment under Rule 54(b). Signed by Judge Mary Ann Vial Lemmon. (Reference: Both Cases)(ecm, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-14/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>JUDGMENT under Rule 54(b) in favor of defendant and plaintiff-in-counterclaim, Settoon Towing, LLC, and against plaintiff and defendant-in-counterclaim, State National Insurance Company. Further Ordered that judgment is in favor of plaintiffs and defendants-in-counterclaim, New York Marine and General Insurance Company and Federal Insurance Company, and third-party defendant, St. Paul Fire and Marine Insurance Company, and against defendant, plaintiff-in-counterclaim, and third-party plaintiff, Settoon Towing, LLC. Signed by Judge Mary Ann Vial Lemmon.(Reference: Both Cases)(ecm, )</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd44d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-14</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2011-11-07</dateIssued>
+  <docketText>JUDGMENT under Rule 54(b) in favor of defendant and plaintiff-in-counterclaim, Settoon Towing, LLC, and against plaintiff and defendant-in-counterclaim, State National Insurance Company. Further Ordered that judgment is in favor of plaintiffs and defendants-in-counterclaim, New York Marine and General Insurance Company and Federal Insurance Company, and third-party defendant, St. Paul Fire and Marine Insurance Company, and against defendant, plaintiff-in-counterclaim, and third-party plaintiff, Settoon Towing, LLC. Signed by Judge Mary Ann Vial Lemmon.(Reference: Both Cases)(ecm, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_07-cv-01263-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-15/mods.xml">
+ <titleInfo>
+  <title>In Re Settoon Towing, LLC</title>
+  <subTitle>ORDER granting in part and denying in part 648 Motion for Summary Judgment as set forth in document; denying 666 Motion to Strike. Signed by Judge Mary Ann Vial Lemmon. (Reference: all)(cbn)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd44de</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-15</identifier>
+ <identifier type="former granule identifier">laed-2_07-cv-01263_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_07-cv-01263/USCOURTS-laed-2_07-cv-01263-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_07-cv-01263/pdf/USCOURTS-laed-2_07-cv-01263-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-01263; In Re Settoon Towing, LLC; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_07-cv-01263-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER granting in part and denying in part 648 Motion for Summary Judgment as set forth in document; denying 666 Motion to Strike. Signed by Judge Mary Ann Vial Lemmon. (Reference: all)(cbn)</docketText>
+</extension>
+</relatedItem>
+</mods>

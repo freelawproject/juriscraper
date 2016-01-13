@@ -1,0 +1,195 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181027bc6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-03410</identifier>
+<identifier type="local">P0b002ee181027bc6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-1_05-cv-03410</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_05-cv-03410</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:05-cv-03410</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Alan" fullName="Alan D Eason" lastName="Eason" middleName="D" role="Defendant"></party>
+ <party firstName="Jon" fullName="Jon P. Galley" lastName="Galley" middleName="P." role="Defendant"></party>
+ <party firstName="Tina" fullName="Tina Geraghy" lastName="Geraghy" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry D. Johnson Jr." generation="Jr." lastName="Johnson" middleName="D." role="Plaintiff"></party>
+ <party firstName="Wanda" fullName="Wanda Keyes-Heard" lastName="Keyes-Heard" role="Defendant"></party>
+ <party firstName="Albert" fullName="Albert J. Matricciani" lastName="Matricciani" middleName="J." role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank C. Sizer" lastName="Sizer" middleName="C." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Johnson v. Galley et al</title>
+ <partNumber>1:05-cv-03410</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-03410/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-03410;05-3410</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Baltimore</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Alan D Eason</displayForm>
+ <namePart type="family">Eason</namePart>
+ <namePart type="given">Alan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jon P. Galley</displayForm>
+ <namePart type="family">Galley</namePart>
+ <namePart type="given">Jon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tina Geraghy</displayForm>
+ <namePart type="family">Geraghy</namePart>
+ <namePart type="given">Tina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry D. Johnson Jr.</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Wanda Keyes-Heard</displayForm>
+ <namePart type="family">Keyes-Heard</namePart>
+ <namePart type="given">Wanda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Albert J. Matricciani</displayForm>
+ <namePart type="family">Matricciani</namePart>
+ <namePart type="given">Albert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frank C. Sizer</displayForm>
+ <namePart type="family">Sizer</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_05-cv-03410</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:05-cv-03410</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Alan" fullName="Alan D Eason" lastName="Eason" middleName="D" role="Defendant"></party>
+ <party firstName="Jon" fullName="Jon P. Galley" lastName="Galley" middleName="P." role="Defendant"></party>
+ <party firstName="Tina" fullName="Tina Geraghy" lastName="Geraghy" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry D. Johnson Jr." generation="Jr." lastName="Johnson" middleName="D." role="Plaintiff"></party>
+ <party firstName="Wanda" fullName="Wanda Keyes-Heard" lastName="Keyes-Heard" role="Defendant"></party>
+ <party firstName="Albert" fullName="Albert J. Matricciani" lastName="Matricciani" middleName="J." role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank C. Sizer" lastName="Sizer" middleName="C." role="Defendant"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-1_05-cv-03410-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-03410/USCOURTS-mdd-1_05-cv-03410-0/mods.xml">
+ <titleInfo>
+  <title>Johnson v. Galley et al</title>
+  <subTitle>MEMORANDUM. Signed by Judge William D Quarles Jr. on 1/4/06. (c/m 1/4/06 bh)(bmh, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-1_05-cv-03410-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1810cbb7d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-03410/USCOURTS-mdd-1_05-cv-03410-0</identifier>
+ <identifier type="former granule identifier">mdd-1_05-cv-03410_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-03410/USCOURTS-mdd-1_05-cv-03410-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-03410/pdf/USCOURTS-mdd-1_05-cv-03410-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-03410; Johnson v. Galley et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-1_05-cv-03410-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-04</dateIssued>
+  <docketText>MEMORANDUM. Signed by Judge William D Quarles Jr. on 1/4/06. (c/m 1/4/06 bh)(bmh, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

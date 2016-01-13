@@ -1,0 +1,543 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181726cc7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401</identifier>
+<identifier type="local">P0b002ee181726cc7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_04-cv-00401</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cv-00401</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cv-00401</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>790</natureSuitCode>
+ <natureSuit>Other Labor Litigation</natureSuit>
+ <cause>29:201 Fair Labor Standards Act</cause>
+ <party fullName="Ranch Motel and Storage" lastName="Ranch Motel and Storage" role="Defendant"></party>
+ <party firstName="Dolly" fullName="Dolly Smolnik" lastName="Smolnik" role="Plaintiff"></party>
+ <party firstName="Ronald" fullName="Ronald Smolnik" lastName="Smolnik" role="Plaintiff"></party>
+ <party firstName="Sue" fullName="Sue Van Dyke" lastName="Van Dyke" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Van Dyke" lastName="Van Dyke" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Smolnik et al v. Van Dyke et al</title>
+ <partNumber>8:04-cv-00401</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:04-cv-00401;04-401</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ranch Motel and Storage</displayForm>
+ <namePart type="family">Ranch Motel and Storage</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dolly Smolnik</displayForm>
+ <namePart type="family">Smolnik</namePart>
+ <namePart type="given">Dolly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Smolnik</displayForm>
+ <namePart type="family">Smolnik</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sue Van Dyke</displayForm>
+ <namePart type="family">Van Dyke</namePart>
+ <namePart type="given">Sue</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Van Dyke</displayForm>
+ <namePart type="family">Van Dyke</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cv-00401</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cv-00401</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>790</natureSuitCode>
+ <natureSuit>Other Labor Litigation</natureSuit>
+ <cause>29:201 Fair Labor Standards Act</cause>
+ <party fullName="Ranch Motel and Storage" lastName="Ranch Motel and Storage" role="Defendant"></party>
+ <party firstName="Dolly" fullName="Dolly Smolnik" lastName="Smolnik" role="Plaintiff"></party>
+ <party firstName="Ronald" fullName="Ronald Smolnik" lastName="Smolnik" role="Plaintiff"></party>
+ <party firstName="Sue" fullName="Sue Van Dyke" lastName="Van Dyke" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Van Dyke" lastName="Van Dyke" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-0/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>AMENDED FINAL PROGRESSION ORDER granting 78 Motion to Extend Deposition Deadline and Summary Judgment Motion. Deposition deadline is September 15, 2005 and all Motions for Summary Judgment shall be filed on or before October 17, 2005. Signed by Magistrate Judge Thomas D. Thalken on 8/11/2005. (PCV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a1de</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-0</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-08-11</dateIssued>
+  <docketText>AMENDED FINAL PROGRESSION ORDER granting 78 Motion to Extend Deposition Deadline and Summary Judgment Motion. Deposition deadline is September 15, 2005 and all Motions for Summary Judgment shall be filed on or before October 17, 2005. Signed by Magistrate Judge Thomas D. Thalken on 8/11/2005. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-1/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>ORDER that the plaintiffs&apos; request for oral argument 58 is denied. The plaintiffs&apos; Motion to Compel and Request for Oral Argument 58 is granted in part and denied in part as set forth in this order. The parties shall confer regarding the specific redactions necessary for production on or before September 23, 2005. Thereafter, the defendants shall supplement, as ordered in this document, on or before October 3, 2005. The documents produced pursuant to this order shall be deemed confidential. Signed by Magistrate Judge Thomas D. Thalken on 9/7/2005. (JAE, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a368</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-1</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-09-07</dateIssued>
+  <docketText>ORDER that the plaintiffs&apos; request for oral argument 58 is denied. The plaintiffs&apos; Motion to Compel and Request for Oral Argument 58 is granted in part and denied in part as set forth in this order. The parties shall confer regarding the specific redactions necessary for production on or before September 23, 2005. Thereafter, the defendants shall supplement, as ordered in this document, on or before October 3, 2005. The documents produced pursuant to this order shall be deemed confidential. Signed by Magistrate Judge Thomas D. Thalken on 9/7/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-2/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>ORDER - A telephone conference with the undersigned magistrate judge will be held on October 3, 2005, at 11:00 a.m. Central Standard Time for the purpose of reviewing the pending motions 90, 91 and 95. Counsel for the plaintiffs shall initiate the telephone conference. Signed by Magistrate Judge Thomas D. Thalken on 9/26/2005. (KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a365</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-2</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-09-26</dateIssued>
+  <docketText>ORDER - A telephone conference with the undersigned magistrate judge will be held on October 3, 2005, at 11:00 a.m. Central Standard Time for the purpose of reviewing the pending motions 90, 91 and 95. Counsel for the plaintiffs shall initiate the telephone conference. Signed by Magistrate Judge Thomas D. Thalken on 9/26/2005. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-3/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>ORDER regarding 90 and denying as to the Motion in Limine andgranting as to the enlargement of progression order deadlines as set forth below; granting 91 Motion to Take Videotaped Deposition of Plaintiff, Ronald Smolnik; granting 95 Motion to Extend. The Amended Final Progression Order (Filing No. 81) is amended as set forthbelow. All depositions, whether or not they are intended to beused at trial, shall be completed by February 1, 2006. The Final Pretrial Conference with the undersigned magistrate judge is setfor August 4, 2006, at 9:00 a.m. in chambers, Suite 2271. Trial is set to commence at 8:30 a.m. on August 21, 2006, in Omaha,Nebraska, before the Honorable Joseph F. Bataillon and a jury. Signed by Magistrate Judge Thomas D. Thalken on 10/3/2005. (ADB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a360</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-3</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-10-03</dateIssued>
+  <docketText>ORDER regarding 90 and denying as to the Motion in Limine andgranting as to the enlargement of progression order deadlines as set forth below; granting 91 Motion to Take Videotaped Deposition of Plaintiff, Ronald Smolnik; granting 95 Motion to Extend. The Amended Final Progression Order (Filing No. 81) is amended as set forthbelow. All depositions, whether or not they are intended to beused at trial, shall be completed by February 1, 2006. The Final Pretrial Conference with the undersigned magistrate judge is setfor August 4, 2006, at 9:00 a.m. in chambers, Suite 2271. Trial is set to commence at 8:30 a.m. on August 21, 2006, in Omaha,Nebraska, before the Honorable Joseph F. Bataillon and a jury. Signed by Magistrate Judge Thomas D. Thalken on 10/3/2005. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-4/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>ORDER granting 105 Plaintiff&apos;s Motion to Extend Time until 12/8/2005 to file opposition to 102 Defendants&apos; Motion for Summary Judgment. Signed by Judge Joseph F. Bataillon on 11/2/2005. (SMS, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a366</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-4</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-11-02</dateIssued>
+  <docketText>ORDER granting 105 Plaintiff&apos;s Motion to Extend Time until 12/8/2005 to file opposition to 102 Defendants&apos; Motion for Summary Judgment. Signed by Judge Joseph F. Bataillon on 11/2/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-5/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 102 Defendant&apos;s Motion for Summary Judgment. Signed by Judge Joseph F. Bataillon on 5/19/2006. (SMS, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a362</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-5</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-05-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 102 Defendant&apos;s Motion for Summary Judgment. Signed by Judge Joseph F. Bataillon on 5/19/2006. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-6/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>en on 7/26/2006. (KBJ)ORDER - The plaintiffs&apos; Motion for Substitution of a Party and for Leave to File an Amended Complaint 121 is granted. The plaintiffs shall have to on or before 8/2/06, to file the amended complaint. Signed by Magistrate Judge Thomas D. Thalk</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a361</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-6</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-07-26</dateIssued>
+  <docketText>en on 7/26/2006. (KBJ)ORDER - The plaintiffs&apos; Motion for Substitution of a Party and for Leave to File an Amended Complaint 121 is granted. The plaintiffs shall have to on or before 8/2/06, to file the amended complaint. Signed by Magistrate Judge Thomas D. Thalk</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-7/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>GENERAL ORDER 2006-9 reassigning this is case to to Judge Robert T. Dawson. The magistrate judge assignment will remain unchanged. The above case will be called for trial in Courtroom #4 in the Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska on October 23,2006.Ordered by Judge Joseph F. Bataillon. (JAE, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a1dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-7</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2006-08-30</dateIssued>
+  <docketText>GENERAL ORDER 2006-9 reassigning this is case to to Judge Robert T. Dawson. The magistrate judge assignment will remain unchanged. The above case will be called for trial in Courtroom #4 in the Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska on October 23,2006.Ordered by Judge Joseph F. Bataillon. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-8/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 127 Plaintiffs&apos; Motion in Limine, granting in part and denying in part 132 Defendants&apos; Motion in Limine. Ordered by Judge Joseph F. Bataillon.(SMS, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a1db</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-8</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2006-08-30</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 127 Plaintiffs&apos; Motion in Limine, granting in part and denying in part 132 Defendants&apos; Motion in Limine. Ordered by Judge Joseph F. Bataillon.(SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-9/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>ORDER - Jury Trial set for 10/24/2006 at 09:00 AM before Robert T. Dawson. Pretrial Conference set for 10/23/2006 at 04:00 PM before Robert T. Dawson.Ordered by Deputy Clerk. (CJP)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a363</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-9</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2006-09-25</dateIssued>
+  <docketText>ORDER - Jury Trial set for 10/24/2006 at 09:00 AM before Robert T. Dawson. Pretrial Conference set for 10/23/2006 at 04:00 PM before Robert T. Dawson.Ordered by Deputy Clerk. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-10/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 165 Motion for Reconsideration of Memorandum and Order 164 regarding Plaintiffs&apos; Motion in Limine 127. Ordered by Judge Robert T. Dawson.(SMS, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a1dc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-10</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2006-10-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 165 Motion for Reconsideration of Memorandum and Order 164 regarding Plaintiffs&apos; Motion in Limine 127. Ordered by Judge Robert T. Dawson.(SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-11/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>der of the court. Defendant&apos;s counsel may file a response within five days of the filing of the Plaintiff&apos;s brief. A final judgment will then be entered by the court with each party to bear their own respective costs and fees. Case Management (Brief Deadline) set for 11/13/2006.Ordered by Judge Robert T. Dawson. (MKR )ORDER regarding the unanimous verdict reached on October 26, 2006. Plaintiff&apos;s counsel has ten days from the date of this order to file a brief outlining any position as to why the jury&apos;s verdict should not be adopted and entered as the Or</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a35f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-11</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2006-10-26</dateIssued>
+  <docketText>der of the court. Defendant&apos;s counsel may file a response within five days of the filing of the Plaintiff&apos;s brief. A final judgment will then be entered by the court with each party to bear their own respective costs and fees. Case Management (Brief Deadline) set for 11/13/2006.Ordered by Judge Robert T. Dawson. (MKR )ORDER regarding the unanimous verdict reached on October 26, 2006. Plaintiff&apos;s counsel has ten days from the date of this order to file a brief outlining any position as to why the jury&apos;s verdict should not be adopted and entered as the Or</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-12/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>9;s fees.Ordered by Judge Robert T. Dawson. (JSF)ORDER that in accordance with the jury verdict, as well as this Court&apos;s determination, that the Plaintiffs take nothing on their complaint and the matter is dismissed with prejudice. All parties are to bear theirrespective costs and attorney&amp;#03</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a364</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-12</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2006-11-20</dateIssued>
+  <docketText>9;s fees.Ordered by Judge Robert T. Dawson. (JSF)ORDER that in accordance with the jury verdict, as well as this Court&apos;s determination, that the Plaintiffs take nothing on their complaint and the matter is dismissed with prejudice. All parties are to bear theirrespective costs and attorney&amp;#03</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00401-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-13/mods.xml">
+ <titleInfo>
+  <title>Smolnik et al v. Van Dyke et al</title>
+  <subTitle>ORDER to withdraw exhibits or to show cause why exhibits should not be destroyed.Ordered by Judge Lyle E. Strom. (CJP)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00401-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a367</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-13</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00401_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00401/USCOURTS-ned-8_04-cv-00401-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00401/pdf/USCOURTS-ned-8_04-cv-00401-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00401; Smolnik et al v. Van Dyke et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00401-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2007-01-11</dateIssued>
+  <docketText>ORDER to withdraw exhibits or to show cause why exhibits should not be destroyed.Ordered by Judge Lyle E. Strom. (CJP)</docketText>
+</extension>
+</relatedItem>
+</mods>

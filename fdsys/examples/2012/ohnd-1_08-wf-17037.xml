@@ -1,0 +1,413 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817c0de5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-wf-17037</identifier>
+<identifier type="local">P0b002ee1817c0de5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_08-wf-17037</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_08-wf-17037</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:08-wf-17037</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType></caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party fullName="A.O. Smith Corporation" lastName="A.O. Smith Corporation" role="Defendant"></party>
+ <party fullName="Airco, Inc." lastName="Airco, Inc." role="Defendant"></party>
+ <party fullName="Airgas-Gulf States, Inc." lastName="Airgas-Gulf States, Inc." role="Defendant"></party>
+ <party fullName="Arcos Alloys" lastName="Arcos Alloys" role="Defendant"></party>
+ <party fullName="Arcos Industries, L.L.C." lastName="Arcos Industries, L.L.C." role="Defendant"></party>
+ <party firstName="Michelle" fullName="Michelle Baxter" lastName="Baxter" role="Plaintiff"></party>
+ <party firstName="James" fullName="James H. Baxter" lastName="Baxter" middleName="H." role="Plaintiff"></party>
+ <party fullName="Deloro Stellite, L.P." lastName="Deloro Stellite, L.P." role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party fullName="ESAB Group, Inc." lastName="ESAB Group, Inc." role="Defendant"></party>
+ <party fullName="Eiland&apos;s Welders Supply, Inc." lastName="Eiland&apos;s Welders Supply, Inc." role="Defendant"></party>
+ <party fullName="General Electric Company" lastName="General Electric Company" role="Defendant"></party>
+ <party fullName="HSKM, Inc." lastName="HSKM, Inc." role="Defendant"></party>
+ <party fullName="Hobart Brothers Company" lastName="Hobart Brothers Company" role="Defendant"></party>
+ <party fullName="Illinois Tool Works, Inc." lastName="Illinois Tool Works, Inc." role="Defendant"></party>
+ <party fullName="Industrial Welding Supplies of Hattiesburg, Inc." lastName="Industrial Welding Supplies of Hattiesburg, Inc." role="Defendant"></party>
+ <party fullName="Lincoln Electric Company" lastName="Lincoln Electric Company" role="Defendant"></party>
+ <party fullName="Linde Gases Of The South, Inc." lastName="Linde Gases Of The South, Inc." role="Defendant"></party>
+ <party fullName="Malcolm T. Gilliland, Inc." lastName="Malcolm T. Gilliland, Inc." role="Defendant"></party>
+ <party fullName="Metropolitan Life Insurance Company" lastName="Metropolitan Life Insurance Company" role="Defendant"></party>
+ <party fullName="Miller Electric Mfg. Co." lastName="Miller Electric Mfg. Co." role="Defendant"></party>
+ <party fullName="Praxair, Inc." lastName="Praxair, Inc." role="Defendant"></party>
+ <party fullName="Select Arc, Inc." lastName="Select Arc, Inc." role="Defendant"></party>
+ <party fullName="Socra Corporation" lastName="Socra Corporation" role="Defendant"></party>
+ <party fullName="Stoody Company" lastName="Stoody Company" role="Defendant"></party>
+ <party fullName="TDY Industries, Inc." lastName="TDY Industries, Inc." role="Defendant"></party>
+ <party fullName="The BOC Group, Inc." lastName="The BOC Group, Inc." role="Defendant"></party>
+ <party fullName="Thermadyne Holdings Corporation" lastName="Thermadyne Holdings Corporation" role="Defendant"></party>
+ <party fullName="Union Carbide Corporation" lastName="Union Carbide Corporation" role="Defendant"></party>
+ <party fullName="Viacom, Inc." lastName="Viacom, Inc." role="Defendant"></party>
+ <party fullName="WESCO Gas&amp;Welding Supply, Inc." lastName="WESCO Gas&amp;Welding Supply, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Baxter et al v. Airgas-Gulf States, Inc. et al</title>
+ <partNumber>1:08-wf-17037</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-wf-17037/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-wf-17037;08-17037</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>A.O. Smith Corporation</displayForm>
+ <namePart type="family">A.O. Smith Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Airco, Inc.</displayForm>
+ <namePart type="family">Airco, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Airgas-Gulf States, Inc.</displayForm>
+ <namePart type="family">Airgas-Gulf States, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Arcos Alloys</displayForm>
+ <namePart type="family">Arcos Alloys</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Arcos Industries, L.L.C.</displayForm>
+ <namePart type="family">Arcos Industries, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michelle Baxter</displayForm>
+ <namePart type="family">Baxter</namePart>
+ <namePart type="given">Michelle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James H. Baxter</displayForm>
+ <namePart type="family">Baxter</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Deloro Stellite, L.P.</displayForm>
+ <namePart type="family">Deloro Stellite, L.P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ESAB Group, Inc.</displayForm>
+ <namePart type="family">ESAB Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eiland&apos;s Welders Supply, Inc.</displayForm>
+ <namePart type="family">Eiland&apos;s Welders Supply, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>General Electric Company</displayForm>
+ <namePart type="family">General Electric Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>HSKM, Inc.</displayForm>
+ <namePart type="family">HSKM, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hobart Brothers Company</displayForm>
+ <namePart type="family">Hobart Brothers Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Illinois Tool Works, Inc.</displayForm>
+ <namePart type="family">Illinois Tool Works, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Industrial Welding Supplies of Hattiesburg, Inc.</displayForm>
+ <namePart type="family">Industrial Welding Supplies of Hattiesburg, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lincoln Electric Company</displayForm>
+ <namePart type="family">Lincoln Electric Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Linde Gases Of The South, Inc.</displayForm>
+ <namePart type="family">Linde Gases Of The South, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Malcolm T. Gilliland, Inc.</displayForm>
+ <namePart type="family">Malcolm T. Gilliland, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Metropolitan Life Insurance Company</displayForm>
+ <namePart type="family">Metropolitan Life Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Miller Electric Mfg. Co.</displayForm>
+ <namePart type="family">Miller Electric Mfg. Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Praxair, Inc.</displayForm>
+ <namePart type="family">Praxair, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Select Arc, Inc.</displayForm>
+ <namePart type="family">Select Arc, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Socra Corporation</displayForm>
+ <namePart type="family">Socra Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stoody Company</displayForm>
+ <namePart type="family">Stoody Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TDY Industries, Inc.</displayForm>
+ <namePart type="family">TDY Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The BOC Group, Inc.</displayForm>
+ <namePart type="family">The BOC Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thermadyne Holdings Corporation</displayForm>
+ <namePart type="family">Thermadyne Holdings Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Union Carbide Corporation</displayForm>
+ <namePart type="family">Union Carbide Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Viacom, Inc.</displayForm>
+ <namePart type="family">Viacom, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>WESCO Gas&amp;Welding Supply, Inc.</displayForm>
+ <namePart type="family">WESCO Gas&amp;Welding Supply, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_08-wf-17037</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:08-wf-17037</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType></caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party fullName="A.O. Smith Corporation" lastName="A.O. Smith Corporation" role="Defendant"></party>
+ <party fullName="Airco, Inc." lastName="Airco, Inc." role="Defendant"></party>
+ <party fullName="Airgas-Gulf States, Inc." lastName="Airgas-Gulf States, Inc." role="Defendant"></party>
+ <party fullName="Arcos Alloys" lastName="Arcos Alloys" role="Defendant"></party>
+ <party fullName="Arcos Industries, L.L.C." lastName="Arcos Industries, L.L.C." role="Defendant"></party>
+ <party firstName="Michelle" fullName="Michelle Baxter" lastName="Baxter" role="Plaintiff"></party>
+ <party firstName="James" fullName="James H. Baxter" lastName="Baxter" middleName="H." role="Plaintiff"></party>
+ <party fullName="Deloro Stellite, L.P." lastName="Deloro Stellite, L.P." role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party fullName="ESAB Group, Inc." lastName="ESAB Group, Inc." role="Defendant"></party>
+ <party fullName="Eiland&apos;s Welders Supply, Inc." lastName="Eiland&apos;s Welders Supply, Inc." role="Defendant"></party>
+ <party fullName="General Electric Company" lastName="General Electric Company" role="Defendant"></party>
+ <party fullName="HSKM, Inc." lastName="HSKM, Inc." role="Defendant"></party>
+ <party fullName="Hobart Brothers Company" lastName="Hobart Brothers Company" role="Defendant"></party>
+ <party fullName="Illinois Tool Works, Inc." lastName="Illinois Tool Works, Inc." role="Defendant"></party>
+ <party fullName="Industrial Welding Supplies of Hattiesburg, Inc." lastName="Industrial Welding Supplies of Hattiesburg, Inc." role="Defendant"></party>
+ <party fullName="Lincoln Electric Company" lastName="Lincoln Electric Company" role="Defendant"></party>
+ <party fullName="Linde Gases Of The South, Inc." lastName="Linde Gases Of The South, Inc." role="Defendant"></party>
+ <party fullName="Malcolm T. Gilliland, Inc." lastName="Malcolm T. Gilliland, Inc." role="Defendant"></party>
+ <party fullName="Metropolitan Life Insurance Company" lastName="Metropolitan Life Insurance Company" role="Defendant"></party>
+ <party fullName="Miller Electric Mfg. Co." lastName="Miller Electric Mfg. Co." role="Defendant"></party>
+ <party fullName="Praxair, Inc." lastName="Praxair, Inc." role="Defendant"></party>
+ <party fullName="Select Arc, Inc." lastName="Select Arc, Inc." role="Defendant"></party>
+ <party fullName="Socra Corporation" lastName="Socra Corporation" role="Defendant"></party>
+ <party fullName="Stoody Company" lastName="Stoody Company" role="Defendant"></party>
+ <party fullName="TDY Industries, Inc." lastName="TDY Industries, Inc." role="Defendant"></party>
+ <party fullName="The BOC Group, Inc." lastName="The BOC Group, Inc." role="Defendant"></party>
+ <party fullName="Thermadyne Holdings Corporation" lastName="Thermadyne Holdings Corporation" role="Defendant"></party>
+ <party fullName="Union Carbide Corporation" lastName="Union Carbide Corporation" role="Defendant"></party>
+ <party fullName="Viacom, Inc." lastName="Viacom, Inc." role="Defendant"></party>
+ <party fullName="WESCO Gas&amp;Welding Supply, Inc." lastName="WESCO Gas&amp;Welding Supply, Inc." role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_08-wf-17037-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-wf-17037/USCOURTS-ohnd-1_08-wf-17037-0/mods.xml">
+ <titleInfo>
+  <title>Baxter et al v. Airgas-Gulf States, Inc. et al</title>
+  <subTitle>Memorandum and Order. Defendants&apos; Motion for Order from the Court allowing them to undertake an independent medical examination involving electrophysiological testing of plaintiff James Baxter (Related doc # 92) is GRANTED. Plaintiff&apos;s Motion to remand case to the Southern District of Mississippi after completion of pre-trial proceedings (Related doc # 89) is DENIED. Judge Kathleen M. O&apos;Malley on 1/12/2012. (H,CM)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_08-wf-17037-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e4e46</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-wf-17037/USCOURTS-ohnd-1_08-wf-17037-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_08-wf-17037_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-wf-17037/USCOURTS-ohnd-1_08-wf-17037-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-wf-17037/pdf/USCOURTS-ohnd-1_08-wf-17037-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-wf-17037; Baxter et al v. Airgas-Gulf States, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_08-wf-17037-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>Memorandum and Order. Defendants&apos; Motion for Order from the Court allowing them to undertake an independent medical examination involving electrophysiological testing of plaintiff James Baxter (Related doc # 92) is GRANTED. Plaintiff&apos;s Motion to remand case to the Southern District of Mississippi after completion of pre-trial proceedings (Related doc # 89) is DENIED. Judge Kathleen M. O&apos;Malley on 1/12/2012. (H,CM)</docketText>
+</extension>
+</relatedItem>
+</mods>

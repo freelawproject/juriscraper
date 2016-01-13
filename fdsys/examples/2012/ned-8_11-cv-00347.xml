@@ -1,0 +1,347 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18377b5a8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-11-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-11-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00347</identifier>
+<identifier type="local">P0b002ee18377b5a8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-11-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-11-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cv-00347</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00347</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00347</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party fullName="Billy Frogg&apos;s Grill&amp;Bar" lastName="Billy Frogg&apos;s Grill&amp;Bar" role="Defendant"></party>
+ <party firstName="John" fullName="John M. Feddin" lastName="Feddin" middleName="M." role="Defendant"></party>
+ <party fullName="Selser Two, Inc." lastName="Selser Two, Inc." role="Defendant"></party>
+ <party fullName="Shadi, Inc." lastName="Shadi, Inc." role="Defendant"></party>
+ <party firstName="Elijah" fullName="Elijah Simmons" lastName="Simmons" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Simmons v. Selser Two, Inc. et al</title>
+ <partNumber>8:11-cv-00347</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00347/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cv-00347;11-347</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Billy Frogg&apos;s Grill&amp;Bar</displayForm>
+ <namePart type="family">Billy Frogg&apos;s Grill&amp;Bar</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John M. Feddin</displayForm>
+ <namePart type="family">Feddin</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Selser Two, Inc.</displayForm>
+ <namePart type="family">Selser Two, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shadi, Inc.</displayForm>
+ <namePart type="family">Shadi, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Elijah Simmons</displayForm>
+ <namePart type="family">Simmons</namePart>
+ <namePart type="given">Elijah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00347</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00347</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party fullName="Billy Frogg&apos;s Grill&amp;Bar" lastName="Billy Frogg&apos;s Grill&amp;Bar" role="Defendant"></party>
+ <party firstName="John" fullName="John M. Feddin" lastName="Feddin" middleName="M." role="Defendant"></party>
+ <party fullName="Selser Two, Inc." lastName="Selser Two, Inc." role="Defendant"></party>
+ <party fullName="Shadi, Inc." lastName="Shadi, Inc." role="Defendant"></party>
+ <party firstName="Elijah" fullName="Elijah Simmons" lastName="Simmons" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00347-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-0/mods.xml">
+ <titleInfo>
+  <title>Simmons v. Selser Two, Inc. et al</title>
+  <subTitle>ORDER - Scheduling Conference set for 12/20/2011 08:15 AM in Chambers before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (TCL )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00347-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183785351</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00347_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00347/pdf/USCOURTS-ned-8_11-cv-00347-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00347; Simmons v. Selser Two, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00347-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-12-06</dateIssued>
+  <docketText>ORDER - Scheduling Conference set for 12/20/2011 08:15 AM in Chambers before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00347-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-1/mods.xml">
+ <titleInfo>
+  <title>Simmons v. Selser Two, Inc. et al</title>
+  <subTitle>ORDER - Motion 26 is granted; Jennifer R. Petersen is deemed withdrawn as counsel for defendants and shall no longer receive notice of CM/ECF filings. Ordered by Senior Judge Lyle E. Strom. (AOA)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00347-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1837854ec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00347_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00347/pdf/USCOURTS-ned-8_11-cv-00347-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00347; Simmons v. Selser Two, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00347-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-13</dateIssued>
+  <docketText>ORDER - Motion 26 is granted; Jennifer R. Petersen is deemed withdrawn as counsel for defendants and shall no longer receive notice of CM/ECF filings. Ordered by Senior Judge Lyle E. Strom. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00347-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-2/mods.xml">
+ <titleInfo>
+  <title>Simmons v. Selser Two, Inc. et al</title>
+  <subTitle>ORDER granting the Defendant&apos;s 30 Motion for Leave to file an answer out of time. Defendant John M. Feddin shall have until April 6, 2012, to answer or respond to plaintiff&apos;s complaint. Ordered by Senior Judge Lyle E. Strom. (MKR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00347-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1837854eb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00347_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00347/pdf/USCOURTS-ned-8_11-cv-00347-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00347; Simmons v. Selser Two, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00347-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-03-26</dateIssued>
+  <docketText>ORDER granting the Defendant&apos;s 30 Motion for Leave to file an answer out of time. Defendant John M. Feddin shall have until April 6, 2012, to answer or respond to plaintiff&apos;s complaint. Ordered by Senior Judge Lyle E. Strom. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00347-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-3/mods.xml">
+ <titleInfo>
+  <title>Simmons v. Selser Two, Inc. et al</title>
+  <subTitle>ORDER approving and adopting the 57 Stipulation for Dismissal with prejudice as to John M. Feddin.. This action is dismissed with prejudice as to defendant John M. Feddin, a/k/a Mahmoud Feddin only. Ordered by Senior Judge Lyle E. Strom. (MKR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00347-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1837854e8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00347_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00347/pdf/USCOURTS-ned-8_11-cv-00347-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00347; Simmons v. Selser Two, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00347-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-07-27</dateIssued>
+  <docketText>ORDER approving and adopting the 57 Stipulation for Dismissal with prejudice as to John M. Feddin.. This action is dismissed with prejudice as to defendant John M. Feddin, a/k/a Mahmoud Feddin only. Ordered by Senior Judge Lyle E. Strom. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00347-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-4/mods.xml">
+ <titleInfo>
+  <title>Simmons v. Selser Two, Inc. et al</title>
+  <subTitle>ORDER granting the 60 Motion to Withdraw as Attorney. Francie C. Riedmann is deemed withdrawn as counsel for defendants and shall no longer receive notice of CM/ECF filings. Ordered by Senior Judge Lyle E. Strom. (MKR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00347-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1837854e9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-4</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00347_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00347/pdf/USCOURTS-ned-8_11-cv-00347-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00347; Simmons v. Selser Two, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00347-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-08-13</dateIssued>
+  <docketText>ORDER granting the 60 Motion to Withdraw as Attorney. Francie C. Riedmann is deemed withdrawn as counsel for defendants and shall no longer receive notice of CM/ECF filings. Ordered by Senior Judge Lyle E. Strom. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00347-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-5/mods.xml">
+ <titleInfo>
+  <title>Simmons v. Selser Two, Inc. et al</title>
+  <subTitle>AMENDED FINAL PROGRESSION ORDER granting 66 Motion to Continue Trial Date. Final Pretrial Conference set for 11/2/2012 at 10:00 AM in Chambers before Magistrate Judge F.A. Gossett. Jury Trial set for 11/13/2012 at 09:00 AM in Courtroom 5, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (TCL )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00347-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1837854ed</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-5</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00347_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00347/pdf/USCOURTS-ned-8_11-cv-00347-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00347; Simmons v. Selser Two, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00347-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-08-29</dateIssued>
+  <docketText>AMENDED FINAL PROGRESSION ORDER granting 66 Motion to Continue Trial Date. Final Pretrial Conference set for 11/2/2012 at 10:00 AM in Chambers before Magistrate Judge F.A. Gossett. Jury Trial set for 11/13/2012 at 09:00 AM in Courtroom 5, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00347-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-6/mods.xml">
+ <titleInfo>
+  <title>Simmons v. Selser Two, Inc. et al</title>
+  <subTitle>ORDER - That the stipulation 69 is approved and adopted; this action is dismissed with prejudice, each party to pay their own costs and attorney fees, complete record waived. Ordered by Senior Judge Lyle E. Strom. (AOA)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00347-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1837854ea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-6</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00347_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00347/USCOURTS-ned-8_11-cv-00347-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00347/pdf/USCOURTS-ned-8_11-cv-00347-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00347; Simmons v. Selser Two, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00347-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-11-06</dateIssued>
+  <docketText>ORDER - That the stipulation 69 is approved and adopted; this action is dismissed with prejudice, each party to pay their own costs and attorney fees, complete record waived. Ordered by Senior Judge Lyle E. Strom. (AOA)</docketText>
+</extension>
+</relatedItem>
+</mods>

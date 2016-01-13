@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18155bfdb">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_02-cv-02160</identifier>
+<identifier type="local">P0b002ee18155bfdb</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_02-cv-02160</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_02-cv-02160</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:02-cv-02160</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>470</natureSuitCode>
+ <natureSuit>Civil (Rico)</natureSuit>
+ <cause>18:1961 Racketeering (RICO) Act</cause>
+ <party firstName="James" fullName="James A. Capwill" lastName="Capwill" middleName="A." role="Defendant"></party>
+ <party firstName="Jane/John" fullName="Jane/John Does" lastName="Does" role="Defendant"></party>
+ <party fullName="KeyBank National Association" lastName="KeyBank National Association" role="Defendant"></party>
+ <party firstName="William" fullName="William T. Wuliger" lastName="Wuliger" middleName="T." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Wuliger v. KeyBank National Association et al</title>
+ <partNumber>1:02-cv-02160</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_02-cv-02160/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:02-cv-02160;02-2160</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>James A. Capwill</displayForm>
+ <namePart type="family">Capwill</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jane/John Does</displayForm>
+ <namePart type="family">Does</namePart>
+ <namePart type="given">Jane/John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>KeyBank National Association</displayForm>
+ <namePart type="family">KeyBank National Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William T. Wuliger</displayForm>
+ <namePart type="family">Wuliger</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_02-cv-02160</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:02-cv-02160</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>470</natureSuitCode>
+ <natureSuit>Civil (Rico)</natureSuit>
+ <cause>18:1961 Racketeering (RICO) Act</cause>
+ <party firstName="James" fullName="James A. Capwill" lastName="Capwill" middleName="A." role="Defendant"></party>
+ <party firstName="Jane/John" fullName="Jane/John Does" lastName="Does" role="Defendant"></party>
+ <party fullName="KeyBank National Association" lastName="KeyBank National Association" role="Defendant"></party>
+ <party firstName="William" fullName="William T. Wuliger" lastName="Wuliger" middleName="T." role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_02-cv-02160-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_02-cv-02160/USCOURTS-ohnd-1_02-cv-02160-0/mods.xml">
+ <titleInfo>
+  <title>Wuliger v. KeyBank National Association et al</title>
+  <subTitle>ORDER Defendant KeyBank&apos;s objection under Paragrah 5(e) of Stipulated Protective Order denied. Signed by Judge David A. Katz on 12/29/05. (G, C) Modified on 1/3/2006 (L, V).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_02-cv-02160-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181600be5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_02-cv-02160/USCOURTS-ohnd-1_02-cv-02160-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_02-cv-02160_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_02-cv-02160/USCOURTS-ohnd-1_02-cv-02160-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_02-cv-02160/pdf/USCOURTS-ohnd-1_02-cv-02160-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:02-cv-02160; Wuliger v. KeyBank National Association et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_02-cv-02160-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-12-29</dateIssued>
+  <docketText>ORDER Defendant KeyBank&apos;s objection under Paragrah 5(e) of Stipulated Protective Order denied. Signed by Judge David A. Katz on 12/29/05. (G, C) Modified on 1/3/2006 (L, V).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_02-cv-02160-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_02-cv-02160/USCOURTS-ohnd-1_02-cv-02160-1/mods.xml">
+ <titleInfo>
+  <title>Wuliger v. KeyBank National Association et al</title>
+  <subTitle>MEMORANDUM OPINION Defendants&apos; motion to dismiss granted in part&amp;denied in part as stated herein (Related Doc # 75). Signed by Judge David A. Katz on 1/6/06.(G, C)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_02-cv-02160-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181600be6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_02-cv-02160/USCOURTS-ohnd-1_02-cv-02160-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_02-cv-02160_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_02-cv-02160/USCOURTS-ohnd-1_02-cv-02160-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_02-cv-02160/pdf/USCOURTS-ohnd-1_02-cv-02160-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:02-cv-02160; Wuliger v. KeyBank National Association et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_02-cv-02160-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-06</dateIssued>
+  <docketText>MEMORANDUM OPINION Defendants&apos; motion to dismiss granted in part&amp;denied in part as stated herein (Related Doc # 75). Signed by Judge David A. Katz on 1/6/06.(G, C)</docketText>
+</extension>
+</relatedItem>
+</mods>

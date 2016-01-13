@@ -1,0 +1,253 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183d461c9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-05-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cv-12288</identifier>
+<identifier type="local">P0b002ee183d461c9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_11-cv-12288</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_11-cv-12288</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:11-cv-12288</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Jason" fullName="Jason Shola Akande" lastName="Akande" middleName="Shola" role="Plaintiff"></party>
+ <party firstName="Anthony" fullName="Anthony Crutchfield" lastName="Crutchfield" role="Defendant"></party>
+ <party fullName="Department of Homeland Security" lastName="Department of Homeland Security" role="Defendant"></party>
+ <party fullName="Director Immigration and Customs Massachusetts" lastName="Director Immigration and Customs Massachusetts" role="Defendant"></party>
+ <party firstName="Gerard" fullName="Gerard Horgan" lastName="Horgan" role="Defendant"></party>
+ <party fullName="Warden Suffolk County House of Correction" lastName="Warden Suffolk County House of Correction" role="Defendant"></party>
+ <party fullName="Warden Wyatt Federal Prison" lastName="Warden Wyatt Federal Prison" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Akande v. Crutchfield et al</title>
+ <partNumber>1:11-cv-12288</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cv-12288/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-12288;11-12288</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jason Shola Akande</displayForm>
+ <namePart type="family">Akande</namePart>
+ <namePart type="given">Jason</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Crutchfield</displayForm>
+ <namePart type="family">Crutchfield</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Department of Homeland Security</displayForm>
+ <namePart type="family">Department of Homeland Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Director Immigration and Customs Massachusetts</displayForm>
+ <namePart type="family">Director Immigration and Customs Massachusetts</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gerard Horgan</displayForm>
+ <namePart type="family">Horgan</namePart>
+ <namePart type="given">Gerard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Warden Suffolk County House of Correction</displayForm>
+ <namePart type="family">Warden Suffolk County House of Correction</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Warden Wyatt Federal Prison</displayForm>
+ <namePart type="family">Warden Wyatt Federal Prison</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_11-cv-12288</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:11-cv-12288</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Jason" fullName="Jason Shola Akande" lastName="Akande" middleName="Shola" role="Plaintiff"></party>
+ <party firstName="Anthony" fullName="Anthony Crutchfield" lastName="Crutchfield" role="Defendant"></party>
+ <party fullName="Department of Homeland Security" lastName="Department of Homeland Security" role="Defendant"></party>
+ <party fullName="Director Immigration and Customs Massachusetts" lastName="Director Immigration and Customs Massachusetts" role="Defendant"></party>
+ <party firstName="Gerard" fullName="Gerard Horgan" lastName="Horgan" role="Defendant"></party>
+ <party fullName="Warden Suffolk County House of Correction" lastName="Warden Suffolk County House of Correction" role="Defendant"></party>
+ <party fullName="Warden Wyatt Federal Prison" lastName="Warden Wyatt Federal Prison" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cv-12288-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-12288/USCOURTS-mad-1_11-cv-12288-0/mods.xml">
+ <titleInfo>
+  <title>Akande v. Crutchfield et al</title>
+  <subTitle>Rule 4.1, the Plaintiff shall have 120 days from the date of this Order to complete service. (PSSA, 1)Judge Rya W. Zobel: MEMORANDUM AND ORDER entered: Plaintiff&apos;s Motion for Leave to Proceed in forma pauperis (Docket No.2 ) is ALLOWED; Plaintiff&apos;s Motion for Appointment of Counsel (Docket No. 3) is DENIED; The Clerk shall issue summonses as to Anthony Crutchfield, the Director of the Massachusetts Branch of ICE, the Warden of SCHC, and the Warden of Wyatt Federal Prison in Central Falls, Rhode Island; andThe Clerk shall send the summons(es), Complaint, and this Memorandum andOrder to the Plaintiff, who must thereafter serve the Defendants in accordancewith Federal Rule of Civil Procedure 4(m). The Plaintiff may elect to have service made by the United States Marshal Service. If directed by the Plaintiff to do so, the United States Marshal shall serve the summons(es), complaint, and this Order upon the Defendant, in the manner directed by the Plaintiff, with all costs of service to be advanced by the United States Marshal Service.Notwithstanding Fed. R. Civ. P. 4(m) and Local</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cv-12288-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d63e6c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-12288/USCOURTS-mad-1_11-cv-12288-0</identifier>
+ <identifier type="former granule identifier">mad-1_11-cv-12288_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-12288/USCOURTS-mad-1_11-cv-12288-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cv-12288/pdf/USCOURTS-mad-1_11-cv-12288-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-12288; Akande v. Crutchfield et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cv-12288-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-03</dateIssued>
+  <docketText>Rule 4.1, the Plaintiff shall have 120 days from the date of this Order to complete service. (PSSA, 1)Judge Rya W. Zobel: MEMORANDUM AND ORDER entered: Plaintiff&apos;s Motion for Leave to Proceed in forma pauperis (Docket No.2 ) is ALLOWED; Plaintiff&apos;s Motion for Appointment of Counsel (Docket No. 3) is DENIED; The Clerk shall issue summonses as to Anthony Crutchfield, the Director of the Massachusetts Branch of ICE, the Warden of SCHC, and the Warden of Wyatt Federal Prison in Central Falls, Rhode Island; andThe Clerk shall send the summons(es), Complaint, and this Memorandum andOrder to the Plaintiff, who must thereafter serve the Defendants in accordancewith Federal Rule of Civil Procedure 4(m). The Plaintiff may elect to have service made by the United States Marshal Service. If directed by the Plaintiff to do so, the United States Marshal shall serve the summons(es), complaint, and this Order upon the Defendant, in the manner directed by the Plaintiff, with all costs of service to be advanced by the United States Marshal Service.Notwithstanding Fed. R. Civ. P. 4(m) and Local</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cv-12288-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-12288/USCOURTS-mad-1_11-cv-12288-1/mods.xml">
+ <titleInfo>
+  <title>Akande v. Crutchfield et al</title>
+  <subTitle>Judge Rya W. Zobel: MEMORANDUM AND ORDER entered: Plaintiff&apos;s Motion to Amend Complaint (Docket No. 9) is ALLOWED as of right, but is STRICKEN and the original Complaint (Docket No. 1) shall remain the operative pleading in this action; Plaintiff is PROHIBITED from filing any further Amended Complaints until after the Defendants have filed a response to the Complaint, and upon a Motion to Amend with good cause shown; Plaintiff&apos;s Motion for Reconsideration of Appointment of Counsel (Docket No. 10) is DENIED; and The Clerk shall re-send to Plaintiff the USM 285 forms so that he may provide the U.S. Marshal Service with the required information for effectuating service of process.(PSSA, 1)[remark: USM 285 forms sent with copy of Memorandum and Order].</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cv-12288-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d63e6d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-12288/USCOURTS-mad-1_11-cv-12288-1</identifier>
+ <identifier type="former granule identifier">mad-1_11-cv-12288_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-12288/USCOURTS-mad-1_11-cv-12288-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cv-12288/pdf/USCOURTS-mad-1_11-cv-12288-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-12288; Akande v. Crutchfield et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cv-12288-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-26</dateIssued>
+  <docketText>Judge Rya W. Zobel: MEMORANDUM AND ORDER entered: Plaintiff&apos;s Motion to Amend Complaint (Docket No. 9) is ALLOWED as of right, but is STRICKEN and the original Complaint (Docket No. 1) shall remain the operative pleading in this action; Plaintiff is PROHIBITED from filing any further Amended Complaints until after the Defendants have filed a response to the Complaint, and upon a Motion to Amend with good cause shown; Plaintiff&apos;s Motion for Reconsideration of Appointment of Counsel (Docket No. 10) is DENIED; and The Clerk shall re-send to Plaintiff the USM 285 forms so that he may provide the U.S. Marshal Service with the required information for effectuating service of process.(PSSA, 1)[remark: USM 285 forms sent with copy of Memorandum and Order].</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cv-12288-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-12288/USCOURTS-mad-1_11-cv-12288-2/mods.xml">
+ <titleInfo>
+  <title>Akande v. Crutchfield et al</title>
+  <subTitle>(Docket No. 16) is DENIED as moot because the Wyatt Detention Center is not a party to this action; All claims against the Warden of Wyatt Detention Center are DISMISSED sua sponte; Plaintiff&apos;s Motion for Default Judgment (Docket No. 36) is DENIED; Plaintiff&apos;s request to include additional Defendants (Suffolk County House of Correction employees), contained in his Opposition, is DENIED; Plaintiff is PROHIBITED from filing any further claims, notices, or amendments to the Complaint unless he first obtains Court permission to do so, upon a duly-filed motion filed in good faith and with good cause shown; and Plaintiff is PROHIBITED from filing any motions for leave to amend the Complaint until after the ICE Defendants have filed a response to the original Complaint.(PSSA, 1)Judge Rya W. Zobel: MEMORANDUM AND ORDER entered: Superintendent Gerard Horgan is substituted for the Warden of SCHC; Superintendent Gerard Horgan&apos;s Motion to Dismiss (Docket No. 20) is ALLOWED; Wyatt Detention Center&apos;s Motion to Dismiss</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cv-12288-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d63e6b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-12288/USCOURTS-mad-1_11-cv-12288-2</identifier>
+ <identifier type="former granule identifier">mad-1_11-cv-12288_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-12288/USCOURTS-mad-1_11-cv-12288-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cv-12288/pdf/USCOURTS-mad-1_11-cv-12288-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-12288; Akande v. Crutchfield et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cv-12288-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-05-08</dateIssued>
+  <docketText>(Docket No. 16) is DENIED as moot because the Wyatt Detention Center is not a party to this action; All claims against the Warden of Wyatt Detention Center are DISMISSED sua sponte; Plaintiff&apos;s Motion for Default Judgment (Docket No. 36) is DENIED; Plaintiff&apos;s request to include additional Defendants (Suffolk County House of Correction employees), contained in his Opposition, is DENIED; Plaintiff is PROHIBITED from filing any further claims, notices, or amendments to the Complaint unless he first obtains Court permission to do so, upon a duly-filed motion filed in good faith and with good cause shown; and Plaintiff is PROHIBITED from filing any motions for leave to amend the Complaint until after the ICE Defendants have filed a response to the original Complaint.(PSSA, 1)Judge Rya W. Zobel: MEMORANDUM AND ORDER entered: Superintendent Gerard Horgan is substituted for the Warden of SCHC; Superintendent Gerard Horgan&apos;s Motion to Dismiss (Docket No. 20) is ALLOWED; Wyatt Detention Center&apos;s Motion to Dismiss</docketText>
+</extension>
+</relatedItem>
+</mods>

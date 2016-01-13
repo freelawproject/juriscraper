@@ -1,0 +1,373 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1875ca903">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184</identifier>
+<identifier type="local">P0b002ee1875ca903</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_04-cv-02184</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_04-cv-02184</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:04-cv-02184</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party fullName="Aspen Group, Inc." lastName="Aspen Group, Inc." role="Defendant"></party>
+ <party fullName="Aspen Group, Inc." lastName="Aspen Group, Inc." role="Third Party Defendant"></party>
+ <party fullName="Atrium, Inc." lastName="Atrium, Inc." role="Defendant"></party>
+ <party fullName="Atrium, Inc." lastName="Atrium, Inc." role="Third Party Defendant"></party>
+ <party firstName="Ron" fullName="Ron Frederic" lastName="Frederic" role="Defendant"></party>
+ <party fullName="Liquidity International, Inc." lastName="Liquidity International, Inc." role="Defendant"></party>
+ <party fullName="New Image International, Inc." lastName="New Image International, Inc." role="Defendant"></party>
+ <party fullName="New Image International, Inc." lastName="New Image International, Inc." role="Third Party Plaintiff"></party>
+ <party fullName="Phillips DRTV, LLC" lastName="Phillips DRTV, LLC" role="Defendant"></party>
+ <party firstName="Jim" fullName="Jim Sommers" lastName="Sommers" role="Defendant"></party>
+ <party firstName="Stephen" fullName="Stephen Spicer" lastName="Spicer" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Spicer v. New Image International, Inc. et al</title>
+ <partNumber>2:04-cv-02184</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:04-cv-02184;04-2184</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Aspen Group, Inc.</displayForm>
+ <namePart type="family">Aspen Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Aspen Group, Inc.</displayForm>
+ <namePart type="family">Aspen Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Atrium, Inc.</displayForm>
+ <namePart type="family">Atrium, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Atrium, Inc.</displayForm>
+ <namePart type="family">Atrium, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ron Frederic</displayForm>
+ <namePart type="family">Frederic</namePart>
+ <namePart type="given">Ron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Liquidity International, Inc.</displayForm>
+ <namePart type="family">Liquidity International, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New Image International, Inc.</displayForm>
+ <namePart type="family">New Image International, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New Image International, Inc.</displayForm>
+ <namePart type="family">New Image International, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Phillips DRTV, LLC</displayForm>
+ <namePart type="family">Phillips DRTV, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jim Sommers</displayForm>
+ <namePart type="family">Sommers</namePart>
+ <namePart type="given">Jim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stephen Spicer</displayForm>
+ <namePart type="family">Spicer</namePart>
+ <namePart type="given">Stephen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_04-cv-02184</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:04-cv-02184</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party fullName="Aspen Group, Inc." lastName="Aspen Group, Inc." role="Defendant"></party>
+ <party fullName="Aspen Group, Inc." lastName="Aspen Group, Inc." role="Third Party Defendant"></party>
+ <party fullName="Atrium, Inc." lastName="Atrium, Inc." role="Defendant"></party>
+ <party fullName="Atrium, Inc." lastName="Atrium, Inc." role="Third Party Defendant"></party>
+ <party firstName="Ron" fullName="Ron Frederic" lastName="Frederic" role="Defendant"></party>
+ <party fullName="Liquidity International, Inc." lastName="Liquidity International, Inc." role="Defendant"></party>
+ <party fullName="New Image International, Inc." lastName="New Image International, Inc." role="Defendant"></party>
+ <party fullName="New Image International, Inc." lastName="New Image International, Inc." role="Third Party Plaintiff"></party>
+ <party fullName="Phillips DRTV, LLC" lastName="Phillips DRTV, LLC" role="Defendant"></party>
+ <party firstName="Jim" fullName="Jim Sommers" lastName="Sommers" role="Defendant"></party>
+ <party firstName="Stephen" fullName="Stephen Spicer" lastName="Spicer" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02184-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-0/mods.xml">
+ <titleInfo>
+  <title>Spicer v. New Image International, Inc. et al</title>
+  <subTitle>ORDER re 24 Order to Show Cause and28 Response to Order to Show Cause filed by New Image International, Inc. Court finds that plaintiff has shown good cause why the Court should not dismiss the claims against third-party defendants for lack of prosecution. Signed by Judge Kathryn H. Vratil on 06/02/05. (ls)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/pdf/USCOURTS-ksd-2_04-cv-02184-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187600fb4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-0</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02184_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/pdf/USCOURTS-ksd-2_04-cv-02184-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02184; Spicer v. New Image International, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02184-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-06-02</dateIssued>
+  <docketText>ORDER re 24 Order to Show Cause and28 Response to Order to Show Cause filed by New Image International, Inc. Court finds that plaintiff has shown good cause why the Court should not dismiss the claims against third-party defendants for lack of prosecution. Signed by Judge Kathryn H. Vratil on 06/02/05. (ls)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02184-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-1/mods.xml">
+ <titleInfo>
+  <title>Spicer v. New Image International, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 74 Plaintiff&apos;s Motion to Amend Complaint; Plaintiff shall electronically file and serve the referenced Amended Complaint on or before December 16, 2005. Signed by Magistrate Judge David J. Waxse on 12/05/2005 (mat).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/pdf/USCOURTS-ksd-2_04-cv-02184-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187600fb3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-1</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02184_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/pdf/USCOURTS-ksd-2_04-cv-02184-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02184; Spicer v. New Image International, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02184-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-12-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 74 Plaintiff&apos;s Motion to Amend Complaint; Plaintiff shall electronically file and serve the referenced Amended Complaint on or before December 16, 2005. Signed by Magistrate Judge David J. Waxse on 12/05/2005 (mat).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02184-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-2/mods.xml">
+ <titleInfo>
+  <title>Spicer v. New Image International, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER overruling 87 Motion to Dismiss for Lack of Jurisdiction. Signed by Kathryn H. Vratil on 2/21/06. (ls)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-02-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/pdf/USCOURTS-ksd-2_04-cv-02184-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187600fb2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-2</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02184_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/pdf/USCOURTS-ksd-2_04-cv-02184-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02184; Spicer v. New Image International, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02184-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-02-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER overruling 87 Motion to Dismiss for Lack of Jurisdiction. Signed by Kathryn H. Vratil on 2/21/06. (ls)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02184-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-3/mods.xml">
+ <titleInfo>
+  <title>Spicer v. New Image International, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER sustaining 152 Motion to Dismiss, 156 Motion to Dismiss, and 161 Motion to Dismiss Party. Claims against other defendants remain in the case. Signed by Judge Kathryn H. Vratil on 8/18/06. (ls)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/pdf/USCOURTS-ksd-2_04-cv-02184-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187600fb0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-3</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02184_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/pdf/USCOURTS-ksd-2_04-cv-02184-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02184; Spicer v. New Image International, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02184-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-08-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER sustaining 152 Motion to Dismiss, 156 Motion to Dismiss, and 161 Motion to Dismiss Party. Claims against other defendants remain in the case. Signed by Judge Kathryn H. Vratil on 8/18/06. (ls)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02184-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-4/mods.xml">
+ <titleInfo>
+  <title>Spicer v. New Image International, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 198 Motion to Amend Complaint; denying 208 Motion for Leave to File Surreply. See Memorandum and Order for further detail. Signed by Magistrate Judge David J. Waxse on 12/26/2006 (mts).</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/pdf/USCOURTS-ksd-2_04-cv-02184-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187600fb1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-4</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02184_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/pdf/USCOURTS-ksd-2_04-cv-02184-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02184; Spicer v. New Image International, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02184-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-12-26</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 198 Motion to Amend Complaint; denying 208 Motion for Leave to File Surreply. See Memorandum and Order for further detail. Signed by Magistrate Judge David J. Waxse on 12/26/2006 (mts).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02184-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-5/mods.xml">
+ <titleInfo>
+  <title>Spicer v. New Image International, Inc. et al</title>
+  <subTitle>n 1/4/07. (ls)MEMORANDUM AND ORDER sustaining 191 Motion to Dismiss Party; sustaining in part 193 Motion to Dismiss Party. New Image&apos;s third-party claim for indemnification against Atrium and Aspen remains in the case. Signed by Judge Kathryn H. Vratil o</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/pdf/USCOURTS-ksd-2_04-cv-02184-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187600faf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-5</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02184_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02184/USCOURTS-ksd-2_04-cv-02184-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02184/pdf/USCOURTS-ksd-2_04-cv-02184-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02184; Spicer v. New Image International, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02184-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-01-04</dateIssued>
+  <docketText>n 1/4/07. (ls)MEMORANDUM AND ORDER sustaining 191 Motion to Dismiss Party; sustaining in part 193 Motion to Dismiss Party. New Image&apos;s third-party claim for indemnification against Atrium and Aspen remains in the case. Signed by Judge Kathryn H. Vratil o</docketText>
+</extension>
+</relatedItem>
+</mods>

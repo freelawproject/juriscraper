@@ -1,0 +1,561 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183b44895">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-24</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-5_11-cv-00761</identifier>
+<identifier type="local">P0b002ee183b44895</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-24</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-24</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alnd-5_11-cv-00761</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alnd-5_11-cv-00761</accessId>
+ <courtType>District</courtType>
+ <courtCode>alnd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2012</courtSortOrder>
+ <caseNumber>5:11-cv-00761</caseNumber>
+ <caseOffice>Northeastern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:2201 Constitutionality of State Statute(s)</cause>
+ <party fullName="A-Vote" lastName="A-Vote" role="Plaintiff"></party>
+ <party fullName="ASEA" lastName="ASEA" role="Intervenor Plaintiff"></party>
+ <party firstName="Nick" fullName="Nick Abbett" lastName="Abbett" role="Defendant"></party>
+ <party fullName="Alabama Association of School Boards, The" lastName="Alabama Association of School Boards, The" role="Objector"></party>
+ <party fullName="Alabama Education Association" lastName="Alabama Education Association" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Allen" lastName="Allen" role="Intervenor Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Bentley" lastName="Bentley" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Bice" lastName="Bice" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Breece" lastName="Breece" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert L. Broussard" lastName="Broussard" middleName="L." role="Defendant"></party>
+ <party firstName="JoAnne" fullName="JoAnne Brown" lastName="Brown" role="Intervenor Plaintiff"></party>
+ <party fullName="Business Council of Alabama" lastName="Business Council of Alabama" role="Objector"></party>
+ <party fullName="City of Madison Board of Education" lastName="City of Madison Board of Education" role="Defendant"></party>
+ <party firstName="Marquita" fullName="Marquita Davis" lastName="Davis" role="Defendant"></party>
+ <party firstName="Randy" fullName="Randy Hebson" lastName="Hebson" role="Intervenor Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark A. Heinrich" lastName="Heinrich" middleName="A." role="Defendant"></party>
+ <party firstName="Freida" fullName="Freida Hill" lastName="Hill" role="Defendant"></party>
+ <party firstName="Pam" fullName="Pam Hill" lastName="Hill" role="Plaintiff"></party>
+ <party firstName="Mike" fullName="Mike Hubbard" lastName="Hubbard" role="Movant"></party>
+ <party fullName="Huntsville City Board of Education" lastName="Huntsville City Board of Education" role="Defendant"></party>
+ <party fullName="Madison County Board of Education" lastName="Madison County Board of Education" role="Defendant"></party>
+ <party firstName="Del" fullName="Del Marsh" lastName="Marsh" role="Movant"></party>
+ <party firstName="Edwin" fullName="Edwin &quot;Mac&quot; McArthur" lastName="McArthur" middleName="&quot;Mac&quot;" role="Intervenor Plaintiff"></party>
+ <party firstName="Cathey" fullName="Cathey McNeal" lastName="McNeal" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph B. Morton" lastName="Morton" middleName="B." role="Defendant"></party>
+ <party firstName="David" fullName="David Perry" lastName="Perry" role="Defendant"></party>
+ <party firstName="Susan" fullName="Susan Price" lastName="Price" role="Defendant"></party>
+ <party firstName="Former Governor Bob" fullName="Former Governor Bob Riley" lastName="Riley" role="Movant"></party>
+ <party fullName="SEA-PAC" lastName="SEA-PAC" role="Intervenor Plaintiff"></party>
+ <party firstName="Larry" fullName="Larry Sanders" lastName="Sanders" role="Intervenor Plaintiff"></party>
+ <party firstName="Ronald" fullName="Ronald Slaughter" lastName="Slaughter" role="Plaintiff"></party>
+ <party firstName="Chassity" fullName="Chassity Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Dorothy" fullName="Dorothy J. Strickland" lastName="Strickland" middleName="J." role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert T. Treese III" generation="III" lastName="Treese" middleName="T." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas L. White Jr." generation="Jr." lastName="White" middleName="L." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Alabama Education Association et al v. Bentley et al</title>
+ <partNumber>5:11-cv-00761</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-5_11-cv-00761/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:11-cv-00761;11-761</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Northeastern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>A-Vote</displayForm>
+ <namePart type="family">A-Vote</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>ASEA</displayForm>
+ <namePart type="family">ASEA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Nick Abbett</displayForm>
+ <namePart type="family">Abbett</namePart>
+ <namePart type="given">Nick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alabama Association of School Boards, The</displayForm>
+ <namePart type="family">Alabama Association of School Boards, The</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Objector</description>
+</name>
+<name type="personal">
+ <displayForm>Alabama Education Association</displayForm>
+ <namePart type="family">Alabama Education Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Allen</displayForm>
+ <namePart type="family">Allen</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Bentley</displayForm>
+ <namePart type="family">Bentley</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Bice</displayForm>
+ <namePart type="family">Bice</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeff Breece</displayForm>
+ <namePart type="family">Breece</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert L. Broussard</displayForm>
+ <namePart type="family">Broussard</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JoAnne Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">JoAnne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Business Council of Alabama</displayForm>
+ <namePart type="family">Business Council of Alabama</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Objector</description>
+</name>
+<name type="personal">
+ <displayForm>City of Madison Board of Education</displayForm>
+ <namePart type="family">City of Madison Board of Education</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marquita Davis</displayForm>
+ <namePart type="family">Davis</namePart>
+ <namePart type="given">Marquita</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Randy Hebson</displayForm>
+ <namePart type="family">Hebson</namePart>
+ <namePart type="given">Randy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mark A. Heinrich</displayForm>
+ <namePart type="family">Heinrich</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Freida Hill</displayForm>
+ <namePart type="family">Hill</namePart>
+ <namePart type="given">Freida</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pam Hill</displayForm>
+ <namePart type="family">Hill</namePart>
+ <namePart type="given">Pam</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mike Hubbard</displayForm>
+ <namePart type="family">Hubbard</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Huntsville City Board of Education</displayForm>
+ <namePart type="family">Huntsville City Board of Education</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Madison County Board of Education</displayForm>
+ <namePart type="family">Madison County Board of Education</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Del Marsh</displayForm>
+ <namePart type="family">Marsh</namePart>
+ <namePart type="given">Del</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Edwin &quot;Mac&quot; McArthur</displayForm>
+ <namePart type="family">McArthur</namePart>
+ <namePart type="given">Edwin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cathey McNeal</displayForm>
+ <namePart type="family">McNeal</namePart>
+ <namePart type="given">Cathey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph B. Morton</displayForm>
+ <namePart type="family">Morton</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Perry</displayForm>
+ <namePart type="family">Perry</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Susan Price</displayForm>
+ <namePart type="family">Price</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Former Governor Bob Riley</displayForm>
+ <namePart type="family">Riley</namePart>
+ <namePart type="given">Former Governor Bob</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>SEA-PAC</displayForm>
+ <namePart type="family">SEA-PAC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Sanders</displayForm>
+ <namePart type="family">Sanders</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Slaughter</displayForm>
+ <namePart type="family">Slaughter</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Chassity Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Chassity</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dorothy J. Strickland</displayForm>
+ <namePart type="family">Strickland</namePart>
+ <namePart type="given">Dorothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert T. Treese III</displayForm>
+ <namePart type="family">Treese</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas L. White Jr.</displayForm>
+ <namePart type="family">White</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alnd-5_11-cv-00761</accessId>
+ <courtType>District</courtType>
+ <courtCode>alnd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2012</courtSortOrder>
+ <caseNumber>5:11-cv-00761</caseNumber>
+ <caseOffice>Northeastern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:2201 Constitutionality of State Statute(s)</cause>
+ <party fullName="A-Vote" lastName="A-Vote" role="Plaintiff"></party>
+ <party fullName="ASEA" lastName="ASEA" role="Intervenor Plaintiff"></party>
+ <party firstName="Nick" fullName="Nick Abbett" lastName="Abbett" role="Defendant"></party>
+ <party fullName="Alabama Association of School Boards, The" lastName="Alabama Association of School Boards, The" role="Objector"></party>
+ <party fullName="Alabama Education Association" lastName="Alabama Education Association" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Allen" lastName="Allen" role="Intervenor Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Bentley" lastName="Bentley" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Bice" lastName="Bice" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Breece" lastName="Breece" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert L. Broussard" lastName="Broussard" middleName="L." role="Defendant"></party>
+ <party firstName="JoAnne" fullName="JoAnne Brown" lastName="Brown" role="Intervenor Plaintiff"></party>
+ <party fullName="Business Council of Alabama" lastName="Business Council of Alabama" role="Objector"></party>
+ <party fullName="City of Madison Board of Education" lastName="City of Madison Board of Education" role="Defendant"></party>
+ <party firstName="Marquita" fullName="Marquita Davis" lastName="Davis" role="Defendant"></party>
+ <party firstName="Randy" fullName="Randy Hebson" lastName="Hebson" role="Intervenor Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark A. Heinrich" lastName="Heinrich" middleName="A." role="Defendant"></party>
+ <party firstName="Freida" fullName="Freida Hill" lastName="Hill" role="Defendant"></party>
+ <party firstName="Pam" fullName="Pam Hill" lastName="Hill" role="Plaintiff"></party>
+ <party firstName="Mike" fullName="Mike Hubbard" lastName="Hubbard" role="Movant"></party>
+ <party fullName="Huntsville City Board of Education" lastName="Huntsville City Board of Education" role="Defendant"></party>
+ <party fullName="Madison County Board of Education" lastName="Madison County Board of Education" role="Defendant"></party>
+ <party firstName="Del" fullName="Del Marsh" lastName="Marsh" role="Movant"></party>
+ <party firstName="Edwin" fullName="Edwin &quot;Mac&quot; McArthur" lastName="McArthur" middleName="&quot;Mac&quot;" role="Intervenor Plaintiff"></party>
+ <party firstName="Cathey" fullName="Cathey McNeal" lastName="McNeal" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph B. Morton" lastName="Morton" middleName="B." role="Defendant"></party>
+ <party firstName="David" fullName="David Perry" lastName="Perry" role="Defendant"></party>
+ <party firstName="Susan" fullName="Susan Price" lastName="Price" role="Defendant"></party>
+ <party firstName="Former Governor Bob" fullName="Former Governor Bob Riley" lastName="Riley" role="Movant"></party>
+ <party fullName="SEA-PAC" lastName="SEA-PAC" role="Intervenor Plaintiff"></party>
+ <party firstName="Larry" fullName="Larry Sanders" lastName="Sanders" role="Intervenor Plaintiff"></party>
+ <party firstName="Ronald" fullName="Ronald Slaughter" lastName="Slaughter" role="Plaintiff"></party>
+ <party firstName="Chassity" fullName="Chassity Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Dorothy" fullName="Dorothy J. Strickland" lastName="Strickland" middleName="J." role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert T. Treese III" generation="III" lastName="Treese" middleName="T." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas L. White Jr." generation="Jr." lastName="White" middleName="L." role="Defendant"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-5_11-cv-00761-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-0/mods.xml">
+ <titleInfo>
+  <title>Alabama Education Association et al v. Bentley et al</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge C Lynwood Smith, Jr on 3/18/2011. (AHI)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-5_11-cv-00761-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b46d76</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-0</identifier>
+ <identifier type="former granule identifier">alnd-5_11-cv-00761_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-5_11-cv-00761/pdf/USCOURTS-alnd-5_11-cv-00761-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-00761; Alabama Education Association et al v. Bentley et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-5_11-cv-00761-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-03-18</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge C Lynwood Smith, Jr on 3/18/2011. (AHI)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-5_11-cv-00761-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-1/mods.xml">
+ <titleInfo>
+  <title>Alabama Education Association et al v. Bentley et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER that plaintiffs&apos; motion to proceed is GRANTED; plaintiffs are ORDERED to file their responses to the motions to dismiss filed by defendants, Dr. Robert Bentley, Huntsville City Board of Education, City of Madison Board of Education, Madison County Board of Education, David Perry, and Thomas L. White, Jr., by 4/16/2012; those defendants must file any replies by 4/23/2012; as more fully set out in order. Signed by Judge C Lynwood Smith, Jr on 4/6/2012. (AHI )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-5_11-cv-00761-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b46d7c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-1</identifier>
+ <identifier type="former granule identifier">alnd-5_11-cv-00761_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-5_11-cv-00761/pdf/USCOURTS-alnd-5_11-cv-00761-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-00761; Alabama Education Association et al v. Bentley et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-5_11-cv-00761-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-04-06</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER that plaintiffs&apos; motion to proceed is GRANTED; plaintiffs are ORDERED to file their responses to the motions to dismiss filed by defendants, Dr. Robert Bentley, Huntsville City Board of Education, City of Madison Board of Education, Madison County Board of Education, David Perry, and Thomas L. White, Jr., by 4/16/2012; those defendants must file any replies by 4/23/2012; as more fully set out in order. Signed by Judge C Lynwood Smith, Jr on 4/6/2012. (AHI )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-5_11-cv-00761-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-2/mods.xml">
+ <titleInfo>
+  <title>Alabama Education Association et al v. Bentley et al</title>
+  <subTitle>MEMORANDUM OPINION and ORDER; it is ordered that the motions to quash be denied as more fully set out in order; it is further ordered that AL Governor Robert J. Bentley, former AL Governor Robert R. Riley, AL Senate President Pro Tempore Del Marsh, and Speaker of the House of Representatives Mike Hubbard provide full and complete responses to the subpeonas duces tecum served upon each of them on or before Friday, Febuary 1, 2013. Signed by Judge C Lynwood Smith, Jr on 01/03/13. (SPT )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-5_11-cv-00761-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b46d7e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-2</identifier>
+ <identifier type="former granule identifier">alnd-5_11-cv-00761_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-5_11-cv-00761/pdf/USCOURTS-alnd-5_11-cv-00761-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-00761; Alabama Education Association et al v. Bentley et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-5_11-cv-00761-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>MEMORANDUM OPINION and ORDER; it is ordered that the motions to quash be denied as more fully set out in order; it is further ordered that AL Governor Robert J. Bentley, former AL Governor Robert R. Riley, AL Senate President Pro Tempore Del Marsh, and Speaker of the House of Representatives Mike Hubbard provide full and complete responses to the subpeonas duces tecum served upon each of them on or before Friday, Febuary 1, 2013. Signed by Judge C Lynwood Smith, Jr on 01/03/13. (SPT )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-5_11-cv-00761-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-3/mods.xml">
+ <titleInfo>
+  <title>Alabama Education Association et al v. Bentley et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER that this court&apos;s order denying the Officials&apos; motions to quash should be construed as meaning that movants cannot now submit privilege logs, affidavits, and similar materials supporting their claims of privilege on the February 1, 2013 deadline for production of documents in response to plaintiffs&apos; subpoenas and the Motions to Stay are DENIED as more fully set out in order. Signed by Judge C Lynwood Smith, Jr on 1/22/2013. Associated Cases: 5:11-cv-00761-CLS, 5:11-cv-01054-CLS(AHI) Modified on 1/22/2013 (AHI).</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-5_11-cv-00761-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b46d7a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-3</identifier>
+ <identifier type="former granule identifier">alnd-5_11-cv-00761_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-5_11-cv-00761/pdf/USCOURTS-alnd-5_11-cv-00761-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-00761; Alabama Education Association et al v. Bentley et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-5_11-cv-00761-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-22</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER that this court&apos;s order denying the Officials&apos; motions to quash should be construed as meaning that movants cannot now submit privilege logs, affidavits, and similar materials supporting their claims of privilege on the February 1, 2013 deadline for production of documents in response to plaintiffs&apos; subpoenas and the Motions to Stay are DENIED as more fully set out in order. Signed by Judge C Lynwood Smith, Jr on 1/22/2013. Associated Cases: 5:11-cv-00761-CLS, 5:11-cv-01054-CLS(AHI) Modified on 1/22/2013 (AHI).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-5_11-cv-00761-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-4/mods.xml">
+ <titleInfo>
+  <title>Alabama Education Association et al v. Bentley et al</title>
+  <subTitle>MEMORANDUM OPINION and ORDER that this court&apos;s order directing the Officials to provide full and complete responses to the subpoenas by 2/1/2013, should be interpreted as meaning that the Officials must respond to the subpoenas by 2/1/2013, and that they cannot supplement their assertions of privilege, including of the attorney-client and work product privileges, by the February 1st deadline, as more fully set out in order. Signed by Judge C Lynwood Smith, Jr on 1/23/2013. Associated Cases: 5:11-cv-00761-CLS, 5:11-cv-01054-CLS(AHI)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-5_11-cv-00761-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b46d70</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-4</identifier>
+ <identifier type="former granule identifier">alnd-5_11-cv-00761_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_11-cv-00761/USCOURTS-alnd-5_11-cv-00761-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-5_11-cv-00761/pdf/USCOURTS-alnd-5_11-cv-00761-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-00761; Alabama Education Association et al v. Bentley et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-5_11-cv-00761-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-23</dateIssued>
+  <docketText>MEMORANDUM OPINION and ORDER that this court&apos;s order directing the Officials to provide full and complete responses to the subpoenas by 2/1/2013, should be interpreted as meaning that the Officials must respond to the subpoenas by 2/1/2013, and that they cannot supplement their assertions of privilege, including of the attorney-client and work product privileges, by the February 1st deadline, as more fully set out in order. Signed by Judge C Lynwood Smith, Jr on 1/23/2013. Associated Cases: 5:11-cv-00761-CLS, 5:11-cv-01054-CLS(AHI)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,159 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118a3af">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_08-cv-01340</identifier>
+<identifier type="local">P0b002ee18118a3af</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_08-cv-01340</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_08-cv-01340</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:08-cv-01340</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party fullName="AMS Staff Leasing" lastName="AMS Staff Leasing" role="Defendant"></party>
+ <party fullName="Avomex Inc." lastName="Avomex Inc." role="Defendant"></party>
+ <party firstName="John" fullName="John Litton" lastName="Litton" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Litton v. Avomex Inc. et al</title>
+ <partNumber>1:08-cv-01340</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_08-cv-01340/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-01340;08-1340</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>AMS Staff Leasing</displayForm>
+ <namePart type="family">AMS Staff Leasing</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Avomex Inc.</displayForm>
+ <namePart type="family">Avomex Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Litton</displayForm>
+ <namePart type="family">Litton</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_08-cv-01340</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:08-cv-01340</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party fullName="AMS Staff Leasing" lastName="AMS Staff Leasing" role="Defendant"></party>
+ <party fullName="Avomex Inc." lastName="Avomex Inc." role="Defendant"></party>
+ <party firstName="John" fullName="John Litton" lastName="Litton" role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_08-cv-01340-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_08-cv-01340/USCOURTS-nynd-1_08-cv-01340-0/mods.xml">
+ <titleInfo>
+  <title>Litton v. Avomex Inc. et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER: It is ORDERED that Avomex&apos;s # 14 motion for dismissal based upon lack of personal jurisdiction is DENIED; AMS&apos; # 10 motion for an order dismissing Plaintiff&apos;s complaint pursuant to FRCP 12(b)(6) is DENIED; Defendants&apos; # 10 and # 14 motions for an order dismissing Plaintiff&apos;s complaint for improper venue are DENIED; Defendants&apos; # 10 and # 14 motions for a transfer of venue are GRANTED; the Clerk of this Court shall transfer this action to the U. S. District Court for the Northern District of Texas; the Court hereby waives the 10 day waiting period provided for in L. R. 83.6; and it is further ORDERED that Plaintiff&apos;s # 16 cross motion to amend the complaint is DENIED as moot. Signed by Chief Judge Norman A. Mordue on 1/14/2010. (mae)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_08-cv-01340-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813f2e9d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_08-cv-01340/USCOURTS-nynd-1_08-cv-01340-0</identifier>
+ <identifier type="former granule identifier">nynd-1_08-cv-01340_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_08-cv-01340/USCOURTS-nynd-1_08-cv-01340-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_08-cv-01340/pdf/USCOURTS-nynd-1_08-cv-01340-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01340; Litton v. Avomex Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_08-cv-01340-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-14</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER: It is ORDERED that Avomex&apos;s # 14 motion for dismissal based upon lack of personal jurisdiction is DENIED; AMS&apos; # 10 motion for an order dismissing Plaintiff&apos;s complaint pursuant to FRCP 12(b)(6) is DENIED; Defendants&apos; # 10 and # 14 motions for an order dismissing Plaintiff&apos;s complaint for improper venue are DENIED; Defendants&apos; # 10 and # 14 motions for a transfer of venue are GRANTED; the Clerk of this Court shall transfer this action to the U. S. District Court for the Northern District of Texas; the Court hereby waives the 10 day waiting period provided for in L. R. 83.6; and it is further ORDERED that Plaintiff&apos;s # 16 cross motion to amend the complaint is DENIED as moot. Signed by Chief Judge Norman A. Mordue on 1/14/2010. (mae)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,785 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a4731c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-09</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498</identifier>
+<identifier type="local">P0b002ee183a4731c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-09</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-09</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_08-cv-00498</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_08-cv-00498</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:08-cv-00498</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>790</natureSuitCode>
+ <natureSuit>Other Labor Litigation</natureSuit>
+ <cause>05:704 Labor Litigation</cause>
+ <party fullName="Alpha Omega Electric" lastName="Alpha Omega Electric" role="Defendant"></party>
+ <party fullName="Board of Trustees of the Kern County Electrical Journeyman And Apprentice Training Trust" lastName="Board of Trustees of the Kern County Electrical Journeyman And Apprentice Training Trust" role="Plaintiff"></party>
+ <party fullName="Board of Trustees of the Kern County Electrical Pension Fund" lastName="Board of Trustees of the Kern County Electrical Pension Fund" role="Plaintiff"></party>
+ <party fullName="Board of Trustees of the Kern County Electrical Workers Health&amp;Welfare Trust" lastName="Board of Trustees of the Kern County Electrical Workers Health&amp;Welfare Trust" role="Plaintiff"></party>
+ <party firstName="Christopher" fullName="Christopher Burgoni" lastName="Burgoni" role="Defendant"></party>
+ <party fullName="Fulce Enterprises, Inc." lastName="Fulce Enterprises, Inc." role="Defendant"></party>
+ <party fullName="Tadoc Enterprises, Inc." lastName="Tadoc Enterprises, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+ <partNumber>1:08-cv-00498</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-00498;08-498</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Alpha Omega Electric</displayForm>
+ <namePart type="family">Alpha Omega Electric</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Board of Trustees of the Kern County Electrical Journeyman And Apprentice Training Trust</displayForm>
+ <namePart type="family">Board of Trustees of the Kern County Electrical Journeyman And Apprentice Training Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Board of Trustees of the Kern County Electrical Pension Fund</displayForm>
+ <namePart type="family">Board of Trustees of the Kern County Electrical Pension Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>Trustees
+<name type="personal">
+ <displayForm>Board of Trustees of the Kern County Electrical Workers Health&amp;Welfare Trust</displayForm>
+ <namePart type="family">Board of Trustees of the Kern County Electrical Workers Health&amp;Welfare Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher Burgoni</displayForm>
+ <namePart type="family">Burgoni</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fulce Enterprises, Inc.</displayForm>
+ <namePart type="family">Fulce Enterprises, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tadoc Enterprises, Inc.</displayForm>
+ <namePart type="family">Tadoc Enterprises, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_08-cv-00498</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:08-cv-00498</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>790</natureSuitCode>
+ <natureSuit>Other Labor Litigation</natureSuit>
+ <cause>05:704 Labor Litigation</cause>
+ <party fullName="Alpha Omega Electric" lastName="Alpha Omega Electric" role="Defendant"></party>
+ <party fullName="Board of Trustees of the Kern County Electrical Journeyman And Apprentice Training Trust" lastName="Board of Trustees of the Kern County Electrical Journeyman And Apprentice Training Trust" role="Plaintiff"></party>
+ <party fullName="Board of Trustees of the Kern County Electrical Pension Fund" lastName="Board of Trustees of the Kern County Electrical Pension Fund" role="Plaintiff"></party>
+ <party fullName="Board of Trustees of the Kern County Electrical Workers Health&amp;Welfare Trust" lastName="Board of Trustees of the Kern County Electrical Workers Health&amp;Welfare Trust" role="Plaintiff"></party>
+ <party firstName="Christopher" fullName="Christopher Burgoni" lastName="Burgoni" role="Defendant"></party>
+ <party fullName="Fulce Enterprises, Inc." lastName="Fulce Enterprises, Inc." role="Defendant"></party>
+ <party fullName="Tadoc Enterprises, Inc." lastName="Tadoc Enterprises, Inc." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-0/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Oliver W. Wanger on 7/8/08. Initial Scheduling Conference reset for 10/10/2008 at 08:15 AM in Courtroom 3 (OWW) before Judge Oliver W. Wanger. (Verduzco, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490c7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-0</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-07-09</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Oliver W. Wanger on 7/8/08. Initial Scheduling Conference reset for 10/10/2008 at 08:15 AM in Courtroom 3 (OWW) before Judge Oliver W. Wanger. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-1/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER SETTING STATUS CONFERENCE (Status Conference set for 7/25/2008 at 09:00 AM in Bakersfield at Truxtun (TAG) before Magistrate Judge Theresa A. Goldner) signed by Magistrate Judge Theresa A. Goldner on 7/9/2008. (Leon Guerrero, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a49042</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-1</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-07-09</dateIssued>
+  <docketText>ORDER SETTING STATUS CONFERENCE (Status Conference set for 7/25/2008 at 09:00 AM in Bakersfield at Truxtun (TAG) before Magistrate Judge Theresa A. Goldner) signed by Magistrate Judge Theresa A. Goldner on 7/9/2008. (Leon Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-2/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER REGARDING EARLY NEUTRAL EVALUATION signed by Magistrate Judge Theresa A. Goldner on 8/15/2008. (Leon Guerrero, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a49049</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-2</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-08-15</dateIssued>
+  <docketText>ORDER REGARDING EARLY NEUTRAL EVALUATION signed by Magistrate Judge Theresa A. Goldner on 8/15/2008. (Leon Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-3/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>STIPULATION and ORDER to remove this case from the Voluntary Dispute Resolution Program back to the Eastern District Court so that the parties can proceed with a mediation before Mr. Hine on August 26, 2008. signed by Judge Oliver W. Wanger on 8/20/08. (Gil-Garcia, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-3</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-08-21</dateIssued>
+  <docketText>STIPULATION and ORDER to remove this case from the Voluntary Dispute Resolution Program back to the Eastern District Court so that the parties can proceed with a mediation before Mr. Hine on August 26, 2008. signed by Judge Oliver W. Wanger on 8/20/08. (Gil-Garcia, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-4/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>Stipulation to Stay Case Pending Audit and Further Settlement Discussions; ORDER Thereon signed by Judge Oliver W. Wanger on 9/4/2008. Settlement Status Conference set for 1/14/2009 at 10:00 AM before Magistrate Judge Theresa A. Goldner. (Initial Scheduling Conference date of 10/10/2008 at 8:15 a.m. is hereby VACATED.) Case stayed. (Esteves, C)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490c6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-4</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-09-05</dateIssued>
+  <docketText>Stipulation to Stay Case Pending Audit and Further Settlement Discussions; ORDER Thereon signed by Judge Oliver W. Wanger on 9/4/2008. Settlement Status Conference set for 1/14/2009 at 10:00 AM before Magistrate Judge Theresa A. Goldner. (Initial Scheduling Conference date of 10/10/2008 at 8:15 a.m. is hereby VACATED.) Case stayed. (Esteves, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-5/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>REPORT and RECOMMENDATIONS following Settlement Status Conference re 22 signed by Magistrate Judge Theresa A. Goldner on 1/14/2009. (Leon-Guerrero, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490b4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-5</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-01-14</dateIssued>
+  <docketText>REPORT and RECOMMENDATIONS following Settlement Status Conference re 22 signed by Magistrate Judge Theresa A. Goldner on 1/14/2009. (Leon-Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-6/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER Directing Parties to File Joint Status Report on or Before April 24, 2009, signed by Judge Oliver W. Wanger on 4/9/2009. Filing deadline: 4/24/2009. (Sondheim, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a49048</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-6</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-04-10</dateIssued>
+  <docketText>ORDER Directing Parties to File Joint Status Report on or Before April 24, 2009, signed by Judge Oliver W. Wanger on 4/9/2009. Filing deadline: 4/24/2009. (Sondheim, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-7/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER Regarding The Filing of Amendment to Complaint, signed by Judge Oliver W. Wanger on 6/8/2010. (Attachments: # (1) Exhibit A)(Gaumnitz, R)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a49043</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-7</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-06-09</dateIssued>
+  <docketText>ORDER Regarding The Filing of Amendment to Complaint, signed by Judge Oliver W. Wanger on 6/8/2010. (Attachments: # (1) Exhibit A)(Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-8/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER Granting 39 Motion to Compel signed by Magistrate Judge Jennifer L. Thurston on 6/13/2011. (Leon-Guerrero, A)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490ad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-8</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-06-13</dateIssued>
+  <docketText>ORDER Granting 39 Motion to Compel signed by Magistrate Judge Jennifer L. Thurston on 6/13/2011. (Leon-Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-9/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER GRANTING Plaintiffs&apos; Motion to Compel Production of Documents and Answers to Interrogatories 39, signed by Magistrate Judge Jennifer L. Thurston on 10/6/11: Replacement counsel for Defendants Tadoc Enterprises and Fulce Enterprises SHALL enter an appearance in this matter within 21 days. (Hellings, J)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-9</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2011-10-06</dateIssued>
+  <docketText>ORDER GRANTING Plaintiffs&apos; Motion to Compel Production of Documents and Answers to Interrogatories 39, signed by Magistrate Judge Jennifer L. Thurston on 10/6/11: Replacement counsel for Defendants Tadoc Enterprises and Fulce Enterprises SHALL enter an appearance in this matter within 21 days. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-10/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>AMENDED ORDER to Enter Appearance signed by Magistrate Judge Jennifer L. Thurston on 10/18/2011. (Leon-Guerrero, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490c5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-10</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2011-10-18</dateIssued>
+  <docketText>AMENDED ORDER to Enter Appearance signed by Magistrate Judge Jennifer L. Thurston on 10/18/2011. (Leon-Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-11/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER to SHOW CAUSE signed by Magistrate Judge Jennifer L. Thurston on 10/18/2011. Show Cause Response due by 11/2/2011. (Leon-Guerrero, A)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490ab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-11</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2011-10-18</dateIssued>
+  <docketText>ORDER to SHOW CAUSE signed by Magistrate Judge Jennifer L. Thurston on 10/18/2011. Show Cause Response due by 11/2/2011. (Leon-Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-12/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS and ORDER DIRECTING CLERK TO ASSIGN signed by Magistrate Judge Jennifer L. Thurston on 11/17/2011. Objections to F&amp;R due by 12/1/2011. (Leon-Guerrero, A)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490b3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-12</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2011-11-17</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS and ORDER DIRECTING CLERK TO ASSIGN signed by Magistrate Judge Jennifer L. Thurston on 11/17/2011. Objections to F&amp;R due by 12/1/2011. (Leon-Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-13/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER WITHDRAWING FINDINGS AND RECOMMENDATIONS 55, and AMENDED FINDINGS and RECOMMENDATIONS STRIKING DEFENDANTS&apos; ANSWER AND ENTERING DEFAULT signed by Magistrate Judge Jennifer L. Thurston on 11/30/2011. Objections to F&amp;R due by 12/14/2011. (Leon-Guerrero, A)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a49046</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-13</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2011-11-30</dateIssued>
+  <docketText>ORDER WITHDRAWING FINDINGS AND RECOMMENDATIONS 55, and AMENDED FINDINGS and RECOMMENDATIONS STRIKING DEFENDANTS&apos; ANSWER AND ENTERING DEFAULT signed by Magistrate Judge Jennifer L. Thurston on 11/30/2011. Objections to F&amp;R due by 12/14/2011. (Leon-Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-14/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER to SHOW CAUSE signed by Magistrate Judge Jennifer L. Thurston on 4/16/2012. Show Cause Response due by 4/30/2012. (Leon-Guerrero, A)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490c4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-14</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-04-16</dateIssued>
+  <docketText>ORDER to SHOW CAUSE signed by Magistrate Judge Jennifer L. Thurston on 4/16/2012. Show Cause Response due by 4/30/2012. (Leon-Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-15/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER TO DISMISS WITH PREJUDICE, DEFENDANT: Fulce Enterprises, Inc. ONLY, signed by District Judge Lawrence J. O&apos;Neill on 04/30/2012. (Martin-Gill, S)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a49047</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-15</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-04-30</dateIssued>
+  <docketText>ORDER TO DISMISS WITH PREJUDICE, DEFENDANT: Fulce Enterprises, Inc. ONLY, signed by District Judge Lawrence J. O&apos;Neill on 04/30/2012. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-16/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>FINDINGS and RECOMMENDATION GRANTING Application for Entry of Default Judgment 64, signed by Magistrate Judge Jennifer L. Thurston on 6/14/2012. Objections to Findings and Recommendation due within 14 days. Matter referred to Judge Lawrence J. O&apos;Neill. (Hall, S)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490ae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-16</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2012-06-14</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATION GRANTING Application for Entry of Default Judgment 64, signed by Magistrate Judge Jennifer L. Thurston on 6/14/2012. Objections to Findings and Recommendation due within 14 days. Matter referred to Judge Lawrence J. O&apos;Neill. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-17/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER DISREGARDING Letter re Request for Withdrawal of Default re 73, signed by Magistrate Judge Jennifer L. Thurston on 8/21/2012. (Hall, S)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a49045</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-17</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2012-08-21</dateIssued>
+  <docketText>ORDER DISREGARDING Letter re Request for Withdrawal of Default re 73, signed by Magistrate Judge Jennifer L. Thurston on 8/21/2012. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-18/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER AUTHORIZING Process Server to Levy Execution Pursuant to California Code of Civil Procedure § 699.080 re 78, signed by Magistrate Judge Jennifer L. Thurston on 9/24/2012. (Hall, S)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490ac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-18</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2012-09-24</dateIssued>
+  <docketText>ORDER AUTHORIZING Process Server to Levy Execution Pursuant to California Code of Civil Procedure § 699.080 re 78, signed by Magistrate Judge Jennifer L. Thurston on 9/24/2012. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-19/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>S)FINDINGS and RECOMMENDATIONS Denying Defendant&apos;s Motion for Relief from Default and Default Judgment 81, signed by Magistrate Judge Jennifer L. Thurston on 12/18/2012. Referred to Judge O&apos;Neill. Objections to F&amp;R due by 1/2/2013. (Hall,</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490b2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-19</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2012-12-18</dateIssued>
+  <docketText>S)FINDINGS and RECOMMENDATIONS Denying Defendant&apos;s Motion for Relief from Default and Default Judgment 81, signed by Magistrate Judge Jennifer L. Thurston on 12/18/2012. Referred to Judge O&apos;Neill. Objections to F&amp;R due by 1/2/2013. (Hall,</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-20/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER Adopting in Full the 87 Findings and Recommendations Denying 81 Defendant&apos;s Motion for Relief from Default and Default Judgment, signed by District Judge Lawrence J. O&apos;Neill on 1/3/13. (Verduzco, M)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a49044</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-20</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER Adopting in Full the 87 Findings and Recommendations Denying 81 Defendant&apos;s Motion for Relief from Default and Default Judgment, signed by District Judge Lawrence J. O&apos;Neill on 1/3/13. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-00498-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-21/mods.xml">
+ <titleInfo>
+  <title>Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al</title>
+  <subTitle>ORDER on Application for Appearance and Examination 89, signed by Magistrate Judge Jennifer L. Thurston on 1/8/2013. (Hall, S)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-00498-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a490af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-21</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-00498_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-00498/USCOURTS-caed-1_08-cv-00498-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-00498/pdf/USCOURTS-caed-1_08-cv-00498-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00498; Board of Trustees of the Kern County Electrical Pension Fund et al v. Burgoni, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-00498-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2013-01-08</dateIssued>
+  <docketText>ORDER on Application for Appearance and Examination 89, signed by Magistrate Judge Jennifer L. Thurston on 1/8/2013. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

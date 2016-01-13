@@ -1,0 +1,215 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812dd51e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_05-cv-00082</identifier>
+<identifier type="local">P0b002ee1812dd51e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-4_05-cv-00082</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-4_05-cv-00082</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>4:05-cv-00082</caseNumber>
+ <caseOffice>Columbus</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party fullName="American Home Products Corporation" lastName="American Home Products Corporation" role="Defendant"></party>
+ <party fullName="Amgen Inc" lastName="Amgen Inc" role="Defendant"></party>
+ <party firstName="David" fullName="David William Baggett" lastName="Baggett" middleName="William" role="Plaintiff"></party>
+ <party fullName="Immunex Corporation" lastName="Immunex Corporation" role="Defendant"></party>
+ <party fullName="Immunex Manufacturing Corporation" lastName="Immunex Manufacturing Corporation" role="Defendant"></party>
+ <party fullName="John Doe Manufacturers A-Z" lastName="John Doe Manufacturers A-Z" role="Defendant"></party>
+ <party fullName="Wyeth Inc" lastName="Wyeth Inc" role="Defendant"></party>
+ <party fullName="Wyeth Pharmaceuticals Inc" lastName="Wyeth Pharmaceuticals Inc" role="Defendant"></party>
+ <party fullName="Wyeth-Ayerst Laboratories Company" lastName="Wyeth-Ayerst Laboratories Company" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Baggett v. Amgen, Inc. et al</title>
+ <partNumber>4:05-cv-00082</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_05-cv-00082/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:05-cv-00082;05-082</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Columbus</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>American Home Products Corporation</displayForm>
+ <namePart type="family">American Home Products Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Amgen Inc</displayForm>
+ <namePart type="family">Amgen Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David William Baggett</displayForm>
+ <namePart type="family">Baggett</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Immunex Corporation</displayForm>
+ <namePart type="family">Immunex Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Immunex Manufacturing Corporation</displayForm>
+ <namePart type="family">Immunex Manufacturing Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe Manufacturers A-Z</displayForm>
+ <namePart type="family">John Doe Manufacturers A-Z</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wyeth Inc</displayForm>
+ <namePart type="family">Wyeth Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wyeth Pharmaceuticals Inc</displayForm>
+ <namePart type="family">Wyeth Pharmaceuticals Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wyeth-Ayerst Laboratories Company</displayForm>
+ <namePart type="family">Wyeth-Ayerst Laboratories Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-4_05-cv-00082</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>4:05-cv-00082</caseNumber>
+ <caseOffice>Columbus</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party fullName="American Home Products Corporation" lastName="American Home Products Corporation" role="Defendant"></party>
+ <party fullName="Amgen Inc" lastName="Amgen Inc" role="Defendant"></party>
+ <party firstName="David" fullName="David William Baggett" lastName="Baggett" middleName="William" role="Plaintiff"></party>
+ <party fullName="Immunex Corporation" lastName="Immunex Corporation" role="Defendant"></party>
+ <party fullName="Immunex Manufacturing Corporation" lastName="Immunex Manufacturing Corporation" role="Defendant"></party>
+ <party fullName="John Doe Manufacturers A-Z" lastName="John Doe Manufacturers A-Z" role="Defendant"></party>
+ <party fullName="Wyeth Inc" lastName="Wyeth Inc" role="Defendant"></party>
+ <party fullName="Wyeth Pharmaceuticals Inc" lastName="Wyeth Pharmaceuticals Inc" role="Defendant"></party>
+ <party fullName="Wyeth-Ayerst Laboratories Company" lastName="Wyeth-Ayerst Laboratories Company" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-4_05-cv-00082-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_05-cv-00082/USCOURTS-gamd-4_05-cv-00082-0/mods.xml">
+ <titleInfo>
+  <title>Baggett v. Amgen, Inc. et al</title>
+  <subTitle>PROTECTIVE ORDER. Signed by Judge Hugh Lawson on 1/10/2006. (nbp,HL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-4_05-cv-00082-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181329e31</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_05-cv-00082/USCOURTS-gamd-4_05-cv-00082-0</identifier>
+ <identifier type="former granule identifier">gamd-4_05-cv-00082_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_05-cv-00082/USCOURTS-gamd-4_05-cv-00082-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_05-cv-00082/pdf/USCOURTS-gamd-4_05-cv-00082-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-00082; Baggett v. Amgen, Inc. et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-4_05-cv-00082-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-10</dateIssued>
+  <docketText>PROTECTIVE ORDER. Signed by Judge Hugh Lawson on 1/10/2006. (nbp,HL)</docketText>
+</extension>
+</relatedItem>
+</mods>

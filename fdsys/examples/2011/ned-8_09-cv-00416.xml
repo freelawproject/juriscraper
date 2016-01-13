@@ -1,0 +1,301 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b6fed">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00416</identifier>
+<identifier type="local">P0b002ee1817b6fed</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cv-00416</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00416</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00416</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Bong" fullName="Bong H. Chae" lastName="Chae" middleName="H." role="Petitioner"></party>
+ <party firstName="Robert" fullName="Robert Houston" lastName="Houston" role="Respondent"></party>
+ <party fullName="Nebraska Attorney General" lastName="Nebraska Attorney General" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Chae v. Houston</title>
+ <partNumber>8:09-cv-00416</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00416/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cv-00416;09-416</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bong H. Chae</displayForm>
+ <namePart type="family">Chae</namePart>
+ <namePart type="given">Bong</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Houston</displayForm>
+ <namePart type="family">Houston</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Nebraska Attorney General</displayForm>
+ <namePart type="family">Nebraska Attorney General</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00416</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00416</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Bong" fullName="Bong H. Chae" lastName="Chae" middleName="H." role="Petitioner"></party>
+ <party firstName="Robert" fullName="Robert Houston" lastName="Houston" role="Respondent"></party>
+ <party fullName="Nebraska Attorney General" lastName="Nebraska Attorney General" role="Interested Party"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00416-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-0/mods.xml">
+ <titleInfo>
+  <title>Chae v. Houston</title>
+  <subTitle>ORDER - IT IS ORDERED that the application to proceed in forma pauperis (Filing No. 2) is provisionally granted, but petitioner must pay the $5.00 filing fee by January 20, 2010. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(TCL )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00416-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cbf47</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00416_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00416/pdf/USCOURTS-ned-8_09-cv-00416-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00416; Chae v. Houston; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00416-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-11-24</dateIssued>
+  <docketText>ORDER - IT IS ORDERED that the application to proceed in forma pauperis (Filing No. 2) is provisionally granted, but petitioner must pay the $5.00 filing fee by January 20, 2010. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00416-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-1/mods.xml">
+ <titleInfo>
+  <title>Chae v. Houston</title>
+  <subTitle>ORDER regarding Petition for Writ of Habeas Corpus 1. Upon initial review of the Petition 1, the Court preliminarily determines that petitioners ClaimsTwo through Eight are potentially cognizable in federal court. The Court determines that petitioners Claim One is not cognizable in a federal court habeas action and is therefore dismissed. The clerk of the court is directed to mail copies of this Order and the petition to respondent and the NebraskaAttorney General by regular first-class mail. ( Pro Se Case Management Deadline set for 1/9/2010: deadline for respondent to file state court records in support of answer or motion for summary judgment.) Ordered by Senior Judge Lyle E. Strom. (Copies mailed as directed and copy mailed to pro se party)(PCV, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00416-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cbf45</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00416_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00416/pdf/USCOURTS-ned-8_09-cv-00416-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00416; Chae v. Houston; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00416-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-12-02</dateIssued>
+  <docketText>ORDER regarding Petition for Writ of Habeas Corpus 1. Upon initial review of the Petition 1, the Court preliminarily determines that petitioners ClaimsTwo through Eight are potentially cognizable in federal court. The Court determines that petitioners Claim One is not cognizable in a federal court habeas action and is therefore dismissed. The clerk of the court is directed to mail copies of this Order and the petition to respondent and the NebraskaAttorney General by regular first-class mail. ( Pro Se Case Management Deadline set for 1/9/2010: deadline for respondent to file state court records in support of answer or motion for summary judgment.) Ordered by Senior Judge Lyle E. Strom. (Copies mailed as directed and copy mailed to pro se party)(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00416-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-2/mods.xml">
+ <titleInfo>
+  <title>Chae v. Houston</title>
+  <subTitle>to pro se party) (MKR)MEMORANDUM AND ORDER - Petitioners motion to reconsider order (Filing No. 7) is granted. Claim Three of the petition is modified as set forth in this memorandum and order. Petitioners motion to expand record (Filing No.10) is granted. Respondent shall file the additional state court records no later than April 23, 2010. The Court reminds petitioner that his response to respondents brief on the merits of the petition is due May 11, 2010. Ordered by Senior Judge Lyle E. Strom. (Copy mailed</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00416-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cbf42</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-2</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00416_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00416/pdf/USCOURTS-ned-8_09-cv-00416-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00416; Chae v. Houston; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00416-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-04-15</dateIssued>
+  <docketText>to pro se party) (MKR)MEMORANDUM AND ORDER - Petitioners motion to reconsider order (Filing No. 7) is granted. Claim Three of the petition is modified as set forth in this memorandum and order. Petitioners motion to expand record (Filing No.10) is granted. Respondent shall file the additional state court records no later than April 23, 2010. The Court reminds petitioner that his response to respondents brief on the merits of the petition is due May 11, 2010. Ordered by Senior Judge Lyle E. Strom. (Copy mailed</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00416-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-3/mods.xml">
+ <titleInfo>
+  <title>Chae v. Houston</title>
+  <subTitle>MEMORANDUM AND ORDER that Respondent shall have until 5/17/10, in which to file an amended answer and/or brief on the merits of petitioner&apos;s Claim Three. To the extent the objection seeks any other relief, it is denied. No later than 6/16/2010, petitioner shall file his response to respondent&apos;s brief on the merits of the petition, as amended. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party) (JSF)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00416-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cbf44</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-3</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00416_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00416/pdf/USCOURTS-ned-8_09-cv-00416-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00416; Chae v. Houston; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00416-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-04-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that Respondent shall have until 5/17/10, in which to file an amended answer and/or brief on the merits of petitioner&apos;s Claim Three. To the extent the objection seeks any other relief, it is denied. No later than 6/16/2010, petitioner shall file his response to respondent&apos;s brief on the merits of the petition, as amended. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party) (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00416-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-4/mods.xml">
+ <titleInfo>
+  <title>Chae v. Houston</title>
+  <subTitle>ORDER - Respondents motion to amend answer 29 is granted. Petitioners objection to motion to amend 34 and motion to strike reply brief 35 are denied. Petitioner shall have until September 30, 2010, in which to file an amended response and/or brief on the merits of petitioners Claim Eight only. In the event that no response and/or brief is filed by that date, the Court will consider the response and brief already on file with the Court. Respondents motion to strike index 32 is denied. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party) (MKR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00416-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cbf46</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-4</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00416_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00416/pdf/USCOURTS-ned-8_09-cv-00416-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00416; Chae v. Houston; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00416-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-09-01</dateIssued>
+  <docketText>ORDER - Respondents motion to amend answer 29 is granted. Petitioners objection to motion to amend 34 and motion to strike reply brief 35 are denied. Petitioner shall have until September 30, 2010, in which to file an amended response and/or brief on the merits of petitioners Claim Eight only. In the event that no response and/or brief is filed by that date, the Court will consider the response and brief already on file with the Court. Respondents motion to strike index 32 is denied. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party) (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00416-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-5/mods.xml">
+ <titleInfo>
+  <title>Chae v. Houston</title>
+  <subTitle>MEMORANDUM OPINION dismissing the petition for Writ of Habeas Corpus 1. A separate order will be entered in accordance with this memorandum opinion. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(AOA)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00416-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cbf43</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-5</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00416_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00416/USCOURTS-ned-8_09-cv-00416-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00416/pdf/USCOURTS-ned-8_09-cv-00416-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00416; Chae v. Houston; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00416-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-01-11</dateIssued>
+  <docketText>MEMORANDUM OPINION dismissing the petition for Writ of Habeas Corpus 1. A separate order will be entered in accordance with this memorandum opinion. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(AOA)</docketText>
+</extension>
+</relatedItem>
+</mods>

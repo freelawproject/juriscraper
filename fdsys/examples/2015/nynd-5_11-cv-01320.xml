@@ -1,0 +1,306 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8a977d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_11-cv-01320</identifier>
+<identifier type="local">P0b002ee18a8a977d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-5_11-cv-01320</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_11-cv-01320</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:11-cv-01320</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party fullName="Comcast Corporation" lastName="Comcast Corporation" role="Cross Claimant"></party>
+ <party fullName="Comcast Corporation" lastName="Comcast Corporation" role="Cross Defendant"></party>
+ <party fullName="Comcast Corporation" lastName="Comcast Corporation" role="Defendant"></party>
+ <party fullName="Hawkeye LLC" lastName="Hawkeye LLC" role="ThirdParty Defendant"></party>
+ <party fullName="Iberdrola USA, Inc." lastName="Iberdrola USA, Inc." role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Kerrigan" lastName="Kerrigan" role="Plaintiff"></party>
+ <party firstName="Tammy" fullName="Tammy Kerrigan" lastName="Kerrigan" role="Plaintiff"></party>
+ <party fullName="New York State Electric &amp; Gas Corporation" lastName="New York State Electric &amp; Gas Corporation" role="Cross Defendant"></party>
+ <party fullName="New York State Electric &amp; Gas Corporation" lastName="New York State Electric &amp; Gas Corporation" role="Defendant"></party>
+ <party fullName="New York State Electric &amp; Gas Corporation" lastName="New York State Electric &amp; Gas Corporation" role="ThirdParty Plaintiff"></party>
+ <party fullName="Rochester Gas &amp; Electric Corp." lastName="Rochester Gas &amp; Electric Corp." role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Sonders" lastName="Sonders" role="Mediator (Mandatory Program)"></party>
+ <party fullName="Verizon Communications Inc." lastName="Verizon Communications Inc." role="Defendant"></party>
+ <party fullName="Verizon Communications, Inc." lastName="Verizon Communications, Inc." role="Cross Claimant"></party>
+ <party fullName="Verizon Communications, Inc." lastName="Verizon Communications, Inc." role="Cross Defendant"></party>
+ <party fullName="Verizon Communications, Inc." lastName="Verizon Communications, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Kerrigan et al v. New York State Electric &amp; Gas Corporation et al</title>
+ <partNumber>5:11-cv-01320</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_11-cv-01320/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:11-cv-01320;11-1320</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Syracuse</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Comcast Corporation</displayForm>
+ <namePart type="family">Comcast Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Comcast Corporation</displayForm>
+ <namePart type="family">Comcast Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Comcast Corporation</displayForm>
+ <namePart type="family">Comcast Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hawkeye LLC</displayForm>
+ <namePart type="family">Hawkeye LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Iberdrola USA, Inc.</displayForm>
+ <namePart type="family">Iberdrola USA, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Kerrigan</displayForm>
+ <namePart type="family">Kerrigan</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tammy Kerrigan</displayForm>
+ <namePart type="family">Kerrigan</namePart>
+ <namePart type="given">Tammy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>New York State Electric &amp; Gas Corporation</displayForm>
+ <namePart type="family">New York State Electric &amp; Gas Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New York State Electric &amp; Gas Corporation</displayForm>
+ <namePart type="family">New York State Electric &amp; Gas Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New York State Electric &amp; Gas Corporation</displayForm>
+ <namePart type="family">New York State Electric &amp; Gas Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rochester Gas &amp; Electric Corp.</displayForm>
+ <namePart type="family">Rochester Gas &amp; Electric Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Sonders</displayForm>
+ <namePart type="family">Sonders</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator (Mandatory Program)</description>
+</name>
+<name type="personal">
+ <displayForm>Verizon Communications Inc.</displayForm>
+ <namePart type="family">Verizon Communications Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Verizon Communications, Inc.</displayForm>
+ <namePart type="family">Verizon Communications, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Verizon Communications, Inc.</displayForm>
+ <namePart type="family">Verizon Communications, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Verizon Communications, Inc.</displayForm>
+ <namePart type="family">Verizon Communications, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_11-cv-01320</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:11-cv-01320</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party fullName="Comcast Corporation" lastName="Comcast Corporation" role="Cross Claimant"></party>
+ <party fullName="Comcast Corporation" lastName="Comcast Corporation" role="Cross Defendant"></party>
+ <party fullName="Comcast Corporation" lastName="Comcast Corporation" role="Defendant"></party>
+ <party fullName="Hawkeye LLC" lastName="Hawkeye LLC" role="ThirdParty Defendant"></party>
+ <party fullName="Iberdrola USA, Inc." lastName="Iberdrola USA, Inc." role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Kerrigan" lastName="Kerrigan" role="Plaintiff"></party>
+ <party firstName="Tammy" fullName="Tammy Kerrigan" lastName="Kerrigan" role="Plaintiff"></party>
+ <party fullName="New York State Electric &amp; Gas Corporation" lastName="New York State Electric &amp; Gas Corporation" role="Cross Defendant"></party>
+ <party fullName="New York State Electric &amp; Gas Corporation" lastName="New York State Electric &amp; Gas Corporation" role="Defendant"></party>
+ <party fullName="New York State Electric &amp; Gas Corporation" lastName="New York State Electric &amp; Gas Corporation" role="ThirdParty Plaintiff"></party>
+ <party fullName="Rochester Gas &amp; Electric Corp." lastName="Rochester Gas &amp; Electric Corp." role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Sonders" lastName="Sonders" role="Mediator (Mandatory Program)"></party>
+ <party fullName="Verizon Communications Inc." lastName="Verizon Communications Inc." role="Defendant"></party>
+ <party fullName="Verizon Communications, Inc." lastName="Verizon Communications, Inc." role="Cross Claimant"></party>
+ <party fullName="Verizon Communications, Inc." lastName="Verizon Communications, Inc." role="Cross Defendant"></party>
+ <party fullName="Verizon Communications, Inc." lastName="Verizon Communications, Inc." role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_11-cv-01320-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_11-cv-01320/USCOURTS-nynd-5_11-cv-01320-0/mods.xml">
+ <titleInfo>
+  <title>Kerrigan et al v. New York State Electric &amp; Gas Corporation et al</title>
+  <subTitle>MEMORANDUM-DECISION and ORDER - That plaintiff&apos;s N.Y. Labor Law § 240(1) claim against Comcast (Dkt. No. 1) is DISMISSED as withdrawn. That Comcast&apos;s 25 Motion for Summary Judgment is DENIED as premature with leave to renew. That the parties contact Magistrate Judge Baxter to schedule further proceedings in accorance with this Memorandum-Decision and ORDER. Signed by Chief Judge Gary L. Sharpe on 4/25/2012. (jel, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_11-cv-01320/pdf/USCOURTS-nynd-5_11-cv-01320-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8ac8f5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_11-cv-01320/USCOURTS-nynd-5_11-cv-01320-0</identifier>
+ <identifier type="former granule identifier">nynd-5_11-cv-01320_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_11-cv-01320/USCOURTS-nynd-5_11-cv-01320-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_11-cv-01320/pdf/USCOURTS-nynd-5_11-cv-01320-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-01320; Kerrigan et al v. New York State Electric &amp; Gas Corporation et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_11-cv-01320-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-04-25</dateIssued>
+  <docketText>MEMORANDUM-DECISION and ORDER - That plaintiff&apos;s N.Y. Labor Law § 240(1) claim against Comcast (Dkt. No. 1) is DISMISSED as withdrawn. That Comcast&apos;s 25 Motion for Summary Judgment is DENIED as premature with leave to renew. That the parties contact Magistrate Judge Baxter to schedule further proceedings in accorance with this Memorandum-Decision and ORDER. Signed by Chief Judge Gary L. Sharpe on 4/25/2012. (jel, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_11-cv-01320-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_11-cv-01320/USCOURTS-nynd-5_11-cv-01320-1/mods.xml">
+ <titleInfo>
+  <title>Kerrigan et al v. New York State Electric &amp; Gas Corporation et al</title>
+  <subTitle>MEMORANDUM-DECISION and ORDER - that Verizon&apos;s 72 Motion for Summary Judgment is GRANTED and all claims by Kerrigan and cross claims by NYSEG against Verizon are DISMISSED; that NYSEG&apos;s 73 Motion for Summary Judgment is DENIED; that Kerrigan&apos;s 81 Motion for Summary Judgment is DENIED. That all causes of action except that based on Labor Law § 241(6) and 12 NYCRR § 23-1.29 are DISMISSED. That this case is trial ready and that the clerk issue a trial scheduling order in due course. Signed by Chief Judge Gary L. Sharpe on 1/5/2015. (jel, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_11-cv-01320/pdf/USCOURTS-nynd-5_11-cv-01320-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8ac8f4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_11-cv-01320/USCOURTS-nynd-5_11-cv-01320-1</identifier>
+ <identifier type="former granule identifier">nynd-5_11-cv-01320_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_11-cv-01320/USCOURTS-nynd-5_11-cv-01320-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_11-cv-01320/pdf/USCOURTS-nynd-5_11-cv-01320-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-01320; Kerrigan et al v. New York State Electric &amp; Gas Corporation et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_11-cv-01320-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM-DECISION and ORDER - that Verizon&apos;s 72 Motion for Summary Judgment is GRANTED and all claims by Kerrigan and cross claims by NYSEG against Verizon are DISMISSED; that NYSEG&apos;s 73 Motion for Summary Judgment is DENIED; that Kerrigan&apos;s 81 Motion for Summary Judgment is DENIED. That all causes of action except that based on Labor Law § 241(6) and 12 NYCRR § 23-1.29 are DISMISSED. That this case is trial ready and that the clerk issue a trial scheduling order in due course. Signed by Chief Judge Gary L. Sharpe on 1/5/2015. (jel, )</docketText>
+</extension>
+</relatedItem>
+</mods>

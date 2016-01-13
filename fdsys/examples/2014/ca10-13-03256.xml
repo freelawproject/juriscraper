@@ -1,0 +1,142 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a5d0e70">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Tenth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-12-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-13-03256</identifier>
+<identifier type="local">P0b002ee18a5d0e70</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-12-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-12-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca10-13-03256</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca10-13-03256</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca10</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtSortOrder>1100</courtSortOrder>
+ <caseNumber>13-03256</caseNumber>
+ <natureSuitCode>510</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Vacate Sentence</natureSuit>
+ <party fullName="United States of America" lastName="United States of America" role="Appellee"></party>
+ <party firstName="Keith" fullName="Keith V. Weathersby" lastName="Weathersby" middleName="V." role="Appellant"></party>
+</extension>
+<titleInfo>
+ <title>United States v. Weathersby</title>
+ <partNumber>13-03256</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-13-03256/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">13-03256;13-3256</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Tenth Circuit</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Keith V. Weathersby</displayForm>
+ <namePart type="family">Weathersby</namePart>
+ <namePart type="given">Keith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca10-13-03256</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca10</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtSortOrder>1100</courtSortOrder>
+ <caseNumber>13-03256</caseNumber>
+ <natureSuitCode>510</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Vacate Sentence</natureSuit>
+ <party fullName="United States of America" lastName="United States of America" role="Appellee"></party>
+ <party firstName="Keith" fullName="Keith V. Weathersby" lastName="Weathersby" middleName="V." role="Appellant"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca10-13-03256-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-13-03256/USCOURTS-ca10-13-03256-0/mods.xml">
+ <titleInfo>
+  <title>United States v. Weathersby</title>
+  <subTitle>[10138678] COA Denial. Procedural termination after other judicial action. Written, signed, unpublished. Judges Tymkovich, Anderson and Bacharach (authoring). [13-3256]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-13-03256/pdf/USCOURTS-ca10-13-03256-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a5e2745</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-13-03256/USCOURTS-ca10-13-03256-0</identifier>
+ <identifier type="former granule identifier">ca10-13-03256_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-13-03256/USCOURTS-ca10-13-03256-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-13-03256/pdf/USCOURTS-ca10-13-03256-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 13-03256; United States v. Weathersby; </searchTitle>
+  <courtName>United States Court of Appeals for the Tenth Circuit</courtName>
+  <accessId>USCOURTS-ca10-13-03256-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-07</dateIssued>
+  <docketText>[10138678] COA Denial. Procedural termination after other judicial action. Written, signed, unpublished. Judges Tymkovich, Anderson and Bacharach (authoring). [13-3256]</docketText>
+</extension>
+</relatedItem>
+</mods>

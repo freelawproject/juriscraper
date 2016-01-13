@@ -1,0 +1,202 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c69127">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-mj-00205</identifier>
+<identifier type="local">P0b002ee186c69127</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-mj-00205</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-mj-00205</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-mj-00205</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType></caseType>
+ <party firstName="Karapet" fullName="Karapet Melkian" lastName="Melkian" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Melkian</title>
+ <partNumber>2:13-mj-00205</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-mj-00205/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-mj-00205;13-205</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Karapet Melkian</displayForm>
+ <namePart type="family">Melkian</namePart>
+ <namePart type="given">Karapet</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-mj-00205</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-mj-00205</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType></caseType>
+ <party firstName="Karapet" fullName="Karapet Melkian" lastName="Melkian" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-mj-00205-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-mj-00205/USCOURTS-caed-2_13-mj-00205-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Melkian</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Allison Claire on 9/3/2013 ORDERING 4 Bench Trial Reset for 11/14/2013 at 09:00 AM in Courtroom 26 (AC) before Magistrate Judge Allison Claire. (Reader, L)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_13-mj-00205-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75ddf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-mj-00205/USCOURTS-caed-2_13-mj-00205-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-mj-00205_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-mj-00205/USCOURTS-caed-2_13-mj-00205-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-mj-00205/pdf/USCOURTS-caed-2_13-mj-00205-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-mj-00205; USA v. Melkian; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-mj-00205-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-09-04</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Allison Claire on 9/3/2013 ORDERING 4 Bench Trial Reset for 11/14/2013 at 09:00 AM in Courtroom 26 (AC) before Magistrate Judge Allison Claire. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-mj-00205-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-mj-00205/USCOURTS-caed-2_13-mj-00205-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Melkian</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Allison Claire on 10/31/13: Bench Trial reset for 1/9/2014 at 09:00 AM in Courtroom 26 (AC) before Magistrate Judge Allison Claire. (Manzer, C)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_13-mj-00205-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75ddd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-mj-00205/USCOURTS-caed-2_13-mj-00205-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-mj-00205_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-mj-00205/USCOURTS-caed-2_13-mj-00205-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-mj-00205/pdf/USCOURTS-caed-2_13-mj-00205-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-mj-00205; USA v. Melkian; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-mj-00205-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-11-01</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Allison Claire on 10/31/13: Bench Trial reset for 1/9/2014 at 09:00 AM in Courtroom 26 (AC) before Magistrate Judge Allison Claire. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-mj-00205-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-mj-00205/USCOURTS-caed-2_13-mj-00205-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Melkian</title>
+  <subTitle>ORDER as to Karapet Melkian re 8 Proposed Order filed by USA signed by Magistrate Judge Allison Claire on 1/6/2014 ORDERING the USA&apos;s Motion to Dismiss the Information in the instant action is GRANTED. (Waggoner, D)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_13-mj-00205-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75dde</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-mj-00205/USCOURTS-caed-2_13-mj-00205-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-mj-00205_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-mj-00205/USCOURTS-caed-2_13-mj-00205-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-mj-00205/pdf/USCOURTS-caed-2_13-mj-00205-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-mj-00205; USA v. Melkian; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-mj-00205-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER as to Karapet Melkian re 8 Proposed Order filed by USA signed by Magistrate Judge Allison Claire on 1/6/2014 ORDERING the USA&apos;s Motion to Dismiss the Information in the instant action is GRANTED. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+</mods>

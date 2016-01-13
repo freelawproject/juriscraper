@@ -1,0 +1,407 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18bb19c4c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-03-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-03-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204</identifier>
+<identifier type="local">P0b002ee18bb19c4c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-03-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-03-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cr-00204</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cr-00204</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cr-00204</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Fabian" fullName="Fabian Auberto Serna-Valenzuela" lastName="Serna-Valenzuela" middleName="Auberto" role="Defendant"></party>
+ <party firstName="Irwin" fullName="Irwin Igor Serna-Valenzuela" lastName="Serna-Valenzuela" middleName="Igor" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Serna-Valenzuela et al</title>
+ <partNumber>1:14-cr-00204</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cr-00204;14-204</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Fabian Auberto Serna-Valenzuela</displayForm>
+ <namePart type="family">Serna-Valenzuela</namePart>
+ <namePart type="given">Fabian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Irwin Igor Serna-Valenzuela</displayForm>
+ <namePart type="family">Serna-Valenzuela</namePart>
+ <namePart type="given">Irwin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cr-00204</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cr-00204</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Fabian" fullName="Fabian Auberto Serna-Valenzuela" lastName="Serna-Valenzuela" middleName="Auberto" role="Defendant"></party>
+ <party firstName="Irwin" fullName="Irwin Igor Serna-Valenzuela" lastName="Serna-Valenzuela" middleName="Igor" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00204-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Serna-Valenzuela et al</title>
+  <subTitle>DETENTION ORDER as to Irwin Igor Serna-Valenzuela signed by Magistrate Judge Stanley A. Boone on 9/11/2014. (Hernandez, M)[1:14-mj-00157-SAB]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb22c57</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00204_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00204; USA v. Serna-Valenzuela et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00204-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-09-12</dateIssued>
+  <docketText>DETENTION ORDER as to Irwin Igor Serna-Valenzuela signed by Magistrate Judge Stanley A. Boone on 9/11/2014. (Hernandez, M)[1:14-mj-00157-SAB]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00204-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Serna-Valenzuela et al</title>
+  <subTitle>DETENTION ORDER as to Fabian Auberto Serna-Valenzuela signed by Magistrate Judge Stanley A. Boone on 9/11/2014. (Hernandez, M)[1:14-mj-00157-SAB]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb22c4f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00204_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00204; USA v. Serna-Valenzuela et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00204-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-09-12</dateIssued>
+  <docketText>DETENTION ORDER as to Fabian Auberto Serna-Valenzuela signed by Magistrate Judge Stanley A. Boone on 9/11/2014. (Hernandez, M)[1:14-mj-00157-SAB]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00204-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Serna-Valenzuela et al</title>
+  <subTitle>STIPULATION and ORDER to Continue Sentencing, signed by District Judge Anthony W. Ishii on 12/10/2014. (Sentencing as to Fabian Auberto Serna-Valenzuela (1) previously set for 1/26/2015, is CONTINUED to 3/2/2015, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb22c56</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00204_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00204; USA v. Serna-Valenzuela et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00204-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-12-10</dateIssued>
+  <docketText>STIPULATION and ORDER to Continue Sentencing, signed by District Judge Anthony W. Ishii on 12/10/2014. (Sentencing as to Fabian Auberto Serna-Valenzuela (1) previously set for 1/26/2015, is CONTINUED to 3/2/2015, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00204-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Serna-Valenzuela et al</title>
+  <subTitle>STIPULATION and ORDER to Continue Sentencing, signed by District Judge Anthony W. Ishii on 12/10/2014. (Sentencing as to Irwin Igor Serna-Valenzuela (2) previously set for 1/26/2015, is CONTINUED to 3/2/2015, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb22c52</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-3</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00204_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00204; USA v. Serna-Valenzuela et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00204-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-12-10</dateIssued>
+  <docketText>STIPULATION and ORDER to Continue Sentencing, signed by District Judge Anthony W. Ishii on 12/10/2014. (Sentencing as to Irwin Igor Serna-Valenzuela (2) previously set for 1/26/2015, is CONTINUED to 3/2/2015, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00204-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Serna-Valenzuela et al</title>
+  <subTitle>PRELIMINARY ORDER of FORFEITURE as to Fabian Auberto Serna-Valenzuela (1), signed by District Judge Anthony W. Ishii on 1/5/2015. (Gaumnitz, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb22c54</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-4</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00204_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00204; USA v. Serna-Valenzuela et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00204-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>PRELIMINARY ORDER of FORFEITURE as to Fabian Auberto Serna-Valenzuela (1), signed by District Judge Anthony W. Ishii on 1/5/2015. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00204-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Serna-Valenzuela et al</title>
+  <subTitle>PRELIMINARY ORDER of FORFEITURE as to Irwin Igor Serna-Valenzuela (2), signed by District Judge Anthony W. Ishii on 1/5/2015. (Gaumnitz, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb22ca0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-5</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00204_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00204; USA v. Serna-Valenzuela et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00204-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>PRELIMINARY ORDER of FORFEITURE as to Irwin Igor Serna-Valenzuela (2), signed by District Judge Anthony W. Ishii on 1/5/2015. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00204-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Serna-Valenzuela et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Fabian Auberto Serna-Valenzuela (1), signed by District Judge Anthony W. Ishii on 3/3/2015. (Gaumnitz, R)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb22c55</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-6</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00204_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00204; USA v. Serna-Valenzuela et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00204-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-03-03</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Fabian Auberto Serna-Valenzuela (1), signed by District Judge Anthony W. Ishii on 3/3/2015. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00204-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Serna-Valenzuela et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Irwin Igor Serna-Valenzuela (2), signed by District Judge Anthony W. Ishii on 3/3/2015. (Gaumnitz, R)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb22c50</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-7</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00204_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00204; USA v. Serna-Valenzuela et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00204-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-03-03</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Irwin Igor Serna-Valenzuela (2), signed by District Judge Anthony W. Ishii on 3/3/2015. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00204-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Serna-Valenzuela et al</title>
+  <subTitle>FINAL ORDER of FORFEITURE as to Fabian Auberto Serna-Valenzuela (1), signed by District Judge Anthony W. Ishii on 3/11/2015. (Gaumnitz, R)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb22c51</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-8</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00204_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00204; USA v. Serna-Valenzuela et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00204-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-03-12</dateIssued>
+  <docketText>FINAL ORDER of FORFEITURE as to Fabian Auberto Serna-Valenzuela (1), signed by District Judge Anthony W. Ishii on 3/11/2015. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00204-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Serna-Valenzuela et al</title>
+  <subTitle>FINAL ORDER of FORFEITURE as to Irwin Igor Serna-Valenzuela (2), signed by District Judge Anthony W. Ishii on 3/11/2015. (Gaumnitz, R)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb22c53</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-9</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00204_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00204/USCOURTS-caed-1_14-cr-00204-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00204/pdf/USCOURTS-caed-1_14-cr-00204-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00204; USA v. Serna-Valenzuela et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00204-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2015-03-12</dateIssued>
+  <docketText>FINAL ORDER of FORFEITURE as to Irwin Igor Serna-Valenzuela (2), signed by District Judge Anthony W. Ishii on 3/11/2015. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

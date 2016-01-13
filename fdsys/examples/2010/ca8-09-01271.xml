@@ -1,0 +1,205 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e5cf8d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-09-01271</identifier>
+<identifier type="local">P0b002ee180e5cf8d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-09-01271</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-09-01271</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>09-01271</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Lynn" fullName="Lynn L. Blum" lastName="Blum" middleName="L." role="Not Party"></party>
+ <party fullName="City of Schuyler" lastName="City of Schuyler" role="Not Party"></party>
+ <party fullName="County of Colfax" lastName="County of Colfax" role="Not Party"></party>
+ <party firstName="Greg" fullName="Greg E. Hajek" lastName="Hajek" middleName="E." role="Appellee"></party>
+ <party firstName="Lennie" fullName="Lennie Hiltner" lastName="Hiltner" role="Not Party"></party>
+ <party firstName="Jeff" fullName="Jeff Olson" lastName="Olson" role="Appellant"></party>
+ <party firstName="Jerome" fullName="Jerome Stewart" lastName="Stewart" role="Not Party"></party>
+ <party firstName="Susan" fullName="Susan L. Wallingford" lastName="Wallingford" middleName="L." role="Appellee"></party>
+ <party firstName="Scott" fullName="Scott Weemer" lastName="Weemer" role="Not Party"></party>
+</extension>
+<titleInfo>
+ <title>Susan Wallingford, et al v. Jeff Olson</title>
+ <partNumber>09-01271</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-09-01271/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">09-01271;09-1271</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Lynn L. Blum</displayForm>
+ <namePart type="family">Blum</namePart>
+ <namePart type="given">Lynn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Not Party</description>
+</name>
+<name type="personal">
+ <displayForm>City of Schuyler</displayForm>
+ <namePart type="family">City of Schuyler</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Not Party</description>
+</name>
+<name type="personal">
+ <displayForm>County of Colfax</displayForm>
+ <namePart type="family">County of Colfax</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Not Party</description>
+</name>
+<name type="personal">
+ <displayForm>Greg E. Hajek</displayForm>
+ <namePart type="family">Hajek</namePart>
+ <namePart type="given">Greg</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Lennie Hiltner</displayForm>
+ <namePart type="family">Hiltner</namePart>
+ <namePart type="given">Lennie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Not Party</description>
+</name>
+<name type="personal">
+ <displayForm>Jeff Olson</displayForm>
+ <namePart type="family">Olson</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Jerome Stewart</displayForm>
+ <namePart type="family">Stewart</namePart>
+ <namePart type="given">Jerome</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Not Party</description>
+</name>
+<name type="personal">
+ <displayForm>Susan L. Wallingford</displayForm>
+ <namePart type="family">Wallingford</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Weemer</displayForm>
+ <namePart type="family">Weemer</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Not Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-09-01271</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>09-01271</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Lynn" fullName="Lynn L. Blum" lastName="Blum" middleName="L." role="Not Party"></party>
+ <party fullName="City of Schuyler" lastName="City of Schuyler" role="Not Party"></party>
+ <party fullName="County of Colfax" lastName="County of Colfax" role="Not Party"></party>
+ <party firstName="Greg" fullName="Greg E. Hajek" lastName="Hajek" middleName="E." role="Appellee"></party>
+ <party firstName="Lennie" fullName="Lennie Hiltner" lastName="Hiltner" role="Not Party"></party>
+ <party firstName="Jeff" fullName="Jeff Olson" lastName="Olson" role="Appellant"></party>
+ <party firstName="Jerome" fullName="Jerome Stewart" lastName="Stewart" role="Not Party"></party>
+ <party firstName="Susan" fullName="Susan L. Wallingford" lastName="Wallingford" middleName="L." role="Appellee"></party>
+ <party firstName="Scott" fullName="Scott Weemer" lastName="Weemer" role="Not Party"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-09-01271-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01271/USCOURTS-ca8-09-01271-0/mods.xml">
+ <titleInfo>
+  <title>Susan Wallingford, et al v. Jeff Olson</title>
+  <subTitle>OPINION FILED - THE COURT: ROGER L. WOLLMAN, WILLIAM JAY RILEY and BOBBY E. SHEPHERD. William Jay Riley, Authoring Judge (PUBLISHED) [3627243] [09-1271]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-09-01271-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e646fd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01271/USCOURTS-ca8-09-01271-0</identifier>
+ <identifier type="former granule identifier">ca8-09-01271_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01271/USCOURTS-ca8-09-01271-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-09-01271/pdf/USCOURTS-ca8-09-01271-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 09-01271; Susan Wallingford, et al v. Jeff Olson; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-09-01271-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-25</dateIssued>
+  <docketText>OPINION FILED - THE COURT: ROGER L. WOLLMAN, WILLIAM JAY RILEY and BOBBY E. SHEPHERD. William Jay Riley, Authoring Judge (PUBLISHED) [3627243] [09-1271]</docketText>
+</extension>
+</relatedItem>
+</mods>

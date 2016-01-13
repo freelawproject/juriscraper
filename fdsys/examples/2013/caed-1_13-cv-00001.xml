@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1865f3400">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-11-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-11-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00001</identifier>
+<identifier type="local">P0b002ee1865f3400</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-11-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-11-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-00001</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00001</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00001</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Steven" fullName="Steven Ray Baxter" lastName="Baxter" middleName="Ray" role="Plaintiff"></party>
+ <party fullName="Kern County Sheriff&apos;s Department" lastName="Kern County Sheriff&apos;s Department" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Baxter v. Kern County Sheriff&apos;s Department</title>
+ <partNumber>1:13-cv-00001</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00001/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-00001;13-001</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Steven Ray Baxter</displayForm>
+ <namePart type="family">Baxter</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kern County Sheriff&apos;s Department</displayForm>
+ <namePart type="family">Kern County Sheriff&apos;s Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00001</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00001</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Steven" fullName="Steven Ray Baxter" lastName="Baxter" middleName="Ray" role="Plaintiff"></party>
+ <party fullName="Kern County Sheriff&apos;s Department" lastName="Kern County Sheriff&apos;s Department" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00001-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00001/USCOURTS-caed-1_13-cv-00001-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Baxter v. Kern County Sheriff&apos;s Department</title>
+  <subTitle>ORDER GRANTING 2 Motion to Proceed IFP signed by Magistrate Judge Dennis L. Beck on 1/4/2013. (Attachments: # (1) IFP Motion). (Jessen, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-00001-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18660ac63</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00001/USCOURTS-caed-1_13-cv-00001-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00001_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00001/USCOURTS-caed-1_13-cv-00001-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00001/pdf/USCOURTS-caed-1_13-cv-00001-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00001; (PC) Baxter v. Kern County Sheriff&apos;s Department; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00001-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER GRANTING 2 Motion to Proceed IFP signed by Magistrate Judge Dennis L. Beck on 1/4/2013. (Attachments: # (1) IFP Motion). (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00001-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00001/USCOURTS-caed-1_13-cv-00001-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Baxter v. Kern County Sheriff&apos;s Department</title>
+  <subTitle>ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND signed by Magistrate Judge Dennis L. Beck on 8/26/2013. First Amended Complaint due within thirty (30) days. (Attachments: # (1) Amended Complaint Form). (Jessen, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-00001-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18660ac64</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00001/USCOURTS-caed-1_13-cv-00001-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00001_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00001/USCOURTS-caed-1_13-cv-00001-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00001/pdf/USCOURTS-caed-1_13-cv-00001-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00001; (PC) Baxter v. Kern County Sheriff&apos;s Department; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00001-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-08-26</dateIssued>
+  <docketText>ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND signed by Magistrate Judge Dennis L. Beck on 8/26/2013. First Amended Complaint due within thirty (30) days. (Attachments: # (1) Amended Complaint Form). (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00001-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00001/USCOURTS-caed-1_13-cv-00001-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Baxter v. Kern County Sheriff&apos;s Department</title>
+  <subTitle>ORDER DISMISSING COMPLAINT for Failure to Prosecute signed by Magistrate Judge Dennis L. Beck on 11/21/2013. CASE CLOSED. (Jessen, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-00001-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18660ac65</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00001/USCOURTS-caed-1_13-cv-00001-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00001_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00001/USCOURTS-caed-1_13-cv-00001-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00001/pdf/USCOURTS-caed-1_13-cv-00001-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00001; (PC) Baxter v. Kern County Sheriff&apos;s Department; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00001-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-11-21</dateIssued>
+  <docketText>ORDER DISMISSING COMPLAINT for Failure to Prosecute signed by Magistrate Judge Dennis L. Beck on 11/21/2013. CASE CLOSED. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

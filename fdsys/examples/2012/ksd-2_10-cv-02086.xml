@@ -1,0 +1,382 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1825f7a48">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-04-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-04-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02086</identifier>
+<identifier type="local">P0b002ee1825f7a48</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-04-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-04-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_10-cv-02086</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_10-cv-02086</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:10-cv-02086</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party firstName="James" fullName="James Arnold" lastName="Arnold" role="Defendant"></party>
+ <party firstName="William" fullName="William Gregory" lastName="Gregory" role="Defendant"></party>
+ <party fullName="Kansas Department of Corrections" lastName="Kansas Department of Corrections" role="Defendant"></party>
+ <party firstName="Curtis" fullName="Curtis Nichols" lastName="Nichols" role="Plaintiff"></party>
+ <party firstName="Ben" fullName="Ben Reynolds" lastName="Reynolds" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Schmidling" lastName="Schmidling" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Nichols v. Kansas Department of Corrections</title>
+ <partNumber>2:10-cv-02086</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02086/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cv-02086;10-2086</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>James Arnold</displayForm>
+ <namePart type="family">Arnold</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Gregory</displayForm>
+ <namePart type="family">Gregory</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kansas Department of Corrections</displayForm>
+ <namePart type="family">Kansas Department of Corrections</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Curtis Nichols</displayForm>
+ <namePart type="family">Nichols</namePart>
+ <namePart type="given">Curtis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ben Reynolds</displayForm>
+ <namePart type="family">Reynolds</namePart>
+ <namePart type="given">Ben</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Schmidling</displayForm>
+ <namePart type="family">Schmidling</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_10-cv-02086</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:10-cv-02086</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party firstName="James" fullName="James Arnold" lastName="Arnold" role="Defendant"></party>
+ <party firstName="William" fullName="William Gregory" lastName="Gregory" role="Defendant"></party>
+ <party fullName="Kansas Department of Corrections" lastName="Kansas Department of Corrections" role="Defendant"></party>
+ <party firstName="Curtis" fullName="Curtis Nichols" lastName="Nichols" role="Plaintiff"></party>
+ <party firstName="Ben" fullName="Ben Reynolds" lastName="Reynolds" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Schmidling" lastName="Schmidling" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02086-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-0/mods.xml">
+ <titleInfo>
+  <title>Nichols v. Kansas Department of Corrections</title>
+  <subTitle>e Gerald L. Rushfelt on 4/7/2010. (byk)MEMORANDUM AND ORDER granting 9 Defendant&apos;s Motion for Stay of Discovery; and 9 Motion for Additional Time to Answer. All Rule 26 proceedings, discovery, and pretrial proceedings are hereby stayed until the Court rules on Defendants Motion to Dismiss. It is further ordered that if the motion to dismiss is denied in whole or in part, Defendant has twenty (20) days from the date of that decision within which to answer the Complaint or otherwise respond thereto. Signed by Magistrate Judg</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02086-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825f91b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-0</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02086_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02086/pdf/USCOURTS-ksd-2_10-cv-02086-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02086; Nichols v. Kansas Department of Corrections; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02086-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-04-07</dateIssued>
+  <docketText>e Gerald L. Rushfelt on 4/7/2010. (byk)MEMORANDUM AND ORDER granting 9 Defendant&apos;s Motion for Stay of Discovery; and 9 Motion for Additional Time to Answer. All Rule 26 proceedings, discovery, and pretrial proceedings are hereby stayed until the Court rules on Defendants Motion to Dismiss. It is further ordered that if the motion to dismiss is denied in whole or in part, Defendant has twenty (20) days from the date of that decision within which to answer the Complaint or otherwise respond thereto. Signed by Magistrate Judg</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02086-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-1/mods.xml">
+ <titleInfo>
+  <title>Nichols v. Kansas Department of Corrections</title>
+  <subTitle>MEMORANDUM AND ORDER granting defendant&apos;s 9 Motion to Dismiss and denying plaintiff&apos;s 11 Motion to Amend Complaint without prejudice to refile a motion that is in compliance with D. Kan. Rule 15.1 within fourteen (14) days of the date of this Order. Signed by District Judge Julie A. Robinson on 8/18/10. (pp)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02086-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825f91b4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-1</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02086_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02086/pdf/USCOURTS-ksd-2_10-cv-02086-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02086; Nichols v. Kansas Department of Corrections; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02086-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-08-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting defendant&apos;s 9 Motion to Dismiss and denying plaintiff&apos;s 11 Motion to Amend Complaint without prejudice to refile a motion that is in compliance with D. Kan. Rule 15.1 within fourteen (14) days of the date of this Order. Signed by District Judge Julie A. Robinson on 8/18/10. (pp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02086-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-2/mods.xml">
+ <titleInfo>
+  <title>Nichols v. Kansas Department of Corrections</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 19 Motion to Amend Complaint. Plaintiffs motion is denied to the extent he continues to name the KDOC as a defendant, and is granted as to the remainder of his proposed Amended Complaint. IT IS FURTHER ORDERED that plaintiff is directed to omit the KDOC as a named defendant in this lawsuit, and file an Amended Complaint that complies with the Courts directive within fourteen (14) days of this Order, as required by D. Kan. Rule 15.1(b). Signed by District Judge Julie A. Robinson on 11/23/20. Mailed to pro se party Curtis Nichols, 403 Olive Street, Leavenworth, KS 66048 by certified mail; Certified Tracking Number: 70092250000317235710. (pp) Modified text on 11/24/2010 (mb).</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02086-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825f91b3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-2</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02086_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02086/pdf/USCOURTS-ksd-2_10-cv-02086-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02086; Nichols v. Kansas Department of Corrections; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02086-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-11-23</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 19 Motion to Amend Complaint. Plaintiffs motion is denied to the extent he continues to name the KDOC as a defendant, and is granted as to the remainder of his proposed Amended Complaint. IT IS FURTHER ORDERED that plaintiff is directed to omit the KDOC as a named defendant in this lawsuit, and file an Amended Complaint that complies with the Courts directive within fourteen (14) days of this Order, as required by D. Kan. Rule 15.1(b). Signed by District Judge Julie A. Robinson on 11/23/20. Mailed to pro se party Curtis Nichols, 403 Olive Street, Leavenworth, KS 66048 by certified mail; Certified Tracking Number: 70092250000317235710. (pp) Modified text on 11/24/2010 (mb).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02086-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-3/mods.xml">
+ <titleInfo>
+  <title>Nichols v. Kansas Department of Corrections</title>
+  <subTitle>MEMORANDUM AND ORDER granting 38 Motion to Dismiss; denying 45 Motion for Default Judgment; denying 46 Motion for Directed Verdict; denying 47 Motion for Order Regarding Service. Signed by District Judge Julie A. Robinson on 11/21/2011. (pp)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02086-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825f91b2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-3</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02086_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02086/pdf/USCOURTS-ksd-2_10-cv-02086-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02086; Nichols v. Kansas Department of Corrections; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02086-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-11-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 38 Motion to Dismiss; denying 45 Motion for Default Judgment; denying 46 Motion for Directed Verdict; denying 47 Motion for Order Regarding Service. Signed by District Judge Julie A. Robinson on 11/21/2011. (pp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02086-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-4/mods.xml">
+ <titleInfo>
+  <title>Nichols v. Kansas Department of Corrections</title>
+  <subTitle>MEMORANDUM AND ORDER denying 57 Motion to Facilitate Service. Plaintiff is granted thirty (30) days, or up to and including February 3, 2012, within which to provide the Marshals Service with thecurrent location and address for Defendants James Arnold and Michael Schmidling for the purpose of serving Plaintiffs amended complaint. The Court further orders that the failure to do so will result in dismissal of the complaint without further prior notice to the Plaintiff. The amended complaint is dismissed, without prejudice, with respect to Defendant Ben Reynolds; Signed by District Judge Julie A. Robinson on 1/3/2012.Mailed to pro se party Curtis Nichols, 460 Reveilly Trail, Apt 101, Lansing, KS 66403 by certified mail ; Certified Tracking Number: 710101060000094297558 (pp)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02086-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825f91b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-4</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02086_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02086/pdf/USCOURTS-ksd-2_10-cv-02086-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02086; Nichols v. Kansas Department of Corrections; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02086-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-01-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 57 Motion to Facilitate Service. Plaintiff is granted thirty (30) days, or up to and including February 3, 2012, within which to provide the Marshals Service with thecurrent location and address for Defendants James Arnold and Michael Schmidling for the purpose of serving Plaintiffs amended complaint. The Court further orders that the failure to do so will result in dismissal of the complaint without further prior notice to the Plaintiff. The amended complaint is dismissed, without prejudice, with respect to Defendant Ben Reynolds; Signed by District Judge Julie A. Robinson on 1/3/2012.Mailed to pro se party Curtis Nichols, 460 Reveilly Trail, Apt 101, Lansing, KS 66403 by certified mail ; Certified Tracking Number: 710101060000094297558 (pp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02086-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-5/mods.xml">
+ <titleInfo>
+  <title>Nichols v. Kansas Department of Corrections</title>
+  <subTitle>ORDER DISMISSING PARTY James Arnold (COII) and Michael Schmidling (Lt.). Signed by District Judge Julie A. Robinson on 2/10/2012.Mailed to pro se party Curtis Nichols, 460 Reveilly Trail, Apt 101, Lansing KS 66403 by certified mail ; Certified Tracking Number: 70101060000094210939(pp)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02086-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825f91b5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-5</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02086_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02086/pdf/USCOURTS-ksd-2_10-cv-02086-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02086; Nichols v. Kansas Department of Corrections; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02086-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-02-10</dateIssued>
+  <docketText>ORDER DISMISSING PARTY James Arnold (COII) and Michael Schmidling (Lt.). Signed by District Judge Julie A. Robinson on 2/10/2012.Mailed to pro se party Curtis Nichols, 460 Reveilly Trail, Apt 101, Lansing KS 66403 by certified mail ; Certified Tracking Number: 70101060000094210939(pp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02086-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-6/mods.xml">
+ <titleInfo>
+  <title>Nichols v. Kansas Department of Corrections</title>
+  <subTitle>MEMORANDUM AND ORDER denying 64 Motion to Amend. For the reasons set out in the Memorandum and Order, the Court denies Plaintiff leave to file another amended complaint. See Memorandum and Order for additional details. Signed by Magistrate Judge Gerald L. Rushfelt on 4/25/2012. Mailed to pro se Plaintiff Curtis Nichols by regular and certified mail. Certified Tracking Number: 7002 2030 0000 9348 8909. (bw)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02086-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825f91af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-6</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02086_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02086/pdf/USCOURTS-ksd-2_10-cv-02086-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02086; Nichols v. Kansas Department of Corrections; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02086-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-04-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 64 Motion to Amend. For the reasons set out in the Memorandum and Order, the Court denies Plaintiff leave to file another amended complaint. See Memorandum and Order for additional details. Signed by Magistrate Judge Gerald L. Rushfelt on 4/25/2012. Mailed to pro se Plaintiff Curtis Nichols by regular and certified mail. Certified Tracking Number: 7002 2030 0000 9348 8909. (bw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02086-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-7/mods.xml">
+ <titleInfo>
+  <title>Nichols v. Kansas Department of Corrections</title>
+  <subTitle>MEMORANDUM AND ORDER denying 65 Motion for Reconsideration. Signed by District Judge Julie A. Robinson on 4/27/2012.Mailed to pro se party Curtis Nichols, 460 Reveilly Trail, Apt 101, Lansing, KS 66403 by certified mail ; Certified Tracking Number: 70091410000203817672. (pp)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02086-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825f91b6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-7</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02086_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02086/USCOURTS-ksd-2_10-cv-02086-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02086/pdf/USCOURTS-ksd-2_10-cv-02086-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02086; Nichols v. Kansas Department of Corrections; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02086-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-04-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 65 Motion for Reconsideration. Signed by District Judge Julie A. Robinson on 4/27/2012.Mailed to pro se party Curtis Nichols, 460 Reveilly Trail, Apt 101, Lansing, KS 66403 by certified mail ; Certified Tracking Number: 70091410000203817672. (pp)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,375 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181951f8a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74692</identifier>
+<identifier type="local">P0b002ee181951f8a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_05-cv-74692</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-74692</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-74692</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Derrick" fullName="Derrick Anderson" lastName="Anderson" role="Defendant"></party>
+ <party firstName="Darryl" fullName="Darryl Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="M." fullName="M. Burke" lastName="Burke" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia Cagle" lastName="Cagle" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Coleman" lastName="Coleman" role="Defendant"></party>
+ <party firstName="James" fullName="James Coss" lastName="Coss" role="Defendant"></party>
+ <party fullName="Detroit, City of" lastName="Detroit, City of" role="Defendant"></party>
+ <party firstName="Tara" fullName="Tara Devon" lastName="Devon" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Ennis" lastName="Ennis" role="Defendant"></party>
+ <party firstName="R." fullName="R. Evans" lastName="Evans" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Fulks" lastName="Fulks" role="Defendant"></party>
+ <party firstName="Paula" fullName="Paula Gambrella-Day" lastName="Gambrella-Day" role="Defendant"></party>
+ <party firstName="Sarah" fullName="Sarah Green" lastName="Green" role="Defendant"></party>
+ <party firstName="Karen" fullName="Karen Henley" lastName="Henley" role="Defendant"></party>
+ <party firstName="William" fullName="William Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="Randy" fullName="Randy Kyles" lastName="Kyles" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard Legreair" lastName="Legreair" role="Defendant"></party>
+ <party firstName="Leslie" fullName="Leslie Montgomery" lastName="Montgomery" role="Defendant"></party>
+ <party fullName="Mulchi" lastName="Mulchi" role="Defendant"></party>
+ <party firstName="Millicent" fullName="Millicent Murray" lastName="Murray" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Peoples" lastName="Peoples" role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Quarello" lastName="Quarello" role="Defendant"></party>
+ <party firstName="D." fullName="D. Simon" lastName="Simon" role="Defendant"></party>
+ <party firstName="Mia" fullName="Mia Spruce" lastName="Spruce" role="Defendant"></party>
+ <party fullName="Wayne, County of" lastName="Wayne, County of" role="Defendant"></party>
+ <party firstName="Chris" fullName="Chris Wroblewski" lastName="Wroblewski" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Kyles v. Detroit, City of et al</title>
+ <partNumber>2:05-cv-74692</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74692/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-74692;05-74692</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Derrick Anderson</displayForm>
+ <namePart type="family">Anderson</namePart>
+ <namePart type="given">Derrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Darryl Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Darryl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Burke</displayForm>
+ <namePart type="family">Burke</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patricia Cagle</displayForm>
+ <namePart type="family">Cagle</namePart>
+ <namePart type="given">Patricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Coleman</displayForm>
+ <namePart type="family">Coleman</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Coss</displayForm>
+ <namePart type="family">Coss</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Detroit, City of</displayForm>
+ <namePart type="family">Detroit, City of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tara Devon</displayForm>
+ <namePart type="family">Devon</namePart>
+ <namePart type="given">Tara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Ennis</displayForm>
+ <namePart type="family">Ennis</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. Evans</displayForm>
+ <namePart type="family">Evans</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Fulks</displayForm>
+ <namePart type="family">Fulks</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paula Gambrella-Day</displayForm>
+ <namePart type="family">Gambrella-Day</namePart>
+ <namePart type="given">Paula</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sarah Green</displayForm>
+ <namePart type="family">Green</namePart>
+ <namePart type="given">Sarah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Karen Henley</displayForm>
+ <namePart type="family">Henley</namePart>
+ <namePart type="given">Karen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Randy Kyles</displayForm>
+ <namePart type="family">Kyles</namePart>
+ <namePart type="given">Randy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Legreair</displayForm>
+ <namePart type="family">Legreair</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leslie Montgomery</displayForm>
+ <namePart type="family">Montgomery</namePart>
+ <namePart type="given">Leslie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mulchi</displayForm>
+ <namePart type="family">Mulchi</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Millicent Murray</displayForm>
+ <namePart type="family">Murray</namePart>
+ <namePart type="given">Millicent</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eric Peoples</displayForm>
+ <namePart type="family">Peoples</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jennifer Quarello</displayForm>
+ <namePart type="family">Quarello</namePart>
+ <namePart type="given">Jennifer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Simon</displayForm>
+ <namePart type="family">Simon</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mia Spruce</displayForm>
+ <namePart type="family">Spruce</namePart>
+ <namePart type="given">Mia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne, County of</displayForm>
+ <namePart type="family">Wayne, County of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chris Wroblewski</displayForm>
+ <namePart type="family">Wroblewski</namePart>
+ <namePart type="given">Chris</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-74692</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-74692</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Derrick" fullName="Derrick Anderson" lastName="Anderson" role="Defendant"></party>
+ <party firstName="Darryl" fullName="Darryl Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="M." fullName="M. Burke" lastName="Burke" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia Cagle" lastName="Cagle" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Coleman" lastName="Coleman" role="Defendant"></party>
+ <party firstName="James" fullName="James Coss" lastName="Coss" role="Defendant"></party>
+ <party fullName="Detroit, City of" lastName="Detroit, City of" role="Defendant"></party>
+ <party firstName="Tara" fullName="Tara Devon" lastName="Devon" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Ennis" lastName="Ennis" role="Defendant"></party>
+ <party firstName="R." fullName="R. Evans" lastName="Evans" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Fulks" lastName="Fulks" role="Defendant"></party>
+ <party firstName="Paula" fullName="Paula Gambrella-Day" lastName="Gambrella-Day" role="Defendant"></party>
+ <party firstName="Sarah" fullName="Sarah Green" lastName="Green" role="Defendant"></party>
+ <party firstName="Karen" fullName="Karen Henley" lastName="Henley" role="Defendant"></party>
+ <party firstName="William" fullName="William Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="Randy" fullName="Randy Kyles" lastName="Kyles" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard Legreair" lastName="Legreair" role="Defendant"></party>
+ <party firstName="Leslie" fullName="Leslie Montgomery" lastName="Montgomery" role="Defendant"></party>
+ <party fullName="Mulchi" lastName="Mulchi" role="Defendant"></party>
+ <party firstName="Millicent" fullName="Millicent Murray" lastName="Murray" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Peoples" lastName="Peoples" role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Quarello" lastName="Quarello" role="Defendant"></party>
+ <party firstName="D." fullName="D. Simon" lastName="Simon" role="Defendant"></party>
+ <party firstName="Mia" fullName="Mia Spruce" lastName="Spruce" role="Defendant"></party>
+ <party fullName="Wayne, County of" lastName="Wayne, County of" role="Defendant"></party>
+ <party firstName="Chris" fullName="Chris Wroblewski" lastName="Wroblewski" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_05-cv-74692-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74692/USCOURTS-mied-2_05-cv-74692-0/mods.xml">
+ <titleInfo>
+  <title>Kyles v. Detroit, City of et al</title>
+  <subTitle>ORDER granting in part and denying in part 54 Motion for Summary Judgment- Signed by Honorable Sean F Cox. (JHer, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_05-cv-74692-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a16ec7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74692/USCOURTS-mied-2_05-cv-74692-0</identifier>
+ <identifier type="former granule identifier">mied-2_05-cv-74692_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74692/USCOURTS-mied-2_05-cv-74692-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74692/pdf/USCOURTS-mied-2_05-cv-74692-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-74692; Kyles v. Detroit, City of et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_05-cv-74692-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-22</dateIssued>
+  <docketText>ORDER granting in part and denying in part 54 Motion for Summary Judgment- Signed by Honorable Sean F Cox. (JHer, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,231 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181163549">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_00-cv-01151</identifier>
+<identifier type="local">P0b002ee181163549</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-5_00-cv-01151</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_00-cv-01151</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:00-cv-01151</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party firstName="Mike" fullName="Mike Allen" lastName="Allen" role="Defendant"></party>
+ <party fullName="Daimler Chrysler, U.S.A." lastName="Daimler Chrysler, U.S.A." role="Defendant"></party>
+ <party firstName="Alfonso" fullName="Alfonso Davis" lastName="Davis" role="Plaintiff"></party>
+ <party firstName="Louis" fullName="Louis B. Eudell II" generation="II" lastName="Eudell" middleName="B." role="Plaintiff"></party>
+ <party firstName="Cheri" fullName="Cheri Martin-Weatherly" lastName="Martin-Weatherly" role="Plaintiff"></party>
+ <party fullName="New Venture Gear, Inc." lastName="New Venture Gear, Inc." role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles W. Piquet" lastName="Piquet" middleName="W." role="Plaintiff"></party>
+ <party firstName="J." fullName="J. D. Smith Jr." generation="Jr." lastName="Smith" middleName="D." role="Plaintiff"></party>
+ <party fullName="UAW International Union" lastName="UAW International Union" role="Defendant"></party>
+ <party fullName="UAW Local No. 624" lastName="UAW Local No. 624" role="Defendant"></party>
+ <party firstName="Stephen" fullName="Stephen Yokich" lastName="Yokich" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Smith, et al v. New Venture Gear, et al</title>
+ <partNumber>5:00-cv-01151</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_00-cv-01151/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:00-cv-01151;00-1151</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Syracuse</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mike Allen</displayForm>
+ <namePart type="family">Allen</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daimler Chrysler, U.S.A.</displayForm>
+ <namePart type="family">Daimler Chrysler, U.S.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alfonso Davis</displayForm>
+ <namePart type="family">Davis</namePart>
+ <namePart type="given">Alfonso</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Louis B. Eudell II</displayForm>
+ <namePart type="family">Eudell</namePart>
+ <namePart type="given">Louis</namePart>
+ <namePart type="termsOfAddress">II</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cheri Martin-Weatherly</displayForm>
+ <namePart type="family">Martin-Weatherly</namePart>
+ <namePart type="given">Cheri</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>New Venture Gear, Inc.</displayForm>
+ <namePart type="family">New Venture Gear, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles W. Piquet</displayForm>
+ <namePart type="family">Piquet</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>J. D. Smith Jr.</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>UAW International Union</displayForm>
+ <namePart type="family">UAW International Union</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>UAW Local No. 624</displayForm>
+ <namePart type="family">UAW Local No. 624</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stephen Yokich</displayForm>
+ <namePart type="family">Yokich</namePart>
+ <namePart type="given">Stephen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_00-cv-01151</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:00-cv-01151</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party firstName="Mike" fullName="Mike Allen" lastName="Allen" role="Defendant"></party>
+ <party fullName="Daimler Chrysler, U.S.A." lastName="Daimler Chrysler, U.S.A." role="Defendant"></party>
+ <party firstName="Alfonso" fullName="Alfonso Davis" lastName="Davis" role="Plaintiff"></party>
+ <party firstName="Louis" fullName="Louis B. Eudell II" generation="II" lastName="Eudell" middleName="B." role="Plaintiff"></party>
+ <party firstName="Cheri" fullName="Cheri Martin-Weatherly" lastName="Martin-Weatherly" role="Plaintiff"></party>
+ <party fullName="New Venture Gear, Inc." lastName="New Venture Gear, Inc." role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles W. Piquet" lastName="Piquet" middleName="W." role="Plaintiff"></party>
+ <party firstName="J." fullName="J. D. Smith Jr." generation="Jr." lastName="Smith" middleName="D." role="Plaintiff"></party>
+ <party fullName="UAW International Union" lastName="UAW International Union" role="Defendant"></party>
+ <party fullName="UAW Local No. 624" lastName="UAW Local No. 624" role="Defendant"></party>
+ <party firstName="Stephen" fullName="Stephen Yokich" lastName="Yokich" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_00-cv-01151-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_00-cv-01151/USCOURTS-nynd-5_00-cv-01151-0/mods.xml">
+ <titleInfo>
+  <title>Smith, et al v. New Venture Gear, et al</title>
+  <subTitle>MEMORANDUM-DECISION AND ORDER denying as moot 137 Motion to Sever; granting Defts&apos; 139 and 140 Motions for Summary Judgment; dismissing the 39 Second Amended complaint in its entirety. Signed by Judge Norman A. Mordue on 1/22/08. (amt, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_00-cv-01151-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813f8fad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_00-cv-01151/USCOURTS-nynd-5_00-cv-01151-0</identifier>
+ <identifier type="former granule identifier">nynd-5_00-cv-01151_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_00-cv-01151/USCOURTS-nynd-5_00-cv-01151-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_00-cv-01151/pdf/USCOURTS-nynd-5_00-cv-01151-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:00-cv-01151; Smith, et al v. New Venture Gear, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_00-cv-01151-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-22</dateIssued>
+  <docketText>MEMORANDUM-DECISION AND ORDER denying as moot 137 Motion to Sever; granting Defts&apos; 139 and 140 Motions for Summary Judgment; dismissing the 39 Second Amended complaint in its entirety. Signed by Judge Norman A. Mordue on 1/22/08. (amt, )</docketText>
+</extension>
+</relatedItem>
+</mods>

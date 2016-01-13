@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18179eedc">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00214</identifier>
+<identifier type="local">P0b002ee18179eedc</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cv-00214</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00214</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00214</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>26:7609 IRS: Petition to Quash IRS Summons</cause>
+ <party fullName="Internal Revenue Service" lastName="Internal Revenue Service" role="Respondent"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey T. Maehr" lastName="Maehr" middleName="T." role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Maehr v. Internal Revenue Service</title>
+ <partNumber>8:08-cv-00214</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00214/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cv-00214;08-214</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Internal Revenue Service</displayForm>
+ <namePart type="family">Internal Revenue Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey T. Maehr</displayForm>
+ <namePart type="family">Maehr</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00214</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00214</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>26:7609 IRS: Petition to Quash IRS Summons</cause>
+ <party fullName="Internal Revenue Service" lastName="Internal Revenue Service" role="Respondent"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey T. Maehr" lastName="Maehr" middleName="T." role="Petitioner"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00214-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00214/USCOURTS-ned-8_08-cv-00214-0/mods.xml">
+ <titleInfo>
+  <title>Maehr v. Internal Revenue Service</title>
+  <subTitle>MEMORANDUM AND ORDER Maehr&apos;s Motion for the Court to Accept the $39.00 Filing Fee (case no. 8:08CV190, Filing No. 2) is denied. Maehr shall have until September 18, 2008, in which to pay the balance of the court&apos;s $350.00 filing fee in each of Case Nos. 8:08CV190, 8:08CV213,and 8:08CV214. Alternatively, Maehr may submit a motion for leave to proceed in forma pauperis and affidavit in support in each of Case Nos. 8:08CV190,8:08CV213, and 8:08CV214. In the event that Maehr fails to either pay the remainder of the filing fee in each case, or to submit a motion in each case, these cases will be dismissed without further notice and without prejudice. The Clerk of the court is directed to set a pro se case management deadline in this case with the following text: September 18, 2008: deadline for Plaintiff to pay balance of fee or file IFP motions. The Clerk of the court is directed to file Maehr&apos;s Brief and Memorandum of Law (case no. 8:08CV213, Filing No. 2) in Case No. 8:08CV190. Pro Se Case Management Deadlines: ( Pro Se Case Management Deadline set for 8/18/2008 - deadline for Plaintiff to pay balance of fee or file IFP motions.) Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(JAE, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00214-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818335b6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00214/USCOURTS-ned-8_08-cv-00214-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00214_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00214/USCOURTS-ned-8_08-cv-00214-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00214/pdf/USCOURTS-ned-8_08-cv-00214-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00214; Maehr v. Internal Revenue Service; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00214-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-08-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER Maehr&apos;s Motion for the Court to Accept the $39.00 Filing Fee (case no. 8:08CV190, Filing No. 2) is denied. Maehr shall have until September 18, 2008, in which to pay the balance of the court&apos;s $350.00 filing fee in each of Case Nos. 8:08CV190, 8:08CV213,and 8:08CV214. Alternatively, Maehr may submit a motion for leave to proceed in forma pauperis and affidavit in support in each of Case Nos. 8:08CV190,8:08CV213, and 8:08CV214. In the event that Maehr fails to either pay the remainder of the filing fee in each case, or to submit a motion in each case, these cases will be dismissed without further notice and without prejudice. The Clerk of the court is directed to set a pro se case management deadline in this case with the following text: September 18, 2008: deadline for Plaintiff to pay balance of fee or file IFP motions. The Clerk of the court is directed to file Maehr&apos;s Brief and Memorandum of Law (case no. 8:08CV213, Filing No. 2) in Case No. 8:08CV190. Pro Se Case Management Deadlines: ( Pro Se Case Management Deadline set for 8/18/2008 - deadline for Plaintiff to pay balance of fee or file IFP motions.) Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00214-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00214/USCOURTS-ned-8_08-cv-00214-1/mods.xml">
+ <titleInfo>
+  <title>Maehr v. Internal Revenue Service</title>
+  <subTitle>MEMORANDUM AND ORDER - Maehr&apos;s Motion for Reconsideration and to Consolidate Cases 6 in Case No. 8:08cv214; (Case No. 8:08CV190, Filing No. 14; Case No. 8:08CV213, Filing No. 6) is denied in part and granted in part. To the extent it remains pending, Maehr&apos;s Motion for Reconsideration (Case No. 8:08CV190, Filing No. 7) is denied. Maehr is permitted to consolidate these matters. No later than December 31, 2008, Maehr shall file an amended petition in Case No. 8:08CV190 as set forth in this Order. If he files an amended petition, Maehr must pay the remainder of the filing fee in Case No. 8:08CV190, or alternatively, must submit a motion for leave to proceed in forma pauperis and an affidavit in support. In the event that Maehr fails to file an amended petition by December 31, 2008, all three of these cases will be dismissed for failure to pay the filing fee. However, Maehr will remain responsible for payment of the entire $350.00 filing fee in all three cases regardless of dismissal. The Clerk of the court is directed to set a pro se case management deadline in this case with the following text: December 31, 2008: deadline for Maehr to pay balance of fee or file IFP motions and consolidate cases. Maehr&apos;s request for recusal of the undersigned judge is denied; and Maehr&apos;s Motion for Administrative Default Ruling 4 in Case No. 8:08CV214 is denied. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party) (KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00214-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818335b7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00214/USCOURTS-ned-8_08-cv-00214-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00214_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00214/USCOURTS-ned-8_08-cv-00214-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00214/pdf/USCOURTS-ned-8_08-cv-00214-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00214; Maehr v. Internal Revenue Service; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00214-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-11-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Maehr&apos;s Motion for Reconsideration and to Consolidate Cases 6 in Case No. 8:08cv214; (Case No. 8:08CV190, Filing No. 14; Case No. 8:08CV213, Filing No. 6) is denied in part and granted in part. To the extent it remains pending, Maehr&apos;s Motion for Reconsideration (Case No. 8:08CV190, Filing No. 7) is denied. Maehr is permitted to consolidate these matters. No later than December 31, 2008, Maehr shall file an amended petition in Case No. 8:08CV190 as set forth in this Order. If he files an amended petition, Maehr must pay the remainder of the filing fee in Case No. 8:08CV190, or alternatively, must submit a motion for leave to proceed in forma pauperis and an affidavit in support. In the event that Maehr fails to file an amended petition by December 31, 2008, all three of these cases will be dismissed for failure to pay the filing fee. However, Maehr will remain responsible for payment of the entire $350.00 filing fee in all three cases regardless of dismissal. The Clerk of the court is directed to set a pro se case management deadline in this case with the following text: December 31, 2008: deadline for Maehr to pay balance of fee or file IFP motions and consolidate cases. Maehr&apos;s request for recusal of the undersigned judge is denied; and Maehr&apos;s Motion for Administrative Default Ruling 4 in Case No. 8:08CV214 is denied. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00214-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00214/USCOURTS-ned-8_08-cv-00214-2/mods.xml">
+ <titleInfo>
+  <title>Maehr v. Internal Revenue Service</title>
+  <subTitle>MEMORANDUM AND ORDER - Maehr&apos;s Amended Petition to Quash Summons (Filing No. 17 in case 8:08CV190) is permitted to proceed and supersedes the previous Motion to Quash 1. The Clerk of the court is directed to terminate Filing No. 1 in Case No. 8:08CV190. Case Nos. 8:08CV213 and 8:08CV214 are dismissed without prejudice. All pending Motions in these two matters are denied as moot. Separate judgments will be entered in accordance with this Memorandum and Order. Maehr is relieved from payment of the remainder of the filing fee in Case Nos. 8:08CV213 and 8:08CV214. Maehr must pay the remainder of the filing fee in Case No. 8:08CV190, or alternatively, must submit a motion for leave to proceed in forma pauperis and an affidavit in support no later than February 9, 2009. In the event that Maehr fails to pay the remainder of the filing fee in Case No. 8:08CV190 or fails to submit a motion for leave to proceed in forma pauperis and an affidavit in support by February 9, 2009, Case No. 8:08CV190 will be dismissed for failure to pay the filing fee. However, Maehr will remain responsible for payment of the entire $350.00 filing fee in Case No. 8:08CV190 regardless of dismissal. The Clerk of the court is directed to set a pro se case management deadline in Case No. 8:08CV190 with the following text: February 9, 2009: deadline for Maehr to pay balance of fee or file IFP motions. Maehr&apos;s Motions for Clarification 8 in Case No. 8:08CV214, (Case No. 08CV190, Filing No. 16, Case No. 8:08CV213, Filing No. 8) are denied. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party) (KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00214-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818335b5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00214/USCOURTS-ned-8_08-cv-00214-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00214_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00214/USCOURTS-ned-8_08-cv-00214-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00214/pdf/USCOURTS-ned-8_08-cv-00214-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00214; Maehr v. Internal Revenue Service; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00214-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-01-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Maehr&apos;s Amended Petition to Quash Summons (Filing No. 17 in case 8:08CV190) is permitted to proceed and supersedes the previous Motion to Quash 1. The Clerk of the court is directed to terminate Filing No. 1 in Case No. 8:08CV190. Case Nos. 8:08CV213 and 8:08CV214 are dismissed without prejudice. All pending Motions in these two matters are denied as moot. Separate judgments will be entered in accordance with this Memorandum and Order. Maehr is relieved from payment of the remainder of the filing fee in Case Nos. 8:08CV213 and 8:08CV214. Maehr must pay the remainder of the filing fee in Case No. 8:08CV190, or alternatively, must submit a motion for leave to proceed in forma pauperis and an affidavit in support no later than February 9, 2009. In the event that Maehr fails to pay the remainder of the filing fee in Case No. 8:08CV190 or fails to submit a motion for leave to proceed in forma pauperis and an affidavit in support by February 9, 2009, Case No. 8:08CV190 will be dismissed for failure to pay the filing fee. However, Maehr will remain responsible for payment of the entire $350.00 filing fee in Case No. 8:08CV190 regardless of dismissal. The Clerk of the court is directed to set a pro se case management deadline in Case No. 8:08CV190 with the following text: February 9, 2009: deadline for Maehr to pay balance of fee or file IFP motions. Maehr&apos;s Motions for Clarification 8 in Case No. 8:08CV214, (Case No. 08CV190, Filing No. 16, Case No. 8:08CV213, Filing No. 8) are denied. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party) (KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

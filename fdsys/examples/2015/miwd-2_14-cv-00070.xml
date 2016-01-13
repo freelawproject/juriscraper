@@ -1,0 +1,225 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aac9d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Western District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cv-00070</identifier>
+<identifier type="local">P0b002ee18a8aac9d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-miwd-2_14-cv-00070</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-miwd-2_14-cv-00070</accessId>
+ <courtType>District</courtType>
+ <courtCode>miwd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2254</courtSortOrder>
+ <caseNumber>2:14-cv-00070</caseNumber>
+ <caseOffice>Northern Division (2)</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Johnny" fullName="Johnny Dar Eagle #525192" lastName="Eagle #525192" middleName="Dar" role="plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Heyns" lastName="Heyns" role="defendant"></party>
+ <party firstName="Unknown" fullName="Unknown Newcomb" lastName="Newcomb" role="defendant"></party>
+ <party firstName="M." fullName="M. Quinn" lastName="Quinn" role="defendant"></party>
+ <party fullName="Unknown Part(y)(ies)" lastName="Unknown Part(y)(ies)" role="defendant"></party>
+ <party fullName="Unknown Party #1" lastName="Unknown Party #1" role="defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Woods" lastName="Woods" role="defendant"></party>
+</extension>
+<titleInfo>
+ <title>Eagle #525192 v. Quinn et al</title>
+ <partNumber>2:14-cv-00070</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cv-00070/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-00070;14-070</identifier>
+<name type="corporate">
+ <namePart>United States District Court Western District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Northern Division (2)</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Johnny Dar Eagle #525192</displayForm>
+ <namePart type="family">Eagle #525192</namePart>
+ <namePart type="given">Johnny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Heyns</displayForm>
+ <namePart type="family">Heyns</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Newcomb</displayForm>
+ <namePart type="family">Newcomb</namePart>
+ <namePart type="given">Unknown</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Quinn</displayForm>
+ <namePart type="family">Quinn</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Part(y)(ies)</displayForm>
+ <namePart type="family">Unknown Part(y)(ies)</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Party #1</displayForm>
+ <namePart type="family">Unknown Party #1</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Woods</displayForm>
+ <namePart type="family">Woods</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-miwd-2_14-cv-00070</accessId>
+ <courtType>District</courtType>
+ <courtCode>miwd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2254</courtSortOrder>
+ <caseNumber>2:14-cv-00070</caseNumber>
+ <caseOffice>Northern Division (2)</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Johnny" fullName="Johnny Dar Eagle #525192" lastName="Eagle #525192" middleName="Dar" role="plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Heyns" lastName="Heyns" role="defendant"></party>
+ <party firstName="Unknown" fullName="Unknown Newcomb" lastName="Newcomb" role="defendant"></party>
+ <party firstName="M." fullName="M. Quinn" lastName="Quinn" role="defendant"></party>
+ <party fullName="Unknown Part(y)(ies)" lastName="Unknown Part(y)(ies)" role="defendant"></party>
+ <party fullName="Unknown Party #1" lastName="Unknown Party #1" role="defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Woods" lastName="Woods" role="defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-miwd-2_14-cv-00070-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cv-00070/USCOURTS-miwd-2_14-cv-00070-0/mods.xml">
+ <titleInfo>
+  <title>Eagle #525192 v. Quinn et al</title>
+  <subTitle>OPINION; signed by Judge Robert Holmes Bell (Judge Robert Holmes Bell, sdb)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cv-00070/pdf/USCOURTS-miwd-2_14-cv-00070-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8affc8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cv-00070/USCOURTS-miwd-2_14-cv-00070-0</identifier>
+ <identifier type="former granule identifier">miwd-2_14-cv-00070_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cv-00070/USCOURTS-miwd-2_14-cv-00070-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cv-00070/pdf/USCOURTS-miwd-2_14-cv-00070-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00070; Eagle #525192 v. Quinn et al; </searchTitle>
+  <courtName>United States District Court Western District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-miwd-2_14-cv-00070-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-11-05</dateIssued>
+  <docketText>OPINION; signed by Judge Robert Holmes Bell (Judge Robert Holmes Bell, sdb)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-miwd-2_14-cv-00070-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cv-00070/USCOURTS-miwd-2_14-cv-00070-1/mods.xml">
+ <titleInfo>
+  <title>Eagle #525192 v. Quinn et al</title>
+  <subTitle>OPINION ; signed by Judge Robert Holmes Bell (Judge Robert Holmes Bell, kcb)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cv-00070/pdf/USCOURTS-miwd-2_14-cv-00070-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8affc9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cv-00070/USCOURTS-miwd-2_14-cv-00070-1</identifier>
+ <identifier type="former granule identifier">miwd-2_14-cv-00070_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cv-00070/USCOURTS-miwd-2_14-cv-00070-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cv-00070/pdf/USCOURTS-miwd-2_14-cv-00070-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00070; Eagle #525192 v. Quinn et al; </searchTitle>
+  <courtName>United States District Court Western District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-miwd-2_14-cv-00070-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>OPINION ; signed by Judge Robert Holmes Bell (Judge Robert Holmes Bell, kcb)</docketText>
+</extension>
+</relatedItem>
+</mods>

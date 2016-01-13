@@ -1,0 +1,210 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180ee7f18">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-mj-08130</identifier>
+<identifier type="local">P0b002ee180ee7f18</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_08-mj-08130</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_08-mj-08130</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:08-mj-08130</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType></caseType>
+ <party firstName="Hector" fullName="Hector Eduardo Garcia-Gallardo" lastName="Garcia-Gallardo" middleName="Eduardo" role="Defendant"></party>
+ <party firstName="Uriel" fullName="Uriel Lopez-Montejano" lastName="Lopez-Montejano" role="Defendant"></party>
+ <party firstName="Araceli" fullName="Araceli Lozano-Miranda" lastName="Lozano-Miranda" role="Defendant"></party>
+ <party firstName="Luis" fullName="Luis Lozano-Miranda" lastName="Lozano-Miranda" role="Defendant"></party>
+ <party firstName="Baltazar" fullName="Baltazar Quiroz" lastName="Quiroz" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Quiroz, et al.,</title>
+ <partNumber>2:08-mj-08130</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-mj-08130/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:08-mj-08130;08-8130</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Hector Eduardo Garcia-Gallardo</displayForm>
+ <namePart type="family">Garcia-Gallardo</namePart>
+ <namePart type="given">Hector</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Uriel Lopez-Montejano</displayForm>
+ <namePart type="family">Lopez-Montejano</namePart>
+ <namePart type="given">Uriel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Araceli Lozano-Miranda</displayForm>
+ <namePart type="family">Lozano-Miranda</namePart>
+ <namePart type="given">Araceli</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Luis Lozano-Miranda</displayForm>
+ <namePart type="family">Lozano-Miranda</namePart>
+ <namePart type="given">Luis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Baltazar Quiroz</displayForm>
+ <namePart type="family">Quiroz</namePart>
+ <namePart type="given">Baltazar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_08-mj-08130</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:08-mj-08130</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType></caseType>
+ <party firstName="Hector" fullName="Hector Eduardo Garcia-Gallardo" lastName="Garcia-Gallardo" middleName="Eduardo" role="Defendant"></party>
+ <party firstName="Uriel" fullName="Uriel Lopez-Montejano" lastName="Lopez-Montejano" role="Defendant"></party>
+ <party firstName="Araceli" fullName="Araceli Lozano-Miranda" lastName="Lozano-Miranda" role="Defendant"></party>
+ <party firstName="Luis" fullName="Luis Lozano-Miranda" lastName="Lozano-Miranda" role="Defendant"></party>
+ <party firstName="Baltazar" fullName="Baltazar Quiroz" lastName="Quiroz" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_08-mj-08130-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-mj-08130/USCOURTS-ksd-2_08-mj-08130-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Quiroz, et al.,</title>
+  <subTitle>ORDER OF DETENTION PENDING TRIAL as to Eduardo Lozano-Miranda. Signed by Magistrate Judge David J. Waxse on 01/06/09. (mg)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_08-mj-08130-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f9c3d5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-mj-08130/USCOURTS-ksd-2_08-mj-08130-0</identifier>
+ <identifier type="former granule identifier">ksd-2_08-mj-08130_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-mj-08130/USCOURTS-ksd-2_08-mj-08130-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-mj-08130/pdf/USCOURTS-ksd-2_08-mj-08130-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-mj-08130; USA v. Quiroz, et al.,; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_08-mj-08130-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-06</dateIssued>
+  <docketText>ORDER OF DETENTION PENDING TRIAL as to Eduardo Lozano-Miranda. Signed by Magistrate Judge David J. Waxse on 01/06/09. (mg)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_08-mj-08130-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-mj-08130/USCOURTS-ksd-2_08-mj-08130-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Quiroz, et al.,</title>
+  <subTitle>ORDER OF DETENTION PENDING TRIAL as to Porfirio Mendonza-Alcantar. Signed by Magistrate Judge David J. Waxse on 01/06/09. (mg)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_08-mj-08130-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f9c3d4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-mj-08130/USCOURTS-ksd-2_08-mj-08130-1</identifier>
+ <identifier type="former granule identifier">ksd-2_08-mj-08130_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-mj-08130/USCOURTS-ksd-2_08-mj-08130-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-mj-08130/pdf/USCOURTS-ksd-2_08-mj-08130-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-mj-08130; USA v. Quiroz, et al.,; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_08-mj-08130-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-06</dateIssued>
+  <docketText>ORDER OF DETENTION PENDING TRIAL as to Porfirio Mendonza-Alcantar. Signed by Magistrate Judge David J. Waxse on 01/06/09. (mg)</docketText>
+</extension>
+</relatedItem>
+</mods>

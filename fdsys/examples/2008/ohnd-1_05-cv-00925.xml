@@ -1,0 +1,269 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d1662">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_05-cv-00925</identifier>
+<identifier type="local">P0b002ee1815d1662</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_05-cv-00925</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_05-cv-00925</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:05-cv-00925</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party firstName="John" fullName="John Does 1 through 5" lastName="Does 1 through 5" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas E. Koncz" lastName="Koncz" middleName="E." role="Plaintiff"></party>
+ <party firstName="James" fullName="James L. McCrystal, Jr." lastName="McCrystal, Jr." middleName="L." role="Mediator"></party>
+ <party fullName="Raleigh America" lastName="Raleigh America" role="Cross-Claimant"></party>
+ <party fullName="Raleigh America" lastName="Raleigh America" role="Defendant"></party>
+ <party fullName="Raleigh America, Inc." lastName="Raleigh America, Inc." role="Cross-Claimant"></party>
+ <party fullName="Raleigh America, Inc." lastName="Raleigh America, Inc." role="Defendant"></party>
+ <party fullName="Rockshox, Inc." lastName="Rockshox, Inc." role="Cross-Claimant"></party>
+ <party fullName="Rockshox, Inc." lastName="Rockshox, Inc." role="Defendant"></party>
+ <party fullName="Sram Corporation" lastName="Sram Corporation" role="Cross-Claimant"></party>
+ <party fullName="Sram Corporation" lastName="Sram Corporation" role="Defendant"></party>
+ <party fullName="Tim&apos;s Cycle" lastName="Tim&apos;s Cycle" role="Cross Defendant"></party>
+ <party fullName="Tim&apos;s Cycle" lastName="Tim&apos;s Cycle" role="Defendant"></party>
+ <party fullName="Tim&apos;s Cycle, Inc" lastName="Tim&apos;s Cycle, Inc" role="Cross Defendant"></party>
+ <party fullName="Tim&apos;s Cycle, Inc" lastName="Tim&apos;s Cycle, Inc" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Koncz v. Raleigh America, Inc. et al</title>
+ <partNumber>1:05-cv-00925</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_05-cv-00925/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-00925;05-925</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John Does 1 through 5</displayForm>
+ <namePart type="family">Does 1 through 5</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas E. Koncz</displayForm>
+ <namePart type="family">Koncz</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James L. McCrystal, Jr.</displayForm>
+ <namePart type="family">McCrystal, Jr.</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<name type="personal">
+ <displayForm>Raleigh America</displayForm>
+ <namePart type="family">Raleigh America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Raleigh America</displayForm>
+ <namePart type="family">Raleigh America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Raleigh America, Inc.</displayForm>
+ <namePart type="family">Raleigh America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Raleigh America, Inc.</displayForm>
+ <namePart type="family">Raleigh America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rockshox, Inc.</displayForm>
+ <namePart type="family">Rockshox, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Rockshox, Inc.</displayForm>
+ <namePart type="family">Rockshox, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sram Corporation</displayForm>
+ <namePart type="family">Sram Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Sram Corporation</displayForm>
+ <namePart type="family">Sram Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tim&apos;s Cycle</displayForm>
+ <namePart type="family">Tim&apos;s Cycle</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tim&apos;s Cycle</displayForm>
+ <namePart type="family">Tim&apos;s Cycle</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tim&apos;s Cycle, Inc</displayForm>
+ <namePart type="family">Tim&apos;s Cycle, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tim&apos;s Cycle, Inc</displayForm>
+ <namePart type="family">Tim&apos;s Cycle, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_05-cv-00925</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:05-cv-00925</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party firstName="John" fullName="John Does 1 through 5" lastName="Does 1 through 5" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas E. Koncz" lastName="Koncz" middleName="E." role="Plaintiff"></party>
+ <party firstName="James" fullName="James L. McCrystal, Jr." lastName="McCrystal, Jr." middleName="L." role="Mediator"></party>
+ <party fullName="Raleigh America" lastName="Raleigh America" role="Cross-Claimant"></party>
+ <party fullName="Raleigh America" lastName="Raleigh America" role="Defendant"></party>
+ <party fullName="Raleigh America, Inc." lastName="Raleigh America, Inc." role="Cross-Claimant"></party>
+ <party fullName="Raleigh America, Inc." lastName="Raleigh America, Inc." role="Defendant"></party>
+ <party fullName="Rockshox, Inc." lastName="Rockshox, Inc." role="Cross-Claimant"></party>
+ <party fullName="Rockshox, Inc." lastName="Rockshox, Inc." role="Defendant"></party>
+ <party fullName="Sram Corporation" lastName="Sram Corporation" role="Cross-Claimant"></party>
+ <party fullName="Sram Corporation" lastName="Sram Corporation" role="Defendant"></party>
+ <party fullName="Tim&apos;s Cycle" lastName="Tim&apos;s Cycle" role="Cross Defendant"></party>
+ <party fullName="Tim&apos;s Cycle" lastName="Tim&apos;s Cycle" role="Defendant"></party>
+ <party fullName="Tim&apos;s Cycle, Inc" lastName="Tim&apos;s Cycle, Inc" role="Cross Defendant"></party>
+ <party fullName="Tim&apos;s Cycle, Inc" lastName="Tim&apos;s Cycle, Inc" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_05-cv-00925-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00925/USCOURTS-ohnd-1_05-cv-00925-0/mods.xml">
+ <titleInfo>
+  <title>Koncz v. Raleigh America, Inc. et al</title>
+  <subTitle>Order denying Defendants&apos; Motion for Sanctions (Related Doc # 52). Signed by Judge Solomon Oliver, Jr on 1/11/2008.(D,M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_05-cv-00925-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816d70b5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00925/USCOURTS-ohnd-1_05-cv-00925-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_05-cv-00925_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00925/USCOURTS-ohnd-1_05-cv-00925-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_05-cv-00925/pdf/USCOURTS-ohnd-1_05-cv-00925-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00925; Koncz v. Raleigh America, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_05-cv-00925-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-14</dateIssued>
+  <docketText>Order denying Defendants&apos; Motion for Sanctions (Related Doc # 52). Signed by Judge Solomon Oliver, Jr on 1/11/2008.(D,M)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,188 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812d8071">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00277</identifier>
+<identifier type="local">P0b002ee1812d8071</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-5_08-cv-00277</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_08-cv-00277</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:08-cv-00277</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party fullName="Georgia Department of Public Safety" lastName="Georgia Department of Public Safety" role="Defendant"></party>
+ <party firstName="J&apos;Mar" fullName="J&apos;Mar Grier" lastName="Grier" role="Plaintiff"></party>
+ <party firstName="Bill" fullName="Bill Hitchens" lastName="Hitchens" role="Defendant"></party>
+ <party firstName="Willie" fullName="Willie Richardson" lastName="Richardson" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Risley" lastName="Risley" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Risley" lastName="Risley" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Grier v. Georgia Department of Public Safety et al</title>
+ <partNumber>5:08-cv-00277</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00277/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:08-cv-00277;08-277</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Macon</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Georgia Department of Public Safety</displayForm>
+ <namePart type="family">Georgia Department of Public Safety</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J&apos;Mar Grier</displayForm>
+ <namePart type="family">Grier</namePart>
+ <namePart type="given">J&apos;Mar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Bill Hitchens</displayForm>
+ <namePart type="family">Hitchens</namePart>
+ <namePart type="given">Bill</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Willie Richardson</displayForm>
+ <namePart type="family">Richardson</namePart>
+ <namePart type="given">Willie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher Risley</displayForm>
+ <namePart type="family">Risley</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher Risley</displayForm>
+ <namePart type="family">Risley</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_08-cv-00277</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:08-cv-00277</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party fullName="Georgia Department of Public Safety" lastName="Georgia Department of Public Safety" role="Defendant"></party>
+ <party firstName="J&apos;Mar" fullName="J&apos;Mar Grier" lastName="Grier" role="Plaintiff"></party>
+ <party firstName="Bill" fullName="Bill Hitchens" lastName="Hitchens" role="Defendant"></party>
+ <party firstName="Willie" fullName="Willie Richardson" lastName="Richardson" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Risley" lastName="Risley" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Risley" lastName="Risley" role="Interested Party"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_08-cv-00277-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00277/USCOURTS-gamd-5_08-cv-00277-0/mods.xml">
+ <titleInfo>
+  <title>Grier v. Georgia Department of Public Safety et al</title>
+  <subTitle>ORDER granting in part and denying in part 3 Motion to Dismiss; dismissing 15 Motion to Stay. Ordered by Judge C. Ashley Royal on 1/20/09 (hrm)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_08-cv-00277-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18130c4cb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00277/USCOURTS-gamd-5_08-cv-00277-0</identifier>
+ <identifier type="former granule identifier">gamd-5_08-cv-00277_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00277/USCOURTS-gamd-5_08-cv-00277-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00277/pdf/USCOURTS-gamd-5_08-cv-00277-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-00277; Grier v. Georgia Department of Public Safety et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_08-cv-00277-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-20</dateIssued>
+  <docketText>ORDER granting in part and denying in part 3 Motion to Dismiss; dismissing 15 Motion to Stay. Ordered by Judge C. Ashley Royal on 1/20/09 (hrm)</docketText>
+</extension>
+</relatedItem>
+</mods>

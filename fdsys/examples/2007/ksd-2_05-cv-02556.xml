@@ -1,0 +1,335 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1875cad46">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02556</identifier>
+<identifier type="local">P0b002ee1875cad46</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_05-cv-02556</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_05-cv-02556</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:05-cv-02556</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Board of County Commissioners of the County of Leavenworth" lastName="Board of County Commissioners of the County of Leavenworth" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe (1)" lastName="Doe (1)" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe (2)" lastName="Doe (2)" role="Defendant"></party>
+ <party firstName="Clyde" fullName="Clyde Graeber" lastName="Graeber" role="Defendant"></party>
+ <party fullName="Leavenworth County, Kansas" lastName="Leavenworth County, Kansas" role="Defendant"></party>
+ <party firstName="Marlene" fullName="Marlene Moore" lastName="Moore" role="Plaintiff"></party>
+ <party firstName="Jared" fullName="Jared Michael Moore" lastName="Moore" middleName="Michael" role="Plaintiff"></party>
+ <party firstName="Patrick" fullName="Patrick Richard Moore" lastName="Moore" middleName="Richard" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald Navinsky" lastName="Navinsky" role="Defendant"></party>
+ <party firstName="Herb" fullName="Herb Nye" lastName="Nye" role="Defendant"></party>
+ <party firstName="Dean" fullName="Dean Oroke" lastName="Oroke" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert L. Peterman" lastName="Peterman" middleName="L." role="Defendant"></party>
+ <party firstName="David" fullName="David Zoellner" lastName="Zoellner" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Moore et al v. Leavenworth County, Kansas et al</title>
+ <partNumber>2:05-cv-02556</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02556/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-02556;05-2556</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Board of County Commissioners of the County of Leavenworth</displayForm>
+ <namePart type="family">Board of County Commissioners of the County of Leavenworth</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe (1)</displayForm>
+ <namePart type="family">Doe (1)</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe (2)</displayForm>
+ <namePart type="family">Doe (2)</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Clyde Graeber</displayForm>
+ <namePart type="family">Graeber</namePart>
+ <namePart type="given">Clyde</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leavenworth County, Kansas</displayForm>
+ <namePart type="family">Leavenworth County, Kansas</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marlene Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">Marlene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jared Michael Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">Jared</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Patrick Richard Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">Patrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Navinsky</displayForm>
+ <namePart type="family">Navinsky</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Herb Nye</displayForm>
+ <namePart type="family">Nye</namePart>
+ <namePart type="given">Herb</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dean Oroke</displayForm>
+ <namePart type="family">Oroke</namePart>
+ <namePart type="given">Dean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert L. Peterman</displayForm>
+ <namePart type="family">Peterman</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Zoellner</displayForm>
+ <namePart type="family">Zoellner</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_05-cv-02556</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:05-cv-02556</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Board of County Commissioners of the County of Leavenworth" lastName="Board of County Commissioners of the County of Leavenworth" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe (1)" lastName="Doe (1)" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe (2)" lastName="Doe (2)" role="Defendant"></party>
+ <party firstName="Clyde" fullName="Clyde Graeber" lastName="Graeber" role="Defendant"></party>
+ <party fullName="Leavenworth County, Kansas" lastName="Leavenworth County, Kansas" role="Defendant"></party>
+ <party firstName="Marlene" fullName="Marlene Moore" lastName="Moore" role="Plaintiff"></party>
+ <party firstName="Jared" fullName="Jared Michael Moore" lastName="Moore" middleName="Michael" role="Plaintiff"></party>
+ <party firstName="Patrick" fullName="Patrick Richard Moore" lastName="Moore" middleName="Richard" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald Navinsky" lastName="Navinsky" role="Defendant"></party>
+ <party firstName="Herb" fullName="Herb Nye" lastName="Nye" role="Defendant"></party>
+ <party firstName="Dean" fullName="Dean Oroke" lastName="Oroke" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert L. Peterman" lastName="Peterman" middleName="L." role="Defendant"></party>
+ <party firstName="David" fullName="David Zoellner" lastName="Zoellner" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_05-cv-02556-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02556/USCOURTS-ksd-2_05-cv-02556-0/mods.xml">
+ <titleInfo>
+  <title>Moore et al v. Leavenworth County, Kansas et al</title>
+  <subTitle>PROTECTIVE ORDER granting 17 the parties&apos; Joint Motion for Protective Order. Signed by Magistrate Judge David J. Waxse on 3/6/2006.(jm)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02556/pdf/USCOURTS-ksd-2_05-cv-02556-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187608e0c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02556/USCOURTS-ksd-2_05-cv-02556-0</identifier>
+ <identifier type="former granule identifier">ksd-2_05-cv-02556_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02556/USCOURTS-ksd-2_05-cv-02556-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02556/pdf/USCOURTS-ksd-2_05-cv-02556-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-02556; Moore et al v. Leavenworth County, Kansas et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_05-cv-02556-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-03-06</dateIssued>
+  <docketText>PROTECTIVE ORDER granting 17 the parties&apos; Joint Motion for Protective Order. Signed by Magistrate Judge David J. Waxse on 3/6/2006.(jm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_05-cv-02556-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02556/USCOURTS-ksd-2_05-cv-02556-1/mods.xml">
+ <titleInfo>
+  <title>Moore et al v. Leavenworth County, Kansas et al</title>
+  <subTitle>MEMORANDUM AND ORDER AND ORDER TO SHOW CAUSE overruling 29 Motion to Dismiss Party. Plaintiffs to show cause in writing by 11/6/06 why their procedural due process claim under the Fourteenth Amendment should not be dismissed for failure to state a claim on which relief can be granted. Defendant may respond by 11/20/06. Signed by Judge Kathryn H. Vratil on 10/23/06. (ls)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02556/pdf/USCOURTS-ksd-2_05-cv-02556-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187608e0e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02556/USCOURTS-ksd-2_05-cv-02556-1</identifier>
+ <identifier type="former granule identifier">ksd-2_05-cv-02556_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02556/USCOURTS-ksd-2_05-cv-02556-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02556/pdf/USCOURTS-ksd-2_05-cv-02556-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-02556; Moore et al v. Leavenworth County, Kansas et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_05-cv-02556-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-10-23</dateIssued>
+  <docketText>MEMORANDUM AND ORDER AND ORDER TO SHOW CAUSE overruling 29 Motion to Dismiss Party. Plaintiffs to show cause in writing by 11/6/06 why their procedural due process claim under the Fourteenth Amendment should not be dismissed for failure to state a claim on which relief can be granted. Defendant may respond by 11/20/06. Signed by Judge Kathryn H. Vratil on 10/23/06. (ls)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_05-cv-02556-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02556/USCOURTS-ksd-2_05-cv-02556-2/mods.xml">
+ <titleInfo>
+  <title>Moore et al v. Leavenworth County, Kansas et al</title>
+  <subTitle>MEMORANDUM AND ORDER sustaining 69 and 71 Defendants&apos; Motions for Summary Judgment. It is further ordered that Plaintiffs&apos; 74 Motion for Partial Summary Judgment and 88 Motion to Strike are overruled. Plaintiffs&apos; state law claims are hereby dismissed without prejudice. Signed by Judge Kathryn H. Vratil on 01/19/07. (mg)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02556/pdf/USCOURTS-ksd-2_05-cv-02556-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187608e0f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02556/USCOURTS-ksd-2_05-cv-02556-2</identifier>
+ <identifier type="former granule identifier">ksd-2_05-cv-02556_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02556/USCOURTS-ksd-2_05-cv-02556-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02556/pdf/USCOURTS-ksd-2_05-cv-02556-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-02556; Moore et al v. Leavenworth County, Kansas et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_05-cv-02556-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER sustaining 69 and 71 Defendants&apos; Motions for Summary Judgment. It is further ordered that Plaintiffs&apos; 74 Motion for Partial Summary Judgment and 88 Motion to Strike are overruled. Plaintiffs&apos; state law claims are hereby dismissed without prejudice. Signed by Judge Kathryn H. Vratil on 01/19/07. (mg)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_05-cv-02556-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02556/USCOURTS-ksd-2_05-cv-02556-3/mods.xml">
+ <titleInfo>
+  <title>Moore et al v. Leavenworth County, Kansas et al</title>
+  <subTitle>AMENDED MEMORANDUM AND ORDER correcting typographical error on page 21 of 107 original MEMORANDUM AND ORDER. The Amended Memorandum and Order contains no substantive changes. Signed by Judge Kathryn H. Vratil on 1/22/07.(ls)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02556/pdf/USCOURTS-ksd-2_05-cv-02556-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187608e0d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02556/USCOURTS-ksd-2_05-cv-02556-3</identifier>
+ <identifier type="former granule identifier">ksd-2_05-cv-02556_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02556/USCOURTS-ksd-2_05-cv-02556-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02556/pdf/USCOURTS-ksd-2_05-cv-02556-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-02556; Moore et al v. Leavenworth County, Kansas et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_05-cv-02556-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-01-22</dateIssued>
+  <docketText>AMENDED MEMORANDUM AND ORDER correcting typographical error on page 21 of 107 original MEMORANDUM AND ORDER. The Amended Memorandum and Order contains no substantive changes. Signed by Judge Kathryn H. Vratil on 1/22/07.(ls)</docketText>
+</extension>
+</relatedItem>
+</mods>

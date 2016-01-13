@@ -1,0 +1,147 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bf8b7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Sixth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca6-14-05197</identifier>
+<identifier type="local">P0b002ee18a8bf8b7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca6-14-05197</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca6-14-05197</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca6</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtSortOrder>1060</courtSortOrder>
+ <caseNumber>14-05197</caseNumber>
+ <party fullName="Commonwealth of Kentucky Transportation Cabinet" lastName="Commonwealth of Kentucky Transportation Cabinet" role="Appellee"></party>
+ <party firstName="William" fullName="William W. Lawrence" lastName="Lawrence" middleName="W." role="Appellant"></party>
+ <party fullName="Shelbyville Road Shoppes" lastName="Shelbyville Road Shoppes" role=""></party>
+</extension>
+<titleInfo>
+ <title>In re: William Lawrence v. Commonwealth of Kentucky</title>
+ <partNumber>14-05197</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca6-14-05197/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">14-05197;14-5197</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Sixth Circuit</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commonwealth of Kentucky Transportation Cabinet</displayForm>
+ <namePart type="family">Commonwealth of Kentucky Transportation Cabinet</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>William W. Lawrence</displayForm>
+ <namePart type="family">Lawrence</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Shelbyville Road Shoppes</displayForm>
+ <namePart type="family">Shelbyville Road Shoppes</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description></description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca6-14-05197</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca6</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtSortOrder>1060</courtSortOrder>
+ <caseNumber>14-05197</caseNumber>
+ <party fullName="Commonwealth of Kentucky Transportation Cabinet" lastName="Commonwealth of Kentucky Transportation Cabinet" role="Appellee"></party>
+ <party firstName="William" fullName="William W. Lawrence" lastName="Lawrence" middleName="W." role="Appellant"></party>
+ <party fullName="Shelbyville Road Shoppes" lastName="Shelbyville Road Shoppes" role=""></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca6-14-05197-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca6-14-05197/USCOURTS-ca6-14-05197-0/mods.xml">
+ <titleInfo>
+  <title>In re: William Lawrence v. Commonwealth of Kentucky</title>
+  <subTitle>OPINION and JUDGMENT filed : The judgment of the district court is AFFIRMED. Decision for publication. Ralph B. Guy, Jr., John M. Rogers (AUTHORING), and Bernice Bouie Donald, Circuit Judges. *Pursuant to the opinion correction letter of 1/6/15, the corrected opinion has been attached to this docket entry.--[Edited 01/06/2015 by CL]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca6-14-05197/pdf/USCOURTS-ca6-14-05197-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8d06a4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca6-14-05197/USCOURTS-ca6-14-05197-0</identifier>
+ <identifier type="former granule identifier">ca6-14-05197_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca6-14-05197/USCOURTS-ca6-14-05197-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca6-14-05197/pdf/USCOURTS-ca6-14-05197-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 14-05197; In re: William Lawrence v. Commonwealth of Kentucky; </searchTitle>
+  <courtName>United States Court of Appeals for the Sixth Circuit</courtName>
+  <accessId>USCOURTS-ca6-14-05197-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>OPINION and JUDGMENT filed : The judgment of the district court is AFFIRMED. Decision for publication. Ralph B. Guy, Jr., John M. Rogers (AUTHORING), and Bernice Bouie Donald, Circuit Judges. *Pursuant to the opinion correction letter of 1/6/15, the corrected opinion has been attached to this docket entry.--[Edited 01/06/2015 by CL]</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,217 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee189743d2d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-07-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-03-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01625</identifier>
+<identifier type="local">P0b002ee189743d2d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-07-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-07-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-01625</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01625</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01625</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>15:1681 Fair Credit Reporting Act</cause>
+ <party fullName="Citimortgage, Inc. d/b/a Citibank, N.A." lastName="Citimortgage, Inc. d/b/a Citibank, N.A." role="Defendant"></party>
+ <party fullName="Equifax Information Services LLC" lastName="Equifax Information Services LLC" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Fokes" lastName="Fokes" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Fokes v. Equifax Information Services LLC et al</title>
+ <partNumber>2:13-cv-01625</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01625/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-01625;13-1625</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Citimortgage, Inc. d/b/a Citibank, N.A.</displayForm>
+ <namePart type="family">Citimortgage, Inc. d/b/a Citibank, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Equifax Information Services LLC</displayForm>
+ <namePart type="family">Equifax Information Services LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian Fokes</displayForm>
+ <namePart type="family">Fokes</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01625</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01625</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>15:1681 Fair Credit Reporting Act</cause>
+ <party fullName="Citimortgage, Inc. d/b/a Citibank, N.A." lastName="Citimortgage, Inc. d/b/a Citibank, N.A." role="Defendant"></party>
+ <party fullName="Equifax Information Services LLC" lastName="Equifax Information Services LLC" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Fokes" lastName="Fokes" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01625-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01625/USCOURTS-caed-2_13-cv-01625-0/mods.xml">
+ <titleInfo>
+  <title>Fokes v. Equifax Information Services LLC et al</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr on 10/17/13: Defendant Equifax Information Services LLC is dismissed with prejudice, with each party to bear his/its own attorneys fees, costs and expenses incurred. (Kaminski, H)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01625/pdf/USCOURTS-caed-2_13-cv-01625-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189754978</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01625/USCOURTS-caed-2_13-cv-01625-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01625_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01625/USCOURTS-caed-2_13-cv-01625-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01625/pdf/USCOURTS-caed-2_13-cv-01625-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01625; Fokes v. Equifax Information Services LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01625-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-10-18</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr on 10/17/13: Defendant Equifax Information Services LLC is dismissed with prejudice, with each party to bear his/its own attorneys fees, costs and expenses incurred. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01625-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01625/USCOURTS-caed-2_13-cv-01625-1/mods.xml">
+ <titleInfo>
+  <title>Fokes v. Equifax Information Services LLC et al</title>
+  <subTitle>(PRETRIAL SCHEDULING) ORDER signed by Chief Judge Morrison C. England, Jr., on 1/3/14. All discovery, with the exception of expert discovery, shall be completed byJuly 7, 2014. Designation of Expert Witnesses is due by September 4, 2014. The last day to hear dispositive motions shall be January 8, 2015. The Final Pretrial Conference is set for 3/5/2015 at 02:00 PM in Courtroom 7 (MCE) before Chief Judge Morrison C. England, Jr.. The parties shall file, not later than February 12, 2015, a Joint Final Pretrial Conference Statement. The parties shall file trial briefs not later than February 19, 2015. Any evidentiary or procedural motions are to be filed by February 12, 2015.Oppositions must be filed by February 19, 2015, and any reply must be filed by February 26, 2015. The Jury Trial is set for 5/4/2015 at 09:00 AM in Courtroom 7 (MCE) before Chief Judge Morrison C. England, Jr.. The parties estimate a trial length of four (4) days. A Settlement Conference is set for 5/8/2014 at 10:00 AM in Courtroom 27 (DAD) before Magistrate Judge Dale A. Drozd. Each party is directed to submit to the chambers of Judge Dale A. Drozd confidential settlement conference statements not later than May 1, 2014. (Kastilahn, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01625/pdf/USCOURTS-caed-2_13-cv-01625-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189754979</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01625/USCOURTS-caed-2_13-cv-01625-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01625_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01625/USCOURTS-caed-2_13-cv-01625-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01625/pdf/USCOURTS-caed-2_13-cv-01625-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01625; Fokes v. Equifax Information Services LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01625-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>(PRETRIAL SCHEDULING) ORDER signed by Chief Judge Morrison C. England, Jr., on 1/3/14. All discovery, with the exception of expert discovery, shall be completed byJuly 7, 2014. Designation of Expert Witnesses is due by September 4, 2014. The last day to hear dispositive motions shall be January 8, 2015. The Final Pretrial Conference is set for 3/5/2015 at 02:00 PM in Courtroom 7 (MCE) before Chief Judge Morrison C. England, Jr.. The parties shall file, not later than February 12, 2015, a Joint Final Pretrial Conference Statement. The parties shall file trial briefs not later than February 19, 2015. Any evidentiary or procedural motions are to be filed by February 12, 2015.Oppositions must be filed by February 19, 2015, and any reply must be filed by February 26, 2015. The Jury Trial is set for 5/4/2015 at 09:00 AM in Courtroom 7 (MCE) before Chief Judge Morrison C. England, Jr.. The parties estimate a trial length of four (4) days. A Settlement Conference is set for 5/8/2014 at 10:00 AM in Courtroom 27 (DAD) before Magistrate Judge Dale A. Drozd. Each party is directed to submit to the chambers of Judge Dale A. Drozd confidential settlement conference statements not later than May 1, 2014. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01625-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01625/USCOURTS-caed-2_13-cv-01625-2/mods.xml">
+ <titleInfo>
+  <title>Fokes v. Equifax Information Services LLC et al</title>
+  <subTitle>ORDER DISMISSING CASE with prejudice pursuant to FRCP 41(a)(1)(A)(ii) signed by Chief Judge Morrison C. England, Jr on 3/18/14. CASE CLOSED. (Manzer, C)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01625/pdf/USCOURTS-caed-2_13-cv-01625-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189754977</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01625/USCOURTS-caed-2_13-cv-01625-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01625_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01625/USCOURTS-caed-2_13-cv-01625-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01625/pdf/USCOURTS-caed-2_13-cv-01625-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01625; Fokes v. Equifax Information Services LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01625-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-03-18</dateIssued>
+  <docketText>ORDER DISMISSING CASE with prejudice pursuant to FRCP 41(a)(1)(A)(ii) signed by Chief Judge Morrison C. England, Jr on 3/18/14. CASE CLOSED. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+</mods>

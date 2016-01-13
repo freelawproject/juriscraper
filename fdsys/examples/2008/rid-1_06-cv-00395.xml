@@ -1,0 +1,334 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e8c2df">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00395</identifier>
+<identifier type="local">P0b002ee180e8c2df</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-rid-1_06-cv-00395</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_06-cv-00395</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:06-cv-00395</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party firstName="Braga" fullName="Braga Kylina" lastName="Kylina" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas L. Menard" lastName="Menard" middleName="L." role="Counter Claimant"></party>
+ <party firstName="Thomas" fullName="Thomas L. Menard" lastName="Menard" middleName="L." role="Defendant"></party>
+ <party fullName="Prudential Insurance Co of America" lastName="Prudential Insurance Co of America" role="Counter Defendant"></party>
+ <party fullName="Prudential Insurance Co of America" lastName="Prudential Insurance Co of America" role="Plaintiff"></party>
+ <party fullName="RI Attorney General" lastName="RI Attorney General" role="Movant"></party>
+ <party fullName="RI State Police" lastName="RI State Police" role="Movant"></party>
+ <party firstName="Adam" fullName="Adam Shippee" lastName="Shippee" role="Defendant"></party>
+ <party firstName="Brandon" fullName="Brandon Shippee" lastName="Shippee" role="Defendant"></party>
+ <party firstName="Dylana" fullName="Dylana Shippee" lastName="Shippee" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Prudential Insurance Co of America v. Menard et al</title>
+ <partNumber>1:06-cv-00395</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00395/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:06-cv-00395;06-395</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Providence</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Braga Kylina</displayForm>
+ <namePart type="family">Kylina</namePart>
+ <namePart type="given">Braga</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas L. Menard</displayForm>
+ <namePart type="family">Menard</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas L. Menard</displayForm>
+ <namePart type="family">Menard</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Prudential Insurance Co of America</displayForm>
+ <namePart type="family">Prudential Insurance Co of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Prudential Insurance Co of America</displayForm>
+ <namePart type="family">Prudential Insurance Co of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>RI Attorney General</displayForm>
+ <namePart type="family">RI Attorney General</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>RI State Police</displayForm>
+ <namePart type="family">RI State Police</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Adam Shippee</displayForm>
+ <namePart type="family">Shippee</namePart>
+ <namePart type="given">Adam</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brandon Shippee</displayForm>
+ <namePart type="family">Shippee</namePart>
+ <namePart type="given">Brandon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dylana Shippee</displayForm>
+ <namePart type="family">Shippee</namePart>
+ <namePart type="given">Dylana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_06-cv-00395</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:06-cv-00395</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party firstName="Braga" fullName="Braga Kylina" lastName="Kylina" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas L. Menard" lastName="Menard" middleName="L." role="Counter Claimant"></party>
+ <party firstName="Thomas" fullName="Thomas L. Menard" lastName="Menard" middleName="L." role="Defendant"></party>
+ <party fullName="Prudential Insurance Co of America" lastName="Prudential Insurance Co of America" role="Counter Defendant"></party>
+ <party fullName="Prudential Insurance Co of America" lastName="Prudential Insurance Co of America" role="Plaintiff"></party>
+ <party fullName="RI Attorney General" lastName="RI Attorney General" role="Movant"></party>
+ <party fullName="RI State Police" lastName="RI State Police" role="Movant"></party>
+ <party firstName="Adam" fullName="Adam Shippee" lastName="Shippee" role="Defendant"></party>
+ <party firstName="Brandon" fullName="Brandon Shippee" lastName="Shippee" role="Defendant"></party>
+ <party firstName="Dylana" fullName="Dylana Shippee" lastName="Shippee" role="Defendant"></party>
+ <state>Rhode Island</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00395-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-0/mods.xml">
+ <titleInfo>
+  <title>Prudential Insurance Co of America v. Menard et al</title>
+  <subTitle>ORDER granting 24 Motion to Deposit Funds Into the Court&apos;s Registry. So Ordered by Judge Ernest C. Torres on 8/7/07. (Jackson, Ryan)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00395-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e8e2bd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-0</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00395_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00395/pdf/USCOURTS-rid-1_06-cv-00395-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00395; Prudential Insurance Co of America v. Menard et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00395-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-08-08</dateIssued>
+  <docketText>ORDER granting 24 Motion to Deposit Funds Into the Court&apos;s Registry. So Ordered by Judge Ernest C. Torres on 8/7/07. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00395-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-1/mods.xml">
+ <titleInfo>
+  <title>Prudential Insurance Co of America v. Menard et al</title>
+  <subTitle>MEMORANDUM AND ORDER RE MOTIONS TO COMPEL AND FOR RECONSIDERATION denying 70 Motion for Reconsideration re 59 MOTION to Compel Discovery filed by Prudential Insurance Co of America. The Court concludes that an in camera review of the documents which contain the information sought by the specified interrogatories is necessary. The Court orders the State to submit these documents by November 12, 2007 for in camera review. So Ordered by Magistrate Judge David L. Martin on 10/29/07. (Noel, Jeannine)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00395-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e8e2c0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-1</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00395_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00395/pdf/USCOURTS-rid-1_06-cv-00395-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00395; Prudential Insurance Co of America v. Menard et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00395-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-10-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER RE MOTIONS TO COMPEL AND FOR RECONSIDERATION denying 70 Motion for Reconsideration re 59 MOTION to Compel Discovery filed by Prudential Insurance Co of America. The Court concludes that an in camera review of the documents which contain the information sought by the specified interrogatories is necessary. The Court orders the State to submit these documents by November 12, 2007 for in camera review. So Ordered by Magistrate Judge David L. Martin on 10/29/07. (Noel, Jeannine)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00395-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-2/mods.xml">
+ <titleInfo>
+  <title>Prudential Insurance Co of America v. Menard et al</title>
+  <subTitle>ORDER: it is hereby ordered that on or before 11/26/07, all parties shall file memoranda of law addressing the question of who will be responsible for compensating the appointed guardian ad litem related to this litigation. So Ordered by Judge Ernest C. Torres on 11/06/07. (Jackson, Ryan)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00395-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e8e2be</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-2</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00395_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00395/pdf/USCOURTS-rid-1_06-cv-00395-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00395; Prudential Insurance Co of America v. Menard et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00395-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-11-07</dateIssued>
+  <docketText>ORDER: it is hereby ordered that on or before 11/26/07, all parties shall file memoranda of law addressing the question of who will be responsible for compensating the appointed guardian ad litem related to this litigation. So Ordered by Judge Ernest C. Torres on 11/06/07. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00395-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-3/mods.xml">
+ <titleInfo>
+  <title>Prudential Insurance Co of America v. Menard et al</title>
+  <subTitle>ORDER Directing Defendants to the Complaint in Interpleader (with the exception of Thomas Menard) to file pleadings stating what claim, if any, they are asserting to the fund paid into the Court&apos;s Registry and what the basis for their claim is; all filings to be completed on or before 1/2/08. So Ordered by Judge Ernest C. Torres on 12/13/07. (Jackson, Ryan)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00395-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e8e2bf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-3</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00395_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00395/pdf/USCOURTS-rid-1_06-cv-00395-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00395; Prudential Insurance Co of America v. Menard et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00395-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-12-14</dateIssued>
+  <docketText>ORDER Directing Defendants to the Complaint in Interpleader (with the exception of Thomas Menard) to file pleadings stating what claim, if any, they are asserting to the fund paid into the Court&apos;s Registry and what the basis for their claim is; all filings to be completed on or before 1/2/08. So Ordered by Judge Ernest C. Torres on 12/13/07. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00395-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-4/mods.xml">
+ <titleInfo>
+  <title>Prudential Insurance Co of America v. Menard et al</title>
+  <subTitle>ORDER to Release Funds Held in the Registry of the Court. So Ordered by Judge Ernest C. Torres on 1/31/08. (Jackson, Ryan)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00395-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e8e2bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-4</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00395_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00395/USCOURTS-rid-1_06-cv-00395-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00395/pdf/USCOURTS-rid-1_06-cv-00395-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00395; Prudential Insurance Co of America v. Menard et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00395-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-01-31</dateIssued>
+  <docketText>ORDER to Release Funds Held in the Registry of the Court. So Ordered by Judge Ernest C. Torres on 1/31/08. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+</mods>

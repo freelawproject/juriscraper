@@ -1,0 +1,159 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180ee899e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_02-cv-01321</identifier>
+<identifier type="local">P0b002ee180ee899e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-6_02-cv-01321</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_02-cv-01321</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:02-cv-01321</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party firstName="Sarah" fullName="Sarah E. Metzger" lastName="Metzger" middleName="E." role="Plaintiff"></party>
+ <party fullName="Twin Lakes National Bank" lastName="Twin Lakes National Bank" role="Defendant"></party>
+ <party fullName="UNUM Life Insurance Company of America" lastName="UNUM Life Insurance Company of America" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Metzger v. UNUM Life Ins Co Am, et al</title>
+ <partNumber>6:02-cv-01321</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_02-cv-01321/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:02-cv-01321;02-1321</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Wichita</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Sarah E. Metzger</displayForm>
+ <namePart type="family">Metzger</namePart>
+ <namePart type="given">Sarah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Twin Lakes National Bank</displayForm>
+ <namePart type="family">Twin Lakes National Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>UNUM Life Insurance Company of America</displayForm>
+ <namePart type="family">UNUM Life Insurance Company of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_02-cv-01321</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:02-cv-01321</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party firstName="Sarah" fullName="Sarah E. Metzger" lastName="Metzger" middleName="E." role="Plaintiff"></party>
+ <party fullName="Twin Lakes National Bank" lastName="Twin Lakes National Bank" role="Defendant"></party>
+ <party fullName="UNUM Life Insurance Company of America" lastName="UNUM Life Insurance Company of America" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_02-cv-01321-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_02-cv-01321/USCOURTS-ksd-6_02-cv-01321-0/mods.xml">
+ <titleInfo>
+  <title>Metzger v. UNUM Life Ins Co Am, et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying plaintiff&apos;s motion for order to show cause and dismissing case. Signed by Judge Monti L Belot on 1/11/06.(jh)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-6_02-cv-01321-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f9a4cb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_02-cv-01321/USCOURTS-ksd-6_02-cv-01321-0</identifier>
+ <identifier type="former granule identifier">ksd-6_02-cv-01321_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_02-cv-01321/USCOURTS-ksd-6_02-cv-01321-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_02-cv-01321/pdf/USCOURTS-ksd-6_02-cv-01321-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:02-cv-01321; Metzger v. UNUM Life Ins Co Am, et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_02-cv-01321-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying plaintiff&apos;s motion for order to show cause and dismissing case. Signed by Judge Monti L Belot on 1/11/06.(jh)</docketText>
+</extension>
+</relatedItem>
+</mods>

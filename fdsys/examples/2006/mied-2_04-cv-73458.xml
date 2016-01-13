@@ -1,0 +1,277 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818f39ff">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_04-cv-73458</identifier>
+<identifier type="local">P0b002ee1818f39ff</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_04-cv-73458</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_04-cv-73458</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:04-cv-73458</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Tom" fullName="Tom Briggs" lastName="Briggs" role="Plaintiff"></party>
+ <party fullName="Clark" lastName="Clark" role="Defendant"></party>
+ <party fullName="Devitta" lastName="Devitta" role="Defendant"></party>
+ <party fullName="Hubble" lastName="Hubble" role="Defendant"></party>
+ <party fullName="Jones" lastName="Jones" role="Defendant"></party>
+ <party fullName="Oakland County Sheriff Department" lastName="Oakland County Sheriff Department" role="Defendant"></party>
+ <party fullName="Oakland, County of" lastName="Oakland, County of" role="Defendant"></party>
+ <party fullName="Rhyndress" lastName="Rhyndress" role="Defendant"></party>
+ <party firstName="Sandy" fullName="Sandy Stetz" lastName="Stetz" role="Defendant"></party>
+ <party fullName="Szydlowski" lastName="Szydlowski" role="Defendant"></party>
+ <party firstName="Debbie" fullName="Debbie Tipton" lastName="Tipton" role="Defendant"></party>
+ <party fullName="Vasquez" lastName="Vasquez" role="Defendant"></party>
+ <party firstName="Connie" fullName="Connie Zamora" lastName="Zamora" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Briggs v. Oakland, County of et al</title>
+ <partNumber>2:04-cv-73458</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_04-cv-73458/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:04-cv-73458;04-73458</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Tom Briggs</displayForm>
+ <namePart type="family">Briggs</namePart>
+ <namePart type="given">Tom</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Clark</displayForm>
+ <namePart type="family">Clark</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Devitta</displayForm>
+ <namePart type="family">Devitta</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hubble</displayForm>
+ <namePart type="family">Hubble</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Oakland County Sheriff Department</displayForm>
+ <namePart type="family">Oakland County Sheriff Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Oakland, County of</displayForm>
+ <namePart type="family">Oakland, County of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rhyndress</displayForm>
+ <namePart type="family">Rhyndress</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sandy Stetz</displayForm>
+ <namePart type="family">Stetz</namePart>
+ <namePart type="given">Sandy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Szydlowski</displayForm>
+ <namePart type="family">Szydlowski</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Debbie Tipton</displayForm>
+ <namePart type="family">Tipton</namePart>
+ <namePart type="given">Debbie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vasquez</displayForm>
+ <namePart type="family">Vasquez</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Connie Zamora</displayForm>
+ <namePart type="family">Zamora</namePart>
+ <namePart type="given">Connie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_04-cv-73458</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:04-cv-73458</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Tom" fullName="Tom Briggs" lastName="Briggs" role="Plaintiff"></party>
+ <party fullName="Clark" lastName="Clark" role="Defendant"></party>
+ <party fullName="Devitta" lastName="Devitta" role="Defendant"></party>
+ <party fullName="Hubble" lastName="Hubble" role="Defendant"></party>
+ <party fullName="Jones" lastName="Jones" role="Defendant"></party>
+ <party fullName="Oakland County Sheriff Department" lastName="Oakland County Sheriff Department" role="Defendant"></party>
+ <party fullName="Oakland, County of" lastName="Oakland, County of" role="Defendant"></party>
+ <party fullName="Rhyndress" lastName="Rhyndress" role="Defendant"></party>
+ <party firstName="Sandy" fullName="Sandy Stetz" lastName="Stetz" role="Defendant"></party>
+ <party fullName="Szydlowski" lastName="Szydlowski" role="Defendant"></party>
+ <party firstName="Debbie" fullName="Debbie Tipton" lastName="Tipton" role="Defendant"></party>
+ <party fullName="Vasquez" lastName="Vasquez" role="Defendant"></party>
+ <party firstName="Connie" fullName="Connie Zamora" lastName="Zamora" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_04-cv-73458-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-73458/USCOURTS-mied-2_04-cv-73458-0/mods.xml">
+ <titleInfo>
+  <title>Briggs v. Oakland, County of et al</title>
+  <subTitle>ORDER granting 23 Motion for Summary Judgment- Signed by Honorable Lawrence P Zatkoff. (MVer, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_04-cv-73458-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18194707f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-73458/USCOURTS-mied-2_04-cv-73458-0</identifier>
+ <identifier type="former granule identifier">mied-2_04-cv-73458_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-73458/USCOURTS-mied-2_04-cv-73458-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_04-cv-73458/pdf/USCOURTS-mied-2_04-cv-73458-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-73458; Briggs v. Oakland, County of et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_04-cv-73458-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-12-07</dateIssued>
+  <docketText>ORDER granting 23 Motion for Summary Judgment- Signed by Honorable Lawrence P Zatkoff. (MVer, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_04-cv-73458-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-73458/USCOURTS-mied-2_04-cv-73458-1/mods.xml">
+ <titleInfo>
+  <title>Briggs v. Oakland, County of et al</title>
+  <subTitle>ORDER denying 35 Motion for Reconsideration, granting 36 Motion to Amend/Correct- Signed by Honorable Lawrence P Zatkoff. (MVer, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_04-cv-73458-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18194707e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-73458/USCOURTS-mied-2_04-cv-73458-1</identifier>
+ <identifier type="former granule identifier">mied-2_04-cv-73458_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-73458/USCOURTS-mied-2_04-cv-73458-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_04-cv-73458/pdf/USCOURTS-mied-2_04-cv-73458-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-73458; Briggs v. Oakland, County of et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_04-cv-73458-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-20</dateIssued>
+  <docketText>ORDER denying 35 Motion for Reconsideration, granting 36 Motion to Amend/Correct- Signed by Honorable Lawrence P Zatkoff. (MVer, )</docketText>
+</extension>
+</relatedItem>
+</mods>

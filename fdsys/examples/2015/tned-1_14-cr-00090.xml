@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8be668">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_14-cr-00090</identifier>
+<identifier type="local">P0b002ee18a8be668</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-tned-1_14-cr-00090</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-1_14-cr-00090</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>1:14-cr-00090</caseNumber>
+ <caseOffice>Chattanooga</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Teddy" fullName="Teddy Lewis Horton" lastName="Horton" middleName="Lewis" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Horton</title>
+ <partNumber>1:14-cr-00090</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_14-cr-00090/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cr-00090;14-090</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Chattanooga</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Teddy Lewis Horton</displayForm>
+ <namePart type="family">Horton</namePart>
+ <namePart type="given">Teddy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-1_14-cr-00090</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>1:14-cr-00090</caseNumber>
+ <caseOffice>Chattanooga</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Teddy" fullName="Teddy Lewis Horton" lastName="Horton" middleName="Lewis" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Tennessee</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-1_14-cr-00090-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_14-cr-00090/USCOURTS-tned-1_14-cr-00090-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Horton</title>
+  <subTitle>REPORT AND RECOMMENDATIONS on Plea of Guilty as to Teddy Lewis Horton. Signed by Magistrate Judge Susan K Lee on December 18, 2014. (CNC, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_14-cr-00090/pdf/USCOURTS-tned-1_14-cr-00090-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6ffe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_14-cr-00090/USCOURTS-tned-1_14-cr-00090-0</identifier>
+ <identifier type="former granule identifier">tned-1_14-cr-00090_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_14-cr-00090/USCOURTS-tned-1_14-cr-00090-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_14-cr-00090/pdf/USCOURTS-tned-1_14-cr-00090-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00090; USA v. Horton; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-1_14-cr-00090-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-12-18</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS on Plea of Guilty as to Teddy Lewis Horton. Signed by Magistrate Judge Susan K Lee on December 18, 2014. (CNC, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-1_14-cr-00090-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_14-cr-00090/USCOURTS-tned-1_14-cr-00090-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Horton</title>
+  <subTitle>ORDER adopting 19 Report and Recommendations on Plea of Guilty as to Teddy Lewis Horton (1). (1) Defendants motion to withdraw his not guilty plea to Counts Two and Three of the Indictment is GRANTED; (2) Defendants plea of guilty to Counts Two and Three of the Indictment is ACCEPTED; (3) Defendant is hereby ADJUDGED guilty of the charges set forth in Counts Two and Three of the Indictment; (4) A decision on whether to accept the plea agreement is DEFERRED until sentencing;and (5) Defendant SHALL REMAIN in custody until sentencing in this matter which is scheduled to take place on March 23, 2015 at 9:00 a.m. [EASTERN] before the Honorable Harry S. Mattice, Jr. Signed by District Judge Harry S Mattice, Jr on January 6, 2015. (CNC, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_14-cr-00090/pdf/USCOURTS-tned-1_14-cr-00090-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6fff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_14-cr-00090/USCOURTS-tned-1_14-cr-00090-1</identifier>
+ <identifier type="former granule identifier">tned-1_14-cr-00090_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-1_14-cr-00090/USCOURTS-tned-1_14-cr-00090-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-1_14-cr-00090/pdf/USCOURTS-tned-1_14-cr-00090-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00090; USA v. Horton; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-1_14-cr-00090-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER adopting 19 Report and Recommendations on Plea of Guilty as to Teddy Lewis Horton (1). (1) Defendants motion to withdraw his not guilty plea to Counts Two and Three of the Indictment is GRANTED; (2) Defendants plea of guilty to Counts Two and Three of the Indictment is ACCEPTED; (3) Defendant is hereby ADJUDGED guilty of the charges set forth in Counts Two and Three of the Indictment; (4) A decision on whether to accept the plea agreement is DEFERRED until sentencing;and (5) Defendant SHALL REMAIN in custody until sentencing in this matter which is scheduled to take place on March 23, 2015 at 9:00 a.m. [EASTERN] before the Honorable Harry S. Mattice, Jr. Signed by District Judge Harry S Mattice, Jr on January 6, 2015. (CNC, )</docketText>
+</extension>
+</relatedItem>
+</mods>

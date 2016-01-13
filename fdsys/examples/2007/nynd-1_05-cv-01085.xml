@@ -1,0 +1,296 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118b24e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_05-cv-01085</identifier>
+<identifier type="local">P0b002ee18118b24e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_05-cv-01085</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_05-cv-01085</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:05-cv-01085</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party fullName="Bellevue Builders, Inc." lastName="Bellevue Builders, Inc." role="Notice Only Party"></party>
+ <party firstName="Charles" fullName="Charles Borden" lastName="Borden" role="Appellant"></party>
+ <party firstName="Diane" fullName="Diane Borden" lastName="Borden" role="Appellant"></party>
+ <party fullName="Brunswick Baptist Church" lastName="Brunswick Baptist Church" role="Appellee"></party>
+ <party firstName="Susan" fullName="Susan D. McNamee" lastName="McNamee" middleName="D." role="Appellant"></party>
+ <party firstName="Lewis" fullName="Lewis E. McNamee III" generation="III" lastName="McNamee" middleName="E." role="Appellant"></party>
+ <party firstName="Ryan" fullName="Ryan D. Pratt" lastName="Pratt" middleName="D." role="Notice Only Party"></party>
+ <party fullName="United States Trustee" lastName="United States Trustee" role="Notice Only Party"></party>
+ <party fullName="Unsecured Creditors Committee" lastName="Unsecured Creditors Committee" role="Notice Only Party"></party>
+ <party firstName="Rickey" fullName="Rickey Vest" lastName="Vest" role="Appellant"></party>
+ <party firstName="Theresa" fullName="Theresa Vest" lastName="Vest" role="Appellant"></party>
+ <party firstName="Richard" fullName="Richard G. Zeh Sr." generation="Sr." lastName="Zeh" middleName="G." role="Notice Only Party"></party>
+</extension>
+<titleInfo>
+ <title>Borden et al v. Brunswick Baptist Church</title>
+ <partNumber>1:05-cv-01085</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_05-cv-01085/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-01085;05-1085</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bellevue Builders, Inc.</displayForm>
+ <namePart type="family">Bellevue Builders, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Borden</displayForm>
+ <namePart type="family">Borden</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Diane Borden</displayForm>
+ <namePart type="family">Borden</namePart>
+ <namePart type="given">Diane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Brunswick Baptist Church</displayForm>
+ <namePart type="family">Brunswick Baptist Church</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Susan D. McNamee</displayForm>
+ <namePart type="family">McNamee</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Lewis E. McNamee III</displayForm>
+ <namePart type="family">McNamee</namePart>
+ <namePart type="given">Lewis</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Ryan D. Pratt</displayForm>
+ <namePart type="family">Pratt</namePart>
+ <namePart type="given">Ryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>United States Trustee</displayForm>
+ <namePart type="family">United States Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>Unsecured Creditors Committee</displayForm>
+ <namePart type="family">Unsecured Creditors Committee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>Rickey Vest</displayForm>
+ <namePart type="family">Vest</namePart>
+ <namePart type="given">Rickey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Theresa Vest</displayForm>
+ <namePart type="family">Vest</namePart>
+ <namePart type="given">Theresa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard G. Zeh Sr.</displayForm>
+ <namePart type="family">Zeh</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Notice Only Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_05-cv-01085</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:05-cv-01085</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party fullName="Bellevue Builders, Inc." lastName="Bellevue Builders, Inc." role="Notice Only Party"></party>
+ <party firstName="Charles" fullName="Charles Borden" lastName="Borden" role="Appellant"></party>
+ <party firstName="Diane" fullName="Diane Borden" lastName="Borden" role="Appellant"></party>
+ <party fullName="Brunswick Baptist Church" lastName="Brunswick Baptist Church" role="Appellee"></party>
+ <party firstName="Susan" fullName="Susan D. McNamee" lastName="McNamee" middleName="D." role="Appellant"></party>
+ <party firstName="Lewis" fullName="Lewis E. McNamee III" generation="III" lastName="McNamee" middleName="E." role="Appellant"></party>
+ <party firstName="Ryan" fullName="Ryan D. Pratt" lastName="Pratt" middleName="D." role="Notice Only Party"></party>
+ <party fullName="United States Trustee" lastName="United States Trustee" role="Notice Only Party"></party>
+ <party fullName="Unsecured Creditors Committee" lastName="Unsecured Creditors Committee" role="Notice Only Party"></party>
+ <party firstName="Rickey" fullName="Rickey Vest" lastName="Vest" role="Appellant"></party>
+ <party firstName="Theresa" fullName="Theresa Vest" lastName="Vest" role="Appellant"></party>
+ <party firstName="Richard" fullName="Richard G. Zeh Sr." generation="Sr." lastName="Zeh" middleName="G." role="Notice Only Party"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_05-cv-01085-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_05-cv-01085/USCOURTS-nynd-1_05-cv-01085-0/mods.xml">
+ <titleInfo>
+  <title>Borden et al v. Brunswick Baptist Church</title>
+  <subTitle>MEMORANDUM-DECISION&amp;ORDER affirming USBC decisions&amp;dismissing 1 Bankruptcy Appeal, filed by Theresa Vest, Rickey Vest, Diane Borden, Lewis E. McNamee, III, Susan D. McNamee. Signed by Judge Lawrence E. Kahn on 1/16/07. (wjg, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_05-cv-01085-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813ed333</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_05-cv-01085/USCOURTS-nynd-1_05-cv-01085-0</identifier>
+ <identifier type="former granule identifier">nynd-1_05-cv-01085_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_05-cv-01085/USCOURTS-nynd-1_05-cv-01085-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_05-cv-01085/pdf/USCOURTS-nynd-1_05-cv-01085-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01085; Borden et al v. Brunswick Baptist Church; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_05-cv-01085-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-16</dateIssued>
+  <docketText>MEMORANDUM-DECISION&amp;ORDER affirming USBC decisions&amp;dismissing 1 Bankruptcy Appeal, filed by Theresa Vest, Rickey Vest, Diane Borden, Lewis E. McNamee, III, Susan D. McNamee. Signed by Judge Lawrence E. Kahn on 1/16/07. (wjg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_05-cv-01085-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_05-cv-01085/USCOURTS-nynd-1_05-cv-01085-1/mods.xml">
+ <titleInfo>
+  <title>Borden et al v. Brunswick Baptist Church</title>
+  <subTitle>JUDGMENT dismissing bankruptcy appeal, in accordance with the Memo-Decision&amp;Order of the Hon. Lawrence E. Kahn, USDJ, dd 1/16/07. (wjg, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_05-cv-01085-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813ed331</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_05-cv-01085/USCOURTS-nynd-1_05-cv-01085-1</identifier>
+ <identifier type="former granule identifier">nynd-1_05-cv-01085_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_05-cv-01085/USCOURTS-nynd-1_05-cv-01085-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_05-cv-01085/pdf/USCOURTS-nynd-1_05-cv-01085-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01085; Borden et al v. Brunswick Baptist Church; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_05-cv-01085-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-16</dateIssued>
+  <docketText>JUDGMENT dismissing bankruptcy appeal, in accordance with the Memo-Decision&amp;Order of the Hon. Lawrence E. Kahn, USDJ, dd 1/16/07. (wjg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_05-cv-01085-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_05-cv-01085/USCOURTS-nynd-1_05-cv-01085-2/mods.xml">
+ <titleInfo>
+  <title>Borden et al v. Brunswick Baptist Church</title>
+  <subTitle>ORDER denying 21 Motion for stay pending appeal and order to show cause. Further Ordered that a temporary stay of the Court&apos;s 1/17 Order (#16) is granted for 10 days from the date of the filing of this Order or until appellants file a motion to stay with the Second Circuit and that motion is decided. Signed by Judge Lawrence E. Kahn on 1/25/07. (wjg, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_05-cv-01085-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813ed332</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_05-cv-01085/USCOURTS-nynd-1_05-cv-01085-2</identifier>
+ <identifier type="former granule identifier">nynd-1_05-cv-01085_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_05-cv-01085/USCOURTS-nynd-1_05-cv-01085-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_05-cv-01085/pdf/USCOURTS-nynd-1_05-cv-01085-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01085; Borden et al v. Brunswick Baptist Church; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_05-cv-01085-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-25</dateIssued>
+  <docketText>ORDER denying 21 Motion for stay pending appeal and order to show cause. Further Ordered that a temporary stay of the Court&apos;s 1/17 Order (#16) is granted for 10 days from the date of the filing of this Order or until appellants file a motion to stay with the Second Circuit and that motion is decided. Signed by Judge Lawrence E. Kahn on 1/25/07. (wjg, )</docketText>
+</extension>
+</relatedItem>
+</mods>

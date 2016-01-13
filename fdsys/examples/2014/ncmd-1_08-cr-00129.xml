@@ -1,0 +1,202 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a764263">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of North Carolina</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-12-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ncmd-1_08-cr-00129</identifier>
+<identifier type="local">P0b002ee18a764263</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-12-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-12-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ncmd-1_08-cr-00129</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ncmd-1_08-cr-00129</accessId>
+ <courtType>District</courtType>
+ <courtCode>ncmd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>North Carolina</courtState>
+ <courtSortOrder>2365</courtSortOrder>
+ <caseNumber>1:08-cr-00129</caseNumber>
+ <caseOffice>NCMD</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="EVERETT" fullName="EVERETT MICHAEL BYERS" lastName="BYERS" middleName="MICHAEL" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. BYERS</title>
+ <partNumber>1:08-cr-00129</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ncmd-1_08-cr-00129/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cr-00129;08-129</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of North Carolina</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>NCMD</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>EVERETT MICHAEL BYERS</displayForm>
+ <namePart type="family">BYERS</namePart>
+ <namePart type="given">EVERETT</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ncmd-1_08-cr-00129</accessId>
+ <courtType>District</courtType>
+ <courtCode>ncmd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>North Carolina</courtState>
+ <courtSortOrder>2365</courtSortOrder>
+ <caseNumber>1:08-cr-00129</caseNumber>
+ <caseOffice>NCMD</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="EVERETT" fullName="EVERETT MICHAEL BYERS" lastName="BYERS" middleName="MICHAEL" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>North Carolina</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ncmd-1_08-cr-00129-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ncmd-1_08-cr-00129/USCOURTS-ncmd-1_08-cr-00129-0/mods.xml">
+ <titleInfo>
+  <title>USA v. BYERS</title>
+  <subTitle>MEMORANDUM OPINION as to EVERETT MICHAEL BYERS. re 11 Motion to Suppress. Signed by CHIEF JUDGE JAMES A. BEATY, JR on 08/20/2008. (McClain, Abby)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ncmd-1_08-cr-00129/pdf/USCOURTS-ncmd-1_08-cr-00129-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a7839f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ncmd-1_08-cr-00129/USCOURTS-ncmd-1_08-cr-00129-0</identifier>
+ <identifier type="former granule identifier">ncmd-1_08-cr-00129_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ncmd-1_08-cr-00129/USCOURTS-ncmd-1_08-cr-00129-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ncmd-1_08-cr-00129/pdf/USCOURTS-ncmd-1_08-cr-00129-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cr-00129; USA v. BYERS; </searchTitle>
+  <courtName>United States District Court Middle District of North Carolina</courtName>
+  <state>North Carolina</state>
+  <accessId>USCOURTS-ncmd-1_08-cr-00129-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-08-20</dateIssued>
+  <docketText>MEMORANDUM OPINION as to EVERETT MICHAEL BYERS. re 11 Motion to Suppress. Signed by CHIEF JUDGE JAMES A. BEATY, JR on 08/20/2008. (McClain, Abby)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ncmd-1_08-cr-00129-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ncmd-1_08-cr-00129/USCOURTS-ncmd-1_08-cr-00129-1/mods.xml">
+ <titleInfo>
+  <title>USA v. BYERS</title>
+  <subTitle>RECOMMENDATION OF UNITED STATES MAGISTRATE JUDGE JOI ELIZABETH PEAKE signed on 12/19/2013, RECOMMENDING that Petitioner&apos;s Motion to Vacate, Set Aside or Correct Sentence (Doc. #36) be GRANTED, that the Judgment (Doc. #20) be VACATED that Count Two of the Indictment (Doc. #1) be dismissed, and that this matter be set for resentencing as to Count Three as to EVERETT MICHAEL BYERS. Civil Action 1:12CV735. (Daniel, J)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ncmd-1_08-cr-00129/pdf/USCOURTS-ncmd-1_08-cr-00129-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a7839f1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ncmd-1_08-cr-00129/USCOURTS-ncmd-1_08-cr-00129-1</identifier>
+ <identifier type="former granule identifier">ncmd-1_08-cr-00129_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ncmd-1_08-cr-00129/USCOURTS-ncmd-1_08-cr-00129-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ncmd-1_08-cr-00129/pdf/USCOURTS-ncmd-1_08-cr-00129-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cr-00129; USA v. BYERS; </searchTitle>
+  <courtName>United States District Court Middle District of North Carolina</courtName>
+  <state>North Carolina</state>
+  <accessId>USCOURTS-ncmd-1_08-cr-00129-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-12-19</dateIssued>
+  <docketText>RECOMMENDATION OF UNITED STATES MAGISTRATE JUDGE JOI ELIZABETH PEAKE signed on 12/19/2013, RECOMMENDING that Petitioner&apos;s Motion to Vacate, Set Aside or Correct Sentence (Doc. #36) be GRANTED, that the Judgment (Doc. #20) be VACATED that Count Two of the Indictment (Doc. #1) be dismissed, and that this matter be set for resentencing as to Count Three as to EVERETT MICHAEL BYERS. Civil Action 1:12CV735. (Daniel, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ncmd-1_08-cr-00129-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ncmd-1_08-cr-00129/USCOURTS-ncmd-1_08-cr-00129-2/mods.xml">
+ <titleInfo>
+  <title>USA v. BYERS</title>
+  <subTitle>ORDER signed by JUDGE JAMES A. BEATY, JR on 1/2/2014 adopting the Magistrate Judge&apos;s Recommendation [Doc. #54]; that Petitioner&apos;s Motion to Vacate, Set Aside or Correct Sentence [Doc. #36] is GRANTED, that the Judgment [Doc. #20] is VACATED, and that Count Two of the Indictment [Doc. #1] is DISMISSED. The Clerk is directed to set this matter for resentencing as to Count Three. Petitioner remains in custody, and the United States Attorney is directed to produce Petitioner for the resentencing hearing. The Probation Office is directed to prepare a Supplement to the Presentence Investigation Report in advance of the hearing. Counsel will be appointed to represent Petitioner at the resentencing hearing. Civil Action 1:12CV735. (Sheets, Jamie)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ncmd-1_08-cr-00129/pdf/USCOURTS-ncmd-1_08-cr-00129-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a7839f3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ncmd-1_08-cr-00129/USCOURTS-ncmd-1_08-cr-00129-2</identifier>
+ <identifier type="former granule identifier">ncmd-1_08-cr-00129_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ncmd-1_08-cr-00129/USCOURTS-ncmd-1_08-cr-00129-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ncmd-1_08-cr-00129/pdf/USCOURTS-ncmd-1_08-cr-00129-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cr-00129; USA v. BYERS; </searchTitle>
+  <courtName>United States District Court Middle District of North Carolina</courtName>
+  <state>North Carolina</state>
+  <accessId>USCOURTS-ncmd-1_08-cr-00129-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER signed by JUDGE JAMES A. BEATY, JR on 1/2/2014 adopting the Magistrate Judge&apos;s Recommendation [Doc. #54]; that Petitioner&apos;s Motion to Vacate, Set Aside or Correct Sentence [Doc. #36] is GRANTED, that the Judgment [Doc. #20] is VACATED, and that Count Two of the Indictment [Doc. #1] is DISMISSED. The Clerk is directed to set this matter for resentencing as to Count Three. Petitioner remains in custody, and the United States Attorney is directed to produce Petitioner for the resentencing hearing. The Probation Office is directed to prepare a Supplement to the Presentence Investigation Report in advance of the hearing. Counsel will be appointed to represent Petitioner at the resentencing hearing. Civil Action 1:12CV735. (Sheets, Jamie)</docketText>
+</extension>
+</relatedItem>
+</mods>

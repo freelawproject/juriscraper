@@ -1,0 +1,240 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1810deaf3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_10-cv-00057</identifier>
+<identifier type="local">P0b002ee1810deaf3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-8_10-cv-00057</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-8_10-cv-00057</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>8:10-cv-00057</caseNumber>
+ <caseOffice>Greenbelt</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Susan" fullName="Susan Aldridge" lastName="Aldridge" role="Defendant"></party>
+ <party firstName="Megan" fullName="Megan Farrell" lastName="Farrell" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Hogan" lastName="Hogan" role="Defendant"></party>
+ <party firstName="William" fullName="William E. Kirwan" lastName="Kirwan" middleName="E." role="Defendant"></party>
+ <party firstName="Adelaide" fullName="Adelaide A. Lagnese" lastName="Lagnese" middleName="A." role="Defendant"></party>
+ <party firstName="Lawrence" fullName="Lawrence E. Leak" lastName="Leak" middleName="E." role="Defendant"></party>
+ <party firstName="Greg" fullName="Greg Von Lehman" lastName="Lehman" middleName="Von" role="Defendant"></party>
+ <party firstName="Edward" fullName="Edward C. McReady" lastName="McReady" middleName="C." role="Plaintiff"></party>
+ <party fullName="State of Maryland" lastName="State of Maryland" role="Defendant"></party>
+ <party fullName="University System of Maryland" lastName="University System of Maryland" role="Defendant"></party>
+ <party fullName="University of Maryland University College" lastName="University of Maryland University College" role="Defendant"></party>
+ <party firstName="John" fullName="John Volpe" lastName="Volpe" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>McReady v. State of Maryland et al</title>
+ <partNumber>8:10-cv-00057</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_10-cv-00057/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:10-cv-00057;10-057</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Greenbelt</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Susan Aldridge</displayForm>
+ <namePart type="family">Aldridge</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Megan Farrell</displayForm>
+ <namePart type="family">Farrell</namePart>
+ <namePart type="given">Megan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Hogan</displayForm>
+ <namePart type="family">Hogan</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William E. Kirwan</displayForm>
+ <namePart type="family">Kirwan</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Adelaide A. Lagnese</displayForm>
+ <namePart type="family">Lagnese</namePart>
+ <namePart type="given">Adelaide</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lawrence E. Leak</displayForm>
+ <namePart type="family">Leak</namePart>
+ <namePart type="given">Lawrence</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Greg Von Lehman</displayForm>
+ <namePart type="family">Lehman</namePart>
+ <namePart type="given">Greg</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Edward C. McReady</displayForm>
+ <namePart type="family">McReady</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>State of Maryland</displayForm>
+ <namePart type="family">State of Maryland</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>University System of Maryland</displayForm>
+ <namePart type="family">University System of Maryland</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>University of Maryland University College</displayForm>
+ <namePart type="family">University of Maryland University College</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Volpe</displayForm>
+ <namePart type="family">Volpe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-8_10-cv-00057</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>8:10-cv-00057</caseNumber>
+ <caseOffice>Greenbelt</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Susan" fullName="Susan Aldridge" lastName="Aldridge" role="Defendant"></party>
+ <party firstName="Megan" fullName="Megan Farrell" lastName="Farrell" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Hogan" lastName="Hogan" role="Defendant"></party>
+ <party firstName="William" fullName="William E. Kirwan" lastName="Kirwan" middleName="E." role="Defendant"></party>
+ <party firstName="Adelaide" fullName="Adelaide A. Lagnese" lastName="Lagnese" middleName="A." role="Defendant"></party>
+ <party firstName="Lawrence" fullName="Lawrence E. Leak" lastName="Leak" middleName="E." role="Defendant"></party>
+ <party firstName="Greg" fullName="Greg Von Lehman" lastName="Lehman" middleName="Von" role="Defendant"></party>
+ <party firstName="Edward" fullName="Edward C. McReady" lastName="McReady" middleName="C." role="Plaintiff"></party>
+ <party fullName="State of Maryland" lastName="State of Maryland" role="Defendant"></party>
+ <party fullName="University System of Maryland" lastName="University System of Maryland" role="Defendant"></party>
+ <party fullName="University of Maryland University College" lastName="University of Maryland University College" role="Defendant"></party>
+ <party firstName="John" fullName="John Volpe" lastName="Volpe" role="Defendant"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-8_10-cv-00057-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_10-cv-00057/USCOURTS-mdd-8_10-cv-00057-0/mods.xml">
+ <titleInfo>
+  <title>McReady v. State of Maryland et al</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge Roger W Titus on 1/25/10. (c/m 1/25/10 rk) (rank, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-8_10-cv-00057-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1810ea66f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_10-cv-00057/USCOURTS-mdd-8_10-cv-00057-0</identifier>
+ <identifier type="former granule identifier">mdd-8_10-cv-00057_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_10-cv-00057/USCOURTS-mdd-8_10-cv-00057-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_10-cv-00057/pdf/USCOURTS-mdd-8_10-cv-00057-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00057; McReady v. State of Maryland et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-8_10-cv-00057-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-25</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge Roger W Titus on 1/25/10. (c/m 1/25/10 rk) (rank, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

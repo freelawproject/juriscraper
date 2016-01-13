@@ -1,0 +1,236 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18ce446a7">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-07-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-07-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01849</identifier>
+<identifier type="local">P0b002ee18ce446a7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-07-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-07-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cv-01849</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-01849</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-01849</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="J." fullName="J. Lopez" lastName="Lopez" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn Tilson" lastName="Tilson" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Tilson v. Lopez</title>
+ <partNumber>1:14-cv-01849</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01849/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-01849;14-1849</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>J. Lopez</displayForm>
+ <namePart type="family">Lopez</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Glenn Tilson</displayForm>
+ <namePart type="family">Tilson</namePart>
+ <namePart type="given">Glenn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-01849</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-01849</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="J." fullName="J. Lopez" lastName="Lopez" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn Tilson" lastName="Tilson" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01849-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01849/USCOURTS-caed-1_14-cv-01849-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Tilson v. Lopez</title>
+  <subTitle>ORDER DENYING Request for Class Action Certification; ORDER for Clerk of Court to Add Nineteen Plaintiffs to this Action; ORDER SEVERING Plaintiff&apos;s Claims, and DIRECTING Clerk to Open New Actions for Nineteen Plaintiffs, as Directed by this Order; Thirty Day Deadline for all Twenty Plaintiffs to: (1) Each FILE an AMENDED COMPLAINT in his own case, as instructed by this Order, (2) Each SUBMIT an Application to Proceed In Forma Pauperis in his own Case, or PAY the $400.00 Filing Fee for his own case signed by Magistrate Judge Gary S. Austin on 11/21/2014. (Attachments: # (1) Amended Complaint form, # (2) IFP Application)(Sant Agata, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01849/pdf/USCOURTS-caed-1_14-cv-01849-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ce7c44d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01849/USCOURTS-caed-1_14-cv-01849-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01849_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01849/USCOURTS-caed-1_14-cv-01849-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01849/pdf/USCOURTS-caed-1_14-cv-01849-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01849; (PC) Tilson v. Lopez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01849-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-11-24</dateIssued>
+  <docketText>ORDER DENYING Request for Class Action Certification; ORDER for Clerk of Court to Add Nineteen Plaintiffs to this Action; ORDER SEVERING Plaintiff&apos;s Claims, and DIRECTING Clerk to Open New Actions for Nineteen Plaintiffs, as Directed by this Order; Thirty Day Deadline for all Twenty Plaintiffs to: (1) Each FILE an AMENDED COMPLAINT in his own case, as instructed by this Order, (2) Each SUBMIT an Application to Proceed In Forma Pauperis in his own Case, or PAY the $400.00 Filing Fee for his own case signed by Magistrate Judge Gary S. Austin on 11/21/2014. (Attachments: # (1) Amended Complaint form, # (2) IFP Application)(Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01849-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01849/USCOURTS-caed-1_14-cv-01849-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Tilson v. Lopez</title>
+  <subTitle>ORDER Directing Clerk&apos;s Office to Send Plaintiff Non-Prisoner IFP Application and Requiring Plaintiff to File Application or Pay Filing Fee in Full within Thirty Days, signed by Magistrate Judge Gary S. Austin on 1/5/15. (Attachments: # (1) IFP Application)(Verduzco, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01849/pdf/USCOURTS-caed-1_14-cv-01849-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ce7c44a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01849/USCOURTS-caed-1_14-cv-01849-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01849_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01849/USCOURTS-caed-1_14-cv-01849-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01849/pdf/USCOURTS-caed-1_14-cv-01849-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01849; (PC) Tilson v. Lopez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01849-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER Directing Clerk&apos;s Office to Send Plaintiff Non-Prisoner IFP Application and Requiring Plaintiff to File Application or Pay Filing Fee in Full within Thirty Days, signed by Magistrate Judge Gary S. Austin on 1/5/15. (Attachments: # (1) IFP Application)(Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01849-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01849/USCOURTS-caed-1_14-cv-01849-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Tilson v. Lopez</title>
+  <subTitle>ORDER GRANTING 7 10 11 Motion to Proceed IFP signed by Magistrate Judge Gary S. Austin on 2/19/2015. (Sant Agata, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01849/pdf/USCOURTS-caed-1_14-cv-01849-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ce7c449</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01849/USCOURTS-caed-1_14-cv-01849-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01849_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01849/USCOURTS-caed-1_14-cv-01849-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01849/pdf/USCOURTS-caed-1_14-cv-01849-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01849; (PC) Tilson v. Lopez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01849-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-02-19</dateIssued>
+  <docketText>ORDER GRANTING 7 10 11 Motion to Proceed IFP signed by Magistrate Judge Gary S. Austin on 2/19/2015. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01849-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01849/USCOURTS-caed-1_14-cv-01849-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Tilson v. Lopez</title>
+  <subTitle>dge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 7/29/2015.(Fahrney, E)FINDINGS And RECOMMENDATION That This Action Be Dismissed For Failure To State A Claim Upon Which Relief Could Be Granted (Doc.1, 6), Objections Due In Twenty Days, signed by Magistrate Judge Gary S. Austin on 7/6/2015. F&amp;R&apos;s referred to Ju</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01849/pdf/USCOURTS-caed-1_14-cv-01849-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ce7c44c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01849/USCOURTS-caed-1_14-cv-01849-3</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01849_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01849/USCOURTS-caed-1_14-cv-01849-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01849/pdf/USCOURTS-caed-1_14-cv-01849-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01849; (PC) Tilson v. Lopez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01849-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-07-07</dateIssued>
+  <docketText>dge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 7/29/2015.(Fahrney, E)FINDINGS And RECOMMENDATION That This Action Be Dismissed For Failure To State A Claim Upon Which Relief Could Be Granted (Doc.1, 6), Objections Due In Twenty Days, signed by Magistrate Judge Gary S. Austin on 7/6/2015. F&amp;R&apos;s referred to Ju</docketText>
+</extension>
+</relatedItem>
+</mods>

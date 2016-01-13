@@ -1,0 +1,272 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18179be8e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03071</identifier>
+<identifier type="local">P0b002ee18179be8e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_07-cv-03071</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03071</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03071</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Robert" fullName="Robert L. Boozer" lastName="Boozer" middleName="L." role="Defendant"></party>
+ <party firstName="Esther" fullName="Esther Casmer" lastName="Casmer" role="Defendant"></party>
+ <party firstName="Miguel" fullName="Miguel A. Gomez" lastName="Gomez" middleName="A." role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Otto Hansen" lastName="Hansen" middleName="Otto" role="Plaintiff"></party>
+ <party firstName="James" fullName="James A. Pearson" lastName="Pearson" middleName="A." role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Vampola" lastName="Vampola" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Hansen v. Vampola et al</title>
+ <partNumber>4:07-cv-03071</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03071/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:07-cv-03071;07-3071</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Robert L. Boozer</displayForm>
+ <namePart type="family">Boozer</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Esther Casmer</displayForm>
+ <namePart type="family">Casmer</namePart>
+ <namePart type="given">Esther</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Miguel A. Gomez</displayForm>
+ <namePart type="family">Gomez</namePart>
+ <namePart type="given">Miguel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Otto Hansen</displayForm>
+ <namePart type="family">Hansen</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James A. Pearson</displayForm>
+ <namePart type="family">Pearson</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Vampola</displayForm>
+ <namePart type="family">Vampola</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03071</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03071</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Robert" fullName="Robert L. Boozer" lastName="Boozer" middleName="L." role="Defendant"></party>
+ <party firstName="Esther" fullName="Esther Casmer" lastName="Casmer" role="Defendant"></party>
+ <party firstName="Miguel" fullName="Miguel A. Gomez" lastName="Gomez" middleName="A." role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Otto Hansen" lastName="Hansen" middleName="Otto" role="Plaintiff"></party>
+ <party firstName="James" fullName="James A. Pearson" lastName="Pearson" middleName="A." role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Vampola" lastName="Vampola" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03071-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03071/USCOURTS-ned-4_07-cv-03071-0/mods.xml">
+ <titleInfo>
+  <title>Hansen v. Vampola et al</title>
+  <subTitle>dge Joseph F. Bataillon.(PCV, )MEMORANDUM AND ORDER denying 3 Motion for Leave to Proceed in forma pauperis; denying 4 Motion to Appoint Counsel ; denying 5 Motion for Leave; if the plaintiff wishes to pursue this matter, he shall have until April 15, 2007 to pay the court&apos;s $350.00 filing fee; that if the plaintiff pays the filing fee by April 15, 2007, the Clerk of Court will provide the plaintiff with summons forms which the plaintiff may make arrangements to serve upon the defendants; and that if the plaintiff elects not to pay the filing fee by April 15, 2007, the plaintiff&apos;s complaint and this case will be subject, without further notice, to dismissal, without prejudice, for failure to prosecute. Prisoner Payment due by 4/15/2007. Ordered by Ju</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03071-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180b71f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03071/USCOURTS-ned-4_07-cv-03071-0</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03071_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03071/USCOURTS-ned-4_07-cv-03071-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03071/pdf/USCOURTS-ned-4_07-cv-03071-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03071; Hansen v. Vampola et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03071-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-03-20</dateIssued>
+  <docketText>dge Joseph F. Bataillon.(PCV, )MEMORANDUM AND ORDER denying 3 Motion for Leave to Proceed in forma pauperis; denying 4 Motion to Appoint Counsel ; denying 5 Motion for Leave; if the plaintiff wishes to pursue this matter, he shall have until April 15, 2007 to pay the court&apos;s $350.00 filing fee; that if the plaintiff pays the filing fee by April 15, 2007, the Clerk of Court will provide the plaintiff with summons forms which the plaintiff may make arrangements to serve upon the defendants; and that if the plaintiff elects not to pay the filing fee by April 15, 2007, the plaintiff&apos;s complaint and this case will be subject, without further notice, to dismissal, without prejudice, for failure to prosecute. Prisoner Payment due by 4/15/2007. Ordered by Ju</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03071-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03071/USCOURTS-ned-4_07-cv-03071-1/mods.xml">
+ <titleInfo>
+  <title>Hansen v. Vampola et al</title>
+  <subTitle>MEMORANDUM AND ORDER - The plaintiff&apos;s Application for Leave to Proceed In Forma Pauperis on appeal 9 is denied. That, pursuant to Fed. R. App. P. 24(a)(5), the plaintiff has 30 days, after service of this Memorandum and Order, to file a motion with the Eighth Circuit Court of Appeals for leave to proceed in forma pauperis on appeal; and That, pursuant to Fed. R. App. P. 24(a)(4), the Clerk of Court shall send a copy of this Memorandum and Order to the parties and the Eighth Circuit Court of Appeals as notice that the plaintiff has been denied in forma pauperis status on appeal, and the Clerk shall process this appeal to the Eighth Circuit. Ordered by Judge Joseph F. Bataillon. - (COPIES AS DIRECTED) (KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03071-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180b691</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03071/USCOURTS-ned-4_07-cv-03071-1</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03071_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03071/USCOURTS-ned-4_07-cv-03071-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03071/pdf/USCOURTS-ned-4_07-cv-03071-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03071; Hansen v. Vampola et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03071-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-04-17</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The plaintiff&apos;s Application for Leave to Proceed In Forma Pauperis on appeal 9 is denied. That, pursuant to Fed. R. App. P. 24(a)(5), the plaintiff has 30 days, after service of this Memorandum and Order, to file a motion with the Eighth Circuit Court of Appeals for leave to proceed in forma pauperis on appeal; and That, pursuant to Fed. R. App. P. 24(a)(4), the Clerk of Court shall send a copy of this Memorandum and Order to the parties and the Eighth Circuit Court of Appeals as notice that the plaintiff has been denied in forma pauperis status on appeal, and the Clerk shall process this appeal to the Eighth Circuit. Ordered by Judge Joseph F. Bataillon. - (COPIES AS DIRECTED) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03071-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03071/USCOURTS-ned-4_07-cv-03071-2/mods.xml">
+ <titleInfo>
+  <title>Hansen v. Vampola et al</title>
+  <subTitle>GENERAL ORDER 2007-09 concerning the management of pro se cases including supervision of pro se staff attorneys. Except for motions filed under 28 U.S.C. § 2255 and except for death penalty cases, Judge Kopf is assigned the overall responsibility for the management of pro se cases in the District of Nebraska and all previously filed pro se cases referred to Magistrate Judge Gossett or Magistrate Judge Thalken are herewith reassigned to Magistrate Judge Piester. The clerk&apos;s office shall file this order in each pending case referred to the Pro Se Docket in CM/ECF. Ordered by Chief Judge Bataillon. (JAE, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03071-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180b720</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03071/USCOURTS-ned-4_07-cv-03071-2</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03071_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03071/USCOURTS-ned-4_07-cv-03071-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03071/pdf/USCOURTS-ned-4_07-cv-03071-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03071; Hansen v. Vampola et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03071-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-07-03</dateIssued>
+  <docketText>GENERAL ORDER 2007-09 concerning the management of pro se cases including supervision of pro se staff attorneys. Except for motions filed under 28 U.S.C. § 2255 and except for death penalty cases, Judge Kopf is assigned the overall responsibility for the management of pro se cases in the District of Nebraska and all previously filed pro se cases referred to Magistrate Judge Gossett or Magistrate Judge Thalken are herewith reassigned to Magistrate Judge Piester. The clerk&apos;s office shall file this order in each pending case referred to the Pro Se Docket in CM/ECF. Ordered by Chief Judge Bataillon. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03071-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03071/USCOURTS-ned-4_07-cv-03071-3/mods.xml">
+ <titleInfo>
+  <title>Hansen v. Vampola et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff&apos;s Complaint is dismissed without prejudice for failure to prosecute his claims diligently. A separate judgment will be entered in accordance with this memorandum and order. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(KBJ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03071-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180b71e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03071/USCOURTS-ned-4_07-cv-03071-3</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03071_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03071/USCOURTS-ned-4_07-cv-03071-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03071/pdf/USCOURTS-ned-4_07-cv-03071-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03071; Hansen v. Vampola et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03071-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-01-28</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff&apos;s Complaint is dismissed without prejudice for failure to prosecute his claims diligently. A separate judgment will be entered in accordance with this memorandum and order. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

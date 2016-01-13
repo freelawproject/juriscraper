@@ -1,0 +1,225 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18156310c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-00954</identifier>
+<identifier type="local">P0b002ee18156310c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_07-cv-00954</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_07-cv-00954</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:07-cv-00954</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1332 Diversity-(Citizenship)</cause>
+ <party firstName="Lisa" fullName="Lisa L. Anderson" lastName="Anderson" middleName="L." role="Defendant"></party>
+ <party firstName="William" fullName="William T. Anderson" lastName="Anderson" middleName="T." role="Defendant"></party>
+ <party fullName="Household Finance Corporation" lastName="Household Finance Corporation" role="Defendant"></party>
+ <party firstName="Terrence" fullName="Terrence P. Kessler" lastName="Kessler" middleName="P." role="Master Commissioner"></party>
+ <party fullName="Mortgage Electronic Registration Systems, Inc." lastName="Mortgage Electronic Registration Systems, Inc." role="Defendant"></party>
+ <party fullName="The Bank of New York" lastName="The Bank of New York" role="Plaintiff"></party>
+ <party fullName="the holders of the EQCC Asset Backed Certificates, Series 2001-1F" lastName="the holders of the EQCC Asset Backed Certificates, Series 2001-1F" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>The Bank of New York v. Anderson et al</title>
+ <partNumber>1:07-cv-00954</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-00954/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:07-cv-00954;07-954</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Lisa L. Anderson</displayForm>
+ <namePart type="family">Anderson</namePart>
+ <namePart type="given">Lisa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William T. Anderson</displayForm>
+ <namePart type="family">Anderson</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Household Finance Corporation</displayForm>
+ <namePart type="family">Household Finance Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terrence P. Kessler</displayForm>
+ <namePart type="family">Kessler</namePart>
+ <namePart type="given">Terrence</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Master Commissioner</description>
+</name>
+<name type="personal">
+ <displayForm>Mortgage Electronic Registration Systems, Inc.</displayForm>
+ <namePart type="family">Mortgage Electronic Registration Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Bank of New York</displayForm>
+ <namePart type="family">The Bank of New York</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>the holders of the EQCC Asset Backed Certificates, Series 2001-1F</displayForm>
+ <namePart type="family">the holders of the EQCC Asset Backed Certificates, Series 2001-1F</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_07-cv-00954</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:07-cv-00954</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1332 Diversity-(Citizenship)</cause>
+ <party firstName="Lisa" fullName="Lisa L. Anderson" lastName="Anderson" middleName="L." role="Defendant"></party>
+ <party firstName="William" fullName="William T. Anderson" lastName="Anderson" middleName="T." role="Defendant"></party>
+ <party fullName="Household Finance Corporation" lastName="Household Finance Corporation" role="Defendant"></party>
+ <party firstName="Terrence" fullName="Terrence P. Kessler" lastName="Kessler" middleName="P." role="Master Commissioner"></party>
+ <party fullName="Mortgage Electronic Registration Systems, Inc." lastName="Mortgage Electronic Registration Systems, Inc." role="Defendant"></party>
+ <party fullName="The Bank of New York" lastName="The Bank of New York" role="Plaintiff"></party>
+ <party fullName="the holders of the EQCC Asset Backed Certificates, Series 2001-1F" lastName="the holders of the EQCC Asset Backed Certificates, Series 2001-1F" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_07-cv-00954-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00954/USCOURTS-ohnd-1_07-cv-00954-0/mods.xml">
+ <titleInfo>
+  <title>The Bank of New York v. Anderson et al</title>
+  <subTitle>Judgment and Decree of Foreclosure againts all defendants. Signed by Judge Christopher A. Boyko on 06/18/07. (Related doc 10) (M,M) Modified to create link on 6/19/2007 (B, B).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_07-cv-00954-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18162f3b2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00954/USCOURTS-ohnd-1_07-cv-00954-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_07-cv-00954_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00954/USCOURTS-ohnd-1_07-cv-00954-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-00954/pdf/USCOURTS-ohnd-1_07-cv-00954-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00954; The Bank of New York v. Anderson et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_07-cv-00954-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-06-18</dateIssued>
+  <docketText>Judgment and Decree of Foreclosure againts all defendants. Signed by Judge Christopher A. Boyko on 06/18/07. (Related doc 10) (M,M) Modified to create link on 6/19/2007 (B, B).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_07-cv-00954-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00954/USCOURTS-ohnd-1_07-cv-00954-1/mods.xml">
+ <titleInfo>
+  <title>The Bank of New York v. Anderson et al</title>
+  <subTitle>Order granting Plaintiff&apos;s Motion for order of possession (Related Doc # 24). Signed by Judge Christopher A. Boyko on 01/09/08.(M,M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_07-cv-00954-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18162f3b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00954/USCOURTS-ohnd-1_07-cv-00954-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_07-cv-00954_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00954/USCOURTS-ohnd-1_07-cv-00954-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-00954/pdf/USCOURTS-ohnd-1_07-cv-00954-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00954; The Bank of New York v. Anderson et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_07-cv-00954-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-09</dateIssued>
+  <docketText>Order granting Plaintiff&apos;s Motion for order of possession (Related Doc # 24). Signed by Judge Christopher A. Boyko on 01/09/08.(M,M)</docketText>
+</extension>
+</relatedItem>
+</mods>

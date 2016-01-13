@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18195f34d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_03-cr-50026</identifier>
+<identifier type="local">P0b002ee18195f34d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-4_03-cr-50026</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-4_03-cr-50026</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>4:03-cr-50026</caseNumber>
+ <caseOffice>Flint</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Adrin" fullName="Adrin Derice Randle" lastName="Randle" middleName="Derice" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Randle</title>
+ <partNumber>4:03-cr-50026</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_03-cr-50026/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:03-cr-50026;03-50026</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Flint</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Adrin Derice Randle</displayForm>
+ <namePart type="family">Randle</namePart>
+ <namePart type="given">Adrin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-4_03-cr-50026</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>4:03-cr-50026</caseNumber>
+ <caseOffice>Flint</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Adrin" fullName="Adrin Derice Randle" lastName="Randle" middleName="Derice" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-4_03-cr-50026-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_03-cr-50026/USCOURTS-mied-4_03-cr-50026-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Randle</title>
+  <subTitle>REPORT AND RECOMMENDATION as to Adrin Derice Randle re 14 MOTION to Vacate under 28 U.S.C. 2255 ( Civil Action 05-40028.) Signed by Honorable Magistrate Judge Wallace Capel. (PPel, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-4_03-cr-50026-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a804be</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_03-cr-50026/USCOURTS-mied-4_03-cr-50026-0</identifier>
+ <identifier type="former granule identifier">mied-4_03-cr-50026_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_03-cr-50026/USCOURTS-mied-4_03-cr-50026-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_03-cr-50026/pdf/USCOURTS-mied-4_03-cr-50026-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-50026; USA v. Randle; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-4_03-cr-50026-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-11-16</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION as to Adrin Derice Randle re 14 MOTION to Vacate under 28 U.S.C. 2255 ( Civil Action 05-40028.) Signed by Honorable Magistrate Judge Wallace Capel. (PPel, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-4_03-cr-50026-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_03-cr-50026/USCOURTS-mied-4_03-cr-50026-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Randle</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATION 29 denying 14 Motion to Vacate (2255) filed by Adrin Derice Randle. Signed by Honorable Paul V Gadola. (RBri, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-4_03-cr-50026-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a804bd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_03-cr-50026/USCOURTS-mied-4_03-cr-50026-1</identifier>
+ <identifier type="former granule identifier">mied-4_03-cr-50026_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_03-cr-50026/USCOURTS-mied-4_03-cr-50026-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_03-cr-50026/pdf/USCOURTS-mied-4_03-cr-50026-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-50026; USA v. Randle; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-4_03-cr-50026-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-31</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATION 29 denying 14 Motion to Vacate (2255) filed by Adrin Derice Randle. Signed by Honorable Paul V Gadola. (RBri, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,226 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c2e4db">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02513</identifier>
+<identifier type="local">P0b002ee186c2e4db</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02513</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02513</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02513</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>31:3729 False Claims Act</cause>
+ <party fullName="Bank of America" lastName="Bank of America" role="Defendant"></party>
+ <party fullName="Bank of America Corporation" lastName="Bank of America Corporation" role="Defendant"></party>
+ <party fullName="SOL Homes, LLC" lastName="SOL Homes, LLC" role="Defendant"></party>
+ <party firstName="Sandra" fullName="Sandra E Williams" lastName="Williams" middleName="E" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PS) Williams v. Bank of America Corporation et al</title>
+ <partNumber>2:12-cv-02513</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02513/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02513;12-2513</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bank of America</displayForm>
+ <namePart type="family">Bank of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bank of America Corporation</displayForm>
+ <namePart type="family">Bank of America Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SOL Homes, LLC</displayForm>
+ <namePart type="family">SOL Homes, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sandra E Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Sandra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02513</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02513</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>31:3729 False Claims Act</cause>
+ <party fullName="Bank of America" lastName="Bank of America" role="Defendant"></party>
+ <party fullName="Bank of America Corporation" lastName="Bank of America Corporation" role="Defendant"></party>
+ <party fullName="SOL Homes, LLC" lastName="SOL Homes, LLC" role="Defendant"></party>
+ <party firstName="Sandra" fullName="Sandra E Williams" lastName="Williams" middleName="E" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02513-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02513/USCOURTS-caed-2_12-cv-02513-0/mods.xml">
+ <titleInfo>
+  <title>(PS) Williams v. Bank of America Corporation et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 3/25/2013. Hearing on 13 Motion to Dismiss Complaint is CONTINUED to 5/1/2013 at 10:00 AM in Courtroom 26 (AC). Plaintiff shall file Opposition to Motion, if any, no later than 4/17/2013. Failure to file Opposition and appear at Hearing will be deemed as aStatement of Non-Opposition and shall result in recommendation that action be dismissed pursuant to Federal Rule of Civil Procedure 41(b). (Marciel, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02513-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3e7f3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02513/USCOURTS-caed-2_12-cv-02513-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02513_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02513/USCOURTS-caed-2_12-cv-02513-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02513/pdf/USCOURTS-caed-2_12-cv-02513-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02513; (PS) Williams v. Bank of America Corporation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02513-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-03-26</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 3/25/2013. Hearing on 13 Motion to Dismiss Complaint is CONTINUED to 5/1/2013 at 10:00 AM in Courtroom 26 (AC). Plaintiff shall file Opposition to Motion, if any, no later than 4/17/2013. Failure to file Opposition and appear at Hearing will be deemed as aStatement of Non-Opposition and shall result in recommendation that action be dismissed pursuant to Federal Rule of Civil Procedure 41(b). (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02513-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02513/USCOURTS-caed-2_12-cv-02513-1/mods.xml">
+ <titleInfo>
+  <title>(PS) Williams v. Bank of America Corporation et al</title>
+  <subTitle>ORDER with FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 5/6/2013. It is ordered that the 5/15/2013 Scheduling Conference is VACATED. The Court also RECOMMENDS that defendants&apos; 1/2/2013 13 Motion to Dismiss be granted; plaintiff&apos;s federal claims be dismissed without leave to amend; and plaintiff&apos;s state law claims be dismissed without prejudice to renewal in State Court. These Findings and Recommendations are SUBMITTED to District Judge John A. Mendez. Within 14 days after being served with these F/Rs, any party may file written Objections with Court and serve a copy on all parties. (Marciel, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02513-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3e7f1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02513/USCOURTS-caed-2_12-cv-02513-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02513_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02513/USCOURTS-caed-2_12-cv-02513-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02513/pdf/USCOURTS-caed-2_12-cv-02513-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02513; (PS) Williams v. Bank of America Corporation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02513-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-05-07</dateIssued>
+  <docketText>ORDER with FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 5/6/2013. It is ordered that the 5/15/2013 Scheduling Conference is VACATED. The Court also RECOMMENDS that defendants&apos; 1/2/2013 13 Motion to Dismiss be granted; plaintiff&apos;s federal claims be dismissed without leave to amend; and plaintiff&apos;s state law claims be dismissed without prejudice to renewal in State Court. These Findings and Recommendations are SUBMITTED to District Judge John A. Mendez. Within 14 days after being served with these F/Rs, any party may file written Objections with Court and serve a copy on all parties. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02513-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02513/USCOURTS-caed-2_12-cv-02513-2/mods.xml">
+ <titleInfo>
+  <title>(PS) Williams v. Bank of America Corporation et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 12/31/2013 GRANTING 47 Motion to Proceed IFP. (cc: Appeals Court - Ninth Circuit) (Michel, G)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02513-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3e7f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02513/USCOURTS-caed-2_12-cv-02513-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02513_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02513/USCOURTS-caed-2_12-cv-02513-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02513/pdf/USCOURTS-caed-2_12-cv-02513-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02513; (PS) Williams v. Bank of America Corporation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02513-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 12/31/2013 GRANTING 47 Motion to Proceed IFP. (cc: Appeals Court - Ninth Circuit) (Michel, G)</docketText>
+</extension>
+</relatedItem>
+</mods>

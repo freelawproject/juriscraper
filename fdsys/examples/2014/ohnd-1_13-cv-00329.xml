@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee187494012">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_13-cv-00329</identifier>
+<identifier type="local">P0b002ee187494012</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_13-cv-00329</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_13-cv-00329</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:13-cv-00329</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:405 Review of HHS Decision (SSID)</cause>
+ <party firstName="Nyree" fullName="Nyree Campbell" lastName="Campbell" role="Plaintiff"></party>
+ <party fullName="Commissioner of Social Security Administration" lastName="Commissioner of Social Security Administration" role="Defendant"></party>
+ <party fullName="M.B." lastName="M.B." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Campbell v. Commissioner of Social Security Administration</title>
+ <partNumber>1:13-cv-00329</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_13-cv-00329/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-00329;13-329</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Nyree Campbell</displayForm>
+ <namePart type="family">Campbell</namePart>
+ <namePart type="given">Nyree</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security Administration</displayForm>
+ <namePart type="family">Commissioner of Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M.B.</displayForm>
+ <namePart type="family">M.B.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_13-cv-00329</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:13-cv-00329</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:405 Review of HHS Decision (SSID)</cause>
+ <party firstName="Nyree" fullName="Nyree Campbell" lastName="Campbell" role="Plaintiff"></party>
+ <party fullName="Commissioner of Social Security Administration" lastName="Commissioner of Social Security Administration" role="Defendant"></party>
+ <party fullName="M.B." lastName="M.B." role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_13-cv-00329-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_13-cv-00329/USCOURTS-ohnd-1_13-cv-00329-0/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Commissioner of Social Security Administration</title>
+  <subTitle>Report and Recommendation that the decision of the Commissioner be affirmed (Related Doc # 1). Objections to R&amp;R due by 12/31/2013. Referral Terminated. Signed by Magistrate Judge William H. Baughman, Jr. on 12/17/2013. (S,G)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_13-cv-00329/pdf/USCOURTS-ohnd-1_13-cv-00329-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1875e87bf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_13-cv-00329/USCOURTS-ohnd-1_13-cv-00329-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_13-cv-00329_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_13-cv-00329/USCOURTS-ohnd-1_13-cv-00329-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_13-cv-00329/pdf/USCOURTS-ohnd-1_13-cv-00329-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00329; Campbell v. Commissioner of Social Security Administration; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_13-cv-00329-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-12-17</dateIssued>
+  <docketText>Report and Recommendation that the decision of the Commissioner be affirmed (Related Doc # 1). Objections to R&amp;R due by 12/31/2013. Referral Terminated. Signed by Magistrate Judge William H. Baughman, Jr. on 12/17/2013. (S,G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_13-cv-00329-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_13-cv-00329/USCOURTS-ohnd-1_13-cv-00329-1/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Commissioner of Social Security Administration</title>
+  <subTitle>Memorandum of Opinion and Order Adopting Report and Recommendation of the Magistrate Judge re 20. The Commissioner&apos;s decision is affirmed; An appeal from this decision could not be taken in good faith. Judge John R. Adams on 1/6/14. (K,C)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_13-cv-00329/pdf/USCOURTS-ohnd-1_13-cv-00329-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1875e87c0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_13-cv-00329/USCOURTS-ohnd-1_13-cv-00329-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_13-cv-00329_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_13-cv-00329/USCOURTS-ohnd-1_13-cv-00329-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_13-cv-00329/pdf/USCOURTS-ohnd-1_13-cv-00329-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00329; Campbell v. Commissioner of Social Security Administration; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_13-cv-00329-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>Memorandum of Opinion and Order Adopting Report and Recommendation of the Magistrate Judge re 20. The Commissioner&apos;s decision is affirmed; An appeal from this decision could not be taken in good faith. Judge John R. Adams on 1/6/14. (K,C)</docketText>
+</extension>
+</relatedItem>
+</mods>

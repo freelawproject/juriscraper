@@ -1,0 +1,177 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180f36019">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02597</identifier>
+<identifier type="local">P0b002ee180f36019</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_09-cv-02597</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_09-cv-02597</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:09-cv-02597</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="Community America Credit Union" lastName="Community America Credit Union" role="Defendant"></party>
+ <party firstName="Debbie" fullName="Debbie McCarthy" lastName="McCarthy" role="Defendant"></party>
+ <party firstName="John" fullName="John L. Norris" lastName="Norris" middleName="L." role="Plaintiff"></party>
+ <party firstName="Carol" fullName="Carol Tuttle" lastName="Tuttle" role="Defendant"></party>
+ <party fullName="United Repossessors" lastName="United Repossessors" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Norris v. Community America Credit Union et al</title>
+ <partNumber>2:09-cv-02597</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02597/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-02597;09-2597</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Community America Credit Union</displayForm>
+ <namePart type="family">Community America Credit Union</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Debbie McCarthy</displayForm>
+ <namePart type="family">McCarthy</namePart>
+ <namePart type="given">Debbie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John L. Norris</displayForm>
+ <namePart type="family">Norris</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Carol Tuttle</displayForm>
+ <namePart type="family">Tuttle</namePart>
+ <namePart type="given">Carol</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United Repossessors</displayForm>
+ <namePart type="family">United Repossessors</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_09-cv-02597</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:09-cv-02597</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="Community America Credit Union" lastName="Community America Credit Union" role="Defendant"></party>
+ <party firstName="Debbie" fullName="Debbie McCarthy" lastName="McCarthy" role="Defendant"></party>
+ <party firstName="John" fullName="John L. Norris" lastName="Norris" middleName="L." role="Plaintiff"></party>
+ <party firstName="Carol" fullName="Carol Tuttle" lastName="Tuttle" role="Defendant"></party>
+ <party fullName="United Repossessors" lastName="United Repossessors" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02597-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02597/USCOURTS-ksd-2_09-cv-02597-0/mods.xml">
+ <titleInfo>
+  <title>Norris v. Community America Credit Union et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 3 Motion for Leave to Proceed in forma pauperis. IT IS FURTHER ORDERED that plaintiff&apos;s complaint is dismissed with prejudice. Signed by District Judge Carlos Murguia on 1/13/2010. (jw)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02597-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f3f71f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02597/USCOURTS-ksd-2_09-cv-02597-0</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02597_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02597/USCOURTS-ksd-2_09-cv-02597-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02597/pdf/USCOURTS-ksd-2_09-cv-02597-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02597; Norris v. Community America Credit Union et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02597-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-13</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 3 Motion for Leave to Proceed in forma pauperis. IT IS FURTHER ORDERED that plaintiff&apos;s complaint is dismissed with prejudice. Signed by District Judge Carlos Murguia on 1/13/2010. (jw)</docketText>
+</extension>
+</relatedItem>
+</mods>

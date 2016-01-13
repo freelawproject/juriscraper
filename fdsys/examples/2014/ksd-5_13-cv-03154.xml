@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186e335a1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-23</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_13-cv-03154</identifier>
+<identifier type="local">P0b002ee186e335a1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-23</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_13-cv-03154</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_13-cv-03154</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:13-cv-03154</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party firstName="Donald" fullName="Donald L. Cohee" lastName="Cohee" middleName="L." role="Plaintiff"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Cohee v. United States of America</title>
+ <partNumber>5:13-cv-03154</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_13-cv-03154/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:13-cv-03154;13-3154</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Donald L. Cohee</displayForm>
+ <namePart type="family">Cohee</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_13-cv-03154</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:13-cv-03154</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party firstName="Donald" fullName="Donald L. Cohee" lastName="Cohee" middleName="L." role="Plaintiff"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_13-cv-03154-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_13-cv-03154/USCOURTS-ksd-5_13-cv-03154-0/mods.xml">
+ <titleInfo>
+  <title>Cohee v. United States of America</title>
+  <subTitle>ORDER ENTERED: Plaintiff is granted thirty (30) days in which to satisfy the filing fee prerequisites by submitting a properly-completed motion for leave to proceed without prepayment of fees upon court-approved forms that is supported by the financial information required by federal law. Within that same thirty-day period, plaintiff is required to cure the deficiencies in his complaint or this matter will be dismissed as frivolous and for failure to state a claim. Plaintiff&apos;s motions 3 &amp; 5 for hearings are denied. Signed by Senior District Judge Sam A. Crow on 1/2/2014. (Mailed to pro se party Donald L. Cohee by regular mail.) (smnd)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_13-cv-03154/pdf/USCOURTS-ksd-5_13-cv-03154-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186e37a8d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_13-cv-03154/USCOURTS-ksd-5_13-cv-03154-0</identifier>
+ <identifier type="former granule identifier">ksd-5_13-cv-03154_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_13-cv-03154/USCOURTS-ksd-5_13-cv-03154-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_13-cv-03154/pdf/USCOURTS-ksd-5_13-cv-03154-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cv-03154; Cohee v. United States of America; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_13-cv-03154-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER ENTERED: Plaintiff is granted thirty (30) days in which to satisfy the filing fee prerequisites by submitting a properly-completed motion for leave to proceed without prepayment of fees upon court-approved forms that is supported by the financial information required by federal law. Within that same thirty-day period, plaintiff is required to cure the deficiencies in his complaint or this matter will be dismissed as frivolous and for failure to state a claim. Plaintiff&apos;s motions 3 &amp; 5 for hearings are denied. Signed by Senior District Judge Sam A. Crow on 1/2/2014. (Mailed to pro se party Donald L. Cohee by regular mail.) (smnd)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_13-cv-03154-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_13-cv-03154/USCOURTS-ksd-5_13-cv-03154-1/mods.xml">
+ <titleInfo>
+  <title>Cohee v. United States of America</title>
+  <subTitle>ORDER ENTERED: Plaintiff&apos;s motions 2 &amp; 8 to proceed without prepayment of fees are granted. This action is dismissed as frivolous, for failure to state a claim, and as seeking relief from a defendant immune from such relief. Signed by Senior District Judge Sam A. Crow on 1/22/2014. (Mailed to pro se party Donald L. Cohee by regular mail.) (smnd)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_13-cv-03154/pdf/USCOURTS-ksd-5_13-cv-03154-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186e37a8e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_13-cv-03154/USCOURTS-ksd-5_13-cv-03154-1</identifier>
+ <identifier type="former granule identifier">ksd-5_13-cv-03154_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_13-cv-03154/USCOURTS-ksd-5_13-cv-03154-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_13-cv-03154/pdf/USCOURTS-ksd-5_13-cv-03154-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cv-03154; Cohee v. United States of America; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_13-cv-03154-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-22</dateIssued>
+  <docketText>ORDER ENTERED: Plaintiff&apos;s motions 2 &amp; 8 to proceed without prepayment of fees are granted. This action is dismissed as frivolous, for failure to state a claim, and as seeking relief from a defendant immune from such relief. Signed by Senior District Judge Sam A. Crow on 1/22/2014. (Mailed to pro se party Donald L. Cohee by regular mail.) (smnd)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,331 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e69b9d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-09-01786</identifier>
+<identifier type="local">P0b002ee180e69b9d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-09-01786</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-09-01786</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>09-01786</caseNumber>
+ <natureSuitCode>410</natureSuitCode>
+ <natureSuit>Antitrust</natureSuit>
+ <party fullName="Arkansas Blue Cross and Blue Shield" lastName="Arkansas Blue Cross and Blue Shield" role="Not Party"></party>
+ <party fullName="Baptist Health" lastName="Baptist Health" role="Appellant"></party>
+ <party fullName="Baptist Medical System HMO" lastName="Baptist Medical System HMO" role="Appellant"></party>
+ <party firstName="David" fullName="David C. Bauman" lastName="Bauman" middleName="C." role="Appellee"></party>
+ <party firstName="Dr. David" fullName="Dr. David C. Bauman" lastName="Bauman" middleName="C." role="Appellee"></party>
+ <party firstName="Dr. Scott" fullName="Dr. Scott L. Beau" lastName="Beau" middleName="L." role="Appellee"></party>
+ <party firstName="Scott" fullName="Scott L. Beau" lastName="Beau" middleName="L." role="Appellee"></party>
+ <party fullName="HMO Partners, Inc." lastName="HMO Partners, Inc." role="Not Party"></party>
+ <party firstName="D." fullName="D. Andrew Henry" lastName="Henry" middleName="Andrew" role="Appellee"></party>
+ <party firstName="Dr. D." fullName="Dr. D. Andrew Henry" lastName="Henry" middleName="Andrew" role="Appellee"></party>
+ <party fullName="Little Rock Cardiology Clinic PA" lastName="Little Rock Cardiology Clinic PA" role="Appellee"></party>
+ <party firstName="David" fullName="David M. Mego" lastName="Mego" middleName="M." role="Appellee"></party>
+ <party firstName="Dr. David" fullName="Dr. David M. Mego" lastName="Mego" middleName="M." role="Appellee"></party>
+ <party firstName="Bruce" fullName="Bruce E. Murphy" lastName="Murphy" middleName="E." role="Appellee"></party>
+ <party firstName="Dr. Bruce" fullName="Dr. Bruce E. Murphy" lastName="Murphy" middleName="E." role="Appellee"></party>
+ <party firstName="Dr. Paulo" fullName="Dr. Paulo Ribeiro" lastName="Ribeiro" role="Appellee"></party>
+ <party firstName="Paulo" fullName="Paulo Ribeiro" lastName="Ribeiro" role="Appellee"></party>
+ <party firstName="Dr. William" fullName="Dr. William A. Rollefson" lastName="Rollefson" middleName="A." role="Appellee"></party>
+ <party firstName="William" fullName="William A. Rollefson" lastName="Rollefson" middleName="A." role="Appellee"></party>
+ <party fullName="USAble Corporation" lastName="USAble Corporation" role="Not Party"></party>
+</extension>
+<titleInfo>
+ <title>Little Rock Cardiology Clinic, et al v. Baptist Health, et al</title>
+ <partNumber>09-01786</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-09-01786/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">09-01786;09-1786</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Arkansas Blue Cross and Blue Shield</displayForm>
+ <namePart type="family">Arkansas Blue Cross and Blue Shield</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Not Party</description>
+</name>
+<name type="personal">
+ <displayForm>Baptist Health</displayForm>
+ <namePart type="family">Baptist Health</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Baptist Medical System HMO</displayForm>
+ <namePart type="family">Baptist Medical System HMO</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>David C. Bauman</displayForm>
+ <namePart type="family">Bauman</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. David C. Bauman</displayForm>
+ <namePart type="family">Bauman</namePart>
+ <namePart type="given">Dr. David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. Scott L. Beau</displayForm>
+ <namePart type="family">Beau</namePart>
+ <namePart type="given">Dr. Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Scott L. Beau</displayForm>
+ <namePart type="family">Beau</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>HMO Partners, Inc.</displayForm>
+ <namePart type="family">HMO Partners, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Not Party</description>
+</name>
+<name type="personal">
+ <displayForm>D. Andrew Henry</displayForm>
+ <namePart type="family">Henry</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. D. Andrew Henry</displayForm>
+ <namePart type="family">Henry</namePart>
+ <namePart type="given">Dr. D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Little Rock Cardiology Clinic PA</displayForm>
+ <namePart type="family">Little Rock Cardiology Clinic PA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>David M. Mego</displayForm>
+ <namePart type="family">Mego</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. David M. Mego</displayForm>
+ <namePart type="family">Mego</namePart>
+ <namePart type="given">Dr. David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Bruce E. Murphy</displayForm>
+ <namePart type="family">Murphy</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. Bruce E. Murphy</displayForm>
+ <namePart type="family">Murphy</namePart>
+ <namePart type="given">Dr. Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. Paulo Ribeiro</displayForm>
+ <namePart type="family">Ribeiro</namePart>
+ <namePart type="given">Dr. Paulo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Paulo Ribeiro</displayForm>
+ <namePart type="family">Ribeiro</namePart>
+ <namePart type="given">Paulo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. William A. Rollefson</displayForm>
+ <namePart type="family">Rollefson</namePart>
+ <namePart type="given">Dr. William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>William A. Rollefson</displayForm>
+ <namePart type="family">Rollefson</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>USAble Corporation</displayForm>
+ <namePart type="family">USAble Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Not Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-09-01786</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>09-01786</caseNumber>
+ <natureSuitCode>410</natureSuitCode>
+ <natureSuit>Antitrust</natureSuit>
+ <party fullName="Arkansas Blue Cross and Blue Shield" lastName="Arkansas Blue Cross and Blue Shield" role="Not Party"></party>
+ <party fullName="Baptist Health" lastName="Baptist Health" role="Appellant"></party>
+ <party fullName="Baptist Medical System HMO" lastName="Baptist Medical System HMO" role="Appellant"></party>
+ <party firstName="David" fullName="David C. Bauman" lastName="Bauman" middleName="C." role="Appellee"></party>
+ <party firstName="Dr. David" fullName="Dr. David C. Bauman" lastName="Bauman" middleName="C." role="Appellee"></party>
+ <party firstName="Dr. Scott" fullName="Dr. Scott L. Beau" lastName="Beau" middleName="L." role="Appellee"></party>
+ <party firstName="Scott" fullName="Scott L. Beau" lastName="Beau" middleName="L." role="Appellee"></party>
+ <party fullName="HMO Partners, Inc." lastName="HMO Partners, Inc." role="Not Party"></party>
+ <party firstName="D." fullName="D. Andrew Henry" lastName="Henry" middleName="Andrew" role="Appellee"></party>
+ <party firstName="Dr. D." fullName="Dr. D. Andrew Henry" lastName="Henry" middleName="Andrew" role="Appellee"></party>
+ <party fullName="Little Rock Cardiology Clinic PA" lastName="Little Rock Cardiology Clinic PA" role="Appellee"></party>
+ <party firstName="David" fullName="David M. Mego" lastName="Mego" middleName="M." role="Appellee"></party>
+ <party firstName="Dr. David" fullName="Dr. David M. Mego" lastName="Mego" middleName="M." role="Appellee"></party>
+ <party firstName="Bruce" fullName="Bruce E. Murphy" lastName="Murphy" middleName="E." role="Appellee"></party>
+ <party firstName="Dr. Bruce" fullName="Dr. Bruce E. Murphy" lastName="Murphy" middleName="E." role="Appellee"></party>
+ <party firstName="Dr. Paulo" fullName="Dr. Paulo Ribeiro" lastName="Ribeiro" role="Appellee"></party>
+ <party firstName="Paulo" fullName="Paulo Ribeiro" lastName="Ribeiro" role="Appellee"></party>
+ <party firstName="Dr. William" fullName="Dr. William A. Rollefson" lastName="Rollefson" middleName="A." role="Appellee"></party>
+ <party firstName="William" fullName="William A. Rollefson" lastName="Rollefson" middleName="A." role="Appellee"></party>
+ <party fullName="USAble Corporation" lastName="USAble Corporation" role="Not Party"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-09-01786-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01786/USCOURTS-ca8-09-01786-0/mods.xml">
+ <titleInfo>
+  <title>Little Rock Cardiology Clinic, et al v. Baptist Health, et al</title>
+  <subTitle>OPINION FILED - THE COURT: MICHAEL J. MELLOY, C. ARLEN BEAM and RAYMOND W. GRUENDER. Michael J. Melloy, Authoring Judge (PUBLISHED) [3619182] [08-3158, 09-1786]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-09-01786-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e6b658</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01786/USCOURTS-ca8-09-01786-0</identifier>
+ <identifier type="former granule identifier">ca8-09-01786_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01786/USCOURTS-ca8-09-01786-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-09-01786/pdf/USCOURTS-ca8-09-01786-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 09-01786; Little Rock Cardiology Clinic, et al v. Baptist Health, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-09-01786-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-12-29</dateIssued>
+  <docketText>OPINION FILED - THE COURT: MICHAEL J. MELLOY, C. ARLEN BEAM and RAYMOND W. GRUENDER. Michael J. Melloy, Authoring Judge (PUBLISHED) [3619182] [08-3158, 09-1786]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-09-01786-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01786/USCOURTS-ca8-09-01786-1/mods.xml">
+ <titleInfo>
+  <title>Little Rock Cardiology Clinic, et al v. Baptist Health, et al</title>
+  <subTitle>CORRECTED OPINION FILED 01/08/2010 Page 2, second line from the top &quot;Baptist Health&quot; should be &quot;Blue Cross.&quot; and in footnote 7, 5th line should be &quot;Baptist Health&apos;s&quot; instead of &quot;LRCC.&quot; 01/29/2009 [3622619] [08-3158, 09-1786]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-09-01786-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e6b657</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01786/USCOURTS-ca8-09-01786-1</identifier>
+ <identifier type="former granule identifier">ca8-09-01786_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01786/USCOURTS-ca8-09-01786-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-09-01786/pdf/USCOURTS-ca8-09-01786-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 09-01786; Little Rock Cardiology Clinic, et al v. Baptist Health, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-09-01786-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-08</dateIssued>
+  <docketText>CORRECTED OPINION FILED 01/08/2010 Page 2, second line from the top &quot;Baptist Health&quot; should be &quot;Blue Cross.&quot; and in footnote 7, 5th line should be &quot;Baptist Health&apos;s&quot; instead of &quot;LRCC.&quot; 01/29/2009 [3622619] [08-3158, 09-1786]</docketText>
+</extension>
+</relatedItem>
+</mods>

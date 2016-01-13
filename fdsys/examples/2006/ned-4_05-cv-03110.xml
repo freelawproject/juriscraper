@@ -1,0 +1,421 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817aa9b9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03110</identifier>
+<identifier type="local">P0b002ee1817aa9b9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_05-cv-03110</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_05-cv-03110</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:05-cv-03110</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party firstName="Amy" fullName="Amy Ensor" lastName="Ensor" role="Plaintiff"></party>
+ <party firstName="Raymond" fullName="Raymond Ensor" lastName="Ensor" role="Plaintiff"></party>
+ <party firstName="Rebecca" fullName="Rebecca Kling" lastName="Kling" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard E. Lester" lastName="Lester" middleName="E." role="Defendant"></party>
+ <party firstName="Randall" fullName="Randall H. Marymee" lastName="Marymee" middleName="H." role="Defendant"></party>
+ <party fullName="School District No. 49-0032" lastName="School District No. 49-0032" role="Defendant"></party>
+ <party fullName="Tecumseh Public Schools" lastName="Tecumseh Public Schools" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Ensor et al v. Tecumseh Public Schools et al</title>
+ <partNumber>4:05-cv-03110</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03110/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:05-cv-03110;05-3110</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Amy Ensor</displayForm>
+ <namePart type="family">Ensor</namePart>
+ <namePart type="given">Amy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Raymond Ensor</displayForm>
+ <namePart type="family">Ensor</namePart>
+ <namePart type="given">Raymond</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rebecca Kling</displayForm>
+ <namePart type="family">Kling</namePart>
+ <namePart type="given">Rebecca</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard E. Lester</displayForm>
+ <namePart type="family">Lester</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Randall H. Marymee</displayForm>
+ <namePart type="family">Marymee</namePart>
+ <namePart type="given">Randall</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>School District No. 49-0032</displayForm>
+ <namePart type="family">School District No. 49-0032</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tecumseh Public Schools</displayForm>
+ <namePart type="family">Tecumseh Public Schools</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_05-cv-03110</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:05-cv-03110</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party firstName="Amy" fullName="Amy Ensor" lastName="Ensor" role="Plaintiff"></party>
+ <party firstName="Raymond" fullName="Raymond Ensor" lastName="Ensor" role="Plaintiff"></party>
+ <party firstName="Rebecca" fullName="Rebecca Kling" lastName="Kling" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard E. Lester" lastName="Lester" middleName="E." role="Defendant"></party>
+ <party firstName="Randall" fullName="Randall H. Marymee" lastName="Marymee" middleName="H." role="Defendant"></party>
+ <party fullName="School District No. 49-0032" lastName="School District No. 49-0032" role="Defendant"></party>
+ <party fullName="Tecumseh Public Schools" lastName="Tecumseh Public Schools" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03110-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-0/mods.xml">
+ <titleInfo>
+  <title>Ensor et al v. Tecumseh Public Schools et al</title>
+  <subTitle>ORDER regarding Scheduling Packet10. Counsel and unrepresented parties shall meet and confer in accordance with Fed. R. Civ. P.26(f) and, by June 6, 2005, file their Report of Parties&apos; Planning Conference. Signed by Magistrate Judge David L. Piester on 5/17/2005. (GJG, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03110-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181872c2a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-0</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03110_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03110/pdf/USCOURTS-ned-4_05-cv-03110-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03110; Ensor et al v. Tecumseh Public Schools et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03110-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-17</dateIssued>
+  <docketText>ORDER regarding Scheduling Packet10. Counsel and unrepresented parties shall meet and confer in accordance with Fed. R. Civ. P.26(f) and, by June 6, 2005, file their Report of Parties&apos; Planning Conference. Signed by Magistrate Judge David L. Piester on 5/17/2005. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03110-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-1/mods.xml">
+ <titleInfo>
+  <title>Ensor et al v. Tecumseh Public Schools et al</title>
+  <subTitle>REASSIGNMENT ORDER - IT IS ORDERED that this case is reassigned to District Judge Richard G. Kopf fordisposition and to Magistrate Judge David L. Piester for judicial supervision and processing ofall pretrial matters. Signed by Judge Joseph F. Bataillon on 5/17/2005. (MBB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03110-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181872c29</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-1</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03110_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03110/pdf/USCOURTS-ned-4_05-cv-03110-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03110; Ensor et al v. Tecumseh Public Schools et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03110-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-05-17</dateIssued>
+  <docketText>REASSIGNMENT ORDER - IT IS ORDERED that this case is reassigned to District Judge Richard G. Kopf fordisposition and to Magistrate Judge David L. Piester for judicial supervision and processing ofall pretrial matters. Signed by Judge Joseph F. Bataillon on 5/17/2005. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03110-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-2/mods.xml">
+ <titleInfo>
+  <title>Ensor et al v. Tecumseh Public Schools et al</title>
+  <subTitle>ORDER granting 17 Plaintiff&apos;s motion for enlargement of time. Plaintiff shall file her response to Defendant&apos;s motion to dismiss and to strike 15 by 8/18/2005. Signed by Judge Richard G. Kopf on 7/18/2005. (KLL, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03110-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181872be0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-2</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03110_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03110/pdf/USCOURTS-ned-4_05-cv-03110-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03110; Ensor et al v. Tecumseh Public Schools et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03110-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-07-18</dateIssued>
+  <docketText>ORDER granting 17 Plaintiff&apos;s motion for enlargement of time. Plaintiff shall file her response to Defendant&apos;s motion to dismiss and to strike 15 by 8/18/2005. Signed by Judge Richard G. Kopf on 7/18/2005. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03110-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-3/mods.xml">
+ <titleInfo>
+  <title>Ensor et al v. Tecumseh Public Schools et al</title>
+  <subTitle>ORDER denying as moot 15, Motion to Dismiss. Inasmuch as Plaintiff has filed an amended complaint, IT IS ORDERED that the motion to dismiss and to strike (filing 15) filed by Defendant Tecumseh Public Schools with respect to Plaintiff&apos;s original complaint is denied without prejudice, as moot. Signed by Judge Richard G. Kopf on 8/17/2005. (JAR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03110-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181872be3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-3</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03110_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03110/pdf/USCOURTS-ned-4_05-cv-03110-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03110; Ensor et al v. Tecumseh Public Schools et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03110-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-08-17</dateIssued>
+  <docketText>ORDER denying as moot 15, Motion to Dismiss. Inasmuch as Plaintiff has filed an amended complaint, IT IS ORDERED that the motion to dismiss and to strike (filing 15) filed by Defendant Tecumseh Public Schools with respect to Plaintiff&apos;s original complaint is denied without prejudice, as moot. Signed by Judge Richard G. Kopf on 8/17/2005. (JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03110-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-4/mods.xml">
+ <titleInfo>
+  <title>Ensor et al v. Tecumseh Public Schools et al</title>
+  <subTitle>ORDER. It is ordered that: (1) Plaintiff&apos;s motion for enlargement of time 27 is granted; (2) Plaintiff shall file her response to Defendant&apos;s Motion to Dismiss 25 by 10/26/2005. Signed by Judge Richard G. Kopf on 9/22/2005. (KLL, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03110-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181872c2b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-4</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03110_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03110/pdf/USCOURTS-ned-4_05-cv-03110-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03110; Ensor et al v. Tecumseh Public Schools et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03110-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-09-22</dateIssued>
+  <docketText>ORDER. It is ordered that: (1) Plaintiff&apos;s motion for enlargement of time 27 is granted; (2) Plaintiff shall file her response to Defendant&apos;s Motion to Dismiss 25 by 10/26/2005. Signed by Judge Richard G. Kopf on 9/22/2005. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03110-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-5/mods.xml">
+ <titleInfo>
+  <title>Ensor et al v. Tecumseh Public Schools et al</title>
+  <subTitle>ORDER. It is ordered that the plaintiff&apos;s motion for enlargement of time 30 is granted and the deadline for the plaintiff to file her response to the defendants&apos; motion to dismiss 25 is extended to 11/25/2005. Signed by Judge Richard G. Kopf on 10/21/2005. (KLL, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03110-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181872be4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-5</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03110_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03110/pdf/USCOURTS-ned-4_05-cv-03110-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03110; Ensor et al v. Tecumseh Public Schools et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03110-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2005-10-21</dateIssued>
+  <docketText>ORDER. It is ordered that the plaintiff&apos;s motion for enlargement of time 30 is granted and the deadline for the plaintiff to file her response to the defendants&apos; motion to dismiss 25 is extended to 11/25/2005. Signed by Judge Richard G. Kopf on 10/21/2005. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03110-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-6/mods.xml">
+ <titleInfo>
+  <title>Ensor et al v. Tecumseh Public Schools et al</title>
+  <subTitle>SETTLEMENT ORDER. It is ordered that: (1) By 12/22/2006, the parties shall file a joint stipulation for dismissal (or other dispositive stipulation) with the clerk of the court (and provide a copy to the magistrate judge and to United States District Judge Richard G. Kopf, the trial judge to whom this case is assigned), together with submitting to the trial judge a draft order which will fully dispose of the case; (2) Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without further notice; (3) This case is removed from the court&apos;s trial docket upon representation by the parties that the case has settled. ***Set Dismissal Papers Deadline: due by 12/22/2005; termed pretrial conference and trial dates. Signed by Judge Richard G. Kopf on 11/8/2005. (KLL, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03110-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181872c2c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-6</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03110_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03110/pdf/USCOURTS-ned-4_05-cv-03110-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03110; Ensor et al v. Tecumseh Public Schools et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03110-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2005-11-08</dateIssued>
+  <docketText>SETTLEMENT ORDER. It is ordered that: (1) By 12/22/2006, the parties shall file a joint stipulation for dismissal (or other dispositive stipulation) with the clerk of the court (and provide a copy to the magistrate judge and to United States District Judge Richard G. Kopf, the trial judge to whom this case is assigned), together with submitting to the trial judge a draft order which will fully dispose of the case; (2) Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without further notice; (3) This case is removed from the court&apos;s trial docket upon representation by the parties that the case has settled. ***Set Dismissal Papers Deadline: due by 12/22/2005; termed pretrial conference and trial dates. Signed by Judge Richard G. Kopf on 11/8/2005. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03110-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-7/mods.xml">
+ <titleInfo>
+  <title>Ensor et al v. Tecumseh Public Schools et al</title>
+  <subTitle>ORDER that: (1) Plaintiff&apos;s motion for enlargement of time 33 is granted, as follows: Paragraph (1) of the court&apos;s previous memorandum and order 32 is hereby modified to provide that the parties shall have until 2/6/2006 to file a joint stipulation for dismissal. In all other respects such order remains unchanged. Signed by Judge Richard G. Kopf on 12/19/2005. (KLL, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03110-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181872be2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-7</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03110_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03110/pdf/USCOURTS-ned-4_05-cv-03110-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03110; Ensor et al v. Tecumseh Public Schools et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03110-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2005-12-19</dateIssued>
+  <docketText>ORDER that: (1) Plaintiff&apos;s motion for enlargement of time 33 is granted, as follows: Paragraph (1) of the court&apos;s previous memorandum and order 32 is hereby modified to provide that the parties shall have until 2/6/2006 to file a joint stipulation for dismissal. In all other respects such order remains unchanged. Signed by Judge Richard G. Kopf on 12/19/2005. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03110-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-8/mods.xml">
+ <titleInfo>
+  <title>Ensor et al v. Tecumseh Public Schools et al</title>
+  <subTitle>JUDGMENT - Pursuant to the parties&apos; joint stipulation (filing 35) and Fed. R. Civ. P. 41(a), IT IS ORDERED that this action is dismissed with prejudice, each party to bear their own attorney&apos;s fees and costs. Signed by Judge Richard G. Kopf on 1/11/2006. (JAR)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03110-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181872be1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-8</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03110_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03110/USCOURTS-ned-4_05-cv-03110-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03110/pdf/USCOURTS-ned-4_05-cv-03110-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03110; Ensor et al v. Tecumseh Public Schools et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03110-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2006-01-11</dateIssued>
+  <docketText>JUDGMENT - Pursuant to the parties&apos; joint stipulation (filing 35) and Fed. R. Civ. P. 41(a), IT IS ORDERED that this action is dismissed with prejudice, each party to bear their own attorney&apos;s fees and costs. Signed by Judge Richard G. Kopf on 1/11/2006. (JAR)</docketText>
+</extension>
+</relatedItem>
+</mods>

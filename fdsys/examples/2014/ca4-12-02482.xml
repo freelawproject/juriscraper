@@ -1,0 +1,160 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c7aaaa">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Fourth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-12-02482</identifier>
+<identifier type="local">P0b002ee186c7aaaa</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca4-12-02482</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca4-12-02482</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca4</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtSortOrder>1040</courtSortOrder>
+ <caseNumber>12-02482</caseNumber>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <party fullName="Appalachian Power Company" lastName="Appalachian Power Company" role="Appellee"></party>
+ <party firstName="Judy" fullName="Judy Hoschar" lastName="Hoschar" role="Appellant"></party>
+ <party firstName="Roger" fullName="Roger Hoschar" lastName="Hoschar" role="Appellant"></party>
+ <party fullName="Industrial Contractors, Inc." lastName="Industrial Contractors, Inc." role=""></party>
+</extension>
+<titleInfo>
+ <title>Roger Hoschar v. Appalachian Power Company</title>
+ <partNumber>12-02482</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-12-02482/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">12-02482;12-2482</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Fourth Circuit</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Appalachian Power Company</displayForm>
+ <namePart type="family">Appalachian Power Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Judy Hoschar</displayForm>
+ <namePart type="family">Hoschar</namePart>
+ <namePart type="given">Judy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Roger Hoschar</displayForm>
+ <namePart type="family">Hoschar</namePart>
+ <namePart type="given">Roger</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Industrial Contractors, Inc.</displayForm>
+ <namePart type="family">Industrial Contractors, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description></description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca4-12-02482</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca4</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtSortOrder>1040</courtSortOrder>
+ <caseNumber>12-02482</caseNumber>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <party fullName="Appalachian Power Company" lastName="Appalachian Power Company" role="Appellee"></party>
+ <party firstName="Judy" fullName="Judy Hoschar" lastName="Hoschar" role="Appellant"></party>
+ <party firstName="Roger" fullName="Roger Hoschar" lastName="Hoschar" role="Appellant"></party>
+ <party fullName="Industrial Contractors, Inc." lastName="Industrial Contractors, Inc." role=""></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca4-12-02482-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca4-12-02482/USCOURTS-ca4-12-02482-0/mods.xml">
+ <titleInfo>
+  <title>Roger Hoschar v. Appalachian Power Company</title>
+  <subTitle>PUBLISHED AUTHORED OPINION filed. Originating case number: 3:11-cv-00152. [999272204]. [12-2482]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-12-02482/pdf/USCOURTS-ca4-12-02482-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c7d2d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca4-12-02482/USCOURTS-ca4-12-02482-0</identifier>
+ <identifier type="former granule identifier">ca4-12-02482_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca4-12-02482/USCOURTS-ca4-12-02482-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-12-02482/pdf/USCOURTS-ca4-12-02482-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 12-02482; Roger Hoschar v. Appalachian Power Company; </searchTitle>
+  <courtName>United States Court of Appeals for the Fourth Circuit</courtName>
+  <accessId>USCOURTS-ca4-12-02482-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-07</dateIssued>
+  <docketText>PUBLISHED AUTHORED OPINION filed. Originating case number: 3:11-cv-00152. [999272204]. [12-2482]</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,370 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18172991b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03036</identifier>
+<identifier type="local">P0b002ee18172991b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_09-cr-03036</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_09-cr-03036</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:09-cr-03036</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Mark" fullName="Mark Steven Rublee" lastName="Rublee" middleName="Steven" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Rublee</title>
+ <partNumber>4:09-cr-03036</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03036/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:09-cr-03036;09-3036</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mark Steven Rublee</displayForm>
+ <namePart type="family">Rublee</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_09-cr-03036</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:09-cr-03036</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Mark" fullName="Mark Steven Rublee" lastName="Rublee" middleName="Steven" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03036-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Rublee</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Joel G. Lonowski appointed as counsel as to defendant Mark Steven Rublee as ordered by Magistrate Judge David L. Piester. (SED)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03036-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750ad5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-0</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03036_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03036/pdf/USCOURTS-ned-4_09-cr-03036-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03036; USA v. Rublee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03036-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-03-26</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Joel G. Lonowski appointed as counsel as to defendant Mark Steven Rublee as ordered by Magistrate Judge David L. Piester. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03036-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Rublee</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Mark Steven Rublee as ordered by Magistrate Judge David L. Piester. (SED)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03036-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750ad4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-1</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03036_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03036/pdf/USCOURTS-ned-4_09-cr-03036-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03036; USA v. Rublee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03036-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-03-26</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Mark Steven Rublee as ordered by Magistrate Judge David L. Piester. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03036-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Rublee</title>
+  <subTitle>ORDER regarding 17 Motion to Withdraw as Attorney as to Mark Steven Rublee (1). IT IS ORDERED:The motion of Joel G. Lonowski to withdraw as counsel for the defendant, filing no. 17, is granted. The Federal Public Defender for the District of Nebraska shall provide the court with a draft appointment order (CJA Form 20) for substitute counsel bearing the name and other identifying information of the CJA Panel attorney identified in accordance with the Criminal Justice Act Plan for this district. The new attorney shall enter an appearance promptly upon appointment. Ordered by Magistrate Judge David L. Piester. (LKH)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03036-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750ad9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-2</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03036_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03036/pdf/USCOURTS-ned-4_09-cr-03036-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03036; USA v. Rublee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03036-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-03-31</dateIssued>
+  <docketText>ORDER regarding 17 Motion to Withdraw as Attorney as to Mark Steven Rublee (1). IT IS ORDERED:The motion of Joel G. Lonowski to withdraw as counsel for the defendant, filing no. 17, is granted. The Federal Public Defender for the District of Nebraska shall provide the court with a draft appointment order (CJA Form 20) for substitute counsel bearing the name and other identifying information of the CJA Panel attorney identified in accordance with the Criminal Justice Act Plan for this district. The new attorney shall enter an appearance promptly upon appointment. Ordered by Magistrate Judge David L. Piester. (LKH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03036-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Rublee</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report and Addendum as to defendant Mark Steven Rublee. It is ordered that:... (2) The defendant&apos;s objection 34 that a prior conviction involves relevant conduct and is therefore not properly considered as criminal history and the related motion for variance and departure 33 will be resolved at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-08-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03036-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750ad3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-3</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03036_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03036/pdf/USCOURTS-ned-4_09-cr-03036-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03036; USA v. Rublee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03036-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-08-18</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report and Addendum as to defendant Mark Steven Rublee. It is ordered that:... (2) The defendant&apos;s objection 34 that a prior conviction involves relevant conduct and is therefore not properly considered as criminal history and the related motion for variance and departure 33 will be resolved at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03036-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Rublee</title>
+  <subTitle>JUDGMENT as to defendant Mark Steven Rublee (1). Defendant pleaded guilty to count I of the Indictment and is commited to the custody of the U.S. Bureau of Prisons for 132 months; 5 years supervised release with special conditions; $100 special assessment. Count II is dismissed on the motion of the United States as to this defendant only. Ordered by Judge Richard G. Kopf. (4 Certified copies to USM)(JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03036-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750a06</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-4</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03036_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03036/pdf/USCOURTS-ned-4_09-cr-03036-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03036; USA v. Rublee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03036-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-09-03</dateIssued>
+  <docketText>JUDGMENT as to defendant Mark Steven Rublee (1). Defendant pleaded guilty to count I of the Indictment and is commited to the custody of the U.S. Bureau of Prisons for 132 months; 5 years supervised release with special conditions; $100 special assessment. Count II is dismissed on the motion of the United States as to this defendant only. Ordered by Judge Richard G. Kopf. (4 Certified copies to USM)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03036-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Rublee</title>
+  <subTitle>ORDER as to defendant Mark Steven Rublee. It is ordered that: (1)The government&apos;s request for hearing is granted.(2)A hearing on the government&apos;s motion for reduction of sentence pursuant to Rule 35(b) 45 has been set before the undersigned United States district judge on Wednesday, October 20, 2010, at 1:00 p.m., in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska.(3)The United States Marshal is directed to return the defendant to the district for the hearing.(4)Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35(b) motion. If retained, counsel for the defendant remains as counsel for the defendant until the Rule 35(b) motion is resolved or until given leave to withdraw.(5)The Federal Public Defender shall provide CJA counsel with a new voucher.(6)The Clerk of the Court shall provide a copy of this order to counsel for the government and counsel for the defendant. The undersigned&apos;s judicial assistant will provide a copy to the Federal Public Defender. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03036-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750a05</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-5</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03036_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03036/pdf/USCOURTS-ned-4_09-cr-03036-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03036; USA v. Rublee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03036-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-09-22</dateIssued>
+  <docketText>ORDER as to defendant Mark Steven Rublee. It is ordered that: (1)The government&apos;s request for hearing is granted.(2)A hearing on the government&apos;s motion for reduction of sentence pursuant to Rule 35(b) 45 has been set before the undersigned United States district judge on Wednesday, October 20, 2010, at 1:00 p.m., in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska.(3)The United States Marshal is directed to return the defendant to the district for the hearing.(4)Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35(b) motion. If retained, counsel for the defendant remains as counsel for the defendant until the Rule 35(b) motion is resolved or until given leave to withdraw.(5)The Federal Public Defender shall provide CJA counsel with a new voucher.(6)The Clerk of the Court shall provide a copy of this order to counsel for the government and counsel for the defendant. The undersigned&apos;s judicial assistant will provide a copy to the Federal Public Defender. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03036-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Rublee</title>
+  <subTitle>ORDER as to defendant Mark Steven Rublee. It is ordered that: (1)The defendant&apos;s unopposed motion to continue and hold government&apos;s motion in abeyance 48 is granted.(2)The hearing on the government&apos;s motion for reduction of sentence pursuant to Rule 35(b) 45 and the government&apos;s motion to withdraw motion 47 has been rescheduled before the undersigned United States district judge to Tuesday, November 23, 2010, from 1:30 to 2:30 p.m., in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska.(3)The United States Marshal is directed to return the defendant to the district for the hearing. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03036-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750ad6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-6</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03036_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03036/pdf/USCOURTS-ned-4_09-cr-03036-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03036; USA v. Rublee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03036-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-10-20</dateIssued>
+  <docketText>ORDER as to defendant Mark Steven Rublee. It is ordered that: (1)The defendant&apos;s unopposed motion to continue and hold government&apos;s motion in abeyance 48 is granted.(2)The hearing on the government&apos;s motion for reduction of sentence pursuant to Rule 35(b) 45 and the government&apos;s motion to withdraw motion 47 has been rescheduled before the undersigned United States district judge to Tuesday, November 23, 2010, from 1:30 to 2:30 p.m., in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska.(3)The United States Marshal is directed to return the defendant to the district for the hearing. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03036-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Rublee</title>
+  <subTitle>ORDER as to defendant Mark Steven Rublee. Without objection by the defendant, IT IS ORDERED that:(1)The government&apos;s oral motion to continue the defendant&apos;s November 23, 2010 hearing is granted.(2)The hearing on the government&apos;s motion for reduction of sentence pursuant to Rule 35(b) 45 and the government&apos;s motion to withdraw motion 47 has been rescheduled before the undersigned United States district judge to Tuesday, December 14, 2010, at 1:00 p.m., in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska.(3)The United States Marshal is directed to return the defendant to the district for the hearing. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03036-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750ad8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-7</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03036_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03036/pdf/USCOURTS-ned-4_09-cr-03036-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03036; USA v. Rublee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03036-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-11-19</dateIssued>
+  <docketText>ORDER as to defendant Mark Steven Rublee. Without objection by the defendant, IT IS ORDERED that:(1)The government&apos;s oral motion to continue the defendant&apos;s November 23, 2010 hearing is granted.(2)The hearing on the government&apos;s motion for reduction of sentence pursuant to Rule 35(b) 45 and the government&apos;s motion to withdraw motion 47 has been rescheduled before the undersigned United States district judge to Tuesday, December 14, 2010, at 1:00 p.m., in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska.(3)The United States Marshal is directed to return the defendant to the district for the hearing. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03036-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Rublee</title>
+  <subTitle>ORDER permitting the defendant to proceed on appeal in forma pauperis as to defendant Mark Steven Rublee. Ordered by Judge Richard G. Kopf. (MKR)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03036-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750ad7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-8</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03036_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03036/USCOURTS-ned-4_09-cr-03036-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03036/pdf/USCOURTS-ned-4_09-cr-03036-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03036; USA v. Rublee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03036-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-01-03</dateIssued>
+  <docketText>ORDER permitting the defendant to proceed on appeal in forma pauperis as to defendant Mark Steven Rublee. Ordered by Judge Richard G. Kopf. (MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

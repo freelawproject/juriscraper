@@ -1,0 +1,232 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180fd4d84">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_09-cv-00317</identifier>
+<identifier type="local">P0b002ee180fd4d84</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-2_09-cv-00317</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-2_09-cv-00317</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>2:09-cv-00317</caseNumber>
+ <caseOffice>CDA - Northern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="John" fullName="John Doe 1-10" lastName="Doe 1-10" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Edmunds" lastName="Edmunds" role="Defendant"></party>
+ <party firstName="Clay" fullName="Clay Hilton" lastName="Hilton" role="Defendant"></party>
+ <party firstName="Renae" fullName="Renae Dawn Jones" lastName="Jones" middleName="Dawn" role="Plaintiff"></party>
+ <party fullName="Kootenai County" lastName="Kootenai County" role="Defendant"></party>
+ <party fullName="Kootenai County Sheriff&apos;s Department" lastName="Kootenai County Sheriff&apos;s Department" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Lyons" lastName="Lyons" role="Defendant"></party>
+ <party firstName="Rocky" fullName="Rocky Watson" lastName="Watson" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Jones v. Kootenai County et al</title>
+ <partNumber>2:09-cv-00317</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_09-cv-00317/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-00317;09-317</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>CDA - Northern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John Doe 1-10</displayForm>
+ <namePart type="family">Doe 1-10</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Edmunds</displayForm>
+ <namePart type="family">Edmunds</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Clay Hilton</displayForm>
+ <namePart type="family">Hilton</namePart>
+ <namePart type="given">Clay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Renae Dawn Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Renae</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kootenai County</displayForm>
+ <namePart type="family">Kootenai County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kootenai County Sheriff&apos;s Department</displayForm>
+ <namePart type="family">Kootenai County Sheriff&apos;s Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Lyons</displayForm>
+ <namePart type="family">Lyons</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rocky Watson</displayForm>
+ <namePart type="family">Watson</namePart>
+ <namePart type="given">Rocky</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-2_09-cv-00317</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>2:09-cv-00317</caseNumber>
+ <caseOffice>CDA - Northern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="John" fullName="John Doe 1-10" lastName="Doe 1-10" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Edmunds" lastName="Edmunds" role="Defendant"></party>
+ <party firstName="Clay" fullName="Clay Hilton" lastName="Hilton" role="Defendant"></party>
+ <party firstName="Renae" fullName="Renae Dawn Jones" lastName="Jones" middleName="Dawn" role="Plaintiff"></party>
+ <party fullName="Kootenai County" lastName="Kootenai County" role="Defendant"></party>
+ <party fullName="Kootenai County Sheriff&apos;s Department" lastName="Kootenai County Sheriff&apos;s Department" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Lyons" lastName="Lyons" role="Defendant"></party>
+ <party firstName="Rocky" fullName="Rocky Watson" lastName="Watson" role="Defendant"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-2_09-cv-00317-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_09-cv-00317/USCOURTS-idd-2_09-cv-00317-0/mods.xml">
+ <titleInfo>
+  <title>Jones v. Kootenai County et al</title>
+  <subTitle>MEMORANDUM ORDER granting 22 Motion for Summary Judgment; Case dismissed in its entirety. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-2_09-cv-00317-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fe5b4b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_09-cv-00317/USCOURTS-idd-2_09-cv-00317-0</identifier>
+ <identifier type="former granule identifier">idd-2_09-cv-00317_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_09-cv-00317/USCOURTS-idd-2_09-cv-00317-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_09-cv-00317/pdf/USCOURTS-idd-2_09-cv-00317-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-00317; Jones v. Kootenai County et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-2_09-cv-00317-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-13</dateIssued>
+  <docketText>MEMORANDUM ORDER granting 22 Motion for Summary Judgment; Case dismissed in its entirety. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-2_09-cv-00317-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_09-cv-00317/USCOURTS-idd-2_09-cv-00317-1/mods.xml">
+ <titleInfo>
+  <title>Jones v. Kootenai County et al</title>
+  <subTitle>JUDGMENT DISMISSING CASE IN ITS ENTIRETY. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-2_09-cv-00317-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fe5b4c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_09-cv-00317/USCOURTS-idd-2_09-cv-00317-1</identifier>
+ <identifier type="former granule identifier">idd-2_09-cv-00317_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_09-cv-00317/USCOURTS-idd-2_09-cv-00317-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_09-cv-00317/pdf/USCOURTS-idd-2_09-cv-00317-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-00317; Jones v. Kootenai County et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-2_09-cv-00317-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-13</dateIssued>
+  <docketText>JUDGMENT DISMISSING CASE IN ITS ENTIRETY. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</docketText>
+</extension>
+</relatedItem>
+</mods>

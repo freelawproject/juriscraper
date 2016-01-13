@@ -1,0 +1,1168 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee189970a4a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-07-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132</identifier>
+<identifier type="local">P0b002ee189970a4a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-07-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-07-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_09-cv-01132</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_09-cv-01132</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:09-cv-01132</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="R." fullName="R. Greer" lastName="Greer" role="Defendant"></party>
+ <party firstName="Amilcar" fullName="Amilcar Guevara" lastName="Guevara" role="Plaintiff"></party>
+ <party firstName="C." fullName="C. Macarvel" lastName="Macarvel" role="Defendant"></party>
+ <party firstName="A." fullName="A. Ralls" lastName="Ralls" role="Defendant"></party>
+ <party firstName="S." fullName="S. A. Ramirez" lastName="Ramirez" middleName="A." role="Defendant"></party>
+ <party firstName="B." fullName="B. P. Scruggs" lastName="Scruggs" middleName="P." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Guevara v. Ralls et al</title>
+ <partNumber>2:09-cv-01132</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-01132;09-1132</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>R. Greer</displayForm>
+ <namePart type="family">Greer</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Amilcar Guevara</displayForm>
+ <namePart type="family">Guevara</namePart>
+ <namePart type="given">Amilcar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>C. Macarvel</displayForm>
+ <namePart type="family">Macarvel</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Ralls</displayForm>
+ <namePart type="family">Ralls</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. A. Ramirez</displayForm>
+ <namePart type="family">Ramirez</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>B. P. Scruggs</displayForm>
+ <namePart type="family">Scruggs</namePart>
+ <namePart type="given">B.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_09-cv-01132</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:09-cv-01132</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="R." fullName="R. Greer" lastName="Greer" role="Defendant"></party>
+ <party firstName="Amilcar" fullName="Amilcar Guevara" lastName="Guevara" role="Plaintiff"></party>
+ <party firstName="C." fullName="C. Macarvel" lastName="Macarvel" role="Defendant"></party>
+ <party firstName="A." fullName="A. Ralls" lastName="Ralls" role="Defendant"></party>
+ <party firstName="S." fullName="S. A. Ramirez" lastName="Ramirez" middleName="A." role="Defendant"></party>
+ <party firstName="B." fullName="B. P. Scruggs" lastName="Scruggs" middleName="P." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kimberly J. Mueller on 05/12/09 ordering plaintiff shall submit within 30 days from the date of this order, a completed affidavit in support of his request to proceed in forma pauperis on the form provided by the clerk of court. The clerk of the court shall send plaintiff a new application to proceed IFP by a prisoner. Plaintiff shall submit within 30 days from the date of this order, a certified copy of his prison trust account statement for the 6 month period immediately preceding the filing of the complaint. (Plummer, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-05-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c577</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-0</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-05-13</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kimberly J. Mueller on 05/12/09 ordering plaintiff shall submit within 30 days from the date of this order, a completed affidavit in support of his request to proceed in forma pauperis on the form provided by the clerk of court. The clerk of the court shall send plaintiff a new application to proceed IFP by a prisoner. Plaintiff shall submit within 30 days from the date of this order, a certified copy of his prison trust account statement for the 6 month period immediately preceding the filing of the complaint. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kimberly J. Mueller on 9/28/09 ORDERING that pltf&apos;s 12 and 14 requests to proceed IFP are GRANTED; pltf to pay the $350.00 filing fee in accordance w/ the concurrent CDC order; service is appropriate for dfts A. Ralls, B. P. Scruggs, S. A. Ramirez and C. Macarvel; the clerk to send pltf forms for service to be completed and returned w/in 30 days, along w/ the Notice of Submission.(Yin, K)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c556</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-1</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-09-29</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kimberly J. Mueller on 9/28/09 ORDERING that pltf&apos;s 12 and 14 requests to proceed IFP are GRANTED; pltf to pay the $350.00 filing fee in accordance w/ the concurrent CDC order; service is appropriate for dfts A. Ralls, B. P. Scruggs, S. A. Ramirez and C. Macarvel; the clerk to send pltf forms for service to be completed and returned w/in 30 days, along w/ the Notice of Submission.(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Amilcar Guevara signed by Magistrate Judge Kimberly J. Mueller on 9/28/09. CDC is to collect monthly payments and fwd to the clerk until the $350 filing fee is paid in full. Clerk is directed to serve this order and copy of pltf&apos;s IFP on the Director of CDC. Clerk to also serve Financial w/ a copy of this order. (cc: CDC, Financial)(Yin, K)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c56f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-2</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-09-29</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Amilcar Guevara signed by Magistrate Judge Kimberly J. Mueller on 9/28/09. CDC is to collect monthly payments and fwd to the clerk until the $350 filing fee is paid in full. Clerk is directed to serve this order and copy of pltf&apos;s IFP on the Director of CDC. Clerk to also serve Financial w/ a copy of this order. (cc: CDC, Financial)(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER DIRECTING USM to serve the Complaint filed on 4/24/2009 on A. Ralls, B. P. Scruggs, S. A. Ramirez, and C. Macarvel within 10 days signed by Magistrate Judge Kimberly J. Mueller on 10/27/2009; the clerk is directed to forward submission of documents to the USM; the clerk shall serve the pltf with a copy of the local rules. (Suttles, J)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c552</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-3</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-10-27</dateIssued>
+  <docketText>ORDER DIRECTING USM to serve the Complaint filed on 4/24/2009 on A. Ralls, B. P. Scruggs, S. A. Ramirez, and C. Macarvel within 10 days signed by Magistrate Judge Kimberly J. Mueller on 10/27/2009; the clerk is directed to forward submission of documents to the USM; the clerk shall serve the pltf with a copy of the local rules. (Suttles, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kimberly J. Mueller on 1/27/10 DENYING 23 Motion to Appoint Counsel.(Dillon, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c571</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-4</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-01-28</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kimberly J. Mueller on 1/27/10 DENYING 23 Motion to Appoint Counsel.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kimberly J. Mueller on 2/11/2010 ORDERING the clerk to send pltf forms for service of dft A. Ralls to be completed and returned w/in 60 days, along w/ the Notice of Submission, or show good cause why he cannot provide such information. (Yin, K)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c53d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-5</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-02-11</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kimberly J. Mueller on 2/11/2010 ORDERING the clerk to send pltf forms for service of dft A. Ralls to be completed and returned w/in 60 days, along w/ the Notice of Submission, or show good cause why he cannot provide such information. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 2/16/10 ORDERING the clerk to send pltf forms for service of dft Ralls to be completed and returned w/in 60 days, along w/ the Notice of Submission. (Yin, K)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c558</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-6</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-02-16</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 2/16/10 ORDERING the clerk to send pltf forms for service of dft Ralls to be completed and returned w/in 60 days, along w/ the Notice of Submission. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>DISCOVERY and SCHEDULING ORDER signed by Magistrate Judge Kendall J. Newman on 2/19/2010: Discovery due by 5/21/2010; All Pretrial Motions, except motions to compel discover, due on or before 8/13/2010; Pretrial Conference and Trial dates will be set as appropriate. (Yin, K)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c55a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-7</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-02-22</dateIssued>
+  <docketText>DISCOVERY and SCHEDULING ORDER signed by Magistrate Judge Kendall J. Newman on 2/19/2010: Discovery due by 5/21/2010; All Pretrial Motions, except motions to compel discover, due on or before 8/13/2010; Pretrial Conference and Trial dates will be set as appropriate. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 3/4/10 ORDERING that 41 and 42 Motions for production of documents shall be placed in the court file and disregarded. (Dillon, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c53f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-8</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2010-03-05</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 3/4/10 ORDERING that 41 and 42 Motions for production of documents shall be placed in the court file and disregarded. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Judge Frank C. Damrell, Jr on 3/9/10 ORDERING that Plaintiff&apos;s 3/1/10 MOTION for Reconsideration 39 is DENIED. (Mena-Sanchez, L)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c573</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-9</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2010-03-10</dateIssued>
+  <docketText>ORDER signed by Judge Frank C. Damrell, Jr on 3/9/10 ORDERING that Plaintiff&apos;s 3/1/10 MOTION for Reconsideration 39 is DENIED. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 4/28/10 ORDERING that Plaintiff&apos;s 4/12/10 MOTION 49 is GRANTED in part and DENIED in part, in that the attorney for the other defendants shall forward the address for defendant Ralls to the Court in camera within 14 days. If Plaintiff&apos;s representations are not accurate attorney for the other defendants shall briefly address the issue within 14 days.(Mena-Sanchez, L)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c540</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-10</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2010-04-28</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 4/28/10 ORDERING that Plaintiff&apos;s 4/12/10 MOTION 49 is GRANTED in part and DENIED in part, in that the attorney for the other defendants shall forward the address for defendant Ralls to the Court in camera within 14 days. If Plaintiff&apos;s representations are not accurate attorney for the other defendants shall briefly address the issue within 14 days.(Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 4/28/10 Recommending that the Motion to Dismiss filed on 2/17/10 35 be DENIED and defendant McCarvel answer the complaint within sixty days. These Findings and Recommendations are submitted to United State District Judge Frank C. Damrell, Jr. Within twenty one days after being served with these Findings and Recommendations, any party may file written objections with the Court and serve a copy on all parties. (Mena-Sanchez, L)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c53e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-11</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-04-29</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 4/28/10 Recommending that the Motion to Dismiss filed on 2/17/10 35 be DENIED and defendant McCarvel answer the complaint within sixty days. These Findings and Recommendations are submitted to United State District Judge Frank C. Damrell, Jr. Within twenty one days after being served with these Findings and Recommendations, any party may file written objections with the Court and serve a copy on all parties. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 4/30/2010 ORDERING The court&apos;s Order 53 is VACATED. Pltf&apos;s 49 Motion for an order is GRANTED; the Clerk of the Court is directed to keep 52 the documents under seal during the pendency of this litigation. (Reader, L)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c545</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-12</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2010-04-30</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 4/30/2010 ORDERING The court&apos;s Order 53 is VACATED. Pltf&apos;s 49 Motion for an order is GRANTED; the Clerk of the Court is directed to keep 52 the documents under seal during the pendency of this litigation. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>[DISCHARGED PURSUANT TO 72 ORDER] ORDER to SHOW CAUSE signed by Magistrate Judge Kendall J. Newman on 5/19/2010 ORDERING that dfts Ramirez, McCarvel and Scruggs shall SHOW CAUSE, w/in 5 days, why pltf&apos;s second motion to compel should not be granted, and why these dfts should not be sanctioned for their failure to respond to a court order. (Yin, K) Modified on 6/21/2010 (Yin, K).</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c57c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-13</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2010-05-20</dateIssued>
+  <docketText>[DISCHARGED PURSUANT TO 72 ORDER] ORDER to SHOW CAUSE signed by Magistrate Judge Kendall J. Newman on 5/19/2010 ORDERING that dfts Ramirez, McCarvel and Scruggs shall SHOW CAUSE, w/in 5 days, why pltf&apos;s second motion to compel should not be granted, and why these dfts should not be sanctioned for their failure to respond to a court order. (Yin, K) Modified on 6/21/2010 (Yin, K).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER adopting 54 FINDINGS AND RECOMMENDATIONS signed by Judge Frank C. Damrell, Jr on 5/27/2010: The motion to dismiss is denied; and defendant McCarvel shall answer the complaint w/in 60 days of the date of this order.(Matson, R)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c56e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-14</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2010-05-28</dateIssued>
+  <docketText>ORDER adopting 54 FINDINGS AND RECOMMENDATIONS signed by Judge Frank C. Damrell, Jr on 5/27/2010: The motion to dismiss is denied; and defendant McCarvel shall answer the complaint w/in 60 days of the date of this order.(Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 6/18/2010 ORDERING that the 64 Order to Show Cause is DISCHARGED; pltf&apos;s 47 motion to compel production of the video recording is DENIED; pltf&apos;s 47 motion to compel further production of docs is GRANTED in part and DENIED in part; pltf&apos;s 68 request for nunc pro tunc extension to serve request for admissions is DENIED; pltf&apos;s 69 request to shorten the deadline by which dft McCarvel must file a responsive pleading is DENIED; pltf&apos;s 70 request is PARTIALLY GRANTED re dft McCarvel&apos;s answer and responses; pltf&apos;s 71 motion to compel dft Ramirez to fully respond to the 3/15/10 set of interrogatories is DENIED w/out prejudice.(See order for details) (Yin, K)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c570</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-15</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2010-06-21</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 6/18/2010 ORDERING that the 64 Order to Show Cause is DISCHARGED; pltf&apos;s 47 motion to compel production of the video recording is DENIED; pltf&apos;s 47 motion to compel further production of docs is GRANTED in part and DENIED in part; pltf&apos;s 68 request for nunc pro tunc extension to serve request for admissions is DENIED; pltf&apos;s 69 request to shorten the deadline by which dft McCarvel must file a responsive pleading is DENIED; pltf&apos;s 70 request is PARTIALLY GRANTED re dft McCarvel&apos;s answer and responses; pltf&apos;s 71 motion to compel dft Ramirez to fully respond to the 3/15/10 set of interrogatories is DENIED w/out prejudice.(See order for details) (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Judge Frank C. Damrell, Jr on 07/30/10 PARTIALLY GRANTING 74 Motion for Reconsideration; the Order of the Magistrate Judge filed 06/21/10 is AFFIRMED; 71 Motion to compel is DENIED without prejudice, plaintiff is GRANTED an additional 21 days to file a motion to compel responses by defendant Scruggs, which shall be briefed pursuant to Local Rule 230(I); the clerk is directed to serve a current copy of Local Rule 230 on plaintiff. (Williams, D)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c555</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-16</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2010-08-02</dateIssued>
+  <docketText>ORDER signed by Judge Frank C. Damrell, Jr on 07/30/10 PARTIALLY GRANTING 74 Motion for Reconsideration; the Order of the Magistrate Judge filed 06/21/10 is AFFIRMED; 71 Motion to compel is DENIED without prejudice, plaintiff is GRANTED an additional 21 days to file a motion to compel responses by defendant Scruggs, which shall be briefed pursuant to Local Rule 230(I); the clerk is directed to serve a current copy of Local Rule 230 on plaintiff. (Williams, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Judge Frank C. Damrell, Jr. on 8/26/2010 ORDERING 82 that, upon reconsideration, the 81 order of the magistrate judge, is AFFIRMED. (Reader, L)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c551</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-17</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2010-08-26</dateIssued>
+  <docketText>ORDER signed by Judge Frank C. Damrell, Jr. on 8/26/2010 ORDERING 82 that, upon reconsideration, the 81 order of the magistrate judge, is AFFIRMED. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-18/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 9/29/10 ORDERING that Counsels September 29, 2010 motion for extension of time for defendant A.Ralls to respond to the complaint is granted; defendant Ralls is granted thirty days from the date of this order in which to respond to the complaint. Plaintiffs 84 motion to order defendant A. Ralls to file an answer is partially granted; Plaintiffs September 13, 2010 motion for default is denied without prejudice; Counsels 86 motion for extension of time to respond to plaintiffs motion for default is denied; and Counsel for defendants is directed to serve a copy of this order on defendant A. Ralls.. (Dillon, M)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c578</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-18</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2010-09-30</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 9/29/10 ORDERING that Counsels September 29, 2010 motion for extension of time for defendant A.Ralls to respond to the complaint is granted; defendant Ralls is granted thirty days from the date of this order in which to respond to the complaint. Plaintiffs 84 motion to order defendant A. Ralls to file an answer is partially granted; Plaintiffs September 13, 2010 motion for default is denied without prejudice; Counsels 86 motion for extension of time to respond to plaintiffs motion for default is denied; and Counsel for defendants is directed to serve a copy of this order on defendant A. Ralls.. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-19/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 11/12/2010 ORDERING dft Ralls to SHOW CAUSE, w/in 21 days, why default should not be entered; the clerk to fwd a copy of this order to dft A. Ralls. (Yin, K)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c546</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-19</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2010-11-12</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 11/12/2010 ORDERING dft Ralls to SHOW CAUSE, w/in 21 days, why default should not be entered; the clerk to fwd a copy of this order to dft A. Ralls. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-20/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 01/11/11 ordering the 11/12/10 order to show cause is discharged. Plaintiff&apos;s 01/06/11 motion to execute default judgment 93 is denied. (Plummer, M)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c57a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-20</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2011-01-12</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 01/11/11 ordering the 11/12/10 order to show cause is discharged. Plaintiff&apos;s 01/06/11 motion to execute default judgment 93 is denied. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-21/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>red to Judge Frank C. Damrell, Jr.; Objections due 21 days. (Yin, K) Modified on 3/8/2012 (Yin, K).[VACATED PURSUANT TO 128 ORDER] FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 5/3/2011 RECOMMENDING that the 85 motion for summary judgment be granted as to dfts S. A. Ramirez, B. P. Scruggs and C. Macarvel. Refer</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c575</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-21</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2011-05-04</dateIssued>
+  <docketText>red to Judge Frank C. Damrell, Jr.; Objections due 21 days. (Yin, K) Modified on 3/8/2012 (Yin, K).[VACATED PURSUANT TO 128 ORDER] FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 5/3/2011 RECOMMENDING that the 85 motion for summary judgment be granted as to dfts S. A. Ramirez, B. P. Scruggs and C. Macarvel. Refer</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-22/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER to SHOW CAUSE signed by Magistrate Judge Kendall J. Newman on 05/10/11 ordering within 21 days from the date of this order, plaintiff shall show cause, if any he has why his claims against defendant A. Ralls are not barred under Heck v. Humphrey. Defendant Ralls shall file a reply, if any, 7 days thereafter. (Plummer, M)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c57b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-22</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2011-05-11</dateIssued>
+  <docketText>ORDER to SHOW CAUSE signed by Magistrate Judge Kendall J. Newman on 05/10/11 ordering within 21 days from the date of this order, plaintiff shall show cause, if any he has why his claims against defendant A. Ralls are not barred under Heck v. Humphrey. Defendant Ralls shall file a reply, if any, 7 days thereafter. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-23/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 5/31/11 GRANTING 107 MOTION for 30-DAY EXTENSION OF TIME. Plaintiff is GRANTED 30 days from the date of this order in which to file and serve objections to the 5/4/11 findings and recommendations. Defendants&apos; response, if any, shall be filed 7 days thereafter. (Meuleman, A)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c541</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-23</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2011-05-31</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 5/31/11 GRANTING 107 MOTION for 30-DAY EXTENSION OF TIME. Plaintiff is GRANTED 30 days from the date of this order in which to file and serve objections to the 5/4/11 findings and recommendations. Defendants&apos; response, if any, shall be filed 7 days thereafter. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-24/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 06/21/11 ordering that plaintiff is granted 30 days from the date of this order in which to respond to the 05/11/11 order to show cause, and to file an opposition to defendant Rall&apos;s motion for summary judgment. (Plummer, M)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c579</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-24</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2011-06-22</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 06/21/11 ordering that plaintiff is granted 30 days from the date of this order in which to respond to the 05/11/11 order to show cause, and to file an opposition to defendant Rall&apos;s motion for summary judgment. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-25/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>(VACATED per Order 125) ORDER adopting 100 FINDINGS AND RECOMMENDATIONS IN FULL signed by Judge Frank C. Damrell, Jr on 8/18/11: The September 24, 2010 motion for summary judgment 85 is granted as to defendants Ramirez, Scruggs and McCarvel. (Kaminski, H) Modified on 2/21/2012 (Schultz, C).</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c542</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-25</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2011-08-18</dateIssued>
+  <docketText>(VACATED per Order 125) ORDER adopting 100 FINDINGS AND RECOMMENDATIONS IN FULL signed by Judge Frank C. Damrell, Jr on 8/18/11: The September 24, 2010 motion for summary judgment 85 is granted as to defendants Ramirez, Scruggs and McCarvel. (Kaminski, H) Modified on 2/21/2012 (Schultz, C).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-26/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>[F&amp;R VACATED PURSUANT TO 128 ORDER] ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 8/23/2011 ORDERING that the 101 Order to Show Cause is DISCHARGED. IT IS RECOMMENDED that the 102 Motion for Summary Judgment be granted as to Dft Ralls, and this action be dismissed without prejudice. Motion referred to Judge Frank C. Damrell, Jr.. Objections to F&amp;R due within 21 days. (Zignago, K.) Modified on 3/8/2012 (Yin, K).</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c559</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-26</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2011-08-24</dateIssued>
+  <docketText>[F&amp;R VACATED PURSUANT TO 128 ORDER] ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 8/23/2011 ORDERING that the 101 Order to Show Cause is DISCHARGED. IT IS RECOMMENDED that the 102 Motion for Summary Judgment be granted as to Dft Ralls, and this action be dismissed without prejudice. Motion referred to Judge Frank C. Damrell, Jr.. Objections to F&amp;R due within 21 days. (Zignago, K.) Modified on 3/8/2012 (Yin, K).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-27/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 2/16/12; IT IS HEREBY ORDERED that: Plaintiff&apos;s September 9, 2011 motion for reconsideration (ECF 123) is granted; Upon reconsideration, the August 18, 2011 order (ECF 118) is vacated; Within fourteen days from the date of this order, counsel for defendant Scruggs shall submit the April 30, 2007 &quot;video CD&quot; or a copy of the April 30, 2007 &quot;video CD&quot; to the court, or provide a declaration why the &quot;video CD&quot; cannot be produced; and This case is remanded to the magistrate judge for further proceedings.(Matson, R)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-27.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c574</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-27</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2012-02-17</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 2/16/12; IT IS HEREBY ORDERED that: Plaintiff&apos;s September 9, 2011 motion for reconsideration (ECF 123) is granted; Upon reconsideration, the August 18, 2011 order (ECF 118) is vacated; Within fourteen days from the date of this order, counsel for defendant Scruggs shall submit the April 30, 2007 &quot;video CD&quot; or a copy of the April 30, 2007 &quot;video CD&quot; to the court, or provide a declaration why the &quot;video CD&quot; cannot be produced; and This case is remanded to the magistrate judge for further proceedings.(Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-28/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 3/7/2012 ORDERING that the 100 and 119 findings and recommendations are VACATED; and RECOMMENDING that defendants motions for summary judgment based on Heck be denied; the 85 motion for summary judgment be granted as to defendants Ramirez, Scruggs and Macarvel; and defendant Ralls&apos; 102 motion for summary judgment be denied. Referred to Judge Kimberly J. Mueller; Objections due within 14 days. (Yin, K)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-28.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c557</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-28</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2012-03-08</dateIssued>
+  <docketText>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 3/7/2012 ORDERING that the 100 and 119 findings and recommendations are VACATED; and RECOMMENDING that defendants motions for summary judgment based on Heck be denied; the 85 motion for summary judgment be granted as to defendants Ramirez, Scruggs and Macarvel; and defendant Ralls&apos; 102 motion for summary judgment be denied. Referred to Judge Kimberly J. Mueller; Objections due within 14 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-29/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 3/29/2012 ORDERING 128 FINDINGS AND RECOMMENDATIONS are ADOPTED in full; Defendants&apos; motions for summaryjudgment based on Heck v. Humphrey, 512 USC 477 (1994) are DENIED; 85 Motion for Summary Judgment is GRANTED as to defendants Scruggs, Ramirez and McCarvel; 102 Motion for Summary Judgment by defendant Ralls is DENIED. (Waggoner, D)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-29.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c576</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-29</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2012-03-29</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 3/29/2012 ORDERING 128 FINDINGS AND RECOMMENDATIONS are ADOPTED in full; Defendants&apos; motions for summaryjudgment based on Heck v. Humphrey, 512 USC 477 (1994) are DENIED; 85 Motion for Summary Judgment is GRANTED as to defendants Scruggs, Ramirez and McCarvel; 102 Motion for Summary Judgment by defendant Ralls is DENIED. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-30/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 8/22/12 ORDERING that within thirty days from the date of this order, plaintiff shall file the attached notice of election form indicating whether he wishes to re-open the motion for summary judgment. Failure to timely respond to this order shall be deemed plaintiff&apos;s waiver to the defects in the timing of the notice of the motions for summary judgment, and this case will proceed to trial as scheduled.(Matson, R)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-30.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c553</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-30</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2012-08-22</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 8/22/12 ORDERING that within thirty days from the date of this order, plaintiff shall file the attached notice of election form indicating whether he wishes to re-open the motion for summary judgment. Failure to timely respond to this order shall be deemed plaintiff&apos;s waiver to the defects in the timing of the notice of the motions for summary judgment, and this case will proceed to trial as scheduled.(Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-31/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 9/18/12 ORDERING that the March 8, 2012 findings and recommendations and the September 24, 2012 order 128, 129 are VACATED, in part, only as to the rulings on defendants September 24, 2010 motion for summary judgment; Defendants 85 motion for summary judgment is DENIED without prejudice; Within 30 days from the date of this order, defendants Ramirez, Scruggs, and Macarvel shall re- file the motion for summary judgment, accompanied by the attached notice; The 130 further scheduling order is VACATED; and the November 1, 2012 trial confirmation hearing, and the December 10, 2012 jury trial, set before the undersigned, are VACATED.(Dillon, M)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-31.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c554</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-31</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2012-09-19</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 9/18/12 ORDERING that the March 8, 2012 findings and recommendations and the September 24, 2012 order 128, 129 are VACATED, in part, only as to the rulings on defendants September 24, 2010 motion for summary judgment; Defendants 85 motion for summary judgment is DENIED without prejudice; Within 30 days from the date of this order, defendants Ramirez, Scruggs, and Macarvel shall re- file the motion for summary judgment, accompanied by the attached notice; The 130 further scheduling order is VACATED; and the November 1, 2012 trial confirmation hearing, and the December 10, 2012 jury trial, set before the undersigned, are VACATED.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-32/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 08/02/13 recommending that defendants&apos; motion for summary judgment base on Heck be denied. The 9/27/12 motion for summary judgment 137 be granted as to defendants Scruggs, Ramirez and McCarvel and this case be remanded to the undersigned for scheduling as to plaintiff&apos;s remaining claim against defendant Ralls. MOTION for SUMMARY JUDGMENT 137 referred to Judge Troy L. Nunley; Objections due within 14 days. (Plummer, M)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-32.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c50c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-32</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2013-08-05</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 08/02/13 recommending that defendants&apos; motion for summary judgment base on Heck be denied. The 9/27/12 motion for summary judgment 137 be granted as to defendants Scruggs, Ramirez and McCarvel and this case be remanded to the undersigned for scheduling as to plaintiff&apos;s remaining claim against defendant Ralls. MOTION for SUMMARY JUDGMENT 137 referred to Judge Troy L. Nunley; Objections due within 14 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-33/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER adopting 146 FINDINGS AND RECOMMENDATIONS IN FULL signed by District Judge Troy L. Nunley on 10/2/13: Defendants&apos; motion for summary judgment based on Heck v. Humphrey, 512 U.S. 477 (1994), is denied. MOTION for summary judgment 137 is granted as to defendants Scruggs, Ramirez and McCarvel. This matter is remanded to the magistrate judge for scheduling as to plaintiff&apos;s remaining claim against defendant Ralls.(Kaminski, H)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-33.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c572</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-33</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2013-10-02</dateIssued>
+  <docketText>ORDER adopting 146 FINDINGS AND RECOMMENDATIONS IN FULL signed by District Judge Troy L. Nunley on 10/2/13: Defendants&apos; motion for summary judgment based on Heck v. Humphrey, 512 U.S. 477 (1994), is denied. MOTION for summary judgment 137 is granted as to defendants Scruggs, Ramirez and McCarvel. This matter is remanded to the magistrate judge for scheduling as to plaintiff&apos;s remaining claim against defendant Ralls.(Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-34/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>FURTHER SCHEDULING ORDER signed by Magistrate Judge Kendall J. Newman on 10/11/13 ORDERING that Discovery is closed. Law and motion is closed. Plaintiff shall file and serve his pretrial statement and any motions necessary to obtain the attendance of witnesses at trial on or before December 13, 2013. Defendants shall file their pretrial statement on or before February 13, 2014. This matter is set for jury trial before the Honorable Troy L. Nunley on May 19, 2014, at 9:00 a.m., in Courtroom #2.(Dillon, M)</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-34.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c544</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-34</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2013-10-11</dateIssued>
+  <docketText>FURTHER SCHEDULING ORDER signed by Magistrate Judge Kendall J. Newman on 10/11/13 ORDERING that Discovery is closed. Law and motion is closed. Plaintiff shall file and serve his pretrial statement and any motions necessary to obtain the attendance of witnesses at trial on or before December 13, 2013. Defendants shall file their pretrial statement on or before February 13, 2014. This matter is set for jury trial before the Honorable Troy L. Nunley on May 19, 2014, at 9:00 a.m., in Courtroom #2.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01132-35" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-35/mods.xml">
+ <titleInfo>
+  <title>(PC) Guevara v. Ralls et al</title>
+  <subTitle>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 1/2/2014 ORDERING that defendants are relieved from filing a pretrial statement; the 3/21/2014 pretrial conference is VACATED; and RECOMMENDING that this action be dismissed without prejudice. Referred to Judge Troy L. Nunley; Objections due within 14 days. (Yin, K)</subTitle>
+  <partNumber>35</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-35.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18997c543</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-35</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01132_35.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01132/USCOURTS-caed-2_09-cv-01132-35/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01132/pdf/USCOURTS-caed-2_09-cv-01132-35.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01132; (PC) Guevara v. Ralls et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01132-35</accessId>
+  <sequenceNumber>35</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 1/2/2014 ORDERING that defendants are relieved from filing a pretrial statement; the 3/21/2014 pretrial conference is VACATED; and RECOMMENDING that this action be dismissed without prejudice. Referred to Judge Troy L. Nunley; Objections due within 14 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+</mods>

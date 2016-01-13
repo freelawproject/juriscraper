@@ -1,0 +1,393 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181142caa">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_00-cv-01422</identifier>
+<identifier type="local">P0b002ee181142caa</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_00-cv-01422</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_00-cv-01422</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:00-cv-01422</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Daniel" fullName="Daniel Diamond" lastName="Diamond" role="Cross Claimant"></party>
+ <party firstName="Daniel" fullName="Daniel Diamond" lastName="Diamond" role="Cross Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Diamond" lastName="Diamond" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Fredericks" lastName="Fredericks" role="Cross Claimant"></party>
+ <party firstName="Robert" fullName="Robert Fredericks" lastName="Fredericks" role="Cross Defendant"></party>
+ <party firstName="Robert" fullName="Robert Fredericks" lastName="Fredericks" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Hoy" lastName="Hoy" role="Cross Claimant"></party>
+ <party firstName="Matthew" fullName="Matthew Hoy" lastName="Hoy" role="Cross Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Hoy" lastName="Hoy" role="Defendant"></party>
+ <party firstName="Raymond" fullName="Raymond Hoy" lastName="Hoy" role="Cross Claimant"></party>
+ <party firstName="Raymond" fullName="Raymond Hoy" lastName="Hoy" role="Cross Defendant"></party>
+ <party firstName="Raymond" fullName="Raymond Hoy" lastName="Hoy" role="Defendant"></party>
+ <party firstName="Edward" fullName="Edward J. Ritz" lastName="Ritz" middleName="J." role="Cross Claimant"></party>
+ <party firstName="Edward" fullName="Edward J. Ritz" lastName="Ritz" middleName="J." role="Cross Defendant"></party>
+ <party firstName="Edward" fullName="Edward J. Ritz" lastName="Ritz" middleName="J." role="Defendant"></party>
+ <party firstName="City of" fullName="City of Schenectady" lastName="Schenectady" role="Cross Claimant"></party>
+ <party firstName="City of" fullName="City of Schenectady" lastName="Schenectady" role="Cross Defendant"></party>
+ <party firstName="City of" fullName="City of Schenectady" lastName="Schenectady" role="Defendant"></party>
+ <party firstName="County of" fullName="County of Schenectady" lastName="Schenectady" role="Cross Claimant"></party>
+ <party firstName="County of" fullName="County of Schenectady" lastName="Schenectady" role="Cross Defendant"></party>
+ <party firstName="County of" fullName="County of Schenectady" lastName="Schenectady" role="Defendant"></party>
+ <party fullName="Schenectady City Police Department" lastName="Schenectady City Police Department" role="Cross Claimant"></party>
+ <party fullName="Schenectady City Police Department" lastName="Schenectady City Police Department" role="Cross Defendant"></party>
+ <party fullName="Schenectady City Police Department" lastName="Schenectady City Police Department" role="Defendant"></party>
+ <party fullName="Schenectady County Sheriff Department" lastName="Schenectady County Sheriff Department" role="Cross Claimant"></party>
+ <party fullName="Schenectady County Sheriff Department" lastName="Schenectady County Sheriff Department" role="Cross Defendant"></party>
+ <party fullName="Schenectady County Sheriff Department" lastName="Schenectady County Sheriff Department" role="Defendant"></party>
+ <party firstName="Linda" fullName="Linda Williams" lastName="Williams" role="Plaintiff"></party>
+ <party firstName="Mary" fullName="Mary Williams" lastName="Williams" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Williams, et al v. City of Schenectady, et al</title>
+ <partNumber>1:00-cv-01422</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_00-cv-01422/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:00-cv-01422;00-1422</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Daniel Diamond</displayForm>
+ <namePart type="family">Diamond</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Diamond</displayForm>
+ <namePart type="family">Diamond</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Diamond</displayForm>
+ <namePart type="family">Diamond</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Fredericks</displayForm>
+ <namePart type="family">Fredericks</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Fredericks</displayForm>
+ <namePart type="family">Fredericks</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Fredericks</displayForm>
+ <namePart type="family">Fredericks</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Hoy</displayForm>
+ <namePart type="family">Hoy</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Hoy</displayForm>
+ <namePart type="family">Hoy</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Hoy</displayForm>
+ <namePart type="family">Hoy</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Raymond Hoy</displayForm>
+ <namePart type="family">Hoy</namePart>
+ <namePart type="given">Raymond</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Raymond Hoy</displayForm>
+ <namePart type="family">Hoy</namePart>
+ <namePart type="given">Raymond</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Raymond Hoy</displayForm>
+ <namePart type="family">Hoy</namePart>
+ <namePart type="given">Raymond</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Edward J. Ritz</displayForm>
+ <namePart type="family">Ritz</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Edward J. Ritz</displayForm>
+ <namePart type="family">Ritz</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Edward J. Ritz</displayForm>
+ <namePart type="family">Ritz</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>City of Schenectady</displayForm>
+ <namePart type="family">Schenectady</namePart>
+ <namePart type="given">City of</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>City of Schenectady</displayForm>
+ <namePart type="family">Schenectady</namePart>
+ <namePart type="given">City of</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>City of Schenectady</displayForm>
+ <namePart type="family">Schenectady</namePart>
+ <namePart type="given">City of</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>County of Schenectady</displayForm>
+ <namePart type="family">Schenectady</namePart>
+ <namePart type="given">County of</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>County of Schenectady</displayForm>
+ <namePart type="family">Schenectady</namePart>
+ <namePart type="given">County of</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>County of Schenectady</displayForm>
+ <namePart type="family">Schenectady</namePart>
+ <namePart type="given">County of</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Schenectady City Police Department</displayForm>
+ <namePart type="family">Schenectady City Police Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Schenectady City Police Department</displayForm>
+ <namePart type="family">Schenectady City Police Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Schenectady City Police Department</displayForm>
+ <namePart type="family">Schenectady City Police Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Schenectady County Sheriff Department</displayForm>
+ <namePart type="family">Schenectady County Sheriff Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Schenectady County Sheriff Department</displayForm>
+ <namePart type="family">Schenectady County Sheriff Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Schenectady County Sheriff Department</displayForm>
+ <namePart type="family">Schenectady County Sheriff Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Linda Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Linda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_00-cv-01422</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:00-cv-01422</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Daniel" fullName="Daniel Diamond" lastName="Diamond" role="Cross Claimant"></party>
+ <party firstName="Daniel" fullName="Daniel Diamond" lastName="Diamond" role="Cross Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Diamond" lastName="Diamond" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Fredericks" lastName="Fredericks" role="Cross Claimant"></party>
+ <party firstName="Robert" fullName="Robert Fredericks" lastName="Fredericks" role="Cross Defendant"></party>
+ <party firstName="Robert" fullName="Robert Fredericks" lastName="Fredericks" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Hoy" lastName="Hoy" role="Cross Claimant"></party>
+ <party firstName="Matthew" fullName="Matthew Hoy" lastName="Hoy" role="Cross Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Hoy" lastName="Hoy" role="Defendant"></party>
+ <party firstName="Raymond" fullName="Raymond Hoy" lastName="Hoy" role="Cross Claimant"></party>
+ <party firstName="Raymond" fullName="Raymond Hoy" lastName="Hoy" role="Cross Defendant"></party>
+ <party firstName="Raymond" fullName="Raymond Hoy" lastName="Hoy" role="Defendant"></party>
+ <party firstName="Edward" fullName="Edward J. Ritz" lastName="Ritz" middleName="J." role="Cross Claimant"></party>
+ <party firstName="Edward" fullName="Edward J. Ritz" lastName="Ritz" middleName="J." role="Cross Defendant"></party>
+ <party firstName="Edward" fullName="Edward J. Ritz" lastName="Ritz" middleName="J." role="Defendant"></party>
+ <party firstName="City of" fullName="City of Schenectady" lastName="Schenectady" role="Cross Claimant"></party>
+ <party firstName="City of" fullName="City of Schenectady" lastName="Schenectady" role="Cross Defendant"></party>
+ <party firstName="City of" fullName="City of Schenectady" lastName="Schenectady" role="Defendant"></party>
+ <party firstName="County of" fullName="County of Schenectady" lastName="Schenectady" role="Cross Claimant"></party>
+ <party firstName="County of" fullName="County of Schenectady" lastName="Schenectady" role="Cross Defendant"></party>
+ <party firstName="County of" fullName="County of Schenectady" lastName="Schenectady" role="Defendant"></party>
+ <party fullName="Schenectady City Police Department" lastName="Schenectady City Police Department" role="Cross Claimant"></party>
+ <party fullName="Schenectady City Police Department" lastName="Schenectady City Police Department" role="Cross Defendant"></party>
+ <party fullName="Schenectady City Police Department" lastName="Schenectady City Police Department" role="Defendant"></party>
+ <party fullName="Schenectady County Sheriff Department" lastName="Schenectady County Sheriff Department" role="Cross Claimant"></party>
+ <party fullName="Schenectady County Sheriff Department" lastName="Schenectady County Sheriff Department" role="Cross Defendant"></party>
+ <party fullName="Schenectady County Sheriff Department" lastName="Schenectady County Sheriff Department" role="Defendant"></party>
+ <party firstName="Linda" fullName="Linda Williams" lastName="Williams" role="Plaintiff"></party>
+ <party firstName="Mary" fullName="Mary Williams" lastName="Williams" role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_00-cv-01422-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_00-cv-01422/USCOURTS-nynd-1_00-cv-01422-0/mods.xml">
+ <titleInfo>
+  <title>Williams, et al v. City of Schenectady, et al</title>
+  <subTitle>MEMORANDUM, DECISION AND ORDER; Plaintiff&apos;s motion for Judgment as a matter of law, or, in the alternative, for a new trial is denied. Signed by Judge Norman A. Mordue on 1/4/06. (kcl, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_00-cv-01422-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813f14d5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_00-cv-01422/USCOURTS-nynd-1_00-cv-01422-0</identifier>
+ <identifier type="former granule identifier">nynd-1_00-cv-01422_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_00-cv-01422/USCOURTS-nynd-1_00-cv-01422-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_00-cv-01422/pdf/USCOURTS-nynd-1_00-cv-01422-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:00-cv-01422; Williams, et al v. City of Schenectady, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_00-cv-01422-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-04</dateIssued>
+  <docketText>MEMORANDUM, DECISION AND ORDER; Plaintiff&apos;s motion for Judgment as a matter of law, or, in the alternative, for a new trial is denied. Signed by Judge Norman A. Mordue on 1/4/06. (kcl, )</docketText>
+</extension>
+</relatedItem>
+</mods>

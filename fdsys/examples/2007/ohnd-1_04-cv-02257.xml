@@ -1,0 +1,343 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d337a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_04-cv-02257</identifier>
+<identifier type="local">P0b002ee1815d337a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_04-cv-02257</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_04-cv-02257</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:04-cv-02257</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Ashtabula County Sheriff&apos;s Department" lastName="Ashtabula County Sheriff&apos;s Department" role="Defendant"></party>
+ <party fullName="Ashtabula County, Ohio" lastName="Ashtabula County, Ohio" role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen C. (Cayce) Baxly" lastName="Baxly" middleName="C. (Cayce)" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Bemme" lastName="Bemme" role="Defendant"></party>
+ <party firstName="R" fullName="R E Bornino" lastName="Bornino" middleName="E" role="Defendant"></party>
+ <party firstName="Laurence" fullName="Laurence Bragga" lastName="Bragga" role="Defendant"></party>
+ <party firstName="D" fullName="D A Dietrich" lastName="Dietrich" middleName="A" role="Defendant"></party>
+ <party firstName="Wilma" fullName="Wilma Herndon" lastName="Herndon" role="Defendant"></party>
+ <party firstName="Carrie" fullName="Carrie Iarocci" lastName="Iarocci" role="Defendant"></party>
+ <party firstName="City of" fullName="City of Jefferson" lastName="Jefferson" role="Defendant"></party>
+ <party firstName="Ken" fullName="Ken Kertig" lastName="Kertig" role="Defendant"></party>
+ <party firstName="Judy" fullName="Judy Maloney" lastName="Maloney" role="Defendant"></party>
+ <party firstName="John" fullName="John Mattox III" generation="III" lastName="Mattox" role="Plaintiff"></party>
+ <party firstName="James" fullName="James Sivak" lastName="Sivak" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary E Stasny" lastName="Stasny" middleName="E" role="Defendant"></party>
+ <party firstName="Bruce" fullName="Bruce Thompson" lastName="Thompson" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert S Wynn" lastName="Wynn" middleName="S" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Mattox v. Jefferson, City of et al</title>
+ <partNumber>1:04-cv-02257</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_04-cv-02257/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:04-cv-02257;04-2257</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ashtabula County Sheriff&apos;s Department</displayForm>
+ <namePart type="family">Ashtabula County Sheriff&apos;s Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ashtabula County, Ohio</displayForm>
+ <namePart type="family">Ashtabula County, Ohio</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kathleen C. (Cayce) Baxly</displayForm>
+ <namePart type="family">Baxly</namePart>
+ <namePart type="given">Kathleen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Bemme</displayForm>
+ <namePart type="family">Bemme</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R E Bornino</displayForm>
+ <namePart type="family">Bornino</namePart>
+ <namePart type="given">R</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Laurence Bragga</displayForm>
+ <namePart type="family">Bragga</namePart>
+ <namePart type="given">Laurence</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D A Dietrich</displayForm>
+ <namePart type="family">Dietrich</namePart>
+ <namePart type="given">D</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wilma Herndon</displayForm>
+ <namePart type="family">Herndon</namePart>
+ <namePart type="given">Wilma</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carrie Iarocci</displayForm>
+ <namePart type="family">Iarocci</namePart>
+ <namePart type="given">Carrie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>City of Jefferson</displayForm>
+ <namePart type="family">Jefferson</namePart>
+ <namePart type="given">City of</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ken Kertig</displayForm>
+ <namePart type="family">Kertig</namePart>
+ <namePart type="given">Ken</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Judy Maloney</displayForm>
+ <namePart type="family">Maloney</namePart>
+ <namePart type="given">Judy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Mattox III</displayForm>
+ <namePart type="family">Mattox</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James Sivak</displayForm>
+ <namePart type="family">Sivak</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mary E Stasny</displayForm>
+ <namePart type="family">Stasny</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bruce Thompson</displayForm>
+ <namePart type="family">Thompson</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert S Wynn</displayForm>
+ <namePart type="family">Wynn</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_04-cv-02257</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:04-cv-02257</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Ashtabula County Sheriff&apos;s Department" lastName="Ashtabula County Sheriff&apos;s Department" role="Defendant"></party>
+ <party fullName="Ashtabula County, Ohio" lastName="Ashtabula County, Ohio" role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen C. (Cayce) Baxly" lastName="Baxly" middleName="C. (Cayce)" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Bemme" lastName="Bemme" role="Defendant"></party>
+ <party firstName="R" fullName="R E Bornino" lastName="Bornino" middleName="E" role="Defendant"></party>
+ <party firstName="Laurence" fullName="Laurence Bragga" lastName="Bragga" role="Defendant"></party>
+ <party firstName="D" fullName="D A Dietrich" lastName="Dietrich" middleName="A" role="Defendant"></party>
+ <party firstName="Wilma" fullName="Wilma Herndon" lastName="Herndon" role="Defendant"></party>
+ <party firstName="Carrie" fullName="Carrie Iarocci" lastName="Iarocci" role="Defendant"></party>
+ <party firstName="City of" fullName="City of Jefferson" lastName="Jefferson" role="Defendant"></party>
+ <party firstName="Ken" fullName="Ken Kertig" lastName="Kertig" role="Defendant"></party>
+ <party firstName="Judy" fullName="Judy Maloney" lastName="Maloney" role="Defendant"></party>
+ <party firstName="John" fullName="John Mattox III" generation="III" lastName="Mattox" role="Plaintiff"></party>
+ <party firstName="James" fullName="James Sivak" lastName="Sivak" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary E Stasny" lastName="Stasny" middleName="E" role="Defendant"></party>
+ <party firstName="Bruce" fullName="Bruce Thompson" lastName="Thompson" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert S Wynn" lastName="Wynn" middleName="S" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_04-cv-02257-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cv-02257/USCOURTS-ohnd-1_04-cv-02257-0/mods.xml">
+ <titleInfo>
+  <title>Mattox v. Jefferson, City of et al</title>
+  <subTitle>Order granting in part and denying in part Defendants&apos; Motion to Compel Discovery (Related Doc # 30), denying Defendants&apos; Motion to Dismiss (Related Doc # 30), granting in part and denying in part Plaintiff&apos;s Motions for a Protective Order (Related Doc # 31 33 36). Signed by Judge Solomon Oliver Jr. on 9/26/2006.(D, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_04-cv-02257-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816e5043</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cv-02257/USCOURTS-ohnd-1_04-cv-02257-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_04-cv-02257_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cv-02257/USCOURTS-ohnd-1_04-cv-02257-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_04-cv-02257/pdf/USCOURTS-ohnd-1_04-cv-02257-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cv-02257; Mattox v. Jefferson, City of et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_04-cv-02257-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-09-27</dateIssued>
+  <docketText>Order granting in part and denying in part Defendants&apos; Motion to Compel Discovery (Related Doc # 30), denying Defendants&apos; Motion to Dismiss (Related Doc # 30), granting in part and denying in part Plaintiff&apos;s Motions for a Protective Order (Related Doc # 31 33 36). Signed by Judge Solomon Oliver Jr. on 9/26/2006.(D, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_04-cv-02257-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cv-02257/USCOURTS-ohnd-1_04-cv-02257-1/mods.xml">
+ <titleInfo>
+  <title>Mattox v. Jefferson, City of et al</title>
+  <subTitle>Order Granting Defendants Village of Jefferson, Laurence Bragga as the Mayor o Jefferson, Kathleen Baxly, Wilma Herndon, Mary Stasny, Bruce Thompson, Judy Maloney and Ken Fertigs&apos; Motion for Summary Judgment (Related Doc # 37); granting Defendants Ashtabula County, the Ashtabula Couty Sheriff&apos;s Department, Lt. Joseph Bemme, Corporal D. A. Dietrich and Carrie Iarocci&apos;s Motion for Summary Judgment (Related Doc # 3839). On 7/22/2005, the court dismissed Plaintiff&apos;s claims against Judge Robert S. Wynn. Plaintiff&apos;s claim against the Ohio State Highway Patrol, Lt. James Sivak and Ohio State Trooper R. E. Bornino remain. Signed by Judge Solomon Oliver Jr. on 9/26/2006. (D, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_04-cv-02257-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816e5044</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cv-02257/USCOURTS-ohnd-1_04-cv-02257-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_04-cv-02257_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cv-02257/USCOURTS-ohnd-1_04-cv-02257-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_04-cv-02257/pdf/USCOURTS-ohnd-1_04-cv-02257-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cv-02257; Mattox v. Jefferson, City of et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_04-cv-02257-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-09-27</dateIssued>
+  <docketText>Order Granting Defendants Village of Jefferson, Laurence Bragga as the Mayor o Jefferson, Kathleen Baxly, Wilma Herndon, Mary Stasny, Bruce Thompson, Judy Maloney and Ken Fertigs&apos; Motion for Summary Judgment (Related Doc # 37); granting Defendants Ashtabula County, the Ashtabula Couty Sheriff&apos;s Department, Lt. Joseph Bemme, Corporal D. A. Dietrich and Carrie Iarocci&apos;s Motion for Summary Judgment (Related Doc # 3839). On 7/22/2005, the court dismissed Plaintiff&apos;s claims against Judge Robert S. Wynn. Plaintiff&apos;s claim against the Ohio State Highway Patrol, Lt. James Sivak and Ohio State Trooper R. E. Bornino remain. Signed by Judge Solomon Oliver Jr. on 9/26/2006. (D, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_04-cv-02257-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cv-02257/USCOURTS-ohnd-1_04-cv-02257-2/mods.xml">
+ <titleInfo>
+  <title>Mattox v. Jefferson, City of et al</title>
+  <subTitle>Order granting Defendants&apos; Second Motion to Dismiss. The only claim remaining for trial in this case is Plaintiff&apos;s Section 1983 claim, alleging violation of the Fourth Amendment against Bornino in his individual capacity (Related Doc # 50). Signed by Judge Solomon Oliver Jr. on 1/10/2007.(D, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_04-cv-02257-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816e5045</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cv-02257/USCOURTS-ohnd-1_04-cv-02257-2</identifier>
+ <identifier type="former granule identifier">ohnd-1_04-cv-02257_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cv-02257/USCOURTS-ohnd-1_04-cv-02257-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_04-cv-02257/pdf/USCOURTS-ohnd-1_04-cv-02257-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cv-02257; Mattox v. Jefferson, City of et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_04-cv-02257-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-10</dateIssued>
+  <docketText>Order granting Defendants&apos; Second Motion to Dismiss. The only claim remaining for trial in this case is Plaintiff&apos;s Section 1983 claim, alleging violation of the Fourth Amendment against Bornino in his individual capacity (Related Doc # 50). Signed by Judge Solomon Oliver Jr. on 1/10/2007.(D, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

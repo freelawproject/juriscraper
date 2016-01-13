@@ -1,0 +1,939 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184fbcb17">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-06-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-06-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044</identifier>
+<identifier type="local">P0b002ee184fbcb17</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-06-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-06-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cv-00044</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00044</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00044</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>850</natureSuitCode>
+ <natureSuit>Securities, Commodities, Exchange</natureSuit>
+ <party firstName="Bryan" fullName="Bryan S. Behrens" lastName="Behrens" middleName="S." role="Cross Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan S. Behrens" lastName="Behrens" middleName="S." role="Defendant"></party>
+ <party firstName="William" fullName="William H. Green" lastName="Green" middleName="H." role="Defendant"></party>
+ <party firstName="William" fullName="William H. Green" lastName="Green" middleName="H." role="Third Party Defendant"></party>
+ <party fullName="Kansas City Life Insurance Company" lastName="Kansas City Life Insurance Company" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard D. Myers" lastName="Myers" middleName="D." role="Trustee"></party>
+ <party fullName="Stalnaker, Becker &amp; Buresch, P.C." lastName="Stalnaker, Becker &amp; Buresch, P.C." role="Interested Party"></party>
+ <party fullName="Sunset Financial Services, Inc." lastName="Sunset Financial Services, Inc." role="Cross Claimant"></party>
+ <party fullName="Sunset Financial Services, Inc." lastName="Sunset Financial Services, Inc." role="Defendant"></party>
+ <party fullName="Sunset Financial Services, Inc." lastName="Sunset Financial Services, Inc." role="Third Party Plaintiff"></party>
+ <party fullName="U.S. Bankruptcy Court" lastName="U.S. Bankruptcy Court" role="Interested Party"></party>
+ <party fullName="U.S. Trustee" lastName="U.S. Trustee" role="Trustee"></party>
+ <party firstName="Milo" fullName="Milo Vacanti" lastName="Vacanti" role="Plaintiff"></party>
+ <party firstName="Barbara" fullName="Barbara M. Vacanti" lastName="Vacanti" middleName="M." role="Movant"></party>
+ <party firstName="Barbara" fullName="Barbara M. Vacanti" lastName="Vacanti" middleName="M." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+ <partNumber>8:09-cv-00044</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cv-00044;09-044</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bryan S. Behrens</displayForm>
+ <namePart type="family">Behrens</namePart>
+ <namePart type="given">Bryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bryan S. Behrens</displayForm>
+ <namePart type="family">Behrens</namePart>
+ <namePart type="given">Bryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William H. Green</displayForm>
+ <namePart type="family">Green</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William H. Green</displayForm>
+ <namePart type="family">Green</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kansas City Life Insurance Company</displayForm>
+ <namePart type="family">Kansas City Life Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard D. Myers</displayForm>
+ <namePart type="family">Myers</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Stalnaker, Becker &amp; Buresch, P.C.</displayForm>
+ <namePart type="family">Stalnaker, Becker &amp; Buresch, P.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Sunset Financial Services, Inc.</displayForm>
+ <namePart type="family">Sunset Financial Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Sunset Financial Services, Inc.</displayForm>
+ <namePart type="family">Sunset Financial Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sunset Financial Services, Inc.</displayForm>
+ <namePart type="family">Sunset Financial Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Bankruptcy Court</displayForm>
+ <namePart type="family">U.S. Bankruptcy Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Trustee</displayForm>
+ <namePart type="family">U.S. Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Milo Vacanti</displayForm>
+ <namePart type="family">Vacanti</namePart>
+ <namePart type="given">Milo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Barbara M. Vacanti</displayForm>
+ <namePart type="family">Vacanti</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Barbara M. Vacanti</displayForm>
+ <namePart type="family">Vacanti</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00044</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00044</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>850</natureSuitCode>
+ <natureSuit>Securities, Commodities, Exchange</natureSuit>
+ <party firstName="Bryan" fullName="Bryan S. Behrens" lastName="Behrens" middleName="S." role="Cross Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan S. Behrens" lastName="Behrens" middleName="S." role="Defendant"></party>
+ <party firstName="William" fullName="William H. Green" lastName="Green" middleName="H." role="Defendant"></party>
+ <party firstName="William" fullName="William H. Green" lastName="Green" middleName="H." role="Third Party Defendant"></party>
+ <party fullName="Kansas City Life Insurance Company" lastName="Kansas City Life Insurance Company" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard D. Myers" lastName="Myers" middleName="D." role="Trustee"></party>
+ <party fullName="Stalnaker, Becker &amp; Buresch, P.C." lastName="Stalnaker, Becker &amp; Buresch, P.C." role="Interested Party"></party>
+ <party fullName="Sunset Financial Services, Inc." lastName="Sunset Financial Services, Inc." role="Cross Claimant"></party>
+ <party fullName="Sunset Financial Services, Inc." lastName="Sunset Financial Services, Inc." role="Defendant"></party>
+ <party fullName="Sunset Financial Services, Inc." lastName="Sunset Financial Services, Inc." role="Third Party Plaintiff"></party>
+ <party fullName="U.S. Bankruptcy Court" lastName="U.S. Bankruptcy Court" role="Interested Party"></party>
+ <party fullName="U.S. Trustee" lastName="U.S. Trustee" role="Trustee"></party>
+ <party firstName="Milo" fullName="Milo Vacanti" lastName="Vacanti" role="Plaintiff"></party>
+ <party firstName="Barbara" fullName="Barbara M. Vacanti" lastName="Vacanti" middleName="M." role="Movant"></party>
+ <party firstName="Barbara" fullName="Barbara M. Vacanti" lastName="Vacanti" middleName="M." role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-0/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 96 Motion to Stay Proceedings (in 8:08cv13). All litigation and/or proceedings naming Bryan S. Behrens and/or National Investments, Inc., as parties shall be stayed, as against those parties, untilfurther order of this Court, with the following exceptions; The above-captioned case, SEC v. Behrens, et al., United States District Court for the District of Nebraska, Case No. 8:08cv13; Behrens v. Arch Insurance Company, United States District Court for the District of Nebraska, Case No. 8:08cv523; and Behrens v. Blunk, filed in the District Court of Douglas County, Nebraska, at Doc. 1090 No. 178. The Clerk of the Court is directed file this Order electronically in the following cases currently pending before this Court: Carlson v. Sunset Financial Services, Inc., 8:08cv324; Lustgraaf v. Sunset Financial Services, Inc., 8:08cv335; Katz v. Sunset Financial Services, Inc., 8:08cv347; Poole v. Sunset Financial Services, Inc., 8:08cv399; Lohrman v. Sunset Financial Services, Inc., 8:08cv422; Vacanti v. Sunset Financial Services, Inc., 8:08cv436; Green v. Sunset Financial Services, Inc., 8:09cv13; Vacanti v. Sunset Financial Services, Inc., 8:09cv44; and Behrens v. Arch Insurance Company, 8:08cv523. Additionally, the Clerk of the Court is directed to e-mail this Order to the following: Patrick E. Brookhouser, Jr. at pbrookhouser@mcgathnorth.com, Richard Jeffries at rickjeffries@clinewilliams.com, John W. Shaw at jshaw@bowse-law.com, Nick J. Kurt at nkurt@bowse-law.com, Steven E. Achelpohl at achelpohl@usa.net, Thomas K. Harmon at harmonlaw@bigplanet.com, Tory M. Bishop at tory.bishop@kutakrock.com, Angela Probasco at angela.probasco@kutakrock.com. Ordered by Judge Laurie Smith Camp. (Copies e-mailed as directed) (MKR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22fe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-03-24</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 96 Motion to Stay Proceedings (in 8:08cv13). All litigation and/or proceedings naming Bryan S. Behrens and/or National Investments, Inc., as parties shall be stayed, as against those parties, untilfurther order of this Court, with the following exceptions; The above-captioned case, SEC v. Behrens, et al., United States District Court for the District of Nebraska, Case No. 8:08cv13; Behrens v. Arch Insurance Company, United States District Court for the District of Nebraska, Case No. 8:08cv523; and Behrens v. Blunk, filed in the District Court of Douglas County, Nebraska, at Doc. 1090 No. 178. The Clerk of the Court is directed file this Order electronically in the following cases currently pending before this Court: Carlson v. Sunset Financial Services, Inc., 8:08cv324; Lustgraaf v. Sunset Financial Services, Inc., 8:08cv335; Katz v. Sunset Financial Services, Inc., 8:08cv347; Poole v. Sunset Financial Services, Inc., 8:08cv399; Lohrman v. Sunset Financial Services, Inc., 8:08cv422; Vacanti v. Sunset Financial Services, Inc., 8:08cv436; Green v. Sunset Financial Services, Inc., 8:09cv13; Vacanti v. Sunset Financial Services, Inc., 8:09cv44; and Behrens v. Arch Insurance Company, 8:08cv523. Additionally, the Clerk of the Court is directed to e-mail this Order to the following: Patrick E. Brookhouser, Jr. at pbrookhouser@mcgathnorth.com, Richard Jeffries at rickjeffries@clinewilliams.com, John W. Shaw at jshaw@bowse-law.com, Nick J. Kurt at nkurt@bowse-law.com, Steven E. Achelpohl at achelpohl@usa.net, Thomas K. Harmon at harmonlaw@bigplanet.com, Tory M. Bishop at tory.bishop@kutakrock.com, Angela Probasco at angela.probasco@kutakrock.com. Ordered by Judge Laurie Smith Camp. (Copies e-mailed as directed) (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-1/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER granting 34 Joint Motion to Stay. This case is stayed until the interlocutory appeal in Vacanti v. Sunset Fin. Servs., et al., Case No. 8:08CV436 (D. Neb.), 8th Cir. No. 09-2965, is resolved. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22f4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-10-05</dateIssued>
+  <docketText>ORDER granting 34 Joint Motion to Stay. This case is stayed until the interlocutory appeal in Vacanti v. Sunset Fin. Servs., et al., Case No. 8:08CV436 (D. Neb.), 8th Cir. No. 09-2965, is resolved. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-2/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER granting 36 Motion to lift stay and for leave to file an amended complaint. Plaintiff shall file and serve the Amended Complaint no later than 11/1/2010. Defendants shall respond within the time allowed by Fed. R. Civ. P. 15(a). Ordered by Magistrate Judge F.A. Gossett. (CLS, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-2</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-10-15</dateIssued>
+  <docketText>ORDER granting 36 Motion to lift stay and for leave to file an amended complaint. Plaintiff shall file and serve the Amended Complaint no later than 11/1/2010. Defendants shall respond within the time allowed by Fed. R. Civ. P. 15(a). Ordered by Magistrate Judge F.A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-3/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER LIFTING STAY - The &quot;Motion by Certain Investors to Lift the Stay&quot; is granted, as follows: The stay entered on March 4, 2009, is hereby dissolved to the extent the stay applies to lawsuits filed by the moving investors. The Clerk of the Court is directed to file this order electronically in the following cases: 8:08cv324 Carlson v. Sunset Financial Services 8:08cv335 Lustgraaf v. Sunset Financial Services 8:08cv347 Katz v. Sunset Financial Services 8:08cv399 Poole v. Sunset Financial Services 8:08cv422 Lohrman v. Sunset Financial Services 8:08cv436 Vacanti v. Sunset Financial Services 8:09cv013 Green v. Sunset Financial Services 8:09cv044 Vacanti v. Sunset Financial Services 8:08cv523 Behrens v. Arch Insurance Company. NOTE: Pursuant to chambers, the order is corrected to change the reference from 8:08cv44 to 8:09cv44. Ordered by Judge Laurie Smith Camp. (JAB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22f5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-3</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-12-15</dateIssued>
+  <docketText>ORDER LIFTING STAY - The &quot;Motion by Certain Investors to Lift the Stay&quot; is granted, as follows: The stay entered on March 4, 2009, is hereby dissolved to the extent the stay applies to lawsuits filed by the moving investors. The Clerk of the Court is directed to file this order electronically in the following cases: 8:08cv324 Carlson v. Sunset Financial Services 8:08cv335 Lustgraaf v. Sunset Financial Services 8:08cv347 Katz v. Sunset Financial Services 8:08cv399 Poole v. Sunset Financial Services 8:08cv422 Lohrman v. Sunset Financial Services 8:08cv436 Vacanti v. Sunset Financial Services 8:09cv013 Green v. Sunset Financial Services 8:09cv044 Vacanti v. Sunset Financial Services 8:08cv523 Behrens v. Arch Insurance Company. NOTE: Pursuant to chambers, the order is corrected to change the reference from 8:08cv44 to 8:09cv44. Ordered by Judge Laurie Smith Camp. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-4/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>SCHEDULING ORDER. Rule 26(f) planning report due 1/10/2011; proposed protective order(s) due 1/10/2011; Rule 26(a)(1) initial disclosures due 1/24/2011. The conference now set for 1/18/2011 at 9:30 AM will be held as previously scheduled. The Receiver may, but is not required to, participate in the conference. Ordered by Magistrate Judge F.A. Gossett. (CLS, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22fd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-4</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-12-20</dateIssued>
+  <docketText>SCHEDULING ORDER. Rule 26(f) planning report due 1/10/2011; proposed protective order(s) due 1/10/2011; Rule 26(a)(1) initial disclosures due 1/24/2011. The conference now set for 1/18/2011 at 9:30 AM will be held as previously scheduled. The Receiver may, but is not required to, participate in the conference. Ordered by Magistrate Judge F.A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-5/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>PROTECTIVE ORDER GOVERNING CONFIDENTIALITY, entered by agreement of the parties. Ordered by Magistrate Judge F.A. Gossett. (CLS, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22fb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-5</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>PROTECTIVE ORDER GOVERNING CONFIDENTIALITY, entered by agreement of the parties. Ordered by Magistrate Judge F.A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-6/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER - The Motion for leave to depose Bryan S. Behrens 83 is granted. Plaintiffs and Defendant Sunset Financial Services Inc. are granted leave of this court to depose Bryan S. Behrens as set forth in this order. Ordered by Magistrate Judge F.A. Gossett. (KBJ)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc2303</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-6</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-05-20</dateIssued>
+  <docketText>ORDER - The Motion for leave to depose Bryan S. Behrens 83 is granted. Plaintiffs and Defendant Sunset Financial Services Inc. are granted leave of this court to depose Bryan S. Behrens as set forth in this order. Ordered by Magistrate Judge F.A. Gossett. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-7/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER - Plaintiffs&apos; motion for leave to file a sur-reply brief is granted. (Case No. 8:08CV00335, filing 193; Case No. 8:08CV00399, filing 192; Case No. 8:08CV00436, filing 183; Case No. 8:09CV00013, filing 145; Case No. 8:09CV00044, filing 110). The court hereby takes notice of Plaintiffs&apos; proposed brief, which was submitted with the present motion. Ordered by Magistrate Judge F.A. Gossett. (KBJ)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc2300</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-7</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-06-02</dateIssued>
+  <docketText>ORDER - Plaintiffs&apos; motion for leave to file a sur-reply brief is granted. (Case No. 8:08CV00335, filing 193; Case No. 8:08CV00399, filing 192; Case No. 8:08CV00436, filing 183; Case No. 8:09CV00013, filing 145; Case No. 8:09CV00044, filing 110). The court hereby takes notice of Plaintiffs&apos; proposed brief, which was submitted with the present motion. Ordered by Magistrate Judge F.A. Gossett. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-8/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>CV00044, filing 87) is granted. Sunset shall file its cross-claims by or before July 15, 2011. Ordered by Magistrate Judge F.A. Gossett. (KBJ)ORDER - Defendant Sunset Financial Services, Inc&apos;s motion for leave to amend to file crossclaims (Case No. 8:08CV335, filing 170; Case No. 8:08CV00399, filing 169; Case No. 8:08CV00436, filing 160; Case No. 8:09CV00013, filing 122; Case No. 8:09</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-8</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-07-12</dateIssued>
+  <docketText>CV00044, filing 87) is granted. Sunset shall file its cross-claims by or before July 15, 2011. Ordered by Magistrate Judge F.A. Gossett. (KBJ)ORDER - Defendant Sunset Financial Services, Inc&apos;s motion for leave to amend to file crossclaims (Case No. 8:08CV335, filing 170; Case No. 8:08CV00399, filing 169; Case No. 8:08CV00436, filing 160; Case No. 8:09CV00013, filing 122; Case No. 8:09</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-9/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER granting the Plaintiff&apos;s (215) Motion for Leave in case 8:08-cv-00335-LSC-FG3; granting (213) Motion for Leave in case 8:08-cv-00399-LSC-FG3; granting (203) Motion for Leave in case 8:08-cv-00436-LSC-FG3; granting (167) Motion for Leave in case 8:09-cv-00013-LSC-FG3 and granting (131) Motion for Leave in case 8:09-cv-00044-LSC-FG3. The Warden of the Federal Correctional Institution in Terra Haute shall produce Bryan S. Behrens for deposition by Plaintiffs and by Defendant Sunset Financial Services Inc. at the Federal Correctional Institution in Terra Haute beginning February 20, 2012 or at another date and time to be determined after consultation with the appropriate personnel of the Federal Bureau of Prisons and consultation among counsel for the parties. The deposition(s) shall not be limited to the seven hour or one day periods referenced in Federal Rule of Civil Procedure 30(d)(1). Plaintiffs and Sunset Financial Services Inc.s deposition(s) of Bryan S. Behrens shall be taken for use at trial and for all purposes permitted under the Federal Rules of Civil Procedure, shall be recorded by stenographic means, and may be videotaped. Ordered by Magistrate Judge F.A. Gossett. (Copy mailed to Warden at FCI-Terra Haute)(MKR)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc2302</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-9</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>ORDER granting the Plaintiff&apos;s (215) Motion for Leave in case 8:08-cv-00335-LSC-FG3; granting (213) Motion for Leave in case 8:08-cv-00399-LSC-FG3; granting (203) Motion for Leave in case 8:08-cv-00436-LSC-FG3; granting (167) Motion for Leave in case 8:09-cv-00013-LSC-FG3 and granting (131) Motion for Leave in case 8:09-cv-00044-LSC-FG3. The Warden of the Federal Correctional Institution in Terra Haute shall produce Bryan S. Behrens for deposition by Plaintiffs and by Defendant Sunset Financial Services Inc. at the Federal Correctional Institution in Terra Haute beginning February 20, 2012 or at another date and time to be determined after consultation with the appropriate personnel of the Federal Bureau of Prisons and consultation among counsel for the parties. The deposition(s) shall not be limited to the seven hour or one day periods referenced in Federal Rule of Civil Procedure 30(d)(1). Plaintiffs and Sunset Financial Services Inc.s deposition(s) of Bryan S. Behrens shall be taken for use at trial and for all purposes permitted under the Federal Rules of Civil Procedure, shall be recorded by stenographic means, and may be videotaped. Ordered by Magistrate Judge F.A. Gossett. (Copy mailed to Warden at FCI-Terra Haute)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-10/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER regarding Plaintiffs&apos; Motion to Compel Testimony from Bryan Behrens. By or before April 5, 2012, Sunset may, if it desires, file a brief in support of Plaintiffs Motion to Compel. Bryan Behrens may file his brief responding to Plaintiffs and Sunsets briefs by or before April 16, 2012. Ordered by Magistrate Judge F.A. Gossett. (MKR)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc2313</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-10</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-03-29</dateIssued>
+  <docketText>ORDER regarding Plaintiffs&apos; Motion to Compel Testimony from Bryan Behrens. By or before April 5, 2012, Sunset may, if it desires, file a brief in support of Plaintiffs Motion to Compel. Bryan Behrens may file his brief responding to Plaintiffs and Sunsets briefs by or before April 16, 2012. Ordered by Magistrate Judge F.A. Gossett. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-11/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>r of the attorney client privilege in advance of Behrens deposition. Ordered by Magistrate Judge F.A. Gossett. (MKR)ORDER granting in part (246) Motion to Compel in case 8:08-cv-00335-LSC-FG3; granting in part (243) Motion to Compel in case 8:08-cv-00399-LSC-FG3; granting in part (233) Motion to Compel in case 8:08-cv-00436-LSC-FG3; granting in part (211) Motion to Compel in case 8:09-cv-00013-LSC-FG3; and granting in part (160) Motion to Compel in case 8:09-cv-00044-LSC-FG3. Bryan Behrens is hereby ordered to appear for deposition at a time mutually agreeable between the parties. Bryan Behrens shall not invoke the Fifth Amendment as to matters related to the claims in the instant cases. Any testimony by Behrens shall be subject to the confidentiality order entered in these cases. The court will not rule with respect to any purported waive</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22f1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-11</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-05-03</dateIssued>
+  <docketText>r of the attorney client privilege in advance of Behrens deposition. Ordered by Magistrate Judge F.A. Gossett. (MKR)ORDER granting in part (246) Motion to Compel in case 8:08-cv-00335-LSC-FG3; granting in part (243) Motion to Compel in case 8:08-cv-00399-LSC-FG3; granting in part (233) Motion to Compel in case 8:08-cv-00436-LSC-FG3; granting in part (211) Motion to Compel in case 8:09-cv-00013-LSC-FG3; and granting in part (160) Motion to Compel in case 8:09-cv-00044-LSC-FG3. Bryan Behrens is hereby ordered to appear for deposition at a time mutually agreeable between the parties. Bryan Behrens shall not invoke the Fifth Amendment as to matters related to the claims in the instant cases. Any testimony by Behrens shall be subject to the confidentiality order entered in these cases. The court will not rule with respect to any purported waive</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-12/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER - These cases are referred to the United States Bankruptcy Court for the District of Nebraska; These cases shall be terminated for statistical purposes by the Clerk of the Court for the District of Nebraska; and The Clerk of the Court for the District of Nebras ka shall transmit the court files to the Clerk of the Bankruptcy Court for the District of Nebraska. Ordered by Chief Judge Laurie Smith Camp. (MKR)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22f0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-12</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-05-15</dateIssued>
+  <docketText>ORDER - These cases are referred to the United States Bankruptcy Court for the District of Nebraska; These cases shall be terminated for statistical purposes by the Clerk of the Court for the District of Nebraska; and The Clerk of the Court for the District of Nebras ka shall transmit the court files to the Clerk of the Bankruptcy Court for the District of Nebraska. Ordered by Chief Judge Laurie Smith Camp. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-13/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>AMENDED ORDER - These cases are referred to the United States Bankruptcy Court for the District of Nebraska; These cases shall be terminated for statistical purposes by the Clerk of the Court for the District of Nebraska; and The Clerk of the Court for the District of Nebras ka shall transmit the court files to the Clerk of the Bankruptcy Court for the District of Nebraska. Ordered by Chief Judge Laurie Smith Camp. (MKR)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22fa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-13</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2012-05-15</dateIssued>
+  <docketText>AMENDED ORDER - These cases are referred to the United States Bankruptcy Court for the District of Nebraska; These cases shall be terminated for statistical purposes by the Clerk of the Court for the District of Nebraska; and The Clerk of the Court for the District of Nebras ka shall transmit the court files to the Clerk of the Bankruptcy Court for the District of Nebraska. Ordered by Chief Judge Laurie Smith Camp. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-14/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>FINDINGS AND RECOMMENDATION that the adversary proceeding be withdrawn to the U.S. District Court. (Attachments: # (1) Transmittal Letter, # (2) Corrected Transmittal Letter)Ordered by Judge Timothy J. Mahoney. (ADB)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc2252</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-14</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-10-19</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATION that the adversary proceeding be withdrawn to the U.S. District Court. (Attachments: # (1) Transmittal Letter, # (2) Corrected Transmittal Letter)Ordered by Judge Timothy J. Mahoney. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-15/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER adopting (276) Findings and Recommendation in case 8:08-cv-00335-LSC-FG3; adopting (273) Findings and Recommendation in case 8:08-cv-00399-LSC-FG3; adopting (264) Findings and Recommendation in case 8:08-cv-00436-LSC-FG3; adopting (240) Findings and Recommendation in case 8:09-cv-00013-LSC-FG3 and adopting (188) Findings and Recommendation in case 8:09-cv-00044-LSC-FG3. The following Orders of reference to the U.S. Bankruptcy Court for the District of Nebraska are withdrawn: a. Case No. 8:08CV335, Filing No. 275; b. Case No. 8:08CV399, Filing No. 272; c. Case No. 8:08CV436, Filing No. 263; d. Case No. 8:09CV13, Filing No. 239; e. Case No. 8:09CV44, Filing No. 187; and The above captioned actions shall progress in this Court. Ordered by Chief Judge Laurie Smith Camp. (MKR)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22fc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-15</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-11-07</dateIssued>
+  <docketText>ORDER adopting (276) Findings and Recommendation in case 8:08-cv-00335-LSC-FG3; adopting (273) Findings and Recommendation in case 8:08-cv-00399-LSC-FG3; adopting (264) Findings and Recommendation in case 8:08-cv-00436-LSC-FG3; adopting (240) Findings and Recommendation in case 8:09-cv-00013-LSC-FG3 and adopting (188) Findings and Recommendation in case 8:09-cv-00044-LSC-FG3. The following Orders of reference to the U.S. Bankruptcy Court for the District of Nebraska are withdrawn: a. Case No. 8:08CV335, Filing No. 275; b. Case No. 8:08CV399, Filing No. 272; c. Case No. 8:08CV436, Filing No. 263; d. Case No. 8:09CV13, Filing No. 239; e. Case No. 8:09CV44, Filing No. 187; and The above captioned actions shall progress in this Court. Ordered by Chief Judge Laurie Smith Camp. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-16/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER - IT IS ORDERED that the Motion to Stay Pending Appeal, Fil. #50, is denied. Ordered by Judge Timothy J. Mahoney. (TCL )</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-16</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2012-11-21</dateIssued>
+  <docketText>ORDER - IT IS ORDERED that the Motion to Stay Pending Appeal, Fil. #50, is denied. Ordered by Judge Timothy J. Mahoney. (TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-17/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>8:09-cv-00044-LSC-FG3 Ordered by Chief Judge Laurie Smith Camp. (MKR)MEMORANDUM AND ORDER denying the following Motions for Reconsideration Pursuant to Fed R.Civ. Pro 60(b), filed by Defendant Sunset Financial Services, Inc.: Denying(281) Motion for Reconsideration in case 8:08-cv-00335-LSC-FG3; denying (276) Motion for Reconsideration in case 8:08-cv-00399-LSC-FG3; denying (266) Motion for Reconsideration in case 8:08-cv-00436-LSC-FG3; denying (243) Motion for Reconsideration in case 8:09-cv-00013-LSC-FG3; denying (190) Motion for Reconsideration in case</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22ff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-17</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2012-11-28</dateIssued>
+  <docketText>8:09-cv-00044-LSC-FG3 Ordered by Chief Judge Laurie Smith Camp. (MKR)MEMORANDUM AND ORDER denying the following Motions for Reconsideration Pursuant to Fed R.Civ. Pro 60(b), filed by Defendant Sunset Financial Services, Inc.: Denying(281) Motion for Reconsideration in case 8:08-cv-00335-LSC-FG3; denying (276) Motion for Reconsideration in case 8:08-cv-00399-LSC-FG3; denying (266) Motion for Reconsideration in case 8:08-cv-00436-LSC-FG3; denying (243) Motion for Reconsideration in case 8:09-cv-00013-LSC-FG3; denying (190) Motion for Reconsideration in case</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-18/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER - The Motions to Set an Expedited Briefing Schedule are granted, as follows: a. SFS shall respond to the Plaintiffs Motions to Dismiss on or before December 17, 2012. b. The Plaintiffs shall reply to SFSs response to the Motions to Dismiss on or before December 27, 2012; and Briefs with respect to SFS&apos;s appeal will not be requested at this time. A briefing schedule will be set, if necessary, after the Court rules on the Plaintiffs Motions to Dismiss. Ordered by Chief Judge Laurie Smith Camp. (MKR)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22f6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-18</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2012-12-03</dateIssued>
+  <docketText>ORDER - The Motions to Set an Expedited Briefing Schedule are granted, as follows: a. SFS shall respond to the Plaintiffs Motions to Dismiss on or before December 17, 2012. b. The Plaintiffs shall reply to SFSs response to the Motions to Dismiss on or before December 27, 2012; and Briefs with respect to SFS&apos;s appeal will not be requested at this time. A briefing schedule will be set, if necessary, after the Court rules on the Plaintiffs Motions to Dismiss. Ordered by Chief Judge Laurie Smith Camp. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-19/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>RECUSAL ORDER on the court&apos;s own motion pursuant to 28 U.S. C. § 455(a), which states: &quot;Any... judge... of the United States shall disqualify [her]self in anyproceeding in which [her] impartiality might reasonably be questioned.&quot; While the impartiality of the undersigned in all actions taken in this case up to this date would not reasonably be subject to question, disqualification from future involvement in the case is warranted under 28 U.S.C. § 455(a). Accordingly, the undersigned Judge does recuse herself from the above-designated case. Ordered by Chief Judge Laurie Smith Camp. (MKR)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22f3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-19</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2012-12-10</dateIssued>
+  <docketText>RECUSAL ORDER on the court&apos;s own motion pursuant to 28 U.S. C. § 455(a), which states: &quot;Any... judge... of the United States shall disqualify [her]self in anyproceeding in which [her] impartiality might reasonably be questioned.&quot; While the impartiality of the undersigned in all actions taken in this case up to this date would not reasonably be subject to question, disqualification from future involvement in the case is warranted under 28 U.S.C. § 455(a). Accordingly, the undersigned Judge does recuse herself from the above-designated case. Ordered by Chief Judge Laurie Smith Camp. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-20/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER- The following cases are consolidated for discovery and pretrial preparation: 8:08-cv-00335-JMG-CRZ Lustgraaf v. Behrens et al, 8:08-cv-00399-JMG-CRZ Poole et al v. Behrens et al, 8:08-cv-00436-JMG-CRZ Vacanti v. Sunset Financial Services, Inc. et al, 8:09-cv-00013-JMG-CRZ Green et al v. Sunset Financial Services, Inc. et al. 8:08-cv-00335-JMG-CRZ Lustgraaf v. Behrens et al is hereby designated as the &quot;Lead Case,&quot; and 8:08-cv-00399-JMG-CRZ Poole et al v. Behrens et al; 8:08- cv-00436-JMG-CRZ Vacanti v. Sunset Financial Services, Inc. et al; 8:09-cv- 00013-JMG-CRZ Green et al v. Sunset Financial Services, Inc. et al; and 8:09- cv-00044-JMG-CRZ Vacanti v. Sunset Financial Services, Inc. et al are designated as a &quot;Member Cases.&quot; Any motion for separate trials on the plaintiffs&apos; claims shall be filed on or before February 22, 2013, in the absence of which the above-captioned cases will also be consolidated for trial on the court&apos;s own motion. ( Jury Trial set for 9/23/2013 at 09:00 AM in Courtroom 1, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Judge John M. Gerrard. Pretrial Conference set for 9/10/2013 at 10:00 AM and will be conducted by WebEx conferencing before Magistrate Judge Cheryl R. Zwart. A Telephone Conference set for 5/14/2013 at 01:00 PM by telephone before Magistrate Judge Cheryl R. Zwart to discuss the status of case progression and potential settlement. Counsel for plaintiff shall place or arrange the call. Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc2301</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-20</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>MEMORANDUM AND ORDER- The following cases are consolidated for discovery and pretrial preparation: 8:08-cv-00335-JMG-CRZ Lustgraaf v. Behrens et al, 8:08-cv-00399-JMG-CRZ Poole et al v. Behrens et al, 8:08-cv-00436-JMG-CRZ Vacanti v. Sunset Financial Services, Inc. et al, 8:09-cv-00013-JMG-CRZ Green et al v. Sunset Financial Services, Inc. et al. 8:08-cv-00335-JMG-CRZ Lustgraaf v. Behrens et al is hereby designated as the &quot;Lead Case,&quot; and 8:08-cv-00399-JMG-CRZ Poole et al v. Behrens et al; 8:08- cv-00436-JMG-CRZ Vacanti v. Sunset Financial Services, Inc. et al; 8:09-cv- 00013-JMG-CRZ Green et al v. Sunset Financial Services, Inc. et al; and 8:09- cv-00044-JMG-CRZ Vacanti v. Sunset Financial Services, Inc. et al are designated as a &quot;Member Cases.&quot; Any motion for separate trials on the plaintiffs&apos; claims shall be filed on or before February 22, 2013, in the absence of which the above-captioned cases will also be consolidated for trial on the court&apos;s own motion. ( Jury Trial set for 9/23/2013 at 09:00 AM in Courtroom 1, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Judge John M. Gerrard. Pretrial Conference set for 9/10/2013 at 10:00 AM and will be conducted by WebEx conferencing before Magistrate Judge Cheryl R. Zwart. A Telephone Conference set for 5/14/2013 at 01:00 PM by telephone before Magistrate Judge Cheryl R. Zwart to discuss the status of case progression and potential settlement. Counsel for plaintiff shall place or arrange the call. Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-21/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER granting 235 Motion for Leave to depose defendant Bryan Behrens, an inmate in case 8:08-cv-00335-JMG-CRZ Member Cases: 8:08-cv-00335-JMG-CRZ, 8:08-cv-00399-JMG-CRZ, 8:08-cv-00436-JMG-CRZ, 8:09-cv-00013-JMG-CRZ, 8:09-cv-00044-JMG-CRZOrdered by Magistrate Judge Cheryl R. Zwart. (Zwart, Cheryl)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc2253</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-21</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER granting 235 Motion for Leave to depose defendant Bryan Behrens, an inmate in case 8:08-cv-00335-JMG-CRZ Member Cases: 8:08-cv-00335-JMG-CRZ, 8:08-cv-00399-JMG-CRZ, 8:08-cv-00436-JMG-CRZ, 8:09-cv-00013-JMG-CRZ, 8:09-cv-00044-JMG-CRZOrdered by Magistrate Judge Cheryl R. Zwart. (Zwart, Cheryl)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-22/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER NUNC PRO TUNC - Paragraph 5 of the courts prior order, 329, is set aside. If a motion is specific to less than all of the consolidated cases (e.g., a motion to substitute a party), the attorneys may file the motion in only the case or cases which may be impacted by the courts ruling on the motion without prior leave of the court. Member Cases: 8:08-cv-00335-JMG-CRZ, 8:08-cv-00399-JMG-CRZ, 8:08-cv-00436-JMG-CRZ, 8:09-cv-00013-JMG-CRZ, 8:09-cv-00044-JMG-CRZOrdered by Magistrate Judge Cheryl R. Zwart. (BHC)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-22.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc2315</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-22</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2013-01-11</dateIssued>
+  <docketText>ORDER NUNC PRO TUNC - Paragraph 5 of the courts prior order, 329, is set aside. If a motion is specific to less than all of the consolidated cases (e.g., a motion to substitute a party), the attorneys may file the motion in only the case or cases which may be impacted by the courts ruling on the motion without prior leave of the court. Member Cases: 8:08-cv-00335-JMG-CRZ, 8:08-cv-00399-JMG-CRZ, 8:08-cv-00436-JMG-CRZ, 8:09-cv-00013-JMG-CRZ, 8:09-cv-00044-JMG-CRZOrdered by Magistrate Judge Cheryl R. Zwart. (BHC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-23/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER - Based upon the representations of counsel that these cases have settled, the following motions are denied as moot, without prejudice to refiling should the parties be unable to finalize the settlement: Case no. 8:08cv00335: Filing Nos. 345, 346, 347 &amp; 351; Case no. 8:08cv00399: Filing Nos. 342, 343, 344 &amp; 348; Case no. 8:08cv00436: Filing Nos. 335, 336, 337 &amp; 341; Case no. 8:09cv00013: Filing Nos. 314, 315, 316 &amp; 320; Case no. 8:09cv00044: Filing Nos. 255, 256, 257 &amp; 261; Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-23.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc2314</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-23</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2013-04-22</dateIssued>
+  <docketText>ORDER - Based upon the representations of counsel that these cases have settled, the following motions are denied as moot, without prejudice to refiling should the parties be unable to finalize the settlement: Case no. 8:08cv00335: Filing Nos. 345, 346, 347 &amp; 351; Case no. 8:08cv00399: Filing Nos. 342, 343, 344 &amp; 348; Case no. 8:08cv00436: Filing Nos. 335, 336, 337 &amp; 341; Case no. 8:09cv00013: Filing Nos. 314, 315, 316 &amp; 320; Case no. 8:09cv00044: Filing Nos. 255, 256, 257 &amp; 261; Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00044-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-24/mods.xml">
+ <titleInfo>
+  <title>Vacanti v. Sunset Financial Services, Inc. et al</title>
+  <subTitle>ORDER granting the parties&apos; (383) Motions for Leave in case 8:08-cv-00335-JMG-CRZ; (378) Motion for Leave in case 8:08-cv-00399-JMG-CRZ; granting (369) Motion for Leave in case 8:08-cv-00436-JMG-CRZ; granting (349) Motion for Leave in case 8:09-cv-00013-JMG-CRZ; granting (289) Motion for Leave in case 8:09-cv-00044-JMG-CRZ. The above captioned cases will not be referred to bankruptcy at this time. Member Cases: 8:08-cv-00335-JMG-CRZ, 8:08-cv-00399-JMG-CRZ, 8:08-cv-00436-JMG-CRZ, 8:09-cv-00013-JMG-CRZ, 8:09-cv-00044-JMG-CRZOrdered by Judge John M. Gerrard. (MKR)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00044-24.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fc22f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-24</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00044_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00044/USCOURTS-ned-8_09-cv-00044-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00044/pdf/USCOURTS-ned-8_09-cv-00044-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00044; Vacanti v. Sunset Financial Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00044-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2013-06-11</dateIssued>
+  <docketText>ORDER granting the parties&apos; (383) Motions for Leave in case 8:08-cv-00335-JMG-CRZ; (378) Motion for Leave in case 8:08-cv-00399-JMG-CRZ; granting (369) Motion for Leave in case 8:08-cv-00436-JMG-CRZ; granting (349) Motion for Leave in case 8:09-cv-00013-JMG-CRZ; granting (289) Motion for Leave in case 8:09-cv-00044-JMG-CRZ. The above captioned cases will not be referred to bankruptcy at this time. Member Cases: 8:08-cv-00335-JMG-CRZ, 8:08-cv-00399-JMG-CRZ, 8:08-cv-00436-JMG-CRZ, 8:09-cv-00013-JMG-CRZ, 8:09-cv-00044-JMG-CRZOrdered by Judge John M. Gerrard. (MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

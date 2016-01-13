@@ -1,0 +1,220 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18248e7f4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-03-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-03-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00324</identifier>
+<identifier type="local">P0b002ee18248e7f4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-03-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-03-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cr-00324</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00324</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00324</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Francisco" fullName="Francisco Munguia-Lopez" lastName="Munguia-Lopez" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Pablo Ponce Castro" lastName="Ponce Castro" middleName="Pablo" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Juan" fullName="Juan Jose Urias-Carmona" lastName="Urias-Carmona" middleName="Jose" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Munguia-Lopez</title>
+ <partNumber>8:11-cr-00324</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00324/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cr-00324;11-324</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Francisco Munguia-Lopez</displayForm>
+ <namePart type="family">Munguia-Lopez</namePart>
+ <namePart type="given">Francisco</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Juan Pablo Ponce Castro</displayForm>
+ <namePart type="family">Ponce Castro</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Juan Jose Urias-Carmona</displayForm>
+ <namePart type="family">Urias-Carmona</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00324</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00324</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Francisco" fullName="Francisco Munguia-Lopez" lastName="Munguia-Lopez" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Pablo Ponce Castro" lastName="Ponce Castro" middleName="Pablo" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Juan" fullName="Juan Jose Urias-Carmona" lastName="Urias-Carmona" middleName="Jose" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00324-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00324/USCOURTS-ned-8_11-cr-00324-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Munguia-Lopez</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Francisco Munguia-Lopez. Ordered by Magistrate Judge Thomas D. Thalken. (JSF)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00324-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182491e28</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00324/USCOURTS-ned-8_11-cr-00324-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00324_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00324/USCOURTS-ned-8_11-cr-00324-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00324/pdf/USCOURTS-ned-8_11-cr-00324-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00324; USA v. Munguia-Lopez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00324-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-10-03</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Francisco Munguia-Lopez. Ordered by Magistrate Judge Thomas D. Thalken. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00324-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00324/USCOURTS-ned-8_11-cr-00324-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Munguia-Lopez</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITURE sustaining 28 Motion for Preliminary Forfeiture as to Francisco Munguia-Lopez (1). Based upon the Forfeiture Allegation of the Indictment and the Defendants plea of guilty, the United States is hereby authorized to seize the $2,120.00 in United States Currency. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C., § 853(n), in which all interests will be addressed. Ordered by Judge Joseph F. Bataillon. (1 certified copy to USM)(ADB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00324-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182491e27</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00324/USCOURTS-ned-8_11-cr-00324-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00324_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00324/USCOURTS-ned-8_11-cr-00324-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00324/pdf/USCOURTS-ned-8_11-cr-00324-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00324; USA v. Munguia-Lopez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00324-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITURE sustaining 28 Motion for Preliminary Forfeiture as to Francisco Munguia-Lopez (1). Based upon the Forfeiture Allegation of the Indictment and the Defendants plea of guilty, the United States is hereby authorized to seize the $2,120.00 in United States Currency. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C., § 853(n), in which all interests will be addressed. Ordered by Judge Joseph F. Bataillon. (1 certified copy to USM)(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00324-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00324/USCOURTS-ned-8_11-cr-00324-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Munguia-Lopez</title>
+  <subTitle>FINAL ORDER OF FORFEITURE sustaining 32 Motion for Final Forfeiture as to Francisco Munguia-Lopez (1). All right, title and interest in and to the $2,120.00 in United States currency held by any person or entity are hereby forever barred and foreclosed. The $2,120.00 in United States currency is forfeited to the United States of America. The United States is directed to dispose of said property in accordance with law. Ordered by Judge Joseph F. Bataillon. (1 Certified copy to USM) (JSF)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00324-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182491f91</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00324/USCOURTS-ned-8_11-cr-00324-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00324_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00324/USCOURTS-ned-8_11-cr-00324-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00324/pdf/USCOURTS-ned-8_11-cr-00324-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00324; USA v. Munguia-Lopez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00324-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-03-27</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE sustaining 32 Motion for Final Forfeiture as to Francisco Munguia-Lopez (1). All right, title and interest in and to the $2,120.00 in United States currency held by any person or entity are hereby forever barred and foreclosed. The $2,120.00 in United States currency is forfeited to the United States of America. The United States is directed to dispose of said property in accordance with law. Ordered by Judge Joseph F. Bataillon. (1 Certified copy to USM) (JSF)</docketText>
+</extension>
+</relatedItem>
+</mods>

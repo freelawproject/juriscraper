@@ -1,0 +1,152 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c68774">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_12-cv-01410</identifier>
+<identifier type="local">P0b002ee186c68774</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-6_12-cv-01410</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_12-cv-01410</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:12-cv-01410</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1145 E.R.I.S.A.</cause>
+ <party fullName="Cessna Aircraft Company" lastName="Cessna Aircraft Company" role="Defendant"></party>
+ <party firstName="Kathy" fullName="Kathy Hutchins" lastName="Hutchins" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Hutchins v. Cessna Aircraft Company</title>
+ <partNumber>6:12-cv-01410</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_12-cv-01410/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:12-cv-01410;12-1410</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Wichita</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Cessna Aircraft Company</displayForm>
+ <namePart type="family">Cessna Aircraft Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kathy Hutchins</displayForm>
+ <namePart type="family">Hutchins</namePart>
+ <namePart type="given">Kathy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_12-cv-01410</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:12-cv-01410</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1145 E.R.I.S.A.</cause>
+ <party fullName="Cessna Aircraft Company" lastName="Cessna Aircraft Company" role="Defendant"></party>
+ <party firstName="Kathy" fullName="Kathy Hutchins" lastName="Hutchins" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_12-cv-01410-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_12-cv-01410/USCOURTS-ksd-6_12-cv-01410-0/mods.xml">
+ <titleInfo>
+  <title>Hutchins v. Cessna Aircraft Company</title>
+  <subTitle>MEMORANDUM AND ORDER. IT IS ORDERED that Defendant Cessna Aircraft Companys Motion To Dismiss Plaintiffs First Amended Complaint (Doc. #25) filed 3/28/2013 be and hereby is OVERRULED AS MOOT. IT IS FURTHER ORDERED that Defendant Cessna Aircraft Companys Motion To Dismiss Or Strike Plaintiffs Second Amended Complaint (Doc. #32) filed 5/1/2013 be and hereby is OVERRULED AS MOOT. IT IS FURTHER ORDERED that Cessna Aircraft Companys Motion For Summary Judgment (Doc. #40) filed 7/26/2013 be and hereby is SUSTAINED. Signed by Chief Judge Kathryn H. Vratil on 1/6/2014. (mh)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-6_12-cv-01410-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c720c7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_12-cv-01410/USCOURTS-ksd-6_12-cv-01410-0</identifier>
+ <identifier type="former granule identifier">ksd-6_12-cv-01410_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_12-cv-01410/USCOURTS-ksd-6_12-cv-01410-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_12-cv-01410/pdf/USCOURTS-ksd-6_12-cv-01410-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:12-cv-01410; Hutchins v. Cessna Aircraft Company; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_12-cv-01410-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER. IT IS ORDERED that Defendant Cessna Aircraft Companys Motion To Dismiss Plaintiffs First Amended Complaint (Doc. #25) filed 3/28/2013 be and hereby is OVERRULED AS MOOT. IT IS FURTHER ORDERED that Defendant Cessna Aircraft Companys Motion To Dismiss Or Strike Plaintiffs Second Amended Complaint (Doc. #32) filed 5/1/2013 be and hereby is OVERRULED AS MOOT. IT IS FURTHER ORDERED that Cessna Aircraft Companys Motion For Summary Judgment (Doc. #40) filed 7/26/2013 be and hereby is SUSTAINED. Signed by Chief Judge Kathryn H. Vratil on 1/6/2014. (mh)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,236 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d6b9671">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-08-31</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-08-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01577</identifier>
+<identifier type="local">P0b002ee18d6b9671</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-08-31</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-08-31</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cv-01577</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-01577</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-01577</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Anthony" fullName="Anthony Foxx" lastName="Foxx" role="Defendant"></party>
+ <party firstName="Otis" fullName="Otis Tolbert" lastName="Tolbert" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PS) Tolbert v. Foxx</title>
+ <partNumber>1:14-cv-01577</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01577/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-01577;14-1577</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Anthony Foxx</displayForm>
+ <namePart type="family">Foxx</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Otis Tolbert</displayForm>
+ <namePart type="family">Tolbert</namePart>
+ <namePart type="given">Otis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-01577</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-01577</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Anthony" fullName="Anthony Foxx" lastName="Foxx" role="Defendant"></party>
+ <party firstName="Otis" fullName="Otis Tolbert" lastName="Tolbert" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01577-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01577/USCOURTS-caed-1_14-cv-01577-0/mods.xml">
+ <titleInfo>
+  <title>(PS) Tolbert v. Foxx</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS re Plaintiff&apos;s 2 Application to Proceed In Forma Pauperis signed by Magistrate Judge Gary S. Austin on 1/4/2015. Objections to F&amp;R&apos;s due within fifteen (15) days of service.(Martinez, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01577/pdf/USCOURTS-caed-1_14-cv-01577-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d6f5a20</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01577/USCOURTS-caed-1_14-cv-01577-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01577_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01577/USCOURTS-caed-1_14-cv-01577-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01577/pdf/USCOURTS-caed-1_14-cv-01577-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01577; (PS) Tolbert v. Foxx; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01577-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS re Plaintiff&apos;s 2 Application to Proceed In Forma Pauperis signed by Magistrate Judge Gary S. Austin on 1/4/2015. Objections to F&amp;R&apos;s due within fifteen (15) days of service.(Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01577-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01577/USCOURTS-caed-1_14-cv-01577-1/mods.xml">
+ <titleInfo>
+  <title>(PS) Tolbert v. Foxx</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 2/11/15 ADOPTING IN FULL 6 Findings and Recommendations; DENYING 2 Motion to Proceed IFP. Plaintiff shall pay the filing fee of $400.00 within 30 days of the date of entry of this Order; and failure to comply with this Order will result in the dismissal of this action for failure to obey a court order and failure to prosecute. (Meuleman, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01577/pdf/USCOURTS-caed-1_14-cv-01577-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d6f5a21</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01577/USCOURTS-caed-1_14-cv-01577-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01577_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01577/USCOURTS-caed-1_14-cv-01577-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01577/pdf/USCOURTS-caed-1_14-cv-01577-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01577; (PS) Tolbert v. Foxx; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01577-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-02-12</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 2/11/15 ADOPTING IN FULL 6 Findings and Recommendations; DENYING 2 Motion to Proceed IFP. Plaintiff shall pay the filing fee of $400.00 within 30 days of the date of entry of this Order; and failure to comply with this Order will result in the dismissal of this action for failure to obey a court order and failure to prosecute. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01577-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01577/USCOURTS-caed-1_14-cv-01577-2/mods.xml">
+ <titleInfo>
+  <title>(PS) Tolbert v. Foxx</title>
+  <subTitle>ORDER re Issuance of New Case Documents, signed by Magistrate Judge Gary S. Austin on 8/21/15. Scheduling Conference set for 1/7/2016 at 09:00 AM in Courtroom 10 (GSA) before Magistrate Judge Gary S. Austin. (Attachments: # (1) Consent Form x 2, # (2) Rule 4 FRCP)(Verduzco, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01577/pdf/USCOURTS-caed-1_14-cv-01577-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d6f5a1e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01577/USCOURTS-caed-1_14-cv-01577-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01577_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01577/USCOURTS-caed-1_14-cv-01577-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01577/pdf/USCOURTS-caed-1_14-cv-01577-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01577; (PS) Tolbert v. Foxx; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01577-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-08-24</dateIssued>
+  <docketText>ORDER re Issuance of New Case Documents, signed by Magistrate Judge Gary S. Austin on 8/21/15. Scheduling Conference set for 1/7/2016 at 09:00 AM in Courtroom 10 (GSA) before Magistrate Judge Gary S. Austin. (Attachments: # (1) Consent Form x 2, # (2) Rule 4 FRCP)(Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01577-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01577/USCOURTS-caed-1_14-cv-01577-3/mods.xml">
+ <titleInfo>
+  <title>(PS) Tolbert v. Foxx</title>
+  <subTitle>FIRST INFORMATIONAL ORDER signed by Magistrate Judge Gary S. Austin on 8/28/2015. (Martinez, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01577/pdf/USCOURTS-caed-1_14-cv-01577-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d6f5a1f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01577/USCOURTS-caed-1_14-cv-01577-3</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01577_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01577/USCOURTS-caed-1_14-cv-01577-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01577/pdf/USCOURTS-caed-1_14-cv-01577-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01577; (PS) Tolbert v. Foxx; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01577-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-08-28</dateIssued>
+  <docketText>FIRST INFORMATIONAL ORDER signed by Magistrate Judge Gary S. Austin on 8/28/2015. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

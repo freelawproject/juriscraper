@@ -1,0 +1,472 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181723ddf">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083</identifier>
+<identifier type="local">P0b002ee181723ddf</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_00-cr-00083</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_00-cr-00083</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:00-cr-00083</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="James" fullName="James G. Allee" lastName="Allee" middleName="G." role="Defendant"></party>
+ <party firstName="Justin" fullName="Justin J. Allee" lastName="Allee" middleName="J." role="Defendant"></party>
+ <party firstName="Sue" fullName="Sue A. Bryant" lastName="Bryant" middleName="A." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Allee</title>
+ <partNumber>8:00-cr-00083</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:00-cr-00083;00-083</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>James G. Allee</displayForm>
+ <namePart type="family">Allee</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Justin J. Allee</displayForm>
+ <namePart type="family">Allee</namePart>
+ <namePart type="given">Justin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sue A. Bryant</displayForm>
+ <namePart type="family">Bryant</namePart>
+ <namePart type="given">Sue</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_00-cr-00083</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:00-cr-00083</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="James" fullName="James G. Allee" lastName="Allee" middleName="G." role="Defendant"></party>
+ <party firstName="Justin" fullName="Justin J. Allee" lastName="Allee" middleName="J." role="Defendant"></party>
+ <party firstName="Sue" fullName="Sue A. Bryant" lastName="Bryant" middleName="A." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_00-cr-00083-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Allee</title>
+  <subTitle>ORDER denying 283 Motion to Continue as to Justin J. Allee (1). 28 U.S.C. Section 2254 and the rules of courtdo not authorize a district court to extend the deadline for filing a Section 2254 petition in orderto escape the bar of the statute of limitations enacted by Congress. However, I am willingto direct the Clerk of Court to docket filing no. 283 as a Section 2254 petition and to open a newcase with a filing date of April 13, 2005. I am also willing to grant Mr. Allee leave to amendthat Section 2254 petition.However, I will not take that course unless (a) Mr. Allee requests in writing that I doso, and (b) Mr. Allee sends the court either the $5 filing fee or an Application to ProceedIn Forma Pauperis (&quot;IFP application&quot;), both by no later than May 13, 2005. If the filing feeor an application to proceed IFP has been received by the court on or before May 13,2005, the documents will be filed as a new case with a filing date retroactive to the dateof filing no. 283, and a judge will be drawn to preside over the case.However, if the court has not received either the filing fee or an application toproceed IFP by May 13, 2005, no further action will be taken in respect to filing no. 283.The Clerk of Court shall send Mr. Allee the form for an IFP application. Signed by Judge Joseph F. Bataillon on 4/25/2005. COPY MAILED with IFP application. (ADB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_00-cr-00083-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174a6e6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-0</identifier>
+ <identifier type="former granule identifier">ned-8_00-cr-00083_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/pdf/USCOURTS-ned-8_00-cr-00083-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:00-cr-00083; USA v. Allee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_00-cr-00083-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-04-25</dateIssued>
+  <docketText>ORDER denying 283 Motion to Continue as to Justin J. Allee (1). 28 U.S.C. Section 2254 and the rules of courtdo not authorize a district court to extend the deadline for filing a Section 2254 petition in orderto escape the bar of the statute of limitations enacted by Congress. However, I am willingto direct the Clerk of Court to docket filing no. 283 as a Section 2254 petition and to open a newcase with a filing date of April 13, 2005. I am also willing to grant Mr. Allee leave to amendthat Section 2254 petition.However, I will not take that course unless (a) Mr. Allee requests in writing that I doso, and (b) Mr. Allee sends the court either the $5 filing fee or an Application to ProceedIn Forma Pauperis (&quot;IFP application&quot;), both by no later than May 13, 2005. If the filing feeor an application to proceed IFP has been received by the court on or before May 13,2005, the documents will be filed as a new case with a filing date retroactive to the dateof filing no. 283, and a judge will be drawn to preside over the case.However, if the court has not received either the filing fee or an application toproceed IFP by May 13, 2005, no further action will be taken in respect to filing no. 283.The Clerk of Court shall send Mr. Allee the form for an IFP application. Signed by Judge Joseph F. Bataillon on 4/25/2005. COPY MAILED with IFP application. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_00-cr-00083-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Allee</title>
+  <subTitle>MEMORANDUM AND ORDER that 278, the Motion under 28 U.S.C. 2255 to Vacate filed bydefendant is denied. A separate judgment of dismissal with prejudice will be filed in accordance withthis Memorandum and Order, as to Justin J. Allee (1). Signed by Judge Joseph F. Bataillon on 5/5/2005. (JAE, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_00-cr-00083-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174a6e8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-1</identifier>
+ <identifier type="former granule identifier">ned-8_00-cr-00083_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/pdf/USCOURTS-ned-8_00-cr-00083-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:00-cr-00083; USA v. Allee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_00-cr-00083-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-05-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that 278, the Motion under 28 U.S.C. 2255 to Vacate filed bydefendant is denied. A separate judgment of dismissal with prejudice will be filed in accordance withthis Memorandum and Order, as to Justin J. Allee (1). Signed by Judge Joseph F. Bataillon on 5/5/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_00-cr-00083-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Allee</title>
+  <subTitle>JUDGMENT - Pursuant to the Memorandum and Order entered on this date, 285 judgement is enteredin favor of the government and against the defendant. The defendant&apos;s Motion under 28U.S.C. 2255 to Vacate is dismissed with prejudice, as to defendant Justin J. Allee. Signed by Judge Joseph F. Bataillon on 5/5/2005. (JAE, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_00-cr-00083-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174a6e9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-2</identifier>
+ <identifier type="former granule identifier">ned-8_00-cr-00083_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/pdf/USCOURTS-ned-8_00-cr-00083-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:00-cr-00083; USA v. Allee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_00-cr-00083-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-05-05</dateIssued>
+  <docketText>JUDGMENT - Pursuant to the Memorandum and Order entered on this date, 285 judgement is enteredin favor of the government and against the defendant. The defendant&apos;s Motion under 28U.S.C. 2255 to Vacate is dismissed with prejudice, as to defendant Justin J. Allee. Signed by Judge Joseph F. Bataillon on 5/5/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_00-cr-00083-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Allee</title>
+  <subTitle>ORDER permitting defendant to proceed on appeal in forma pauperis, as to defendant Justin J. Allee. Signed by Judge Joseph F. Bataillon on 6/28/2005. (JAE, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_00-cr-00083-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174a792</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-3</identifier>
+ <identifier type="former granule identifier">ned-8_00-cr-00083_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/pdf/USCOURTS-ned-8_00-cr-00083-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:00-cr-00083; USA v. Allee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_00-cr-00083-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-06-28</dateIssued>
+  <docketText>ORDER permitting defendant to proceed on appeal in forma pauperis, as to defendant Justin J. Allee. Signed by Judge Joseph F. Bataillon on 6/28/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_00-cr-00083-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Allee</title>
+  <subTitle>ORDER that Defendants Motion to Amend Title 28 U.S.C. 2255 to Vacate, Set Aside, orCorrect Sentence 289, and defendant&apos;s Motion to Stay Appeal Process 291, are granted. Defendant is granted three weeks from the date of this order in which to file a brief on the issues raised in the motions. The government shall have two weeks thereafter in which to respond. The Clerk is directed to send a copy of this order to the Clerk of the United States Court of Appeals for the Eighth Circuit, as to Justin J. Allee (1). Signed by Judge Joseph F. Bataillon on 8/2/2005. (JAE, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_00-cr-00083-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174a6ea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-4</identifier>
+ <identifier type="former granule identifier">ned-8_00-cr-00083_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/pdf/USCOURTS-ned-8_00-cr-00083-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:00-cr-00083; USA v. Allee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_00-cr-00083-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-08-02</dateIssued>
+  <docketText>ORDER that Defendants Motion to Amend Title 28 U.S.C. 2255 to Vacate, Set Aside, orCorrect Sentence 289, and defendant&apos;s Motion to Stay Appeal Process 291, are granted. Defendant is granted three weeks from the date of this order in which to file a brief on the issues raised in the motions. The government shall have two weeks thereafter in which to respond. The Clerk is directed to send a copy of this order to the Clerk of the United States Court of Appeals for the Eighth Circuit, as to Justin J. Allee (1). Signed by Judge Joseph F. Bataillon on 8/2/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_00-cr-00083-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Allee</title>
+  <subTitle>ORDER granting 300 Motion to Extend Time to File Motion to Alter or Amend theJudgment. Defendant is granted until October 17, 2005 in which to file a motion to alter or amend the judgment. The government shall have two weeks thereafter in which torespond, as to Justin J. Allee (1). Signed by Judge Joseph F. Bataillon on 8/30/2005. (JAE, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_00-cr-00083-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174a793</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-5</identifier>
+ <identifier type="former granule identifier">ned-8_00-cr-00083_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/pdf/USCOURTS-ned-8_00-cr-00083-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:00-cr-00083; USA v. Allee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_00-cr-00083-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2005-08-30</dateIssued>
+  <docketText>ORDER granting 300 Motion to Extend Time to File Motion to Alter or Amend theJudgment. Defendant is granted until October 17, 2005 in which to file a motion to alter or amend the judgment. The government shall have two weeks thereafter in which torespond, as to Justin J. Allee (1). Signed by Judge Joseph F. Bataillon on 8/30/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_00-cr-00083-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Allee</title>
+  <subTitle>MEMORANDUM AND ORDER - The defendant&apos;s amended 2255 motion is denied; A separate amended judgment shall be entered; and a copy of this order shall be mailed to the defendant at his last known address as to defendant Justin J. Allee. Ordered by Judge Joseph F. Bataillon - (clerk has done as directed) (KBJ)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_00-cr-00083-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174a78e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-6</identifier>
+ <identifier type="former granule identifier">ned-8_00-cr-00083_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/pdf/USCOURTS-ned-8_00-cr-00083-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:00-cr-00083; USA v. Allee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_00-cr-00083-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-08-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The defendant&apos;s amended 2255 motion is denied; A separate amended judgment shall be entered; and a copy of this order shall be mailed to the defendant at his last known address as to defendant Justin J. Allee. Ordered by Judge Joseph F. Bataillon - (clerk has done as directed) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_00-cr-00083-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Allee</title>
+  <subTitle>JUDGMENT - Pursuant to the Memorandum and Order 307] judgment is enteredin favor of the government and against the defendant. The defendant&apos;s Amended Motion under 28 U.S.C. 2255 to vacate 278 is dismissed as to defendant Justin J. Allee. Ordered by Judge Joseph F. Bataillon (KBJ)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_00-cr-00083-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174a790</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-7</identifier>
+ <identifier type="former granule identifier">ned-8_00-cr-00083_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/pdf/USCOURTS-ned-8_00-cr-00083-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:00-cr-00083; USA v. Allee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_00-cr-00083-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2006-08-18</dateIssued>
+  <docketText>JUDGMENT - Pursuant to the Memorandum and Order 307] judgment is enteredin favor of the government and against the defendant. The defendant&apos;s Amended Motion under 28 U.S.C. 2255 to vacate 278 is dismissed as to defendant Justin J. Allee. Ordered by Judge Joseph F. Bataillon (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_00-cr-00083-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Allee</title>
+  <subTitle>MEMORANDUM AND ORDER - That the defendant may proceed in forma pauperis on appeal; That a Certificate of Appealability is denied; and the Clerk of Court shall process this appeal to the Eighth Circuit as to defendant Justin J. Allee. Ordered by Judge Joseph F. Bataillon. (KBJ)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_00-cr-00083-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174a78f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-8</identifier>
+ <identifier type="former granule identifier">ned-8_00-cr-00083_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/pdf/USCOURTS-ned-8_00-cr-00083-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:00-cr-00083; USA v. Allee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_00-cr-00083-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2006-10-16</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - That the defendant may proceed in forma pauperis on appeal; That a Certificate of Appealability is denied; and the Clerk of Court shall process this appeal to the Eighth Circuit as to defendant Justin J. Allee. Ordered by Judge Joseph F. Bataillon. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_00-cr-00083-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Allee</title>
+  <subTitle>ORDER - That defendant&apos;s Motion for Reconsideration 314 is denied; The clerk of court is directed to send a copy of this Memorandum and Order to defendant at his last-known address as to defendant Justin J. Allee. Ordered by Judge Joseph F. Bataillon. - (COPY AS DIRECTED to Mr. Allee at USP-FLORENCE, P.O. Box 7000, Florence, CO 81226) (KBJ)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_00-cr-00083-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174a6e7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-9</identifier>
+ <identifier type="former granule identifier">ned-8_00-cr-00083_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/pdf/USCOURTS-ned-8_00-cr-00083-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:00-cr-00083; USA v. Allee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_00-cr-00083-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2007-03-22</dateIssued>
+  <docketText>ORDER - That defendant&apos;s Motion for Reconsideration 314 is denied; The clerk of court is directed to send a copy of this Memorandum and Order to defendant at his last-known address as to defendant Justin J. Allee. Ordered by Judge Joseph F. Bataillon. - (COPY AS DIRECTED to Mr. Allee at USP-FLORENCE, P.O. Box 7000, Florence, CO 81226) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_00-cr-00083-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Allee</title>
+  <subTitle>ORDER denying 327 Motion for Leave to file an amended 28 U.S.C. Section 2255 action; denying as moot 326 Motion to Appoint Counsel as to Justin J. Allee (1). Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (JSF)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_00-cr-00083-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174a791</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-10</identifier>
+ <identifier type="former granule identifier">ned-8_00-cr-00083_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/pdf/USCOURTS-ned-8_00-cr-00083-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:00-cr-00083; USA v. Allee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_00-cr-00083-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2009-10-20</dateIssued>
+  <docketText>ORDER denying 327 Motion for Leave to file an amended 28 U.S.C. Section 2255 action; denying as moot 326 Motion to Appoint Counsel as to Justin J. Allee (1). Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_00-cr-00083-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Allee</title>
+  <subTitle>ORDER - Defendant&apos;s petition, Filing No. 329, and motion, Filing No. 330, are denied as frivolous as to Justin J. Allee. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (AOA)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_00-cr-00083-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174a6e5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-11</identifier>
+ <identifier type="former granule identifier">ned-8_00-cr-00083_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_00-cr-00083/USCOURTS-ned-8_00-cr-00083-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_00-cr-00083/pdf/USCOURTS-ned-8_00-cr-00083-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:00-cr-00083; USA v. Allee; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_00-cr-00083-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2011-01-31</dateIssued>
+  <docketText>ORDER - Defendant&apos;s petition, Filing No. 329, and motion, Filing No. 330, are denied as frivolous as to Justin J. Allee. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (AOA)</docketText>
+</extension>
+</relatedItem>
+</mods>

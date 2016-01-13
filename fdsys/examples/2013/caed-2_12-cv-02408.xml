@@ -1,0 +1,226 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183f371f9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-03-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-03-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02408</identifier>
+<identifier type="local">P0b002ee183f371f9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-03-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-03-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02408</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02408</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02408</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party fullName="California Reconveyance Company" lastName="California Reconveyance Company" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Hannum" lastName="Hannum" role="Plaintiff"></party>
+ <party fullName="JPMorgan Chase Bank, NA" lastName="JPMorgan Chase Bank, NA" role="Defendant"></party>
+ <party fullName="U.S. Bank, NA" lastName="U.S. Bank, NA" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Hannum v. JPMorgan Chase Bank, NA et al</title>
+ <partNumber>2:12-cv-02408</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02408/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02408;12-2408</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>California Reconveyance Company</displayForm>
+ <namePart type="family">California Reconveyance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Hannum</displayForm>
+ <namePart type="family">Hannum</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>JPMorgan Chase Bank, NA</displayForm>
+ <namePart type="family">JPMorgan Chase Bank, NA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Bank, NA</displayForm>
+ <namePart type="family">U.S. Bank, NA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02408</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02408</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party fullName="California Reconveyance Company" lastName="California Reconveyance Company" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Hannum" lastName="Hannum" role="Plaintiff"></party>
+ <party fullName="JPMorgan Chase Bank, NA" lastName="JPMorgan Chase Bank, NA" role="Defendant"></party>
+ <party fullName="U.S. Bank, NA" lastName="U.S. Bank, NA" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02408-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02408/USCOURTS-caed-2_12-cv-02408-0/mods.xml">
+ <titleInfo>
+  <title>Hannum v. JPMorgan Chase Bank, NA et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 11/13/12. This action is STAYED until 1/4/13; the deadline for a responsive pleading to the first amended complaint shall be on or before 1/18/13; defendants shall stay any pending foreclosure proceedings until 1/4/13. (Manzer, C)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02408-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f38718</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02408/USCOURTS-caed-2_12-cv-02408-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02408_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02408/USCOURTS-caed-2_12-cv-02408-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02408/pdf/USCOURTS-caed-2_12-cv-02408-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02408; Hannum v. JPMorgan Chase Bank, NA et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02408-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-13</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 11/13/12. This action is STAYED until 1/4/13; the deadline for a responsive pleading to the first amended complaint shall be on or before 1/18/13; defendants shall stay any pending foreclosure proceedings until 1/4/13. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02408-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02408/USCOURTS-caed-2_12-cv-02408-1/mods.xml">
+ <titleInfo>
+  <title>Hannum v. JPMorgan Chase Bank, NA et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 1/3/13: This action is stayed until March 1, 2013. The deadline for Defendants to file and serve a responsive pleading to Plaintiff&apos;s First Amended Complaint shall be on or before March 15, 2013. Defendants shall stay any pending foreclosure proceedings on the subject property located at 6705 Barton Road, Granite Bay, California 95746 until March 1, 2013. (Kaminski, H)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02408-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f38898</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02408/USCOURTS-caed-2_12-cv-02408-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02408_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02408/USCOURTS-caed-2_12-cv-02408-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02408/pdf/USCOURTS-caed-2_12-cv-02408-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02408; Hannum v. JPMorgan Chase Bank, NA et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02408-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 1/3/13: This action is stayed until March 1, 2013. The deadline for Defendants to file and serve a responsive pleading to Plaintiff&apos;s First Amended Complaint shall be on or before March 15, 2013. Defendants shall stay any pending foreclosure proceedings on the subject property located at 6705 Barton Road, Granite Bay, California 95746 until March 1, 2013. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02408-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02408/USCOURTS-caed-2_12-cv-02408-2/mods.xml">
+ <titleInfo>
+  <title>Hannum v. JPMorgan Chase Bank, NA et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 3/18/13 ORDERING this action STAYED until 5/1/13. The deadline for defendants to file and serve a responsive pleading to plaintiff&apos;s First Amended Complaint shall be on or before 5/15/13. Defendants will STAY any pending foreclosure proceedings on the subject property located at 6705 Barton Road, Granite Bay, CA 95746 until 5/1/13. (Meuleman, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02408-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f38717</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02408/USCOURTS-caed-2_12-cv-02408-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02408_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02408/USCOURTS-caed-2_12-cv-02408-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02408/pdf/USCOURTS-caed-2_12-cv-02408-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02408; Hannum v. JPMorgan Chase Bank, NA et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02408-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-03-19</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 3/18/13 ORDERING this action STAYED until 5/1/13. The deadline for defendants to file and serve a responsive pleading to plaintiff&apos;s First Amended Complaint shall be on or before 5/15/13. Defendants will STAY any pending foreclosure proceedings on the subject property located at 6705 Barton Road, Granite Bay, CA 95746 until 5/1/13. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

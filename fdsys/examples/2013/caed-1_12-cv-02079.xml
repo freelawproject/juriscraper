@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184f108ca">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-05-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-05-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-02079</identifier>
+<identifier type="local">P0b002ee184f108ca</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-05-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-05-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-02079</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-02079</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-02079</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="V." fullName="V. Singh" lastName="Singh" role="Respondent"></party>
+ <party firstName="Leonard" fullName="Leonard Bryce Thomas" lastName="Thomas" middleName="Bryce" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>(HC)Thomas v. Singh</title>
+ <partNumber>1:12-cv-02079</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-02079/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-02079;12-2079</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>V. Singh</displayForm>
+ <namePart type="family">Singh</namePart>
+ <namePart type="given">V.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Leonard Bryce Thomas</displayForm>
+ <namePart type="family">Thomas</namePart>
+ <namePart type="given">Leonard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-02079</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-02079</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="V." fullName="V. Singh" lastName="Singh" role="Respondent"></party>
+ <party firstName="Leonard" fullName="Leonard Bryce Thomas" lastName="Thomas" middleName="Bryce" role="Petitioner"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-02079-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-02079/USCOURTS-caed-1_12-cv-02079-0/mods.xml">
+ <titleInfo>
+  <title>(HC)Thomas v. Singh</title>
+  <subTitle>ORDER of INTRADISTRICT TRANSFER from Sacramento (2:12-cv-3016 KJN) to Fresno (1:12-cv-2079 JLT) signed by Magistrate Judge Kendall J. Newman on 12/26/12.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-02079-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f16017</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-02079/USCOURTS-caed-1_12-cv-02079-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-02079_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-02079/USCOURTS-caed-1_12-cv-02079-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-02079/pdf/USCOURTS-caed-1_12-cv-02079-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-02079; (HC)Thomas v. Singh; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-02079-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-12-26</dateIssued>
+  <docketText>ORDER of INTRADISTRICT TRANSFER from Sacramento (2:12-cv-3016 KJN) to Fresno (1:12-cv-2079 JLT) signed by Magistrate Judge Kendall J. Newman on 12/26/12.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-02079-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-02079/USCOURTS-caed-1_12-cv-02079-1/mods.xml">
+ <titleInfo>
+  <title>(HC)Thomas v. Singh</title>
+  <subTitle>ORDER to SHOW CAUSE Why the Petition Should Not be Dismissed for Violation of the One-Year Statute of Limitations; ORDER Directing that Response be Filed within Thirty Days, signed by Magistrate Judge Jennifer L. Thurston on 1/4/13. (Verduzco, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-02079-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f16016</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-02079/USCOURTS-caed-1_12-cv-02079-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-02079_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-02079/USCOURTS-caed-1_12-cv-02079-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-02079/pdf/USCOURTS-caed-1_12-cv-02079-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-02079; (HC)Thomas v. Singh; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-02079-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER to SHOW CAUSE Why the Petition Should Not be Dismissed for Violation of the One-Year Statute of Limitations; ORDER Directing that Response be Filed within Thirty Days, signed by Magistrate Judge Jennifer L. Thurston on 1/4/13. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-02079-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-02079/USCOURTS-caed-1_12-cv-02079-2/mods.xml">
+ <titleInfo>
+  <title>(HC)Thomas v. Singh</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS to Dismiss the Petition for Writ of Habeas Corpus for Violation of the One-Year Statute of Limitations; ORDER DIRECTING That Objections be Filed Within Twenty Days, signed by Magistrate Judge Jennifer L. Thurston on 5/24/2013, referred to Judge Ishii. (Marrujo, C)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-02079-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f1618c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-02079/USCOURTS-caed-1_12-cv-02079-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-02079_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-02079/USCOURTS-caed-1_12-cv-02079-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-02079/pdf/USCOURTS-caed-1_12-cv-02079-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-02079; (HC)Thomas v. Singh; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-02079-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-05-24</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS to Dismiss the Petition for Writ of Habeas Corpus for Violation of the One-Year Statute of Limitations; ORDER DIRECTING That Objections be Filed Within Twenty Days, signed by Magistrate Judge Jennifer L. Thurston on 5/24/2013, referred to Judge Ishii. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+</mods>

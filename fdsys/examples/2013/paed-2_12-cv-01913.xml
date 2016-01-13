@@ -1,0 +1,278 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a01c6a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_12-cv-01913</identifier>
+<identifier type="local">P0b002ee183a01c6a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_12-cv-01913</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_12-cv-01913</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:12-cv-01913</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="ALLY FINANCIAL INC." lastName="ALLY FINANCIAL INC." role="ThirdParty Defendant"></party>
+ <party fullName="COUNTY OF MONTGOMERY" lastName="COUNTY OF MONTGOMERY" role="Defendant"></party>
+ <party fullName="COURT OF COMMON PLEAS OF MONTGOMERY COUNTY - STATE OF PENNSYLVANIA" lastName="COURT OF COMMON PLEAS OF MONTGOMERY COUNTY - STATE OF PENNSYLVANIA" role="Defendant"></party>
+ <party fullName="DOES" lastName="DOES" role="Defendant"></party>
+ <party fullName="GMAC MORTGAGE, LLC" lastName="GMAC MORTGAGE, LLC" role="ThirdParty Defendant"></party>
+ <party fullName="MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INCORPORATED&amp;MERSCORP" lastName="MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INCORPORATED&amp;MERSCORP" role="ThirdParty Defendant"></party>
+ <party fullName="MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INCORPORATED&amp;MERSCORP" lastName="MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INCORPORATED&amp;MERSCORP" role="Unrepresented Party"></party>
+ <party fullName="PROTHONOTARY OF MONTGOMERY COUNTY PENNSYLVANIA" lastName="PROTHONOTARY OF MONTGOMERY COUNTY PENNSYLVANIA" role="Defendant"></party>
+ <party fullName="SUPERIOR COURT OF PENNSYLVANIA" lastName="SUPERIOR COURT OF PENNSYLVANIA" role="Defendant"></party>
+ <party firstName="KENNETH" fullName="KENNETH J. TAGGART" lastName="TAGGART" middleName="J." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>TAGGART v. COUNTY OF MONTGOMERY et al</title>
+ <partNumber>2:12-cv-01913</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_12-cv-01913/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-01913;12-1913</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ALLY FINANCIAL INC.</displayForm>
+ <namePart type="family">ALLY FINANCIAL INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>COUNTY OF MONTGOMERY</displayForm>
+ <namePart type="family">COUNTY OF MONTGOMERY</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>COURT OF COMMON PLEAS OF MONTGOMERY COUNTY - STATE OF PENNSYLVANIA</displayForm>
+ <namePart type="family">COURT OF COMMON PLEAS OF MONTGOMERY COUNTY - STATE OF PENNSYLVANIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DOES</displayForm>
+ <namePart type="family">DOES</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GMAC MORTGAGE, LLC</displayForm>
+ <namePart type="family">GMAC MORTGAGE, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INCORPORATED&amp;MERSCORP</displayForm>
+ <namePart type="family">MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INCORPORATED&amp;MERSCORP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INCORPORATED&amp;MERSCORP</displayForm>
+ <namePart type="family">MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INCORPORATED&amp;MERSCORP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Unrepresented Party</description>
+</name>
+<name type="personal">
+ <displayForm>PROTHONOTARY OF MONTGOMERY COUNTY PENNSYLVANIA</displayForm>
+ <namePart type="family">PROTHONOTARY OF MONTGOMERY COUNTY PENNSYLVANIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SUPERIOR COURT OF PENNSYLVANIA</displayForm>
+ <namePart type="family">SUPERIOR COURT OF PENNSYLVANIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>KENNETH J. TAGGART</displayForm>
+ <namePart type="family">TAGGART</namePart>
+ <namePart type="given">KENNETH</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_12-cv-01913</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:12-cv-01913</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="ALLY FINANCIAL INC." lastName="ALLY FINANCIAL INC." role="ThirdParty Defendant"></party>
+ <party fullName="COUNTY OF MONTGOMERY" lastName="COUNTY OF MONTGOMERY" role="Defendant"></party>
+ <party fullName="COURT OF COMMON PLEAS OF MONTGOMERY COUNTY - STATE OF PENNSYLVANIA" lastName="COURT OF COMMON PLEAS OF MONTGOMERY COUNTY - STATE OF PENNSYLVANIA" role="Defendant"></party>
+ <party fullName="DOES" lastName="DOES" role="Defendant"></party>
+ <party fullName="GMAC MORTGAGE, LLC" lastName="GMAC MORTGAGE, LLC" role="ThirdParty Defendant"></party>
+ <party fullName="MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INCORPORATED&amp;MERSCORP" lastName="MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INCORPORATED&amp;MERSCORP" role="ThirdParty Defendant"></party>
+ <party fullName="MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INCORPORATED&amp;MERSCORP" lastName="MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INCORPORATED&amp;MERSCORP" role="Unrepresented Party"></party>
+ <party fullName="PROTHONOTARY OF MONTGOMERY COUNTY PENNSYLVANIA" lastName="PROTHONOTARY OF MONTGOMERY COUNTY PENNSYLVANIA" role="Defendant"></party>
+ <party fullName="SUPERIOR COURT OF PENNSYLVANIA" lastName="SUPERIOR COURT OF PENNSYLVANIA" role="Defendant"></party>
+ <party firstName="KENNETH" fullName="KENNETH J. TAGGART" lastName="TAGGART" middleName="J." role="Plaintiff"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_12-cv-01913-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_12-cv-01913/USCOURTS-paed-2_12-cv-01913-0/mods.xml">
+ <titleInfo>
+  <title>TAGGART v. COUNTY OF MONTGOMERY et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE J. WILLIAM DITTER, JR ON 1/3/2013. 1/3/2013 ENTERED AND COPIES MAILED TO PRO SE AND UNREP, E-MAILED.(tomg, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_12-cv-01913-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a05ae5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_12-cv-01913/USCOURTS-paed-2_12-cv-01913-0</identifier>
+ <identifier type="former granule identifier">paed-2_12-cv-01913_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_12-cv-01913/USCOURTS-paed-2_12-cv-01913-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_12-cv-01913/pdf/USCOURTS-paed-2_12-cv-01913-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01913; TAGGART v. COUNTY OF MONTGOMERY et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_12-cv-01913-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE J. WILLIAM DITTER, JR ON 1/3/2013. 1/3/2013 ENTERED AND COPIES MAILED TO PRO SE AND UNREP, E-MAILED.(tomg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_12-cv-01913-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_12-cv-01913/USCOURTS-paed-2_12-cv-01913-1/mods.xml">
+ <titleInfo>
+  <title>TAGGART v. COUNTY OF MONTGOMERY et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION ORDER THAT THIS ACTION AGAINST COUNTY DEFTS IS DISMISSED WITH PREJUDICE PURSUANT TO FEDERAL RULE OF CIVIL PROCEDURE 41(a)(1) AND THE CLERK OF COURT IS DIRECTED TO ENTER THE DISMISSAL ON THE DOCKET. SIGNED BY HONORABLE J. WILLIAM DITTER, JR ON 1/3/2013. 1/3/2013 ENTERED AND COPIES MAILED TO PRO SE AND UNREP, E-MAILED.(tomg, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_12-cv-01913-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a05ae4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_12-cv-01913/USCOURTS-paed-2_12-cv-01913-1</identifier>
+ <identifier type="former granule identifier">paed-2_12-cv-01913_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_12-cv-01913/USCOURTS-paed-2_12-cv-01913-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_12-cv-01913/pdf/USCOURTS-paed-2_12-cv-01913-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01913; TAGGART v. COUNTY OF MONTGOMERY et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_12-cv-01913-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION ORDER THAT THIS ACTION AGAINST COUNTY DEFTS IS DISMISSED WITH PREJUDICE PURSUANT TO FEDERAL RULE OF CIVIL PROCEDURE 41(a)(1) AND THE CLERK OF COURT IS DIRECTED TO ENTER THE DISMISSAL ON THE DOCKET. SIGNED BY HONORABLE J. WILLIAM DITTER, JR ON 1/3/2013. 1/3/2013 ENTERED AND COPIES MAILED TO PRO SE AND UNREP, E-MAILED.(tomg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_12-cv-01913-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_12-cv-01913/USCOURTS-paed-2_12-cv-01913-2/mods.xml">
+ <titleInfo>
+  <title>TAGGART v. COUNTY OF MONTGOMERY et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION ORDER THAT THIS ACTION AGAINST MORTGAGE ELECTRONIC REGISTRATION SYSTEMS AND INCORPORATED&amp;MERSCORP IS DISMISSED WITHOUT PREJUDICE FOR PLAINTIFF&apos;S FAILURE TO MAKE SERVICE IN ACCORDANCE WITH RULE 4(m) OF THE FEDERAL RULES OF CIVIL PROCEDURE, ETC. SIGNED BY HONORABLE J. WILLIAM DITTER, JR ON 1/3/2013. 1/3/2013 ENTERED AND COPIES MAILED TO PRO SE AND UNREP, E-MAILED.(tomg, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_12-cv-01913-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a05ae3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_12-cv-01913/USCOURTS-paed-2_12-cv-01913-2</identifier>
+ <identifier type="former granule identifier">paed-2_12-cv-01913_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_12-cv-01913/USCOURTS-paed-2_12-cv-01913-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_12-cv-01913/pdf/USCOURTS-paed-2_12-cv-01913-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01913; TAGGART v. COUNTY OF MONTGOMERY et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_12-cv-01913-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION ORDER THAT THIS ACTION AGAINST MORTGAGE ELECTRONIC REGISTRATION SYSTEMS AND INCORPORATED&amp;MERSCORP IS DISMISSED WITHOUT PREJUDICE FOR PLAINTIFF&apos;S FAILURE TO MAKE SERVICE IN ACCORDANCE WITH RULE 4(m) OF THE FEDERAL RULES OF CIVIL PROCEDURE, ETC. SIGNED BY HONORABLE J. WILLIAM DITTER, JR ON 1/3/2013. 1/3/2013 ENTERED AND COPIES MAILED TO PRO SE AND UNREP, E-MAILED.(tomg, )</docketText>
+</extension>
+</relatedItem>
+</mods>

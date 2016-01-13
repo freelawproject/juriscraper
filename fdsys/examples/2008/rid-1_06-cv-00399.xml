@@ -1,0 +1,419 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e8a09f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00399</identifier>
+<identifier type="local">P0b002ee180e8a09f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-rid-1_06-cv-00399</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_06-cv-00399</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:06-cv-00399</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party fullName="Barney" lastName="Barney" role="Defendant"></party>
+ <party fullName="Baumeister" lastName="Baumeister" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Flannery" lastName="Flannery" role="Plaintiff"></party>
+ <party fullName="Hanley" lastName="Hanley" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Marocco" lastName="Marocco" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Parkis" lastName="Parkis" role="Defendant"></party>
+ <party firstName="A.T." fullName="A.T. Wall" lastName="Wall" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Flannery v. Baumeister et al</title>
+ <partNumber>1:06-cv-00399</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00399/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:06-cv-00399;06-399</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Providence</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Barney</displayForm>
+ <namePart type="family">Barney</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Baumeister</displayForm>
+ <namePart type="family">Baumeister</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Flannery</displayForm>
+ <namePart type="family">Flannery</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Hanley</displayForm>
+ <namePart type="family">Hanley</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Marocco</displayForm>
+ <namePart type="family">Marocco</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Parkis</displayForm>
+ <namePart type="family">Parkis</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A.T. Wall</displayForm>
+ <namePart type="family">Wall</namePart>
+ <namePart type="given">A.T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_06-cv-00399</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:06-cv-00399</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party fullName="Barney" lastName="Barney" role="Defendant"></party>
+ <party fullName="Baumeister" lastName="Baumeister" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Flannery" lastName="Flannery" role="Plaintiff"></party>
+ <party fullName="Hanley" lastName="Hanley" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Marocco" lastName="Marocco" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Parkis" lastName="Parkis" role="Defendant"></party>
+ <party firstName="A.T." fullName="A.T. Wall" lastName="Wall" role="Defendant"></party>
+ <state>Rhode Island</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00399-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-0/mods.xml">
+ <titleInfo>
+  <title>Flannery v. Baumeister et al</title>
+  <subTitle>MEMORANDUM AND ORDER Re: 5 Motion for Service is granted, Motion for Extension of Time filed by Thomas Flannery is granted; 45 days to pay initial partial filing fee. So Ordered by Magistrate Judge Jacob Hagopian on 10/24/06. (Gilfillan, Barbara)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00399-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9c4d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-0</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00399_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00399/pdf/USCOURTS-rid-1_06-cv-00399-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00399; Flannery v. Baumeister et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00399-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-10-26</dateIssued>
+  <docketText>MEMORANDUM AND ORDER Re: 5 Motion for Service is granted, Motion for Extension of Time filed by Thomas Flannery is granted; 45 days to pay initial partial filing fee. So Ordered by Magistrate Judge Jacob Hagopian on 10/24/06. (Gilfillan, Barbara)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00399-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-1/mods.xml">
+ <titleInfo>
+  <title>Flannery v. Baumeister et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 26 Motion for Leave to File Amended Complaint filed by Thomas Flannery. Plaintiff shall file the Amended Complaint within ten days of the date of this Order (5/6/2007). So Ordered by Magistrate Judge Jacob Hagopian on 04/25/2007. (Baldinelli, Doreen)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00399-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9c4e8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-1</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00399_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00399/pdf/USCOURTS-rid-1_06-cv-00399-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00399; Flannery v. Baumeister et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00399-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-04-26</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 26 Motion for Leave to File Amended Complaint filed by Thomas Flannery. Plaintiff shall file the Amended Complaint within ten days of the date of this Order (5/6/2007). So Ordered by Magistrate Judge Jacob Hagopian on 04/25/2007. (Baldinelli, Doreen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00399-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-2/mods.xml">
+ <titleInfo>
+  <title>Flannery v. Baumeister et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 30 Motion for Miscellaneous Relief filed by Thomas Flannery. This Court does not have jurisdiction over a non-party confinement facility located in Massachusetts. So Ordered by Magistrate Judge Jacob Hagopian on 04/25/2007. (Baldinelli, Doreen)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00399-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9c4da</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-2</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00399_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00399/pdf/USCOURTS-rid-1_06-cv-00399-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00399; Flannery v. Baumeister et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00399-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-04-26</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 30 Motion for Miscellaneous Relief filed by Thomas Flannery. This Court does not have jurisdiction over a non-party confinement facility located in Massachusetts. So Ordered by Magistrate Judge Jacob Hagopian on 04/25/2007. (Baldinelli, Doreen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00399-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-3/mods.xml">
+ <titleInfo>
+  <title>Flannery v. Baumeister et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying as moot 55 Motion for Extension of Time filed by Thomas Flannery, denying 56 Motion for Miscellaneous Relief filed by Thomas Flannery. So Ordered by Magistrate Judge Jacob Hagopian on 08/14/2007. (Baldinelli, Doreen)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00399-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9c4dc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-3</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00399_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00399/pdf/USCOURTS-rid-1_06-cv-00399-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00399; Flannery v. Baumeister et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00399-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-08-14</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying as moot 55 Motion for Extension of Time filed by Thomas Flannery, denying 56 Motion for Miscellaneous Relief filed by Thomas Flannery. So Ordered by Magistrate Judge Jacob Hagopian on 08/14/2007. (Baldinelli, Doreen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00399-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-4/mods.xml">
+ <titleInfo>
+  <title>Flannery v. Baumeister et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 71 Motion for extra law library time. This Court does not have jurisdiction over the Massachusetts Department of Corrections. So Ordered by Senior United States Magistrate Judge Jacob Hagopian on October 4, 2007. (Geile, Wendy)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00399-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9c4d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-4</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00399_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00399/pdf/USCOURTS-rid-1_06-cv-00399-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00399; Flannery v. Baumeister et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00399-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-10-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 71 Motion for extra law library time. This Court does not have jurisdiction over the Massachusetts Department of Corrections. So Ordered by Senior United States Magistrate Judge Jacob Hagopian on October 4, 2007. (Geile, Wendy)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00399-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-5/mods.xml">
+ <titleInfo>
+  <title>Flannery v. Baumeister et al</title>
+  <subTitle>REPORT AND RECOMMENDATION GRANTING 54 MOTION to Dismiss filed by Joseph Marocco, A.T. Wall, GRANTING 60 MOTION to Dismiss filed by Baumeiste GRANTING 57 Motion to Dismiss filed by Michael Parkis. Objections to R&amp;R due by 12/26/2007 So Ordered by Magistrate Judge Jacob Hagopian on 12/11/2007. (Baldinelli, Doreen) Modified on 12/13/2007 (Baldinelli, Doreen).</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00399-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9c4dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-5</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00399_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00399/pdf/USCOURTS-rid-1_06-cv-00399-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00399; Flannery v. Baumeister et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00399-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-12-11</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION GRANTING 54 MOTION to Dismiss filed by Joseph Marocco, A.T. Wall, GRANTING 60 MOTION to Dismiss filed by Baumeiste GRANTING 57 Motion to Dismiss filed by Michael Parkis. Objections to R&amp;R due by 12/26/2007 So Ordered by Magistrate Judge Jacob Hagopian on 12/11/2007. (Baldinelli, Doreen) Modified on 12/13/2007 (Baldinelli, Doreen).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00399-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-6/mods.xml">
+ <titleInfo>
+  <title>Flannery v. Baumeister et al</title>
+  <subTitle>REPORT AND RECOMMENDATION GRANTING 58 Joint MOTION for Summary Judgment of Defendant Parkis and Defendant Baumeister with Supporting Memo filed by Michael Parkis, and DENYING 76 MOTION for Summary Judgment filed by Thomas Flannery. Objections to R&amp;R due by 12/26/2007 So Ordered by Magistrate Judge Jacob Hagopian on 12/11/2007. (Baldinelli, Doreen)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00399-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9c4db</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-6</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00399_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00399/pdf/USCOURTS-rid-1_06-cv-00399-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00399; Flannery v. Baumeister et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00399-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-12-11</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION GRANTING 58 Joint MOTION for Summary Judgment of Defendant Parkis and Defendant Baumeister with Supporting Memo filed by Michael Parkis, and DENYING 76 MOTION for Summary Judgment filed by Thomas Flannery. Objections to R&amp;R due by 12/26/2007 So Ordered by Magistrate Judge Jacob Hagopian on 12/11/2007. (Baldinelli, Doreen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00399-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-7/mods.xml">
+ <titleInfo>
+  <title>Flannery v. Baumeister et al</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATION for 82 Report and Recommendation re: 54 Motion to Dismiss filed by Joseph Marocco, A.T. Wall, 60 Motion to Dismiss filed by Baumeister, 57 Motion to Dismiss filed by Michael Parkis.. So Ordered by Judge William E Smith on 12/28/2007. (Baldinelli, Doreen)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00399-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9c4d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-7</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00399_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00399/pdf/USCOURTS-rid-1_06-cv-00399-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00399; Flannery v. Baumeister et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00399-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-01-04</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATION for 82 Report and Recommendation re: 54 Motion to Dismiss filed by Joseph Marocco, A.T. Wall, 60 Motion to Dismiss filed by Baumeister, 57 Motion to Dismiss filed by Michael Parkis.. So Ordered by Judge William E Smith on 12/28/2007. (Baldinelli, Doreen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00399-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-8/mods.xml">
+ <titleInfo>
+  <title>Flannery v. Baumeister et al</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATION for 83 Report and Recommendation re: 58 Motion for Summary Judgment filed by Michael Parkis. So Ordered by Judge William E Smith on 12/28/2007. (Baldinelli, Doreen)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00399-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9c4e9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-8</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00399_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00399/USCOURTS-rid-1_06-cv-00399-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00399/pdf/USCOURTS-rid-1_06-cv-00399-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00399; Flannery v. Baumeister et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00399-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-01-04</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATION for 83 Report and Recommendation re: 58 Motion for Summary Judgment filed by Michael Parkis. So Ordered by Judge William E Smith on 12/28/2007. (Baldinelli, Doreen)</docketText>
+</extension>
+</relatedItem>
+</mods>

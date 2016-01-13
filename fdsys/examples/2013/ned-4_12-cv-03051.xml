@@ -1,0 +1,281 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a02dc1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cv-03051</identifier>
+<identifier type="local">P0b002ee183a02dc1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_12-cv-03051</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_12-cv-03051</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:12-cv-03051</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Fred" fullName="Fred Britten" lastName="Britten" role="Defendant"></party>
+ <party fullName="Gieger" lastName="Gieger" role="Defendant"></party>
+ <party firstName="Deborah" fullName="Deborah R. Gilg" lastName="Gilg" middleName="R." role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Murphy" lastName="Murphy" role="Defendant"></party>
+ <party firstName="Keith" fullName="Keith Dawne Purdie" lastName="Purdie" middleName="Dawne" role="Plaintiff"></party>
+ <party fullName="State of Nebraska" lastName="State of Nebraska" role="Defendant"></party>
+ <party fullName="United States" lastName="United States" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Purdie v. United States</title>
+ <partNumber>4:12-cv-03051</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cv-03051/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:12-cv-03051;12-3051</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Fred Britten</displayForm>
+ <namePart type="family">Britten</namePart>
+ <namePart type="given">Fred</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gieger</displayForm>
+ <namePart type="family">Gieger</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Deborah R. Gilg</displayForm>
+ <namePart type="family">Gilg</namePart>
+ <namePart type="given">Deborah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Murphy</displayForm>
+ <namePart type="family">Murphy</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Keith Dawne Purdie</displayForm>
+ <namePart type="family">Purdie</namePart>
+ <namePart type="given">Keith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>State of Nebraska</displayForm>
+ <namePart type="family">State of Nebraska</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States</displayForm>
+ <namePart type="family">United States</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_12-cv-03051</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:12-cv-03051</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Fred" fullName="Fred Britten" lastName="Britten" role="Defendant"></party>
+ <party fullName="Gieger" lastName="Gieger" role="Defendant"></party>
+ <party firstName="Deborah" fullName="Deborah R. Gilg" lastName="Gilg" middleName="R." role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Murphy" lastName="Murphy" role="Defendant"></party>
+ <party firstName="Keith" fullName="Keith Dawne Purdie" lastName="Purdie" middleName="Dawne" role="Plaintiff"></party>
+ <party fullName="State of Nebraska" lastName="State of Nebraska" role="Defendant"></party>
+ <party fullName="United States" lastName="United States" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cv-03051-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03051/USCOURTS-ned-4_12-cv-03051-0/mods.xml">
+ <titleInfo>
+  <title>Purdie v. United States</title>
+  <subTitle>MEMORANDUM AND ORDER granting 2 Motion for Leave to Proceed in forma pauperis. Plaintiff Keith Dawne Purdie shall pay an initial partial filing fee of $129.13 by 5/25/2012, unless an enlargement of time is granted in response to a written motion. Pro Se Case Management Deadline set for 5/25/2012: initial partial filing fee payment due. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party and to institution)(GJG)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cv-03051-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a043dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03051/USCOURTS-ned-4_12-cv-03051-0</identifier>
+ <identifier type="former granule identifier">ned-4_12-cv-03051_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03051/USCOURTS-ned-4_12-cv-03051-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cv-03051/pdf/USCOURTS-ned-4_12-cv-03051-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cv-03051; Purdie v. United States; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cv-03051-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-04-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 2 Motion for Leave to Proceed in forma pauperis. Plaintiff Keith Dawne Purdie shall pay an initial partial filing fee of $129.13 by 5/25/2012, unless an enlargement of time is granted in response to a written motion. Pro Se Case Management Deadline set for 5/25/2012: initial partial filing fee payment due. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party and to institution)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cv-03051-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03051/USCOURTS-ned-4_12-cv-03051-1/mods.xml">
+ <titleInfo>
+  <title>Purdie v. United States</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff shall have 30 days to amend his Complaint to name a proper defendant and clearly state a claim upon which relief may be granted in accordance with this Memorandum and Order. If Plaintiff fails to file an amended complaint, this matter will be dismissed without further notice for failure to state a claim upon which relief may be granted. The court reserves the right to conduct further review of Plaintiff&apos;s claims pursuant to 28 U.S.C. § 1915(e)(2) after Plaintiff addresses the matters set forth in this Memorandum and Order. The clerk&apos;s office is directed to set a pro se case management deadline using the following text: Check for amended complaint on August 15, 2012, and dismiss if none filed. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party)(GJG)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cv-03051-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a043de</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03051/USCOURTS-ned-4_12-cv-03051-1</identifier>
+ <identifier type="former granule identifier">ned-4_12-cv-03051_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03051/USCOURTS-ned-4_12-cv-03051-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cv-03051/pdf/USCOURTS-ned-4_12-cv-03051-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cv-03051; Purdie v. United States; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cv-03051-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-07-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff shall have 30 days to amend his Complaint to name a proper defendant and clearly state a claim upon which relief may be granted in accordance with this Memorandum and Order. If Plaintiff fails to file an amended complaint, this matter will be dismissed without further notice for failure to state a claim upon which relief may be granted. The court reserves the right to conduct further review of Plaintiff&apos;s claims pursuant to 28 U.S.C. § 1915(e)(2) after Plaintiff addresses the matters set forth in this Memorandum and Order. The clerk&apos;s office is directed to set a pro se case management deadline using the following text: Check for amended complaint on August 15, 2012, and dismiss if none filed. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cv-03051-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03051/USCOURTS-ned-4_12-cv-03051-2/mods.xml">
+ <titleInfo>
+  <title>Purdie v. United States</title>
+  <subTitle>MEMORANDUM AND ORDER - On the court&apos;s own motion, the court will give Plaintiff until October 19, 2012, to amend his Complaint in accordance with Rules 8 and 10 of the Federal Rules of Civil Procedure. Any amended complaint must clearly (1) set forth a short and plain statement of the claims against each Defendant; (2) state claims in numbered paragraphs limited to a single set of circumstances; and (3) set forth each legal theory and how it relates to each Defendant. The court will dismiss this matter without further notice if Plaintiff fails to file an amended complaint or files an amended complaint that does not comply with Rules 8 and 10 pleading requirements. The clerk&apos;s office is directed to set a pro se case management deadline in this matter: October 19, 2012: Check for amended complaint and dismiss with prejudice if none filed or fails to comply with Rules 8 and 10. Plaintiff&apos;s Motion to Amend Pleadings (Filing No. 13), liberally construed as an Amended Complaint, is granted to the extent it is consistent with this Memorandum and Order. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party)(GJG)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cv-03051-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a043dc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03051/USCOURTS-ned-4_12-cv-03051-2</identifier>
+ <identifier type="former granule identifier">ned-4_12-cv-03051_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03051/USCOURTS-ned-4_12-cv-03051-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cv-03051/pdf/USCOURTS-ned-4_12-cv-03051-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cv-03051; Purdie v. United States; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cv-03051-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-09-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - On the court&apos;s own motion, the court will give Plaintiff until October 19, 2012, to amend his Complaint in accordance with Rules 8 and 10 of the Federal Rules of Civil Procedure. Any amended complaint must clearly (1) set forth a short and plain statement of the claims against each Defendant; (2) state claims in numbered paragraphs limited to a single set of circumstances; and (3) set forth each legal theory and how it relates to each Defendant. The court will dismiss this matter without further notice if Plaintiff fails to file an amended complaint or files an amended complaint that does not comply with Rules 8 and 10 pleading requirements. The clerk&apos;s office is directed to set a pro se case management deadline in this matter: October 19, 2012: Check for amended complaint and dismiss with prejudice if none filed or fails to comply with Rules 8 and 10. Plaintiff&apos;s Motion to Amend Pleadings (Filing No. 13), liberally construed as an Amended Complaint, is granted to the extent it is consistent with this Memorandum and Order. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cv-03051-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03051/USCOURTS-ned-4_12-cv-03051-3/mods.xml">
+ <titleInfo>
+  <title>Purdie v. United States</title>
+  <subTitle>MEMORANDUM AND ORDER - This matter is dismissed with prejudice. A separate judgment will be entered in accordance with this Memorandum and Order. The clerk&apos;s office is directed to place the &quot;28USC1915(g)_STR&quot; flag on this matter. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party)(GJG)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cv-03051-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a043df</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03051/USCOURTS-ned-4_12-cv-03051-3</identifier>
+ <identifier type="former granule identifier">ned-4_12-cv-03051_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03051/USCOURTS-ned-4_12-cv-03051-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cv-03051/pdf/USCOURTS-ned-4_12-cv-03051-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cv-03051; Purdie v. United States; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cv-03051-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - This matter is dismissed with prejudice. A separate judgment will be entered in accordance with this Memorandum and Order. The clerk&apos;s office is directed to place the &quot;28USC1915(g)_STR&quot; flag on this matter. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,342 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a02dbe">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00030</identifier>
+<identifier type="local">P0b002ee183a02dbe</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_12-cr-00030</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_12-cr-00030</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:12-cr-00030</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Jony" fullName="Jony Valencia" lastName="Valencia" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Valencia</title>
+ <partNumber>8:12-cr-00030</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00030/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:12-cr-00030;12-030</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jony Valencia</displayForm>
+ <namePart type="family">Valencia</namePart>
+ <namePart type="given">Jony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_12-cr-00030</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:12-cr-00030</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Jony" fullName="Jony Valencia" lastName="Valencia" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00030-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Valencia</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Jony Valencia - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)[8:11-mj-00278-TDT]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00030-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0435d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-0</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00030_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00030/pdf/USCOURTS-ned-8_12-cr-00030-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00030; USA v. Valencia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00030-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-12-22</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Jony Valencia - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)[8:11-mj-00278-TDT]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00030-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Valencia</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Jony Valencia. Ordered by Magistrate Judge Thomas D. Thalken. (ADB)[8:11-mj-00278-TDT]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00030-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0435f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-1</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00030_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00030/pdf/USCOURTS-ned-8_12-cr-00030-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00030; USA v. Valencia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00030-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-12-22</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Jony Valencia. Ordered by Magistrate Judge Thomas D. Thalken. (ADB)[8:11-mj-00278-TDT]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00030-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Valencia</title>
+  <subTitle>ORDER that Angela Heimes is hereby assigned as a Criminal Justice Act training panel member to assistthe Federal Public Defender in the representation of the Defendant as to defendant Jony Valencia. Ordered by Magistrate Judge Thomas D. Thalken. (ADB)[8:11-mj-00278-TDT]</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00030-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a04361</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-2</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00030_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00030/pdf/USCOURTS-ned-8_12-cr-00030-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00030; USA v. Valencia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00030-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-12-22</dateIssued>
+  <docketText>ORDER that Angela Heimes is hereby assigned as a Criminal Justice Act training panel member to assistthe Federal Public Defender in the representation of the Defendant as to defendant Jony Valencia. Ordered by Magistrate Judge Thomas D. Thalken. (ADB)[8:11-mj-00278-TDT]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00030-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Valencia</title>
+  <subTitle>ORDER granting 37 Motion to Extend as to Jony Valencia (1). Valencia is given until on or before March 19, 2012, in which to file pretrial motions pursuant to the progression order. The time between February 16, 2012, and March 19, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Pretrial Motion Deadline set for 3/19/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00030-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0435e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-3</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00030_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00030/pdf/USCOURTS-ned-8_12-cr-00030-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00030; USA v. Valencia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00030-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-02-16</dateIssued>
+  <docketText>ORDER granting 37 Motion to Extend as to Jony Valencia (1). Valencia is given until on or before March 19, 2012, in which to file pretrial motions pursuant to the progression order. The time between February 16, 2012, and March 19, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Pretrial Motion Deadline set for 3/19/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00030-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Valencia</title>
+  <subTitle>ORDER granting 39 Motion to Extend as to Jony Valencia (1). Valencia is given until on or before April 19, 2012, in which to file pretrial motions pursuant to the progression order. The additional time arising as a result of the granting of the motion, i.e., the time between March 19, 2012, and April 19, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Valencia&apos;s request to schedule a pretrial conference (Filing No. 39) is denied without prejudice. Pretrial Motion Deadline set for 4/19/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00030-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0435c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-4</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00030_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00030/pdf/USCOURTS-ned-8_12-cr-00030-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00030; USA v. Valencia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00030-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-03-19</dateIssued>
+  <docketText>ORDER granting 39 Motion to Extend as to Jony Valencia (1). Valencia is given until on or before April 19, 2012, in which to file pretrial motions pursuant to the progression order. The additional time arising as a result of the granting of the motion, i.e., the time between March 19, 2012, and April 19, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Valencia&apos;s request to schedule a pretrial conference (Filing No. 39) is denied without prejudice. Pretrial Motion Deadline set for 4/19/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00030-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Valencia</title>
+  <subTitle>FINDINGS AND RECOMMENDATION that MOTION to Suppress 41 be denied as to the defendant Jony Valencia. Ordered by Magistrate Judge Thomas D. Thalken. (TRL)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00030-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a04360</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-5</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00030_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00030/pdf/USCOURTS-ned-8_12-cr-00030-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00030; USA v. Valencia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00030-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-06-29</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATION that MOTION to Suppress 41 be denied as to the defendant Jony Valencia. Ordered by Magistrate Judge Thomas D. Thalken. (TRL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00030-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Valencia</title>
+  <subTitle>ORDER adopting 56 the Magistrate Judge&apos;s Findings and Recommendation in its entirety; overruling 57 the Defendant&apos;s objections to the Findings and Recommendation; and denying 41 the Defendant&apos;s motion to suppress as to Jony Valencia (1). Ordered by Chief Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00030-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a04362</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-6</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00030_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00030/pdf/USCOURTS-ned-8_12-cr-00030-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00030; USA v. Valencia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00030-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-07-30</dateIssued>
+  <docketText>ORDER adopting 56 the Magistrate Judge&apos;s Findings and Recommendation in its entirety; overruling 57 the Defendant&apos;s objections to the Findings and Recommendation; and denying 41 the Defendant&apos;s motion to suppress as to Jony Valencia (1). Ordered by Chief Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00030-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Valencia</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Jony Valencia. Ordered by Chief Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00030-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a04363</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-7</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00030_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00030/USCOURTS-ned-8_12-cr-00030-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00030/pdf/USCOURTS-ned-8_12-cr-00030-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00030; USA v. Valencia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00030-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Jony Valencia. Ordered by Chief Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+</mods>

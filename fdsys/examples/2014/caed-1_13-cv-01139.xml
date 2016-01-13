@@ -1,0 +1,263 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1896217d2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-06-24</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-03-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01139</identifier>
+<identifier type="local">P0b002ee1896217d2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-06-24</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-06-24</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-01139</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01139</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01139</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <cause>17:501 Copyright Infringement</cause>
+ <party fullName="CaliNet, LLC" lastName="CaliNet, LLC" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Camerlo" lastName="Camerlo" role="Defendant"></party>
+ <party fullName="Figure 8 Technologies, Inc." lastName="Figure 8 Technologies, Inc." role="Plaintiff"></party>
+ <party firstName="Moe" fullName="Moe Muthana" lastName="Muthana" role="Defendant"></party>
+ <party firstName="Justin" fullName="Justin Smith" lastName="Smith" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Figure 8 Technologies, Inc. v. CaliNet, LLC et al.</title>
+ <partNumber>1:13-cv-01139</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01139/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-01139;13-1139</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CaliNet, LLC</displayForm>
+ <namePart type="family">CaliNet, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eric Camerlo</displayForm>
+ <namePart type="family">Camerlo</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Figure 8 Technologies, Inc.</displayForm>
+ <namePart type="family">Figure 8 Technologies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Moe Muthana</displayForm>
+ <namePart type="family">Muthana</namePart>
+ <namePart type="given">Moe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Justin Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Justin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01139</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01139</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <cause>17:501 Copyright Infringement</cause>
+ <party fullName="CaliNet, LLC" lastName="CaliNet, LLC" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Camerlo" lastName="Camerlo" role="Defendant"></party>
+ <party fullName="Figure 8 Technologies, Inc." lastName="Figure 8 Technologies, Inc." role="Plaintiff"></party>
+ <party firstName="Moe" fullName="Moe Muthana" lastName="Muthana" role="Defendant"></party>
+ <party firstName="Justin" fullName="Justin Smith" lastName="Smith" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01139-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01139/USCOURTS-caed-1_13-cv-01139-0/mods.xml">
+ <titleInfo>
+  <title>Figure 8 Technologies, Inc. v. CaliNet, LLC et al.</title>
+  <subTitle>ORDER AFTER NOTICE OF SETTLEMENT, signed by Magistrate Judge Jennifer L. Thurston on 1/6/2014. (Hall, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01139/pdf/USCOURTS-caed-1_13-cv-01139-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18962d43b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01139/USCOURTS-caed-1_13-cv-01139-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01139_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01139/USCOURTS-caed-1_13-cv-01139-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01139/pdf/USCOURTS-caed-1_13-cv-01139-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01139; Figure 8 Technologies, Inc. v. CaliNet, LLC et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01139-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER AFTER NOTICE OF SETTLEMENT, signed by Magistrate Judge Jennifer L. Thurston on 1/6/2014. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01139-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01139/USCOURTS-caed-1_13-cv-01139-1/mods.xml">
+ <titleInfo>
+  <title>Figure 8 Technologies, Inc. v. CaliNet, LLC et al.</title>
+  <subTitle>ORDER to SHOW CAUSE Why Sanctions Should Not Be Imposed for Failure to Comply With the Court&apos;s Order, signed by Magistrate Judge Jennifer L. Thurston on 3/7/2014. Show Cause Response due within 14 days. (Hall, S)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01139/pdf/USCOURTS-caed-1_13-cv-01139-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18962d43d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01139/USCOURTS-caed-1_13-cv-01139-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01139_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01139/USCOURTS-caed-1_13-cv-01139-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01139/pdf/USCOURTS-caed-1_13-cv-01139-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01139; Figure 8 Technologies, Inc. v. CaliNet, LLC et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01139-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-03-07</dateIssued>
+  <docketText>ORDER to SHOW CAUSE Why Sanctions Should Not Be Imposed for Failure to Comply With the Court&apos;s Order, signed by Magistrate Judge Jennifer L. Thurston on 3/7/2014. Show Cause Response due within 14 days. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01139-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01139/USCOURTS-caed-1_13-cv-01139-2/mods.xml">
+ <titleInfo>
+  <title>Figure 8 Technologies, Inc. v. CaliNet, LLC et al.</title>
+  <subTitle>ORDER of DISMISSAL with Prejudice signed by District Judge Anthony W. Ishii on 3/9/2014. CASE CLOSED. (Sant Agata, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01139/pdf/USCOURTS-caed-1_13-cv-01139-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18962d4d6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01139/USCOURTS-caed-1_13-cv-01139-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01139_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01139/USCOURTS-caed-1_13-cv-01139-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01139/pdf/USCOURTS-caed-1_13-cv-01139-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01139; Figure 8 Technologies, Inc. v. CaliNet, LLC et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01139-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-03-11</dateIssued>
+  <docketText>ORDER of DISMISSAL with Prejudice signed by District Judge Anthony W. Ishii on 3/9/2014. CASE CLOSED. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01139-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01139/USCOURTS-caed-1_13-cv-01139-3/mods.xml">
+ <titleInfo>
+  <title>Figure 8 Technologies, Inc. v. CaliNet, LLC et al.</title>
+  <subTitle>ORDER DISCHARGING the Order to Show Cause Dated March 7, 2014, signed by Magistrate Judge Jennifer L. Thurston on 3/11/2014. (Hall, S)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01139/pdf/USCOURTS-caed-1_13-cv-01139-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18962d43c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01139/USCOURTS-caed-1_13-cv-01139-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01139_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01139/USCOURTS-caed-1_13-cv-01139-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01139/pdf/USCOURTS-caed-1_13-cv-01139-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01139; Figure 8 Technologies, Inc. v. CaliNet, LLC et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01139-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-03-11</dateIssued>
+  <docketText>ORDER DISCHARGING the Order to Show Cause Dated March 7, 2014, signed by Magistrate Judge Jennifer L. Thurston on 3/11/2014. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

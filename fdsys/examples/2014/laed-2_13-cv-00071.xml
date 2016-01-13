@@ -1,0 +1,326 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186da1e16">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-00071</identifier>
+<identifier type="local">P0b002ee186da1e16</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-laed-2_13-cv-00071</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_13-cv-00071</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:13-cv-00071</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Thomas" fullName="Thomas Cope" lastName="Cope" role="Defendant"></party>
+ <party firstName="Dustin" fullName="Dustin Crabtree" lastName="Crabtree" role="Defendant"></party>
+ <party firstName="Officer" fullName="Officer Crabtree" lastName="Crabtree" role="Defendant"></party>
+ <party firstName="Doctor" fullName="Doctor Jamie" lastName="Jamie" role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry Larpenter" lastName="Larpenter" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Neal" lastName="Neal" role="Defendant"></party>
+ <party firstName="Doctor" fullName="Doctor Petey" lastName="Petey" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard L. Stalder" lastName="Stalder" middleName="L." role="Defendant"></party>
+ <party fullName="Terrebonne Parish Consolidated Government" lastName="Terrebonne Parish Consolidated Government" role="Defendant"></party>
+ <party fullName="Terrebonne Parish Judicial Complex Medical Staff" lastName="Terrebonne Parish Judicial Complex Medical Staff" role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven Anthony Walcott Jr." generation="Jr." lastName="Walcott" middleName="Anthony" role="Plaintiff"></party>
+ <party fullName="Warden Terrebonne Parish Jail" lastName="Warden Terrebonne Parish Jail" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Walcott v. Crabtree et al</title>
+ <partNumber>2:13-cv-00071</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-00071/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-00071;13-071</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>New Orleans</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Thomas Cope</displayForm>
+ <namePart type="family">Cope</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dustin Crabtree</displayForm>
+ <namePart type="family">Crabtree</namePart>
+ <namePart type="given">Dustin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Officer Crabtree</displayForm>
+ <namePart type="family">Crabtree</namePart>
+ <namePart type="given">Officer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Doctor Jamie</displayForm>
+ <namePart type="family">Jamie</namePart>
+ <namePart type="given">Doctor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jerry Larpenter</displayForm>
+ <namePart type="family">Larpenter</namePart>
+ <namePart type="given">Jerry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Neal</displayForm>
+ <namePart type="family">Neal</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Doctor Petey</displayForm>
+ <namePart type="family">Petey</namePart>
+ <namePart type="given">Doctor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard L. Stalder</displayForm>
+ <namePart type="family">Stalder</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terrebonne Parish Consolidated Government</displayForm>
+ <namePart type="family">Terrebonne Parish Consolidated Government</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terrebonne Parish Judicial Complex Medical Staff</displayForm>
+ <namePart type="family">Terrebonne Parish Judicial Complex Medical Staff</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Steven Anthony Walcott Jr.</displayForm>
+ <namePart type="family">Walcott</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Warden Terrebonne Parish Jail</displayForm>
+ <namePart type="family">Warden Terrebonne Parish Jail</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_13-cv-00071</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:13-cv-00071</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Thomas" fullName="Thomas Cope" lastName="Cope" role="Defendant"></party>
+ <party firstName="Dustin" fullName="Dustin Crabtree" lastName="Crabtree" role="Defendant"></party>
+ <party firstName="Officer" fullName="Officer Crabtree" lastName="Crabtree" role="Defendant"></party>
+ <party firstName="Doctor" fullName="Doctor Jamie" lastName="Jamie" role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry Larpenter" lastName="Larpenter" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Neal" lastName="Neal" role="Defendant"></party>
+ <party firstName="Doctor" fullName="Doctor Petey" lastName="Petey" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard L. Stalder" lastName="Stalder" middleName="L." role="Defendant"></party>
+ <party fullName="Terrebonne Parish Consolidated Government" lastName="Terrebonne Parish Consolidated Government" role="Defendant"></party>
+ <party fullName="Terrebonne Parish Judicial Complex Medical Staff" lastName="Terrebonne Parish Judicial Complex Medical Staff" role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven Anthony Walcott Jr." generation="Jr." lastName="Walcott" middleName="Anthony" role="Plaintiff"></party>
+ <party fullName="Warden Terrebonne Parish Jail" lastName="Warden Terrebonne Parish Jail" role="Defendant"></party>
+ <state>Louisiana</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-00071-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-00071/USCOURTS-laed-2_13-cv-00071-0/mods.xml">
+ <titleInfo>
+  <title>Walcott v. Crabtree et al</title>
+  <subTitle>PARTIAL REPORT AND RECOMMENDATIONS re 27 MOTION to Dismiss Case or Alternatively for More Definite Statement filed by Richard Neal, Terrebonne Parish Consolidated Government. RECOMMENDED that the defendants&apos; motion, Rec. Docs. 27 and 44, be GRANTED and that plaintiffs claims against the Terrebonne Parish Consolidated Government and Richard Neal be dismissed without prejudice, but with prejudice for the purpose of proceeding in forma pauperis pursuant to 28 U.S.C. 1915, based on his failure to exhaust his administrative remedies. Objections to R&amp;R due by 9/6/2013. Signed by Magistrate Judge Daniel E. Knowles, III on 8/23/13.(plh, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-00071/pdf/USCOURTS-laed-2_13-cv-00071-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dbfa6d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-00071/USCOURTS-laed-2_13-cv-00071-0</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-00071_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-00071/USCOURTS-laed-2_13-cv-00071-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-00071/pdf/USCOURTS-laed-2_13-cv-00071-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00071; Walcott v. Crabtree et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-00071-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-08-23</dateIssued>
+  <docketText>PARTIAL REPORT AND RECOMMENDATIONS re 27 MOTION to Dismiss Case or Alternatively for More Definite Statement filed by Richard Neal, Terrebonne Parish Consolidated Government. RECOMMENDED that the defendants&apos; motion, Rec. Docs. 27 and 44, be GRANTED and that plaintiffs claims against the Terrebonne Parish Consolidated Government and Richard Neal be dismissed without prejudice, but with prejudice for the purpose of proceeding in forma pauperis pursuant to 28 U.S.C. 1915, based on his failure to exhaust his administrative remedies. Objections to R&amp;R due by 9/6/2013. Signed by Magistrate Judge Daniel E. Knowles, III on 8/23/13.(plh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-00071-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-00071/USCOURTS-laed-2_13-cv-00071-1/mods.xml">
+ <titleInfo>
+  <title>Walcott v. Crabtree et al</title>
+  <subTitle>ORDER ADOPTING PARTIAL REPORT AND RECOMMENDATIONS 48; ORDERED that the defendants&apos; motion, Rec. Docs. 27 and 44, is GRANTED and that plaintiff&apos;s claims against the Terrebonne Parish Consolidated Government and Richard Neal are dismissed without prejudice, but with prejudice for the purpose of proceeding in forma pauperis pursuant to 28 U.S.C. 1915, based on his failure to exhaust his administrative remedies. Signed by Judge Lance M Africk on 9/13/2013.(blg)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-00071/pdf/USCOURTS-laed-2_13-cv-00071-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dbfa6e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-00071/USCOURTS-laed-2_13-cv-00071-1</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-00071_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-00071/USCOURTS-laed-2_13-cv-00071-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-00071/pdf/USCOURTS-laed-2_13-cv-00071-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00071; Walcott v. Crabtree et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-00071-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-09-13</dateIssued>
+  <docketText>ORDER ADOPTING PARTIAL REPORT AND RECOMMENDATIONS 48; ORDERED that the defendants&apos; motion, Rec. Docs. 27 and 44, is GRANTED and that plaintiff&apos;s claims against the Terrebonne Parish Consolidated Government and Richard Neal are dismissed without prejudice, but with prejudice for the purpose of proceeding in forma pauperis pursuant to 28 U.S.C. 1915, based on his failure to exhaust his administrative remedies. Signed by Judge Lance M Africk on 9/13/2013.(blg)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-00071-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-00071/USCOURTS-laed-2_13-cv-00071-2/mods.xml">
+ <titleInfo>
+  <title>Walcott v. Crabtree et al</title>
+  <subTitle>PARTIAL REPORT AND RECOMMENDATIONS re 3 Complaint, filed by Steven Anthony Walcott, Jr. RECOMMENDED that plaintiff&apos;s claims against &quot;Doctor Jamie&quot; and Richard L. Stalder be DISMISSED WITHOUT PREJUDICE pursuant to Fed.R.Civ.P. 4(m). Objections to R&amp;R due by 12/17/2013. Signed by Magistrate Judge Daniel E. Knowles, III on 12/3/13.(plh, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-00071/pdf/USCOURTS-laed-2_13-cv-00071-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dbfa70</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-00071/USCOURTS-laed-2_13-cv-00071-2</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-00071_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-00071/USCOURTS-laed-2_13-cv-00071-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-00071/pdf/USCOURTS-laed-2_13-cv-00071-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00071; Walcott v. Crabtree et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-00071-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-12-03</dateIssued>
+  <docketText>PARTIAL REPORT AND RECOMMENDATIONS re 3 Complaint, filed by Steven Anthony Walcott, Jr. RECOMMENDED that plaintiff&apos;s claims against &quot;Doctor Jamie&quot; and Richard L. Stalder be DISMISSED WITHOUT PREJUDICE pursuant to Fed.R.Civ.P. 4(m). Objections to R&amp;R due by 12/17/2013. Signed by Magistrate Judge Daniel E. Knowles, III on 12/3/13.(plh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-00071-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-00071/USCOURTS-laed-2_13-cv-00071-3/mods.xml">
+ <titleInfo>
+  <title>Walcott v. Crabtree et al</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATIONS 56; ORDERED plaintiff&apos;s claims against &quot;Doctor Jamie&quot; and Richard L. Stalder are DISMISSED WITHOUT PREJUDICE pursuant to Fed.R.Civ.P. 4(m). Signed by Judge Lance M Africk on 1/2/2014.(blg)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-00071/pdf/USCOURTS-laed-2_13-cv-00071-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dbfa6f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-00071/USCOURTS-laed-2_13-cv-00071-3</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-00071_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-00071/USCOURTS-laed-2_13-cv-00071-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-00071/pdf/USCOURTS-laed-2_13-cv-00071-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00071; Walcott v. Crabtree et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-00071-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATIONS 56; ORDERED plaintiff&apos;s claims against &quot;Doctor Jamie&quot; and Richard L. Stalder are DISMISSED WITHOUT PREJUDICE pursuant to Fed.R.Civ.P. 4(m). Signed by Judge Lance M Africk on 1/2/2014.(blg)</docketText>
+</extension>
+</relatedItem>
+</mods>

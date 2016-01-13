@@ -1,0 +1,258 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181b66f60">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-23</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03117</identifier>
+<identifier type="local">P0b002ee181b66f60</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-23</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_11-cr-03117</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cr-03117</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cr-03117</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Ricardo" fullName="Ricardo Carranza-Beltran" lastName="Carranza-Beltran" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Carranza-Beltran</title>
+ <partNumber>4:11-cr-03117</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03117/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:11-cr-03117;11-3117</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ricardo Carranza-Beltran</displayForm>
+ <namePart type="family">Carranza-Beltran</namePart>
+ <namePart type="given">Ricardo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cr-03117</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cr-03117</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Ricardo" fullName="Ricardo Carranza-Beltran" lastName="Carranza-Beltran" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03117-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Carranza-Beltran</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Ricardo Carranza-Beltran. The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03117-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b81494</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-0</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03117_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03117/pdf/USCOURTS-ned-4_11-cr-03117-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03117; USA v. Carranza-Beltran; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03117-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-10-25</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Ricardo Carranza-Beltran. The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03117-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Carranza-Beltran</title>
+  <subTitle>ORDER of Detention pending sentencing as to defendant Ricardo Carranza-Beltran. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03117-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b814ee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-1</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03117_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03117/pdf/USCOURTS-ned-4_11-cr-03117-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03117; USA v. Carranza-Beltran; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03117-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-10-25</dateIssued>
+  <docketText>ORDER of Detention pending sentencing as to defendant Ricardo Carranza-Beltran. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03117-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Carranza-Beltran</title>
+  <subTitle>ORDER granting 26 Motion to Continue Deadline for Filing Sentencing Statement and Variance Motion is continued to January 6, 2012, as to Ricardo Carranza-Beltran (1). Ordered by Senior Judge Warren K. Urbom. ( EJL)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03117-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b81493</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-2</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03117_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03117/pdf/USCOURTS-ned-4_11-cr-03117-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03117; USA v. Carranza-Beltran; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03117-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-12-22</dateIssued>
+  <docketText>ORDER granting 26 Motion to Continue Deadline for Filing Sentencing Statement and Variance Motion is continued to January 6, 2012, as to Ricardo Carranza-Beltran (1). Ordered by Senior Judge Warren K. Urbom. ( EJL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03117-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Carranza-Beltran</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Modified Presentence Investigation Report as to defendant(s) Ricardo Carranza-Beltran. I tentatively find that the Revised Modified Presentence Investigation Report is accurate, except for paragraph 28. An evidentiary hearing will be required regarding paragraph 28. The defendant&apos;s Motion for Downward Departure/Variance from Guidelines requests an evidentiary hearing and that request will be granted. The evidentiary hearing shall be held at the time of the sentencing. If oral testimony is desired, the identification of the person or persons shall be made at least three days before the hearing and the length of time desired shall be requested at the same time.Objections to the tentative findings may be made at the time of the sentencing. Ordered by Senior Judge Warren K. Urbom. (EJL)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03117-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b814ed</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-3</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03117_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03117/pdf/USCOURTS-ned-4_11-cr-03117-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03117; USA v. Carranza-Beltran; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03117-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Modified Presentence Investigation Report as to defendant(s) Ricardo Carranza-Beltran. I tentatively find that the Revised Modified Presentence Investigation Report is accurate, except for paragraph 28. An evidentiary hearing will be required regarding paragraph 28. The defendant&apos;s Motion for Downward Departure/Variance from Guidelines requests an evidentiary hearing and that request will be granted. The evidentiary hearing shall be held at the time of the sentencing. If oral testimony is desired, the identification of the person or persons shall be made at least three days before the hearing and the length of time desired shall be requested at the same time.Objections to the tentative findings may be made at the time of the sentencing. Ordered by Senior Judge Warren K. Urbom. (EJL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03117-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Carranza-Beltran</title>
+  <subTitle>ORDER granting 31 Oral Motion by Assistant United States Attorney to reschedule sentencing hearing to commence at 12:30 p.m. on January 23, 2012,in Courtroom 4, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Senior Judge Warren K. Urbom. The defendant shall be present for the hearing. Ordered by Senior Judge Warren K. Urbom. ( EJL)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03117-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b814ec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-4</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03117_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03117/USCOURTS-ned-4_11-cr-03117-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03117/pdf/USCOURTS-ned-4_11-cr-03117-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03117; USA v. Carranza-Beltran; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03117-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-01-20</dateIssued>
+  <docketText>ORDER granting 31 Oral Motion by Assistant United States Attorney to reschedule sentencing hearing to commence at 12:30 p.m. on January 23, 2012,in Courtroom 4, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Senior Judge Warren K. Urbom. The defendant shall be present for the hearing. Ordered by Senior Judge Warren K. Urbom. ( EJL)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,659 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d04d2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_07-cv-02377</identifier>
+<identifier type="local">P0b002ee1815d04d2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_07-cv-02377</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_07-cv-02377</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:07-cv-02377</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>31:3731 Fraud</cause>
+ <party fullName="A-S Energy Inc." lastName="A-S Energy Inc." role="Plaintiff"></party>
+ <party fullName="A.S. Vidalia LLC" lastName="A.S. Vidalia LLC" role="Plaintiff"></party>
+ <party fullName="ASI Receivables LLC" lastName="ASI Receivables LLC" role="Plaintiff"></party>
+ <party fullName="Alimenterics Inc." lastName="Alimenterics Inc." role="Plaintiff"></party>
+ <party fullName="Alliance Compressors Inc." lastName="Alliance Compressors Inc." role="Plaintiff"></party>
+ <party fullName="American Standard Companies Inc." lastName="American Standard Companies Inc." role="Plaintiff"></party>
+ <party fullName="American Standard Inc." lastName="American Standard Inc." role="Counter-Defendant"></party>
+ <party fullName="American Standard Leasing Inc." lastName="American Standard Leasing Inc." role="Plaintiff"></party>
+ <party fullName="American Standard Trane LLC" lastName="American Standard Trane LLC" role="Plaintiff"></party>
+ <party fullName="American Standard Warranty Company" lastName="American Standard Warranty Company" role="Plaintiff"></party>
+ <party fullName="Amstam Air Inc." lastName="Amstam Air Inc." role="Plaintiff"></party>
+ <party fullName="Amstam Logistics Inc." lastName="Amstam Logistics Inc." role="Plaintiff"></party>
+ <party fullName="BMM, Inc." lastName="BMM, Inc." role="Plaintiff"></party>
+ <party fullName="Capsule Trane Connecticut Inc." lastName="Capsule Trane Connecticut Inc." role="Plaintiff"></party>
+ <party fullName="Cardwell Trane Greenville Inc." lastName="Cardwell Trane Greenville Inc." role="Plaintiff"></party>
+ <party fullName="Dia Sorin International Inc." lastName="Dia Sorin International Inc." role="Plaintiff"></party>
+ <party fullName="Dradnats Inc." lastName="Dradnats Inc." role="Plaintiff"></party>
+ <party firstName="Jeff" fullName="Jeff Fry" lastName="Fry" role="3rd Pty Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis Goldsmith" lastName="Goldsmith" role="3rd Pty Defendant"></party>
+ <party firstName="Dan" fullName="Dan Gust" lastName="Gust" role="3rd Pty Defendant"></party>
+ <party firstName="David" fullName="David Hoelzer" lastName="Hoelzer" role="3rd Pty Defendant"></party>
+ <party fullName="Houston Trane Inc." lastName="Houston Trane Inc." role="Plaintiff"></party>
+ <party fullName="Ideal Standard Beteiligungs GmbH" lastName="Ideal Standard Beteiligungs GmbH" role="Plaintiff"></party>
+ <party fullName="Jado Bathroom and Hardware Manufacturing Corporation" lastName="Jado Bathroom and Hardware Manufacturing Corporation" role="Plaintiff"></party>
+ <party fullName="MJM Hong Kong Ltd." lastName="MJM Hong Kong Ltd." role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert J. Meehan Jr." generation="Jr." lastName="Meehan" middleName="J." role="3rd Party Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert J. Meehan Jr." generation="Jr." lastName="Meehan" middleName="J." role="3rd Pty Defendant"></party>
+ <party firstName="Robert" fullName="Robert J. Meehan Jr." generation="Jr." lastName="Meehan" middleName="J." role="Counter-Claimant"></party>
+ <party firstName="Robert" fullName="Robert J. Meehan Jr." generation="Jr." lastName="Meehan" middleName="J." role="Defendant"></party>
+ <party firstName="John" fullName="John Milkint" lastName="Milkint" role="3rd Pty Defendant"></party>
+ <party firstName="Scott" fullName="Scott Miller" lastName="Miller" role="3rd Pty Defendant"></party>
+ <party fullName="Mongrue Trane Massachusetts, Inc." lastName="Mongrue Trane Massachusetts, Inc." role="Plaintiff"></party>
+ <party firstName="Tim" fullName="Tim Norviel" lastName="Norviel" role="3rd Pty Defendant"></party>
+ <party fullName="Perfect Pitch, L.P." lastName="Perfect Pitch, L.P." role="Plaintiff"></party>
+ <party fullName="Pinko Palino Inc." lastName="Pinko Palino Inc." role="Plaintiff"></party>
+ <party fullName="Rand Trane Dallas Inc." lastName="Rand Trane Dallas Inc." role="Plaintiff"></party>
+ <party firstName="Ron" fullName="Ron Schimming" lastName="Schimming" role="3rd Pty Defendant"></party>
+ <party firstName="Nathan" fullName="Nathan Smith" lastName="Smith" role="3rd Pty Defendant"></party>
+ <party fullName="Standard Compressors Inc." lastName="Standard Compressors Inc." role="Plaintiff"></party>
+ <party fullName="Tac Distribution Pte.Ltd." lastName="Tac Distribution Pte.Ltd." role="Plaintiff"></party>
+ <party fullName="Toledo Services, Inc." lastName="Toledo Services, Inc." role="3rd Party Plaintiff"></party>
+ <party fullName="Toledo Services, Inc." lastName="Toledo Services, Inc." role="3rd Pty Defendant"></party>
+ <party fullName="Toledo Services, Inc." lastName="Toledo Services, Inc." role="Counter-Claimant"></party>
+ <party fullName="Toledo Services, Inc." lastName="Toledo Services, Inc." role="Defendant"></party>
+ <party fullName="Trane Central Plant, 1 LLC" lastName="Trane Central Plant, 1 LLC" role="Plaintiff"></party>
+ <party fullName="Trane Comfort Solutions Inc." lastName="Trane Comfort Solutions Inc." role="Plaintiff"></party>
+ <party fullName="Trane Commercial Systems business" lastName="Trane Commercial Systems business" role="Plaintiff"></party>
+ <party fullName="Trane U.S. Inc." lastName="Trane U.S. Inc." role="Plaintiff"></party>
+ <party fullName="Travelers Casualty&amp;Surety Company of America" lastName="Travelers Casualty&amp;Surety Company of America" role="Counter-Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Trane U.S. Inc. v. Meehan et al</title>
+ <partNumber>3:07-cv-02377</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_07-cv-02377/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:07-cv-02377;07-2377</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>A-S Energy Inc.</displayForm>
+ <namePart type="family">A-S Energy Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>A.S. Vidalia LLC</displayForm>
+ <namePart type="family">A.S. Vidalia LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>ASI Receivables LLC</displayForm>
+ <namePart type="family">ASI Receivables LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alimenterics Inc.</displayForm>
+ <namePart type="family">Alimenterics Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alliance Compressors Inc.</displayForm>
+ <namePart type="family">Alliance Compressors Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>American Standard Companies Inc.</displayForm>
+ <namePart type="family">American Standard Companies Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>American Standard Inc.</displayForm>
+ <namePart type="family">American Standard Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>American Standard Leasing Inc.</displayForm>
+ <namePart type="family">American Standard Leasing Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>American Standard Trane LLC</displayForm>
+ <namePart type="family">American Standard Trane LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>American Standard Warranty Company</displayForm>
+ <namePart type="family">American Standard Warranty Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Amstam Air Inc.</displayForm>
+ <namePart type="family">Amstam Air Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Amstam Logistics Inc.</displayForm>
+ <namePart type="family">Amstam Logistics Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>BMM, Inc.</displayForm>
+ <namePart type="family">BMM, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Capsule Trane Connecticut Inc.</displayForm>
+ <namePart type="family">Capsule Trane Connecticut Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cardwell Trane Greenville Inc.</displayForm>
+ <namePart type="family">Cardwell Trane Greenville Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dia Sorin International Inc.</displayForm>
+ <namePart type="family">Dia Sorin International Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dradnats Inc.</displayForm>
+ <namePart type="family">Dradnats Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jeff Fry</displayForm>
+ <namePart type="family">Fry</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Pty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Goldsmith</displayForm>
+ <namePart type="family">Goldsmith</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Pty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dan Gust</displayForm>
+ <namePart type="family">Gust</namePart>
+ <namePart type="given">Dan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Pty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Hoelzer</displayForm>
+ <namePart type="family">Hoelzer</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Pty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Houston Trane Inc.</displayForm>
+ <namePart type="family">Houston Trane Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ideal Standard Beteiligungs GmbH</displayForm>
+ <namePart type="family">Ideal Standard Beteiligungs GmbH</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jado Bathroom and Hardware Manufacturing Corporation</displayForm>
+ <namePart type="family">Jado Bathroom and Hardware Manufacturing Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>MJM Hong Kong Ltd.</displayForm>
+ <namePart type="family">MJM Hong Kong Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert J. Meehan Jr.</displayForm>
+ <namePart type="family">Meehan</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>3rd Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert J. Meehan Jr.</displayForm>
+ <namePart type="family">Meehan</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>3rd Pty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert J. Meehan Jr.</displayForm>
+ <namePart type="family">Meehan</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert J. Meehan Jr.</displayForm>
+ <namePart type="family">Meehan</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Milkint</displayForm>
+ <namePart type="family">Milkint</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Pty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Miller</displayForm>
+ <namePart type="family">Miller</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Pty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mongrue Trane Massachusetts, Inc.</displayForm>
+ <namePart type="family">Mongrue Trane Massachusetts, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tim Norviel</displayForm>
+ <namePart type="family">Norviel</namePart>
+ <namePart type="given">Tim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Pty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Perfect Pitch, L.P.</displayForm>
+ <namePart type="family">Perfect Pitch, L.P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Pinko Palino Inc.</displayForm>
+ <namePart type="family">Pinko Palino Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rand Trane Dallas Inc.</displayForm>
+ <namePart type="family">Rand Trane Dallas Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ron Schimming</displayForm>
+ <namePart type="family">Schimming</namePart>
+ <namePart type="given">Ron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Pty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nathan Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Nathan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Pty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Standard Compressors Inc.</displayForm>
+ <namePart type="family">Standard Compressors Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tac Distribution Pte.Ltd.</displayForm>
+ <namePart type="family">Tac Distribution Pte.Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Toledo Services, Inc.</displayForm>
+ <namePart type="family">Toledo Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Toledo Services, Inc.</displayForm>
+ <namePart type="family">Toledo Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Pty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Toledo Services, Inc.</displayForm>
+ <namePart type="family">Toledo Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Toledo Services, Inc.</displayForm>
+ <namePart type="family">Toledo Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Trane Central Plant, 1 LLC</displayForm>
+ <namePart type="family">Trane Central Plant, 1 LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Trane Comfort Solutions Inc.</displayForm>
+ <namePart type="family">Trane Comfort Solutions Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Trane Commercial Systems business</displayForm>
+ <namePart type="family">Trane Commercial Systems business</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Trane U.S. Inc.</displayForm>
+ <namePart type="family">Trane U.S. Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Travelers Casualty&amp;Surety Company of America</displayForm>
+ <namePart type="family">Travelers Casualty&amp;Surety Company of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_07-cv-02377</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:07-cv-02377</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>31:3731 Fraud</cause>
+ <party fullName="A-S Energy Inc." lastName="A-S Energy Inc." role="Plaintiff"></party>
+ <party fullName="A.S. Vidalia LLC" lastName="A.S. Vidalia LLC" role="Plaintiff"></party>
+ <party fullName="ASI Receivables LLC" lastName="ASI Receivables LLC" role="Plaintiff"></party>
+ <party fullName="Alimenterics Inc." lastName="Alimenterics Inc." role="Plaintiff"></party>
+ <party fullName="Alliance Compressors Inc." lastName="Alliance Compressors Inc." role="Plaintiff"></party>
+ <party fullName="American Standard Companies Inc." lastName="American Standard Companies Inc." role="Plaintiff"></party>
+ <party fullName="American Standard Inc." lastName="American Standard Inc." role="Counter-Defendant"></party>
+ <party fullName="American Standard Leasing Inc." lastName="American Standard Leasing Inc." role="Plaintiff"></party>
+ <party fullName="American Standard Trane LLC" lastName="American Standard Trane LLC" role="Plaintiff"></party>
+ <party fullName="American Standard Warranty Company" lastName="American Standard Warranty Company" role="Plaintiff"></party>
+ <party fullName="Amstam Air Inc." lastName="Amstam Air Inc." role="Plaintiff"></party>
+ <party fullName="Amstam Logistics Inc." lastName="Amstam Logistics Inc." role="Plaintiff"></party>
+ <party fullName="BMM, Inc." lastName="BMM, Inc." role="Plaintiff"></party>
+ <party fullName="Capsule Trane Connecticut Inc." lastName="Capsule Trane Connecticut Inc." role="Plaintiff"></party>
+ <party fullName="Cardwell Trane Greenville Inc." lastName="Cardwell Trane Greenville Inc." role="Plaintiff"></party>
+ <party fullName="Dia Sorin International Inc." lastName="Dia Sorin International Inc." role="Plaintiff"></party>
+ <party fullName="Dradnats Inc." lastName="Dradnats Inc." role="Plaintiff"></party>
+ <party firstName="Jeff" fullName="Jeff Fry" lastName="Fry" role="3rd Pty Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis Goldsmith" lastName="Goldsmith" role="3rd Pty Defendant"></party>
+ <party firstName="Dan" fullName="Dan Gust" lastName="Gust" role="3rd Pty Defendant"></party>
+ <party firstName="David" fullName="David Hoelzer" lastName="Hoelzer" role="3rd Pty Defendant"></party>
+ <party fullName="Houston Trane Inc." lastName="Houston Trane Inc." role="Plaintiff"></party>
+ <party fullName="Ideal Standard Beteiligungs GmbH" lastName="Ideal Standard Beteiligungs GmbH" role="Plaintiff"></party>
+ <party fullName="Jado Bathroom and Hardware Manufacturing Corporation" lastName="Jado Bathroom and Hardware Manufacturing Corporation" role="Plaintiff"></party>
+ <party fullName="MJM Hong Kong Ltd." lastName="MJM Hong Kong Ltd." role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert J. Meehan Jr." generation="Jr." lastName="Meehan" middleName="J." role="3rd Party Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert J. Meehan Jr." generation="Jr." lastName="Meehan" middleName="J." role="3rd Pty Defendant"></party>
+ <party firstName="Robert" fullName="Robert J. Meehan Jr." generation="Jr." lastName="Meehan" middleName="J." role="Counter-Claimant"></party>
+ <party firstName="Robert" fullName="Robert J. Meehan Jr." generation="Jr." lastName="Meehan" middleName="J." role="Defendant"></party>
+ <party firstName="John" fullName="John Milkint" lastName="Milkint" role="3rd Pty Defendant"></party>
+ <party firstName="Scott" fullName="Scott Miller" lastName="Miller" role="3rd Pty Defendant"></party>
+ <party fullName="Mongrue Trane Massachusetts, Inc." lastName="Mongrue Trane Massachusetts, Inc." role="Plaintiff"></party>
+ <party firstName="Tim" fullName="Tim Norviel" lastName="Norviel" role="3rd Pty Defendant"></party>
+ <party fullName="Perfect Pitch, L.P." lastName="Perfect Pitch, L.P." role="Plaintiff"></party>
+ <party fullName="Pinko Palino Inc." lastName="Pinko Palino Inc." role="Plaintiff"></party>
+ <party fullName="Rand Trane Dallas Inc." lastName="Rand Trane Dallas Inc." role="Plaintiff"></party>
+ <party firstName="Ron" fullName="Ron Schimming" lastName="Schimming" role="3rd Pty Defendant"></party>
+ <party firstName="Nathan" fullName="Nathan Smith" lastName="Smith" role="3rd Pty Defendant"></party>
+ <party fullName="Standard Compressors Inc." lastName="Standard Compressors Inc." role="Plaintiff"></party>
+ <party fullName="Tac Distribution Pte.Ltd." lastName="Tac Distribution Pte.Ltd." role="Plaintiff"></party>
+ <party fullName="Toledo Services, Inc." lastName="Toledo Services, Inc." role="3rd Party Plaintiff"></party>
+ <party fullName="Toledo Services, Inc." lastName="Toledo Services, Inc." role="3rd Pty Defendant"></party>
+ <party fullName="Toledo Services, Inc." lastName="Toledo Services, Inc." role="Counter-Claimant"></party>
+ <party fullName="Toledo Services, Inc." lastName="Toledo Services, Inc." role="Defendant"></party>
+ <party fullName="Trane Central Plant, 1 LLC" lastName="Trane Central Plant, 1 LLC" role="Plaintiff"></party>
+ <party fullName="Trane Comfort Solutions Inc." lastName="Trane Comfort Solutions Inc." role="Plaintiff"></party>
+ <party fullName="Trane Commercial Systems business" lastName="Trane Commercial Systems business" role="Plaintiff"></party>
+ <party fullName="Trane U.S. Inc." lastName="Trane U.S. Inc." role="Plaintiff"></party>
+ <party fullName="Travelers Casualty&amp;Surety Company of America" lastName="Travelers Casualty&amp;Surety Company of America" role="Counter-Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_07-cv-02377-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_07-cv-02377/USCOURTS-ohnd-3_07-cv-02377-0/mods.xml">
+ <titleInfo>
+  <title>Trane U.S. Inc. v. Meehan et al</title>
+  <subTitle>Order: the defendants Robert J. Meehan, Jr. and Toledo Tranes motion for a stay and limited injunction is denied as moot, without prejudice. (Related Doc # 36). Signed by Judge James G. Carr on 9/28/2007.(S,AL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_07-cv-02377-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816cea41</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_07-cv-02377/USCOURTS-ohnd-3_07-cv-02377-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_07-cv-02377_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_07-cv-02377/USCOURTS-ohnd-3_07-cv-02377-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_07-cv-02377/pdf/USCOURTS-ohnd-3_07-cv-02377-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cv-02377; Trane U.S. Inc. v. Meehan et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_07-cv-02377-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-09-28</dateIssued>
+  <docketText>Order: the defendants Robert J. Meehan, Jr. and Toledo Tranes motion for a stay and limited injunction is denied as moot, without prejudice. (Related Doc # 36). Signed by Judge James G. Carr on 9/28/2007.(S,AL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_07-cv-02377-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_07-cv-02377/USCOURTS-ohnd-3_07-cv-02377-1/mods.xml">
+ <titleInfo>
+  <title>Trane U.S. Inc. v. Meehan et al</title>
+  <subTitle>Order : Plaintiff Trane U.S. Inc.&apos;s motion to dismiss is granted as to all of defendant&apos;s counterclaims except as asserted in Count Eleven, alleging plaintiff&apos;s violation of the covenant of good faith. (Related Doc # 46). Judge James G. Carr on 5/29/2008.(S,AL)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_07-cv-02377-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816cea40</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_07-cv-02377/USCOURTS-ohnd-3_07-cv-02377-1</identifier>
+ <identifier type="former granule identifier">ohnd-3_07-cv-02377_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_07-cv-02377/USCOURTS-ohnd-3_07-cv-02377-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_07-cv-02377/pdf/USCOURTS-ohnd-3_07-cv-02377-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cv-02377; Trane U.S. Inc. v. Meehan et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_07-cv-02377-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-05-29</dateIssued>
+  <docketText>Order : Plaintiff Trane U.S. Inc.&apos;s motion to dismiss is granted as to all of defendant&apos;s counterclaims except as asserted in Count Eleven, alleging plaintiff&apos;s violation of the covenant of good faith. (Related Doc # 46). Judge James G. Carr on 5/29/2008.(S,AL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_07-cv-02377-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_07-cv-02377/USCOURTS-ohnd-3_07-cv-02377-2/mods.xml">
+ <titleInfo>
+  <title>Trane U.S. Inc. v. Meehan et al</title>
+  <subTitle>Order : Defendant Robert J. Meehan&apos;s motion for leave to file third-party complaint is granted. (Related Doc # 68). Judge James G. Carr on 5/29/2008.(S,AL)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_07-cv-02377-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816cea42</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_07-cv-02377/USCOURTS-ohnd-3_07-cv-02377-2</identifier>
+ <identifier type="former granule identifier">ohnd-3_07-cv-02377_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_07-cv-02377/USCOURTS-ohnd-3_07-cv-02377-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_07-cv-02377/pdf/USCOURTS-ohnd-3_07-cv-02377-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cv-02377; Trane U.S. Inc. v. Meehan et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_07-cv-02377-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-05-29</dateIssued>
+  <docketText>Order : Defendant Robert J. Meehan&apos;s motion for leave to file third-party complaint is granted. (Related Doc # 68). Judge James G. Carr on 5/29/2008.(S,AL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_07-cv-02377-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_07-cv-02377/USCOURTS-ohnd-3_07-cv-02377-3/mods.xml">
+ <titleInfo>
+  <title>Trane U.S. Inc. v. Meehan et al</title>
+  <subTitle>Marginal Entry Order: Further status report is due 1/30/2009. Signed by Judge James G. Carr on 1/22/2009. (Related document 92).(S,JM) Modified on 1/22/2009 (L,V).</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_07-cv-02377-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816cea3f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_07-cv-02377/USCOURTS-ohnd-3_07-cv-02377-3</identifier>
+ <identifier type="former granule identifier">ohnd-3_07-cv-02377_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_07-cv-02377/USCOURTS-ohnd-3_07-cv-02377-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_07-cv-02377/pdf/USCOURTS-ohnd-3_07-cv-02377-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cv-02377; Trane U.S. Inc. v. Meehan et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_07-cv-02377-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-22</dateIssued>
+  <docketText>Marginal Entry Order: Further status report is due 1/30/2009. Signed by Judge James G. Carr on 1/22/2009. (Related document 92).(S,JM) Modified on 1/22/2009 (L,V).</docketText>
+</extension>
+</relatedItem>
+</mods>

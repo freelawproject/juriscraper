@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d1f4f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-02514</identifier>
+<identifier type="local">P0b002ee1815d1f4f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_09-cv-02514</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-cv-02514</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-cv-02514</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:425 Social Security Benefits</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Frederick" fullName="Frederick H. Hall" lastName="Hall" middleName="H." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Hall v. Commissioner of Social Security</title>
+ <partNumber>1:09-cv-02514</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-02514/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cv-02514;09-2514</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frederick H. Hall</displayForm>
+ <namePart type="family">Hall</namePart>
+ <namePart type="given">Frederick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-cv-02514</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-cv-02514</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:425 Social Security Benefits</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Frederick" fullName="Frederick H. Hall" lastName="Hall" middleName="H." role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-cv-02514-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02514/USCOURTS-ohnd-1_09-cv-02514-0/mods.xml">
+ <titleInfo>
+  <title>Hall v. Commissioner of Social Security</title>
+  <subTitle>Report and Recommendation: For the reasons stated in the Report and Recommendation, the Court recommends that the Administrative Law Judge&apos;s decision be affirmed. Magistrate Judge Benita Y. Pearson on 12/23/2010. (M,TL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-cv-02514-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816dbd84</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02514/USCOURTS-ohnd-1_09-cv-02514-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-cv-02514_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02514/USCOURTS-ohnd-1_09-cv-02514-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-02514/pdf/USCOURTS-ohnd-1_09-cv-02514-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-02514; Hall v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-cv-02514-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-12-23</dateIssued>
+  <docketText>Report and Recommendation: For the reasons stated in the Report and Recommendation, the Court recommends that the Administrative Law Judge&apos;s decision be affirmed. Magistrate Judge Benita Y. Pearson on 12/23/2010. (M,TL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-cv-02514-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02514/USCOURTS-ohnd-1_09-cv-02514-1/mods.xml">
+ <titleInfo>
+  <title>Hall v. Commissioner of Social Security</title>
+  <subTitle>Memorandum Opinion and Order: This Court, having reviewed the Report and Recommendation and finding no clear error, hereby accepts the Magistrate Judge&apos;s Report and Recommendation. In accordance with that recommendation, judgment is entered in favor of the Commissioner for the reasons stated by the Magistrate Judge and the Report and Recommendation is incorporated herein by reference. Judge Patricia A. Gaughan on 1/20/11. (LC,S) re 22</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-cv-02514-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816dbef8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02514/USCOURTS-ohnd-1_09-cv-02514-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-cv-02514_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02514/USCOURTS-ohnd-1_09-cv-02514-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-02514/pdf/USCOURTS-ohnd-1_09-cv-02514-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-02514; Hall v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-cv-02514-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>Memorandum Opinion and Order: This Court, having reviewed the Report and Recommendation and finding no clear error, hereby accepts the Magistrate Judge&apos;s Report and Recommendation. In accordance with that recommendation, judgment is entered in favor of the Commissioner for the reasons stated by the Magistrate Judge and the Report and Recommendation is incorporated herein by reference. Judge Patricia A. Gaughan on 1/20/11. (LC,S) re 22</docketText>
+</extension>
+</relatedItem>
+</mods>

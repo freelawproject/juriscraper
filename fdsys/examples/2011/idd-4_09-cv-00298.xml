@@ -1,0 +1,205 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180fd4ba1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-4_09-cv-00298</identifier>
+<identifier type="local">P0b002ee180fd4ba1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-4_09-cv-00298</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-4_09-cv-00298</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>4:09-cv-00298</caseNumber>
+ <caseOffice>Pocatello - Eastern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>893</natureSuitCode>
+ <natureSuit>Environmental Matters</natureSuit>
+ <party fullName="Bureau of Land Management" lastName="Bureau of Land Management" role="Defendant"></party>
+ <party fullName="Idaho Cattle Association" lastName="Idaho Cattle Association" role="Movant"></party>
+ <party fullName="Public Lands Council" lastName="Public Lands Council" role="Movant"></party>
+ <party firstName="David" fullName="David Rosenkrance" lastName="Rosenkrance" role="Defendant"></party>
+ <party fullName="Western Watersheds Project" lastName="Western Watersheds Project" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Western Watersheds Project v. Rosenkrance et al</title>
+ <partNumber>4:09-cv-00298</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-4_09-cv-00298/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:09-cv-00298;09-298</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Pocatello - Eastern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bureau of Land Management</displayForm>
+ <namePart type="family">Bureau of Land Management</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Idaho Cattle Association</displayForm>
+ <namePart type="family">Idaho Cattle Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Public Lands Council</displayForm>
+ <namePart type="family">Public Lands Council</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>David Rosenkrance</displayForm>
+ <namePart type="family">Rosenkrance</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Western Watersheds Project</displayForm>
+ <namePart type="family">Western Watersheds Project</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-4_09-cv-00298</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>4:09-cv-00298</caseNumber>
+ <caseOffice>Pocatello - Eastern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>893</natureSuitCode>
+ <natureSuit>Environmental Matters</natureSuit>
+ <party fullName="Bureau of Land Management" lastName="Bureau of Land Management" role="Defendant"></party>
+ <party fullName="Idaho Cattle Association" lastName="Idaho Cattle Association" role="Movant"></party>
+ <party fullName="Public Lands Council" lastName="Public Lands Council" role="Movant"></party>
+ <party firstName="David" fullName="David Rosenkrance" lastName="Rosenkrance" role="Defendant"></party>
+ <party fullName="Western Watersheds Project" lastName="Western Watersheds Project" role="Plaintiff"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-4_09-cv-00298-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_09-cv-00298/USCOURTS-idd-4_09-cv-00298-0/mods.xml">
+ <titleInfo>
+  <title>Western Watersheds Project v. Rosenkrance et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER granting 18 Motion for Summary Judgment; denying 25 Motion to Supplement; denying 26 Cross Motion for Summary Judgment; IT IS FURTHER ORDERED that Defendants grazing decisions following the provisions as described in Environmental Assessment #ID-330-2007-3268 are VACATED.. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-4_09-cv-00298-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fe6207</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_09-cv-00298/USCOURTS-idd-4_09-cv-00298-0</identifier>
+ <identifier type="former granule identifier">idd-4_09-cv-00298_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_09-cv-00298/USCOURTS-idd-4_09-cv-00298-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-4_09-cv-00298/pdf/USCOURTS-idd-4_09-cv-00298-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-00298; Western Watersheds Project v. Rosenkrance et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-4_09-cv-00298-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-05</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER granting 18 Motion for Summary Judgment; denying 25 Motion to Supplement; denying 26 Cross Motion for Summary Judgment; IT IS FURTHER ORDERED that Defendants grazing decisions following the provisions as described in Environmental Assessment #ID-330-2007-3268 are VACATED.. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-4_09-cv-00298-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_09-cv-00298/USCOURTS-idd-4_09-cv-00298-1/mods.xml">
+ <titleInfo>
+  <title>Western Watersheds Project v. Rosenkrance et al</title>
+  <subTitle>JUDGMENT In Re: Memorandum Opinion and Order Doc #37. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-4_09-cv-00298-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fe6206</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_09-cv-00298/USCOURTS-idd-4_09-cv-00298-1</identifier>
+ <identifier type="former granule identifier">idd-4_09-cv-00298_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_09-cv-00298/USCOURTS-idd-4_09-cv-00298-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-4_09-cv-00298/pdf/USCOURTS-idd-4_09-cv-00298-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-00298; Western Watersheds Project v. Rosenkrance et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-4_09-cv-00298-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-05</dateIssued>
+  <docketText>JUDGMENT In Re: Memorandum Opinion and Order Doc #37. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</docketText>
+</extension>
+</relatedItem>
+</mods>

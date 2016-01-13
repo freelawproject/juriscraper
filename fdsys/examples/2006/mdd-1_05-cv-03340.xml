@@ -1,0 +1,249 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18104c475">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-03340</identifier>
+<identifier type="local">P0b002ee18104c475</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-1_05-cv-03340</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_05-cv-03340</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:05-cv-03340</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Marcellene" fullName="Marcellene Beck" lastName="Beck" role="Defendant"></party>
+ <party firstName="Donna" fullName="Donna Bedell" lastName="Bedell" role="Plaintiff"></party>
+ <party firstName="James" fullName="James Bedell" lastName="Bedell" role="Indexed Party"></party>
+ <party firstName="Jessica" fullName="Jessica Bedell" lastName="Bedell" role="Indexed Party"></party>
+ <party firstName="John" fullName="John Bedell" lastName="Bedell" role="Plaintiff"></party>
+ <party fullName="Board of Education of Kent County" lastName="Board of Education of Kent County" role="Defendant"></party>
+ <party firstName="Heather" fullName="Heather Gore" lastName="Gore" role="Indexed Party"></party>
+ <party firstName="Patricia" fullName="Patricia Gore" lastName="Gore" role="Plaintiff"></party>
+ <party firstName="Steven" fullName="Steven Gore" lastName="Gore" role="Plaintiff"></party>
+ <party firstName="Brian" fullName="Brian Kirby" lastName="Kirby" role="Defendant"></party>
+ <party firstName="John" fullName="John F. Price IV" generation="IV" lastName="Price" middleName="F." role="Defendant"></party>
+ <party firstName="Gordon" fullName="Gordon Sampson" lastName="Sampson" role="Defendant"></party>
+ <party firstName="Bonnie" fullName="Bonnie Ward" lastName="Ward" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Bedell et al v. Board of Education of Kent County et al</title>
+ <partNumber>1:05-cv-03340</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-03340/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-03340;05-3340</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Baltimore</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Marcellene Beck</displayForm>
+ <namePart type="family">Beck</namePart>
+ <namePart type="given">Marcellene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donna Bedell</displayForm>
+ <namePart type="family">Bedell</namePart>
+ <namePart type="given">Donna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James Bedell</displayForm>
+ <namePart type="family">Bedell</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Indexed Party</description>
+</name>
+<name type="personal">
+ <displayForm>Jessica Bedell</displayForm>
+ <namePart type="family">Bedell</namePart>
+ <namePart type="given">Jessica</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Indexed Party</description>
+</name>
+<name type="personal">
+ <displayForm>John Bedell</displayForm>
+ <namePart type="family">Bedell</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Board of Education of Kent County</displayForm>
+ <namePart type="family">Board of Education of Kent County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Heather Gore</displayForm>
+ <namePart type="family">Gore</namePart>
+ <namePart type="given">Heather</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Indexed Party</description>
+</name>
+<name type="personal">
+ <displayForm>Patricia Gore</displayForm>
+ <namePart type="family">Gore</namePart>
+ <namePart type="given">Patricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Steven Gore</displayForm>
+ <namePart type="family">Gore</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Brian Kirby</displayForm>
+ <namePart type="family">Kirby</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John F. Price IV</displayForm>
+ <namePart type="family">Price</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">IV</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gordon Sampson</displayForm>
+ <namePart type="family">Sampson</namePart>
+ <namePart type="given">Gordon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bonnie Ward</displayForm>
+ <namePart type="family">Ward</namePart>
+ <namePart type="given">Bonnie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_05-cv-03340</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:05-cv-03340</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Marcellene" fullName="Marcellene Beck" lastName="Beck" role="Defendant"></party>
+ <party firstName="Donna" fullName="Donna Bedell" lastName="Bedell" role="Plaintiff"></party>
+ <party firstName="James" fullName="James Bedell" lastName="Bedell" role="Indexed Party"></party>
+ <party firstName="Jessica" fullName="Jessica Bedell" lastName="Bedell" role="Indexed Party"></party>
+ <party firstName="John" fullName="John Bedell" lastName="Bedell" role="Plaintiff"></party>
+ <party fullName="Board of Education of Kent County" lastName="Board of Education of Kent County" role="Defendant"></party>
+ <party firstName="Heather" fullName="Heather Gore" lastName="Gore" role="Indexed Party"></party>
+ <party firstName="Patricia" fullName="Patricia Gore" lastName="Gore" role="Plaintiff"></party>
+ <party firstName="Steven" fullName="Steven Gore" lastName="Gore" role="Plaintiff"></party>
+ <party firstName="Brian" fullName="Brian Kirby" lastName="Kirby" role="Defendant"></party>
+ <party firstName="John" fullName="John F. Price IV" generation="IV" lastName="Price" middleName="F." role="Defendant"></party>
+ <party firstName="Gordon" fullName="Gordon Sampson" lastName="Sampson" role="Defendant"></party>
+ <party firstName="Bonnie" fullName="Bonnie Ward" lastName="Ward" role="Defendant"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-1_05-cv-03340-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-03340/USCOURTS-mdd-1_05-cv-03340-0/mods.xml">
+ <titleInfo>
+  <title>Bedell et al v. Board of Education of Kent County et al</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge Andre M Davis on 1/24/06. (slf, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-1_05-cv-03340-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18104d359</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-03340/USCOURTS-mdd-1_05-cv-03340-0</identifier>
+ <identifier type="former granule identifier">mdd-1_05-cv-03340_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-03340/USCOURTS-mdd-1_05-cv-03340-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-03340/pdf/USCOURTS-mdd-1_05-cv-03340-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-03340; Bedell et al v. Board of Education of Kent County et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-1_05-cv-03340-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-24</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge Andre M Davis on 1/24/06. (slf, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

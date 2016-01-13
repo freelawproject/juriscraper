@@ -1,0 +1,337 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817860a7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-03068</identifier>
+<identifier type="local">P0b002ee1817860a7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cv-03068</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-03068</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-03068</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>362</natureSuitCode>
+ <natureSuit>Medical Malpractice</natureSuit>
+ <cause>28:1332 Diversity-Medical Malpractice</cause>
+ <party fullName="Community Hospital" lastName="Community Hospital" role="Defendant"></party>
+ <party fullName="Community Hospital Association, The" lastName="Community Hospital Association, The" role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth W. Ellis" lastName="Ellis" middleName="W." role="Defendant"></party>
+ <party firstName="Walter" fullName="Walter K. Eskildsen" lastName="Eskildsen" middleName="K." role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Farrell" lastName="Farrell" role="Defendant"></party>
+ <party fullName="J. L. S." lastName="J. L. S." role="Plaintiff"></party>
+ <party firstName="Deb" fullName="Deb Smith" lastName="Smith" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Smith v. Ellis et al</title>
+ <partNumber>8:08-cv-03068</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-03068/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cv-03068;08-3068</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Community Hospital</displayForm>
+ <namePart type="family">Community Hospital</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Community Hospital Association, The</displayForm>
+ <namePart type="family">Community Hospital Association, The</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth W. Ellis</displayForm>
+ <namePart type="family">Ellis</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Walter K. Eskildsen</displayForm>
+ <namePart type="family">Eskildsen</namePart>
+ <namePart type="given">Walter</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Farrell</displayForm>
+ <namePart type="family">Farrell</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. L. S.</displayForm>
+ <namePart type="family">J. L. S.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Deb Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Deb</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-03068</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-03068</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>362</natureSuitCode>
+ <natureSuit>Medical Malpractice</natureSuit>
+ <cause>28:1332 Diversity-Medical Malpractice</cause>
+ <party fullName="Community Hospital" lastName="Community Hospital" role="Defendant"></party>
+ <party fullName="Community Hospital Association, The" lastName="Community Hospital Association, The" role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth W. Ellis" lastName="Ellis" middleName="W." role="Defendant"></party>
+ <party firstName="Walter" fullName="Walter K. Eskildsen" lastName="Eskildsen" middleName="K." role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Farrell" lastName="Farrell" role="Defendant"></party>
+ <party fullName="J. L. S." lastName="J. L. S." role="Plaintiff"></party>
+ <party firstName="Deb" fullName="Deb Smith" lastName="Smith" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-03068-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-0/mods.xml">
+ <titleInfo>
+  <title>Smith v. Ellis et al</title>
+  <subTitle>ORDER denying 28 Motion for Leave to file a Third Amended Complaint; however, the parties shall include the correct docket number, 8:08CV3068, on all future filings. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-03068-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e6dad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-03068_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-03068/pdf/USCOURTS-ned-8_08-cv-03068-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-03068; Smith v. Ellis et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-03068-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-06-04</dateIssued>
+  <docketText>ORDER denying 28 Motion for Leave to file a Third Amended Complaint; however, the parties shall include the correct docket number, 8:08CV3068, on all future filings. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-03068-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-1/mods.xml">
+ <titleInfo>
+  <title>Smith v. Ellis et al</title>
+  <subTitle>ORDER granting 39 Motion to Change Place of Trial to the North Platte Division; granting 32 Motion to Change Place of Trial to the North Platte Division. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-03068-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e6dac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-03068_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-03068/pdf/USCOURTS-ned-8_08-cv-03068-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-03068; Smith v. Ellis et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-03068-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-10-14</dateIssued>
+  <docketText>ORDER granting 39 Motion to Change Place of Trial to the North Platte Division; granting 32 Motion to Change Place of Trial to the North Platte Division. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-03068-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-2/mods.xml">
+ <titleInfo>
+  <title>Smith v. Ellis et al</title>
+  <subTitle>ORDER granting 62 Stipulation ; The Plaintiff&apos;s action against Defendant, Walter K. Eskildsen, M.D., is dismissed, with prejudice; and The Clerk of the Court is directed to amend the caption in this case by terminating Walter K. Eskildsen, M.D., as a defendant. Ordered by Judge Laurie Smith Camp. (ADB, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-03068-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e6dab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-03068_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-03068/pdf/USCOURTS-ned-8_08-cv-03068-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-03068; Smith v. Ellis et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-03068-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-11-12</dateIssued>
+  <docketText>ORDER granting 62 Stipulation ; The Plaintiff&apos;s action against Defendant, Walter K. Eskildsen, M.D., is dismissed, with prejudice; and The Clerk of the Court is directed to amend the caption in this case by terminating Walter K. Eskildsen, M.D., as a defendant. Ordered by Judge Laurie Smith Camp. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-03068-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-3/mods.xml">
+ <titleInfo>
+  <title>Smith v. Ellis et al</title>
+  <subTitle>ORDER - The Defendant Dr. Farrell&apos;s Unopposed Motion 71 to Withdraw and Strike Filings 65, 66, 67 is granted. Filing Nos. 65, 66, and 67 are deemed withdrawn. The Stipulated Motion to Dismiss Defendant Daniel Farrell, M.D., with Prejudice 72 is approved, and the relief requested therein is granted. The Plaintiff&apos;s action against Defendant, Daniel Farrell, M.D., is dismissed with prejudice. The Clerk of the Court is directed to amend the caption in this case by terminating Daniel Farrell, M.D., as a defendant. Ordered by Judge Laurie Smith Camp. (JAE, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-03068-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e6892</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-3</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-03068_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-03068/pdf/USCOURTS-ned-8_08-cv-03068-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-03068; Smith v. Ellis et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-03068-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-12-02</dateIssued>
+  <docketText>ORDER - The Defendant Dr. Farrell&apos;s Unopposed Motion 71 to Withdraw and Strike Filings 65, 66, 67 is granted. Filing Nos. 65, 66, and 67 are deemed withdrawn. The Stipulated Motion to Dismiss Defendant Daniel Farrell, M.D., with Prejudice 72 is approved, and the relief requested therein is granted. The Plaintiff&apos;s action against Defendant, Daniel Farrell, M.D., is dismissed with prejudice. The Clerk of the Court is directed to amend the caption in this case by terminating Daniel Farrell, M.D., as a defendant. Ordered by Judge Laurie Smith Camp. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-03068-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-4/mods.xml">
+ <titleInfo>
+  <title>Smith v. Ellis et al</title>
+  <subTitle>MEMORANDUM AND ORDER - The Plaintiff&apos;s Motion to Join Real Party in Interest 59 is granted. The Plaintiff is given leave to file a Third Amended Complaint solely for the purpose of adding Deb Smith as a party plaintiff in her individual capacity with respect to the claim for the costs of Plaintiff&apos;s medical care and treatment. Any such Third Amended Complaint must be filed on or before January 20, 2009. The Defendant&apos;s Motion for Partial Summary Judgment 68 is denied. The Defendant&apos;s Motion to Strike the Affidavit of Ronald P. Pope 70 is denied. Ordered by Judge Laurie Smith Camp. (JAE, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-03068-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e6891</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-4</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-03068_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-03068/pdf/USCOURTS-ned-8_08-cv-03068-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-03068; Smith v. Ellis et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-03068-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-01-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The Plaintiff&apos;s Motion to Join Real Party in Interest 59 is granted. The Plaintiff is given leave to file a Third Amended Complaint solely for the purpose of adding Deb Smith as a party plaintiff in her individual capacity with respect to the claim for the costs of Plaintiff&apos;s medical care and treatment. Any such Third Amended Complaint must be filed on or before January 20, 2009. The Defendant&apos;s Motion for Partial Summary Judgment 68 is denied. The Defendant&apos;s Motion to Strike the Affidavit of Ronald P. Pope 70 is denied. Ordered by Judge Laurie Smith Camp. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-03068-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-5/mods.xml">
+ <titleInfo>
+  <title>Smith v. Ellis et al</title>
+  <subTitle>ORDER OF DISMISSAL approving 77 Stipulation and the relief requested therein is granted; The Complaint, Amended Complaint, and all claims in this action are dismissed with prejudice; The Clerk of the Court is directed to strike 75 Stipulation for the reason that it is an incomplete document; and The parties shall pay their own costs and attorneys&apos; fees. Ordered by Judge Laurie Smith Camp. (ADB, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-03068-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e6893</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-5</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-03068_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-03068/USCOURTS-ned-8_08-cv-03068-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-03068/pdf/USCOURTS-ned-8_08-cv-03068-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-03068; Smith v. Ellis et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-03068-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-01-20</dateIssued>
+  <docketText>ORDER OF DISMISSAL approving 77 Stipulation and the relief requested therein is granted; The Complaint, Amended Complaint, and all claims in this action are dismissed with prejudice; The Clerk of the Court is directed to strike 75 Stipulation for the reason that it is an incomplete document; and The parties shall pay their own costs and attorneys&apos; fees. Ordered by Judge Laurie Smith Camp. (ADB, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,345 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c68d1e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02905</identifier>
+<identifier type="local">P0b002ee186c68d1e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02905</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02905</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02905</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Nicholas" fullName="Nicholas Aguilera" lastName="Aguilera" role="Defendant"></party>
+ <party firstName="R." fullName="R. L. Andreasen" lastName="Andreasen" middleName="L." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Bick" lastName="Bick" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Burroughs" lastName="Burroughs" role="Plaintiff"></party>
+ <party fullName="CDCR" lastName="CDCR" role="Defendant"></party>
+ <party firstName="Michele" fullName="Michele Ditomas" lastName="Ditomas" role="Defendant"></party>
+ <party firstName="D." fullName="D. Foston" lastName="Foston" role="Defendant"></party>
+ <party firstName="M." fullName="M. Loterztain" lastName="Loterztain" role="Defendant"></party>
+ <party firstName="Donna" fullName="Donna R. Seabrooks" lastName="Seabrooks" middleName="R." role="Defendant"></party>
+ <party firstName="J." fullName="J. V. Singh" lastName="Singh" middleName="V." role="Defendant"></party>
+ <party firstName="G." fullName="G. Tan" lastName="Tan" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Burroughs v. Singh, et al</title>
+ <partNumber>2:12-cv-02905</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02905/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02905;12-2905</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Nicholas Aguilera</displayForm>
+ <namePart type="family">Aguilera</namePart>
+ <namePart type="given">Nicholas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. L. Andreasen</displayForm>
+ <namePart type="family">Andreasen</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Bick</displayForm>
+ <namePart type="family">Bick</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Burroughs</displayForm>
+ <namePart type="family">Burroughs</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CDCR</displayForm>
+ <namePart type="family">CDCR</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michele Ditomas</displayForm>
+ <namePart type="family">Ditomas</namePart>
+ <namePart type="given">Michele</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Foston</displayForm>
+ <namePart type="family">Foston</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Loterztain</displayForm>
+ <namePart type="family">Loterztain</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donna R. Seabrooks</displayForm>
+ <namePart type="family">Seabrooks</namePart>
+ <namePart type="given">Donna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. V. Singh</displayForm>
+ <namePart type="family">Singh</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>G. Tan</displayForm>
+ <namePart type="family">Tan</namePart>
+ <namePart type="given">G.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02905</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02905</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Nicholas" fullName="Nicholas Aguilera" lastName="Aguilera" role="Defendant"></party>
+ <party firstName="R." fullName="R. L. Andreasen" lastName="Andreasen" middleName="L." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Bick" lastName="Bick" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Burroughs" lastName="Burroughs" role="Plaintiff"></party>
+ <party fullName="CDCR" lastName="CDCR" role="Defendant"></party>
+ <party firstName="Michele" fullName="Michele Ditomas" lastName="Ditomas" role="Defendant"></party>
+ <party firstName="D." fullName="D. Foston" lastName="Foston" role="Defendant"></party>
+ <party firstName="M." fullName="M. Loterztain" lastName="Loterztain" role="Defendant"></party>
+ <party firstName="Donna" fullName="Donna R. Seabrooks" lastName="Seabrooks" middleName="R." role="Defendant"></party>
+ <party firstName="J." fullName="J. V. Singh" lastName="Singh" middleName="V." role="Defendant"></party>
+ <party firstName="G." fullName="G. Tan" lastName="Tan" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02905-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Burroughs v. Singh, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 2/21/13 ORDERING that 2 Motion to Proceed IFP is GRANTED; Plaintiff is obligated to pay the statutory filing fee of $350.00 for this action. The complaint is DISMISSED with leave to file an amended complaint within 28 days.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02905-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c761f0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02905_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02905/pdf/USCOURTS-caed-2_12-cv-02905-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02905; (PC) Burroughs v. Singh, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02905-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-02-21</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 2/21/13 ORDERING that 2 Motion to Proceed IFP is GRANTED; Plaintiff is obligated to pay the statutory filing fee of $350.00 for this action. The complaint is DISMISSED with leave to file an amended complaint within 28 days.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02905-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Burroughs v. Singh, et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Allison Claire on 2/21/13 ORDERING the director of the CDC to collect and forward payment from the prison trust account of Michael Burroughs to the clerk until the balance of $350 is paid in full. The clerk is directed to serve a copy of this order and the plaintiff&apos;s IFP on the Director of the CDC. The clerk is directed to serve a copy of this order on the financial department of the court. (cc Financial, CDC Prisoner Payment Orders)(Dillon, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02905-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c761ec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02905_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02905/pdf/USCOURTS-caed-2_12-cv-02905-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02905; (PC) Burroughs v. Singh, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02905-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-02-21</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Allison Claire on 2/21/13 ORDERING the director of the CDC to collect and forward payment from the prison trust account of Michael Burroughs to the clerk until the balance of $350 is paid in full. The clerk is directed to serve a copy of this order and the plaintiff&apos;s IFP on the Director of the CDC. The clerk is directed to serve a copy of this order on the financial department of the court. (cc Financial, CDC Prisoner Payment Orders)(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02905-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Burroughs v. Singh, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 05/14/13 ordering the clerk of the court is directed to send plaintiff 1 blank summons and USM-285 form. Within 30 days, plaintiff shall submit to the court the completed summons and USM-285 form required to effect service on defendant California Department of Corrections and Rehabilitation. (Plummer, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02905-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c761ef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02905_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02905/pdf/USCOURTS-caed-2_12-cv-02905-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02905; (PC) Burroughs v. Singh, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02905-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-05-15</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 05/14/13 ordering the clerk of the court is directed to send plaintiff 1 blank summons and USM-285 form. Within 30 days, plaintiff shall submit to the court the completed summons and USM-285 form required to effect service on defendant California Department of Corrections and Rehabilitation. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02905-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Burroughs v. Singh, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 12/27/2013 ORDERING that defendant shall SHOW GOOD CAUSE in writing, within 7 days after this order is filed, for failing to file a completed consent or request for reassignment form; prompt filing of a completed form will be deemed full compliance with this order and will discharge the Order to Show Cause. (Waggoner, D)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02905-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c761ee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02905_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02905/pdf/USCOURTS-caed-2_12-cv-02905-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02905; (PC) Burroughs v. Singh, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02905-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-12-30</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 12/27/2013 ORDERING that defendant shall SHOW GOOD CAUSE in writing, within 7 days after this order is filed, for failing to file a completed consent or request for reassignment form; prompt filing of a completed form will be deemed full compliance with this order and will discharge the Order to Show Cause. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02905-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Burroughs v. Singh, et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 1/3/2014 RECOMMENDING that defendant&apos;s 17 motion to dismiss be granted; and plaintiff&apos;s complaint alleging ADA and RA violations be dismissed without leave to amend. Referred to Judge Morrison C. England, Jr.; Objections due within 21 days. (Yin, K)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02905-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c761ed</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02905_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02905/USCOURTS-caed-2_12-cv-02905-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02905/pdf/USCOURTS-caed-2_12-cv-02905-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02905; (PC) Burroughs v. Singh, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02905-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 1/3/2014 RECOMMENDING that defendant&apos;s 17 motion to dismiss be granted; and plaintiff&apos;s complaint alleging ADA and RA violations be dismissed without leave to amend. Referred to Judge Morrison C. England, Jr.; Objections due within 21 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+</mods>

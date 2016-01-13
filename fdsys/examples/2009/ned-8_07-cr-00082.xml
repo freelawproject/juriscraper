@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18174b44b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00082</identifier>
+<identifier type="local">P0b002ee18174b44b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cr-00082</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00082</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00082</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Deonta" fullName="Deonta Marion" lastName="Marion" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Marion</title>
+ <partNumber>8:07-cr-00082</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00082/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:07-cr-00082;07-082</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Deonta Marion</displayForm>
+ <namePart type="family">Marion</namePart>
+ <namePart type="given">Deonta</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00082</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00082</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Deonta" fullName="Deonta Marion" lastName="Marion" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00082-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Marion</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Julie B. Hansen for Deonta Marion appointed as counsel as to defendant(s) Deonta Marion Ordered by Magistrate Judge Thomas D. Thalken.(PCV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00082-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177d0df</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-0</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00082_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00082/pdf/USCOURTS-ned-8_07-cr-00082-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00082; USA v. Marion; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00082-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-03-08</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Julie B. Hansen for Deonta Marion appointed as counsel as to defendant(s) Deonta Marion Ordered by Magistrate Judge Thomas D. Thalken.(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00082-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Marion</title>
+  <subTitle>ORDER of Detention pending trial as to defendant(s) Deonta Marion Ordered by Magistrate Judge Thomas D. Thalken.(PCV, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00082-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177d530</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-1</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00082_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00082/pdf/USCOURTS-ned-8_07-cr-00082-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00082; USA v. Marion; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00082-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-03-15</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant(s) Deonta Marion Ordered by Magistrate Judge Thomas D. Thalken.(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00082-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Marion</title>
+  <subTitle>ORDER as to defendant Deonta Marion scheduling Rule 11 hearing for April 30, 2007, at 1:30 p.m. Ordered by Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00082-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177d0e0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-2</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00082_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00082/pdf/USCOURTS-ned-8_07-cr-00082-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00082; USA v. Marion; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00082-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-04-24</dateIssued>
+  <docketText>ORDER as to defendant Deonta Marion scheduling Rule 11 hearing for April 30, 2007, at 1:30 p.m. Ordered by Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00082-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Marion</title>
+  <subTitle>JUDGMENT as to Deonta Marion (1), Defendant plead guilty to Count I of the Indictment and is committed to the Bureau of Prisons for 46 months; the sentence of imprisonment in case 8:07CR82 shall run consecutive to the sentence of imprisonment in case 8:00CR333; 3 years supervised release with special conditions; the term of supervised release in case 8:07CR82 shall run concurrently to the term of supervised release in 8:00CR333; $100 special assessment; Counts II, III and IV of the Indictment are dismissed on the motion of the government as to this defendant only, Criminal Case Terminated as to defendant Deonta Marion. Ordered by Judge Lyle E. Strom. (4 certified copies to USM)(CJP)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00082-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177d0de</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-3</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00082_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00082/pdf/USCOURTS-ned-8_07-cr-00082-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00082; USA v. Marion; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00082-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-08-02</dateIssued>
+  <docketText>JUDGMENT as to Deonta Marion (1), Defendant plead guilty to Count I of the Indictment and is committed to the Bureau of Prisons for 46 months; the sentence of imprisonment in case 8:07CR82 shall run consecutive to the sentence of imprisonment in case 8:00CR333; 3 years supervised release with special conditions; the term of supervised release in case 8:07CR82 shall run concurrently to the term of supervised release in 8:00CR333; $100 special assessment; Counts II, III and IV of the Indictment are dismissed on the motion of the government as to this defendant only, Criminal Case Terminated as to defendant Deonta Marion. Ordered by Judge Lyle E. Strom. (4 certified copies to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00082-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Marion</title>
+  <subTitle>MEMORANDUM OPINION that the Court finds defendant&apos;s motion 41 should be denied. A separate order will beentered in accordance with this memorandum opinion as to defendant(s) Deonta Marion. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(ADB, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00082-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177d0dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-4</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00082_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00082/pdf/USCOURTS-ned-8_07-cr-00082-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00082; USA v. Marion; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00082-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-01-28</dateIssued>
+  <docketText>MEMORANDUM OPINION that the Court finds defendant&apos;s motion 41 should be denied. A separate order will beentered in accordance with this memorandum opinion as to defendant(s) Deonta Marion. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00082-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Marion</title>
+  <subTitle>ORDER AND JUDGMENT pursuant to the Memorandum Opinion 42, the 41 Motion to Vacate (2255) is denied as to Deonta Marion (1). Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)( ADB, ) Civil Case 8:08-cv-00540-LES closed.</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00082-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177d531</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-5</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00082_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00082/USCOURTS-ned-8_07-cr-00082-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00082/pdf/USCOURTS-ned-8_07-cr-00082-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00082; USA v. Marion; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00082-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-01-28</dateIssued>
+  <docketText>ORDER AND JUDGMENT pursuant to the Memorandum Opinion 42, the 41 Motion to Vacate (2255) is denied as to Deonta Marion (1). Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)( ADB, ) Civil Case 8:08-cv-00540-LES closed.</docketText>
+</extension>
+</relatedItem>
+</mods>

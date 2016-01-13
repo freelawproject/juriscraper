@@ -1,0 +1,217 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1839f44bb">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03638</identifier>
+<identifier type="local">P0b002ee1839f44bb</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-3_12-cv-03638</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_12-cv-03638</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:12-cv-03638</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party firstName="Anthony" fullName="Anthony Brodzki" lastName="Brodzki" role="Plaintiff"></party>
+ <party firstName="John" fullName="John E Bryson" lastName="Bryson" middleName="E" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Brodzki v. United States of America et al</title>
+ <partNumber>3:12-cv-03638</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03638/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:12-cv-03638;12-3638</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Dallas</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Anthony Brodzki</displayForm>
+ <namePart type="family">Brodzki</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John E Bryson</displayForm>
+ <namePart type="family">Bryson</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_12-cv-03638</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:12-cv-03638</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party firstName="Anthony" fullName="Anthony Brodzki" lastName="Brodzki" role="Plaintiff"></party>
+ <party firstName="John" fullName="John E Bryson" lastName="Bryson" middleName="E" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cv-03638-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03638/USCOURTS-txnd-3_12-cv-03638-0/mods.xml">
+ <titleInfo>
+  <title>Brodzki v. United States of America et al</title>
+  <subTitle>FINDINGS, CONCLUSIONS, AND RECOMMENDATION OF THE UNITED STATES MAGISTRATE JUDGE on Case re: 7 Motion to Dismiss. This Court recommends that the District Court grant in part and deny in part Defendant&apos;s Motion. (Ordered by Magistrate Judge Paul D Stickney on 11/28/2012) (ctf)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cv-03638-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f8527</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03638/USCOURTS-txnd-3_12-cv-03638-0</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cv-03638_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03638/USCOURTS-txnd-3_12-cv-03638-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03638/pdf/USCOURTS-txnd-3_12-cv-03638-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-03638; Brodzki v. United States of America et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cv-03638-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-28</dateIssued>
+  <docketText>FINDINGS, CONCLUSIONS, AND RECOMMENDATION OF THE UNITED STATES MAGISTRATE JUDGE on Case re: 7 Motion to Dismiss. This Court recommends that the District Court grant in part and deny in part Defendant&apos;s Motion. (Ordered by Magistrate Judge Paul D Stickney on 11/28/2012) (ctf)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cv-03638-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03638/USCOURTS-txnd-3_12-cv-03638-1/mods.xml">
+ <titleInfo>
+  <title>Brodzki v. United States of America et al</title>
+  <subTitle>AMENDED FINDINGS, CONCLUSIONS, AND RECOMMENDATION OF THE UNITED STATES MAGISTRATE JUDGE. This Court recommends that the District Court grant in part and deny in part Defendant&apos;s Motion. The District Court should grant Defendant&apos;s Motion based on lack of subject matter jurisdiction with respect to Plaintiff&apos;s Title VII claim based on sexual orientation discrimination and dismiss with prejudice Plaintiff&apos;s sexual orientation discrimination claim. (see order) (Ordered by Magistrate Judge Paul D Stickney on 11/29/2012) (mcrd)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cv-03638-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f8529</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03638/USCOURTS-txnd-3_12-cv-03638-1</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cv-03638_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03638/USCOURTS-txnd-3_12-cv-03638-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03638/pdf/USCOURTS-txnd-3_12-cv-03638-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-03638; Brodzki v. United States of America et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cv-03638-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-11-29</dateIssued>
+  <docketText>AMENDED FINDINGS, CONCLUSIONS, AND RECOMMENDATION OF THE UNITED STATES MAGISTRATE JUDGE. This Court recommends that the District Court grant in part and deny in part Defendant&apos;s Motion. The District Court should grant Defendant&apos;s Motion based on lack of subject matter jurisdiction with respect to Plaintiff&apos;s Title VII claim based on sexual orientation discrimination and dismiss with prejudice Plaintiff&apos;s sexual orientation discrimination claim. (see order) (Ordered by Magistrate Judge Paul D Stickney on 11/29/2012) (mcrd)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cv-03638-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03638/USCOURTS-txnd-3_12-cv-03638-2/mods.xml">
+ <titleInfo>
+  <title>Brodzki v. United States of America et al</title>
+  <subTitle>ORDER ADOPTING THE MAGISTRATE JUDGE&apos;S 24 FINDINGS, CONCLUSIONS, AND RECOMMENDATION. Defendant&apos;s 7 Motion is GRANTED in part and DENIED in part. The parties are hereby GRANTED sixty days of discovery regarding the issue of when Plaintiff&apos;s complaint was received in the District of Columbia Clerk&apos;s office. (Ordered by Judge Jane J Boyle on 1/2/2013) (skt)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cv-03638-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f8528</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03638/USCOURTS-txnd-3_12-cv-03638-2</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cv-03638_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03638/USCOURTS-txnd-3_12-cv-03638-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03638/pdf/USCOURTS-txnd-3_12-cv-03638-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-03638; Brodzki v. United States of America et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cv-03638-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER ADOPTING THE MAGISTRATE JUDGE&apos;S 24 FINDINGS, CONCLUSIONS, AND RECOMMENDATION. Defendant&apos;s 7 Motion is GRANTED in part and DENIED in part. The parties are hereby GRANTED sixty days of discovery regarding the issue of when Plaintiff&apos;s complaint was received in the District of Columbia Clerk&apos;s office. (Ordered by Judge Jane J Boyle on 1/2/2013) (skt)</docketText>
+</extension>
+</relatedItem>
+</mods>

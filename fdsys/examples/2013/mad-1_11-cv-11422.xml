@@ -1,0 +1,279 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183d54e58">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cv-11422</identifier>
+<identifier type="local">P0b002ee183d54e58</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_11-cv-11422</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_11-cv-11422</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:11-cv-11422</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party firstName="Andrew" fullName="Andrew Belt" lastName="Belt" role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer C. Boal" lastName="Boal" middleName="C." role="Mediator"></party>
+ <party firstName="A." fullName="A. Silvana Giner" lastName="Giner" middleName="Silvana" role="Defendant"></party>
+ <party fullName="Giner Electrochemical Systems, L.L.C." lastName="Giner Electrochemical Systems, L.L.C." role="Defendant"></party>
+ <party fullName="Giner, Inc." lastName="Giner, Inc." role="Defendant"></party>
+ <party fullName="JWA Investments, LLC" lastName="JWA Investments, LLC" role="Consolidated Plaintiff"></party>
+ <party firstName="George" fullName="George Knapp" lastName="Knapp" role="Consolidated Plaintiff"></party>
+ <party firstName="J." fullName="J. Kenneth Moritz" lastName="Moritz" middleName="Kenneth" role="Consolidated Plaintiff"></party>
+ <party firstName="Peter" fullName="Peter Muth" lastName="Muth" role="Consolidated Plaintiff"></party>
+ <party fullName="SBC Equity Partners Management Co., LLC" lastName="SBC Equity Partners Management Co., LLC" role="Consolidated Plaintiff"></party>
+ <party fullName="Stonewood Capital Management, Inc." lastName="Stonewood Capital Management, Inc." role="Plaintiff"></party>
+ <party firstName="John" fullName="John Tippins" lastName="Tippins" role="Consolidated Plaintiff"></party>
+ <party firstName="William" fullName="William Tippins" lastName="Tippins" role="Consolidated Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Stonewood Capital Management, Inc. v. Giner, Inc. et al</title>
+ <partNumber>1:11-cv-11422</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cv-11422/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-11422;11-11422</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Andrew Belt</displayForm>
+ <namePart type="family">Belt</namePart>
+ <namePart type="given">Andrew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jennifer C. Boal</displayForm>
+ <namePart type="family">Boal</namePart>
+ <namePart type="given">Jennifer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<name type="personal">
+ <displayForm>A. Silvana Giner</displayForm>
+ <namePart type="family">Giner</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Giner Electrochemical Systems, L.L.C.</displayForm>
+ <namePart type="family">Giner Electrochemical Systems, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Giner, Inc.</displayForm>
+ <namePart type="family">Giner, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JWA Investments, LLC</displayForm>
+ <namePart type="family">JWA Investments, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consolidated Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>George Knapp</displayForm>
+ <namePart type="family">Knapp</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consolidated Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>J. Kenneth Moritz</displayForm>
+ <namePart type="family">Moritz</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consolidated Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Peter Muth</displayForm>
+ <namePart type="family">Muth</namePart>
+ <namePart type="given">Peter</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consolidated Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>SBC Equity Partners Management Co., LLC</displayForm>
+ <namePart type="family">SBC Equity Partners Management Co., LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consolidated Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Stonewood Capital Management, Inc.</displayForm>
+ <namePart type="family">Stonewood Capital Management, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Tippins</displayForm>
+ <namePart type="family">Tippins</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consolidated Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>William Tippins</displayForm>
+ <namePart type="family">Tippins</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consolidated Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_11-cv-11422</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:11-cv-11422</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party firstName="Andrew" fullName="Andrew Belt" lastName="Belt" role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer C. Boal" lastName="Boal" middleName="C." role="Mediator"></party>
+ <party firstName="A." fullName="A. Silvana Giner" lastName="Giner" middleName="Silvana" role="Defendant"></party>
+ <party fullName="Giner Electrochemical Systems, L.L.C." lastName="Giner Electrochemical Systems, L.L.C." role="Defendant"></party>
+ <party fullName="Giner, Inc." lastName="Giner, Inc." role="Defendant"></party>
+ <party fullName="JWA Investments, LLC" lastName="JWA Investments, LLC" role="Consolidated Plaintiff"></party>
+ <party firstName="George" fullName="George Knapp" lastName="Knapp" role="Consolidated Plaintiff"></party>
+ <party firstName="J." fullName="J. Kenneth Moritz" lastName="Moritz" middleName="Kenneth" role="Consolidated Plaintiff"></party>
+ <party firstName="Peter" fullName="Peter Muth" lastName="Muth" role="Consolidated Plaintiff"></party>
+ <party fullName="SBC Equity Partners Management Co., LLC" lastName="SBC Equity Partners Management Co., LLC" role="Consolidated Plaintiff"></party>
+ <party fullName="Stonewood Capital Management, Inc." lastName="Stonewood Capital Management, Inc." role="Plaintiff"></party>
+ <party firstName="John" fullName="John Tippins" lastName="Tippins" role="Consolidated Plaintiff"></party>
+ <party firstName="William" fullName="William Tippins" lastName="Tippins" role="Consolidated Plaintiff"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cv-11422-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-11422/USCOURTS-mad-1_11-cv-11422-0/mods.xml">
+ <titleInfo>
+  <title>Stonewood Capital Management, Inc. v. Giner, Inc. et al</title>
+  <subTitle>Judge Rya W. Zobel: ORDER entered granting in part and denying in part 14 Motion to Dismiss; ALLOWED as to counts I, II, III and IV DENIED as to V; granting 18 Motion for Leave to File Document ; Counsel using the Electronic Case Filing System should now file the document for which leave to file has been granted in accordance with the CM/ECF Administrative Procedures. Counsel must include - Leave to file granted on (date of order)- in the caption of the document. (Urso, Lisa)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cv-11422-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d56232</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-11422/USCOURTS-mad-1_11-cv-11422-0</identifier>
+ <identifier type="former granule identifier">mad-1_11-cv-11422_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-11422/USCOURTS-mad-1_11-cv-11422-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cv-11422/pdf/USCOURTS-mad-1_11-cv-11422-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-11422; Stonewood Capital Management, Inc. v. Giner, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cv-11422-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-10-18</dateIssued>
+  <docketText>Judge Rya W. Zobel: ORDER entered granting in part and denying in part 14 Motion to Dismiss; ALLOWED as to counts I, II, III and IV DENIED as to V; granting 18 Motion for Leave to File Document ; Counsel using the Electronic Case Filing System should now file the document for which leave to file has been granted in accordance with the CM/ECF Administrative Procedures. Counsel must include - Leave to file granted on (date of order)- in the caption of the document. (Urso, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cv-11422-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-11422/USCOURTS-mad-1_11-cv-11422-1/mods.xml">
+ <titleInfo>
+  <title>Stonewood Capital Management, Inc. v. Giner, Inc. et al</title>
+  <subTitle>Judge Rya W. Zobel: Memorandum of Decision entered denying (47) Motion to Compel; denying (50) Motion to Compel; denying (57) Motion for Protective Order; denying (60) Motion to Compel; denying (65) Motion for Extension of Time to File Response/Reply ; denying (68) Motion to Take Deposition ; denying (71) Motion to Compel; granting (76) Motion ; granting (81) Motion for Summary Judgment; denying (88) Motion for Order; granting (96) Motion to Seal Document in case 1:11-cv-11422-RWZ. Judgment may be entered accordingly. Associated Cases: 1:11-cv-11422-RWZ, 1:12-cv-11271-RWZ(Urso, Lisa)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cv-11422-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d56231</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-11422/USCOURTS-mad-1_11-cv-11422-1</identifier>
+ <identifier type="former granule identifier">mad-1_11-cv-11422_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-11422/USCOURTS-mad-1_11-cv-11422-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cv-11422/pdf/USCOURTS-mad-1_11-cv-11422-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-11422; Stonewood Capital Management, Inc. v. Giner, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cv-11422-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>Judge Rya W. Zobel: Memorandum of Decision entered denying (47) Motion to Compel; denying (50) Motion to Compel; denying (57) Motion for Protective Order; denying (60) Motion to Compel; denying (65) Motion for Extension of Time to File Response/Reply ; denying (68) Motion to Take Deposition ; denying (71) Motion to Compel; granting (76) Motion ; granting (81) Motion for Summary Judgment; denying (88) Motion for Order; granting (96) Motion to Seal Document in case 1:11-cv-11422-RWZ. Judgment may be entered accordingly. Associated Cases: 1:11-cv-11422-RWZ, 1:12-cv-11271-RWZ(Urso, Lisa)</docketText>
+</extension>
+</relatedItem>
+</mods>

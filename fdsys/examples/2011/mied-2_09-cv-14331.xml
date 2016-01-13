@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818edf19">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-14331</identifier>
+<identifier type="local">P0b002ee1818edf19</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_09-cv-14331</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_09-cv-14331</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:09-cv-14331</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (DIWC)</cause>
+ <party firstName="Rosemary" fullName="Rosemary Ann Pesce" lastName="Pesce" middleName="Ann" role="Plaintiff"></party>
+ <party fullName="Social Security, Commissioner of" lastName="Social Security, Commissioner of" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Pesce v. Social Security, Commissioner of</title>
+ <partNumber>2:09-cv-14331</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-14331/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-14331;09-14331</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Rosemary Ann Pesce</displayForm>
+ <namePart type="family">Pesce</namePart>
+ <namePart type="given">Rosemary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security, Commissioner of</displayForm>
+ <namePart type="family">Social Security, Commissioner of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_09-cv-14331</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:09-cv-14331</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (DIWC)</cause>
+ <party firstName="Rosemary" fullName="Rosemary Ann Pesce" lastName="Pesce" middleName="Ann" role="Plaintiff"></party>
+ <party fullName="Social Security, Commissioner of" lastName="Social Security, Commissioner of" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_09-cv-14331-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-14331/USCOURTS-mied-2_09-cv-14331-0/mods.xml">
+ <titleInfo>
+  <title>Pesce v. Social Security, Commissioner of</title>
+  <subTitle>REPORT AND RECOMMENDATION to Deny 13 MOTION for Summary Judgment filed by Rosemary Ann Pesce, and to Grant 15 MOTION for Summary Judgment filed by Social Security Commissioner - Signed by Magistrate Judge Virginia M Morgan. (JJoh)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_09-cv-14331-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181915b57</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-14331/USCOURTS-mied-2_09-cv-14331-0</identifier>
+ <identifier type="former granule identifier">mied-2_09-cv-14331_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-14331/USCOURTS-mied-2_09-cv-14331-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-14331/pdf/USCOURTS-mied-2_09-cv-14331-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-14331; Pesce v. Social Security, Commissioner of; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_09-cv-14331-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-08-18</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION to Deny 13 MOTION for Summary Judgment filed by Rosemary Ann Pesce, and to Grant 15 MOTION for Summary Judgment filed by Social Security Commissioner - Signed by Magistrate Judge Virginia M Morgan. (JJoh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_09-cv-14331-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-14331/USCOURTS-mied-2_09-cv-14331-1/mods.xml">
+ <titleInfo>
+  <title>Pesce v. Social Security, Commissioner of</title>
+  <subTitle>ORDER denying 13 Motion for Summary Judgment filed by Rosemary Ann Pesce, adopting 16 Report and Recommendation, granting 15 Motion for Summary Judgment filed by Social Security, Commissioner of Signed by District Judge Paul D Borman. (DGoo)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_09-cv-14331-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181915b58</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-14331/USCOURTS-mied-2_09-cv-14331-1</identifier>
+ <identifier type="former granule identifier">mied-2_09-cv-14331_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-14331/USCOURTS-mied-2_09-cv-14331-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-14331/pdf/USCOURTS-mied-2_09-cv-14331-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-14331; Pesce v. Social Security, Commissioner of; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_09-cv-14331-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-24</dateIssued>
+  <docketText>ORDER denying 13 Motion for Summary Judgment filed by Rosemary Ann Pesce, adopting 16 Report and Recommendation, granting 15 Motion for Summary Judgment filed by Social Security, Commissioner of Signed by District Judge Paul D Borman. (DGoo)</docketText>
+</extension>
+</relatedItem>
+</mods>

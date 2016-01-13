@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c89787">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-09</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_13-cv-01145</identifier>
+<identifier type="local">P0b002ee186c89787</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-09</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-09</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-6_13-cv-01145</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_13-cv-01145</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:13-cv-01145</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party fullName="Crowley Logistics, Inc." lastName="Crowley Logistics, Inc." role="Intervenor"></party>
+ <party firstName="Juan" fullName="Juan B. Perez" lastName="Perez" middleName="B." role="Plaintiff"></party>
+ <party fullName="West Plains Transport, Inc." lastName="West Plains Transport, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Perez v. West Plains Transport, Inc.</title>
+ <partNumber>6:13-cv-01145</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_13-cv-01145/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:13-cv-01145;13-1145</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Wichita</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Crowley Logistics, Inc.</displayForm>
+ <namePart type="family">Crowley Logistics, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor</description>
+</name>
+<name type="personal">
+ <displayForm>Juan B. Perez</displayForm>
+ <namePart type="family">Perez</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>West Plains Transport, Inc.</displayForm>
+ <namePart type="family">West Plains Transport, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_13-cv-01145</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:13-cv-01145</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party fullName="Crowley Logistics, Inc." lastName="Crowley Logistics, Inc." role="Intervenor"></party>
+ <party firstName="Juan" fullName="Juan B. Perez" lastName="Perez" middleName="B." role="Plaintiff"></party>
+ <party fullName="West Plains Transport, Inc." lastName="West Plains Transport, Inc." role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_13-cv-01145-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_13-cv-01145/USCOURTS-ksd-6_13-cv-01145-0/mods.xml">
+ <titleInfo>
+  <title>Perez v. West Plains Transport, Inc.</title>
+  <subTitle>MEMORANDUM AND ORDER that the Court will retain subject matter jurisdiction over this case. Signed by Chief Judge Kathryn H. Vratil on 1/6/2014. (mm)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_13-cv-01145/pdf/USCOURTS-ksd-6_13-cv-01145-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c92a7c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_13-cv-01145/USCOURTS-ksd-6_13-cv-01145-0</identifier>
+ <identifier type="former granule identifier">ksd-6_13-cv-01145_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_13-cv-01145/USCOURTS-ksd-6_13-cv-01145-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_13-cv-01145/pdf/USCOURTS-ksd-6_13-cv-01145-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:13-cv-01145; Perez v. West Plains Transport, Inc.; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_13-cv-01145-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the Court will retain subject matter jurisdiction over this case. Signed by Chief Judge Kathryn H. Vratil on 1/6/2014. (mm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_13-cv-01145-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_13-cv-01145/USCOURTS-ksd-6_13-cv-01145-1/mods.xml">
+ <titleInfo>
+  <title>Perez v. West Plains Transport, Inc.</title>
+  <subTitle>ORDER denying 28 Motion for Joinder. Signed by Magistrate Judge James P. O&apos;Hara on 1/8/2014. (ah)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_13-cv-01145/pdf/USCOURTS-ksd-6_13-cv-01145-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c92a7b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_13-cv-01145/USCOURTS-ksd-6_13-cv-01145-1</identifier>
+ <identifier type="former granule identifier">ksd-6_13-cv-01145_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_13-cv-01145/USCOURTS-ksd-6_13-cv-01145-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_13-cv-01145/pdf/USCOURTS-ksd-6_13-cv-01145-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:13-cv-01145; Perez v. West Plains Transport, Inc.; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_13-cv-01145-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-08</dateIssued>
+  <docketText>ORDER denying 28 Motion for Joinder. Signed by Magistrate Judge James P. O&apos;Hara on 1/8/2014. (ah)</docketText>
+</extension>
+</relatedItem>
+</mods>

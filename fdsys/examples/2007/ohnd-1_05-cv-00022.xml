@@ -1,0 +1,288 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d09fa">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_05-cv-00022</identifier>
+<identifier type="local">P0b002ee1815d09fa</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_05-cv-00022</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_05-cv-00022</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:05-cv-00022</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party firstName="Bruce" fullName="Bruce Campbell" lastName="Campbell" role="Defendant"></party>
+ <party fullName="Centerior Energy Services, Inc." lastName="Centerior Energy Services, Inc." role="Counter-Claimant"></party>
+ <party fullName="Centerior Energy Services, Inc." lastName="Centerior Energy Services, Inc." role="Defendant"></party>
+ <party fullName="Cleveland Electric Illuminating Company" lastName="Cleveland Electric Illuminating Company" role="Counter-Claimant"></party>
+ <party fullName="Cleveland Electric Illuminating Company" lastName="Cleveland Electric Illuminating Company" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party fullName="FirstEnergy Corp." lastName="FirstEnergy Corp." role="Counter-Claimant"></party>
+ <party fullName="FirstEnergy Corp." lastName="FirstEnergy Corp." role="Defendant"></party>
+ <party firstName="John" fullName="John Foe" lastName="Foe" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Jackson" lastName="Jackson" role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis Neal" lastName="Neal" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank Steed" lastName="Steed" role="Defendant"></party>
+ <party firstName="Coretta" fullName="Coretta Stewart" lastName="Stewart" role="Counter-Defendant"></party>
+ <party firstName="Coretta" fullName="Coretta Stewart" lastName="Stewart" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Stewart v. FirstEnergy Corp. et al</title>
+ <partNumber>1:05-cv-00022</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_05-cv-00022/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-00022;05-022</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bruce Campbell</displayForm>
+ <namePart type="family">Campbell</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Centerior Energy Services, Inc.</displayForm>
+ <namePart type="family">Centerior Energy Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Centerior Energy Services, Inc.</displayForm>
+ <namePart type="family">Centerior Energy Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cleveland Electric Illuminating Company</displayForm>
+ <namePart type="family">Cleveland Electric Illuminating Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Cleveland Electric Illuminating Company</displayForm>
+ <namePart type="family">Cleveland Electric Illuminating Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>FirstEnergy Corp.</displayForm>
+ <namePart type="family">FirstEnergy Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>FirstEnergy Corp.</displayForm>
+ <namePart type="family">FirstEnergy Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Foe</displayForm>
+ <namePart type="family">Foe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Jackson</displayForm>
+ <namePart type="family">Jackson</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Neal</displayForm>
+ <namePart type="family">Neal</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frank Steed</displayForm>
+ <namePart type="family">Steed</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Coretta Stewart</displayForm>
+ <namePart type="family">Stewart</namePart>
+ <namePart type="given">Coretta</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Coretta Stewart</displayForm>
+ <namePart type="family">Stewart</namePart>
+ <namePart type="given">Coretta</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_05-cv-00022</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:05-cv-00022</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party firstName="Bruce" fullName="Bruce Campbell" lastName="Campbell" role="Defendant"></party>
+ <party fullName="Centerior Energy Services, Inc." lastName="Centerior Energy Services, Inc." role="Counter-Claimant"></party>
+ <party fullName="Centerior Energy Services, Inc." lastName="Centerior Energy Services, Inc." role="Defendant"></party>
+ <party fullName="Cleveland Electric Illuminating Company" lastName="Cleveland Electric Illuminating Company" role="Counter-Claimant"></party>
+ <party fullName="Cleveland Electric Illuminating Company" lastName="Cleveland Electric Illuminating Company" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party fullName="FirstEnergy Corp." lastName="FirstEnergy Corp." role="Counter-Claimant"></party>
+ <party fullName="FirstEnergy Corp." lastName="FirstEnergy Corp." role="Defendant"></party>
+ <party firstName="John" fullName="John Foe" lastName="Foe" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Jackson" lastName="Jackson" role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis Neal" lastName="Neal" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank Steed" lastName="Steed" role="Defendant"></party>
+ <party firstName="Coretta" fullName="Coretta Stewart" lastName="Stewart" role="Counter-Defendant"></party>
+ <party firstName="Coretta" fullName="Coretta Stewart" lastName="Stewart" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_05-cv-00022-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00022/USCOURTS-ohnd-1_05-cv-00022-0/mods.xml">
+ <titleInfo>
+  <title>Stewart v. FirstEnergy Corp. et al</title>
+  <subTitle>Order. Defendants&apos; Motion for summary judgment (Related Doc # 15) is GRANTED and Plaintiff&apos;s case is DISMISSED. Within ten (10) days of the date of this Order, the Counterclaiming Defendants shall file a &quot;Notice&quot; indicating whether they intend to pursue their Counterclaim. If they wish to pursue it, they SHALL CONFER with Plaintiff and the parties JOINTLY SHALL PROPOSE a date for a Status Conference to occur in May 2006. If they do not wish to pursue it, the Court will look forward to a dismissal entry reflecting that intent. Signed by Judge Kathleen M. O&apos;Malley on 3/29/2006.(H, C)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_05-cv-00022-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816d1205</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00022/USCOURTS-ohnd-1_05-cv-00022-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_05-cv-00022_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00022/USCOURTS-ohnd-1_05-cv-00022-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_05-cv-00022/pdf/USCOURTS-ohnd-1_05-cv-00022-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00022; Stewart v. FirstEnergy Corp. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_05-cv-00022-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-03-29</dateIssued>
+  <docketText>Order. Defendants&apos; Motion for summary judgment (Related Doc # 15) is GRANTED and Plaintiff&apos;s case is DISMISSED. Within ten (10) days of the date of this Order, the Counterclaiming Defendants shall file a &quot;Notice&quot; indicating whether they intend to pursue their Counterclaim. If they wish to pursue it, they SHALL CONFER with Plaintiff and the parties JOINTLY SHALL PROPOSE a date for a Status Conference to occur in May 2006. If they do not wish to pursue it, the Court will look forward to a dismissal entry reflecting that intent. Signed by Judge Kathleen M. O&apos;Malley on 3/29/2006.(H, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_05-cv-00022-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00022/USCOURTS-ohnd-1_05-cv-00022-1/mods.xml">
+ <titleInfo>
+  <title>Stewart v. FirstEnergy Corp. et al</title>
+  <subTitle>Opinion and Order. For the reasons outlined herein, this case is DISMISSED without prejudice. Defendants&apos; Motion for summary judgment (Related Doc # 32) and Plaintiff&apos;s counter Motion for summary judgment (Related Doc # 33) are denied as moot. Signed by Judge Kathleen M. O&apos;Malley on 1/5/2007.(H, C)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_05-cv-00022-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816d1206</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00022/USCOURTS-ohnd-1_05-cv-00022-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_05-cv-00022_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00022/USCOURTS-ohnd-1_05-cv-00022-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_05-cv-00022/pdf/USCOURTS-ohnd-1_05-cv-00022-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00022; Stewart v. FirstEnergy Corp. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_05-cv-00022-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-05</dateIssued>
+  <docketText>Opinion and Order. For the reasons outlined herein, this case is DISMISSED without prejudice. Defendants&apos; Motion for summary judgment (Related Doc # 32) and Plaintiff&apos;s counter Motion for summary judgment (Related Doc # 33) are denied as moot. Signed by Judge Kathleen M. O&apos;Malley on 1/5/2007.(H, C)</docketText>
+</extension>
+</relatedItem>
+</mods>

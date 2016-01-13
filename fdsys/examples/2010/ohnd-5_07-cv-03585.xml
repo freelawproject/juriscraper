@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181561b12">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cv-03585</identifier>
+<identifier type="local">P0b002ee181561b12</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-5_07-cv-03585</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_07-cv-03585</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:07-cv-03585</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>15:2(a) Fair Labor Standards Act</cause>
+ <party firstName="Carolyn" fullName="Carolyn Abdelkhaleq" lastName="Abdelkhaleq" role="Plaintiff"></party>
+ <party fullName="Precision Door of Akron" lastName="Precision Door of Akron" role="Defendant"></party>
+ <party fullName="Precision Holdings of Brevard, Inc." lastName="Precision Holdings of Brevard, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Abdelkhaleq v. Precision Door of Akron et al</title>
+ <partNumber>5:07-cv-03585</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cv-03585/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:07-cv-03585;07-3585</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Akron</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Carolyn Abdelkhaleq</displayForm>
+ <namePart type="family">Abdelkhaleq</namePart>
+ <namePart type="given">Carolyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Precision Door of Akron</displayForm>
+ <namePart type="family">Precision Door of Akron</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Precision Holdings of Brevard, Inc.</displayForm>
+ <namePart type="family">Precision Holdings of Brevard, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_07-cv-03585</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:07-cv-03585</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>15:2(a) Fair Labor Standards Act</cause>
+ <party firstName="Carolyn" fullName="Carolyn Abdelkhaleq" lastName="Abdelkhaleq" role="Plaintiff"></party>
+ <party fullName="Precision Door of Akron" lastName="Precision Door of Akron" role="Defendant"></party>
+ <party fullName="Precision Holdings of Brevard, Inc." lastName="Precision Holdings of Brevard, Inc." role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cv-03585-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03585/USCOURTS-ohnd-5_07-cv-03585-0/mods.xml">
+ <titleInfo>
+  <title>Abdelkhaleq v. Precision Door of Akron et al</title>
+  <subTitle>Order. Pecision Holdings&apos; Motion to dismiss (Related Doc # 5) is GRANTED. Abdelkhaleq&apos;s Rule 56(f) Motion for Discovery and Motion for leave to file sur-reply (Related Doc # 11) are DENIED. Abdelkhaleq has ten days to respond to the Court&apos;s Order regarding defendant Precision Door. Judge Kathleen M. O&apos;Malley on 8/21/2008.(H,CM)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cv-03585-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181626fce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03585/USCOURTS-ohnd-5_07-cv-03585-0</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cv-03585_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03585/USCOURTS-ohnd-5_07-cv-03585-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cv-03585/pdf/USCOURTS-ohnd-5_07-cv-03585-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-03585; Abdelkhaleq v. Precision Door of Akron et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cv-03585-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-08-21</dateIssued>
+  <docketText>Order. Pecision Holdings&apos; Motion to dismiss (Related Doc # 5) is GRANTED. Abdelkhaleq&apos;s Rule 56(f) Motion for Discovery and Motion for leave to file sur-reply (Related Doc # 11) are DENIED. Abdelkhaleq has ten days to respond to the Court&apos;s Order regarding defendant Precision Door. Judge Kathleen M. O&apos;Malley on 8/21/2008.(H,CM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cv-03585-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03585/USCOURTS-ohnd-5_07-cv-03585-1/mods.xml">
+ <titleInfo>
+  <title>Abdelkhaleq v. Precision Door of Akron et al</title>
+  <subTitle>8/09.(R,N) Memorandum and Order denying Plaintiff&apos;s Motion for summary judgment (Related Doc # 28). Parties are directed to comply with the dates listed in the forthcoming civil trial order. Signed by Magistrate Judge Kenneth S. McHargh on 8/2</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-08-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cv-03585-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181626fcf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03585/USCOURTS-ohnd-5_07-cv-03585-1</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cv-03585_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03585/USCOURTS-ohnd-5_07-cv-03585-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cv-03585/pdf/USCOURTS-ohnd-5_07-cv-03585-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-03585; Abdelkhaleq v. Precision Door of Akron et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cv-03585-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-08-28</dateIssued>
+  <docketText>8/09.(R,N) Memorandum and Order denying Plaintiff&apos;s Motion for summary judgment (Related Doc # 28). Parties are directed to comply with the dates listed in the forthcoming civil trial order. Signed by Magistrate Judge Kenneth S. McHargh on 8/2</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cv-03585-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03585/USCOURTS-ohnd-5_07-cv-03585-2/mods.xml">
+ <titleInfo>
+  <title>Abdelkhaleq v. Precision Door of Akron et al</title>
+  <subTitle>Opinion and Order. The Court finds in favor of plaintiff on the issue of liability. The parties have until 12/30/09 to file the reports described in this Opinion. Signed by Magistrate Judge Kenneth S. McHargh on 12/15/09. (R,N)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cv-03585-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181626fd0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03585/USCOURTS-ohnd-5_07-cv-03585-2</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cv-03585_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03585/USCOURTS-ohnd-5_07-cv-03585-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cv-03585/pdf/USCOURTS-ohnd-5_07-cv-03585-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-03585; Abdelkhaleq v. Precision Door of Akron et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cv-03585-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-12-15</dateIssued>
+  <docketText>Opinion and Order. The Court finds in favor of plaintiff on the issue of liability. The parties have until 12/30/09 to file the reports described in this Opinion. Signed by Magistrate Judge Kenneth S. McHargh on 12/15/09. (R,N)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cv-03585-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03585/USCOURTS-ohnd-5_07-cv-03585-3/mods.xml">
+ <titleInfo>
+  <title>Abdelkhaleq v. Precision Door of Akron et al</title>
+  <subTitle>Opinion and Order on the issue of damages. The Court orders defendant to pay Plaintiff $3948.96 in damages, which represents $1974.48 in lost overtime compensation and an equal amount in liquidated damages. The Court further orders defendant to pay plaintiff $30,470.10 in attorney&apos;s fees. Signed by Magistrate Judge Kenneth S. McHargh on 1/25/10. (R,N)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cv-03585-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181626fd1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03585/USCOURTS-ohnd-5_07-cv-03585-3</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cv-03585_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03585/USCOURTS-ohnd-5_07-cv-03585-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cv-03585/pdf/USCOURTS-ohnd-5_07-cv-03585-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-03585; Abdelkhaleq v. Precision Door of Akron et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cv-03585-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-01-25</dateIssued>
+  <docketText>Opinion and Order on the issue of damages. The Court orders defendant to pay Plaintiff $3948.96 in damages, which represents $1974.48 in lost overtime compensation and an equal amount in liquidated damages. The Court further orders defendant to pay plaintiff $30,470.10 in attorney&apos;s fees. Signed by Magistrate Judge Kenneth S. McHargh on 1/25/10. (R,N)</docketText>
+</extension>
+</relatedItem>
+</mods>

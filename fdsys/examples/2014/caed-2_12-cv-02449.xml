@@ -1,0 +1,291 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c6912a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02449</identifier>
+<identifier type="local">P0b002ee186c6912a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02449</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02449</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02449</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>130</natureSuitCode>
+ <natureSuit>Miller Act</natureSuit>
+ <cause>28:1352 Miller Act</cause>
+ <party fullName="Harold E. Nutter &amp; Son. Inc." lastName="Harold E. Nutter &amp; Son. Inc." role="Plaintiff"></party>
+ <party fullName="Harold E. Nutter, Inc." lastName="Harold E. Nutter, Inc." role="Plaintiff"></party>
+ <party fullName="Korte Construction Company" lastName="Korte Construction Company" role="Defendant"></party>
+ <party fullName="The Korte Co." lastName="The Korte Co." role="Defendant"></party>
+ <party fullName="Travelers Casualty and Surety Company of America" lastName="Travelers Casualty and Surety Company of America" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Harold E. Nutter, Inc. v. Korte Construction Company et. al.</title>
+ <partNumber>2:12-cv-02449</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02449/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02449;12-2449</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Harold E. Nutter &amp; Son. Inc.</displayForm>
+ <namePart type="family">Harold E. Nutter &amp; Son. Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Harold E. Nutter, Inc.</displayForm>
+ <namePart type="family">Harold E. Nutter, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Korte Construction Company</displayForm>
+ <namePart type="family">Korte Construction Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Korte Co.</displayForm>
+ <namePart type="family">The Korte Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Travelers Casualty and Surety Company of America</displayForm>
+ <namePart type="family">Travelers Casualty and Surety Company of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02449</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02449</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>130</natureSuitCode>
+ <natureSuit>Miller Act</natureSuit>
+ <cause>28:1352 Miller Act</cause>
+ <party fullName="Harold E. Nutter &amp; Son. Inc." lastName="Harold E. Nutter &amp; Son. Inc." role="Plaintiff"></party>
+ <party fullName="Harold E. Nutter, Inc." lastName="Harold E. Nutter, Inc." role="Plaintiff"></party>
+ <party fullName="Korte Construction Company" lastName="Korte Construction Company" role="Defendant"></party>
+ <party fullName="The Korte Co." lastName="The Korte Co." role="Defendant"></party>
+ <party fullName="Travelers Casualty and Surety Company of America" lastName="Travelers Casualty and Surety Company of America" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02449-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-0/mods.xml">
+ <titleInfo>
+  <title>Harold E. Nutter, Inc. v. Korte Construction Company et. al.</title>
+  <subTitle>STIPULATION and ORDER 23 to continue hearing signed by Judge John A. Mendez on 3/7/2013. 20 Motion to Dismiss 2nd - 4th Counts of 16 First Amended Complaint Hearing is RE-SET for 6/5/2013 at 9:30 AM in Courtroom 6 (JAM). (Marciel, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02449-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c74e49</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02449_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02449/pdf/USCOURTS-caed-2_12-cv-02449-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02449; Harold E. Nutter, Inc. v. Korte Construction Company et. al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02449-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-03-08</dateIssued>
+  <docketText>STIPULATION and ORDER 23 to continue hearing signed by Judge John A. Mendez on 3/7/2013. 20 Motion to Dismiss 2nd - 4th Counts of 16 First Amended Complaint Hearing is RE-SET for 6/5/2013 at 9:30 AM in Courtroom 6 (JAM). (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02449-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-1/mods.xml">
+ <titleInfo>
+  <title>Harold E. Nutter, Inc. v. Korte Construction Company et. al.</title>
+  <subTitle>STIPULATION and ORDER signed by Judge John A. Mendez on 5/10/2013 ORDERING 20 All proceedings in this case, including Korte Construction Company Motion to Dismiss and related deadlines, are STAYED pending completion of the mediation currently scheduled for 6/12/2013 before Donald L. Sullivan. Within 14 days after the completion of mediation, the parties will update the Court, in writing, on the outcome of mediation. If the parties have not reached a settlement at that time, the stay will no longer be in effect and the Court shall reschedule the hearing on Korte&apos;s Motion to Dismiss, and all related deadlines. (Reader, L)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02449-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c74e47</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02449_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02449/pdf/USCOURTS-caed-2_12-cv-02449-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02449; Harold E. Nutter, Inc. v. Korte Construction Company et. al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02449-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-05-10</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge John A. Mendez on 5/10/2013 ORDERING 20 All proceedings in this case, including Korte Construction Company Motion to Dismiss and related deadlines, are STAYED pending completion of the mediation currently scheduled for 6/12/2013 before Donald L. Sullivan. Within 14 days after the completion of mediation, the parties will update the Court, in writing, on the outcome of mediation. If the parties have not reached a settlement at that time, the stay will no longer be in effect and the Court shall reschedule the hearing on Korte&apos;s Motion to Dismiss, and all related deadlines. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02449-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-2/mods.xml">
+ <titleInfo>
+  <title>Harold E. Nutter, Inc. v. Korte Construction Company et. al.</title>
+  <subTitle>STIPULATION and ORDER signed by Judge John A. Mendez on 6/26/13 ORDERING that Pursuant to the above joint status report and stipulation, all proceedings in this case are stayed until October 4, 2013. The parties will update the Court, in writing, on the status of their settlement on or before October 4, 2013. (Becknal, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02449-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c74e48</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02449_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02449/pdf/USCOURTS-caed-2_12-cv-02449-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02449; Harold E. Nutter, Inc. v. Korte Construction Company et. al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02449-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-06-27</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge John A. Mendez on 6/26/13 ORDERING that Pursuant to the above joint status report and stipulation, all proceedings in this case are stayed until October 4, 2013. The parties will update the Court, in writing, on the status of their settlement on or before October 4, 2013. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02449-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-3/mods.xml">
+ <titleInfo>
+  <title>Harold E. Nutter, Inc. v. Korte Construction Company et. al.</title>
+  <subTitle>STIPULATION and ORDER signed by Judge John A. Mendez on 9/24/13 ORDERING that this case is STAYED until 1/6/2014. The parties shall either file a stipulation for dismissal or update the Court, in writing, on the status of their settlement on or before 1/6/14. (Mena-Sanchez, L)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02449-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c74e46</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02449_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02449/pdf/USCOURTS-caed-2_12-cv-02449-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02449; Harold E. Nutter, Inc. v. Korte Construction Company et. al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02449-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-09-25</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge John A. Mendez on 9/24/13 ORDERING that this case is STAYED until 1/6/2014. The parties shall either file a stipulation for dismissal or update the Court, in writing, on the status of their settlement on or before 1/6/14. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02449-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-4/mods.xml">
+ <titleInfo>
+  <title>Harold E. Nutter, Inc. v. Korte Construction Company et. al.</title>
+  <subTitle>STIPULATION and ORDER 32 signed by Judge John A. Mendez on 1/6/14 ORDERING this case DISMISSED with prejudice pursuant to Rule 41(a)(1) of the Federal Rules of Civil Procedure, each side to bear their own fees and costs. CASE CLOSED. (Kastilahn, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02449-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c74e4a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02449_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02449/USCOURTS-caed-2_12-cv-02449-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02449/pdf/USCOURTS-caed-2_12-cv-02449-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02449; Harold E. Nutter, Inc. v. Korte Construction Company et. al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02449-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>STIPULATION and ORDER 32 signed by Judge John A. Mendez on 1/6/14 ORDERING this case DISMISSED with prejudice pursuant to Rule 41(a)(1) of the Federal Rules of Civil Procedure, each side to bear their own fees and costs. CASE CLOSED. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

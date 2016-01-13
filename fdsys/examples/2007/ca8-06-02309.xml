@@ -1,0 +1,151 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e3ed8e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-06-02309</identifier>
+<identifier type="local">P0b002ee180e3ed8e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-06-02309</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-06-02309</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>06-02309</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Bettye" fullName="Bettye Battle-Turner" lastName="Battle-Turner" role="Appellee"></party>
+ <party fullName="City of St. Louis" lastName="City of St. Louis" role="Appellee"></party>
+ <party firstName="Fayette" fullName="Fayette Granda" lastName="Granda" role="Appellant"></party>
+</extension>
+<titleInfo>
+ <title>Fayette Granda v. City of St. Louis, et al</title>
+ <partNumber>06-02309</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-06-02309/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">06-02309;06-2309</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bettye Battle-Turner</displayForm>
+ <namePart type="family">Battle-Turner</namePart>
+ <namePart type="given">Bettye</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>City of St. Louis</displayForm>
+ <namePart type="family">City of St. Louis</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Fayette Granda</displayForm>
+ <namePart type="family">Granda</namePart>
+ <namePart type="given">Fayette</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-06-02309</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>06-02309</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Bettye" fullName="Bettye Battle-Turner" lastName="Battle-Turner" role="Appellee"></party>
+ <party fullName="City of St. Louis" lastName="City of St. Louis" role="Appellee"></party>
+ <party firstName="Fayette" fullName="Fayette Granda" lastName="Granda" role="Appellant"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-06-02309-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-06-02309/USCOURTS-ca8-06-02309-0/mods.xml">
+ <titleInfo>
+  <title>Fayette Granda v. City of St. Louis, et al</title>
+  <subTitle>OPINION FILED - THE COURT: DIANA E. MURPHY ; MORRIS S. ARNOLD ; DUANE BENTON. Diana E. Murphy, Authoring Judge (PUBLISHED) [3264643] [06-2309]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-06-02309-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e44014</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-06-02309/USCOURTS-ca8-06-02309-0</identifier>
+ <identifier type="former granule identifier">ca8-06-02309_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-06-02309/USCOURTS-ca8-06-02309-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-06-02309/pdf/USCOURTS-ca8-06-02309-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 06-02309; Fayette Granda v. City of St. Louis, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-06-02309-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-04</dateIssued>
+  <docketText>OPINION FILED - THE COURT: DIANA E. MURPHY ; MORRIS S. ARNOLD ; DUANE BENTON. Diana E. Murphy, Authoring Judge (PUBLISHED) [3264643] [06-2309]</docketText>
+</extension>
+</relatedItem>
+</mods>

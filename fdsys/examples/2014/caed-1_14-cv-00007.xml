@@ -1,0 +1,217 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee188340626">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-04-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-04-01</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00007</identifier>
+<identifier type="local">P0b002ee188340626</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-04-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-04-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cv-00007</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00007</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00007</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Levi" fullName="Levi Micah Barter" lastName="Barter" middleName="Micah" role="Petitioner"></party>
+ <party firstName="Jerry" fullName="Jerry Brown" lastName="Brown" role="Respondent"></party>
+ <party fullName="Warden" lastName="Warden" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>(HC) Barter v. Brown, et al.</title>
+ <partNumber>1:14-cv-00007</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00007/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-00007;14-007</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Levi Micah Barter</displayForm>
+ <namePart type="family">Barter</namePart>
+ <namePart type="given">Levi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Jerry Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Jerry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Warden</displayForm>
+ <namePart type="family">Warden</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00007</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00007</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Levi" fullName="Levi Micah Barter" lastName="Barter" middleName="Micah" role="Petitioner"></party>
+ <party firstName="Jerry" fullName="Jerry Brown" lastName="Brown" role="Respondent"></party>
+ <party fullName="Warden" lastName="Warden" role="Respondent"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00007-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00007/USCOURTS-caed-1_14-cv-00007-0/mods.xml">
+ <titleInfo>
+  <title>(HC) Barter v. Brown, et al.</title>
+  <subTitle>ORDER of INTRADISTRICT TRANSFER from Sacramento (2:13-cv-2636 EFB HC) to Fresno (1:14-cv-0007 MJS HC) signed by Magistrate Judge Edmund F. Brennan on 1/2/2014. (Yin, K)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00007/pdf/USCOURTS-caed-1_14-cv-00007-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18834e303</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00007/USCOURTS-caed-1_14-cv-00007-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00007_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00007/USCOURTS-caed-1_14-cv-00007-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00007/pdf/USCOURTS-caed-1_14-cv-00007-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00007; (HC) Barter v. Brown, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00007-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER of INTRADISTRICT TRANSFER from Sacramento (2:13-cv-2636 EFB HC) to Fresno (1:14-cv-0007 MJS HC) signed by Magistrate Judge Edmund F. Brennan on 1/2/2014. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00007-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00007/USCOURTS-caed-1_14-cv-00007-1/mods.xml">
+ <titleInfo>
+  <title>(HC) Barter v. Brown, et al.</title>
+  <subTitle>ORDER to SHOW CAUSE Why Petition Should Not be Dismissed for Lack of Jurisdiction, signed by Magistrate Judge Michael J. Seng on 2/7/14. 30-Day Deadline. (Verduzco, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00007/pdf/USCOURTS-caed-1_14-cv-00007-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18834e305</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00007/USCOURTS-caed-1_14-cv-00007-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00007_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00007/USCOURTS-caed-1_14-cv-00007-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00007/pdf/USCOURTS-caed-1_14-cv-00007-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00007; (HC) Barter v. Brown, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00007-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-02-10</dateIssued>
+  <docketText>ORDER to SHOW CAUSE Why Petition Should Not be Dismissed for Lack of Jurisdiction, signed by Magistrate Judge Michael J. Seng on 2/7/14. 30-Day Deadline. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00007-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00007/USCOURTS-caed-1_14-cv-00007-2/mods.xml">
+ <titleInfo>
+  <title>(HC) Barter v. Brown, et al.</title>
+  <subTitle>ORDER CONSTRUING 13 Motion for Reconsideration as a Petition for Writ of Habeas Corpus; ORDER DIRECTING Clerk of Court to Open New Case File for Petition for Writ of Habeas Corpus; ORDER TRANSFERRING CASE to the Central District of California signed by Magistrate Judge Michael J. Seng on 4/1/2014. (Sant Agata, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00007/pdf/USCOURTS-caed-1_14-cv-00007-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18834e304</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00007/USCOURTS-caed-1_14-cv-00007-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00007_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00007/USCOURTS-caed-1_14-cv-00007-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00007/pdf/USCOURTS-caed-1_14-cv-00007-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00007; (HC) Barter v. Brown, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00007-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-04-01</dateIssued>
+  <docketText>ORDER CONSTRUING 13 Motion for Reconsideration as a Petition for Writ of Habeas Corpus; ORDER DIRECTING Clerk of Court to Open New Case File for Petition for Writ of Habeas Corpus; ORDER TRANSFERRING CASE to the Central District of California signed by Magistrate Judge Michael J. Seng on 4/1/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

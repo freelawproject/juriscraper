@@ -1,0 +1,632 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817af306">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157</identifier>
+<identifier type="local">P0b002ee1817af306</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cv-00157</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00157</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00157</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Dawn" fullName="Dawn Renee Bohuslavsky" lastName="Bohuslavsky" middleName="Renee" role="Plaintiff"></party>
+ <party firstName="Judith" fullName="Judith Botts" lastName="Botts" role="Plaintiff"></party>
+ <party firstName="Marvin" fullName="Marvin Gerdes" lastName="Gerdes" role="Plaintiff"></party>
+ <party firstName="Ruth" fullName="Ruth A. Gerdes" lastName="Gerdes" middleName="A." role="Plaintiff"></party>
+ <party firstName="Kimberly" fullName="Kimberly Anne Gerdes" lastName="Gerdes" middleName="Anne" role="Plaintiff"></party>
+ <party firstName="Dave" fullName="Dave Heineman" lastName="Heineman" role="Defendant"></party>
+ <party firstName="Julie" fullName="Julie Helmly" lastName="Helmly" role="Plaintiff"></party>
+ <party firstName="Barbara" fullName="Barbara Ann Hyde" lastName="Hyde" middleName="Ann" role="Plaintiff"></party>
+ <party firstName="Denise" fullName="Denise Lynette Hyde" lastName="Hyde" middleName="Lynette" role="Plaintiff"></party>
+ <party firstName="Clare" fullName="Clare E. Mahon" lastName="Mahon" middleName="E." role="Defendant"></party>
+ <party firstName="Joan" fullName="Joan O&apos;Meara" lastName="O&apos;Meara" role="Plaintiff"></party>
+ <party firstName="Cynthia" fullName="Cynthia Susan O&apos;Meara" lastName="O&apos;Meara" middleName="Susan" role="Plaintiff"></party>
+ <party firstName="Joan" fullName="Joan Schaefer" lastName="Schaefer" role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen J. Seiler" lastName="Seiler" middleName="J." role="Plaintiff"></party>
+ <party firstName="Ron" fullName="Ron Stegemann" lastName="Stegemann" role="Defendant"></party>
+ <party firstName="Ann Marie" fullName="Ann Marie Thurmond" lastName="Thurmond" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Nelson Thurmond III." generation="III." lastName="Thurmond" middleName="Nelson" role="Plaintiff"></party>
+ <party firstName="John" fullName="John C. Wyvill" lastName="Wyvill" middleName="C." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>O&apos;Meara et al v. Heineman et al</title>
+ <partNumber>8:09-cv-00157</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cv-00157;09-157</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dawn Renee Bohuslavsky</displayForm>
+ <namePart type="family">Bohuslavsky</namePart>
+ <namePart type="given">Dawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Judith Botts</displayForm>
+ <namePart type="family">Botts</namePart>
+ <namePart type="given">Judith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Marvin Gerdes</displayForm>
+ <namePart type="family">Gerdes</namePart>
+ <namePart type="given">Marvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ruth A. Gerdes</displayForm>
+ <namePart type="family">Gerdes</namePart>
+ <namePart type="given">Ruth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kimberly Anne Gerdes</displayForm>
+ <namePart type="family">Gerdes</namePart>
+ <namePart type="given">Kimberly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dave Heineman</displayForm>
+ <namePart type="family">Heineman</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Julie Helmly</displayForm>
+ <namePart type="family">Helmly</namePart>
+ <namePart type="given">Julie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Barbara Ann Hyde</displayForm>
+ <namePart type="family">Hyde</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Denise Lynette Hyde</displayForm>
+ <namePart type="family">Hyde</namePart>
+ <namePart type="given">Denise</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Clare E. Mahon</displayForm>
+ <namePart type="family">Mahon</namePart>
+ <namePart type="given">Clare</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joan O&apos;Meara</displayForm>
+ <namePart type="family">O&apos;Meara</namePart>
+ <namePart type="given">Joan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cynthia Susan O&apos;Meara</displayForm>
+ <namePart type="family">O&apos;Meara</namePart>
+ <namePart type="given">Cynthia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joan Schaefer</displayForm>
+ <namePart type="family">Schaefer</namePart>
+ <namePart type="given">Joan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kathleen J. Seiler</displayForm>
+ <namePart type="family">Seiler</namePart>
+ <namePart type="given">Kathleen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ron Stegemann</displayForm>
+ <namePart type="family">Stegemann</namePart>
+ <namePart type="given">Ron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ann Marie Thurmond</displayForm>
+ <namePart type="family">Thurmond</namePart>
+ <namePart type="given">Ann Marie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Nelson Thurmond III.</displayForm>
+ <namePart type="family">Thurmond</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress">III.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John C. Wyvill</displayForm>
+ <namePart type="family">Wyvill</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00157</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00157</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Dawn" fullName="Dawn Renee Bohuslavsky" lastName="Bohuslavsky" middleName="Renee" role="Plaintiff"></party>
+ <party firstName="Judith" fullName="Judith Botts" lastName="Botts" role="Plaintiff"></party>
+ <party firstName="Marvin" fullName="Marvin Gerdes" lastName="Gerdes" role="Plaintiff"></party>
+ <party firstName="Ruth" fullName="Ruth A. Gerdes" lastName="Gerdes" middleName="A." role="Plaintiff"></party>
+ <party firstName="Kimberly" fullName="Kimberly Anne Gerdes" lastName="Gerdes" middleName="Anne" role="Plaintiff"></party>
+ <party firstName="Dave" fullName="Dave Heineman" lastName="Heineman" role="Defendant"></party>
+ <party firstName="Julie" fullName="Julie Helmly" lastName="Helmly" role="Plaintiff"></party>
+ <party firstName="Barbara" fullName="Barbara Ann Hyde" lastName="Hyde" middleName="Ann" role="Plaintiff"></party>
+ <party firstName="Denise" fullName="Denise Lynette Hyde" lastName="Hyde" middleName="Lynette" role="Plaintiff"></party>
+ <party firstName="Clare" fullName="Clare E. Mahon" lastName="Mahon" middleName="E." role="Defendant"></party>
+ <party firstName="Joan" fullName="Joan O&apos;Meara" lastName="O&apos;Meara" role="Plaintiff"></party>
+ <party firstName="Cynthia" fullName="Cynthia Susan O&apos;Meara" lastName="O&apos;Meara" middleName="Susan" role="Plaintiff"></party>
+ <party firstName="Joan" fullName="Joan Schaefer" lastName="Schaefer" role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen J. Seiler" lastName="Seiler" middleName="J." role="Plaintiff"></party>
+ <party firstName="Ron" fullName="Ron Stegemann" lastName="Stegemann" role="Defendant"></party>
+ <party firstName="Ann Marie" fullName="Ann Marie Thurmond" lastName="Thurmond" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Nelson Thurmond III." generation="III." lastName="Thurmond" middleName="Nelson" role="Plaintiff"></party>
+ <party firstName="John" fullName="John C. Wyvill" lastName="Wyvill" middleName="C." role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-0/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>MEMORANDUM AND ORDER - 1) The plaintiffs&apos; motion to amend, (filing no. 17), is granted. 2) The plaintiffs&apos; amended complaint, a copy of which is attached to their motion, shall be filed on or before July 27, 2009. 3) The defendants&apos; motion to dismiss, (filing no. 15), is denied as moot. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892bb3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-07-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - 1) The plaintiffs&apos; motion to amend, (filing no. 17), is granted. 2) The plaintiffs&apos; amended complaint, a copy of which is attached to their motion, shall be filed on or before July 27, 2009. 3) The defendants&apos; motion to dismiss, (filing no. 15), is denied as moot. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-1/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>MEMORADUM AND ORDER - The defendants&apos; motion to stay discovery, (filing no. 22), is granted. The deadline for filing the parties Rule 26(f) Report of Parties&apos; Planning Conference is continued, and the report shall be filed within fourteen calendar days after the court&apos;s ruling on the defendants&apos; motion to dismiss. Ordered by Judge Richard G. Kopf. (GJG)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892b95</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-07-29</dateIssued>
+  <docketText>MEMORADUM AND ORDER - The defendants&apos; motion to stay discovery, (filing no. 22), is granted. The deadline for filing the parties Rule 26(f) Report of Parties&apos; Planning Conference is continued, and the report shall be filed within fourteen calendar days after the court&apos;s ruling on the defendants&apos; motion to dismiss. Ordered by Judge Richard G. Kopf. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-2/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding Defendants&apos; MOTION to Dismiss Plaintiffs&apos; First Amended Complaint20. Defendants are given until November 2, 2009, to submit an additional brief throughly discussing the issues underlying their motion to dismiss particularly, the issues of qualified immunity and subject matter jurisdiction. Plaintiffs are given until December 2, 2009, to submit an additional brief responding to the issues and arguments contained in Defendants&apos; new brief. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892b94</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-2</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-10-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding Defendants&apos; MOTION to Dismiss Plaintiffs&apos; First Amended Complaint20. Defendants are given until November 2, 2009, to submit an additional brief throughly discussing the issues underlying their motion to dismiss particularly, the issues of qualified immunity and subject matter jurisdiction. Plaintiffs are given until December 2, 2009, to submit an additional brief responding to the issues and arguments contained in Defendants&apos; new brief. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-3/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting motions for consolidation of cases. Case number 8:09CV157, filing nos. 36, 37, and 38; case number 4:10CV3020, filing nos. 6, 7, and 8; and case number 4:10CV3021, filing nos. 6, 7, and 8, are granted. Case number 8:09CV157, OMeara, et. al. v. Heineman, et. al. is hereby designated as the &quot;Lead Case.&quot; The remaining cases, (4:10CV3020 and 4:10CV3021) are hereby designated as the &quot;Member Cases.&quot; On or before March 10, 2010, the defendants shall answer or otherwise respond to the plaintiffs&apos; complaints. The Rule 26(f) Report of Parties&apos; Planning Conference shall be filed on or before April 2, 2010. Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZOrdered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892bb9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-3</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-03-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting motions for consolidation of cases. Case number 8:09CV157, filing nos. 36, 37, and 38; case number 4:10CV3020, filing nos. 6, 7, and 8; and case number 4:10CV3021, filing nos. 6, 7, and 8, are granted. Case number 8:09CV157, OMeara, et. al. v. Heineman, et. al. is hereby designated as the &quot;Lead Case.&quot; The remaining cases, (4:10CV3020 and 4:10CV3021) are hereby designated as the &quot;Member Cases.&quot; On or before March 10, 2010, the defendants shall answer or otherwise respond to the plaintiffs&apos; complaints. The Rule 26(f) Report of Parties&apos; Planning Conference shall be filed on or before April 2, 2010. Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZOrdered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-4/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>ORDER - The motion to dismiss (filing 41 in Case No. 8:09CV157, filing 11 in Case No. 8:10CV3020 and filing 11 in Case No. 8:10CV3021) is granted.The claims against Defendant Clare E. Mahon brought by Plaintiffs O&apos;Meara, Gerdes, Thurmond, Hyde, Seiler and Botts are hereby dismissed without prejudice or limitations to these Plaintiffs&apos; claims against the remaining Defendants and are dismissed without prejudice to re-filing against Mahon. Plaintiffs O&apos;Meara, Gerdes, Thurmond, Hyde, Seiler and Botts&apos; claims against the other Defendants remain pending. The Clerk of the United States District Court for the District of Nebraska shall adjust the court&apos;s computerized record-keeping system to reflect the dismissal of Clare E. Mahon. Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZOrdered by Judge Richard G. Kopf. (TCL )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892bb7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-4</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-03-30</dateIssued>
+  <docketText>ORDER - The motion to dismiss (filing 41 in Case No. 8:09CV157, filing 11 in Case No. 8:10CV3020 and filing 11 in Case No. 8:10CV3021) is granted.The claims against Defendant Clare E. Mahon brought by Plaintiffs O&apos;Meara, Gerdes, Thurmond, Hyde, Seiler and Botts are hereby dismissed without prejudice or limitations to these Plaintiffs&apos; claims against the remaining Defendants and are dismissed without prejudice to re-filing against Mahon. Plaintiffs O&apos;Meara, Gerdes, Thurmond, Hyde, Seiler and Botts&apos; claims against the other Defendants remain pending. The Clerk of the United States District Court for the District of Nebraska shall adjust the court&apos;s computerized record-keeping system to reflect the dismissal of Clare E. Mahon. Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZOrdered by Judge Richard G. Kopf. (TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-5/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>FINAL PROGRESSION ORDER - No telephonic planning conference will be held to discuss the progression of this case to trial. On the contrary, a final progression order is now issued as set forth in the following paragraph: The Motion to Amend 45 in case 8:09-cv-00157 is granted. Jury Trial set for 3/7/2011 before Judge Richard G. Kopf. Pretrial Conference set for 2/17/2011 at 1:00 PM before Magistrate Judge Cheryl R. Zwart. Depositions due 11/1/2010. Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZ. Ordered by Magistrate Judge Cheryl R. Zwart. (JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892bb5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-5</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-04-19</dateIssued>
+  <docketText>FINAL PROGRESSION ORDER - No telephonic planning conference will be held to discuss the progression of this case to trial. On the contrary, a final progression order is now issued as set forth in the following paragraph: The Motion to Amend 45 in case 8:09-cv-00157 is granted. Jury Trial set for 3/7/2011 before Judge Richard G. Kopf. Pretrial Conference set for 2/17/2011 at 1:00 PM before Magistrate Judge Cheryl R. Zwart. Depositions due 11/1/2010. Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZ. Ordered by Magistrate Judge Cheryl R. Zwart. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-6/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>ORDER granting (48) Motion to Extend Deadline in case 8:09-cv-00157-RGK-CRZ; granting (19) Motion to Extend in case 4:10-cv-03020-RGK-CRZ; granting (18) Motion to Extend in case 4:10-cv-03021-RGK-CRZ. The defendants&apos; deadline for filing a motion for summary judgment on the basis of qualified immunity is continued to July 1, 2010. Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZOrdered by Magistrate Judge Cheryl R. Zwart. (MKR, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892bb4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-6</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-05-17</dateIssued>
+  <docketText>ORDER granting (48) Motion to Extend Deadline in case 8:09-cv-00157-RGK-CRZ; granting (19) Motion to Extend in case 4:10-cv-03020-RGK-CRZ; granting (18) Motion to Extend in case 4:10-cv-03021-RGK-CRZ. The defendants&apos; deadline for filing a motion for summary judgment on the basis of qualified immunity is continued to July 1, 2010. Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZOrdered by Magistrate Judge Cheryl R. Zwart. (MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-7/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 50) Motion to Stay in case 8:09-cv-00157-RGK-CRZ; granting 21 Motion to Stay in case 4:10-cv-03020-RGK-CRZ; granting 20 Motion to Stay in case 4:10-cv-03021-RGK-CRZ without prejudice to the plaintiffs filing a properly supported motion to conduct limited discovery to address the issue of qualified immunity. If, after a ruling on the anticipated summary judgment, this case is not dismissed in its entirety, the parties shall contact the undersigned&apos;s chambers, within 10 days of the summary judgment ruling to discuss necessary amendments, if any, to the Final Progression Order. If the defendants do not file the anticipated motion for summary judgment, discovery will resume pursuant to the Final Progression Order. The clerk shall file this memorandum and order in the lead case, 8:09-cv-00157, and spread the text and order to the member cases. Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZOrdered by Magistrate Judge Cheryl R. Zwart. (GJG )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892bb8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-7</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-06-28</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 50) Motion to Stay in case 8:09-cv-00157-RGK-CRZ; granting 21 Motion to Stay in case 4:10-cv-03020-RGK-CRZ; granting 20 Motion to Stay in case 4:10-cv-03021-RGK-CRZ without prejudice to the plaintiffs filing a properly supported motion to conduct limited discovery to address the issue of qualified immunity. If, after a ruling on the anticipated summary judgment, this case is not dismissed in its entirety, the parties shall contact the undersigned&apos;s chambers, within 10 days of the summary judgment ruling to discuss necessary amendments, if any, to the Final Progression Order. If the defendants do not file the anticipated motion for summary judgment, discovery will resume pursuant to the Final Progression Order. The clerk shall file this memorandum and order in the lead case, 8:09-cv-00157, and spread the text and order to the member cases. Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZOrdered by Magistrate Judge Cheryl R. Zwart. (GJG )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-8/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>ORDER granting 60 Defendant&apos;s Motion to Seal. Defendants&apos; brief in Support of Motion for Summary Judgment (filing 57) and Defendants&apos; Evidence Index in Support of Motion for Summary Judgment and the attached evidence (filing 59) are hereby placed under seal and access is restricted to the court and the parties to this action, including counsel of record. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-07-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892bb6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-8</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2010-07-13</dateIssued>
+  <docketText>ORDER granting 60 Defendant&apos;s Motion to Seal. Defendants&apos; brief in Support of Motion for Summary Judgment (filing 57) and Defendants&apos; Evidence Index in Support of Motion for Summary Judgment and the attached evidence (filing 59) are hereby placed under seal and access is restricted to the court and the parties to this action, including counsel of record. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-9/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>ORDER - Plaintiffs&apos; motions to extend the deadline to respond to Defendants&apos; motions for summary judgment (Case No. 8:09CV157, filing 62; Case No. 4:10CV3020, filing 34; Case No. 4:10CV3021, filing 33) are granted, to the extent set forth below; Plaintiffs&apos; response deadline for the motions for summary judgment are stayed until a date to be determined after the court has considered and ruled upon Plaintiffs&apos; motions to conduct limited discovery (Case No. 8:09CV157, filing 63; Case No. 4:10CV3020, filing 35; Case No. 4:10CV3021, filing 34). The court will advise the parties of the new response deadline at the time that it rules upon Plaintiffs&apos; motions to conduct limited discovery. Ordered by Judge Richard G. Kopf. (AOA) Modified on 7/28/2010 to correct the filing number links of member cases (AOA).</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-07-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892bba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-9</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2010-07-27</dateIssued>
+  <docketText>ORDER - Plaintiffs&apos; motions to extend the deadline to respond to Defendants&apos; motions for summary judgment (Case No. 8:09CV157, filing 62; Case No. 4:10CV3020, filing 34; Case No. 4:10CV3021, filing 33) are granted, to the extent set forth below; Plaintiffs&apos; response deadline for the motions for summary judgment are stayed until a date to be determined after the court has considered and ruled upon Plaintiffs&apos; motions to conduct limited discovery (Case No. 8:09CV157, filing 63; Case No. 4:10CV3020, filing 35; Case No. 4:10CV3021, filing 34). The court will advise the parties of the new response deadline at the time that it rules upon Plaintiffs&apos; motions to conduct limited discovery. Ordered by Judge Richard G. Kopf. (AOA) Modified on 7/28/2010 to correct the filing number links of member cases (AOA).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-10/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>the progression schedule for this case to trial. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ, )ORDER granting (67) Motion to Extend in case 8:09-cv-00157-RGK-CRZ Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZ. The Plaintiffs deadline for disclosure of experts is extended to 60 days after this Courts ruling on the Defendants Motion for Summary Judgment on the issue of qualified immunity. Within ten days following the courts decision on qualified immunity, the parties shall contact the chambers of the undersigned to schedule a conference call to discuss</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892bbc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-10</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2010-09-11</dateIssued>
+  <docketText>the progression schedule for this case to trial. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ, )ORDER granting (67) Motion to Extend in case 8:09-cv-00157-RGK-CRZ Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZ. The Plaintiffs deadline for disclosure of experts is extended to 60 days after this Courts ruling on the Defendants Motion for Summary Judgment on the issue of qualified immunity. Within ten days following the courts decision on qualified immunity, the parties shall contact the chambers of the undersigned to schedule a conference call to discuss</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-11/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>d by Judge Richard G. Kopf. (KBJ)MEMORANDUM AND ORDER - The Objections to Magistrate Judge&apos;s Order 70 in case 8:09cv157, 42 in case 4:10cv3020, and 41 in case 4:10cv3021 is denied. Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZ. Ordere</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892b96</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-11</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-09-22</dateIssued>
+  <docketText>d by Judge Richard G. Kopf. (KBJ)MEMORANDUM AND ORDER - The Objections to Magistrate Judge&apos;s Order 70 in case 8:09cv157, 42 in case 4:10cv3020, and 41 in case 4:10cv3021 is denied. Member Cases: 8:09-cv-00157-RGK-CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZ. Ordere</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00157-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-12/mods.xml">
+ <titleInfo>
+  <title>O&apos;Meara et al v. Heineman et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Defendants&apos; motion for summary judgment (Filing 55, Case No. 8:09CV157; Filing 26, Case No. 4:10CV3020; Filing 25, Case No.4:10CV3021) is granted; Defendants motion to strike (filing 77, Case No. 8:09CV157; filing 49, Case No. 4:10CV3020; filing 48, Case No. 4:10CV3021) is denied as moot; Judgment in each of these consolidated actions will be entered by separate document. Member Cases: 8:09-cv-00157-RGK -CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZ. Ordered by Judge Richard G. Kopf. (KBJ)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00157-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181892bbb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-12</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00157_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00157/USCOURTS-ned-8_09-cv-00157-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00157/pdf/USCOURTS-ned-8_09-cv-00157-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00157; O&apos;Meara et al v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00157-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2011-01-10</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Defendants&apos; motion for summary judgment (Filing 55, Case No. 8:09CV157; Filing 26, Case No. 4:10CV3020; Filing 25, Case No.4:10CV3021) is granted; Defendants motion to strike (filing 77, Case No. 8:09CV157; filing 49, Case No. 4:10CV3020; filing 48, Case No. 4:10CV3021) is denied as moot; Judgment in each of these consolidated actions will be entered by separate document. Member Cases: 8:09-cv-00157-RGK -CRZ, 4:10-cv-03020-RGK-CRZ, 4:10-cv-03021-RGK-CRZ. Ordered by Judge Richard G. Kopf. (KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

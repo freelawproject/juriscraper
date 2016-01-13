@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a8301">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00318</identifier>
+<identifier type="local">P0b002ee1817a8301</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cv-00318</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cv-00318</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cv-00318</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Hall of Justice" lastName="Hall of Justice" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony Charles McDade" lastName="McDade" middleName="Charles" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>McDade v. Hall of Justice</title>
+ <partNumber>8:07-cv-00318</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00318/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:07-cv-00318;07-318</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Hall of Justice</displayForm>
+ <namePart type="family">Hall of Justice</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Charles McDade</displayForm>
+ <namePart type="family">McDade</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cv-00318</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cv-00318</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Hall of Justice" lastName="Hall of Justice" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony Charles McDade" lastName="McDade" middleName="Charles" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00318-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00318/USCOURTS-ned-8_07-cv-00318-0/mods.xml">
+ <titleInfo>
+  <title>McDade v. Hall of Justice</title>
+  <subTitle>MEMORANDUM AND ORDER that the plaintiff shall have 30 days from the date of this order in which to file a motion for voluntary dismissal in one or more of the following cases pending in this court: 8:07CV215, 8:07CV216, 8:07CV217, 8:07CV317 and 8:07CV318. In the absence of a motion for voluntary dismissal, the court will rule on Plaintiff&apos; s motions to proceed IFP and will conduct an initial review in each case.Ordered by Judge Joseph F. Bataillon. (ADB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00318-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818613ec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00318/USCOURTS-ned-8_07-cv-00318-0</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00318_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00318/USCOURTS-ned-8_07-cv-00318-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00318/pdf/USCOURTS-ned-8_07-cv-00318-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00318; McDade v. Hall of Justice; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00318-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-09-14</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the plaintiff shall have 30 days from the date of this order in which to file a motion for voluntary dismissal in one or more of the following cases pending in this court: 8:07CV215, 8:07CV216, 8:07CV217, 8:07CV317 and 8:07CV318. In the absence of a motion for voluntary dismissal, the court will rule on Plaintiff&apos; s motions to proceed IFP and will conduct an initial review in each case.Ordered by Judge Joseph F. Bataillon. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00318-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00318/USCOURTS-ned-8_07-cv-00318-1/mods.xml">
+ <titleInfo>
+  <title>McDade v. Hall of Justice</title>
+  <subTitle>MEMORANDUM AND ORDER, IT IS THEREFORE ORDERED that: 1. Plaintiff shall have until January 14, 2008 in which to either show cause why this case should not be dismissed pursuant to 28 U.S.C. §1915(g) or pay the full $350.00 filing fee. In the absence of either action by Plaintiff, this matter will bedismissed without further notice. 2. The Clerk of the court is directed to set a pro se case management deadline in this matter with the following text: January 14, 2008: Deadline for Plaintiff to show cause or pay full filing fee.3. The Clerk of the court is directed to terminate the previous pro se casemanagement deadline in this matter.***Pro Se Case Management Deadlines: Pro Se Case Management Deadline set for 1/14/2008: Deadline for Plaintiff to show cause or pay full filing fee. The previous pro se case management deadling is terminated.Ordered by Chief Judge Joseph F. Bataillon. (Copies mailed to pro se party)(PCV, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00318-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818613ea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00318/USCOURTS-ned-8_07-cv-00318-1</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00318_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00318/USCOURTS-ned-8_07-cv-00318-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00318/pdf/USCOURTS-ned-8_07-cv-00318-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00318; McDade v. Hall of Justice; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00318-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-12-13</dateIssued>
+  <docketText>MEMORANDUM AND ORDER, IT IS THEREFORE ORDERED that: 1. Plaintiff shall have until January 14, 2008 in which to either show cause why this case should not be dismissed pursuant to 28 U.S.C. §1915(g) or pay the full $350.00 filing fee. In the absence of either action by Plaintiff, this matter will bedismissed without further notice. 2. The Clerk of the court is directed to set a pro se case management deadline in this matter with the following text: January 14, 2008: Deadline for Plaintiff to show cause or pay full filing fee.3. The Clerk of the court is directed to terminate the previous pro se casemanagement deadline in this matter.***Pro Se Case Management Deadlines: Pro Se Case Management Deadline set for 1/14/2008: Deadline for Plaintiff to show cause or pay full filing fee. The previous pro se case management deadling is terminated.Ordered by Chief Judge Joseph F. Bataillon. (Copies mailed to pro se party)(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00318-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00318/USCOURTS-ned-8_07-cv-00318-2/mods.xml">
+ <titleInfo>
+  <title>McDade v. Hall of Justice</title>
+  <subTitle>MEMORANDUM AND ORDER - This matter is before the court on its own motion. IT IS THEREFORE ORDERED that: 1. Plaintiffs claims are dismissed without prejudice. 2. A separate judgment will be entered in accordance with thismemorandum and order.Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(PCV, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00318-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818613eb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00318/USCOURTS-ned-8_07-cv-00318-2</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00318_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00318/USCOURTS-ned-8_07-cv-00318-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00318/pdf/USCOURTS-ned-8_07-cv-00318-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00318; McDade v. Hall of Justice; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00318-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-01-24</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - This matter is before the court on its own motion. IT IS THEREFORE ORDERED that: 1. Plaintiffs claims are dismissed without prejudice. 2. A separate judgment will be entered in accordance with thismemorandum and order.Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(PCV, )</docketText>
+</extension>
+</relatedItem>
+</mods>

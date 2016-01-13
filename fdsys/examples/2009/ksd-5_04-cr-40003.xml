@@ -1,0 +1,202 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee187668fd6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40003</identifier>
+<identifier type="local">P0b002ee187668fd6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_04-cr-40003</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_04-cr-40003</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:04-cr-40003</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Terry" fullName="Terry L. Corber" lastName="Corber" middleName="L." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Corber</title>
+ <partNumber>5:04-cr-40003</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40003/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:04-cr-40003;04-40003</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Terry L. Corber</displayForm>
+ <namePart type="family">Corber</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_04-cr-40003</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:04-cr-40003</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Terry" fullName="Terry L. Corber" lastName="Corber" middleName="L." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cr-40003-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40003/USCOURTS-ksd-5_04-cr-40003-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Corber</title>
+  <subTitle>MEMORANDUM AND ORDER denying 50 Motion for New Trial as to defendant Terry L Corber. Signed by U.S. District Senior Judge Sam A. Crow on 1/27/05. (bmw )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-01-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40003/pdf/USCOURTS-ksd-5_04-cr-40003-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18766f675</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40003/USCOURTS-ksd-5_04-cr-40003-0</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cr-40003_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40003/USCOURTS-ksd-5_04-cr-40003-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40003/pdf/USCOURTS-ksd-5_04-cr-40003-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cr-40003; USA v. Corber; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cr-40003-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-01-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 50 Motion for New Trial as to defendant Terry L Corber. Signed by U.S. District Senior Judge Sam A. Crow on 1/27/05. (bmw )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cr-40003-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40003/USCOURTS-ksd-5_04-cr-40003-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Corber</title>
+  <subTitle>MEMORANDUM AND ORDER denying 85 Motion to Vacate, Set Aside, or Correct Sentence pursuant to 28 U.S.C. Sec. 2255 as to movant/defendant Terry L Corber. Signed by U.S. District Senior Judge Sam A. Crow on 3/12/07. Copy of this Memorandum and Order mailed to Terry L. Corber. (bmw)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40003/pdf/USCOURTS-ksd-5_04-cr-40003-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18766f676</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40003/USCOURTS-ksd-5_04-cr-40003-1</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cr-40003_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40003/USCOURTS-ksd-5_04-cr-40003-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40003/pdf/USCOURTS-ksd-5_04-cr-40003-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cr-40003; USA v. Corber; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cr-40003-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-03-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 85 Motion to Vacate, Set Aside, or Correct Sentence pursuant to 28 U.S.C. Sec. 2255 as to movant/defendant Terry L Corber. Signed by U.S. District Senior Judge Sam A. Crow on 3/12/07. Copy of this Memorandum and Order mailed to Terry L. Corber. (bmw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cr-40003-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40003/USCOURTS-ksd-5_04-cr-40003-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Corber</title>
+  <subTitle>MEMORANDUM AND ORDER. The defendant Terry L. Corber&apos;s motions [Dks. 98 and 101]to reduce sentence re Crack Cocaine Offense - 18:3582(c)(2)are dismissed. See attached for more details. Signed by U.S. District Senior Judge Sam A. Crow on 1/5/09. (bmw)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40003/pdf/USCOURTS-ksd-5_04-cr-40003-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18766f677</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40003/USCOURTS-ksd-5_04-cr-40003-2</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cr-40003_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40003/USCOURTS-ksd-5_04-cr-40003-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40003/pdf/USCOURTS-ksd-5_04-cr-40003-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cr-40003; USA v. Corber; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cr-40003-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-01-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER. The defendant Terry L. Corber&apos;s motions [Dks. 98 and 101]to reduce sentence re Crack Cocaine Offense - 18:3582(c)(2)are dismissed. See attached for more details. Signed by U.S. District Senior Judge Sam A. Crow on 1/5/09. (bmw)</docketText>
+</extension>
+</relatedItem>
+</mods>

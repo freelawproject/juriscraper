@@ -1,0 +1,250 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813d0668">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_08-cv-04959</identifier>
+<identifier type="local">P0b002ee1813d0668</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_08-cv-04959</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_08-cv-04959</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:08-cv-04959</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>470</natureSuitCode>
+ <natureSuit>Civil (Rico)</natureSuit>
+ <party firstName="RAYNA" fullName="RAYNA COMER" lastName="COMER" role="Defendant"></party>
+ <party firstName="STEVEN" fullName="STEVEN COMER" lastName="COMER" role="Defendant"></party>
+ <party firstName="ALLAN" fullName="ALLAN FRIEDMAN" lastName="FRIEDMAN" role="Plaintiff"></party>
+ <party firstName="ROBERT" fullName="ROBERT FRIEDMAN" lastName="FRIEDMAN" role="Plaintiff"></party>
+ <party firstName="CHERIE" fullName="CHERIE A. FRIEDMAN" lastName="FRIEDMAN" middleName="A." role="Plaintiff"></party>
+ <party firstName="BARRY" fullName="BARRY GREEN" lastName="GREEN" role="Defendant"></party>
+ <party firstName="BARRY" fullName="BARRY GREEN" lastName="GREEN" role="Unrepresented Party"></party>
+ <party fullName="POWER TO THE GAMES, INC." lastName="POWER TO THE GAMES, INC." role="Defendant"></party>
+ <party firstName="CHRISTOPHER" fullName="CHRISTOPHER VECCHIONE" lastName="VECCHIONE" role="Defendant"></party>
+ <party firstName="ANTHONY" fullName="ANTHONY YULA" lastName="YULA" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>FRIEDMAN v. YULA et al</title>
+ <partNumber>2:08-cv-04959</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_08-cv-04959/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:08-cv-04959;08-4959</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>RAYNA COMER</displayForm>
+ <namePart type="family">COMER</namePart>
+ <namePart type="given">RAYNA</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>STEVEN COMER</displayForm>
+ <namePart type="family">COMER</namePart>
+ <namePart type="given">STEVEN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ALLAN FRIEDMAN</displayForm>
+ <namePart type="family">FRIEDMAN</namePart>
+ <namePart type="given">ALLAN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>ROBERT FRIEDMAN</displayForm>
+ <namePart type="family">FRIEDMAN</namePart>
+ <namePart type="given">ROBERT</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CHERIE A. FRIEDMAN</displayForm>
+ <namePart type="family">FRIEDMAN</namePart>
+ <namePart type="given">CHERIE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>BARRY GREEN</displayForm>
+ <namePart type="family">GREEN</namePart>
+ <namePart type="given">BARRY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>BARRY GREEN</displayForm>
+ <namePart type="family">GREEN</namePart>
+ <namePart type="given">BARRY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Unrepresented Party</description>
+</name>
+<name type="personal">
+ <displayForm>POWER TO THE GAMES, INC.</displayForm>
+ <namePart type="family">POWER TO THE GAMES, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CHRISTOPHER VECCHIONE</displayForm>
+ <namePart type="family">VECCHIONE</namePart>
+ <namePart type="given">CHRISTOPHER</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ANTHONY YULA</displayForm>
+ <namePart type="family">YULA</namePart>
+ <namePart type="given">ANTHONY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_08-cv-04959</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:08-cv-04959</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>470</natureSuitCode>
+ <natureSuit>Civil (Rico)</natureSuit>
+ <party firstName="RAYNA" fullName="RAYNA COMER" lastName="COMER" role="Defendant"></party>
+ <party firstName="STEVEN" fullName="STEVEN COMER" lastName="COMER" role="Defendant"></party>
+ <party firstName="ALLAN" fullName="ALLAN FRIEDMAN" lastName="FRIEDMAN" role="Plaintiff"></party>
+ <party firstName="ROBERT" fullName="ROBERT FRIEDMAN" lastName="FRIEDMAN" role="Plaintiff"></party>
+ <party firstName="CHERIE" fullName="CHERIE A. FRIEDMAN" lastName="FRIEDMAN" middleName="A." role="Plaintiff"></party>
+ <party firstName="BARRY" fullName="BARRY GREEN" lastName="GREEN" role="Defendant"></party>
+ <party firstName="BARRY" fullName="BARRY GREEN" lastName="GREEN" role="Unrepresented Party"></party>
+ <party fullName="POWER TO THE GAMES, INC." lastName="POWER TO THE GAMES, INC." role="Defendant"></party>
+ <party firstName="CHRISTOPHER" fullName="CHRISTOPHER VECCHIONE" lastName="VECCHIONE" role="Defendant"></party>
+ <party firstName="ANTHONY" fullName="ANTHONY YULA" lastName="YULA" role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_08-cv-04959-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-04959/USCOURTS-paed-2_08-cv-04959-0/mods.xml">
+ <titleInfo>
+  <title>FRIEDMAN v. YULA et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION THAT DEFENDANTS MOTION TO DISMISS FOR LACK OF STANDING WILL BE DENIED AND MOTION TO COMPEL ARBITRATION WILL BE GRANTED. AN APPROPRIATE ORDER FOLLOWS. SIGNED BY HONORABLE EDUARDO C. ROBRENO ON 1/15/2010. 1/19/2010 ENTERED AND COPIES E-MAILED.(sg, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_08-cv-04959-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814bf2f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-04959/USCOURTS-paed-2_08-cv-04959-0</identifier>
+ <identifier type="former granule identifier">paed-2_08-cv-04959_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-04959/USCOURTS-paed-2_08-cv-04959-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_08-cv-04959/pdf/USCOURTS-paed-2_08-cv-04959-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-04959; FRIEDMAN v. YULA et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_08-cv-04959-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-19</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION THAT DEFENDANTS MOTION TO DISMISS FOR LACK OF STANDING WILL BE DENIED AND MOTION TO COMPEL ARBITRATION WILL BE GRANTED. AN APPROPRIATE ORDER FOLLOWS. SIGNED BY HONORABLE EDUARDO C. ROBRENO ON 1/15/2010. 1/19/2010 ENTERED AND COPIES E-MAILED.(sg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_08-cv-04959-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-04959/USCOURTS-paed-2_08-cv-04959-1/mods.xml">
+ <titleInfo>
+  <title>FRIEDMAN v. YULA et al</title>
+  <subTitle>ORDER THAT DEFENDANTS MOTIONS TO DISMISS AND COMPEL ARBITRATION ARE GRANTED. DEFENDANTS MOTIONS TO STAY AND DISMISS FOR LACK OF STANDING ARE DENIED. ALL CLAIMS HAVING BEEN DISMISSED, THIS CASE SHALL BE MARKED CLOSED. SIGNED BY HONORABLE EDUARDO C. ROBRENO ON 1/15/2010. 1/19/2010 ENTERED AND COPIES E-MAILED.(sg, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_08-cv-04959-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814bf2f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-04959/USCOURTS-paed-2_08-cv-04959-1</identifier>
+ <identifier type="former granule identifier">paed-2_08-cv-04959_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-04959/USCOURTS-paed-2_08-cv-04959-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_08-cv-04959/pdf/USCOURTS-paed-2_08-cv-04959-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-04959; FRIEDMAN v. YULA et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_08-cv-04959-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-19</dateIssued>
+  <docketText>ORDER THAT DEFENDANTS MOTIONS TO DISMISS AND COMPEL ARBITRATION ARE GRANTED. DEFENDANTS MOTIONS TO STAY AND DISMISS FOR LACK OF STANDING ARE DENIED. ALL CLAIMS HAVING BEEN DISMISSED, THIS CASE SHALL BE MARKED CLOSED. SIGNED BY HONORABLE EDUARDO C. ROBRENO ON 1/15/2010. 1/19/2010 ENTERED AND COPIES E-MAILED.(sg, )</docketText>
+</extension>
+</relatedItem>
+</mods>

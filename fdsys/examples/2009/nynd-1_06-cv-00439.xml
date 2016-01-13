@@ -1,0 +1,195 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181127f0a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-00439</identifier>
+<identifier type="local">P0b002ee181127f0a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_06-cv-00439</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_06-cv-00439</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:06-cv-00439</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Robert" fullName="Robert Dennison" lastName="Dennison" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn S. Goord" lastName="Goord" middleName="S." role="Defendant"></party>
+ <party firstName="William" fullName="William Gorman" lastName="Gorman" role="Defendant"></party>
+ <party firstName="Leroy" fullName="Leroy Miner" lastName="Miner" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas O&apos;Connor" lastName="O&apos;Connor" role="Defendant"></party>
+ <party firstName="Janice" fullName="Janice Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Melvin" fullName="Melvin Williams" lastName="Williams" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Miner v. Goord et al</title>
+ <partNumber>1:06-cv-00439</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-00439/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:06-cv-00439;06-439</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Robert Dennison</displayForm>
+ <namePart type="family">Dennison</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Glenn S. Goord</displayForm>
+ <namePart type="family">Goord</namePart>
+ <namePart type="given">Glenn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Gorman</displayForm>
+ <namePart type="family">Gorman</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leroy Miner</displayForm>
+ <namePart type="family">Miner</namePart>
+ <namePart type="given">Leroy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas O&apos;Connor</displayForm>
+ <namePart type="family">O&apos;Connor</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Janice Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Janice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Melvin Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Melvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_06-cv-00439</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:06-cv-00439</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Robert" fullName="Robert Dennison" lastName="Dennison" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn S. Goord" lastName="Goord" middleName="S." role="Defendant"></party>
+ <party firstName="William" fullName="William Gorman" lastName="Gorman" role="Defendant"></party>
+ <party firstName="Leroy" fullName="Leroy Miner" lastName="Miner" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas O&apos;Connor" lastName="O&apos;Connor" role="Defendant"></party>
+ <party firstName="Janice" fullName="Janice Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Melvin" fullName="Melvin Williams" lastName="Williams" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_06-cv-00439-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00439/USCOURTS-nynd-1_06-cv-00439-0/mods.xml">
+ <titleInfo>
+  <title>Miner v. Goord et al</title>
+  <subTitle>MEMORANDUM-DECISION and ORDER, that Defendants&apos; 23 Motion for Summary Judgment is granted and the complaint is dismissed in its entirety. Signed by Judge Gary L. Sharpe on 1/21/2009. (jel, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_06-cv-00439-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813f71f3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00439/USCOURTS-nynd-1_06-cv-00439-0</identifier>
+ <identifier type="former granule identifier">nynd-1_06-cv-00439_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00439/USCOURTS-nynd-1_06-cv-00439-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-00439/pdf/USCOURTS-nynd-1_06-cv-00439-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00439; Miner v. Goord et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_06-cv-00439-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-21</dateIssued>
+  <docketText>MEMORANDUM-DECISION and ORDER, that Defendants&apos; 23 Motion for Summary Judgment is granted and the complaint is dismissed in its entirety. Signed by Judge Gary L. Sharpe on 1/21/2009. (jel, )</docketText>
+</extension>
+</relatedItem>
+</mods>

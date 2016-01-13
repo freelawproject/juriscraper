@@ -1,0 +1,542 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18e28d9b7">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-12-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-12-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738</identifier>
+<identifier type="local">P0b002ee18e28d9b7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-12-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-12-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-02738</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-02738</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-02738</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>625</natureSuitCode>
+ <natureSuit>Drug Related Seizure of Property</natureSuit>
+ <cause>21:881 Forfeiture Property - Real Estate</cause>
+ <party fullName="Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00" lastName="Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00" role="Defendant"></party>
+ <party fullName="Real property located at 1150 Chrome Mine Road, Hayfork, California, APN: 019-530-24-00" lastName="Real property located at 1150 Chrome Mine Road, Hayfork, California, APN: 019-530-24-00" role="Defendant"></party>
+ <party fullName="Real property located at 1180 Chrome Mine Road, Hayfork, California, APN: 019-530-27-00" lastName="Real property located at 1180 Chrome Mine Road, Hayfork, California, APN: 019-530-27-00" role="Defendant"></party>
+ <party fullName="Real property located at 1210 Chrome Mine Road, Hayfork, California, APN: 019-530-28-00" lastName="Real property located at 1210 Chrome Mine Road, Hayfork, California, APN: 019-530-28-00" role="Defendant"></party>
+ <party fullName="Real property located at 241 Three Hills Road, Hayfork, California, APN: 019-530-26-00" lastName="Real property located at 241 Three Hills Road, Hayfork, California, APN: 019-530-26-00" role="Defendant"></party>
+ <party firstName="Lapoe" fullName="Lapoe Smith" lastName="Smith" role="Claimant"></party>
+ <party firstName="Katherine" fullName="Katherine Renee Smith" lastName="Smith" middleName="Renee" role="Claimant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+ <partNumber>2:11-cv-02738</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-02738;11-2738</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00</displayForm>
+ <namePart type="family">Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Real property located at 1150 Chrome Mine Road, Hayfork, California, APN: 019-530-24-00</displayForm>
+ <namePart type="family">Real property located at 1150 Chrome Mine Road, Hayfork, California, APN: 019-530-24-00</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Real property located at 1180 Chrome Mine Road, Hayfork, California, APN: 019-530-27-00</displayForm>
+ <namePart type="family">Real property located at 1180 Chrome Mine Road, Hayfork, California, APN: 019-530-27-00</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Real property located at 1210 Chrome Mine Road, Hayfork, California, APN: 019-530-28-00</displayForm>
+ <namePart type="family">Real property located at 1210 Chrome Mine Road, Hayfork, California, APN: 019-530-28-00</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Real property located at 241 Three Hills Road, Hayfork, California, APN: 019-530-26-00</displayForm>
+ <namePart type="family">Real property located at 241 Three Hills Road, Hayfork, California, APN: 019-530-26-00</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lapoe Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Lapoe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Katherine Renee Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Katherine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-02738</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-02738</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>625</natureSuitCode>
+ <natureSuit>Drug Related Seizure of Property</natureSuit>
+ <cause>21:881 Forfeiture Property - Real Estate</cause>
+ <party fullName="Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00" lastName="Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00" role="Defendant"></party>
+ <party fullName="Real property located at 1150 Chrome Mine Road, Hayfork, California, APN: 019-530-24-00" lastName="Real property located at 1150 Chrome Mine Road, Hayfork, California, APN: 019-530-24-00" role="Defendant"></party>
+ <party fullName="Real property located at 1180 Chrome Mine Road, Hayfork, California, APN: 019-530-27-00" lastName="Real property located at 1180 Chrome Mine Road, Hayfork, California, APN: 019-530-27-00" role="Defendant"></party>
+ <party fullName="Real property located at 1210 Chrome Mine Road, Hayfork, California, APN: 019-530-28-00" lastName="Real property located at 1210 Chrome Mine Road, Hayfork, California, APN: 019-530-28-00" role="Defendant"></party>
+ <party fullName="Real property located at 241 Three Hills Road, Hayfork, California, APN: 019-530-26-00" lastName="Real property located at 241 Three Hills Road, Hayfork, California, APN: 019-530-26-00" role="Defendant"></party>
+ <party firstName="Lapoe" fullName="Lapoe Smith" lastName="Smith" role="Claimant"></party>
+ <party firstName="Katherine" fullName="Katherine Renee Smith" lastName="Smith" middleName="Renee" role="Claimant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-0" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-0/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>ORDER FOR PUBLICATION signed by Magistrate Judge Dale A. Drozd on 10/19/11. (Manzer, C)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a3cf</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-10-20</dateIssued>
+  <docketText>ORDER FOR PUBLICATION signed by Magistrate Judge Dale A. Drozd on 10/19/11. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-1" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-1/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 2/29/12 ORDERING that the defendant properties be sold pursuant to the terms set forth above in the Stipulation for Interlocutory Sale; the net proceeds from the sale of the defendant properties shall be deposited into the U.S. Department of theTreasury Suspense Account, substituted as the res herein, and held pending further order of the Court; and the forfeiture action pending shall proceed against the substitute res in lieu of the defendant properties sold pursuant to this Stipulation. (Meuleman, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a358</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-03-01</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 2/29/12 ORDERING that the defendant properties be sold pursuant to the terms set forth above in the Stipulation for Interlocutory Sale; the net proceeds from the sale of the defendant properties shall be deposited into the U.S. Department of theTreasury Suspense Account, substituted as the res herein, and held pending further order of the Court; and the forfeiture action pending shall proceed against the substitute res in lieu of the defendant properties sold pursuant to this Stipulation. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-2" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-2/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 8/27/12: Designation of Expert Witnesses continued to 12/20/2012. (Kaminski, H)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a35f</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-08-28</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 8/27/12: Designation of Expert Witnesses continued to 12/20/2012. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-3" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-3/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 12/11/12 ORDERING that the expert witness and rebuttal expert witness disclosure dates are continued to 2/12/13 and 2/28/13. (Manzer, C)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a35b</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-12-11</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 12/11/12 ORDERING that the expert witness and rebuttal expert witness disclosure dates are continued to 2/12/13 and 2/28/13. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-4" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-4/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 4/8/13 VACATING pretrial conference and trial dates and SETTING Status Conference for 10/28/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. A joint status report shall be filed 14 days prior to the hearing. (Meuleman, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a35a</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-4</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-04-09</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 4/8/13 VACATING pretrial conference and trial dates and SETTING Status Conference for 10/28/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. A joint status report shall be filed 14 days prior to the hearing. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-5" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-5/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr on 10/1/13 ORDERING this matter is stayed until 4/4/14. On or before that date, the parties will advise the Court whether a further stay is necessary. (Becknal, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a35d</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-5</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-10-02</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr on 10/1/13 ORDERING this matter is stayed until 4/4/14. On or before that date, the parties will advise the Court whether a further stay is necessary. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-6" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-6/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 4/3/14 ORDERING that this matter is STAYED until 10/6/2014. On or before that date, the parties will advise the Court whether a further stay is necessary.(Mena-Sanchez, L)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a359</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-6</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-04-03</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 4/3/14 ORDERING that this matter is STAYED until 10/6/2014. On or before that date, the parties will advise the Court whether a further stay is necessary.(Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-7" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-7/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>STIPULATION AND ORDER signed by Judge Garland E. Burrell, Jr. on 10/3/2014 STAYING this matter until 1/5/2015; ALLOWING any party to this stipulation to seek relief from this stay prior to 1/5/2015; ORDERING the parties to advise the court whether a further stay is necessary by 1/5/2015. (Michel, G)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a3ce</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-7</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-10-06</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Judge Garland E. Burrell, Jr. on 10/3/2014 STAYING this matter until 1/5/2015; ALLOWING any party to this stipulation to seek relief from this stay prior to 1/5/2015; ORDERING the parties to advise the court whether a further stay is necessary by 1/5/2015. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-8" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-8/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr., on 1/5/15 ORDERING that this matter is stayed until April 6, 2015. Any party to the this stipulation may seek relief from this stay prior to April 6, 2015. On or before that date, the parties will advise the Court whether a further stay is necessary. (Kastilahn, A)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a360</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-8</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr., on 1/5/15 ORDERING that this matter is stayed until April 6, 2015. Any party to the this stipulation may seek relief from this stay prior to April 6, 2015. On or before that date, the parties will advise the Court whether a further stay is necessary. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-9" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-9/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 4/3/15 ORDERING this matter is stayed until 7/6/15. For good cause shown, any party to the above stipulation may seek relief from this stay prior to 7/6/15. On or before that date, the parties will advise the Court whether a further stay is necessary. (Becknal, R)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a35c</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-9</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2015-04-06</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 4/3/15 ORDERING this matter is stayed until 7/6/15. For good cause shown, any party to the above stipulation may seek relief from this stay prior to 7/6/15. On or before that date, the parties will advise the Court whether a further stay is necessary. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-10" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-10/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr. on 07/06/15 ORDERING that this matter is STAYED until 10/16/15. For good cause shown, any party to the above stipulation may seek relief from this stay prior to 10/16/15. On or before that date, the parties will advise the Court whether a further stay is necessary. (Benson, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a35e</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-10</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2015-07-07</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr. on 07/06/15 ORDERING that this matter is STAYED until 10/16/15. For good cause shown, any party to the above stipulation may seek relief from this stay prior to 10/16/15. On or before that date, the parties will advise the Court whether a further stay is necessary. (Benson, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-11" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-11/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>STIPULATION and ORDER 44 for further stay signed by Judge Garland E. Burrell, Jr. on 10/1/2015. This matter is STAYED until 1/15/2016. For good cause shown, any party to Stipulation may seek relief from this stay prior to 1/15/2016. On or before that date, parties will advise Court whether further stay is necessary. (Marciel, M)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a3d1</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-11</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2015-10-01</dateIssued>
+  <docketText>STIPULATION and ORDER 44 for further stay signed by Judge Garland E. Burrell, Jr. on 10/1/2015. This matter is STAYED until 1/15/2016. For good cause shown, any party to Stipulation may seek relief from this stay prior to 1/15/2016. On or before that date, parties will advise Court whether further stay is necessary. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02738-12" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-12/mods.xml">
+ <titleInfo>
+  <title>(TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al</title>
+  <subTitle>FINAL JUDGMENT OF FORFEITURE signed by Judge Garland E. Burrell, Jr. on 12/16/2015. CASE CLOSED. (Zignago, K.)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e29a3d0</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-12</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02738_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02738/USCOURTS-caed-2_11-cv-02738-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02738/pdf/USCOURTS-caed-2_11-cv-02738-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02738; (TEMP) United States of America v. Real property located at 105 Three Hills Road, Hayfork, California, APN: 019-530-23-00 et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02738-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2015-12-17</dateIssued>
+  <docketText>FINAL JUDGMENT OF FORFEITURE signed by Judge Garland E. Burrell, Jr. on 12/16/2015. CASE CLOSED. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,177 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1811057a8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_10-cv-01806</identifier>
+<identifier type="local">P0b002ee1811057a8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-1_10-cv-01806</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_10-cv-01806</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:10-cv-01806</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party fullName="Bank of America" lastName="Bank of America" role="Interested Party"></party>
+ <party fullName="Housing Authority of Baltimore City" lastName="Housing Authority of Baltimore City" role="Defendant"></party>
+ <party firstName="Nora" fullName="Nora Smith" lastName="Smith" role="Plaintiff"></party>
+ <party fullName="U.S. Department of Housing and Urban Development" lastName="U.S. Department of Housing and Urban Development" role="Intervenor Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Intervenor Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Smith v. Housing Authority of Baltimore City</title>
+ <partNumber>1:10-cv-01806</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_10-cv-01806/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-01806;10-1806</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Baltimore</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bank of America</displayForm>
+ <namePart type="family">Bank of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Housing Authority of Baltimore City</displayForm>
+ <namePart type="family">Housing Authority of Baltimore City</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nora Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Nora</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Department of Housing and Urban Development</displayForm>
+ <namePart type="family">U.S. Department of Housing and Urban Development</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_10-cv-01806</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:10-cv-01806</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party fullName="Bank of America" lastName="Bank of America" role="Interested Party"></party>
+ <party fullName="Housing Authority of Baltimore City" lastName="Housing Authority of Baltimore City" role="Defendant"></party>
+ <party firstName="Nora" fullName="Nora Smith" lastName="Smith" role="Plaintiff"></party>
+ <party fullName="U.S. Department of Housing and Urban Development" lastName="U.S. Department of Housing and Urban Development" role="Intervenor Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Intervenor Defendant"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-1_10-cv-01806-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_10-cv-01806/USCOURTS-mdd-1_10-cv-01806-0/mods.xml">
+ <titleInfo>
+  <title>Smith v. Housing Authority of Baltimore City</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge William D Quarles, Jr on 1/21/11. (jnls, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-1_10-cv-01806-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18111b951</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_10-cv-01806/USCOURTS-mdd-1_10-cv-01806-0</identifier>
+ <identifier type="former granule identifier">mdd-1_10-cv-01806_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_10-cv-01806/USCOURTS-mdd-1_10-cv-01806-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_10-cv-01806/pdf/USCOURTS-mdd-1_10-cv-01806-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01806; Smith v. Housing Authority of Baltimore City; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-1_10-cv-01806-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-24</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge William D Quarles, Jr on 1/21/11. (jnls, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,236 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184fbd9ff">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-06-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-06-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01756</identifier>
+<identifier type="local">P0b002ee184fbd9ff</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-06-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-06-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-01756</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01756</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01756</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Robin" fullName="Robin C. Briggs" lastName="Briggs" middleName="C." role="Petitioner"></party>
+ <party firstName="Gary" fullName="Gary Swarthout" lastName="Swarthout" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>(HC) Briggs v. Swarthout</title>
+ <partNumber>2:12-cv-01756</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01756/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-01756;12-1756</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Robin C. Briggs</displayForm>
+ <namePart type="family">Briggs</namePart>
+ <namePart type="given">Robin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Swarthout</displayForm>
+ <namePart type="family">Swarthout</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01756</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01756</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Robin" fullName="Robin C. Briggs" lastName="Briggs" middleName="C." role="Petitioner"></party>
+ <party firstName="Gary" fullName="Gary Swarthout" lastName="Swarthout" role="Respondent"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01756-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01756/USCOURTS-caed-2_12-cv-01756-0/mods.xml">
+ <titleInfo>
+  <title>(HC) Briggs v. Swarthout</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 1/4/13 ORDERING that the Clerk shall serve petitioner with a copy of the motion to dismiss, filed September 25, 2012 (Doc. No. 8); Petitioner shall, within 30 days, comply with the courts August 2, 2012 order directing petitioner to file an affidavit in support of his application to proceed in forma pauperis, or to pay the filing fee of $5.00; Petitioner shall, within 30 days, respond to the motion to dismiss, by filing either an opposition to the motion or a statement that petitioner has no objection.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01756-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fd0429</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01756/USCOURTS-caed-2_12-cv-01756-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01756_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01756/USCOURTS-caed-2_12-cv-01756-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01756/pdf/USCOURTS-caed-2_12-cv-01756-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01756; (HC) Briggs v. Swarthout; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01756-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 1/4/13 ORDERING that the Clerk shall serve petitioner with a copy of the motion to dismiss, filed September 25, 2012 (Doc. No. 8); Petitioner shall, within 30 days, comply with the courts August 2, 2012 order directing petitioner to file an affidavit in support of his application to proceed in forma pauperis, or to pay the filing fee of $5.00; Petitioner shall, within 30 days, respond to the motion to dismiss, by filing either an opposition to the motion or a statement that petitioner has no objection.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01756-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01756/USCOURTS-caed-2_12-cv-01756-1/mods.xml">
+ <titleInfo>
+  <title>(HC) Briggs v. Swarthout</title>
+  <subTitle>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 2/14/2013 ORDERING that a district judge be assigned to this matter; and RECOMMENDING that this action be dismissed without prejudice for failure to pay the filing fee. Assigned and Referred to Judge William B. Shubb; Objections due within 28 days. (Yin, K)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01756-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fd0428</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01756/USCOURTS-caed-2_12-cv-01756-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01756_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01756/USCOURTS-caed-2_12-cv-01756-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01756/pdf/USCOURTS-caed-2_12-cv-01756-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01756; (HC) Briggs v. Swarthout; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01756-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-02-14</dateIssued>
+  <docketText>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 2/14/2013 ORDERING that a district judge be assigned to this matter; and RECOMMENDING that this action be dismissed without prejudice for failure to pay the filing fee. Assigned and Referred to Judge William B. Shubb; Objections due within 28 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01756-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01756/USCOURTS-caed-2_12-cv-01756-2/mods.xml">
+ <titleInfo>
+  <title>(HC) Briggs v. Swarthout</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 03/04/13 vacating 12 FINDINGS AND RECOMMENDATIONS. Within 30 days of the filing date of this order, petitioner shall: 1)pay the $5.00 filing fee, or 2) file an affidavit in support of his motion to proceed in forma pauperis. Within 30 days of the filing date of this order, petitioner shall file his objection or other response to respondent&apos;s 09/25/12 motion to dismiss. (Plummer, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01756-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fd042b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01756/USCOURTS-caed-2_12-cv-01756-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01756_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01756/USCOURTS-caed-2_12-cv-01756-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01756/pdf/USCOURTS-caed-2_12-cv-01756-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01756; (HC) Briggs v. Swarthout; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01756-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-03-05</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 03/04/13 vacating 12 FINDINGS AND RECOMMENDATIONS. Within 30 days of the filing date of this order, petitioner shall: 1)pay the $5.00 filing fee, or 2) file an affidavit in support of his motion to proceed in forma pauperis. Within 30 days of the filing date of this order, petitioner shall file his objection or other response to respondent&apos;s 09/25/12 motion to dismiss. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01756-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01756/USCOURTS-caed-2_12-cv-01756-3/mods.xml">
+ <titleInfo>
+  <title>(HC) Briggs v. Swarthout</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 06/07/13 granting 8 Motion to Dismiss. Petitioner&apos;s motion for appointment of counsel and for an evidentiary hearing 17 is denied. A certificate of appealability shall not issue in this case. CASE CLOSED. (Plummer, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01756-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184fd042a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01756/USCOURTS-caed-2_12-cv-01756-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01756_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01756/USCOURTS-caed-2_12-cv-01756-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01756/pdf/USCOURTS-caed-2_12-cv-01756-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01756; (HC) Briggs v. Swarthout; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01756-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-06-10</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 06/07/13 granting 8 Motion to Dismiss. Petitioner&apos;s motion for appointment of counsel and for an evidentiary hearing 17 is denied. A certificate of appealability shall not issue in this case. CASE CLOSED. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

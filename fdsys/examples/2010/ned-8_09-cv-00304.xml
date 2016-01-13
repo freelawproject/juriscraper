@@ -1,0 +1,217 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18176ce92">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00304</identifier>
+<identifier type="local">P0b002ee18176ce92</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cv-00304</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00304</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00304</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>790</natureSuitCode>
+ <natureSuit>Other Labor Litigation</natureSuit>
+ <cause>29:160(1) National Labor Relations Act</cause>
+ <party fullName="Crete Cold Storage" lastName="Crete Cold Storage" role="Respondent"></party>
+ <party firstName="Daniel" fullName="Daniel L. Hubbel" lastName="Hubbel" middleName="L." role="Petitioner"></party>
+ <party fullName="National Labor Relations Board" lastName="National Labor Relations Board" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Hubbel v. Crete Cold Storage</title>
+ <partNumber>8:09-cv-00304</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00304/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cv-00304;09-304</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Crete Cold Storage</displayForm>
+ <namePart type="family">Crete Cold Storage</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel L. Hubbel</displayForm>
+ <namePart type="family">Hubbel</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>National Labor Relations Board</displayForm>
+ <namePart type="family">National Labor Relations Board</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00304</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00304</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>790</natureSuitCode>
+ <natureSuit>Other Labor Litigation</natureSuit>
+ <cause>29:160(1) National Labor Relations Act</cause>
+ <party fullName="Crete Cold Storage" lastName="Crete Cold Storage" role="Respondent"></party>
+ <party firstName="Daniel" fullName="Daniel L. Hubbel" lastName="Hubbel" middleName="L." role="Petitioner"></party>
+ <party fullName="National Labor Relations Board" lastName="National Labor Relations Board" role="Petitioner"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00304-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00304/USCOURTS-ned-8_09-cv-00304-0/mods.xml">
+ <titleInfo>
+  <title>Hubbel v. Crete Cold Storage</title>
+  <subTitle>ORDER TO SHOW CAUSE AND BRIEFING SCHEDULE - Petitioner shall, using the Court&apos;s CM/ECF system, file the transcript and exhibits from the administrative hearing held on June 24, 2009, and Administrative Law Judge John West&apos;s decision issued on August 17, 2009. Crete Cold Storage, LLC, file an answer, together with its memorandum of law, to the allegations of said Petition with the Clerk of this Court on or before the 11th day of September 2009. A show cause hearing shall be held by telephone on the 24th day of September, 2009, at 10:00 a.m., and then and there show cause why, pending the final disposition of the matters now before the Board in NLRB Case 17-CA-24469, Respondent, its officers, agents, servants, employees, attorneys, and all persons acting in concert or participation with them, should not be temporarily enjoined and restrained under Section10(j) of the Act (29 U.S.C. Sec. 160[j]) as prayed for in the petition 3. A copy of this order be served upon Respondent and United Food and Commercial Workers International Union, AFL-CIO, CLC, Local No. 271, the Charging Party before the Board, in any manner provided in the Federal Rules of Civil Procedure for the United States District Courts, or by certified mail, and that proof of service be provided to the Court. Ordered by Senior Judge Warren K. Urbom. (GJG)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00304-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c86e2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00304/USCOURTS-ned-8_09-cv-00304-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00304_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00304/USCOURTS-ned-8_09-cv-00304-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00304/pdf/USCOURTS-ned-8_09-cv-00304-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00304; Hubbel v. Crete Cold Storage; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00304-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-09-09</dateIssued>
+  <docketText>ORDER TO SHOW CAUSE AND BRIEFING SCHEDULE - Petitioner shall, using the Court&apos;s CM/ECF system, file the transcript and exhibits from the administrative hearing held on June 24, 2009, and Administrative Law Judge John West&apos;s decision issued on August 17, 2009. Crete Cold Storage, LLC, file an answer, together with its memorandum of law, to the allegations of said Petition with the Clerk of this Court on or before the 11th day of September 2009. A show cause hearing shall be held by telephone on the 24th day of September, 2009, at 10:00 a.m., and then and there show cause why, pending the final disposition of the matters now before the Board in NLRB Case 17-CA-24469, Respondent, its officers, agents, servants, employees, attorneys, and all persons acting in concert or participation with them, should not be temporarily enjoined and restrained under Section10(j) of the Act (29 U.S.C. Sec. 160[j]) as prayed for in the petition 3. A copy of this order be served upon Respondent and United Food and Commercial Workers International Union, AFL-CIO, CLC, Local No. 271, the Charging Party before the Board, in any manner provided in the Federal Rules of Civil Procedure for the United States District Courts, or by certified mail, and that proof of service be provided to the Court. Ordered by Senior Judge Warren K. Urbom. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00304-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00304/USCOURTS-ned-8_09-cv-00304-1/mods.xml">
+ <titleInfo>
+  <title>Hubbel v. Crete Cold Storage</title>
+  <subTitle>FINDINGS OF FACT AND CONCLUSIONS OF LAW. This Court has jurisdiction of the parties and of the subject matter of this proceeding and, under Section 10(j) of the Act, is empowered to grant injunctive relief. To preserve the issues for the orderly determination as provided in the Act, it is appropriate, just, and proper that, pending the final disposition of the matters herein involved before the Board, Respondent, its officers, representatives, agents, servants, employees, attorneys, successors and assigns and all persons acting in concert or participation with it or them, be enjoined as set forth hereinafter in the order granting temporary injunction. Ordered by Senior Judge Warren K. Urbom. (GJG)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00304-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c86e1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00304/USCOURTS-ned-8_09-cv-00304-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00304_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00304/USCOURTS-ned-8_09-cv-00304-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00304/pdf/USCOURTS-ned-8_09-cv-00304-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00304; Hubbel v. Crete Cold Storage; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00304-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-09-24</dateIssued>
+  <docketText>FINDINGS OF FACT AND CONCLUSIONS OF LAW. This Court has jurisdiction of the parties and of the subject matter of this proceeding and, under Section 10(j) of the Act, is empowered to grant injunctive relief. To preserve the issues for the orderly determination as provided in the Act, it is appropriate, just, and proper that, pending the final disposition of the matters herein involved before the Board, Respondent, its officers, representatives, agents, servants, employees, attorneys, successors and assigns and all persons acting in concert or participation with it or them, be enjoined as set forth hereinafter in the order granting temporary injunction. Ordered by Senior Judge Warren K. Urbom. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00304-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00304/USCOURTS-ned-8_09-cv-00304-2/mods.xml">
+ <titleInfo>
+  <title>Hubbel v. Crete Cold Storage</title>
+  <subTitle>ORDER granting 19 Motion to Dismiss. On September 24, 2009, the undersigned issued a temporary injunction pursuant to Section 10(j) of the National Labor Relations Act, 29 U.S.C. Section 160(j). Having considered the Petitioners Motion to Close Case, and for good cause shown, the Court finds that said motion should be sustained and that the above-captioned case should be and hereby is closed. Ordered by Senior Judge Warren K. Urbom. (JAB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00304-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c86e3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00304/USCOURTS-ned-8_09-cv-00304-2</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00304_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00304/USCOURTS-ned-8_09-cv-00304-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00304/pdf/USCOURTS-ned-8_09-cv-00304-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00304; Hubbel v. Crete Cold Storage; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00304-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-01-25</dateIssued>
+  <docketText>ORDER granting 19 Motion to Dismiss. On September 24, 2009, the undersigned issued a temporary injunction pursuant to Section 10(j) of the National Labor Relations Act, 29 U.S.C. Section 160(j). Having considered the Petitioners Motion to Close Case, and for good cause shown, the Court finds that said motion should be sustained and that the above-captioned case should be and hereby is closed. Ordered by Senior Judge Warren K. Urbom. (JAB)</docketText>
+</extension>
+</relatedItem>
+</mods>

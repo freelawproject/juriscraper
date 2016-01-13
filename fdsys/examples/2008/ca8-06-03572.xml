@@ -1,0 +1,169 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e7b8f3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-06-03572</identifier>
+<identifier type="local">P0b002ee180e7b8f3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-06-03572</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-06-03572</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>06-03572</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="M.M." lastName="M.M." role="Appellee"></party>
+ <party fullName="Minneapolis Board of Education" lastName="Minneapolis Board of Education" role="Appellant"></party>
+ <party fullName="Minnesota Disability Law Center" lastName="Minnesota Disability Law Center" role="Amicus on Behalf of Appellee"></party>
+ <party fullName="Minnesota School Boards Association" lastName="Minnesota School Boards Association" role="Amicus on Behalf of Appellant"></party>
+ <party fullName="Special School District No. 1" lastName="Special School District No. 1" role="Appellant"></party>
+</extension>
+<titleInfo>
+ <title>M.M. v. Special School District No. 1</title>
+ <partNumber>06-03572</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-06-03572/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">06-03572;06-3572</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>M.M.</displayForm>
+ <namePart type="family">M.M.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Minneapolis Board of Education</displayForm>
+ <namePart type="family">Minneapolis Board of Education</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Minnesota Disability Law Center</displayForm>
+ <namePart type="family">Minnesota Disability Law Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus on Behalf of Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Minnesota School Boards Association</displayForm>
+ <namePart type="family">Minnesota School Boards Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus on Behalf of Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Special School District No. 1</displayForm>
+ <namePart type="family">Special School District No. 1</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-06-03572</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>06-03572</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="M.M." lastName="M.M." role="Appellee"></party>
+ <party fullName="Minneapolis Board of Education" lastName="Minneapolis Board of Education" role="Appellant"></party>
+ <party fullName="Minnesota Disability Law Center" lastName="Minnesota Disability Law Center" role="Amicus on Behalf of Appellee"></party>
+ <party fullName="Minnesota School Boards Association" lastName="Minnesota School Boards Association" role="Amicus on Behalf of Appellant"></party>
+ <party fullName="Special School District No. 1" lastName="Special School District No. 1" role="Appellant"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-06-03572-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-06-03572/USCOURTS-ca8-06-03572-0/mods.xml">
+ <titleInfo>
+  <title>M.M. v. Special School District No. 1</title>
+  <subTitle>OPINION FILED - THE COURT: JAMES B. LOKEN, C. ARLEN BEAM and WILLIAM JAY RILEY. James B. Loken, Authoring Judge (PUBLISHED) [3388052] [06-3572]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-06-03572-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e7c603</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-06-03572/USCOURTS-ca8-06-03572-0</identifier>
+ <identifier type="former granule identifier">ca8-06-03572_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-06-03572/USCOURTS-ca8-06-03572-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-06-03572/pdf/USCOURTS-ca8-06-03572-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 06-03572; M.M. v. Special School District No. 1; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-06-03572-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-04</dateIssued>
+  <docketText>OPINION FILED - THE COURT: JAMES B. LOKEN, C. ARLEN BEAM and WILLIAM JAY RILEY. James B. Loken, Authoring Judge (PUBLISHED) [3388052] [06-3572]</docketText>
+</extension>
+</relatedItem>
+</mods>

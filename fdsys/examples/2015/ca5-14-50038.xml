@@ -1,0 +1,138 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8ab20f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Fifth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-14-50038</identifier>
+<identifier type="local">P0b002ee18a8ab20f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca5-14-50038</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca5-14-50038</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca5</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtSortOrder>1050</courtSortOrder>
+ <caseNumber>14-50038</caseNumber>
+ <party firstName="Marc" fullName="Marc Schwartz" lastName="Schwartz" role="Appellant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Marc Schwartz</title>
+ <partNumber>14-50038</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-14-50038/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">14-50038;14-50038</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Fifth Circuit</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Marc Schwartz</displayForm>
+ <namePart type="family">Schwartz</namePart>
+ <namePart type="given">Marc</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca5-14-50038</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca5</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtSortOrder>1050</courtSortOrder>
+ <caseNumber>14-50038</caseNumber>
+ <party firstName="Marc" fullName="Marc Schwartz" lastName="Schwartz" role="Appellant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca5-14-50038-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-14-50038/USCOURTS-ca5-14-50038-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Marc Schwartz</title>
+  <subTitle>UNPUBLISHED OPINION FILED. [14-50038 Affirmed ] Judge: WED , Judge: EBC , Judge: GJC Mandate pull date is 01/26/2015 for Appellant Marc Schwartz [14-50038]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-14-50038/pdf/USCOURTS-ca5-14-50038-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b6608</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-14-50038/USCOURTS-ca5-14-50038-0</identifier>
+ <identifier type="former granule identifier">ca5-14-50038_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-14-50038/USCOURTS-ca5-14-50038-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-14-50038/pdf/USCOURTS-ca5-14-50038-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 14-50038; USA v. Marc Schwartz; </searchTitle>
+  <courtName>United States Court of Appeals for the Fifth Circuit</courtName>
+  <accessId>USCOURTS-ca5-14-50038-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>UNPUBLISHED OPINION FILED. [14-50038 Affirmed ] Judge: WED , Judge: EBC , Judge: GJC Mandate pull date is 01/26/2015 for Appellant Marc Schwartz [14-50038]</docketText>
+</extension>
+</relatedItem>
+</mods>

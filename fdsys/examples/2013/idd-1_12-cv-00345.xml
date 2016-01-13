@@ -1,0 +1,150 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a18dd5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_12-cv-00345</identifier>
+<identifier type="local">P0b002ee183a18dd5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-1_12-cv-00345</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_12-cv-00345</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:12-cv-00345</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Stacey" fullName="Stacey C Hulse" lastName="Hulse" middleName="C" role="Petitioner"></party>
+ <party firstName="Tim" fullName="Tim Wengler" lastName="Wengler" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Hulse v. Wengler</title>
+ <partNumber>1:12-cv-00345</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_12-cv-00345/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-00345;12-345</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Boise - Southern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Stacey C Hulse</displayForm>
+ <namePart type="family">Hulse</namePart>
+ <namePart type="given">Stacey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Tim Wengler</displayForm>
+ <namePart type="family">Wengler</namePart>
+ <namePart type="given">Tim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_12-cv-00345</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:12-cv-00345</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Stacey" fullName="Stacey C Hulse" lastName="Hulse" middleName="C" role="Petitioner"></party>
+ <party firstName="Tim" fullName="Tim Wengler" lastName="Wengler" role="Respondent"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_12-cv-00345-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_12-cv-00345/USCOURTS-idd-1_12-cv-00345-0/mods.xml">
+ <titleInfo>
+  <title>Hulse v. Wengler</title>
+  <subTitle>INITIAL REVIEW ORDER granting 1 Motion for Leave to Proceed in forma pauperis; denying without prejudice Petitioners request for the appointment of counsel, contained within his Petition 3. No later than 30 days from the date of this Order, Petitioner shall file a response showing cause why his Petition should not be dismissed. If Petitioner no longer wishes to pursue this matter, he shall file a Notice of Voluntary Dismissal with the Court by that same deadline. Signed by Judge Candy W Dale. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (cjm)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_12-cv-00345-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1bb8a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_12-cv-00345/USCOURTS-idd-1_12-cv-00345-0</identifier>
+ <identifier type="former granule identifier">idd-1_12-cv-00345_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_12-cv-00345/USCOURTS-idd-1_12-cv-00345-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_12-cv-00345/pdf/USCOURTS-idd-1_12-cv-00345-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00345; Hulse v. Wengler; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_12-cv-00345-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>INITIAL REVIEW ORDER granting 1 Motion for Leave to Proceed in forma pauperis; denying without prejudice Petitioners request for the appointment of counsel, contained within his Petition 3. No later than 30 days from the date of this Order, Petitioner shall file a response showing cause why his Petition should not be dismissed. If Petitioner no longer wishes to pursue this matter, he shall file a Notice of Voluntary Dismissal with the Court by that same deadline. Signed by Judge Candy W Dale. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (cjm)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c081402">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-04-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-04-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00792</identifier>
+<identifier type="local">P0b002ee18c081402</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-04-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-04-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_14-cv-00792</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-00792</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-00792</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party fullName="California Highway Patrol" lastName="California Highway Patrol" role="Defendant"></party>
+ <party firstName="Dena" fullName="Dena Rae O&apos;Keefe" lastName="O&apos;Keefe" middleName="Rae" role="Plaintiff"></party>
+ <party firstName="Troy" fullName="Troy Allen Somovia" lastName="Somovia" middleName="Allen" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PS)O&apos;Keefe v. California Highway Patrol et al</title>
+ <partNumber>2:14-cv-00792</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00792/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-00792;14-792</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>California Highway Patrol</displayForm>
+ <namePart type="family">California Highway Patrol</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dena Rae O&apos;Keefe</displayForm>
+ <namePart type="family">O&apos;Keefe</namePart>
+ <namePart type="given">Dena</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Troy Allen Somovia</displayForm>
+ <namePart type="family">Somovia</namePart>
+ <namePart type="given">Troy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-00792</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-00792</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party fullName="California Highway Patrol" lastName="California Highway Patrol" role="Defendant"></party>
+ <party firstName="Dena" fullName="Dena Rae O&apos;Keefe" lastName="O&apos;Keefe" middleName="Rae" role="Plaintiff"></party>
+ <party firstName="Troy" fullName="Troy Allen Somovia" lastName="Somovia" middleName="Allen" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00792-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00792/USCOURTS-caed-2_14-cv-00792-0/mods.xml">
+ <titleInfo>
+  <title>(PS)O&apos;Keefe v. California Highway Patrol et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Craig M. Kellison on 4/25/14 ORDERING that the 5/7/2014 hearing on the motion to dismiss 10 is hereby taken off calendar and the matter submitted on the record and briefs without oral argument. (Kastilahn, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00792/pdf/USCOURTS-caed-2_14-cv-00792-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c0979fb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00792/USCOURTS-caed-2_14-cv-00792-0</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00792_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00792/USCOURTS-caed-2_14-cv-00792-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00792/pdf/USCOURTS-caed-2_14-cv-00792-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00792; (PS)O&apos;Keefe v. California Highway Patrol et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00792-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-04-28</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Craig M. Kellison on 4/25/14 ORDERING that the 5/7/2014 hearing on the motion to dismiss 10 is hereby taken off calendar and the matter submitted on the record and briefs without oral argument. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00792-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00792/USCOURTS-caed-2_14-cv-00792-1/mods.xml">
+ <titleInfo>
+  <title>(PS)O&apos;Keefe v. California Highway Patrol et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Craig M. Kellison on 1/5/15 Recommending that Defendants&apos; MOTION 10 to DISMISS be granted. Plaintiff&apos;s complaint be dismissed with leave to file an amended complaint consistent with the above discussion. The claims against defendant California Highway Patrol under 42 U.S.C. § 1983 be dismissed without leave to amend. Plaintiff may file an amended complaint within 30 days of the date of this order. These Findings and Recommendations are submitted to the U.S District Judge Morrison C. England, Jr. Objections to these Findings and Recommendations due Within 20 days. (Mena-Sanchez, L)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00792/pdf/USCOURTS-caed-2_14-cv-00792-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c0979fd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00792/USCOURTS-caed-2_14-cv-00792-1</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00792_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00792/USCOURTS-caed-2_14-cv-00792-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00792/pdf/USCOURTS-caed-2_14-cv-00792-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00792; (PS)O&apos;Keefe v. California Highway Patrol et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00792-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Craig M. Kellison on 1/5/15 Recommending that Defendants&apos; MOTION 10 to DISMISS be granted. Plaintiff&apos;s complaint be dismissed with leave to file an amended complaint consistent with the above discussion. The claims against defendant California Highway Patrol under 42 U.S.C. § 1983 be dismissed without leave to amend. Plaintiff may file an amended complaint within 30 days of the date of this order. These Findings and Recommendations are submitted to the U.S District Judge Morrison C. England, Jr. Objections to these Findings and Recommendations due Within 20 days. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00792-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00792/USCOURTS-caed-2_14-cv-00792-2/mods.xml">
+ <titleInfo>
+  <title>(PS)O&apos;Keefe v. California Highway Patrol et al</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr. on 2/12/2015 ORDERING that the 12 Findings and Recommendations are ADOPTED IN FULL. This defendants&apos; 10 motion to dismiss is GRANTED, with leave to file an amended complaint against Officer Somovia. The claims against defendant California Highway Patrol under 42 U.S.C. § 1983 are DISMISSED without leave to amend. Plaintiff shall file an amended complaint within 30 days of the date of this order. Failure to file an amended complaint within the time provided may be grounds for dismissal of this action in its entirety. (Zignago, K.)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00792/pdf/USCOURTS-caed-2_14-cv-00792-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c0979fc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00792/USCOURTS-caed-2_14-cv-00792-2</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00792_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00792/USCOURTS-caed-2_14-cv-00792-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00792/pdf/USCOURTS-caed-2_14-cv-00792-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00792; (PS)O&apos;Keefe v. California Highway Patrol et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00792-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-02-13</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr. on 2/12/2015 ORDERING that the 12 Findings and Recommendations are ADOPTED IN FULL. This defendants&apos; 10 motion to dismiss is GRANTED, with leave to file an amended complaint against Officer Somovia. The claims against defendant California Highway Patrol under 42 U.S.C. § 1983 are DISMISSED without leave to amend. Plaintiff shall file an amended complaint within 30 days of the date of this order. Failure to file an amended complaint within the time provided may be grounds for dismissal of this action in its entirety. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00792-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00792/USCOURTS-caed-2_14-cv-00792-3/mods.xml">
+ <titleInfo>
+  <title>(PS)O&apos;Keefe v. California Highway Patrol et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Craig M. Kellison on 4/6/15 Recommending that this action be dismissed without prejudice for lack of prosecution and failure to comply with the Court rules and orders re 1 Notice of Removal. These Findings and Recommendations are submitted to Judge Morrison C. England, Jr. Objections to these F&amp;R due within fourteen days.(Mena-Sanchez, L)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00792/pdf/USCOURTS-caed-2_14-cv-00792-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c0979fe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00792/USCOURTS-caed-2_14-cv-00792-3</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00792_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00792/USCOURTS-caed-2_14-cv-00792-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00792/pdf/USCOURTS-caed-2_14-cv-00792-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00792; (PS)O&apos;Keefe v. California Highway Patrol et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00792-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-04-06</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Craig M. Kellison on 4/6/15 Recommending that this action be dismissed without prejudice for lack of prosecution and failure to comply with the Court rules and orders re 1 Notice of Removal. These Findings and Recommendations are submitted to Judge Morrison C. England, Jr. Objections to these F&amp;R due within fourteen days.(Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+</mods>

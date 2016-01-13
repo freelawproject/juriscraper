@@ -1,0 +1,226 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b441f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00304</identifier>
+<identifier type="local">P0b002ee1817b441f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cv-00304</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00304</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00304</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>08:1329 Writ of Mandamus to Adjudicate Visa Petiti</cause>
+ <party firstName="Bachir" fullName="Bachir Debba" lastName="Debba" role="Petitioner"></party>
+ <party firstName="Gerard" fullName="Gerard Heinauer" lastName="Heinauer" role="Respondent"></party>
+ <party firstName="Michael" fullName="Michael B. Mukasey" lastName="Mukasey" middleName="B." role="Respondent"></party>
+ <party firstName="Jonathan" fullName="Jonathan Scharfen" lastName="Scharfen" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Debba v. Heinauer et al</title>
+ <partNumber>8:08-cv-00304</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00304/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cv-00304;08-304</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bachir Debba</displayForm>
+ <namePart type="family">Debba</namePart>
+ <namePart type="given">Bachir</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Gerard Heinauer</displayForm>
+ <namePart type="family">Heinauer</namePart>
+ <namePart type="given">Gerard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Michael B. Mukasey</displayForm>
+ <namePart type="family">Mukasey</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Jonathan Scharfen</displayForm>
+ <namePart type="family">Scharfen</namePart>
+ <namePart type="given">Jonathan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00304</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00304</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>08:1329 Writ of Mandamus to Adjudicate Visa Petiti</cause>
+ <party firstName="Bachir" fullName="Bachir Debba" lastName="Debba" role="Petitioner"></party>
+ <party firstName="Gerard" fullName="Gerard Heinauer" lastName="Heinauer" role="Respondent"></party>
+ <party firstName="Michael" fullName="Michael B. Mukasey" lastName="Mukasey" middleName="B." role="Respondent"></party>
+ <party firstName="Jonathan" fullName="Jonathan Scharfen" lastName="Scharfen" role="Respondent"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00304-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00304/USCOURTS-ned-8_08-cv-00304-0/mods.xml">
+ <titleInfo>
+  <title>Debba v. Heinauer et al</title>
+  <subTitle>ORDER granting 12 Motion to Extend Deadline. Rule 26(f) planning report due 12/1/2008. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00304-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b575e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00304/USCOURTS-ned-8_08-cv-00304-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00304_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00304/USCOURTS-ned-8_08-cv-00304-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00304/pdf/USCOURTS-ned-8_08-cv-00304-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00304; Debba v. Heinauer et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00304-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-10-28</dateIssued>
+  <docketText>ORDER granting 12 Motion to Extend Deadline. Rule 26(f) planning report due 12/1/2008. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00304-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00304/USCOURTS-ned-8_08-cv-00304-1/mods.xml">
+ <titleInfo>
+  <title>Debba v. Heinauer et al</title>
+  <subTitle>ORDER granting 21 Motion to Extend. The defendants shall reply to the plaintiff&apos;s response by filing its brief and index of evidence by 1/8/09. Ordered by Judge Laurie Smith Camp. (JSF)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00304-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b5760</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00304/USCOURTS-ned-8_08-cv-00304-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00304_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00304/USCOURTS-ned-8_08-cv-00304-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00304/pdf/USCOURTS-ned-8_08-cv-00304-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00304; Debba v. Heinauer et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00304-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-12-30</dateIssued>
+  <docketText>ORDER granting 21 Motion to Extend. The defendants shall reply to the plaintiff&apos;s response by filing its brief and index of evidence by 1/8/09. Ordered by Judge Laurie Smith Camp. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00304-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00304/USCOURTS-ned-8_08-cv-00304-2/mods.xml">
+ <titleInfo>
+  <title>Debba v. Heinauer et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 14 Motion to Dismiss. The motion to dismiss is denied and the motion for summary judgment is granted. Petitioner&apos;s motion for orgal argument 25 is denied. Petitioner&apos;s claims are dismissed with prejudice. A separate judgment will be entered. Ordered by Judge Laurie Smith Camp. (JSF)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00304-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b575f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00304/USCOURTS-ned-8_08-cv-00304-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00304_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00304/USCOURTS-ned-8_08-cv-00304-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00304/pdf/USCOURTS-ned-8_08-cv-00304-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00304; Debba v. Heinauer et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00304-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-01-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 14 Motion to Dismiss. The motion to dismiss is denied and the motion for summary judgment is granted. Petitioner&apos;s motion for orgal argument 25 is denied. Petitioner&apos;s claims are dismissed with prejudice. A separate judgment will be entered. Ordered by Judge Laurie Smith Camp. (JSF)</docketText>
+</extension>
+</relatedItem>
+</mods>

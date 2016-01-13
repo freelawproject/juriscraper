@@ -1,0 +1,282 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee189303d70">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-06-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-05-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01415</identifier>
+<identifier type="local">P0b002ee189303d70</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-06-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-06-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-01415</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01415</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01415</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party firstName="Alejandro" fullName="Alejandro Zamora Garcia" lastName="Garcia" middleName="Zamora" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald Moore" lastName="Moore" role="Plaintiff"></party>
+ <party firstName="Dinh" fullName="Dinh Nguyen" lastName="Nguyen" role="Defendant"></party>
+ <party firstName="Nhien" fullName="Nhien Le Nguyen" lastName="Nguyen" middleName="Le" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Moore v. Nguyen et al</title>
+ <partNumber>1:13-cv-01415</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01415/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-01415;13-1415</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Alejandro Zamora Garcia</displayForm>
+ <namePart type="family">Garcia</namePart>
+ <namePart type="given">Alejandro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dinh Nguyen</displayForm>
+ <namePart type="family">Nguyen</namePart>
+ <namePart type="given">Dinh</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nhien Le Nguyen</displayForm>
+ <namePart type="family">Nguyen</namePart>
+ <namePart type="given">Nhien</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01415</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01415</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party firstName="Alejandro" fullName="Alejandro Zamora Garcia" lastName="Garcia" middleName="Zamora" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald Moore" lastName="Moore" role="Plaintiff"></party>
+ <party firstName="Dinh" fullName="Dinh Nguyen" lastName="Nguyen" role="Defendant"></party>
+ <party firstName="Nhien" fullName="Nhien Le Nguyen" lastName="Nguyen" middleName="Le" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01415-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-0/mods.xml">
+ <titleInfo>
+  <title>Moore v. Nguyen et al</title>
+  <subTitle>ORDER on Plaintiff&apos;s Request to CONTINUE Mandatory Scheduling Conference to Permit Service of Summons and Complaint on all Defendants. The Scheduling Conference currently set for 1/7/2014, is CONTINUED to 5/1/2014, at 09:30 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. Order signed by Magistrate Judge Sheila K. Oberto on 12/24/2013. (Timken, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01415/pdf/USCOURTS-caed-1_13-cv-01415-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189315178</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01415_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01415/pdf/USCOURTS-caed-1_13-cv-01415-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01415; Moore v. Nguyen et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01415-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-12-26</dateIssued>
+  <docketText>ORDER on Plaintiff&apos;s Request to CONTINUE Mandatory Scheduling Conference to Permit Service of Summons and Complaint on all Defendants. The Scheduling Conference currently set for 1/7/2014, is CONTINUED to 5/1/2014, at 09:30 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. Order signed by Magistrate Judge Sheila K. Oberto on 12/24/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01415-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-1/mods.xml">
+ <titleInfo>
+  <title>Moore v. Nguyen et al</title>
+  <subTitle>Plaintiff&apos;s 10 Ex Parte Request For Additional Time to Effect Service on Defendants Dinh Nguyen and Nhien Le Nguyen; ORDER, signed by Magistrate Judge Sheila K. Oberto on 1/2/2014. (IT IS HEREBY ORDERED that the time within which Plaintiff must serve the complaint on all defendants is hereby extended from January 2, 2014, to March 21, 2014.)(Gaumnitz, R)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01415/pdf/USCOURTS-caed-1_13-cv-01415-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189315179</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01415_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01415/pdf/USCOURTS-caed-1_13-cv-01415-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01415; Moore v. Nguyen et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01415-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>Plaintiff&apos;s 10 Ex Parte Request For Additional Time to Effect Service on Defendants Dinh Nguyen and Nhien Le Nguyen; ORDER, signed by Magistrate Judge Sheila K. Oberto on 1/2/2014. (IT IS HEREBY ORDERED that the time within which Plaintiff must serve the complaint on all defendants is hereby extended from January 2, 2014, to March 21, 2014.)(Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01415-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-2/mods.xml">
+ <titleInfo>
+  <title>Moore v. Nguyen et al</title>
+  <subTitle>ORDER DENYING Without Prejudice Plaintiff&apos;s 9 Motion for Service by Publication, signed by Magistrate Judge Sheila K. Oberto on 1/27/2014. (It is HEREBY ORDERED that: 1. Plaintiff&apos;s motion for an order permitting service by publication is DENIED without prejudice; and 2. Plaintiff are granted until March 31, 2014, to either serve Defendants, or file a renewed motion for service by publication which shall detail, through affidavits, further efforts taken to locate a regular place of business for the Nguyen Defendants where personal or substitute service may be made.)(Gaumnitz, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01415/pdf/USCOURTS-caed-1_13-cv-01415-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18931507f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01415_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01415/pdf/USCOURTS-caed-1_13-cv-01415-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01415; Moore v. Nguyen et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01415-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-28</dateIssued>
+  <docketText>ORDER DENYING Without Prejudice Plaintiff&apos;s 9 Motion for Service by Publication, signed by Magistrate Judge Sheila K. Oberto on 1/27/2014. (It is HEREBY ORDERED that: 1. Plaintiff&apos;s motion for an order permitting service by publication is DENIED without prejudice; and 2. Plaintiff are granted until March 31, 2014, to either serve Defendants, or file a renewed motion for service by publication which shall detail, through affidavits, further efforts taken to locate a regular place of business for the Nguyen Defendants where personal or substitute service may be made.)(Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01415-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-3/mods.xml">
+ <titleInfo>
+  <title>Moore v. Nguyen et al</title>
+  <subTitle>STIPULATION and ORDER for Dismissal of Defendant Alejandro Zamora Garcia dba El Rodeo Mexican Restaurant Only signed by District Judge Lawrence J. O&apos;Neill on 04/22/2014. (Flores, E)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01415/pdf/USCOURTS-caed-1_13-cv-01415-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18931517a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01415_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01415/pdf/USCOURTS-caed-1_13-cv-01415-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01415; Moore v. Nguyen et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01415-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-04-22</dateIssued>
+  <docketText>STIPULATION and ORDER for Dismissal of Defendant Alejandro Zamora Garcia dba El Rodeo Mexican Restaurant Only signed by District Judge Lawrence J. O&apos;Neill on 04/22/2014. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01415-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-4/mods.xml">
+ <titleInfo>
+  <title>Moore v. Nguyen et al</title>
+  <subTitle>ORDER DISMISSING CASE with Prejudice signed by District Judge Lawrence J. O&apos;Neill on 05/29/2014. CASE CLOSED. (Flores, E)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01415/pdf/USCOURTS-caed-1_13-cv-01415-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18931517b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01415_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01415/USCOURTS-caed-1_13-cv-01415-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01415/pdf/USCOURTS-caed-1_13-cv-01415-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01415; Moore v. Nguyen et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01415-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-05-29</dateIssued>
+  <docketText>ORDER DISMISSING CASE with Prejudice signed by District Judge Lawrence J. O&apos;Neill on 05/29/2014. CASE CLOSED. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

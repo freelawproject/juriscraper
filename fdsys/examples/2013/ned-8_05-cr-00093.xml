@@ -1,0 +1,1658 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee185593ee7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-07-11</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-07-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093</identifier>
+<identifier type="local">P0b002ee185593ee7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-07-11</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-07-11</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cr-00093</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00093</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00093</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Rudolph" fullName="Rudolph George Stanko" lastName="Stanko" middleName="George" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Stanko</title>
+ <partNumber>8:05-cr-00093</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cr-00093;05-093</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Rudolph George Stanko</displayForm>
+ <namePart type="family">Stanko</namePart>
+ <namePart type="given">Rudolph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00093</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00093</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Rudolph" fullName="Rudolph George Stanko" lastName="Stanko" middleName="George" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>REPORT AND RECOMMENDATION to the district court that the requests (Filings 4, 5, 6, 7 and 8) be denied; the US Marshal&apos;s Service shall personally serve a copy of this Recommendation on the defendant, Rudolph George Stanko, at the time of his detention hearing, now scheduled for March 17, 2004 at 12:00 noon as to defendant Rudolph George Stanko. Signed by Magistrate Judge F. A. Gossett on 3/15/2005. 1 cert to USM (MKR, )[8:05-mj-00035-FG3]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-03-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02be</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-03-15</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION to the district court that the requests (Filings 4, 5, 6, 7 and 8) be denied; the US Marshal&apos;s Service shall personally serve a copy of this Recommendation on the defendant, Rudolph George Stanko, at the time of his detention hearing, now scheduled for March 17, 2004 at 12:00 noon as to defendant Rudolph George Stanko. Signed by Magistrate Judge F. A. Gossett on 3/15/2005. 1 cert to USM (MKR, )[8:05-mj-00035-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER granting 43 Motion to Continue; hearing scheduled for 5/3/2005 will be rescheduled at a later date; all pending motions will be ruled on by the undersigned judge as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 4/28/2005. (SMS, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-04-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02c0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-04-28</dateIssued>
+  <docketText>ORDER granting 43 Motion to Continue; hearing scheduled for 5/3/2005 will be rescheduled at a later date; all pending motions will be ruled on by the undersigned judge as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 4/28/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER denying motions 4, 6, 7, 8, 21, 22, 23, 35, 37, 39, 40 &amp; 41 of defendant; granting defendant&apos;s motion 33 to represent himself; adopting 10 magistrate&apos;s report and recommendation; denying 39 appeal from magistrate&apos;s order; defendant given ten days from the date of this order to file notice advising court who will be filing pleadings on his behalfas to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 5/4/2005. (SMS, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02ad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-05-04</dateIssued>
+  <docketText>ORDER denying motions 4, 6, 7, 8, 21, 22, 23, 35, 37, 39, 40 &amp; 41 of defendant; granting defendant&apos;s motion 33 to represent himself; adopting 10 magistrate&apos;s report and recommendation; denying 39 appeal from magistrate&apos;s order; defendant given ten days from the date of this order to file notice advising court who will be filing pleadings on his behalfas to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 5/4/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER granting 55 Motion for Transcripts as to Rudolph George Stanko. Upon the receipt of a deposit of $72.60, transcripts of the three hearings will be ordered. Should the cost of the transcripts exceed this amount, the defendant will be required to pay the difference. Likewise, should the cost of the transcript be less than $72.60, the Clerk shall issue a refund check. The Clerk shall immediately notify the chambers of the undersigned when the $72.60 deposit is received. Upon receipt the said funds, the Clerk is ordered to prepare a transcript of the hearings held on March 14, 2005, March 17, 2005 and March 23, 2005. Signed by Magistrate Judge F. A. Gossett on 8/1/2005. (MLF, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02b4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-08-01</dateIssued>
+  <docketText>ORDER granting 55 Motion for Transcripts as to Rudolph George Stanko. Upon the receipt of a deposit of $72.60, transcripts of the three hearings will be ordered. Should the cost of the transcripts exceed this amount, the defendant will be required to pay the difference. Likewise, should the cost of the transcript be less than $72.60, the Clerk shall issue a refund check. The Clerk shall immediately notify the chambers of the undersigned when the $72.60 deposit is received. Upon receipt the said funds, the Clerk is ordered to prepare a transcript of the hearings held on March 14, 2005, March 17, 2005 and March 23, 2005. Signed by Magistrate Judge F. A. Gossett on 8/1/2005. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>STRICKEN - ORDER as to defendant Rudolph George Stanko. Arraignment on Superseding Indictment set for 10/13/2005 at 9:30 AM before Magistrate Judge F. A. Gossett. Signed by Magistrate Judge F. A. Gossett on 9/27/2005. (MLF, ) Modified on 9/28/2005 Stricken per order 64(MLF, ).</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02d2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-09-27</dateIssued>
+  <docketText>STRICKEN - ORDER as to defendant Rudolph George Stanko. Arraignment on Superseding Indictment set for 10/13/2005 at 9:30 AM before Magistrate Judge F. A. Gossett. Signed by Magistrate Judge F. A. Gossett on 9/27/2005. (MLF, ) Modified on 9/28/2005 Stricken per order 64(MLF, ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER as to defendant Rudolph George Stanko. The Arraignment on Superseding Indictment is set for hearing on October 13, 2005 at 9:30 a.m. before Magistrate Judge F.A. Gossett. Signed by Magistrate Judge F. A. Gossett on 9/27/2005. (MLF, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02c9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-5</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2005-09-27</dateIssued>
+  <docketText>ORDER as to defendant Rudolph George Stanko. The Arraignment on Superseding Indictment is set for hearing on October 13, 2005 at 9:30 a.m. before Magistrate Judge F.A. Gossett. Signed by Magistrate Judge F. A. Gossett on 9/27/2005. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER that the Clerk&apos;s Office shall strike Document Number 63 from the record as to defendant Rudolph George Stanko. Signed by Magistrate Judge F. A. Gossett on 9/28/2005. (MLF, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02ae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-6</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2005-09-28</dateIssued>
+  <docketText>ORDER that the Clerk&apos;s Office shall strike Document Number 63 from the record as to defendant Rudolph George Stanko. Signed by Magistrate Judge F. A. Gossett on 9/28/2005. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER - The Clerk of Court shall strike Filing Nos. 66, 67, and 69 from the record. The Clerk of Court shall mail a copy of this order to Rudolph George Stanko P.O. Box 509, Gordon, NE 69343, as well as to counsel of record as to defendant Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 10/14/2005. Mailed as directed. (TJS)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-7</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2005-10-14</dateIssued>
+  <docketText>ORDER - The Clerk of Court shall strike Filing Nos. 66, 67, and 69 from the record. The Clerk of Court shall mail a copy of this order to Rudolph George Stanko P.O. Box 509, Gordon, NE 69343, as well as to counsel of record as to defendant Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 10/14/2005. Mailed as directed. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER that upon receiving the remaining balance of $85.80 for transcripts ordered by the defendant, the Clerk shall forward a copy of the transcripts to the defendant as to defendant Rudolph George Stanko. Signed Magistrate by Judge F. A. Gossett on 10/31/2005. Transcripts mailed. (JSF)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-8</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2005-10-31</dateIssued>
+  <docketText>ORDER that upon receiving the remaining balance of $85.80 for transcripts ordered by the defendant, the Clerk shall forward a copy of the transcripts to the defendant as to defendant Rudolph George Stanko. Signed Magistrate by Judge F. A. Gossett on 10/31/2005. Transcripts mailed. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER - The Clerk of Court will reinstate Filing Nos. 66, 67 and 69, and the government shall have fourteen days from the date of this order to respond to said filings; Defendant&apos;s objection to the magistrate&apos;s refusal to allow non-lawyer Michael Allen Chalupa to advise him in this case is overruled, and the Clerk of Court is instructed to not accept any filings signed by Michael Allen Chalupa and as to defendant Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 11/8/2005. (TJS)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02a7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-9</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2005-11-08</dateIssued>
+  <docketText>ORDER - The Clerk of Court will reinstate Filing Nos. 66, 67 and 69, and the government shall have fourteen days from the date of this order to respond to said filings; Defendant&apos;s objection to the magistrate&apos;s refusal to allow non-lawyer Michael Allen Chalupa to advise him in this case is overruled, and the Clerk of Court is instructed to not accept any filings signed by Michael Allen Chalupa and as to defendant Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 11/8/2005. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER regarding Request for Transcript 69 as to defendant Rudolph George Stanko. The defendant is ordered to put on file with the Clerk of the US District Court a check in the amount of $36.30. Should the cost of the transcript exceed this amount, the defendant will be required to pay the difference. Likewise, should the cost of the transcript be less than $36.30, the Clerk shall issue a refund check. Upon receipt the said funds, the Clerk is ordered to prepare a transcript of the hearing held on October 13, 2005. A copy of the transcript shall be mailed to the defendant. Signed by Magistrate Judge F. A. Gossett on 11/14/2005. (MLF, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-10</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2005-11-14</dateIssued>
+  <docketText>ORDER regarding Request for Transcript 69 as to defendant Rudolph George Stanko. The defendant is ordered to put on file with the Clerk of the US District Court a check in the amount of $36.30. Should the cost of the transcript exceed this amount, the defendant will be required to pay the difference. Likewise, should the cost of the transcript be less than $36.30, the Clerk shall issue a refund check. Upon receipt the said funds, the Clerk is ordered to prepare a transcript of the hearing held on October 13, 2005. A copy of the transcript shall be mailed to the defendant. Signed by Magistrate Judge F. A. Gossett on 11/14/2005. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER denying as moot and premature 96 Defendant&apos;s Petition for Writ of Mandamus as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/1/2005. (SMS, )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02a5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-11</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2005-12-01</dateIssued>
+  <docketText>ORDER denying as moot and premature 96 Defendant&apos;s Petition for Writ of Mandamus as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/1/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER scheduling hearing on 103 Motion to Withdraw as Attorney filed by Roger Roots; hearing scheduled for 12/20/2005 at 1:00 p.m., Courtroom 3 (Omaha); Attorney Root, Attorney Franklin and Defendant Stanko must be present for this hearing as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/6/2005. (SMS, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02bd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-12</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2005-12-06</dateIssued>
+  <docketText>ORDER scheduling hearing on 103 Motion to Withdraw as Attorney filed by Roger Roots; hearing scheduled for 12/20/2005 at 1:00 p.m., Courtroom 3 (Omaha); Attorney Root, Attorney Franklin and Defendant Stanko must be present for this hearing as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/6/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>MEMORANDUM AND ORDER - Filing Nos. 66, 72, 78, 79, 83, 84, 87, 89, and 93 are denied as set forth herein;and Filing Nos. 98, 99, 100, and 101 are granted as set forth herein as to Rudolph George Stanko (1) Signed by Judge Joseph F. Bataillon on 12/9/2005. (TJS)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02b9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-13</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2005-12-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Filing Nos. 66, 72, 78, 79, 83, 84, 87, 89, and 93 are denied as set forth herein;and Filing Nos. 98, 99, 100, and 101 are granted as set forth herein as to Rudolph George Stanko (1) Signed by Judge Joseph F. Bataillon on 12/9/2005. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER rescheduling hearing to 12/28/2005 at 11:00 a.m., Courtroom 3 (Omaha), regarding 103 Motion to Withdraw filed by Attorney Roger Roots and 107 Motion to Withdraw filed by Attorney David L. Nich as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/12/2005. (SMS, ) Modified on 12/13/2005 to reflect David L. Nich as filer of motion 107(ADB).</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02cf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-14</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2005-12-12</dateIssued>
+  <docketText>ORDER rescheduling hearing to 12/28/2005 at 11:00 a.m., Courtroom 3 (Omaha), regarding 103 Motion to Withdraw filed by Attorney Roger Roots and 107 Motion to Withdraw filed by Attorney David L. Nich as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/12/2005. (SMS, ) Modified on 12/13/2005 to reflect David L. Nich as filer of motion 107(ADB).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER scheduling hearing on 12/28/2005 at 11:00 a.m., Courtroom 3 (Omaha), regarding all pending motions to suppress, including 125 133 &amp; 138, as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/13/2005. (SMS, )</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02d3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-15</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2005-12-13</dateIssued>
+  <docketText>ORDER scheduling hearing on 12/28/2005 at 11:00 a.m., Courtroom 3 (Omaha), regarding all pending motions to suppress, including 125 133 &amp; 138, as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/13/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER denying 142 Attorney Roots&apos; Motion to Continue Hearing as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/14/2005. (SMS, )</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-16</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2005-12-14</dateIssued>
+  <docketText>ORDER denying 142 Attorney Roots&apos; Motion to Continue Hearing as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/14/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER granting 124 Motion for discovery. Denying 120 Motion for Reconsideration. Denying 121 Motion to Dismiss Criminal Case. Denying 139 Motion to Dismiss Criminal Case. Suppression motions 125, 133, and 138 are set for hearing on 12/28/05 at 11:00 a.m. as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/16/2005. (JAE, )</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02a4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-17</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2005-12-16</dateIssued>
+  <docketText>ORDER granting 124 Motion for discovery. Denying 120 Motion for Reconsideration. Denying 121 Motion to Dismiss Criminal Case. Denying 139 Motion to Dismiss Criminal Case. Suppression motions 125, 133, and 138 are set for hearing on 12/28/05 at 11:00 a.m. as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/16/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER granting 109 110 Motion to file pleadings electronically. Denying 112 Motion to Continue. Denying 114 Motion to Withdraw Attorney David L. Nich. Denying 116 Motion to Withdraw Attorney Roger Roots. Denying 117 Motion to Continue. Denying 118 Motion for Hearing. Denying 119 Motion for a telephonic hearing, as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/16/2005. Copy of ECF registration form sent to Rudolph George Stanko. (JAE, )</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-18</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2005-12-16</dateIssued>
+  <docketText>ORDER granting 109 110 Motion to file pleadings electronically. Denying 112 Motion to Continue. Denying 114 Motion to Withdraw Attorney David L. Nich. Denying 116 Motion to Withdraw Attorney Roger Roots. Denying 117 Motion to Continue. Denying 118 Motion for Hearing. Denying 119 Motion for a telephonic hearing, as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/16/2005. Copy of ECF registration form sent to Rudolph George Stanko. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER denying 148 Motion for payment of witness fees; denying 151 Motion to consolidate; denying 152 Motion to Dismiss Criminal Case; granting in part and denying in part as set forth herein 147 Motion in Limine as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/20/2005. (JAE, )</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02ac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-19</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2005-12-20</dateIssued>
+  <docketText>ORDER denying 148 Motion for payment of witness fees; denying 151 Motion to consolidate; denying 152 Motion to Dismiss Criminal Case; granting in part and denying in part as set forth herein 147 Motion in Limine as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 12/20/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER denying defendant&apos;s motions, Filing Nos. 103 and 107; denying 125 Motion to Suppress as to Rudolph George Stanko (1); denying 133 Motion to Suppress as to Rudolph George Stanko (1); denying 138 Motion to Suppress as to Rudolph George Stanko (1); denying Government&apos;s Objection as to Rudolph George Stanko (1); denying 162 Motion as to Rudolph George Stanko (1); denying 164 Motion as to Rudolph George Stanko (1); the government shall provide the defendant with copies of all exhibits two weeks prior to trial; defendant shall have no direct contact with Berg/Stanko prior to or during trial in this matter; the court makes a preliminary ruling that 18 U.S.C. 921(a)(20) is not applicable in this case as to Defendant Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 1/10/2006. (PCV, )</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02d6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-20</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2006-01-10</dateIssued>
+  <docketText>ORDER denying defendant&apos;s motions, Filing Nos. 103 and 107; denying 125 Motion to Suppress as to Rudolph George Stanko (1); denying 133 Motion to Suppress as to Rudolph George Stanko (1); denying 138 Motion to Suppress as to Rudolph George Stanko (1); denying Government&apos;s Objection as to Rudolph George Stanko (1); denying 162 Motion as to Rudolph George Stanko (1); denying 164 Motion as to Rudolph George Stanko (1); the government shall provide the defendant with copies of all exhibits two weeks prior to trial; defendant shall have no direct contact with Berg/Stanko prior to or during trial in this matter; the court makes a preliminary ruling that 18 U.S.C. 921(a)(20) is not applicable in this case as to Defendant Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 1/10/2006. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-21/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER denying 190 191 192 Motion to Continue Trial; setting criteria to be met before a continuance will be considered by the court as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 1/18/2006. (SMS, )</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02c3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-21</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2006-01-18</dateIssued>
+  <docketText>ORDER denying 190 191 192 Motion to Continue Trial; setting criteria to be met before a continuance will be considered by the court as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 1/18/2006. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-22/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER denying 206 Motion for Release of Brady Materials, 207 Motion to Dismiss Criminal Case, 208 Motion to Stay, 210 Petition, and 212 Petition for Transcript as to Rudolph George Stanko (1). All court filings must be made by defense counsel David Domina. Signed by Judge Joseph F. Bataillon on 1/24/2006. (SMS, )</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-22.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02b7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-22</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2006-01-24</dateIssued>
+  <docketText>ORDER denying 206 Motion for Release of Brady Materials, 207 Motion to Dismiss Criminal Case, 208 Motion to Stay, 210 Petition, and 212 Petition for Transcript as to Rudolph George Stanko (1). All court filings must be made by defense counsel David Domina. Signed by Judge Joseph F. Bataillon on 1/24/2006. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-23/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>AMENDED TRIAL ORDER granting the MOTION to Continue 203 as to defendant(s) Rudolph George Stanko; Jury Trial set for 3/13/2006 at 08:30 AM before Chief Judge Joseph F. Bataillon. Signed by Judge Joseph F. Bataillon on 1/24/2006. (PCV, )</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-23.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02cd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-23</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2006-01-24</dateIssued>
+  <docketText>AMENDED TRIAL ORDER granting the MOTION to Continue 203 as to defendant(s) Rudolph George Stanko; Jury Trial set for 3/13/2006 at 08:30 AM before Chief Judge Joseph F. Bataillon. Signed by Judge Joseph F. Bataillon on 1/24/2006. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-24/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>AMENDED TRIAL ORDER as to defendant Rudolph George Stanko Status Hearing is scheduled for 4/10/2006 at 08:30 AM before Chief Judge Joseph F. Bataillon. Jury Trial set for 4/17/2006 at 08:30 AM before Chief Judge Joseph F. Bataillon. Signed by Judge Joseph F. Bataillon on 3/7/2006. (ADB)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-24.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02c5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-24</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2006-03-07</dateIssued>
+  <docketText>AMENDED TRIAL ORDER as to defendant Rudolph George Stanko Status Hearing is scheduled for 4/10/2006 at 08:30 AM before Chief Judge Joseph F. Bataillon. Jury Trial set for 4/17/2006 at 08:30 AM before Chief Judge Joseph F. Bataillon. Signed by Judge Joseph F. Bataillon on 3/7/2006. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-25/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER that the Petition for Action on Conditions of Pretrial Release 225 is granted; The Order Setting Conditions of Release 13 is hereby revoked; and Defendant is committed to the custody of the Attorney General and shallbe afforded a reasonable opportunity for private consultation with defense counsel as to defendant Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 3/7/2006. (1 certified copy to USM) (ADB)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-25.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02d0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-25</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2006-03-07</dateIssued>
+  <docketText>ORDER that the Petition for Action on Conditions of Pretrial Release 225 is granted; The Order Setting Conditions of Release 13 is hereby revoked; and Defendant is committed to the custody of the Attorney General and shallbe afforded a reasonable opportunity for private consultation with defense counsel as to defendant Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 3/7/2006. (1 certified copy to USM) (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-26/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER regarding MOTION for Writ238; IT IS ORDERED that the Clerk of Court is hereby ordered to strike Filing No. 238. The defendant is not permitted to file pleadings in this case. as to defendant(s) Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 3/31/2006. (PCV, )</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-26.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-26</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2006-03-31</dateIssued>
+  <docketText>ORDER regarding MOTION for Writ238; IT IS ORDERED that the Clerk of Court is hereby ordered to strike Filing No. 238. The defendant is not permitted to file pleadings in this case. as to defendant(s) Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 3/31/2006. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-27/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER denying 241 Motion to Dismiss ; denying 242 Motion to Dismiss; denying 243 Motion for Release as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 4/10/2006. (SMS, )</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-27.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02bb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-27</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2006-04-10</dateIssued>
+  <docketText>ORDER denying 241 Motion to Dismiss ; denying 242 Motion to Dismiss; denying 243 Motion for Release as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 4/10/2006. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-28/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>MEMORANDUM AND ORDER - IT IS ORDERED that defendant&apos;s oral motion to dismiss pursuant to Fed. R. Crim. P. 12, and defendant&apos;s request that the court reconsider its decision are denied as to defendant Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 4/12/2006. (TJS)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-28.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02cb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-28</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2006-04-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - IT IS ORDERED that defendant&apos;s oral motion to dismiss pursuant to Fed. R. Crim. P. 12, and defendant&apos;s request that the court reconsider its decision are denied as to defendant Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 4/12/2006. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-29/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER that defendant&apos;s motion for an interlocutory appeal 252 is deniedas to defendant Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 4/14/2006. (DKM, )</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-29.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02c7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-29</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2006-04-14</dateIssued>
+  <docketText>ORDER that defendant&apos;s motion for an interlocutory appeal 252 is deniedas to defendant Rudolph George Stanko. Signed by Judge Joseph F. Bataillon on 4/14/2006. (DKM, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-30/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER denying 279 Motion for Release from Custody as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 5/11/2006. (SMS, )</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-30.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02c4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-30</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2006-05-11</dateIssued>
+  <docketText>ORDER denying 279 Motion for Release from Custody as to Rudolph George Stanko (1). Signed by Judge Joseph F. Bataillon on 5/11/2006. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-31/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>JUDGMENT as to Rudolph George Stanko (1): Defendant was found guilty on Counts I and II of the Second Superseding Indictment and is committed to the Bureau of Prisons for a term of 72 months on counts I and II, to run concurrent; 3 years supervised release with special conditions to run concurrent; $200.00 special assessment; $5,143.63 jury costs. The defendant was found not guilty on Count III of the Second Superseding Indictment. The Indictment and Seperseding Indictment are dismissed on the motion of the United States as to this defendant only, as to defendant Rudolph George Stanko. Ordered by Judge Joseph F. Bataillon. 4 certified copies USM. (JAE, )</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-31.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02ab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-31</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2006-08-15</dateIssued>
+  <docketText>JUDGMENT as to Rudolph George Stanko (1): Defendant was found guilty on Counts I and II of the Second Superseding Indictment and is committed to the Bureau of Prisons for a term of 72 months on counts I and II, to run concurrent; 3 years supervised release with special conditions to run concurrent; $200.00 special assessment; $5,143.63 jury costs. The defendant was found not guilty on Count III of the Second Superseding Indictment. The Indictment and Seperseding Indictment are dismissed on the motion of the United States as to this defendant only, as to defendant Rudolph George Stanko. Ordered by Judge Joseph F. Bataillon. 4 certified copies USM. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-32/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER - This matter is before the court on defendant&apos;s notice of appeal and request to proceed on appeal in forma pauperis 295. Defendant has represented to the court under oath in his current criminal case, United States v. Stanko, 06CR50, that he is impoverished and has no assets to represent himself. Accordingly, the court grants his request to file his appeal in forma pauperis in this case. Additionally, the clerk of court is instructed to submit Filing Nos. 296 and 299 to the Eighth Circuit. THEREFORE, IT IS ORDERED that defendant&apos;s motion to proceed in forma pauperis on appeal 295 is granted as to Rudolph George Stanko. Ordered by Judge Joseph F. Bataillon (KBJ) Modified on 8/21/2006 to correct the filing date (KBJ).</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-32.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02d5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-32</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2006-08-17</dateIssued>
+  <docketText>ORDER - This matter is before the court on defendant&apos;s notice of appeal and request to proceed on appeal in forma pauperis 295. Defendant has represented to the court under oath in his current criminal case, United States v. Stanko, 06CR50, that he is impoverished and has no assets to represent himself. Accordingly, the court grants his request to file his appeal in forma pauperis in this case. Additionally, the clerk of court is instructed to submit Filing Nos. 296 and 299 to the Eighth Circuit. THEREFORE, IT IS ORDERED that defendant&apos;s motion to proceed in forma pauperis on appeal 295 is granted as to Rudolph George Stanko. Ordered by Judge Joseph F. Bataillon (KBJ) Modified on 8/21/2006 to correct the filing date (KBJ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-33/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER denying 336 Motion for Return of Property/PostTrial as to Rudolph George Stanko (1) Ordered by Chief Judge Joseph F. Bataillon. ( PCV, ) (copy of order sent to pro se party)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-33.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02c2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-33</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2008-04-04</dateIssued>
+  <docketText>ORDER denying 336 Motion for Return of Property/PostTrial as to Rudolph George Stanko (1) Ordered by Chief Judge Joseph F. Bataillon. ( PCV, ) (copy of order sent to pro se party)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-34/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER denying 343 Motion for Reconsideration as to Rudolph George Stanko (1) Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(TJS)</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-34.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02a3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-34</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2008-04-28</dateIssued>
+  <docketText>ORDER denying 343 Motion for Reconsideration as to Rudolph George Stanko (1) Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-35" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-35/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER that the court finds that summary dismissal of the 335 Motion to Vacate (2255) is not required; That by September 29, 2008, the United States shall file an answer to the defendant&apos;s § 2255 motion, supported by a brief; and That by November 3, 2008, the defendant may file a reply brief as to Rudolph George Stanko (1). Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)( ADB )</subTitle>
+  <partNumber>35</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-35.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-35</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_35.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-35/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-35.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-35</accessId>
+  <sequenceNumber>35</sequenceNumber>
+  <dateIssued>2008-07-28</dateIssued>
+  <docketText>ORDER that the court finds that summary dismissal of the 335 Motion to Vacate (2255) is not required; That by September 29, 2008, the United States shall file an answer to the defendant&apos;s § 2255 motion, supported by a brief; and That by November 3, 2008, the defendant may file a reply brief as to Rudolph George Stanko (1). Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)( ADB )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-36" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-36/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER that Counsel for the defendant and the government are permitted to inspect between the dates of April 20, 2009, and May 15, 2009, the grand jury list, questionnaires, and the contents of records or papers used by the jury clerk in connection with the grand jury selection process, and the Clerk shall make available to counsel the method used in selecting grand juries, and in particular the method as it pertains to the grand jury that returned this indictment as to defendant(s) Rudolph George Stanko. On or before May 29, 2009, the defendant shall file any motion with respect to the jury selection process or notify the court by letter if the defendant will not be filing any such motion. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(ADB, )</subTitle>
+  <partNumber>36</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-36.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02b3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-36</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_36.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-36/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-36.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-36</accessId>
+  <sequenceNumber>36</sequenceNumber>
+  <dateIssued>2009-04-08</dateIssued>
+  <docketText>ORDER that Counsel for the defendant and the government are permitted to inspect between the dates of April 20, 2009, and May 15, 2009, the grand jury list, questionnaires, and the contents of records or papers used by the jury clerk in connection with the grand jury selection process, and the Clerk shall make available to counsel the method used in selecting grand juries, and in particular the method as it pertains to the grand jury that returned this indictment as to defendant(s) Rudolph George Stanko. On or before May 29, 2009, the defendant shall file any motion with respect to the jury selection process or notify the court by letter if the defendant will not be filing any such motion. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-37" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-37/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>MEMORANDUM AND ORDER denying 393 Motion for Reconsideration as to Rudolph George Stanko (1). Ordered by Chief Judge Joseph F. Bataillon. (JSF)</subTitle>
+  <partNumber>37</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-05-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-37.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02b5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-37</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_37.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-37/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-37.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-37</accessId>
+  <sequenceNumber>37</sequenceNumber>
+  <dateIssued>2009-05-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 393 Motion for Reconsideration as to Rudolph George Stanko (1). Ordered by Chief Judge Joseph F. Bataillon. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-38" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-38/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>MEMORANDUM AND ORDER that Defendant&apos;s motion for a First Amendment petition or a third-party counterclaim, 383, and motion to determine a release date, 384, are denied and dismissed as this court has no jurisdiction to review the matter; the miscellaneous motions set forth in 341, 346, 349, 379 and 385 are denied as moot; Defendant&apos;s motions for release and to review his sentence, 357 and 366, are denied; Defendant&apos;s motion to vacate, 335, is denied in part and granted only as to the assessment of jury costs as set forth herein; Defendant&apos;s motion for information regarding the jury records, 352, is denied as moot, as defendant has received the requested information as set forth herein as to Rudolph George Stanko (1). Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(CJP) Civil Case 8:08-cv-00053-JFB closed.</subTitle>
+  <partNumber>38</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-38.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02b2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-38</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_38.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-38/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-38.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-38</accessId>
+  <sequenceNumber>38</sequenceNumber>
+  <dateIssued>2009-06-23</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that Defendant&apos;s motion for a First Amendment petition or a third-party counterclaim, 383, and motion to determine a release date, 384, are denied and dismissed as this court has no jurisdiction to review the matter; the miscellaneous motions set forth in 341, 346, 349, 379 and 385 are denied as moot; Defendant&apos;s motions for release and to review his sentence, 357 and 366, are denied; Defendant&apos;s motion to vacate, 335, is denied in part and granted only as to the assessment of jury costs as set forth herein; Defendant&apos;s motion for information regarding the jury records, 352, is denied as moot, as defendant has received the requested information as set forth herein as to Rudolph George Stanko (1). Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(CJP) Civil Case 8:08-cv-00053-JFB closed.</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-39" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-39/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>MEMORANDUM AND ORDER - Defendant&apos;s motion for reconsideration 398; and Defendant&apos;s motion for a certificate of appealability 398 is denied as to Rudolph George Stanko. Ordered by Chief Judge Joseph F. Bataillon. (KBJ)</subTitle>
+  <partNumber>39</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-39.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02d4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-39</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_39.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-39/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-39.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-39</accessId>
+  <sequenceNumber>39</sequenceNumber>
+  <dateIssued>2009-07-23</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Defendant&apos;s motion for reconsideration 398; and Defendant&apos;s motion for a certificate of appealability 398 is denied as to Rudolph George Stanko. Ordered by Chief Judge Joseph F. Bataillon. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-40" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-40/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER denying 414 Motion for Reconsideration as to Rudolph George Stanko (1). Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)( ADB, )</subTitle>
+  <partNumber>40</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-40.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02ce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-40</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_40.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-40/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-40.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-40</accessId>
+  <sequenceNumber>40</sequenceNumber>
+  <dateIssued>2010-08-03</dateIssued>
+  <docketText>ORDER denying 414 Motion for Reconsideration as to Rudolph George Stanko (1). Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)( ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-41" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-41/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER that this matter is before the court sua sponte. The court has reconsidered defendants motion for supervised release in Montana, Filing No. 414, following defendants term of imprisonment. MOTION to transfer to District of Montana for supervised release 414 is granted. The court&apos;s Order 415 is vacated. The Clerk of Court is ordered to serve the District of Nebraska United States Probation Officer Stan Pfeiffer with a copy of this order. A separate transfer order will be filed in conjunction with this order as to defendant Rudolph George Stanko. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(copy to Stan Pfeiffer)(ADB, )</subTitle>
+  <partNumber>41</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-41.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02d1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-41</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_41.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-41/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-41.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-41</accessId>
+  <sequenceNumber>41</sequenceNumber>
+  <dateIssued>2010-08-19</dateIssued>
+  <docketText>ORDER that this matter is before the court sua sponte. The court has reconsidered defendants motion for supervised release in Montana, Filing No. 414, following defendants term of imprisonment. MOTION to transfer to District of Montana for supervised release 414 is granted. The court&apos;s Order 415 is vacated. The Clerk of Court is ordered to serve the District of Nebraska United States Probation Officer Stan Pfeiffer with a copy of this order. A separate transfer order will be filed in conjunction with this order as to defendant Rudolph George Stanko. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(copy to Stan Pfeiffer)(ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-42" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-42/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER permitting the defendant to proceed on appeal in forma pauperis as to Rudolph George Stanko. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(GJG)</subTitle>
+  <partNumber>42</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-42.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02c6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-42</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_42.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-42/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-42.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-42</accessId>
+  <sequenceNumber>42</sequenceNumber>
+  <dateIssued>2010-08-25</dateIssued>
+  <docketText>ORDER permitting the defendant to proceed on appeal in forma pauperis as to Rudolph George Stanko. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-43" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-43/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>MEMORANDUM AND ORDER as to defendant Rudolph George Stanko (1). 1. Stanko&apos;s Objection (filing no. 423; Case No. 8:10CV151, Filing No. 12) is granted to the extent that the court will not treat Stanko&apos;s April 19, 2010, filing as a motion filed pursuant to 28 U.S.C. § 2255. 2. The Clerk of the court is directed to re-assign Case No. 8:10CV151 to the pro se docket. However, the case may remain assigned to the undersigned judge because it is related to this matter. The Clerk of the court is also directed to refer all motions in Case No. 8:10CV151 to the pro se docket. 3. The Clerk of the court is directed to file all pleadings previously filed in Case No. 8:10CV151, filed as Filing No. 419 in this matter, in Case No. 8:10CV151. To the extent it remains pending, Filing No. 419 is therefore denied as moot. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (JAB)</subTitle>
+  <partNumber>43</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-43.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02a6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-43</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_43.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-43/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-43.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-43</accessId>
+  <sequenceNumber>43</sequenceNumber>
+  <dateIssued>2010-09-24</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to defendant Rudolph George Stanko (1). 1. Stanko&apos;s Objection (filing no. 423; Case No. 8:10CV151, Filing No. 12) is granted to the extent that the court will not treat Stanko&apos;s April 19, 2010, filing as a motion filed pursuant to 28 U.S.C. § 2255. 2. The Clerk of the court is directed to re-assign Case No. 8:10CV151 to the pro se docket. However, the case may remain assigned to the undersigned judge because it is related to this matter. The Clerk of the court is also directed to refer all motions in Case No. 8:10CV151 to the pro se docket. 3. The Clerk of the court is directed to file all pleadings previously filed in Case No. 8:10CV151, filed as Filing No. 419 in this matter, in Case No. 8:10CV151. To the extent it remains pending, Filing No. 419 is therefore denied as moot. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-44" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-44/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>MEMORANDUM AND ORDER as to defendant Rudolph George Stanko. Defendant&apos;s motion for modification of his sentence to delete criminal history points, Filing No. 428, and motion to expedite the motion, Filing No. 433, are denied. Defendant&apos;s motion for leave to proceed in forma pauperis, Filing No. 431, is granted. Defendant&apos;s Motion to Vacate under 28 U.S.C. § 2255, Filing No. 430, is denied. Defendant&apos;s Petition for Certificate of Appealability, Filing No. 434, is denied. The Clerk of Court is ordered to send a copy of the Petition for Certificate of Appealabilty, Filing No. 434, to the Eighth Circuit Court of Appeals. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed/e-mailed to pro se party and to the Circuit as directed)(GJG) Civil Case 8:10-cv-00432-JFB closed.</subTitle>
+  <partNumber>44</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-44.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02cc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-44</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_44.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-44/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-44.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-44</accessId>
+  <sequenceNumber>44</sequenceNumber>
+  <dateIssued>2011-07-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to defendant Rudolph George Stanko. Defendant&apos;s motion for modification of his sentence to delete criminal history points, Filing No. 428, and motion to expedite the motion, Filing No. 433, are denied. Defendant&apos;s motion for leave to proceed in forma pauperis, Filing No. 431, is granted. Defendant&apos;s Motion to Vacate under 28 U.S.C. § 2255, Filing No. 430, is denied. Defendant&apos;s Petition for Certificate of Appealability, Filing No. 434, is denied. The Clerk of Court is ordered to send a copy of the Petition for Certificate of Appealabilty, Filing No. 434, to the Eighth Circuit Court of Appeals. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed/e-mailed to pro se party and to the Circuit as directed)(GJG) Civil Case 8:10-cv-00432-JFB closed.</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-45" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-45/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Rudolph George Stanko. The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter as stand-by counsel. The Clerk shall provide a copy of this order to the Federal Public Defender for the District of Nebraska. Ordered by Magistrate Judge Thomas D. Thalken. (GJG)(Copy emailed to Karen Burks)</subTitle>
+  <partNumber>45</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-45.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02c1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-45</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_45.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-45/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-45.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-45</accessId>
+  <sequenceNumber>45</sequenceNumber>
+  <dateIssued>2011-09-21</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Rudolph George Stanko. The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter as stand-by counsel. The Clerk shall provide a copy of this order to the Federal Public Defender for the District of Nebraska. Ordered by Magistrate Judge Thomas D. Thalken. (GJG)(Copy emailed to Karen Burks)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-46" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-46/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>RULE 32.1 ORDER as to defendant Rudolph George Stanko. The defendant is to appear before the district court of the prosecuting district at such times and places as may be ordered. Ordered by Magistrate Judge Thomas D. Thalken. (Copy mailed to pro se party)(MKR)</subTitle>
+  <partNumber>46</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-46.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02c8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-46</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_46.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-46/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-46.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-46</accessId>
+  <sequenceNumber>46</sequenceNumber>
+  <dateIssued>2011-09-23</dateIssued>
+  <docketText>RULE 32.1 ORDER as to defendant Rudolph George Stanko. The defendant is to appear before the district court of the prosecuting district at such times and places as may be ordered. Ordered by Magistrate Judge Thomas D. Thalken. (Copy mailed to pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-47" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-47/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER on the defendant&apos;s Motion for Writ of Habeas Corpus 449 as to defendant Rudolph George Stanko. The court has transferred jurisdiction in this case to the United States District Court for the District of Montana. The Clerk of Court for the District of Nebraska is ordered to forward Filing No. 449 and a copy of this order to the Clerk of Court for the United States District Court for the District of Montana and term Filing No. 449 in this case. Ordered by Chief Judge Joseph F. Bataillon. ( Certified Copy of Order and filing 449 provided to USDC-Montana and pro se party)(MKR)</subTitle>
+  <partNumber>47</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-47.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02b6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-47</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_47.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-47/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-47.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-47</accessId>
+  <sequenceNumber>47</sequenceNumber>
+  <dateIssued>2011-09-23</dateIssued>
+  <docketText>ORDER on the defendant&apos;s Motion for Writ of Habeas Corpus 449 as to defendant Rudolph George Stanko. The court has transferred jurisdiction in this case to the United States District Court for the District of Montana. The Clerk of Court for the District of Nebraska is ordered to forward Filing No. 449 and a copy of this order to the Clerk of Court for the United States District Court for the District of Montana and term Filing No. 449 in this case. Ordered by Chief Judge Joseph F. Bataillon. ( Certified Copy of Order and filing 449 provided to USDC-Montana and pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-48" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-48/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER as to defendant Rudolph George Stanko. Defendant&apos;s motion for a copy of the transcript, Filing No. 476, dated September 22, 2011, for purposes of appeal is granted. The Clerk of Court is ordered to send the defendant a copy of said transcript. Defendant is granted leave to proceed informa pauperis on appeal, pursuant to Filing Nos. 475 and 476. The objection to the magistrate judge&apos;s conditions of release, Filing No. 477, is overruled. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed/e-mailed to pro se party along with transcript)(GJG)</subTitle>
+  <partNumber>48</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-48.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02aa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-48</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_48.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-48/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-48.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-48</accessId>
+  <sequenceNumber>48</sequenceNumber>
+  <dateIssued>2011-10-14</dateIssued>
+  <docketText>ORDER as to defendant Rudolph George Stanko. Defendant&apos;s motion for a copy of the transcript, Filing No. 476, dated September 22, 2011, for purposes of appeal is granted. The Clerk of Court is ordered to send the defendant a copy of said transcript. Defendant is granted leave to proceed informa pauperis on appeal, pursuant to Filing Nos. 475 and 476. The objection to the magistrate judge&apos;s conditions of release, Filing No. 477, is overruled. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed/e-mailed to pro se party along with transcript)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-49" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-49/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER permitting defendant to proceed on appeal in forma pauperis as to defendant Rudolph George Stanko. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed/e-mailed to pro se party)(GJG)</subTitle>
+  <partNumber>49</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-49.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02bf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-49</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_49.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-49/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-49.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-49</accessId>
+  <sequenceNumber>49</sequenceNumber>
+  <dateIssued>2011-10-26</dateIssued>
+  <docketText>ORDER permitting defendant to proceed on appeal in forma pauperis as to defendant Rudolph George Stanko. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed/e-mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-50" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-50/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER as to defendant Rudolph George Stanko. The Clerk of Court is directed to forward Filing Nos. 491 through 496, and a copy of this order, to the United States District Court for the District of Montana, to the Chief U.S. Probation Officer for the District of Nebraska, and to provide a copy of these filings to the U.S. Probation Officer in his case, James Patelis, in Montana. The Clerk of Court is also instructed to term Filing Nos. 495 and 496. Ordered by Judge Joseph F. Bataillon. (Copies mailed as directed)(GJG)</subTitle>
+  <partNumber>50</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-50.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18559ff04</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-50</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_50.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-50/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-50.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-50</accessId>
+  <sequenceNumber>50</sequenceNumber>
+  <dateIssued>2012-08-23</dateIssued>
+  <docketText>ORDER as to defendant Rudolph George Stanko. The Clerk of Court is directed to forward Filing Nos. 491 through 496, and a copy of this order, to the United States District Court for the District of Montana, to the Chief U.S. Probation Officer for the District of Nebraska, and to provide a copy of these filings to the U.S. Probation Officer in his case, James Patelis, in Montana. The Clerk of Court is also instructed to term Filing Nos. 495 and 496. Ordered by Judge Joseph F. Bataillon. (Copies mailed as directed)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-51" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-51/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER as to defendant Rudolph George Stanko. Defendant&apos;s notice of appeal/motion to reconsider, Filing No. 521, is denied. The Clerk of Court shall strike Filing No. 522, Copy of IFP Memo, as it is inapplicable to this case. Ordered by Judge Joseph F. Bataillon. (Copy mailed to pro se party)(GJG)</subTitle>
+  <partNumber>51</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-51.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02a8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-51</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_51.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-51/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-51.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-51</accessId>
+  <sequenceNumber>51</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER as to defendant Rudolph George Stanko. Defendant&apos;s notice of appeal/motion to reconsider, Filing No. 521, is denied. The Clerk of Court shall strike Filing No. 522, Copy of IFP Memo, as it is inapplicable to this case. Ordered by Judge Joseph F. Bataillon. (Copy mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-52" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-52/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER permitting defendant to proceed on appeal in forma pauperis as to defendant Rudolph George Stanko. Ordered by Judge Joseph F. Bataillon. (Copy mailed to pro se party)(GJG)</subTitle>
+  <partNumber>52</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-52.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18559ff05</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-52</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_52.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-52/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-52.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-52</accessId>
+  <sequenceNumber>52</sequenceNumber>
+  <dateIssued>2013-01-15</dateIssued>
+  <docketText>ORDER permitting defendant to proceed on appeal in forma pauperis as to defendant Rudolph George Stanko. Ordered by Judge Joseph F. Bataillon. (Copy mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-53" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-53/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 537 as to defendant Rudolph George Stanko. A final dispositional hearing will be held before Judge Bataillon in Courtroom No. 3, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on August 21, 2013 at 1:00 p.m. Defendant must be present in person. Ordered by Magistrate Judge F.A. Gossett. (Copy mailed to defendant)(SLP)</subTitle>
+  <partNumber>53</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-53.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02ca</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-53</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_53.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-53/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-53.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-53</accessId>
+  <sequenceNumber>53</sequenceNumber>
+  <dateIssued>2013-07-08</dateIssued>
+  <docketText>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 537 as to defendant Rudolph George Stanko. A final dispositional hearing will be held before Judge Bataillon in Courtroom No. 3, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on August 21, 2013 at 1:00 p.m. Defendant must be present in person. Ordered by Magistrate Judge F.A. Gossett. (Copy mailed to defendant)(SLP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00093-54" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-54/mods.xml">
+ <titleInfo>
+  <title>USA v. Stanko</title>
+  <subTitle>ORDER regarding Request for Transcript 542 as to defendant Rudolph George Stanko. The request for transcript, filing 542 is granted. Rudolph George Stanko, is ordered to pay to the Clerk of Court the amount of $14.60. Upon receipt of this fee, the Court Reporter is ordered to prepare a transcript of the hearing held on July 8, 2013. Ordered by Magistrate Judge F.A. Gossett. (Copies mailed to defendants)(SLP)</subTitle>
+  <partNumber>54</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00093-54.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1855a02a9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-54</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00093_54.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00093/USCOURTS-ned-8_05-cr-00093-54/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00093/pdf/USCOURTS-ned-8_05-cr-00093-54.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00093; USA v. Stanko; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00093-54</accessId>
+  <sequenceNumber>54</sequenceNumber>
+  <dateIssued>2013-07-09</dateIssued>
+  <docketText>ORDER regarding Request for Transcript 542 as to defendant Rudolph George Stanko. The request for transcript, filing 542 is granted. Rudolph George Stanko, is ordered to pay to the Clerk of Court the amount of $14.60. Upon receipt of this fee, the Court Reporter is ordered to prepare a transcript of the hearing held on July 8, 2013. Ordered by Magistrate Judge F.A. Gossett. (Copies mailed to defendants)(SLP)</docketText>
+</extension>
+</relatedItem>
+</mods>

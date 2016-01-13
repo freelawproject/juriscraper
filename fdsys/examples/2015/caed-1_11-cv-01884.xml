@@ -1,0 +1,663 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d612a79">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-08-26</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-08-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884</identifier>
+<identifier type="local">P0b002ee18d612a79</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-08-26</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-08-26</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_11-cv-01884</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-01884</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-01884</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Robin" fullName="Robin Dasenbrock" lastName="Dasenbrock" role="Plaintiff"></party>
+ <party firstName="A." fullName="A. Enenmoh" lastName="Enenmoh" role="Defendant"></party>
+ <party firstName="J." fullName="J. Clark Kelso" lastName="Kelso" middleName="Clark" role="Defendant"></party>
+ <party fullName="Kings County" lastName="Kings County" role="Defendant"></party>
+ <party fullName="Page" lastName="Page" role="Defendant"></party>
+ <party firstName="Zafar" fullName="Zafar Parvez" lastName="Parvez" role="Defendant"></party>
+ <party fullName="Perez" lastName="Perez" role="Defendant"></party>
+ <party firstName="J." fullName="J. Walker" lastName="Walker" role="Defendant"></party>
+ <party firstName="D." fullName="D. Ybarra" lastName="Ybarra" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Dasenbrock v. Kings County et al</title>
+ <partNumber>1:11-cv-01884</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-01884;11-1884</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Robin Dasenbrock</displayForm>
+ <namePart type="family">Dasenbrock</namePart>
+ <namePart type="given">Robin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>A. Enenmoh</displayForm>
+ <namePart type="family">Enenmoh</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Clark Kelso</displayForm>
+ <namePart type="family">Kelso</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kings County</displayForm>
+ <namePart type="family">Kings County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Page</displayForm>
+ <namePart type="family">Page</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Zafar Parvez</displayForm>
+ <namePart type="family">Parvez</namePart>
+ <namePart type="given">Zafar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Perez</displayForm>
+ <namePart type="family">Perez</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Walker</displayForm>
+ <namePart type="family">Walker</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Ybarra</displayForm>
+ <namePart type="family">Ybarra</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-01884</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-01884</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Robin" fullName="Robin Dasenbrock" lastName="Dasenbrock" role="Plaintiff"></party>
+ <party firstName="A." fullName="A. Enenmoh" lastName="Enenmoh" role="Defendant"></party>
+ <party firstName="J." fullName="J. Clark Kelso" lastName="Kelso" middleName="Clark" role="Defendant"></party>
+ <party fullName="Kings County" lastName="Kings County" role="Defendant"></party>
+ <party fullName="Page" lastName="Page" role="Defendant"></party>
+ <party firstName="Zafar" fullName="Zafar Parvez" lastName="Parvez" role="Defendant"></party>
+ <party fullName="Perez" lastName="Perez" role="Defendant"></party>
+ <party firstName="J." fullName="J. Walker" lastName="Walker" role="Defendant"></party>
+ <party firstName="D." fullName="D. Ybarra" lastName="Ybarra" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER DENYING Motion for Appointment of Counsel 3, signed by Magistrate Judge Dennis L. Beck on 11/18/11: Motion is DENIED, without prejudice. (Hellings, J)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627dfb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-0</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-11-18</dateIssued>
+  <docketText>ORDER DENYING Motion for Appointment of Counsel 3, signed by Magistrate Judge Dennis L. Beck on 11/18/11: Motion is DENIED, without prejudice. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER dismissing case 1:11-cv-1917-GSA-pc as duplicative of this case signed by Magistrate Judge Gary S. Austin on 12/8/2011. (Lundstrom, T)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627df9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-1</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-12-08</dateIssued>
+  <docketText>ORDER dismissing case 1:11-cv-1917-GSA-pc as duplicative of this case signed by Magistrate Judge Gary S. Austin on 12/8/2011. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER REQUIRING PLAINTIFF EITHER TO FILE AMENDED COMPLAINT OR NOTIFY COURT OF WILLINGNESS TO PROCEED ONLY ON CLAIMS FOUND TO BE COGNIZABLE,signed by Magistrate Judge Dennis L. Beck on 9/24/2012. (30)Day Deadline (Attachments: # (1) Amended Complaint Form)(Martin-Gill, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627d6a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-2</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-09-24</dateIssued>
+  <docketText>ORDER REQUIRING PLAINTIFF EITHER TO FILE AMENDED COMPLAINT OR NOTIFY COURT OF WILLINGNESS TO PROCEED ONLY ON CLAIMS FOUND TO BE COGNIZABLE,signed by Magistrate Judge Dennis L. Beck on 9/24/2012. (30)Day Deadline (Attachments: # (1) Amended Complaint Form)(Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 12 Motion for Reconsideration, signed by Magistrate Judge Dennis L. Beck on 10/30/12. (Gonzalez, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627db2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-3</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-10-31</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 12 Motion for Reconsideration, signed by Magistrate Judge Dennis L. Beck on 10/30/12. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER Denying 25 Motion to Appoint Counsel, signed by Magistrate Judge Dennis L. Beck on 10/4/13. (Verduzco, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627db3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-4</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-10-04</dateIssued>
+  <docketText>ORDER Denying 25 Motion to Appoint Counsel, signed by Magistrate Judge Dennis L. Beck on 10/4/13. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dennis L. Beck on 11/20/2013 denying Motion for Extension of Time as moot re 30, 35. (Lundstrom, T)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627dae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-5</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-11-21</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dennis L. Beck on 11/20/2013 denying Motion for Extension of Time as moot re 30, 35. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER Granting Defendants&apos; Motion To Modify The Discovery And Scheduling Order To Extend The Dispositive Motion Deadline (ECF No.56), signed by Magistrate Judge Dennis L. Beck on 4/11/2014. (Fahrney, E)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627dac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-6</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-04-11</dateIssued>
+  <docketText>ORDER Granting Defendants&apos; Motion To Modify The Discovery And Scheduling Order To Extend The Dispositive Motion Deadline (ECF No.56), signed by Magistrate Judge Dennis L. Beck on 4/11/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER Regarding Plaintiff&apos;s Motions (ECF Nos.39,45,47,48,53,62,64,74,75,82,83,84), 87,91), ORDER Regarding Defendants&apos; Motion To Take Deposition As Moot (ECF No.41), ORDER Denying Motion For Summary Judgment Without Prejudice To Refiling (ECF No.68), signed by Magistrate Judge Dennis L. Beck on 9/17/2014. Plaintiffs motions (ECF Nos. 39, 45, 47, 48, 53, 62, 64, 74, 75, 82, 83, 84, 87, 91) are DENIED. Defendants motion to take Plaintiffs deposition by videoconference is DENIED as moot. Defendants motion for summary judgment is DENIED WITHOUT PREJUDICE to refiling at the conclusion of discovery. (Fahrney, E)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627dad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-7</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-09-17</dateIssued>
+  <docketText>ORDER Regarding Plaintiff&apos;s Motions (ECF Nos.39,45,47,48,53,62,64,74,75,82,83,84), 87,91), ORDER Regarding Defendants&apos; Motion To Take Deposition As Moot (ECF No.41), ORDER Denying Motion For Summary Judgment Without Prejudice To Refiling (ECF No.68), signed by Magistrate Judge Dennis L. Beck on 9/17/2014. Plaintiffs motions (ECF Nos. 39, 45, 47, 48, 53, 62, 64, 74, 75, 82, 83, 84, 87, 91) are DENIED. Defendants motion to take Plaintiffs deposition by videoconference is DENIED as moot. Defendants motion for summary judgment is DENIED WITHOUT PREJUDICE to refiling at the conclusion of discovery. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER REGARDING PLAINTIFF&apos;S MOTIONS TO COMPEL AND/OR REOPEN DISCOVERY 49, 57, 63, 65, 67 AND MOTION FOR ENLARGEMENT OF TIME TO COMPLETE DISCOVERY 55; ORDER AND NOTICE AUTHORIZING ISSUANCE OF SUBPOENA DUCES TECUM DIRECTING PRODUCTION OF DOCUMENTS BY STU SHERMAN, WARDEN OF CORCORAN SUBSTANCE ABUSE AND TREATMENT FACILITY; ORDER DIRECTING CLERKS OFFICE TO SERVE COPY OF SUBPOENA WITH ORDER AND ORDER REOPENING DISCOVERY AS TO DEFENDANT PAGE signed by Magistrate Judge Dennis L. Beck on 10/15/2014. (Attachments: # (1) Subpoena).(Lundstrom, T)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627db0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-8</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-10-15</dateIssued>
+  <docketText>ORDER REGARDING PLAINTIFF&apos;S MOTIONS TO COMPEL AND/OR REOPEN DISCOVERY 49, 57, 63, 65, 67 AND MOTION FOR ENLARGEMENT OF TIME TO COMPLETE DISCOVERY 55; ORDER AND NOTICE AUTHORIZING ISSUANCE OF SUBPOENA DUCES TECUM DIRECTING PRODUCTION OF DOCUMENTS BY STU SHERMAN, WARDEN OF CORCORAN SUBSTANCE ABUSE AND TREATMENT FACILITY; ORDER DIRECTING CLERKS OFFICE TO SERVE COPY OF SUBPOENA WITH ORDER AND ORDER REOPENING DISCOVERY AS TO DEFENDANT PAGE signed by Magistrate Judge Dennis L. Beck on 10/15/2014. (Attachments: # (1) Subpoena).(Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER DISMISSING 94 Motion for Issuance of Subpoenas and 99 &amp; 100 Motions for Clarification; ORDER DISMISSING 97 Request for Ruling; ORDER DENYING Plaintiff&apos;s 95 Motion for Reconsideration, signed by Magistrate Judge Dennis L. Beck on 11/6/2014. (Marrujo, C)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627dfa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-9</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-11-07</dateIssued>
+  <docketText>ORDER DISMISSING 94 Motion for Issuance of Subpoenas and 99 &amp; 100 Motions for Clarification; ORDER DISMISSING 97 Request for Ruling; ORDER DENYING Plaintiff&apos;s 95 Motion for Reconsideration, signed by Magistrate Judge Dennis L. Beck on 11/6/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER DIRECTING Personal Service of Subpoena Duces Tecum Within Seven Days by United States Marshal Without Prepayment of Costs, signed by Magistrate Judge Dennis L. Beck on 11/6/2014. (Marrujo, C)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627db4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-10</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-11-07</dateIssued>
+  <docketText>ORDER DIRECTING Personal Service of Subpoena Duces Tecum Within Seven Days by United States Marshal Without Prepayment of Costs, signed by Magistrate Judge Dennis L. Beck on 11/6/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER Dismissing 96 Motion Directing Personal Service; ORDER Denying 106 Motion for Third Part Discovery, signed by Magistrate Judge Dennis L. Beck on 12/25/14. (Gonzalez, R)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627dfd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-11</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2014-12-29</dateIssued>
+  <docketText>ORDER Dismissing 96 Motion Directing Personal Service; ORDER Denying 106 Motion for Third Part Discovery, signed by Magistrate Judge Dennis L. Beck on 12/25/14. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER DENYING Motion for Appointment of Counsel 113, signed by Magistrate Judge Dennis L. Beck on 1/5/15: Motion is DENIED without prejudice. (Hellings, J)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627dfc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-12</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER DENYING Motion for Appointment of Counsel 113, signed by Magistrate Judge Dennis L. Beck on 1/5/15: Motion is DENIED without prejudice. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER REGARDING Plaintiff&apos;s 109 Motion to Compel and Request for Addtional Subpoena Duces Tecum, Plaintiff&apos;s 110 Motion to Lodge Depositions, Plaintiff&apos;s 111 Motion for Third Party Discovery, Plaintiff&apos;s 114 Motion for Deposition Subpoenas, Plaintiff&apos;s 117 Motion for Third Party Discovery and Request to Reopen Discovery, Plaintiff&apos;s 118 Motion for Reconsideration, Plaintiff&apos;s 120 Motion to Compel, and Plaintiff&apos;s 121 Motion for Third Party Discovery; ORDER DIRECTING Defendant Page to SHOW CAUSE; ORDER and NOTICE AUTHORIZING Issuance of Subpoena Duces Tecum Directing Production of Documents by Stu Sherman, Warden of Corcoran Substance Abuse and Treatment Facility; ORDER DIRECTING Clerk&apos;s Office to Serve Copy of Subpoena With Order, signed by Magistrate Judge Dennis L. Beck on 4/22/2015. (Attachments: # (1) Not Issued Subpoena)(Marrujo, C)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627daf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-13</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2015-04-24</dateIssued>
+  <docketText>ORDER REGARDING Plaintiff&apos;s 109 Motion to Compel and Request for Addtional Subpoena Duces Tecum, Plaintiff&apos;s 110 Motion to Lodge Depositions, Plaintiff&apos;s 111 Motion for Third Party Discovery, Plaintiff&apos;s 114 Motion for Deposition Subpoenas, Plaintiff&apos;s 117 Motion for Third Party Discovery and Request to Reopen Discovery, Plaintiff&apos;s 118 Motion for Reconsideration, Plaintiff&apos;s 120 Motion to Compel, and Plaintiff&apos;s 121 Motion for Third Party Discovery; ORDER DIRECTING Defendant Page to SHOW CAUSE; ORDER and NOTICE AUTHORIZING Issuance of Subpoena Duces Tecum Directing Production of Documents by Stu Sherman, Warden of Corcoran Substance Abuse and Treatment Facility; ORDER DIRECTING Clerk&apos;s Office to Serve Copy of Subpoena With Order, signed by Magistrate Judge Dennis L. Beck on 4/22/2015. (Attachments: # (1) Not Issued Subpoena)(Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER DIRECTING Personal Service of Subpoena Duces Tecum Within Seven Days by United States Marshal Without Prepayment of Costs, signed by Magistrate Judge Dennis L. Beck on 5/28/15. (Attachments: # (1) Issued Subpoena) (Marrujo, C)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627d6b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-14</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2015-05-29</dateIssued>
+  <docketText>ORDER DIRECTING Personal Service of Subpoena Duces Tecum Within Seven Days by United States Marshal Without Prepayment of Costs, signed by Magistrate Judge Dennis L. Beck on 5/28/15. (Attachments: # (1) Issued Subpoena) (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER DISCHARGING 122 Order to Show Cause; ORDER GRANTING Defendant Page Thirty Days to Respond to Initial Discovery Requests, signed by Magistrate Judge Dennis L. Beck on 5/29/2015. (Marrujo, C)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627db1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-15</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2015-05-29</dateIssued>
+  <docketText>ORDER DISCHARGING 122 Order to Show Cause; ORDER GRANTING Defendant Page Thirty Days to Respond to Initial Discovery Requests, signed by Magistrate Judge Dennis L. Beck on 5/29/2015. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01884-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Dasenbrock v. Kings County et al</title>
+  <subTitle>ORDER Regarding Plaintiff&apos;s Request for Summons Package and GRANTING Plaintiff Leave to File Amended Complaint Naming Doe Defendant 133, signed by Magistrate Judge Dennis L. Beck on 8/25/15: Thirty-Day Deadline. (Hellings, J)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d627db5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-16</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01884_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01884/USCOURTS-caed-1_11-cv-01884-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01884/pdf/USCOURTS-caed-1_11-cv-01884-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01884; (PC) Dasenbrock v. Kings County et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01884-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2015-08-25</dateIssued>
+  <docketText>ORDER Regarding Plaintiff&apos;s Request for Summons Package and GRANTING Plaintiff Leave to File Amended Complaint Naming Doe Defendant 133, signed by Magistrate Judge Dennis L. Beck on 8/25/15: Thirty-Day Deadline. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+</mods>

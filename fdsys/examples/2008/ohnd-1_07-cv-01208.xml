@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815cf138">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-01208</identifier>
+<identifier type="local">P0b002ee1815cf138</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_07-cv-01208</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_07-cv-01208</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:07-cv-01208</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:405 Review of HHS Decision</cause>
+ <party fullName="Commissioner of Social Security Adminstration" lastName="Commissioner of Social Security Adminstration" role="Defendant"></party>
+ <party firstName="James" fullName="James E. Swartz" lastName="Swartz" middleName="E." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Swartz v. Commissioner of Social Security Adminstration</title>
+ <partNumber>1:07-cv-01208</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-01208/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:07-cv-01208;07-1208</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security Adminstration</displayForm>
+ <namePart type="family">Commissioner of Social Security Adminstration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James E. Swartz</displayForm>
+ <namePart type="family">Swartz</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_07-cv-01208</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:07-cv-01208</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:405 Review of HHS Decision</cause>
+ <party fullName="Commissioner of Social Security Adminstration" lastName="Commissioner of Social Security Adminstration" role="Defendant"></party>
+ <party firstName="James" fullName="James E. Swartz" lastName="Swartz" middleName="E." role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_07-cv-01208-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01208/USCOURTS-ohnd-1_07-cv-01208-0/mods.xml">
+ <titleInfo>
+  <title>Swartz v. Commissioner of Social Security Adminstration</title>
+  <subTitle>Report and Recommendation that the decision of the Commissioner be Reversed and Remanded to the Social Security Administration for further proceedings not inconsistent with this Report and Recommendation. Objections to R&amp;R due by 1/4/2008. Signed by Magistrate Judge Kenneth S. McHargh on 12/12/07. (R,N)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_07-cv-01208-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816c4b4d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01208/USCOURTS-ohnd-1_07-cv-01208-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_07-cv-01208_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01208/USCOURTS-ohnd-1_07-cv-01208-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-01208/pdf/USCOURTS-ohnd-1_07-cv-01208-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-01208; Swartz v. Commissioner of Social Security Adminstration; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_07-cv-01208-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-12-12</dateIssued>
+  <docketText>Report and Recommendation that the decision of the Commissioner be Reversed and Remanded to the Social Security Administration for further proceedings not inconsistent with this Report and Recommendation. Objections to R&amp;R due by 1/4/2008. Signed by Magistrate Judge Kenneth S. McHargh on 12/12/07. (R,N)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_07-cv-01208-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01208/USCOURTS-ohnd-1_07-cv-01208-1/mods.xml">
+ <titleInfo>
+  <title>Swartz v. Commissioner of Social Security Adminstration</title>
+  <subTitle>Order Adopting Report and Recommendation. The Magistrate Judge&apos;s Report and Recommendation is ADOPTED and the decision of the Commissioner is reversed and remanded to the Social Security Administration for further proceedings, re 14 Report and Recommendation. Signed by Judge Christopher A. Boyko on 01/04/08. (M,M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_07-cv-01208-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816c4b4e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01208/USCOURTS-ohnd-1_07-cv-01208-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_07-cv-01208_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01208/USCOURTS-ohnd-1_07-cv-01208-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-01208/pdf/USCOURTS-ohnd-1_07-cv-01208-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-01208; Swartz v. Commissioner of Social Security Adminstration; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_07-cv-01208-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-04</dateIssued>
+  <docketText>Order Adopting Report and Recommendation. The Magistrate Judge&apos;s Report and Recommendation is ADOPTED and the decision of the Commissioner is reversed and remanded to the Social Security Administration for further proceedings, re 14 Report and Recommendation. Signed by Judge Christopher A. Boyko on 01/04/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+</mods>

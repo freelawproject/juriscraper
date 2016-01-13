@@ -1,0 +1,170 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812d6732">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_08-cv-00163</identifier>
+<identifier type="local">P0b002ee1812d6732</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-4_08-cv-00163</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-4_08-cv-00163</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>4:08-cv-00163</caseNumber>
+ <caseOffice>Columbus</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Other Contract</cause>
+ <party fullName="COLUMBUS BANK AND TRUST COMPANY" lastName="COLUMBUS BANK AND TRUST COMPANY" role="Plaintiff"></party>
+ <party firstName="Roy" fullName="Roy W Granger" lastName="Granger" middleName="W" role="Defendant"></party>
+ <party fullName="Synovus Financial Corporation" lastName="Synovus Financial Corporation" role="Plaintiff"></party>
+ <party fullName="Synovus Leasing Company" lastName="Synovus Leasing Company" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Columbus Bank and Trust Company v. Granger</title>
+ <partNumber>4:08-cv-00163</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_08-cv-00163/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:08-cv-00163;08-163</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Columbus</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>COLUMBUS BANK AND TRUST COMPANY</displayForm>
+ <namePart type="family">COLUMBUS BANK AND TRUST COMPANY</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Roy W Granger</displayForm>
+ <namePart type="family">Granger</namePart>
+ <namePart type="given">Roy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Synovus Financial Corporation</displayForm>
+ <namePart type="family">Synovus Financial Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Synovus Leasing Company</displayForm>
+ <namePart type="family">Synovus Leasing Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-4_08-cv-00163</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>4:08-cv-00163</caseNumber>
+ <caseOffice>Columbus</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Other Contract</cause>
+ <party fullName="COLUMBUS BANK AND TRUST COMPANY" lastName="COLUMBUS BANK AND TRUST COMPANY" role="Plaintiff"></party>
+ <party firstName="Roy" fullName="Roy W Granger" lastName="Granger" middleName="W" role="Defendant"></party>
+ <party fullName="Synovus Financial Corporation" lastName="Synovus Financial Corporation" role="Plaintiff"></party>
+ <party fullName="Synovus Leasing Company" lastName="Synovus Leasing Company" role="Plaintiff"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-4_08-cv-00163-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_08-cv-00163/USCOURTS-gamd-4_08-cv-00163-0/mods.xml">
+ <titleInfo>
+  <title>Columbus Bank and Trust Company v. Granger</title>
+  <subTitle>ORDER denying 10 Motion for Summary Judgment; denying 17 Motion to Strike. Ordered by Judge Clay D. Land on 01/06/2010. (jbo)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-4_08-cv-00163-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812ffaa0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_08-cv-00163/USCOURTS-gamd-4_08-cv-00163-0</identifier>
+ <identifier type="former granule identifier">gamd-4_08-cv-00163_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_08-cv-00163/USCOURTS-gamd-4_08-cv-00163-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_08-cv-00163/pdf/USCOURTS-gamd-4_08-cv-00163-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-00163; Columbus Bank and Trust Company v. Granger; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-4_08-cv-00163-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-06</dateIssued>
+  <docketText>ORDER denying 10 Motion for Summary Judgment; denying 17 Motion to Strike. Ordered by Judge Clay D. Land on 01/06/2010. (jbo)</docketText>
+</extension>
+</relatedItem>
+</mods>

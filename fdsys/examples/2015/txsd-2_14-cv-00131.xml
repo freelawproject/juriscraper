@@ -1,0 +1,478 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18e2a83e8">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Southern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-12-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-12-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">https://www.gpo.gov/fdsys/pkg/USCOURTS-txsd-2_14-cv-00131</identifier>
+<identifier type="local">P0b002ee18e2a83e8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-12-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txsd-2_14-cv-00131</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txsd-2_14-cv-00131</accessId>
+ <courtType>District</courtType>
+ <courtCode>txsd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2483</courtSortOrder>
+ <caseNumber>2:14-cv-00131</caseNumber>
+ <caseOffice>Corpus Christi</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>15:1938 Fair Labor Standards Act</cause>
+ <party fullName="Advanced Solids Control, LLC" lastName="Advanced Solids Control, LLC" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark A Allen" lastName="Allen" middleName="A" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Joseph R. Baeza Jr." generation="Jr." lastName="Baeza" middleName="Joseph R." role="Plaintiff"></party>
+ <party firstName="Lowell" fullName="Lowell D Bartlett" lastName="Bartlett" middleName="D" role="Plaintiff"></party>
+ <party firstName="Craig" fullName="Craig Brockway" lastName="Brockway" role="Plaintiff"></party>
+ <party firstName="Johnathon" fullName="Johnathon Carey" lastName="Carey" role="Plaintiff"></party>
+ <party firstName="Jesse" fullName="Jesse Catalan" lastName="Catalan" role="Plaintiff"></party>
+ <party firstName="Luis" fullName="Luis De La Cruz" lastName="De La Cruz" role="Plaintiff"></party>
+ <party firstName="Raul" fullName="Raul Gamboa" lastName="Gamboa" role="Plaintiff"></party>
+ <party firstName="John" fullName="John D Gerva" lastName="Gerva" middleName="D" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert S Golden" lastName="Golden" middleName="S" role="Plaintiff"></party>
+ <party firstName="Jonathan" fullName="Jonathan C Head" lastName="Head" middleName="C" role="Plaintiff"></party>
+ <party firstName="Johnny" fullName="Johnny A. Jackson" lastName="Jackson" middleName="A." role="Plaintiff"></party>
+ <party firstName="John" fullName="John Johnson" lastName="Johnson" role="Plaintiff"></party>
+ <party firstName="Jeremy" fullName="Jeremy R Jones" lastName="Jones" middleName="R" role="Plaintiff"></party>
+ <party firstName="Guadalupe" fullName="Guadalupe Lara" lastName="Lara" role="Plaintiff"></party>
+ <party firstName="Epolito" fullName="Epolito G Lara" lastName="Lara" middleName="G" role="Plaintiff"></party>
+ <party firstName="Maura" fullName="Maura G. Lara" lastName="Lara" middleName="G." role="Plaintiff"></party>
+ <party firstName="Alejandro" fullName="Alejandro Ledezma" lastName="Ledezma" role="Plaintiff"></party>
+ <party firstName="Emmanuel" fullName="Emmanuel Madison" lastName="Madison" role="Plaintiff"></party>
+ <party firstName="Frank" fullName="Frank Menchaca" lastName="Menchaca" role="Plaintiff"></party>
+ <party firstName="Humberto" fullName="Humberto Montes" lastName="Montes" role="Plaintiff"></party>
+ <party firstName="Jason" fullName="Jason Morris" lastName="Morris" role="Plaintiff"></party>
+ <party firstName="Cory" fullName="Cory Otlewski" lastName="Otlewski" role="Plaintiff"></party>
+ <party firstName="William" fullName="William M. Rowley" lastName="Rowley" middleName="M." role="Plaintiff"></party>
+ <party firstName="Terry" fullName="Terry L Stevenson" lastName="Stevenson" middleName="L" role="Plaintiff"></party>
+ <party firstName="Gerald" fullName="Gerald I Trujillo" lastName="Trujillo" middleName="I" role="Plaintiff"></party>
+ <party firstName="Ronnie" fullName="Ronnie Washington" lastName="Washington" role="Plaintiff"></party>
+ <party firstName="Zach" fullName="Zach Westbrook" lastName="Westbrook" role="Plaintiff"></party>
+ <party firstName="Rodney" fullName="Rodney W. Williams" lastName="Williams" middleName="W." role="Plaintiff"></party>
+ <party firstName="Maurice" fullName="Maurice Wortham" lastName="Wortham" role="Plaintiff"></party>
+ <party firstName="Corry" fullName="Corry Youngblood" lastName="Youngblood" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Westbrook v. Advanced Solids Control, LLC</title>
+ <partNumber>2:14-cv-00131</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/pkg/USCOURTS-txsd-2_14-cv-00131/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-00131;14-131</identifier>
+<name type="corporate">
+ <namePart>United States District Court Southern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Corpus Christi</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Advanced Solids Control, LLC</displayForm>
+ <namePart type="family">Advanced Solids Control, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark A Allen</displayForm>
+ <namePart type="family">Allen</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>David Joseph R. Baeza Jr.</displayForm>
+ <namePart type="family">Baeza</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lowell D Bartlett</displayForm>
+ <namePart type="family">Bartlett</namePart>
+ <namePart type="given">Lowell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Craig Brockway</displayForm>
+ <namePart type="family">Brockway</namePart>
+ <namePart type="given">Craig</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Johnathon Carey</displayForm>
+ <namePart type="family">Carey</namePart>
+ <namePart type="given">Johnathon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jesse Catalan</displayForm>
+ <namePart type="family">Catalan</namePart>
+ <namePart type="given">Jesse</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Luis De La Cruz</displayForm>
+ <namePart type="family">De La Cruz</namePart>
+ <namePart type="given">Luis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Raul Gamboa</displayForm>
+ <namePart type="family">Gamboa</namePart>
+ <namePart type="given">Raul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John D Gerva</displayForm>
+ <namePart type="family">Gerva</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert S Golden</displayForm>
+ <namePart type="family">Golden</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jonathan C Head</displayForm>
+ <namePart type="family">Head</namePart>
+ <namePart type="given">Jonathan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Johnny A. Jackson</displayForm>
+ <namePart type="family">Jackson</namePart>
+ <namePart type="given">Johnny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jeremy R Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Jeremy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Guadalupe Lara</displayForm>
+ <namePart type="family">Lara</namePart>
+ <namePart type="given">Guadalupe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Epolito G Lara</displayForm>
+ <namePart type="family">Lara</namePart>
+ <namePart type="given">Epolito</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Maura G. Lara</displayForm>
+ <namePart type="family">Lara</namePart>
+ <namePart type="given">Maura</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alejandro Ledezma</displayForm>
+ <namePart type="family">Ledezma</namePart>
+ <namePart type="given">Alejandro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Emmanuel Madison</displayForm>
+ <namePart type="family">Madison</namePart>
+ <namePart type="given">Emmanuel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Frank Menchaca</displayForm>
+ <namePart type="family">Menchaca</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Humberto Montes</displayForm>
+ <namePart type="family">Montes</namePart>
+ <namePart type="given">Humberto</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jason Morris</displayForm>
+ <namePart type="family">Morris</namePart>
+ <namePart type="given">Jason</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cory Otlewski</displayForm>
+ <namePart type="family">Otlewski</namePart>
+ <namePart type="given">Cory</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>William M. Rowley</displayForm>
+ <namePart type="family">Rowley</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Terry L Stevenson</displayForm>
+ <namePart type="family">Stevenson</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gerald I Trujillo</displayForm>
+ <namePart type="family">Trujillo</namePart>
+ <namePart type="given">Gerald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ronnie Washington</displayForm>
+ <namePart type="family">Washington</namePart>
+ <namePart type="given">Ronnie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Zach Westbrook</displayForm>
+ <namePart type="family">Westbrook</namePart>
+ <namePart type="given">Zach</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rodney W. Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Rodney</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Maurice Wortham</displayForm>
+ <namePart type="family">Wortham</namePart>
+ <namePart type="given">Maurice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Corry Youngblood</displayForm>
+ <namePart type="family">Youngblood</namePart>
+ <namePart type="given">Corry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txsd-2_14-cv-00131</accessId>
+ <courtType>District</courtType>
+ <courtCode>txsd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2483</courtSortOrder>
+ <caseNumber>2:14-cv-00131</caseNumber>
+ <caseOffice>Corpus Christi</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>15:1938 Fair Labor Standards Act</cause>
+ <party fullName="Advanced Solids Control, LLC" lastName="Advanced Solids Control, LLC" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark A Allen" lastName="Allen" middleName="A" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Joseph R. Baeza Jr." generation="Jr." lastName="Baeza" middleName="Joseph R." role="Plaintiff"></party>
+ <party firstName="Lowell" fullName="Lowell D Bartlett" lastName="Bartlett" middleName="D" role="Plaintiff"></party>
+ <party firstName="Craig" fullName="Craig Brockway" lastName="Brockway" role="Plaintiff"></party>
+ <party firstName="Johnathon" fullName="Johnathon Carey" lastName="Carey" role="Plaintiff"></party>
+ <party firstName="Jesse" fullName="Jesse Catalan" lastName="Catalan" role="Plaintiff"></party>
+ <party firstName="Luis" fullName="Luis De La Cruz" lastName="De La Cruz" role="Plaintiff"></party>
+ <party firstName="Raul" fullName="Raul Gamboa" lastName="Gamboa" role="Plaintiff"></party>
+ <party firstName="John" fullName="John D Gerva" lastName="Gerva" middleName="D" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert S Golden" lastName="Golden" middleName="S" role="Plaintiff"></party>
+ <party firstName="Jonathan" fullName="Jonathan C Head" lastName="Head" middleName="C" role="Plaintiff"></party>
+ <party firstName="Johnny" fullName="Johnny A. Jackson" lastName="Jackson" middleName="A." role="Plaintiff"></party>
+ <party firstName="John" fullName="John Johnson" lastName="Johnson" role="Plaintiff"></party>
+ <party firstName="Jeremy" fullName="Jeremy R Jones" lastName="Jones" middleName="R" role="Plaintiff"></party>
+ <party firstName="Guadalupe" fullName="Guadalupe Lara" lastName="Lara" role="Plaintiff"></party>
+ <party firstName="Epolito" fullName="Epolito G Lara" lastName="Lara" middleName="G" role="Plaintiff"></party>
+ <party firstName="Maura" fullName="Maura G. Lara" lastName="Lara" middleName="G." role="Plaintiff"></party>
+ <party firstName="Alejandro" fullName="Alejandro Ledezma" lastName="Ledezma" role="Plaintiff"></party>
+ <party firstName="Emmanuel" fullName="Emmanuel Madison" lastName="Madison" role="Plaintiff"></party>
+ <party firstName="Frank" fullName="Frank Menchaca" lastName="Menchaca" role="Plaintiff"></party>
+ <party firstName="Humberto" fullName="Humberto Montes" lastName="Montes" role="Plaintiff"></party>
+ <party firstName="Jason" fullName="Jason Morris" lastName="Morris" role="Plaintiff"></party>
+ <party firstName="Cory" fullName="Cory Otlewski" lastName="Otlewski" role="Plaintiff"></party>
+ <party firstName="William" fullName="William M. Rowley" lastName="Rowley" middleName="M." role="Plaintiff"></party>
+ <party firstName="Terry" fullName="Terry L Stevenson" lastName="Stevenson" middleName="L" role="Plaintiff"></party>
+ <party firstName="Gerald" fullName="Gerald I Trujillo" lastName="Trujillo" middleName="I" role="Plaintiff"></party>
+ <party firstName="Ronnie" fullName="Ronnie Washington" lastName="Washington" role="Plaintiff"></party>
+ <party firstName="Zach" fullName="Zach Westbrook" lastName="Westbrook" role="Plaintiff"></party>
+ <party firstName="Rodney" fullName="Rodney W. Williams" lastName="Williams" middleName="W." role="Plaintiff"></party>
+ <party firstName="Maurice" fullName="Maurice Wortham" lastName="Wortham" role="Plaintiff"></party>
+ <party firstName="Corry" fullName="Corry Youngblood" lastName="Youngblood" role="Plaintiff"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txsd-2_14-cv-00131-0" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-txsd-2_14-cv-00131/USCOURTS-txsd-2_14-cv-00131-0/mods.xml">
+ <titleInfo>
+  <title>Westbrook v. Advanced Solids Control, LLC</title>
+  <subTitle>ORDER ON CONDITIONAL CERTIFICATION; granting 10 MOTION Conditional Certification; (Notice of Collective Action and Notice of Consent form to class members due by 1/30/2015, Deft&apos;s to provide to Pltff a list of centrifuge technicians due by 1/16/2015, Consent forms to opt-in to lawsuit due by 3/31/2015)(Signed by Judge Nelva Gonzales Ramos) Parties notified.(lcayce, 2)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-txsd-2_14-cv-00131/pdf/USCOURTS-txsd-2_14-cv-00131-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2bad23</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-txsd-2_14-cv-00131/USCOURTS-txsd-2_14-cv-00131-0</identifier>
+ <identifier type="former granule identifier">txsd-2_14-cv-00131_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-txsd-2_14-cv-00131/USCOURTS-txsd-2_14-cv-00131-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-txsd-2_14-cv-00131/pdf/USCOURTS-txsd-2_14-cv-00131-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00131; Westbrook v. Advanced Solids Control, LLC; </searchTitle>
+  <courtName>United States District Court Southern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txsd-2_14-cv-00131-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER ON CONDITIONAL CERTIFICATION; granting 10 MOTION Conditional Certification; (Notice of Collective Action and Notice of Consent form to class members due by 1/30/2015, Deft&apos;s to provide to Pltff a list of centrifuge technicians due by 1/16/2015, Consent forms to opt-in to lawsuit due by 3/31/2015)(Signed by Judge Nelva Gonzales Ramos) Parties notified.(lcayce, 2)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txsd-2_14-cv-00131-1" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-txsd-2_14-cv-00131/USCOURTS-txsd-2_14-cv-00131-1/mods.xml">
+ <titleInfo>
+  <title>Westbrook v. Advanced Solids Control, LLC</title>
+  <subTitle>ORDER Denying 44 Plaintiff&apos;s Motion to Amend Complaint.(Signed by Magistrate Judge Jason B. Libby) Parties notified.(srussell, 2)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-txsd-2_14-cv-00131/pdf/USCOURTS-txsd-2_14-cv-00131-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2bad22</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-txsd-2_14-cv-00131/USCOURTS-txsd-2_14-cv-00131-1</identifier>
+ <identifier type="former granule identifier">txsd-2_14-cv-00131_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-txsd-2_14-cv-00131/USCOURTS-txsd-2_14-cv-00131-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-txsd-2_14-cv-00131/pdf/USCOURTS-txsd-2_14-cv-00131-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00131; Westbrook v. Advanced Solids Control, LLC; </searchTitle>
+  <courtName>United States District Court Southern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txsd-2_14-cv-00131-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-07-15</dateIssued>
+  <docketText>ORDER Denying 44 Plaintiff&apos;s Motion to Amend Complaint.(Signed by Magistrate Judge Jason B. Libby) Parties notified.(srussell, 2)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txsd-2_14-cv-00131-2" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-txsd-2_14-cv-00131/USCOURTS-txsd-2_14-cv-00131-2/mods.xml">
+ <titleInfo>
+  <title>Westbrook v. Advanced Solids Control, LLC</title>
+  <subTitle>ORDER ON PENDING DISCOVERY MOTIONS granting in part and otherwise denied without prejudice 62 Motion to Compel; granting 68 Motion for Protective Order.(Signed by Magistrate Judge Jason B. Libby) Parties notified.(mserpa, 2)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-txsd-2_14-cv-00131/pdf/USCOURTS-txsd-2_14-cv-00131-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2bad21</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-txsd-2_14-cv-00131/USCOURTS-txsd-2_14-cv-00131-2</identifier>
+ <identifier type="former granule identifier">txsd-2_14-cv-00131_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-txsd-2_14-cv-00131/USCOURTS-txsd-2_14-cv-00131-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-txsd-2_14-cv-00131/pdf/USCOURTS-txsd-2_14-cv-00131-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00131; Westbrook v. Advanced Solids Control, LLC; </searchTitle>
+  <courtName>United States District Court Southern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txsd-2_14-cv-00131-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-12-18</dateIssued>
+  <docketText>ORDER ON PENDING DISCOVERY MOTIONS granting in part and otherwise denied without prejudice 62 Motion to Compel; granting 68 Motion for Protective Order.(Signed by Magistrate Judge Jason B. Libby) Parties notified.(mserpa, 2)</docketText>
+</extension>
+</relatedItem>
+</mods>

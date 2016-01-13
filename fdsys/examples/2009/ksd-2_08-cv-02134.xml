@@ -1,0 +1,152 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee187669a5e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02134</identifier>
+<identifier type="local">P0b002ee187669a5e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_08-cv-02134</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_08-cv-02134</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:08-cv-02134</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>445</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Employment</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party fullName="Hallmark Cards, Inc." lastName="Hallmark Cards, Inc." role="Defendant"></party>
+ <party firstName="Brenda" fullName="Brenda Kenney" lastName="Kenney" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Kenney v. Hallmark Cards, Inc.</title>
+ <partNumber>2:08-cv-02134</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02134/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:08-cv-02134;08-2134</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Hallmark Cards, Inc.</displayForm>
+ <namePart type="family">Hallmark Cards, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brenda Kenney</displayForm>
+ <namePart type="family">Kenney</namePart>
+ <namePart type="given">Brenda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_08-cv-02134</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:08-cv-02134</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>445</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Employment</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party fullName="Hallmark Cards, Inc." lastName="Hallmark Cards, Inc." role="Defendant"></party>
+ <party firstName="Brenda" fullName="Brenda Kenney" lastName="Kenney" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_08-cv-02134-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02134/USCOURTS-ksd-2_08-cv-02134-0/mods.xml">
+ <titleInfo>
+  <title>Kenney v. Hallmark Cards, Inc.</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying as moot 6 Motion to Dismiss. Case is Stayed pending Arbitration. Signed by District Judge Carlos Murguia on 1/7/09. (yh)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02134/pdf/USCOURTS-ksd-2_08-cv-02134-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767a9c6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02134/USCOURTS-ksd-2_08-cv-02134-0</identifier>
+ <identifier type="former granule identifier">ksd-2_08-cv-02134_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02134/USCOURTS-ksd-2_08-cv-02134-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02134/pdf/USCOURTS-ksd-2_08-cv-02134-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02134; Kenney v. Hallmark Cards, Inc.; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_08-cv-02134-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying as moot 6 Motion to Dismiss. Case is Stayed pending Arbitration. Signed by District Judge Carlos Murguia on 1/7/09. (yh)</docketText>
+</extension>
+</relatedItem>
+</mods>

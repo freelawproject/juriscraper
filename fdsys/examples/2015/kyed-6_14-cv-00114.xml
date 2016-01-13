@@ -1,0 +1,369 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d4107fc">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Kentucky</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-08-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-08-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-6_14-cv-00114</identifier>
+<identifier type="local">P0b002ee18d4107fc</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-08-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-08-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-kyed-6_14-cv-00114</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-kyed-6_14-cv-00114</accessId>
+ <courtType>District</courtType>
+ <courtCode>kyed</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Kentucky</courtState>
+ <courtSortOrder>2201</courtSortOrder>
+ <caseNumber>6:14-cv-00114</caseNumber>
+ <caseOffice>London</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1331 Prisoner Civil Rights - Bivens Action</cause>
+ <party firstName="B." fullName="B. Barron" lastName="Barron" role="Defendant"></party>
+ <party firstName="B." fullName="B. Barron" lastName="Barron" role="Official Defendant"></party>
+ <party firstName="Mack" fullName="Mack Bonner" lastName="Bonner" role="Defendant"></party>
+ <party firstName="Mack" fullName="Mack Bonner" lastName="Bonner" role="Official Defendant"></party>
+ <party firstName="A." fullName="A. Bryant" lastName="Bryant" role="Defendant"></party>
+ <party firstName="A." fullName="A. Bryant" lastName="Bryant" role="Official Defendant"></party>
+ <party firstName="John" fullName="John Does" lastName="Does" role="Defendant"></party>
+ <party firstName="C." fullName="C. Griffis" lastName="Griffis" role="Official Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Griffis" lastName="Griffis" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Griffis" lastName="Griffis" role="Official Defendant"></party>
+ <party fullName="H.S.A. Stevens" lastName="H.S.A. Stevens" role="Defendant"></party>
+ <party firstName="J.C." fullName="J.C. Holland" lastName="Holland" role="Defendant"></party>
+ <party firstName="J.C." fullName="J.C. Holland" lastName="Holland" role="Official Defendant"></party>
+ <party firstName="Brian" fullName="Brian Maruka" lastName="Maruka" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Maruka" lastName="Maruka" role="Official Defendant"></party>
+ <party firstName="Jafari" fullName="Jafari T. Moore" lastName="Moore" middleName="T." role="Plaintiff"></party>
+ <party firstName="Charles" fullName="Charles Samuels Jr." generation="Jr." lastName="Samuels" role="Official Defendant"></party>
+ <party firstName="H.S.A." fullName="H.S.A. Stevens" lastName="Stevens" role="Official Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Defendant"></party>
+ <party fullName="United States Agricultural Dept." lastName="United States Agricultural Dept." role="Defendant"></party>
+ <party fullName="United States Department of Justice" lastName="United States Department of Justice" role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Vazquez-Velazquez" lastName="Vazquez-Velazquez" role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Vazquez-Velazquez" lastName="Vazquez-Velazquez" role="Official Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Moore et al v. United States Agricultural Dept. et al</title>
+ <partNumber>6:14-cv-00114</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-6_14-cv-00114/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:14-cv-00114;14-114</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Kentucky</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>London</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>B. Barron</displayForm>
+ <namePart type="family">Barron</namePart>
+ <namePart type="given">B.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>B. Barron</displayForm>
+ <namePart type="family">Barron</namePart>
+ <namePart type="given">B.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Official Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mack Bonner</displayForm>
+ <namePart type="family">Bonner</namePart>
+ <namePart type="given">Mack</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mack Bonner</displayForm>
+ <namePart type="family">Bonner</namePart>
+ <namePart type="given">Mack</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Official Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Bryant</displayForm>
+ <namePart type="family">Bryant</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Bryant</displayForm>
+ <namePart type="family">Bryant</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Official Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Does</displayForm>
+ <namePart type="family">Does</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Griffis</displayForm>
+ <namePart type="family">Griffis</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Official Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher Griffis</displayForm>
+ <namePart type="family">Griffis</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher Griffis</displayForm>
+ <namePart type="family">Griffis</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Official Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>H.S.A. Stevens</displayForm>
+ <namePart type="family">H.S.A. Stevens</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J.C. Holland</displayForm>
+ <namePart type="family">Holland</namePart>
+ <namePart type="given">J.C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J.C. Holland</displayForm>
+ <namePart type="family">Holland</namePart>
+ <namePart type="given">J.C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Official Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian Maruka</displayForm>
+ <namePart type="family">Maruka</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian Maruka</displayForm>
+ <namePart type="family">Maruka</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Official Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jafari T. Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">Jafari</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Samuels Jr.</displayForm>
+ <namePart type="family">Samuels</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Official Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>H.S.A. Stevens</displayForm>
+ <namePart type="family">Stevens</namePart>
+ <namePart type="given">H.S.A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Official Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States Agricultural Dept.</displayForm>
+ <namePart type="family">United States Agricultural Dept.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States Department of Justice</displayForm>
+ <namePart type="family">United States Department of Justice</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jorge Vazquez-Velazquez</displayForm>
+ <namePart type="family">Vazquez-Velazquez</namePart>
+ <namePart type="given">Jorge</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jorge Vazquez-Velazquez</displayForm>
+ <namePart type="family">Vazquez-Velazquez</namePart>
+ <namePart type="given">Jorge</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Official Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-kyed-6_14-cv-00114</accessId>
+ <courtType>District</courtType>
+ <courtCode>kyed</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Kentucky</courtState>
+ <courtSortOrder>2201</courtSortOrder>
+ <caseNumber>6:14-cv-00114</caseNumber>
+ <caseOffice>London</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1331 Prisoner Civil Rights - Bivens Action</cause>
+ <party firstName="B." fullName="B. Barron" lastName="Barron" role="Defendant"></party>
+ <party firstName="B." fullName="B. Barron" lastName="Barron" role="Official Defendant"></party>
+ <party firstName="Mack" fullName="Mack Bonner" lastName="Bonner" role="Defendant"></party>
+ <party firstName="Mack" fullName="Mack Bonner" lastName="Bonner" role="Official Defendant"></party>
+ <party firstName="A." fullName="A. Bryant" lastName="Bryant" role="Defendant"></party>
+ <party firstName="A." fullName="A. Bryant" lastName="Bryant" role="Official Defendant"></party>
+ <party firstName="John" fullName="John Does" lastName="Does" role="Defendant"></party>
+ <party firstName="C." fullName="C. Griffis" lastName="Griffis" role="Official Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Griffis" lastName="Griffis" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Griffis" lastName="Griffis" role="Official Defendant"></party>
+ <party fullName="H.S.A. Stevens" lastName="H.S.A. Stevens" role="Defendant"></party>
+ <party firstName="J.C." fullName="J.C. Holland" lastName="Holland" role="Defendant"></party>
+ <party firstName="J.C." fullName="J.C. Holland" lastName="Holland" role="Official Defendant"></party>
+ <party firstName="Brian" fullName="Brian Maruka" lastName="Maruka" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Maruka" lastName="Maruka" role="Official Defendant"></party>
+ <party firstName="Jafari" fullName="Jafari T. Moore" lastName="Moore" middleName="T." role="Plaintiff"></party>
+ <party firstName="Charles" fullName="Charles Samuels Jr." generation="Jr." lastName="Samuels" role="Official Defendant"></party>
+ <party firstName="H.S.A." fullName="H.S.A. Stevens" lastName="Stevens" role="Official Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Defendant"></party>
+ <party fullName="United States Agricultural Dept." lastName="United States Agricultural Dept." role="Defendant"></party>
+ <party fullName="United States Department of Justice" lastName="United States Department of Justice" role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Vazquez-Velazquez" lastName="Vazquez-Velazquez" role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Vazquez-Velazquez" lastName="Vazquez-Velazquez" role="Official Defendant"></party>
+ <state>Kentucky</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-6_14-cv-00114-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-6_14-cv-00114/USCOURTS-kyed-6_14-cv-00114-0/mods.xml">
+ <titleInfo>
+  <title>Moore et al v. United States Agricultural Dept. et al</title>
+  <subTitle>MEMORANDUM OPINION &amp; ORDER: (1) Moore&apos;s complaint against Dfts Dept of Agriculture and Dept of Justice is DISMISSED because it fails to meet the pleading requirements of Fed. R. Civ. P. 8 and fails state any claim against these two dfts for which relief can be granted. Dfts Dept of Agriculture and Dept of Justice are DISMISSED from this action. (2) Moore&apos;s Bivens claims against all remaining Dfts in their official capacities for violations of the Eighth Amendment are DISMISSED WITH PREJUDICE for failure to state a claim against them for which relief can be granted. (3) Moore&apos;s Bivens claims against the Dfts J.C. Holland, Warden; Brian Maruka, Captain; B. Barron, Business Administrator; and Mr. Stevens, Health Services Administrator in their individual capacities for violations of the Eighth Amendment are DISMISSED WITHOUT PREJUDICE for failure to comply with the pleading requirements of Fed. R. Civ. P. 8. (4) Moore&apos;s Bivens claim against the Dft EMT C. Griffis in his or her individual capacity for violations of the Eighth Amendment is not DISMISSED at this time. The Court reserves jgm on Moores claim against EMT C. Griffis pending the receipt of add&apos;l info from Moore. (5) W/in (21) days of the date of this Order, Moore shall advise the Court whether Nurse Griffin and EMT C. Griffis are one and the same person or whether they are two different persons, and he shall clarify whether his Bivens claim is against Nurse Griffin or EMT C. Griffis or both. (6) No summons shall issue pending the receipt of add&apos;l info from Moore. Signed by Judge David L. Bunning on 01/05/2015.(KJA)cc: COR, mailed paper copy to pro se filer Modified signature date on 1/12/2015 (KJA).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-6_14-cv-00114/pdf/USCOURTS-kyed-6_14-cv-00114-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d41c257</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-6_14-cv-00114/USCOURTS-kyed-6_14-cv-00114-0</identifier>
+ <identifier type="former granule identifier">kyed-6_14-cv-00114_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-6_14-cv-00114/USCOURTS-kyed-6_14-cv-00114-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-6_14-cv-00114/pdf/USCOURTS-kyed-6_14-cv-00114-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:14-cv-00114; Moore et al v. United States Agricultural Dept. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-6_14-cv-00114-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM OPINION &amp; ORDER: (1) Moore&apos;s complaint against Dfts Dept of Agriculture and Dept of Justice is DISMISSED because it fails to meet the pleading requirements of Fed. R. Civ. P. 8 and fails state any claim against these two dfts for which relief can be granted. Dfts Dept of Agriculture and Dept of Justice are DISMISSED from this action. (2) Moore&apos;s Bivens claims against all remaining Dfts in their official capacities for violations of the Eighth Amendment are DISMISSED WITH PREJUDICE for failure to state a claim against them for which relief can be granted. (3) Moore&apos;s Bivens claims against the Dfts J.C. Holland, Warden; Brian Maruka, Captain; B. Barron, Business Administrator; and Mr. Stevens, Health Services Administrator in their individual capacities for violations of the Eighth Amendment are DISMISSED WITHOUT PREJUDICE for failure to comply with the pleading requirements of Fed. R. Civ. P. 8. (4) Moore&apos;s Bivens claim against the Dft EMT C. Griffis in his or her individual capacity for violations of the Eighth Amendment is not DISMISSED at this time. The Court reserves jgm on Moores claim against EMT C. Griffis pending the receipt of add&apos;l info from Moore. (5) W/in (21) days of the date of this Order, Moore shall advise the Court whether Nurse Griffin and EMT C. Griffis are one and the same person or whether they are two different persons, and he shall clarify whether his Bivens claim is against Nurse Griffin or EMT C. Griffis or both. (6) No summons shall issue pending the receipt of add&apos;l info from Moore. Signed by Judge David L. Bunning on 01/05/2015.(KJA)cc: COR, mailed paper copy to pro se filer Modified signature date on 1/12/2015 (KJA).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-6_14-cv-00114-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-6_14-cv-00114/USCOURTS-kyed-6_14-cv-00114-1/mods.xml">
+ <titleInfo>
+  <title>Moore et al v. United States Agricultural Dept. et al</title>
+  <subTitle>MEMORANDUM OPINION &amp; ORDER: 1. Moore&apos;s Motion for Leave to Amend his Complaint [R. 19] is GRANTED, and Moores tendered amended complaint [R. 19-1] SHALL BE FILED nunc pro tunc, as of May 13, 2014. 2. Moores Motion for Reconsideration of the January 5, 2015 Memorandum Opinion and Order [R. 13], dismissing some claims and some defendants [R. 18] is GRANTED to the extent that the Court has reconsidered the January 5, 2015 Memorandum Opinion and Order [R. 13]. Upon reconsideration, the Court REAFFIRMS the dismissal of the claims and the defendants previously dismissed from this action on January 5, 2015. 3. Moores Motion to Clarify the Record as to the identity of Christopher Griffis, EMT at USP-McCreary [R. 18] is GRANTED. 4. Moores Bivens claim against Charles Samuels, Jr., Director of the Bureau of Prisons, in his official capacity for injunctive relief shall proceed, and summons shall issue thereto. 5. Moores Bivens claims against defendants Christopher Griffis, A. Bryant, Jorge Vazquez-Valazquez, M.D., Mack Bonner, M.D. and B. Barron, Business Administrator, all named in the tendered amended complaint [R. 19-1, in their official capacities for violations of the Eighth Amendment are DISMISSED. 6. Moore&apos;s Bivens claims against the defendant Mack Bonner, M.D., in his individual capacity for damages for violations of the Eighth Amendment are DISMISSED WITHOUT PREJUDICE. 7. Moores Bivens claims against the defendants Christopher Griffis, A. Bryant, andJorge Vazquez-Valazquez, M.D., in their individual capacities for violations of the EighthAmendment shall proceed. 8. Moore&apos;s claim against the United States of America under the Federal Tort Claims Act shall proceed at this time. 9. The Clerk shall prepare the documents necessary for service of process upon:a. Charles Samuels, Jr., Director of the Bureau of Prisons;b. Christopher Griffis, EMT, USP-McCreary;c. A. Bryant, P.A., USP-McCreary;d. Jorge Vazquez-Valazquez, M.D., USP-McCreary; and,e. United States of America. 10. The Clerk shall prepare a Service Packet consisting of the following documents for service of process upon the above-mentioned defendants: a. a completed summons form; b. the amended complaint [R. 19-1], Moores Administrative Remedy history [R. 18-2], Moores FTCA claim history [R. 18-3]; Moores medical records [R. 18-4]; Moores correspondence [R. 18-5]; c. this Memorandum Opinion and Order; and, d. a completed United States Marshals Service (USMS) Form 285. 11. The Clerk shall provide the Service Packet(s) to the USMS for service of process to the defendants. 12. Service of Process upon on Charles E. Samuels, Jr., Director of the Bureau ofPrisons, shall be made by serving a Service Packet by certified or registered mail. 13. Service of Process upon Christopher Griffis, EMT, USP-McCreary; A. Bryant,P.A., USP-McCreary; and Jorge Vazquez-Valazquez, M.D., USP-McCreary, shall be conductedby the USMS. 14. Service of Process upon on the United States of America shall be made by serving a Service Packet by certified or registered mail. 15. The USMS shall also serve the defendants by providing a Service Packet by certified or registered mail to: a. the Civil Process Clerk at the Office of the United States Attorney for the Eastern District of Kentucky. b. the Office of the Attorney General of the United States in Washington, D.C.; and, c. the BOPs Central Office in Washington, D.C. 16. The USMS is responsible for ensuring that each defendant is successfully served with process. 17. The plaintiff SHALL: a. Immediately advise the Clerks Office of any change in his currentmailing address. Failure to do so may result in dismissal of this case.b. Communicate with the court solely through notices or motions filed withthe Clerks Office. The court will disregard correspondence sent directly to the judgeschambers.c. In every notice, motion, or paper filed with the court, certify in writingthat he has mailed a copy to every defendant.. Signed by Judge David L. Bunning on 8/3/15.(SYD)cc: Mailed to pro se filer</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-6_14-cv-00114/pdf/USCOURTS-kyed-6_14-cv-00114-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d41c258</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-6_14-cv-00114/USCOURTS-kyed-6_14-cv-00114-1</identifier>
+ <identifier type="former granule identifier">kyed-6_14-cv-00114_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-6_14-cv-00114/USCOURTS-kyed-6_14-cv-00114-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-6_14-cv-00114/pdf/USCOURTS-kyed-6_14-cv-00114-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:14-cv-00114; Moore et al v. United States Agricultural Dept. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-6_14-cv-00114-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-08-13</dateIssued>
+  <docketText>MEMORANDUM OPINION &amp; ORDER: 1. Moore&apos;s Motion for Leave to Amend his Complaint [R. 19] is GRANTED, and Moores tendered amended complaint [R. 19-1] SHALL BE FILED nunc pro tunc, as of May 13, 2014. 2. Moores Motion for Reconsideration of the January 5, 2015 Memorandum Opinion and Order [R. 13], dismissing some claims and some defendants [R. 18] is GRANTED to the extent that the Court has reconsidered the January 5, 2015 Memorandum Opinion and Order [R. 13]. Upon reconsideration, the Court REAFFIRMS the dismissal of the claims and the defendants previously dismissed from this action on January 5, 2015. 3. Moores Motion to Clarify the Record as to the identity of Christopher Griffis, EMT at USP-McCreary [R. 18] is GRANTED. 4. Moores Bivens claim against Charles Samuels, Jr., Director of the Bureau of Prisons, in his official capacity for injunctive relief shall proceed, and summons shall issue thereto. 5. Moores Bivens claims against defendants Christopher Griffis, A. Bryant, Jorge Vazquez-Valazquez, M.D., Mack Bonner, M.D. and B. Barron, Business Administrator, all named in the tendered amended complaint [R. 19-1, in their official capacities for violations of the Eighth Amendment are DISMISSED. 6. Moore&apos;s Bivens claims against the defendant Mack Bonner, M.D., in his individual capacity for damages for violations of the Eighth Amendment are DISMISSED WITHOUT PREJUDICE. 7. Moores Bivens claims against the defendants Christopher Griffis, A. Bryant, andJorge Vazquez-Valazquez, M.D., in their individual capacities for violations of the EighthAmendment shall proceed. 8. Moore&apos;s claim against the United States of America under the Federal Tort Claims Act shall proceed at this time. 9. The Clerk shall prepare the documents necessary for service of process upon:a. Charles Samuels, Jr., Director of the Bureau of Prisons;b. Christopher Griffis, EMT, USP-McCreary;c. A. Bryant, P.A., USP-McCreary;d. Jorge Vazquez-Valazquez, M.D., USP-McCreary; and,e. United States of America. 10. The Clerk shall prepare a Service Packet consisting of the following documents for service of process upon the above-mentioned defendants: a. a completed summons form; b. the amended complaint [R. 19-1], Moores Administrative Remedy history [R. 18-2], Moores FTCA claim history [R. 18-3]; Moores medical records [R. 18-4]; Moores correspondence [R. 18-5]; c. this Memorandum Opinion and Order; and, d. a completed United States Marshals Service (USMS) Form 285. 11. The Clerk shall provide the Service Packet(s) to the USMS for service of process to the defendants. 12. Service of Process upon on Charles E. Samuels, Jr., Director of the Bureau ofPrisons, shall be made by serving a Service Packet by certified or registered mail. 13. Service of Process upon Christopher Griffis, EMT, USP-McCreary; A. Bryant,P.A., USP-McCreary; and Jorge Vazquez-Valazquez, M.D., USP-McCreary, shall be conductedby the USMS. 14. Service of Process upon on the United States of America shall be made by serving a Service Packet by certified or registered mail. 15. The USMS shall also serve the defendants by providing a Service Packet by certified or registered mail to: a. the Civil Process Clerk at the Office of the United States Attorney for the Eastern District of Kentucky. b. the Office of the Attorney General of the United States in Washington, D.C.; and, c. the BOPs Central Office in Washington, D.C. 16. The USMS is responsible for ensuring that each defendant is successfully served with process. 17. The plaintiff SHALL: a. Immediately advise the Clerks Office of any change in his currentmailing address. Failure to do so may result in dismissal of this case.b. Communicate with the court solely through notices or motions filed withthe Clerks Office. The court will disregard correspondence sent directly to the judgeschambers.c. In every notice, motion, or paper filed with the court, certify in writingthat he has mailed a copy to every defendant.. Signed by Judge David L. Bunning on 8/3/15.(SYD)cc: Mailed to pro se filer</docketText>
+</extension>
+</relatedItem>
+</mods>

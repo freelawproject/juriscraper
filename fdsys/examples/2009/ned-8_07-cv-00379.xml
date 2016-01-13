@@ -1,0 +1,510 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181727f3b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00379</identifier>
+<identifier type="local">P0b002ee181727f3b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cv-00379</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cv-00379</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cv-00379</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <cause>17:101 Copyright Infringement</cause>
+ <party fullName="Barclay&apos;s Global Investment Fund" lastName="Barclay&apos;s Global Investment Fund" role="Defendant"></party>
+ <party fullName="Does 1 through 10" lastName="Does 1 through 10" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert A. Eckert" lastName="Eckert" middleName="A." role="Defendant"></party>
+ <party fullName="Fischer Price" lastName="Fischer Price" role="Defendant"></party>
+ <party fullName="Globie International" lastName="Globie International" role="Plaintiff"></party>
+ <party firstName="Dwayne" fullName="Dwayne Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="Dwayne" fullName="Dwayne The Rock Johnson" lastName="Johnson" middleName="The Rock" role="Defendant"></party>
+ <party fullName="Join Wealth, Ltd" lastName="Join Wealth, Ltd" role="Defendant"></party>
+ <party fullName="Magic Planets" lastName="Magic Planets" role="Plaintiff"></party>
+ <party fullName="Mattel" lastName="Mattel" role="Defendant"></party>
+ <party fullName="Mattel Sales" lastName="Mattel Sales" role="Defendant"></party>
+ <party fullName="Mattel, Inc." lastName="Mattel, Inc." role="Defendant"></party>
+ <party fullName="Moto Concepts" lastName="Moto Concepts" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Normile" lastName="Normile" role="Defendant"></party>
+ <party firstName="Jay" fullName="Jay Ottis" lastName="Ottis" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Ottis" lastName="Ottis" role="Plaintiff"></party>
+ <party firstName="J." fullName="J. Paul Ottis" lastName="Ottis" middleName="Paul" role="Plaintiff"></party>
+ <party firstName="Jonathan" fullName="Jonathan Lee Riches" lastName="Riches" middleName="Lee" role="Intervenor Plaintiff"></party>
+ <party fullName="Rock Foundation, The" lastName="Rock Foundation, The" role="Defendant"></party>
+ <party firstName="Bob" fullName="Bob Rossi" lastName="Rossi" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Ottis v. Fischer Price et al</title>
+ <partNumber>8:07-cv-00379</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00379/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:07-cv-00379;07-379</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Barclay&apos;s Global Investment Fund</displayForm>
+ <namePart type="family">Barclay&apos;s Global Investment Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Does 1 through 10</displayForm>
+ <namePart type="family">Does 1 through 10</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert A. Eckert</displayForm>
+ <namePart type="family">Eckert</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fischer Price</displayForm>
+ <namePart type="family">Fischer Price</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Globie International</displayForm>
+ <namePart type="family">Globie International</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dwayne Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Dwayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dwayne The Rock Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Dwayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Join Wealth, Ltd</displayForm>
+ <namePart type="family">Join Wealth, Ltd</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Magic Planets</displayForm>
+ <namePart type="family">Magic Planets</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mattel</displayForm>
+ <namePart type="family">Mattel</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mattel Sales</displayForm>
+ <namePart type="family">Mattel Sales</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mattel, Inc.</displayForm>
+ <namePart type="family">Mattel, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Moto Concepts</displayForm>
+ <namePart type="family">Moto Concepts</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Normile</displayForm>
+ <namePart type="family">Normile</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jay Ottis</displayForm>
+ <namePart type="family">Ottis</namePart>
+ <namePart type="given">Jay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Ottis</displayForm>
+ <namePart type="family">Ottis</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>J. Paul Ottis</displayForm>
+ <namePart type="family">Ottis</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jonathan Lee Riches</displayForm>
+ <namePart type="family">Riches</namePart>
+ <namePart type="given">Jonathan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rock Foundation, The</displayForm>
+ <namePart type="family">Rock Foundation, The</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bob Rossi</displayForm>
+ <namePart type="family">Rossi</namePart>
+ <namePart type="given">Bob</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cv-00379</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cv-00379</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <cause>17:101 Copyright Infringement</cause>
+ <party fullName="Barclay&apos;s Global Investment Fund" lastName="Barclay&apos;s Global Investment Fund" role="Defendant"></party>
+ <party fullName="Does 1 through 10" lastName="Does 1 through 10" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert A. Eckert" lastName="Eckert" middleName="A." role="Defendant"></party>
+ <party fullName="Fischer Price" lastName="Fischer Price" role="Defendant"></party>
+ <party fullName="Globie International" lastName="Globie International" role="Plaintiff"></party>
+ <party firstName="Dwayne" fullName="Dwayne Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="Dwayne" fullName="Dwayne The Rock Johnson" lastName="Johnson" middleName="The Rock" role="Defendant"></party>
+ <party fullName="Join Wealth, Ltd" lastName="Join Wealth, Ltd" role="Defendant"></party>
+ <party fullName="Magic Planets" lastName="Magic Planets" role="Plaintiff"></party>
+ <party fullName="Mattel" lastName="Mattel" role="Defendant"></party>
+ <party fullName="Mattel Sales" lastName="Mattel Sales" role="Defendant"></party>
+ <party fullName="Mattel, Inc." lastName="Mattel, Inc." role="Defendant"></party>
+ <party fullName="Moto Concepts" lastName="Moto Concepts" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Normile" lastName="Normile" role="Defendant"></party>
+ <party firstName="Jay" fullName="Jay Ottis" lastName="Ottis" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Ottis" lastName="Ottis" role="Plaintiff"></party>
+ <party firstName="J." fullName="J. Paul Ottis" lastName="Ottis" middleName="Paul" role="Plaintiff"></party>
+ <party firstName="Jonathan" fullName="Jonathan Lee Riches" lastName="Riches" middleName="Lee" role="Intervenor Plaintiff"></party>
+ <party fullName="Rock Foundation, The" lastName="Rock Foundation, The" role="Defendant"></party>
+ <party firstName="Bob" fullName="Bob Rossi" lastName="Rossi" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00379-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-0/mods.xml">
+ <titleInfo>
+  <title>Ottis v. Fischer Price et al</title>
+  <subTitle>ORDER - This matter is before the court sua sponte. The plaintiff Globie International shall have on or before October 26, 2007, to file its corporatedisclosure statements or show cause why sanctions should not be imposed as against the plaintiff for failure to timely file its statements. Ordered by Magistrate Judge Thomas D. Thalken. (JAE, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00379-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174ef39</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-0</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00379_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00379/pdf/USCOURTS-ned-8_07-cv-00379-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00379; Ottis v. Fischer Price et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00379-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-10-19</dateIssued>
+  <docketText>ORDER - This matter is before the court sua sponte. The plaintiff Globie International shall have on or before October 26, 2007, to file its corporatedisclosure statements or show cause why sanctions should not be imposed as against the plaintiff for failure to timely file its statements. Ordered by Magistrate Judge Thomas D. Thalken. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00379-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-1/mods.xml">
+ <titleInfo>
+  <title>Ottis v. Fischer Price et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 29 Motion to Dismiss; granting 23 Motion to Dismiss. Ordered by Chief Judge Joseph F. Bataillon. (SMS, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00379-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174edbe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-1</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00379_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00379/pdf/USCOURTS-ned-8_07-cv-00379-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00379; Ottis v. Fischer Price et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00379-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-05-30</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 29 Motion to Dismiss; granting 23 Motion to Dismiss. Ordered by Chief Judge Joseph F. Bataillon. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00379-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-2/mods.xml">
+ <titleInfo>
+  <title>Ottis v. Fischer Price et al</title>
+  <subTitle>ORDER denying 46 Motion for Reconsideration; denying 46 Motion to Intervene; denying 46 Motion to Amend; Jonathan Lee Riches&apos;s Notice of Appeal is denied as premature; the Clerks Office is directed to mail a copy of this order to Jonathan Lee Riches&apos;s at his last address of record. Ordered by Chief Judge Joseph F. Bataillon. (copies mailed as directed)(CJP)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00379-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174edbf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-2</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00379_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00379/pdf/USCOURTS-ned-8_07-cv-00379-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00379; Ottis v. Fischer Price et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00379-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-09-12</dateIssued>
+  <docketText>ORDER denying 46 Motion for Reconsideration; denying 46 Motion to Intervene; denying 46 Motion to Amend; Jonathan Lee Riches&apos;s Notice of Appeal is denied as premature; the Clerks Office is directed to mail a copy of this order to Jonathan Lee Riches&apos;s at his last address of record. Ordered by Chief Judge Joseph F. Bataillon. (copies mailed as directed)(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00379-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-3/mods.xml">
+ <titleInfo>
+  <title>Ottis v. Fischer Price et al</title>
+  <subTitle>ORDER regarding Notice of Appeal to USCA54 that within 10 days of the date of this order, Jonathan Lee Riches shall either file a motion for leave to proceed in forma pauperis with supporting documentation or pay the required filing fee; the Clerk&apos;s Office is instructed to mail a copy of this order to Jonathan Lee Riches at his last known address. Ordered by Chief Judge Joseph F. Bataillon. (copy mailed to pro se party)(CJP)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00379-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174ef3c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-3</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00379_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00379/pdf/USCOURTS-ned-8_07-cv-00379-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00379; Ottis v. Fischer Price et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00379-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-10-08</dateIssued>
+  <docketText>ORDER regarding Notice of Appeal to USCA54 that within 10 days of the date of this order, Jonathan Lee Riches shall either file a motion for leave to proceed in forma pauperis with supporting documentation or pay the required filing fee; the Clerk&apos;s Office is instructed to mail a copy of this order to Jonathan Lee Riches at his last known address. Ordered by Chief Judge Joseph F. Bataillon. (copy mailed to pro se party)(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00379-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-4/mods.xml">
+ <titleInfo>
+  <title>Ottis v. Fischer Price et al</title>
+  <subTitle>ORDER regarding Notice of Appeal to USCA 54 filed by Jonathan Lee Riches that the Petitioner shall not be granted leave to appeal in forma pauperis; The Clerk of the court shall not process the appeal to the Court of Appeals;The Clerk of Court is directed to immediately forward a copy of this Order to the parties and to the Eighth Circuit Court of Appeals in accordance with Fed. R. App. P. 24(a)(4); The Clerk&apos;s Office is instructed to mail a copy of this order to Jonathan Lee Riches at his last known address. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party as directed)(ADB, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00379-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174ef3b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-4</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00379_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00379/pdf/USCOURTS-ned-8_07-cv-00379-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00379; Ottis v. Fischer Price et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00379-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-11-07</dateIssued>
+  <docketText>ORDER regarding Notice of Appeal to USCA 54 filed by Jonathan Lee Riches that the Petitioner shall not be granted leave to appeal in forma pauperis; The Clerk of the court shall not process the appeal to the Court of Appeals;The Clerk of Court is directed to immediately forward a copy of this Order to the parties and to the Eighth Circuit Court of Appeals in accordance with Fed. R. App. P. 24(a)(4); The Clerk&apos;s Office is instructed to mail a copy of this order to Jonathan Lee Riches at his last known address. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party as directed)(ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00379-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-5/mods.xml">
+ <titleInfo>
+  <title>Ottis v. Fischer Price et al</title>
+  <subTitle>ORDER that on the court&apos;s own motion, the telephone planning conference previously set for January 16, 2009, at 9:30 a.m. is cancelled and is rescheduled for January 23, 2009 at 9:30 a.m; plaintiff&apos;s counsel shall initiate the telephone conference.Ordered by Magistrate Judge Thomas D. Thalken. (CJP)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00379-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174ef38</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-5</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00379_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00379/pdf/USCOURTS-ned-8_07-cv-00379-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00379; Ottis v. Fischer Price et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00379-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-01-06</dateIssued>
+  <docketText>ORDER that on the court&apos;s own motion, the telephone planning conference previously set for January 16, 2009, at 9:30 a.m. is cancelled and is rescheduled for January 23, 2009 at 9:30 a.m; plaintiff&apos;s counsel shall initiate the telephone conference.Ordered by Magistrate Judge Thomas D. Thalken. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00379-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-6/mods.xml">
+ <titleInfo>
+  <title>Ottis v. Fischer Price et al</title>
+  <subTitle>ORDER, On or before February 9, 2009, the parties shall electronically file a joint stipulation for dismissal (or other dispositive stipulation) and shall submit to Chief Judge Joseph F. Bataillon, at bataillon@ned.uscourts.gov, a draft order which will fully dispose of the case. If the case is being dismissed, the stipulation shall comply with Fed. R. Civ. P. 41(a) and shall state whether the dismissal is with or without prejudice. 2. Absent compliance with this order, this case (including all counterclaims andthe like) may be dismissed without further notice in accordance with NECivR 68.1. 3. The planning conference previously scheduled is cancelled upon therepresentation that this case is settled. ( Dismissal Papers Deadline due by 2/9/2009.), Planning Conference Hearing terminated. Ordered by Magistrate Judge Thomas D. Thalken. (PCV, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00379-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174ef3a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-6</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00379_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00379/pdf/USCOURTS-ned-8_07-cv-00379-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00379; Ottis v. Fischer Price et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00379-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-01-23</dateIssued>
+  <docketText>ORDER, On or before February 9, 2009, the parties shall electronically file a joint stipulation for dismissal (or other dispositive stipulation) and shall submit to Chief Judge Joseph F. Bataillon, at bataillon@ned.uscourts.gov, a draft order which will fully dispose of the case. If the case is being dismissed, the stipulation shall comply with Fed. R. Civ. P. 41(a) and shall state whether the dismissal is with or without prejudice. 2. Absent compliance with this order, this case (including all counterclaims andthe like) may be dismissed without further notice in accordance with NECivR 68.1. 3. The planning conference previously scheduled is cancelled upon therepresentation that this case is settled. ( Dismissal Papers Deadline due by 2/9/2009.), Planning Conference Hearing terminated. Ordered by Magistrate Judge Thomas D. Thalken. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00379-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-7/mods.xml">
+ <titleInfo>
+  <title>Ottis v. Fischer Price et al</title>
+  <subTitle>ORDER OF DISMISSAL - IT IS ORDERED that: 1. The Complaint filed September 24, 2007 and the Amended Complaint filed October 1, 2008, are hereby dismissed with prejudice; and 2. Each of the parties shall bear their own respective costs, expenses and fees. Civil Case Terminated. Ordered by Chief Judge Joseph F. Bataillon. (PCV, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00379-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174edc0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-7</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00379_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00379/USCOURTS-ned-8_07-cv-00379-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00379/pdf/USCOURTS-ned-8_07-cv-00379-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00379; Ottis v. Fischer Price et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00379-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2009-01-26</dateIssued>
+  <docketText>ORDER OF DISMISSAL - IT IS ORDERED that: 1. The Complaint filed September 24, 2007 and the Amended Complaint filed October 1, 2008, are hereby dismissed with prejudice; and 2. Each of the parties shall bear their own respective costs, expenses and fees. Civil Case Terminated. Ordered by Chief Judge Joseph F. Bataillon. (PCV, )</docketText>
+</extension>
+</relatedItem>
+</mods>

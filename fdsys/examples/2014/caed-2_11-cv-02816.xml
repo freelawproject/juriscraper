@@ -1,0 +1,421 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee189775e97">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-07-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-06-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816</identifier>
+<identifier type="local">P0b002ee189775e97</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-07-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-07-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-02816</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-02816</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-02816</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>15:1692 Fair Debt Collection Act</cause>
+ <party fullName="First American Loanstar Trustee Services, LLC" lastName="First American Loanstar Trustee Services, LLC" role="Defendant"></party>
+ <party fullName="First American Title Insurance Company" lastName="First American Title Insurance Company" role="Defendant"></party>
+ <party firstName="Kathi" fullName="Kathi Kalnoki" lastName="Kalnoki" role="Plaintiff"></party>
+ <party firstName="Andrew" fullName="Andrew G. Kalnoki" lastName="Kalnoki" middleName="G." role="Plaintiff"></party>
+ <party fullName="U.S. Bank National Association" lastName="U.S. Bank National Association" role="Defendant"></party>
+ <party fullName="Wells Fargo Home Equity" lastName="Wells Fargo Home Equity" role="Defendant"></party>
+ <party fullName="Wells Fargo Home Mortgage" lastName="Wells Fargo Home Mortgage" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Kalnoki, et al v. First American Loanstar Trustee Services, et al</title>
+ <partNumber>2:11-cv-02816</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-02816;11-2816</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>First American Loanstar Trustee Services, LLC</displayForm>
+ <namePart type="family">First American Loanstar Trustee Services, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>First American Title Insurance Company</displayForm>
+ <namePart type="family">First American Title Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kathi Kalnoki</displayForm>
+ <namePart type="family">Kalnoki</namePart>
+ <namePart type="given">Kathi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Andrew G. Kalnoki</displayForm>
+ <namePart type="family">Kalnoki</namePart>
+ <namePart type="given">Andrew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Bank National Association</displayForm>
+ <namePart type="family">U.S. Bank National Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wells Fargo Home Equity</displayForm>
+ <namePart type="family">Wells Fargo Home Equity</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wells Fargo Home Mortgage</displayForm>
+ <namePart type="family">Wells Fargo Home Mortgage</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-02816</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-02816</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>15:1692 Fair Debt Collection Act</cause>
+ <party fullName="First American Loanstar Trustee Services, LLC" lastName="First American Loanstar Trustee Services, LLC" role="Defendant"></party>
+ <party fullName="First American Title Insurance Company" lastName="First American Title Insurance Company" role="Defendant"></party>
+ <party firstName="Kathi" fullName="Kathi Kalnoki" lastName="Kalnoki" role="Plaintiff"></party>
+ <party firstName="Andrew" fullName="Andrew G. Kalnoki" lastName="Kalnoki" middleName="G." role="Plaintiff"></party>
+ <party fullName="U.S. Bank National Association" lastName="U.S. Bank National Association" role="Defendant"></party>
+ <party fullName="Wells Fargo Home Equity" lastName="Wells Fargo Home Equity" role="Defendant"></party>
+ <party fullName="Wells Fargo Home Mortgage" lastName="Wells Fargo Home Mortgage" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02816-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-0/mods.xml">
+ <titleInfo>
+  <title>Kalnoki, et al v. First American Loanstar Trustee Services, et al</title>
+  <subTitle>scribed service period. (Meuleman, A)ORDER signed by Judge Garland E. Burrell, Jr on 2/16/12 ORDERING notification to Plaintiffs that under Rule 4(m) of the Federal Rules of Civil Procedure, failure to serve Defendant WELLS FARGO HOME EQUITY with process within the 120 day period prescribed in that Rule may result in the unserved defendant being dismissed. To avoid dismissal, on or before 2/24/12, Plaintiffs shall file proof of service for this defendant or a sufficient explanation why service was not effected within Rule 4(m)s pre</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189789ca3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02816_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02816; Kalnoki, et al v. First American Loanstar Trustee Services, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02816-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-02-17</dateIssued>
+  <docketText>scribed service period. (Meuleman, A)ORDER signed by Judge Garland E. Burrell, Jr on 2/16/12 ORDERING notification to Plaintiffs that under Rule 4(m) of the Federal Rules of Civil Procedure, failure to serve Defendant WELLS FARGO HOME EQUITY with process within the 120 day period prescribed in that Rule may result in the unserved defendant being dismissed. To avoid dismissal, on or before 2/24/12, Plaintiffs shall file proof of service for this defendant or a sufficient explanation why service was not effected within Rule 4(m)s pre</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02816-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-1/mods.xml">
+ <titleInfo>
+  <title>Kalnoki, et al v. First American Loanstar Trustee Services, et al</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr. on 04/03/12 ORDERING that plaintiffs&apos; FDCPA claims are DISMISSED. Plaintiffs have 10 days to file an amended complaint solely for the purpose of amending their FDCPA claims. If plaintiffs fail to file an amended complaint within this 10-day period, that failure could be construed as plaintiffs&apos; abandonment of their FDCPA claims, and these claims could then be dismissed with prejudice and judgment could be entered in favor of defendants on these claims. The state claims are REMANDED to the California Superior Court in the County of Sacramento (cc: Sacramento County Superior Court). (Benson, A.)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189789ca1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02816_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02816; Kalnoki, et al v. First American Loanstar Trustee Services, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02816-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-04-04</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr. on 04/03/12 ORDERING that plaintiffs&apos; FDCPA claims are DISMISSED. Plaintiffs have 10 days to file an amended complaint solely for the purpose of amending their FDCPA claims. If plaintiffs fail to file an amended complaint within this 10-day period, that failure could be construed as plaintiffs&apos; abandonment of their FDCPA claims, and these claims could then be dismissed with prejudice and judgment could be entered in favor of defendants on these claims. The state claims are REMANDED to the California Superior Court in the County of Sacramento (cc: Sacramento County Superior Court). (Benson, A.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02816-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-2/mods.xml">
+ <titleInfo>
+  <title>Kalnoki, et al v. First American Loanstar Trustee Services, et al</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr. on 9/7/2012 GRANTING defendants&apos; 37 40 Motions to Dismiss Third Amended Complaint. Plaintiffs are granted 10 days from Order&apos;s filing date to submit a Fourth Amended Complaint addressing deficiencies in its FDCPA claims. (Marciel, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189789ca5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02816_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02816; Kalnoki, et al v. First American Loanstar Trustee Services, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02816-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-09-10</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr. on 9/7/2012 GRANTING defendants&apos; 37 40 Motions to Dismiss Third Amended Complaint. Plaintiffs are granted 10 days from Order&apos;s filing date to submit a Fourth Amended Complaint addressing deficiencies in its FDCPA claims. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02816-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-3/mods.xml">
+ <titleInfo>
+  <title>Kalnoki, et al v. First American Loanstar Trustee Services, et al</title>
+  <subTitle>ORDER CONTINUING STATUS (PRETRIAL SCHEDULING) CONFERENCE signed by Judge Garland E. Burrell, Jr on 9/12/12 ORDERING the Initial Scheduling Conference reset for 3/4/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr; A JOINT status report shall be filed no later than fourteen (14)days prior to the Status Conference. (Becknal, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189789ca4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02816_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02816; Kalnoki, et al v. First American Loanstar Trustee Services, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02816-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-09-12</dateIssued>
+  <docketText>ORDER CONTINUING STATUS (PRETRIAL SCHEDULING) CONFERENCE signed by Judge Garland E. Burrell, Jr on 9/12/12 ORDERING the Initial Scheduling Conference reset for 3/4/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr; A JOINT status report shall be filed no later than fourteen (14)days prior to the Status Conference. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02816-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-4/mods.xml">
+ <titleInfo>
+  <title>Kalnoki, et al v. First American Loanstar Trustee Services, et al</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr on 6/24/13 ORDERING for the stated reasons, Plaintiffs&apos; Complaint is DISMISSED. However, Plaintiffs are granted fourteen (14) days from the date on which this order is filed to file a fifth amended complaint addressing the deficiencies in their FDCPA claim. Plaintiffs are notified that failure to file an amended complaint within the prescribed time period could result in dismissal with prejudice under Federal Rule of Civil Procedure 41(b). (Becknal, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189789ca9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-4</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02816_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02816; Kalnoki, et al v. First American Loanstar Trustee Services, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02816-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-06-25</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr on 6/24/13 ORDERING for the stated reasons, Plaintiffs&apos; Complaint is DISMISSED. However, Plaintiffs are granted fourteen (14) days from the date on which this order is filed to file a fifth amended complaint addressing the deficiencies in their FDCPA claim. Plaintiffs are notified that failure to file an amended complaint within the prescribed time period could result in dismissal with prejudice under Federal Rule of Civil Procedure 41(b). (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02816-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-5/mods.xml">
+ <titleInfo>
+  <title>Kalnoki, et al v. First American Loanstar Trustee Services, et al</title>
+  <subTitle>ddressing the deficiencies in the FAC. (Zignago, K.)ORDER signed by Judge Garland E. Burrell, Jr. on 1/3/2014 ORDERING that Plaintiffs&apos; 82 fifth amended complaint is DISMISSED. Plaintiffs are GRANTED ten (10) days from the date on which this order is filed to file a sixth amended complaint a</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189789ca2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-5</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02816_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02816; Kalnoki, et al v. First American Loanstar Trustee Services, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02816-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ddressing the deficiencies in the FAC. (Zignago, K.)ORDER signed by Judge Garland E. Burrell, Jr. on 1/3/2014 ORDERING that Plaintiffs&apos; 82 fifth amended complaint is DISMISSED. Plaintiffs are GRANTED ten (10) days from the date on which this order is filed to file a sixth amended complaint a</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02816-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-6/mods.xml">
+ <titleInfo>
+  <title>Kalnoki, et al v. First American Loanstar Trustee Services, et al</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr. on 1/28/2014 ORDERING the plaintiffs to file by 2/21/2014, a motion in which leave is sought under F.R.Cv.P. Rule 15(a) to file the referenced amendments; CONTINUING the Status (Pretrial Scheduling) Conference to 4/28/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell, Jr.; ORDERING that a further joint stauts report be filed fourteen (14)days prior to the Status (Pretrial Scheduling) Conference. (Michel, G)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189789ca6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-6</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02816_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02816; Kalnoki, et al v. First American Loanstar Trustee Services, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02816-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-01-28</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr. on 1/28/2014 ORDERING the plaintiffs to file by 2/21/2014, a motion in which leave is sought under F.R.Cv.P. Rule 15(a) to file the referenced amendments; CONTINUING the Status (Pretrial Scheduling) Conference to 4/28/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell, Jr.; ORDERING that a further joint stauts report be filed fourteen (14)days prior to the Status (Pretrial Scheduling) Conference. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02816-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-7/mods.xml">
+ <titleInfo>
+  <title>Kalnoki, et al v. First American Loanstar Trustee Services, et al</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr., on 4/28/14 ORDERING that Plaintiffs&apos; 112 motion to amend is DENIED, and Plaintiffs Sixth Amended Complaint is DISMISSED with prejudice. Judgment shall be entered in favor of Defendants LoanStar, FATCO, Wells Fargo Bank, NA, and U.S. Bank, NA on the FDCPA claims, and this action shall be closed. CASE CLOSED (Kastilahn, A)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189789ca7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-7</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02816_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02816; Kalnoki, et al v. First American Loanstar Trustee Services, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02816-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-04-29</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr., on 4/28/14 ORDERING that Plaintiffs&apos; 112 motion to amend is DENIED, and Plaintiffs Sixth Amended Complaint is DISMISSED with prejudice. Judgment shall be entered in favor of Defendants LoanStar, FATCO, Wells Fargo Bank, NA, and U.S. Bank, NA on the FDCPA claims, and this action shall be closed. CASE CLOSED (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-02816-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-8/mods.xml">
+ <titleInfo>
+  <title>Kalnoki, et al v. First American Loanstar Trustee Services, et al</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr on 6/25/14 DENYING 138 Motion for Reconsideration. (Meuleman, A)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189789ca8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-8</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-02816_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-02816/USCOURTS-caed-2_11-cv-02816-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-02816/pdf/USCOURTS-caed-2_11-cv-02816-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-02816; Kalnoki, et al v. First American Loanstar Trustee Services, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-02816-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-06-26</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr on 6/25/14 DENYING 138 Motion for Reconsideration. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

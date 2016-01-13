@@ -1,0 +1,411 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee189729b39">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-07-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-07-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189</identifier>
+<identifier type="local">P0b002ee189729b39</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-07-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-07-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-01189</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01189</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01189</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party fullName="Americo Financial Life And Annuity Insurance Company" lastName="Americo Financial Life And Annuity Insurance Company" role="Defendant"></party>
+ <party fullName="Americo Life, Inc." lastName="Americo Life, Inc." role="Defendant"></party>
+ <party fullName="Fremont Life Insurance Company" lastName="Fremont Life Insurance Company" role="Counter Defendant"></party>
+ <party fullName="Fremont Life Insurance Company" lastName="Fremont Life Insurance Company" role="Defendant"></party>
+ <party fullName="Great Southern Life Insurance Company" lastName="Great Southern Life Insurance Company" role="Counter Claimant"></party>
+ <party fullName="Great Southern Life Insurance Company" lastName="Great Southern Life Insurance Company" role="Defendant"></party>
+ <party firstName="Diana" fullName="Diana McMillen" lastName="McMillen" role="Counter Claimant"></party>
+ <party firstName="Diana" fullName="Diana McMillen" lastName="McMillen" role="Counter Defendant"></party>
+ <party firstName="Diana" fullName="Diana McMillen" lastName="McMillen" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>McMillen v. Americo Financial Life And Annuity Insurance Company et al</title>
+ <partNumber>1:13-cv-01189</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-01189;13-1189</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Americo Financial Life And Annuity Insurance Company</displayForm>
+ <namePart type="family">Americo Financial Life And Annuity Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Americo Life, Inc.</displayForm>
+ <namePart type="family">Americo Life, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fremont Life Insurance Company</displayForm>
+ <namePart type="family">Fremont Life Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fremont Life Insurance Company</displayForm>
+ <namePart type="family">Fremont Life Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Great Southern Life Insurance Company</displayForm>
+ <namePart type="family">Great Southern Life Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Great Southern Life Insurance Company</displayForm>
+ <namePart type="family">Great Southern Life Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Diana McMillen</displayForm>
+ <namePart type="family">McMillen</namePart>
+ <namePart type="given">Diana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Diana McMillen</displayForm>
+ <namePart type="family">McMillen</namePart>
+ <namePart type="given">Diana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Diana McMillen</displayForm>
+ <namePart type="family">McMillen</namePart>
+ <namePart type="given">Diana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01189</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01189</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party fullName="Americo Financial Life And Annuity Insurance Company" lastName="Americo Financial Life And Annuity Insurance Company" role="Defendant"></party>
+ <party fullName="Americo Life, Inc." lastName="Americo Life, Inc." role="Defendant"></party>
+ <party fullName="Fremont Life Insurance Company" lastName="Fremont Life Insurance Company" role="Counter Defendant"></party>
+ <party fullName="Fremont Life Insurance Company" lastName="Fremont Life Insurance Company" role="Defendant"></party>
+ <party fullName="Great Southern Life Insurance Company" lastName="Great Southern Life Insurance Company" role="Counter Claimant"></party>
+ <party fullName="Great Southern Life Insurance Company" lastName="Great Southern Life Insurance Company" role="Defendant"></party>
+ <party firstName="Diana" fullName="Diana McMillen" lastName="McMillen" role="Counter Claimant"></party>
+ <party firstName="Diana" fullName="Diana McMillen" lastName="McMillen" role="Counter Defendant"></party>
+ <party firstName="Diana" fullName="Diana McMillen" lastName="McMillen" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01189-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-0/mods.xml">
+ <titleInfo>
+  <title>McMillen v. Americo Financial Life And Annuity Insurance Company et al</title>
+  <subTitle>ORDER GRANTING Stipulation to File First Amended Complaint 14, signed by Magistrate Judge Jennifer L. Thurston on 1/2/2014. (Hall, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189735e31</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01189_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01189; McMillen v. Americo Financial Life And Annuity Insurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01189-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER GRANTING Stipulation to File First Amended Complaint 14, signed by Magistrate Judge Jennifer L. Thurston on 1/2/2014. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01189-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-1/mods.xml">
+ <titleInfo>
+  <title>McMillen v. Americo Financial Life And Annuity Insurance Company et al</title>
+  <subTitle>ORDER ON SUMMARY JUDGMENT BRIEFING AND HEARING (Doc. 24) signed by District Judge Lawrence J. O&apos;Neill on February 11, 2014. Motion Hearing currently set for 2/26/2014 is VACATED. (Munoz, I)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189735e2c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01189_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01189; McMillen v. Americo Financial Life And Annuity Insurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01189-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-02-11</dateIssued>
+  <docketText>ORDER ON SUMMARY JUDGMENT BRIEFING AND HEARING (Doc. 24) signed by District Judge Lawrence J. O&apos;Neill on February 11, 2014. Motion Hearing currently set for 2/26/2014 is VACATED. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01189-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-2/mods.xml">
+ <titleInfo>
+  <title>McMillen v. Americo Financial Life And Annuity Insurance Company et al</title>
+  <subTitle>ORDER CONTINUING SETTLEMENT CONFERENCE, signed by Magistrate Judge Jennifer L. Thurston on 2/24/2014. Settlement Conference CONTINUED to 6/5/2014 at 09:30 AM in Bakersfield at 510 19th Street (JLT) before Magistrate Judge Jennifer L. Thurston. (Hall, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189735e2d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01189_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01189; McMillen v. Americo Financial Life And Annuity Insurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01189-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-02-24</dateIssued>
+  <docketText>ORDER CONTINUING SETTLEMENT CONFERENCE, signed by Magistrate Judge Jennifer L. Thurston on 2/24/2014. Settlement Conference CONTINUED to 6/5/2014 at 09:30 AM in Bakersfield at 510 19th Street (JLT) before Magistrate Judge Jennifer L. Thurston. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01189-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-3/mods.xml">
+ <titleInfo>
+  <title>McMillen v. Americo Financial Life And Annuity Insurance Company et al</title>
+  <subTitle>ORDER GRANTING IN PART AND DENYING IN PART Defendants&apos; 23 Motion for Summary Judgment; ORDER GRANTS Summary Judgment In Favor of AFLAIC and AFI; ORDER DIRECTING Clerk of the Court to enter Judgment Against Ms. McMillen and In Favor of AFLAIC and AFI pursuant to Rule 54(b)and DENIES GSL Summary Judgment, signed by District Judge Lawrence J. O&apos;Neill on 03/25//2014. (Martin-Gill, S)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189735e2e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01189_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01189; McMillen v. Americo Financial Life And Annuity Insurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01189-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-03-26</dateIssued>
+  <docketText>ORDER GRANTING IN PART AND DENYING IN PART Defendants&apos; 23 Motion for Summary Judgment; ORDER GRANTS Summary Judgment In Favor of AFLAIC and AFI; ORDER DIRECTING Clerk of the Court to enter Judgment Against Ms. McMillen and In Favor of AFLAIC and AFI pursuant to Rule 54(b)and DENIES GSL Summary Judgment, signed by District Judge Lawrence J. O&apos;Neill on 03/25//2014. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01189-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-4/mods.xml">
+ <titleInfo>
+  <title>McMillen v. Americo Financial Life And Annuity Insurance Company et al</title>
+  <subTitle>ORDER GRANTING 41 Stipulation to Amend the Scheduling Order, signed by Magistrate Judge Jennifer L. Thurston on 4/3/2014. Settlement Conference ADVANCED to 6/4/2014 at 09:30 AM at the United States Courthouse, 510 19th Street (JLT), Bakersfield, before Magistrate Judge Jennifer L. Thurston. (Hall, S)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189735ebe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01189_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01189; McMillen v. Americo Financial Life And Annuity Insurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01189-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-04-03</dateIssued>
+  <docketText>ORDER GRANTING 41 Stipulation to Amend the Scheduling Order, signed by Magistrate Judge Jennifer L. Thurston on 4/3/2014. Settlement Conference ADVANCED to 6/4/2014 at 09:30 AM at the United States Courthouse, 510 19th Street (JLT), Bakersfield, before Magistrate Judge Jennifer L. Thurston. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01189-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-5/mods.xml">
+ <titleInfo>
+  <title>McMillen v. Americo Financial Life And Annuity Insurance Company et al</title>
+  <subTitle>CONSENT ORDER GRANTING 44 Substitution of Attorney, signed by Magistrate Judge Jennifer L. Thurston on 04/14/14. (Diana McMillen substitutes Robert L. Esensten of Esensten Law in place of Robert L. Esensten of Wasserman, Comden, Casselman &amp; Esensten, LLP)(Martin-Gill, S)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189735e30</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-5</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01189_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01189; McMillen v. Americo Financial Life And Annuity Insurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01189-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-04-16</dateIssued>
+  <docketText>CONSENT ORDER GRANTING 44 Substitution of Attorney, signed by Magistrate Judge Jennifer L. Thurston on 04/14/14. (Diana McMillen substitutes Robert L. Esensten of Esensten Law in place of Robert L. Esensten of Wasserman, Comden, Casselman &amp; Esensten, LLP)(Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01189-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-6/mods.xml">
+ <titleInfo>
+  <title>McMillen v. Americo Financial Life And Annuity Insurance Company et al</title>
+  <subTitle>ORDER SETTING BRIEFING SCHEDULE RE: Plaintiff&apos;s Entitlement to a Jury Trial, Signed by Magistrate Judge Jennifer L. Thurston on 5/27/2014. The parties shall file their briefs by 6/17/2014. Responsive briefs shall be filed by 7/1/2014. Briefs shall not exceed 10 pages. (Arellano, S.)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189735e2f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-6</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01189_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01189; McMillen v. Americo Financial Life And Annuity Insurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01189-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-05-27</dateIssued>
+  <docketText>ORDER SETTING BRIEFING SCHEDULE RE: Plaintiff&apos;s Entitlement to a Jury Trial, Signed by Magistrate Judge Jennifer L. Thurston on 5/27/2014. The parties shall file their briefs by 6/17/2014. Responsive briefs shall be filed by 7/1/2014. Briefs shall not exceed 10 pages. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01189-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-7/mods.xml">
+ <titleInfo>
+  <title>McMillen v. Americo Financial Life And Annuity Insurance Company et al</title>
+  <subTitle>ORDER to Dismiss and Close Action re 51, signed by District Judge Lawrence J. O&apos;Neill on 07/02/14. CASE CLOSED. (Gonzalez, R)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189735ebf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-7</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01189_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01189/USCOURTS-caed-1_13-cv-01189-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01189/pdf/USCOURTS-caed-1_13-cv-01189-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01189; McMillen v. Americo Financial Life And Annuity Insurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01189-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-07-02</dateIssued>
+  <docketText>ORDER to Dismiss and Close Action re 51, signed by District Judge Lawrence J. O&apos;Neill on 07/02/14. CASE CLOSED. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

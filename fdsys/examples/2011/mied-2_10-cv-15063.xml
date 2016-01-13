@@ -1,0 +1,222 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818f1c9f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-15063</identifier>
+<identifier type="local">P0b002ee1818f1c9f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_10-cv-15063</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_10-cv-15063</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:10-cv-15063</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>362</natureSuitCode>
+ <natureSuit>Medical Malpractice</natureSuit>
+ <party firstName="John" fullName="John Barnewell" lastName="Barnewell" role="Defendant"></party>
+ <party fullName="Detroit Medical Center" lastName="Detroit Medical Center" role="Defendant"></party>
+ <party firstName="James" fullName="James Joseph Glazier" lastName="Glazier" middleName="Joseph" role="Defendant"></party>
+ <party fullName="Harper Hospital" lastName="Harper Hospital" role="Defendant"></party>
+ <party firstName="Barbara" fullName="Barbara Lewis-Clark" lastName="Lewis-Clark" role="Plaintiff"></party>
+ <party firstName="Treva" fullName="Treva Neino" lastName="Neino" role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Piper" lastName="Piper" role="Defendant"></party>
+ <party firstName="Kallene" fullName="Kallene Rutherford" lastName="Rutherford" role="Defendant"></party>
+ <party firstName="N." fullName="N. Rutherford" lastName="Rutherford" role="Defendant"></party>
+ <party firstName="Virginia" fullName="Virginia Tekelli" lastName="Tekelli" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Lewis-Clark v. Harper Hospital et al</title>
+ <partNumber>2:10-cv-15063</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-15063/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cv-15063;10-15063</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John Barnewell</displayForm>
+ <namePart type="family">Barnewell</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Detroit Medical Center</displayForm>
+ <namePart type="family">Detroit Medical Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Joseph Glazier</displayForm>
+ <namePart type="family">Glazier</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harper Hospital</displayForm>
+ <namePart type="family">Harper Hospital</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Barbara Lewis-Clark</displayForm>
+ <namePart type="family">Lewis-Clark</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Treva Neino</displayForm>
+ <namePart type="family">Neino</namePart>
+ <namePart type="given">Treva</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jennifer Piper</displayForm>
+ <namePart type="family">Piper</namePart>
+ <namePart type="given">Jennifer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kallene Rutherford</displayForm>
+ <namePart type="family">Rutherford</namePart>
+ <namePart type="given">Kallene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>N. Rutherford</displayForm>
+ <namePart type="family">Rutherford</namePart>
+ <namePart type="given">N.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Virginia Tekelli</displayForm>
+ <namePart type="family">Tekelli</namePart>
+ <namePart type="given">Virginia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_10-cv-15063</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:10-cv-15063</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>362</natureSuitCode>
+ <natureSuit>Medical Malpractice</natureSuit>
+ <party firstName="John" fullName="John Barnewell" lastName="Barnewell" role="Defendant"></party>
+ <party fullName="Detroit Medical Center" lastName="Detroit Medical Center" role="Defendant"></party>
+ <party firstName="James" fullName="James Joseph Glazier" lastName="Glazier" middleName="Joseph" role="Defendant"></party>
+ <party fullName="Harper Hospital" lastName="Harper Hospital" role="Defendant"></party>
+ <party firstName="Barbara" fullName="Barbara Lewis-Clark" lastName="Lewis-Clark" role="Plaintiff"></party>
+ <party firstName="Treva" fullName="Treva Neino" lastName="Neino" role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Piper" lastName="Piper" role="Defendant"></party>
+ <party firstName="Kallene" fullName="Kallene Rutherford" lastName="Rutherford" role="Defendant"></party>
+ <party firstName="N." fullName="N. Rutherford" lastName="Rutherford" role="Defendant"></party>
+ <party firstName="Virginia" fullName="Virginia Tekelli" lastName="Tekelli" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_10-cv-15063-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-15063/USCOURTS-mied-2_10-cv-15063-0/mods.xml">
+ <titleInfo>
+  <title>Lewis-Clark v. Harper Hospital et al</title>
+  <subTitle>ORDER DISMISSING CASE With Prejudice Signed by District Judge Victoria A Roberts. (CPin)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_10-cv-15063-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181939c82</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-15063/USCOURTS-mied-2_10-cv-15063-0</identifier>
+ <identifier type="former granule identifier">mied-2_10-cv-15063_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-15063/USCOURTS-mied-2_10-cv-15063-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-15063/pdf/USCOURTS-mied-2_10-cv-15063-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-15063; Lewis-Clark v. Harper Hospital et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_10-cv-15063-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-10</dateIssued>
+  <docketText>ORDER DISMISSING CASE With Prejudice Signed by District Judge Victoria A Roberts. (CPin)</docketText>
+</extension>
+</relatedItem>
+</mods>

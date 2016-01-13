@@ -1,0 +1,392 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180fd41e5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00320</identifier>
+<identifier type="local">P0b002ee180fd41e5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-1_05-cv-00320</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_05-cv-00320</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:05-cv-00320</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="Alliance Asphalt Inc" lastName="Alliance Asphalt Inc" role="Counter Claimant"></party>
+ <party fullName="Alliance Asphalt Inc" lastName="Alliance Asphalt Inc" role="Defendant"></party>
+ <party fullName="Semmaterials LP" lastName="Semmaterials LP" role="Counter Defendant"></party>
+ <party fullName="Semmaterials LP" lastName="Semmaterials LP" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Semmaterials LP v. Alliance Asphalt Inc</title>
+ <partNumber>1:05-cv-00320</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00320/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-00320;05-320</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Boise - Southern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Alliance Asphalt Inc</displayForm>
+ <namePart type="family">Alliance Asphalt Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Alliance Asphalt Inc</displayForm>
+ <namePart type="family">Alliance Asphalt Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Semmaterials LP</displayForm>
+ <namePart type="family">Semmaterials LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Semmaterials LP</displayForm>
+ <namePart type="family">Semmaterials LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_05-cv-00320</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:05-cv-00320</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="Alliance Asphalt Inc" lastName="Alliance Asphalt Inc" role="Counter Claimant"></party>
+ <party fullName="Alliance Asphalt Inc" lastName="Alliance Asphalt Inc" role="Defendant"></party>
+ <party fullName="Semmaterials LP" lastName="Semmaterials LP" role="Counter Defendant"></party>
+ <party fullName="Semmaterials LP" lastName="Semmaterials LP" role="Plaintiff"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_05-cv-00320-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-0/mods.xml">
+ <titleInfo>
+  <title>Semmaterials LP v. Alliance Asphalt Inc</title>
+  <subTitle>ORDER granting in part 35 Motion for Temporary Restraining Order and Preliminary Injunction. Plaintiff&apos;s request for a TRO is granted but the Court&apos;s ruling on Plaintiff&apos;s request for a preliminary injunction is deferred until after a hearing can be held on the request. (cc: Susan Buckley Watson and Cory&amp;Kristina Rose by ja). Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_05-cv-00320-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fec443</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-0</identifier>
+ <identifier type="former granule identifier">idd-1_05-cv-00320_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00320/pdf/USCOURTS-idd-1_05-cv-00320-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00320; Semmaterials LP v. Alliance Asphalt Inc; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_05-cv-00320-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-12-20</dateIssued>
+  <docketText>ORDER granting in part 35 Motion for Temporary Restraining Order and Preliminary Injunction. Plaintiff&apos;s request for a TRO is granted but the Court&apos;s ruling on Plaintiff&apos;s request for a preliminary injunction is deferred until after a hearing can be held on the request. (cc: Susan Buckley Watson and Cory&amp;Kristina Rose by ja). Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_05-cv-00320-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-1/mods.xml">
+ <titleInfo>
+  <title>Semmaterials LP v. Alliance Asphalt Inc</title>
+  <subTitle>ORDER- Plaintiffs Motion for Preliminary Injunction (contained in Docket No. 35) is GRANTED, disposing of Docket Number 35 in its entirety. The preliminary injunction shall be in effect as of January 3, 2007 nunc pro tunc. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_05-cv-00320-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fec3c6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-1</identifier>
+ <identifier type="former granule identifier">idd-1_05-cv-00320_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00320/pdf/USCOURTS-idd-1_05-cv-00320-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00320; Semmaterials LP v. Alliance Asphalt Inc; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_05-cv-00320-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-05</dateIssued>
+  <docketText>ORDER- Plaintiffs Motion for Preliminary Injunction (contained in Docket No. 35) is GRANTED, disposing of Docket Number 35 in its entirety. The preliminary injunction shall be in effect as of January 3, 2007 nunc pro tunc. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_05-cv-00320-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-2/mods.xml">
+ <titleInfo>
+  <title>Semmaterials LP v. Alliance Asphalt Inc</title>
+  <subTitle>ORDER granting 38 Motion for Attorney Fees. Defendant Alliance Asphalt shall pay $2,310.00 to Plaintiff for the expense incurred in bringing Plaintiff&apos;s Motion to Compel. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jlg, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_05-cv-00320-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fec43f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-2</identifier>
+ <identifier type="former granule identifier">idd-1_05-cv-00320_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00320/pdf/USCOURTS-idd-1_05-cv-00320-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00320; Semmaterials LP v. Alliance Asphalt Inc; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_05-cv-00320-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-25</dateIssued>
+  <docketText>ORDER granting 38 Motion for Attorney Fees. Defendant Alliance Asphalt shall pay $2,310.00 to Plaintiff for the expense incurred in bringing Plaintiff&apos;s Motion to Compel. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jlg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_05-cv-00320-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-3/mods.xml">
+ <titleInfo>
+  <title>Semmaterials LP v. Alliance Asphalt Inc</title>
+  <subTitle>FINDINGS OF FACT, CONCLUSIONS OF LAW AND ORDER granting 33 Plaintiff&apos;s Motion for Default Judgment and dismissing this case with prejudice. The Court will enter a Default Judgment consistent with the Findings of Fact and Conclusions of Law and will include an award of pre-judgment interest under Idaho Code 28-22-104(1) as requested by counsel at the hearing. Plaintiff&apos;s oral motion for attorney fees and costs is granted. A copy of this Order along with the Default Judgment shall be personally served on Susan Buckley Watson and Cory&amp;Kristina Rose. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jlg, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_05-cv-00320-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fec444</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-3</identifier>
+ <identifier type="former granule identifier">idd-1_05-cv-00320_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00320/pdf/USCOURTS-idd-1_05-cv-00320-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00320; Semmaterials LP v. Alliance Asphalt Inc; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_05-cv-00320-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-01-25</dateIssued>
+  <docketText>FINDINGS OF FACT, CONCLUSIONS OF LAW AND ORDER granting 33 Plaintiff&apos;s Motion for Default Judgment and dismissing this case with prejudice. The Court will enter a Default Judgment consistent with the Findings of Fact and Conclusions of Law and will include an award of pre-judgment interest under Idaho Code 28-22-104(1) as requested by counsel at the hearing. Plaintiff&apos;s oral motion for attorney fees and costs is granted. A copy of this Order along with the Default Judgment shall be personally served on Susan Buckley Watson and Cory&amp;Kristina Rose. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jlg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_05-cv-00320-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-4/mods.xml">
+ <titleInfo>
+  <title>Semmaterials LP v. Alliance Asphalt Inc</title>
+  <subTitle>DEFAULT JUDGMENT in favor of Semmaterials LP and against Alliance Asphalt Inc for a total judgment of $267,103.12. This case is Dismissed in its entirety, with prejudice. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jlg, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_05-cv-00320-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fec442</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-4</identifier>
+ <identifier type="former granule identifier">idd-1_05-cv-00320_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00320/pdf/USCOURTS-idd-1_05-cv-00320-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00320; Semmaterials LP v. Alliance Asphalt Inc; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_05-cv-00320-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-01-25</dateIssued>
+  <docketText>DEFAULT JUDGMENT in favor of Semmaterials LP and against Alliance Asphalt Inc for a total judgment of $267,103.12. This case is Dismissed in its entirety, with prejudice. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jlg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_05-cv-00320-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-5/mods.xml">
+ <titleInfo>
+  <title>Semmaterials LP v. Alliance Asphalt Inc</title>
+  <subTitle>ORDER re 47 MOTION for Attorney Fees Plaintiff&apos;s Petition for Attorney&apos;s Fees and Non-Taxable Costs filed by Semmaterials LP. Signed by Judge Larry M. Boyle. (Attachments: # (1) Appendix A# (2) Appendix)(caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_05-cv-00320-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fec3c5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-5</identifier>
+ <identifier type="former granule identifier">idd-1_05-cv-00320_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00320/pdf/USCOURTS-idd-1_05-cv-00320-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00320; Semmaterials LP v. Alliance Asphalt Inc; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_05-cv-00320-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-03-01</dateIssued>
+  <docketText>ORDER re 47 MOTION for Attorney Fees Plaintiff&apos;s Petition for Attorney&apos;s Fees and Non-Taxable Costs filed by Semmaterials LP. Signed by Judge Larry M. Boyle. (Attachments: # (1) Appendix A# (2) Appendix)(caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_05-cv-00320-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-6/mods.xml">
+ <titleInfo>
+  <title>Semmaterials LP v. Alliance Asphalt Inc</title>
+  <subTitle>AMENDED JUDGMENT in favor of Semmaterials LP against Alliance Asphalt Inc. Judgment is entered in favor of Pla and against Def in the sum of $110,459 together with prejudgment interest in the amount of $46,050.91 plus $94,970.83, plus prejudgment interest in the amount of $15,622.38 (of original Judgment date of 1/25/07), plus $49,431.25 in attorneys&apos;fees, $1,207.81 in non-taxable costs, and $528 in taxable costs, for a total judgment of $318,270.18. This Judgment shall include post-judgment interest until satisfied in full at the applicable rate pursuant to Idaho Code 28-22-104(2). This case is dismissed in its entirety, with prejudice. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, ) Modified on 3/2/2007 to edit text(wm, ).</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_05-cv-00320-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fec440</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-6</identifier>
+ <identifier type="former granule identifier">idd-1_05-cv-00320_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00320/pdf/USCOURTS-idd-1_05-cv-00320-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00320; Semmaterials LP v. Alliance Asphalt Inc; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_05-cv-00320-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-03-01</dateIssued>
+  <docketText>AMENDED JUDGMENT in favor of Semmaterials LP against Alliance Asphalt Inc. Judgment is entered in favor of Pla and against Def in the sum of $110,459 together with prejudgment interest in the amount of $46,050.91 plus $94,970.83, plus prejudgment interest in the amount of $15,622.38 (of original Judgment date of 1/25/07), plus $49,431.25 in attorneys&apos;fees, $1,207.81 in non-taxable costs, and $528 in taxable costs, for a total judgment of $318,270.18. This Judgment shall include post-judgment interest until satisfied in full at the applicable rate pursuant to Idaho Code 28-22-104(2). This case is dismissed in its entirety, with prejudice. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, ) Modified on 3/2/2007 to edit text(wm, ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_05-cv-00320-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-7/mods.xml">
+ <titleInfo>
+  <title>Semmaterials LP v. Alliance Asphalt Inc</title>
+  <subTitle>ORDER Granting in part and denying in part 67 MOTION for Order to Show Cause Why a Writ of Execution Should Not be Issued Against the Personal Assets of Cory Rose, Kristina Rose and Susan Buckley Watson filed by Semmaterials LP. Show Cause Hearing set for 12/11/2007 01:00 PM in Boise, ID before Judge Larry M. Boyle. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_05-cv-00320-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fec43e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-7</identifier>
+ <identifier type="former granule identifier">idd-1_05-cv-00320_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00320/pdf/USCOURTS-idd-1_05-cv-00320-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00320; Semmaterials LP v. Alliance Asphalt Inc; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_05-cv-00320-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2007-11-20</dateIssued>
+  <docketText>ORDER Granting in part and denying in part 67 MOTION for Order to Show Cause Why a Writ of Execution Should Not be Issued Against the Personal Assets of Cory Rose, Kristina Rose and Susan Buckley Watson filed by Semmaterials LP. Show Cause Hearing set for 12/11/2007 01:00 PM in Boise, ID before Judge Larry M. Boyle. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by ja, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_05-cv-00320-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-8/mods.xml">
+ <titleInfo>
+  <title>Semmaterials LP v. Alliance Asphalt Inc</title>
+  <subTitle>FINDINGS OF FACT AND CONCLUSIONS OF LAW AND ORDER Granting in part 67 MOTION for Order to Show Cause Why a Writ of Execution Should Not be Issued Against the Personal Assets of Cory Rose, Kristina Rose and Susan Buckley Watson filed by Semmaterials LP, Granting in part 68 Application for Writ filed by Semmaterials LP. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_05-cv-00320-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fec441</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-8</identifier>
+ <identifier type="former granule identifier">idd-1_05-cv-00320_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00320/USCOURTS-idd-1_05-cv-00320-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00320/pdf/USCOURTS-idd-1_05-cv-00320-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00320; Semmaterials LP v. Alliance Asphalt Inc; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_05-cv-00320-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-01-15</dateIssued>
+  <docketText>FINDINGS OF FACT AND CONCLUSIONS OF LAW AND ORDER Granting in part 67 MOTION for Order to Show Cause Why a Writ of Execution Should Not be Issued Against the Personal Assets of Cory Rose, Kristina Rose and Susan Buckley Watson filed by Semmaterials LP, Granting in part 68 Application for Writ filed by Semmaterials LP. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm, )</docketText>
+</extension>
+</relatedItem>
+</mods>

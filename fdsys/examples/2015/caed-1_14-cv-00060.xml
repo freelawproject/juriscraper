@@ -1,0 +1,2763 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18dc302da">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-10-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-10-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060</identifier>
+<identifier type="local">P0b002ee18dc302da</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-10-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-10-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cv-00060</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00060</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00060</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Abdulle" fullName="Abdulle Abukar" lastName="Abukar" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard Adams" lastName="Adams" role="Plaintiff"></party>
+ <party firstName="Ruben" fullName="Ruben Arechiga" lastName="Arechiga" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard Arteaga" lastName="Arteaga" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Atzet" lastName="Atzet" role="Plaintiff"></party>
+ <party firstName="Derrico" fullName="Derrico Aubrey" lastName="Aubrey" role="Plaintiff"></party>
+ <party firstName="Garland" fullName="Garland Baker" lastName="Baker" role="Plaintiff"></party>
+ <party firstName="Dion" fullName="Dion Barnett" lastName="Barnett" role="Plaintiff"></party>
+ <party firstName="Frederick" fullName="Frederick Beagle" lastName="Beagle" role="Plaintiff"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey A. Beard" lastName="Beard" middleName="A." role="Defendant"></party>
+ <party firstName="Don" fullName="Don Belardes" lastName="Belardes" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Wesley Bess" lastName="Bess" middleName="Wesley" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Blue" lastName="Blue" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Boland" lastName="Boland" role="Plaintiff"></party>
+ <party firstName="Christopher" fullName="Christopher Bonds" lastName="Bonds" role="Plaintiff"></party>
+ <party firstName="Floyd" fullName="Floyd Boyd" lastName="Boyd" role="Plaintiff"></party>
+ <party firstName="Ray" fullName="Ray Bracamonte" lastName="Bracamonte" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul D. Brazelton" lastName="Brazelton" middleName="D." role="Defendant"></party>
+ <party firstName="Edmund" fullName="Edmund G. Brown" lastName="Brown" middleName="G." role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Burke" lastName="Burke" role="Plaintiff"></party>
+ <party firstName="Keevan" fullName="Keevan Burks" lastName="Burks" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Bustamonte" lastName="Bustamonte" role="Plaintiff"></party>
+ <party firstName="Kevin" fullName="Kevin Call" lastName="Call" role="Plaintiff"></party>
+ <party firstName="Corey" fullName="Corey Campbell" lastName="Campbell" role="Plaintiff"></party>
+ <party firstName="Rudolph" fullName="Rudolph Campos" lastName="Campos" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Carter" lastName="Carter" role="Plaintiff"></party>
+ <party firstName="Pablo" fullName="Pablo Castaneda" lastName="Castaneda" role="Plaintiff"></party>
+ <party firstName="Matthew" fullName="Matthew Cate" lastName="Cate" role="Defendant"></party>
+ <party fullName="Chokatos" lastName="Chokatos" role="Defendant"></party>
+ <party firstName="Otha" fullName="Otha Clark" lastName="Clark" role="Plaintiff"></party>
+ <party firstName="Chaney" fullName="Chaney Clifford" lastName="Clifford" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Conley" lastName="Conley" role="Plaintiff"></party>
+ <party firstName="Alvin" fullName="Alvin Cooper" lastName="Cooper" role="Plaintiff"></party>
+ <party firstName="Campbell" fullName="Campbell Corey" lastName="Corey" role="Plaintiff"></party>
+ <party firstName="Kenneth" fullName="Kenneth Corley" lastName="Corley" role="Plaintiff"></party>
+ <party firstName="Walter" fullName="Walter Cornethan" lastName="Cornethan" role="Plaintiff"></party>
+ <party firstName="Roy" fullName="Roy Corning" lastName="Corning" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Cox" lastName="Cox" role="Plaintiff"></party>
+ <party firstName="Orlando" fullName="Orlando Creswell" lastName="Creswell" role="Plaintiff"></party>
+ <party firstName="Danny" fullName="Danny Dallas" lastName="Dallas" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Dayton" lastName="Dayton" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph DeJesus" lastName="DeJesus" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald Dibble" lastName="Dibble" role="Plaintiff"></party>
+ <party firstName="Gerald" fullName="Gerald Dickson" lastName="Dickson" role="Plaintiff"></party>
+ <party firstName="Pablo" fullName="Pablo Dominguez" lastName="Dominguez" role="Plaintiff"></party>
+ <party firstName="Eric" fullName="Eric Donaldson" lastName="Donaldson" role="Plaintiff"></party>
+ <party firstName="Roy" fullName="Roy Doss" lastName="Doss" role="Plaintiff"></party>
+ <party firstName="Josh" fullName="Josh Draper" lastName="Draper" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Duran" lastName="Duran" role="Plaintiff"></party>
+ <party firstName="Dennis" fullName="Dennis Duree" lastName="Duree" role="Plaintiff"></party>
+ <party firstName="James" fullName="James Farr" lastName="Farr" role="Plaintiff"></party>
+ <party firstName="Jerome" fullName="Jerome Felder" lastName="Felder" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Ferris" lastName="Ferris" role="Plaintiff"></party>
+ <party firstName="Alvin" fullName="Alvin Flowers" lastName="Flowers" role="Plaintiff"></party>
+ <party fullName="Fortune" lastName="Fortune" role="Defendant"></party>
+ <party firstName="K." fullName="K. Foulk" lastName="Foulk" role="Defendant"></party>
+ <party firstName="Stephen" fullName="Stephen Franklin" lastName="Franklin" role="Plaintiff"></party>
+ <party firstName="Aubrey" fullName="Aubrey Galloway" lastName="Galloway" role="Plaintiff"></party>
+ <party firstName="Christopher" fullName="Christopher Garner" lastName="Garner" role="Plaintiff"></party>
+ <party firstName="Candelario" fullName="Candelario Garza" lastName="Garza" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Gholar" lastName="Gholar" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Gonzalez" lastName="Gonzalez" role="Plaintiff"></party>
+ <party firstName="Vernon" fullName="Vernon Grant" lastName="Grant" role="Plaintiff"></party>
+ <party firstName="Walter" fullName="Walter Green" lastName="Green" role="Plaintiff"></party>
+ <party firstName="Lorenzo" fullName="Lorenzo Gregge Jr." generation="Jr." lastName="Gregge" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Harris" lastName="Harris" role="Plaintiff"></party>
+ <party firstName="Matthew" fullName="Matthew Hartley" lastName="Hartley" role="Defendant"></party>
+ <party firstName="James" fullName="James D. Hartley" lastName="Hartley" middleName="D." role="Defendant"></party>
+ <party firstName="Sinoa" fullName="Sinoa Hercules" lastName="Hercules" role="Plaintiff"></party>
+ <party firstName="Sinohe" fullName="Sinohe Hercules" lastName="Hercules" role="Plaintiff"></party>
+ <party firstName="Carlos" fullName="Carlos Hernandez" lastName="Hernandez" role="Plaintiff"></party>
+ <party firstName="Bret" fullName="Bret Hill" lastName="Hill" role="Plaintiff"></party>
+ <party firstName="Damor" fullName="Damor Hill" lastName="Hill" role="Plaintiff"></party>
+ <party firstName="Ellis" fullName="Ellis Hollis" lastName="Hollis" role="Plaintiff"></party>
+ <party firstName="Jeremy" fullName="Jeremy Hollis" lastName="Hollis" role="Plaintiff"></party>
+ <party firstName="Susan" fullName="Susan L. Hubbard" lastName="Hubbard" middleName="L." role="Defendant"></party>
+ <party firstName="Deborah" fullName="Deborah Hysen" lastName="Hysen" role="Defendant"></party>
+ <party firstName="Felix" fullName="Felix Igbinosa" lastName="Igbinosa" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Imuta" lastName="Imuta" role="Plaintiff"></party>
+ <party fullName="Infinity" lastName="Infinity" role="Plaintiff"></party>
+ <party firstName="Kenji" fullName="Kenji Jackson" lastName="Jackson" role="Plaintiff"></party>
+ <party firstName="Danilo" fullName="Danilo Jalotlot" lastName="Jalotlot" role="Plaintiff"></party>
+ <party firstName="Adrian" fullName="Adrian Johnson" lastName="Johnson" role="Plaintiff"></party>
+ <party firstName="George" fullName="George Johnson" lastName="Johnson" role="Plaintiff"></party>
+ <party firstName="Anthony" fullName="Anthony Jones" lastName="Jones" role="Plaintiff"></party>
+ <party firstName="Edward" fullName="Edward Jones" lastName="Jones" role="Plaintiff"></party>
+ <party firstName="J." fullName="J. Clark Kelso" lastName="Kelso" middleName="Clark" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Kernan" lastName="Kernan" role="Defendant"></party>
+ <party firstName="Lawrence" fullName="Lawrence Kerner" lastName="Kerner" role="Plaintiff"></party>
+ <party firstName="Bruce" fullName="Bruce Koklich" lastName="Koklich" role="Plaintiff"></party>
+ <party firstName="Titi" fullName="Titi Lavea" lastName="Lavea" role="Plaintiff"></party>
+ <party firstName="Asad" fullName="Asad Lewis" lastName="Lewis" role="Plaintiff"></party>
+ <party firstName="Cleofas" fullName="Cleofas Lewis" lastName="Lewis" role="Plaintiff"></party>
+ <party firstName="George" fullName="George Lewis" lastName="Lewis" role="Plaintiff"></party>
+ <party firstName="Joe" fullName="Joe Lewis" lastName="Lewis" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Maeschek" lastName="Maeschek" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Manning" lastName="Manning" role="Plaintiff"></party>
+ <party firstName="H." fullName="H. Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Martinez" lastName="Martinez" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Masushige" lastName="Masushige" role="Plaintiff"></party>
+ <party firstName="Ellis" fullName="Ellis McCloud" lastName="McCloud" role="Plaintiff"></party>
+ <party firstName="Brandon" fullName="Brandon McDonald" lastName="McDonald" role="Plaintiff"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey McDonald" lastName="McDonald" role="Plaintiff"></party>
+ <party firstName="Charles" fullName="Charles McQuarn" lastName="McQuarn" role="Plaintiff"></party>
+ <party firstName="Chris" fullName="Chris Meyer" lastName="Meyer" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Meza" lastName="Meza" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas Milford" lastName="Milford" role="Plaintiff"></party>
+ <party firstName="Dale" fullName="Dale Miller" lastName="Miller" role="Plaintiff"></party>
+ <party firstName="Herschel" fullName="Herschel Mitchell" lastName="Mitchell" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Molen" lastName="Molen" role="Plaintiff"></party>
+ <party firstName="Grady" fullName="Grady Montgomery" lastName="Montgomery" role="Plaintiff"></party>
+ <party firstName="Andre" fullName="Andre Moody" lastName="Moody" role="Plaintiff"></party>
+ <party firstName="Noel" fullName="Noel Morales" lastName="Morales" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Morrow" lastName="Morrow" role="Plaintiff"></party>
+ <party firstName="Freddy" fullName="Freddy Neal" lastName="Neal" role="Plaintiff"></party>
+ <party firstName="A." fullName="A. Nesbit" lastName="Nesbit" role="Defendant"></party>
+ <party firstName="Raymond" fullName="Raymond Newson" lastName="Newson" role="Plaintiff"></party>
+ <party firstName="Chek" fullName="Chek Ngoun" lastName="Ngoun" role="Plaintiff"></party>
+ <party firstName="Sim" fullName="Sim Peav" lastName="Peav" role="Plaintiff"></party>
+ <party firstName="Juan" fullName="Juan Penalva" lastName="Penalva" role="Plaintiff"></party>
+ <party firstName="Jesus" fullName="Jesus Antonio Perez" lastName="Perez" middleName="Antonio" role="Plaintiff"></party>
+ <party firstName="Marvin" fullName="Marvin Pierce" lastName="Pierce" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Preston" lastName="Preston" role="Plaintiff"></party>
+ <party firstName="Harvey" fullName="Harvey Rayburn" lastName="Rayburn" role="Plaintiff"></party>
+ <party firstName="Jorge" fullName="Jorge Augusto Reyes" lastName="Reyes" middleName="Augusto" role="Plaintiff"></party>
+ <party firstName="Paul" fullName="Paul Richardson" lastName="Richardson" role="Plaintiff"></party>
+ <party firstName="Jay" fullName="Jay Roach" lastName="Roach" role="Plaintiff"></party>
+ <party firstName="Rodney" fullName="Rodney Ray Roberts" lastName="Roberts" middleName="Ray" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Robinson" lastName="Robinson" role="Plaintiff"></party>
+ <party firstName="Ronald" fullName="Ronald Rodriguez" lastName="Rodriguez" role="Plaintiff"></party>
+ <party firstName="Peter" fullName="Peter Romero" lastName="Romero" role="Plaintiff"></party>
+ <party firstName="Jeremy" fullName="Jeremy Romo" lastName="Romo" role="Plaintiff"></party>
+ <party firstName="Tanya" fullName="Tanya Rothchild" lastName="Rothchild" role="Defendant"></party>
+ <party firstName="John" fullName="John Ruggles" lastName="Ruggles" role="Plaintiff"></party>
+ <party firstName="Lorenzo" fullName="Lorenzo Sams" lastName="Sams" role="Plaintiff"></party>
+ <party firstName="Johnny" fullName="Johnny Sanchez" lastName="Sanchez" role="Plaintiff"></party>
+ <party firstName="Tyrone" fullName="Tyrone Sanders" lastName="Sanders" role="Plaintiff"></party>
+ <party firstName="Teresa" fullName="Teresa Schwartz" lastName="Schwartz" role="Defendant"></party>
+ <party firstName="Arnold" fullName="Arnold Schwarzenegger" lastName="Schwarzenegger" role="Defendant"></party>
+ <party firstName="Adrian" fullName="Adrian Sepulveda" lastName="Sepulveda" role="Plaintiff"></party>
+ <party firstName="Albert" fullName="Albert Sherrod" lastName="Sherrod" role="Plaintiff"></party>
+ <party firstName="Kirk" fullName="Kirk Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Leroy" fullName="Leroy Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Corey" fullName="Corey Lamar Smith" lastName="Smith" middleName="Lamar" role="Plaintiff"></party>
+ <party firstName="Edward" fullName="Edward Spence" lastName="Spence" role="Plaintiff"></party>
+ <party fullName="State of California" lastName="State of California" role="Defendant"></party>
+ <party firstName="Willie" fullName="Willie Steels" lastName="Steels" role="Plaintiff"></party>
+ <party firstName="Tracy" fullName="Tracy Stewart" lastName="Stewart" role="Plaintiff"></party>
+ <party firstName="Hector" fullName="Hector Talamantes" lastName="Talamantes" role="Plaintiff"></party>
+ <party firstName="Josh" fullName="Josh Thomas" lastName="Thomas" role="Plaintiff"></party>
+ <party firstName="Louis" fullName="Louis Thomas" lastName="Thomas" role="Plaintiff"></party>
+ <party firstName="Maurice" fullName="Maurice Thomas" lastName="Thomas" role="Plaintiff"></party>
+ <party firstName="Tyrone" fullName="Tyrone Thompson" lastName="Thompson" role="Plaintiff"></party>
+ <party firstName="Aaron" fullName="Aaron Tillis" lastName="Tillis" role="Plaintiff"></party>
+ <party firstName="Ismael" fullName="Ismael Torres-Robles" lastName="Torres-Robles" role="Plaintiff"></party>
+ <party firstName="Elonza" fullName="Elonza Tyler" lastName="Tyler" role="Plaintiff"></party>
+ <party firstName="Vance" fullName="Vance Utley" lastName="Utley" role="Plaintiff"></party>
+ <party firstName="Roberto" fullName="Roberto Vasquez" lastName="Vasquez" role="Plaintiff"></party>
+ <party firstName="Solomon" fullName="Solomon Vasquez" lastName="Vasquez" role="Plaintiff"></party>
+ <party firstName="Rene" fullName="Rene Villanueva" lastName="Villanueva" role="Plaintiff"></party>
+ <party firstName="Patrick" fullName="Patrick Wallace" lastName="Wallace" role="Plaintiff"></party>
+ <party firstName="Kenneth" fullName="Kenneth Washington" lastName="Washington" role="Plaintiff"></party>
+ <party firstName="Byron" fullName="Byron West" lastName="West" role="Plaintiff"></party>
+ <party firstName="Bertrum" fullName="Bertrum Westbrook" lastName="Westbrook" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas Wiley" lastName="Wiley" role="Plaintiff"></party>
+ <party firstName="William" fullName="William Wiley" lastName="Wiley" role="Plaintiff"></party>
+ <party firstName="Darren" fullName="Darren Williams" lastName="Williams" role="Plaintiff"></party>
+ <party firstName="Rodney" fullName="Rodney Williams" lastName="Williams" role="Plaintiff"></party>
+ <party firstName="Xavier" fullName="Xavier Williams" lastName="Williams" role="Plaintiff"></party>
+ <party firstName="Dwight" fullName="Dwight Winslow M.D." generation="M.D." lastName="Winslow" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Wolters" lastName="Wolters" role="Plaintiff"></party>
+ <party firstName="Theodore" fullName="Theodore Wood" lastName="Wood" role="Plaintiff"></party>
+ <party firstName="Wayne" fullName="Wayne Woods" lastName="Woods" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald Wright" lastName="Wright" role="Plaintiff"></party>
+ <party firstName="Kenneth" fullName="Kenneth Yancey" lastName="Yancey" role="Plaintiff"></party>
+ <party firstName="James" fullName="James A. Yates" lastName="Yates" middleName="A." role="Defendant"></party>
+ <party firstName="George" fullName="George Yount" lastName="Yount" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Smith et al v. Schwarzenegger et al</title>
+ <partNumber>1:14-cv-00060</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-00060;14-060</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Abdulle Abukar</displayForm>
+ <namePart type="family">Abukar</namePart>
+ <namePart type="given">Abdulle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ruben Arechiga</displayForm>
+ <namePart type="family">Arechiga</namePart>
+ <namePart type="given">Ruben</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Arteaga</displayForm>
+ <namePart type="family">Arteaga</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>David Atzet</displayForm>
+ <namePart type="family">Atzet</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Derrico Aubrey</displayForm>
+ <namePart type="family">Aubrey</namePart>
+ <namePart type="given">Derrico</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Garland Baker</displayForm>
+ <namePart type="family">Baker</namePart>
+ <namePart type="given">Garland</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dion Barnett</displayForm>
+ <namePart type="family">Barnett</namePart>
+ <namePart type="given">Dion</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Frederick Beagle</displayForm>
+ <namePart type="family">Beagle</namePart>
+ <namePart type="given">Frederick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey A. Beard</displayForm>
+ <namePart type="family">Beard</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Don Belardes</displayForm>
+ <namePart type="family">Belardes</namePart>
+ <namePart type="given">Don</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Wesley Bess</displayForm>
+ <namePart type="family">Bess</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Blue</displayForm>
+ <namePart type="family">Blue</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Boland</displayForm>
+ <namePart type="family">Boland</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher Bonds</displayForm>
+ <namePart type="family">Bonds</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Floyd Boyd</displayForm>
+ <namePart type="family">Boyd</namePart>
+ <namePart type="given">Floyd</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ray Bracamonte</displayForm>
+ <namePart type="family">Bracamonte</namePart>
+ <namePart type="given">Ray</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul D. Brazelton</displayForm>
+ <namePart type="family">Brazelton</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Edmund G. Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Edmund</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Burke</displayForm>
+ <namePart type="family">Burke</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Keevan Burks</displayForm>
+ <namePart type="family">Burks</namePart>
+ <namePart type="given">Keevan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Bustamonte</displayForm>
+ <namePart type="family">Bustamonte</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kevin Call</displayForm>
+ <namePart type="family">Call</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Corey Campbell</displayForm>
+ <namePart type="family">Campbell</namePart>
+ <namePart type="given">Corey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rudolph Campos</displayForm>
+ <namePart type="family">Campos</namePart>
+ <namePart type="given">Rudolph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Carter</displayForm>
+ <namePart type="family">Carter</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Pablo Castaneda</displayForm>
+ <namePart type="family">Castaneda</namePart>
+ <namePart type="given">Pablo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Cate</displayForm>
+ <namePart type="family">Cate</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chokatos</displayForm>
+ <namePart type="family">Chokatos</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Otha Clark</displayForm>
+ <namePart type="family">Clark</namePart>
+ <namePart type="given">Otha</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Chaney Clifford</displayForm>
+ <namePart type="family">Clifford</namePart>
+ <namePart type="given">Chaney</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Conley</displayForm>
+ <namePart type="family">Conley</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alvin Cooper</displayForm>
+ <namePart type="family">Cooper</namePart>
+ <namePart type="given">Alvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Campbell Corey</displayForm>
+ <namePart type="family">Corey</namePart>
+ <namePart type="given">Campbell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Corley</displayForm>
+ <namePart type="family">Corley</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Walter Cornethan</displayForm>
+ <namePart type="family">Cornethan</namePart>
+ <namePart type="given">Walter</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Roy Corning</displayForm>
+ <namePart type="family">Corning</namePart>
+ <namePart type="given">Roy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>David Cox</displayForm>
+ <namePart type="family">Cox</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Orlando Creswell</displayForm>
+ <namePart type="family">Creswell</namePart>
+ <namePart type="given">Orlando</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Danny Dallas</displayForm>
+ <namePart type="family">Dallas</namePart>
+ <namePart type="given">Danny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Dayton</displayForm>
+ <namePart type="family">Dayton</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph DeJesus</displayForm>
+ <namePart type="family">DeJesus</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Dibble</displayForm>
+ <namePart type="family">Dibble</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gerald Dickson</displayForm>
+ <namePart type="family">Dickson</namePart>
+ <namePart type="given">Gerald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Pablo Dominguez</displayForm>
+ <namePart type="family">Dominguez</namePart>
+ <namePart type="given">Pablo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Eric Donaldson</displayForm>
+ <namePart type="family">Donaldson</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Roy Doss</displayForm>
+ <namePart type="family">Doss</namePart>
+ <namePart type="given">Roy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Josh Draper</displayForm>
+ <namePart type="family">Draper</namePart>
+ <namePart type="given">Josh</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Duran</displayForm>
+ <namePart type="family">Duran</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Duree</displayForm>
+ <namePart type="family">Duree</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James Farr</displayForm>
+ <namePart type="family">Farr</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jerome Felder</displayForm>
+ <namePart type="family">Felder</namePart>
+ <namePart type="given">Jerome</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Ferris</displayForm>
+ <namePart type="family">Ferris</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alvin Flowers</displayForm>
+ <namePart type="family">Flowers</namePart>
+ <namePart type="given">Alvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Fortune</displayForm>
+ <namePart type="family">Fortune</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>K. Foulk</displayForm>
+ <namePart type="family">Foulk</namePart>
+ <namePart type="given">K.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stephen Franklin</displayForm>
+ <namePart type="family">Franklin</namePart>
+ <namePart type="given">Stephen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Aubrey Galloway</displayForm>
+ <namePart type="family">Galloway</namePart>
+ <namePart type="given">Aubrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher Garner</displayForm>
+ <namePart type="family">Garner</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Candelario Garza</displayForm>
+ <namePart type="family">Garza</namePart>
+ <namePart type="given">Candelario</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Gholar</displayForm>
+ <namePart type="family">Gholar</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Gonzalez</displayForm>
+ <namePart type="family">Gonzalez</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Vernon Grant</displayForm>
+ <namePart type="family">Grant</namePart>
+ <namePart type="given">Vernon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Walter Green</displayForm>
+ <namePart type="family">Green</namePart>
+ <namePart type="given">Walter</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lorenzo Gregge Jr.</displayForm>
+ <namePart type="family">Gregge</namePart>
+ <namePart type="given">Lorenzo</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Harris</displayForm>
+ <namePart type="family">Harris</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Hartley</displayForm>
+ <namePart type="family">Hartley</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James D. Hartley</displayForm>
+ <namePart type="family">Hartley</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sinoa Hercules</displayForm>
+ <namePart type="family">Hercules</namePart>
+ <namePart type="given">Sinoa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sinohe Hercules</displayForm>
+ <namePart type="family">Hercules</namePart>
+ <namePart type="given">Sinohe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Carlos Hernandez</displayForm>
+ <namePart type="family">Hernandez</namePart>
+ <namePart type="given">Carlos</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Bret Hill</displayForm>
+ <namePart type="family">Hill</namePart>
+ <namePart type="given">Bret</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Damor Hill</displayForm>
+ <namePart type="family">Hill</namePart>
+ <namePart type="given">Damor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ellis Hollis</displayForm>
+ <namePart type="family">Hollis</namePart>
+ <namePart type="given">Ellis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jeremy Hollis</displayForm>
+ <namePart type="family">Hollis</namePart>
+ <namePart type="given">Jeremy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Susan L. Hubbard</displayForm>
+ <namePart type="family">Hubbard</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Deborah Hysen</displayForm>
+ <namePart type="family">Hysen</namePart>
+ <namePart type="given">Deborah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Felix Igbinosa</displayForm>
+ <namePart type="family">Igbinosa</namePart>
+ <namePart type="given">Felix</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Imuta</displayForm>
+ <namePart type="family">Imuta</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Infinity</displayForm>
+ <namePart type="family">Infinity</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kenji Jackson</displayForm>
+ <namePart type="family">Jackson</namePart>
+ <namePart type="given">Kenji</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Danilo Jalotlot</displayForm>
+ <namePart type="family">Jalotlot</namePart>
+ <namePart type="given">Danilo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Adrian Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Adrian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>George Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Edward Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>J. Clark Kelso</displayForm>
+ <namePart type="family">Kelso</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Kernan</displayForm>
+ <namePart type="family">Kernan</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lawrence Kerner</displayForm>
+ <namePart type="family">Kerner</namePart>
+ <namePart type="given">Lawrence</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Bruce Koklich</displayForm>
+ <namePart type="family">Koklich</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Titi Lavea</displayForm>
+ <namePart type="family">Lavea</namePart>
+ <namePart type="given">Titi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Asad Lewis</displayForm>
+ <namePart type="family">Lewis</namePart>
+ <namePart type="given">Asad</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cleofas Lewis</displayForm>
+ <namePart type="family">Lewis</namePart>
+ <namePart type="given">Cleofas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>George Lewis</displayForm>
+ <namePart type="family">Lewis</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joe Lewis</displayForm>
+ <namePart type="family">Lewis</namePart>
+ <namePart type="given">Joe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Maeschek</displayForm>
+ <namePart type="family">Maeschek</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Manning</displayForm>
+ <namePart type="family">Manning</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>H. Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">H.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Juan Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Masushige</displayForm>
+ <namePart type="family">Masushige</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ellis McCloud</displayForm>
+ <namePart type="family">McCloud</namePart>
+ <namePart type="given">Ellis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Brandon McDonald</displayForm>
+ <namePart type="family">McDonald</namePart>
+ <namePart type="given">Brandon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey McDonald</displayForm>
+ <namePart type="family">McDonald</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Charles McQuarn</displayForm>
+ <namePart type="family">McQuarn</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Chris Meyer</displayForm>
+ <namePart type="family">Meyer</namePart>
+ <namePart type="given">Chris</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Juan Meza</displayForm>
+ <namePart type="family">Meza</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Milford</displayForm>
+ <namePart type="family">Milford</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dale Miller</displayForm>
+ <namePart type="family">Miller</namePart>
+ <namePart type="given">Dale</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Herschel Mitchell</displayForm>
+ <namePart type="family">Mitchell</namePart>
+ <namePart type="given">Herschel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Molen</displayForm>
+ <namePart type="family">Molen</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Grady Montgomery</displayForm>
+ <namePart type="family">Montgomery</namePart>
+ <namePart type="given">Grady</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Andre Moody</displayForm>
+ <namePart type="family">Moody</namePart>
+ <namePart type="given">Andre</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Noel Morales</displayForm>
+ <namePart type="family">Morales</namePart>
+ <namePart type="given">Noel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Morrow</displayForm>
+ <namePart type="family">Morrow</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Freddy Neal</displayForm>
+ <namePart type="family">Neal</namePart>
+ <namePart type="given">Freddy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>A. Nesbit</displayForm>
+ <namePart type="family">Nesbit</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Raymond Newson</displayForm>
+ <namePart type="family">Newson</namePart>
+ <namePart type="given">Raymond</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Chek Ngoun</displayForm>
+ <namePart type="family">Ngoun</namePart>
+ <namePart type="given">Chek</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sim Peav</displayForm>
+ <namePart type="family">Peav</namePart>
+ <namePart type="given">Sim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Juan Penalva</displayForm>
+ <namePart type="family">Penalva</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jesus Antonio Perez</displayForm>
+ <namePart type="family">Perez</namePart>
+ <namePart type="given">Jesus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Marvin Pierce</displayForm>
+ <namePart type="family">Pierce</namePart>
+ <namePart type="given">Marvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Preston</displayForm>
+ <namePart type="family">Preston</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Harvey Rayburn</displayForm>
+ <namePart type="family">Rayburn</namePart>
+ <namePart type="given">Harvey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jorge Augusto Reyes</displayForm>
+ <namePart type="family">Reyes</namePart>
+ <namePart type="given">Jorge</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Paul Richardson</displayForm>
+ <namePart type="family">Richardson</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jay Roach</displayForm>
+ <namePart type="family">Roach</namePart>
+ <namePart type="given">Jay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rodney Ray Roberts</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given">Rodney</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>David Robinson</displayForm>
+ <namePart type="family">Robinson</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Rodriguez</displayForm>
+ <namePart type="family">Rodriguez</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Peter Romero</displayForm>
+ <namePart type="family">Romero</namePart>
+ <namePart type="given">Peter</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jeremy Romo</displayForm>
+ <namePart type="family">Romo</namePart>
+ <namePart type="given">Jeremy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tanya Rothchild</displayForm>
+ <namePart type="family">Rothchild</namePart>
+ <namePart type="given">Tanya</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Ruggles</displayForm>
+ <namePart type="family">Ruggles</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lorenzo Sams</displayForm>
+ <namePart type="family">Sams</namePart>
+ <namePart type="given">Lorenzo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Johnny Sanchez</displayForm>
+ <namePart type="family">Sanchez</namePart>
+ <namePart type="given">Johnny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tyrone Sanders</displayForm>
+ <namePart type="family">Sanders</namePart>
+ <namePart type="given">Tyrone</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Teresa Schwartz</displayForm>
+ <namePart type="family">Schwartz</namePart>
+ <namePart type="given">Teresa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Arnold Schwarzenegger</displayForm>
+ <namePart type="family">Schwarzenegger</namePart>
+ <namePart type="given">Arnold</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Adrian Sepulveda</displayForm>
+ <namePart type="family">Sepulveda</namePart>
+ <namePart type="given">Adrian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Albert Sherrod</displayForm>
+ <namePart type="family">Sherrod</namePart>
+ <namePart type="given">Albert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kirk Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Kirk</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Leroy Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Leroy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Corey Lamar Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Corey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Edward Spence</displayForm>
+ <namePart type="family">Spence</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>State of California</displayForm>
+ <namePart type="family">State of California</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Willie Steels</displayForm>
+ <namePart type="family">Steels</namePart>
+ <namePart type="given">Willie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tracy Stewart</displayForm>
+ <namePart type="family">Stewart</namePart>
+ <namePart type="given">Tracy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Hector Talamantes</displayForm>
+ <namePart type="family">Talamantes</namePart>
+ <namePart type="given">Hector</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Josh Thomas</displayForm>
+ <namePart type="family">Thomas</namePart>
+ <namePart type="given">Josh</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Louis Thomas</displayForm>
+ <namePart type="family">Thomas</namePart>
+ <namePart type="given">Louis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Maurice Thomas</displayForm>
+ <namePart type="family">Thomas</namePart>
+ <namePart type="given">Maurice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tyrone Thompson</displayForm>
+ <namePart type="family">Thompson</namePart>
+ <namePart type="given">Tyrone</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Aaron Tillis</displayForm>
+ <namePart type="family">Tillis</namePart>
+ <namePart type="given">Aaron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ismael Torres-Robles</displayForm>
+ <namePart type="family">Torres-Robles</namePart>
+ <namePart type="given">Ismael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Elonza Tyler</displayForm>
+ <namePart type="family">Tyler</namePart>
+ <namePart type="given">Elonza</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Vance Utley</displayForm>
+ <namePart type="family">Utley</namePart>
+ <namePart type="given">Vance</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Roberto Vasquez</displayForm>
+ <namePart type="family">Vasquez</namePart>
+ <namePart type="given">Roberto</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Solomon Vasquez</displayForm>
+ <namePart type="family">Vasquez</namePart>
+ <namePart type="given">Solomon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rene Villanueva</displayForm>
+ <namePart type="family">Villanueva</namePart>
+ <namePart type="given">Rene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Patrick Wallace</displayForm>
+ <namePart type="family">Wallace</namePart>
+ <namePart type="given">Patrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Washington</displayForm>
+ <namePart type="family">Washington</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Byron West</displayForm>
+ <namePart type="family">West</namePart>
+ <namePart type="given">Byron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Bertrum Westbrook</displayForm>
+ <namePart type="family">Westbrook</namePart>
+ <namePart type="given">Bertrum</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Wiley</displayForm>
+ <namePart type="family">Wiley</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>William Wiley</displayForm>
+ <namePart type="family">Wiley</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Darren Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Darren</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rodney Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Rodney</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Xavier Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Xavier</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dwight Winslow M.D.</displayForm>
+ <namePart type="family">Winslow</namePart>
+ <namePart type="given">Dwight</namePart>
+ <namePart type="termsOfAddress">M.D.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Wolters</displayForm>
+ <namePart type="family">Wolters</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Theodore Wood</displayForm>
+ <namePart type="family">Wood</namePart>
+ <namePart type="given">Theodore</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne Woods</displayForm>
+ <namePart type="family">Woods</namePart>
+ <namePart type="given">Wayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Wright</displayForm>
+ <namePart type="family">Wright</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Yancey</displayForm>
+ <namePart type="family">Yancey</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James A. Yates</displayForm>
+ <namePart type="family">Yates</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George Yount</displayForm>
+ <namePart type="family">Yount</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00060</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00060</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Abdulle" fullName="Abdulle Abukar" lastName="Abukar" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard Adams" lastName="Adams" role="Plaintiff"></party>
+ <party firstName="Ruben" fullName="Ruben Arechiga" lastName="Arechiga" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard Arteaga" lastName="Arteaga" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Atzet" lastName="Atzet" role="Plaintiff"></party>
+ <party firstName="Derrico" fullName="Derrico Aubrey" lastName="Aubrey" role="Plaintiff"></party>
+ <party firstName="Garland" fullName="Garland Baker" lastName="Baker" role="Plaintiff"></party>
+ <party firstName="Dion" fullName="Dion Barnett" lastName="Barnett" role="Plaintiff"></party>
+ <party firstName="Frederick" fullName="Frederick Beagle" lastName="Beagle" role="Plaintiff"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey A. Beard" lastName="Beard" middleName="A." role="Defendant"></party>
+ <party firstName="Don" fullName="Don Belardes" lastName="Belardes" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Wesley Bess" lastName="Bess" middleName="Wesley" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Blue" lastName="Blue" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Boland" lastName="Boland" role="Plaintiff"></party>
+ <party firstName="Christopher" fullName="Christopher Bonds" lastName="Bonds" role="Plaintiff"></party>
+ <party firstName="Floyd" fullName="Floyd Boyd" lastName="Boyd" role="Plaintiff"></party>
+ <party firstName="Ray" fullName="Ray Bracamonte" lastName="Bracamonte" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul D. Brazelton" lastName="Brazelton" middleName="D." role="Defendant"></party>
+ <party firstName="Edmund" fullName="Edmund G. Brown" lastName="Brown" middleName="G." role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Burke" lastName="Burke" role="Plaintiff"></party>
+ <party firstName="Keevan" fullName="Keevan Burks" lastName="Burks" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Bustamonte" lastName="Bustamonte" role="Plaintiff"></party>
+ <party firstName="Kevin" fullName="Kevin Call" lastName="Call" role="Plaintiff"></party>
+ <party firstName="Corey" fullName="Corey Campbell" lastName="Campbell" role="Plaintiff"></party>
+ <party firstName="Rudolph" fullName="Rudolph Campos" lastName="Campos" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Carter" lastName="Carter" role="Plaintiff"></party>
+ <party firstName="Pablo" fullName="Pablo Castaneda" lastName="Castaneda" role="Plaintiff"></party>
+ <party firstName="Matthew" fullName="Matthew Cate" lastName="Cate" role="Defendant"></party>
+ <party fullName="Chokatos" lastName="Chokatos" role="Defendant"></party>
+ <party firstName="Otha" fullName="Otha Clark" lastName="Clark" role="Plaintiff"></party>
+ <party firstName="Chaney" fullName="Chaney Clifford" lastName="Clifford" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Conley" lastName="Conley" role="Plaintiff"></party>
+ <party firstName="Alvin" fullName="Alvin Cooper" lastName="Cooper" role="Plaintiff"></party>
+ <party firstName="Campbell" fullName="Campbell Corey" lastName="Corey" role="Plaintiff"></party>
+ <party firstName="Kenneth" fullName="Kenneth Corley" lastName="Corley" role="Plaintiff"></party>
+ <party firstName="Walter" fullName="Walter Cornethan" lastName="Cornethan" role="Plaintiff"></party>
+ <party firstName="Roy" fullName="Roy Corning" lastName="Corning" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Cox" lastName="Cox" role="Plaintiff"></party>
+ <party firstName="Orlando" fullName="Orlando Creswell" lastName="Creswell" role="Plaintiff"></party>
+ <party firstName="Danny" fullName="Danny Dallas" lastName="Dallas" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Dayton" lastName="Dayton" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph DeJesus" lastName="DeJesus" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald Dibble" lastName="Dibble" role="Plaintiff"></party>
+ <party firstName="Gerald" fullName="Gerald Dickson" lastName="Dickson" role="Plaintiff"></party>
+ <party firstName="Pablo" fullName="Pablo Dominguez" lastName="Dominguez" role="Plaintiff"></party>
+ <party firstName="Eric" fullName="Eric Donaldson" lastName="Donaldson" role="Plaintiff"></party>
+ <party firstName="Roy" fullName="Roy Doss" lastName="Doss" role="Plaintiff"></party>
+ <party firstName="Josh" fullName="Josh Draper" lastName="Draper" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Duran" lastName="Duran" role="Plaintiff"></party>
+ <party firstName="Dennis" fullName="Dennis Duree" lastName="Duree" role="Plaintiff"></party>
+ <party firstName="James" fullName="James Farr" lastName="Farr" role="Plaintiff"></party>
+ <party firstName="Jerome" fullName="Jerome Felder" lastName="Felder" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Ferris" lastName="Ferris" role="Plaintiff"></party>
+ <party firstName="Alvin" fullName="Alvin Flowers" lastName="Flowers" role="Plaintiff"></party>
+ <party fullName="Fortune" lastName="Fortune" role="Defendant"></party>
+ <party firstName="K." fullName="K. Foulk" lastName="Foulk" role="Defendant"></party>
+ <party firstName="Stephen" fullName="Stephen Franklin" lastName="Franklin" role="Plaintiff"></party>
+ <party firstName="Aubrey" fullName="Aubrey Galloway" lastName="Galloway" role="Plaintiff"></party>
+ <party firstName="Christopher" fullName="Christopher Garner" lastName="Garner" role="Plaintiff"></party>
+ <party firstName="Candelario" fullName="Candelario Garza" lastName="Garza" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Gholar" lastName="Gholar" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Gonzalez" lastName="Gonzalez" role="Plaintiff"></party>
+ <party firstName="Vernon" fullName="Vernon Grant" lastName="Grant" role="Plaintiff"></party>
+ <party firstName="Walter" fullName="Walter Green" lastName="Green" role="Plaintiff"></party>
+ <party firstName="Lorenzo" fullName="Lorenzo Gregge Jr." generation="Jr." lastName="Gregge" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Harris" lastName="Harris" role="Plaintiff"></party>
+ <party firstName="Matthew" fullName="Matthew Hartley" lastName="Hartley" role="Defendant"></party>
+ <party firstName="James" fullName="James D. Hartley" lastName="Hartley" middleName="D." role="Defendant"></party>
+ <party firstName="Sinoa" fullName="Sinoa Hercules" lastName="Hercules" role="Plaintiff"></party>
+ <party firstName="Sinohe" fullName="Sinohe Hercules" lastName="Hercules" role="Plaintiff"></party>
+ <party firstName="Carlos" fullName="Carlos Hernandez" lastName="Hernandez" role="Plaintiff"></party>
+ <party firstName="Bret" fullName="Bret Hill" lastName="Hill" role="Plaintiff"></party>
+ <party firstName="Damor" fullName="Damor Hill" lastName="Hill" role="Plaintiff"></party>
+ <party firstName="Ellis" fullName="Ellis Hollis" lastName="Hollis" role="Plaintiff"></party>
+ <party firstName="Jeremy" fullName="Jeremy Hollis" lastName="Hollis" role="Plaintiff"></party>
+ <party firstName="Susan" fullName="Susan L. Hubbard" lastName="Hubbard" middleName="L." role="Defendant"></party>
+ <party firstName="Deborah" fullName="Deborah Hysen" lastName="Hysen" role="Defendant"></party>
+ <party firstName="Felix" fullName="Felix Igbinosa" lastName="Igbinosa" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Imuta" lastName="Imuta" role="Plaintiff"></party>
+ <party fullName="Infinity" lastName="Infinity" role="Plaintiff"></party>
+ <party firstName="Kenji" fullName="Kenji Jackson" lastName="Jackson" role="Plaintiff"></party>
+ <party firstName="Danilo" fullName="Danilo Jalotlot" lastName="Jalotlot" role="Plaintiff"></party>
+ <party firstName="Adrian" fullName="Adrian Johnson" lastName="Johnson" role="Plaintiff"></party>
+ <party firstName="George" fullName="George Johnson" lastName="Johnson" role="Plaintiff"></party>
+ <party firstName="Anthony" fullName="Anthony Jones" lastName="Jones" role="Plaintiff"></party>
+ <party firstName="Edward" fullName="Edward Jones" lastName="Jones" role="Plaintiff"></party>
+ <party firstName="J." fullName="J. Clark Kelso" lastName="Kelso" middleName="Clark" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Kernan" lastName="Kernan" role="Defendant"></party>
+ <party firstName="Lawrence" fullName="Lawrence Kerner" lastName="Kerner" role="Plaintiff"></party>
+ <party firstName="Bruce" fullName="Bruce Koklich" lastName="Koklich" role="Plaintiff"></party>
+ <party firstName="Titi" fullName="Titi Lavea" lastName="Lavea" role="Plaintiff"></party>
+ <party firstName="Asad" fullName="Asad Lewis" lastName="Lewis" role="Plaintiff"></party>
+ <party firstName="Cleofas" fullName="Cleofas Lewis" lastName="Lewis" role="Plaintiff"></party>
+ <party firstName="George" fullName="George Lewis" lastName="Lewis" role="Plaintiff"></party>
+ <party firstName="Joe" fullName="Joe Lewis" lastName="Lewis" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Maeschek" lastName="Maeschek" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Manning" lastName="Manning" role="Plaintiff"></party>
+ <party firstName="H." fullName="H. Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Martinez" lastName="Martinez" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Masushige" lastName="Masushige" role="Plaintiff"></party>
+ <party firstName="Ellis" fullName="Ellis McCloud" lastName="McCloud" role="Plaintiff"></party>
+ <party firstName="Brandon" fullName="Brandon McDonald" lastName="McDonald" role="Plaintiff"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey McDonald" lastName="McDonald" role="Plaintiff"></party>
+ <party firstName="Charles" fullName="Charles McQuarn" lastName="McQuarn" role="Plaintiff"></party>
+ <party firstName="Chris" fullName="Chris Meyer" lastName="Meyer" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Meza" lastName="Meza" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas Milford" lastName="Milford" role="Plaintiff"></party>
+ <party firstName="Dale" fullName="Dale Miller" lastName="Miller" role="Plaintiff"></party>
+ <party firstName="Herschel" fullName="Herschel Mitchell" lastName="Mitchell" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Molen" lastName="Molen" role="Plaintiff"></party>
+ <party firstName="Grady" fullName="Grady Montgomery" lastName="Montgomery" role="Plaintiff"></party>
+ <party firstName="Andre" fullName="Andre Moody" lastName="Moody" role="Plaintiff"></party>
+ <party firstName="Noel" fullName="Noel Morales" lastName="Morales" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Morrow" lastName="Morrow" role="Plaintiff"></party>
+ <party firstName="Freddy" fullName="Freddy Neal" lastName="Neal" role="Plaintiff"></party>
+ <party firstName="A." fullName="A. Nesbit" lastName="Nesbit" role="Defendant"></party>
+ <party firstName="Raymond" fullName="Raymond Newson" lastName="Newson" role="Plaintiff"></party>
+ <party firstName="Chek" fullName="Chek Ngoun" lastName="Ngoun" role="Plaintiff"></party>
+ <party firstName="Sim" fullName="Sim Peav" lastName="Peav" role="Plaintiff"></party>
+ <party firstName="Juan" fullName="Juan Penalva" lastName="Penalva" role="Plaintiff"></party>
+ <party firstName="Jesus" fullName="Jesus Antonio Perez" lastName="Perez" middleName="Antonio" role="Plaintiff"></party>
+ <party firstName="Marvin" fullName="Marvin Pierce" lastName="Pierce" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Preston" lastName="Preston" role="Plaintiff"></party>
+ <party firstName="Harvey" fullName="Harvey Rayburn" lastName="Rayburn" role="Plaintiff"></party>
+ <party firstName="Jorge" fullName="Jorge Augusto Reyes" lastName="Reyes" middleName="Augusto" role="Plaintiff"></party>
+ <party firstName="Paul" fullName="Paul Richardson" lastName="Richardson" role="Plaintiff"></party>
+ <party firstName="Jay" fullName="Jay Roach" lastName="Roach" role="Plaintiff"></party>
+ <party firstName="Rodney" fullName="Rodney Ray Roberts" lastName="Roberts" middleName="Ray" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Robinson" lastName="Robinson" role="Plaintiff"></party>
+ <party firstName="Ronald" fullName="Ronald Rodriguez" lastName="Rodriguez" role="Plaintiff"></party>
+ <party firstName="Peter" fullName="Peter Romero" lastName="Romero" role="Plaintiff"></party>
+ <party firstName="Jeremy" fullName="Jeremy Romo" lastName="Romo" role="Plaintiff"></party>
+ <party firstName="Tanya" fullName="Tanya Rothchild" lastName="Rothchild" role="Defendant"></party>
+ <party firstName="John" fullName="John Ruggles" lastName="Ruggles" role="Plaintiff"></party>
+ <party firstName="Lorenzo" fullName="Lorenzo Sams" lastName="Sams" role="Plaintiff"></party>
+ <party firstName="Johnny" fullName="Johnny Sanchez" lastName="Sanchez" role="Plaintiff"></party>
+ <party firstName="Tyrone" fullName="Tyrone Sanders" lastName="Sanders" role="Plaintiff"></party>
+ <party firstName="Teresa" fullName="Teresa Schwartz" lastName="Schwartz" role="Defendant"></party>
+ <party firstName="Arnold" fullName="Arnold Schwarzenegger" lastName="Schwarzenegger" role="Defendant"></party>
+ <party firstName="Adrian" fullName="Adrian Sepulveda" lastName="Sepulveda" role="Plaintiff"></party>
+ <party firstName="Albert" fullName="Albert Sherrod" lastName="Sherrod" role="Plaintiff"></party>
+ <party firstName="Kirk" fullName="Kirk Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Leroy" fullName="Leroy Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Corey" fullName="Corey Lamar Smith" lastName="Smith" middleName="Lamar" role="Plaintiff"></party>
+ <party firstName="Edward" fullName="Edward Spence" lastName="Spence" role="Plaintiff"></party>
+ <party fullName="State of California" lastName="State of California" role="Defendant"></party>
+ <party firstName="Willie" fullName="Willie Steels" lastName="Steels" role="Plaintiff"></party>
+ <party firstName="Tracy" fullName="Tracy Stewart" lastName="Stewart" role="Plaintiff"></party>
+ <party firstName="Hector" fullName="Hector Talamantes" lastName="Talamantes" role="Plaintiff"></party>
+ <party firstName="Josh" fullName="Josh Thomas" lastName="Thomas" role="Plaintiff"></party>
+ <party firstName="Louis" fullName="Louis Thomas" lastName="Thomas" role="Plaintiff"></party>
+ <party firstName="Maurice" fullName="Maurice Thomas" lastName="Thomas" role="Plaintiff"></party>
+ <party firstName="Tyrone" fullName="Tyrone Thompson" lastName="Thompson" role="Plaintiff"></party>
+ <party firstName="Aaron" fullName="Aaron Tillis" lastName="Tillis" role="Plaintiff"></party>
+ <party firstName="Ismael" fullName="Ismael Torres-Robles" lastName="Torres-Robles" role="Plaintiff"></party>
+ <party firstName="Elonza" fullName="Elonza Tyler" lastName="Tyler" role="Plaintiff"></party>
+ <party firstName="Vance" fullName="Vance Utley" lastName="Utley" role="Plaintiff"></party>
+ <party firstName="Roberto" fullName="Roberto Vasquez" lastName="Vasquez" role="Plaintiff"></party>
+ <party firstName="Solomon" fullName="Solomon Vasquez" lastName="Vasquez" role="Plaintiff"></party>
+ <party firstName="Rene" fullName="Rene Villanueva" lastName="Villanueva" role="Plaintiff"></party>
+ <party firstName="Patrick" fullName="Patrick Wallace" lastName="Wallace" role="Plaintiff"></party>
+ <party firstName="Kenneth" fullName="Kenneth Washington" lastName="Washington" role="Plaintiff"></party>
+ <party firstName="Byron" fullName="Byron West" lastName="West" role="Plaintiff"></party>
+ <party firstName="Bertrum" fullName="Bertrum Westbrook" lastName="Westbrook" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas Wiley" lastName="Wiley" role="Plaintiff"></party>
+ <party firstName="William" fullName="William Wiley" lastName="Wiley" role="Plaintiff"></party>
+ <party firstName="Darren" fullName="Darren Williams" lastName="Williams" role="Plaintiff"></party>
+ <party firstName="Rodney" fullName="Rodney Williams" lastName="Williams" role="Plaintiff"></party>
+ <party firstName="Xavier" fullName="Xavier Williams" lastName="Williams" role="Plaintiff"></party>
+ <party firstName="Dwight" fullName="Dwight Winslow M.D." generation="M.D." lastName="Winslow" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Wolters" lastName="Wolters" role="Plaintiff"></party>
+ <party firstName="Theodore" fullName="Theodore Wood" lastName="Wood" role="Plaintiff"></party>
+ <party firstName="Wayne" fullName="Wayne Woods" lastName="Woods" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald Wright" lastName="Wright" role="Plaintiff"></party>
+ <party firstName="Kenneth" fullName="Kenneth Yancey" lastName="Yancey" role="Plaintiff"></party>
+ <party firstName="James" fullName="James A. Yates" lastName="Yates" middleName="A." role="Defendant"></party>
+ <party firstName="George" fullName="George Yount" lastName="Yount" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-0/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER of INTRADISTRICT TRANSFER from Sacramento (2:13-cv-2254 DAD) to Fresno (1:14-cv-0060 GSA) signed by Magistrate Judge Dale A. Drozd on 1/15/14. (Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc4653e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-16</dateIssued>
+  <docketText>ORDER of INTRADISTRICT TRANSFER from Sacramento (2:13-cv-2254 DAD) to Fresno (1:14-cv-0060 GSA) signed by Magistrate Judge Dale A. Drozd on 1/15/14. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-1/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER RE DEFENDANTS&apos; MOTION FOR EXTENSION OF TIME. Plaintiffs shall file an opposition or statement of non-opposition to defendant&apos;s motion for an extension of time by close of business on Friday, March 14, 2014. Should plaintiffs file an opposition to the motion, the parties shall be prepared to argue the motion on shorten time. If an opposition is filed, the Court will set a hearing on the motion for Monday, March 17, 2014, and the parties will be informed of the time to appear. Signed by Magistrate Judge Stanley A. Boone on 3/13/2014. (Hernandez, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc4654b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-03-13</dateIssued>
+  <docketText>ORDER RE DEFENDANTS&apos; MOTION FOR EXTENSION OF TIME. Plaintiffs shall file an opposition or statement of non-opposition to defendant&apos;s motion for an extension of time by close of business on Friday, March 14, 2014. Should plaintiffs file an opposition to the motion, the parties shall be prepared to argue the motion on shorten time. If an opposition is filed, the Court will set a hearing on the motion for Monday, March 17, 2014, and the parties will be informed of the time to appear. Signed by Magistrate Judge Stanley A. Boone on 3/13/2014. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-2/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER addressing plaintiffs&apos; objections to intradistrict transfer. Signed by Magistrate Judge Stanley A. Boone on 3/27/2014. (Hernandez, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc4654d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-03-27</dateIssued>
+  <docketText>ORDER addressing plaintiffs&apos; objections to intradistrict transfer. Signed by Magistrate Judge Stanley A. Boone on 3/27/2014. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-3/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>STIPULATION and ORDER for extension of time to respond to first amended complaint. Signed by Magistrate Judge Stanley A. Boone on 5/6/2014. (Hernandez, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46539</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-3</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-05-07</dateIssued>
+  <docketText>STIPULATION and ORDER for extension of time to respond to first amended complaint. Signed by Magistrate Judge Stanley A. Boone on 5/6/2014. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-4/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER to SHOW CAUSE RE Consolidation for all Pretrial Purposes of Related Cases signed by Magistrate Judge Stanley A. Boone on 5/7/2014. (Sant Agata, S)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46547</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-4</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-05-09</dateIssued>
+  <docketText>ORDER to SHOW CAUSE RE Consolidation for all Pretrial Purposes of Related Cases signed by Magistrate Judge Stanley A. Boone on 5/7/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-5/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER To DISMISS Without Prejudice Defendant J. Clark Kelso Pursuant To Fed.R. Civ. P. 41(a)(1)(A)(i)(Doc.46), signed by District Judge Lawrence J. O&apos;Neill on 5/22/2014.(Fahrney, E)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46536</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-5</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-05-22</dateIssued>
+  <docketText>ORDER To DISMISS Without Prejudice Defendant J. Clark Kelso Pursuant To Fed.R. Civ. P. 41(a)(1)(A)(i)(Doc.46), signed by District Judge Lawrence J. O&apos;Neill on 5/22/2014.(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-6/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER GRANTING Ex-Parte Application for Extension of 1-Day to file response to Order to Show Cause re: Consolidation, signed by Magistrate Judge Stanley A. Boone on 5/22/2014. (Kusamura, W)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46559</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-6</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-05-23</dateIssued>
+  <docketText>ORDER GRANTING Ex-Parte Application for Extension of 1-Day to file response to Order to Show Cause re: Consolidation, signed by Magistrate Judge Stanley A. Boone on 5/22/2014. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-7/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER for Counsel to Meet and Confer Re Rule 26(f) Conference signed by Magistrate Judge Stanley A. Boone on 05/29/2014. Telephonic Hearing set for 7/11/2014 at 10:00 AM in Courtroom 9 (SAB) before Magistrate Judge Stanley A. Boone.(Flores, E)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc4653c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-7</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-05-30</dateIssued>
+  <docketText>ORDER for Counsel to Meet and Confer Re Rule 26(f) Conference signed by Magistrate Judge Stanley A. Boone on 05/29/2014. Telephonic Hearing set for 7/11/2014 at 10:00 AM in Courtroom 9 (SAB) before Magistrate Judge Stanley A. Boone.(Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-8/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS recommending granting in part and denying in part defendants Beard, Brazelton, Brown, Cate, Hartley, Hubbard, Rothchild, Schwarzenegger and Yates&apos; Motion to Dismiss and granting defendants Igbinosa and Winslow&apos;s Motion to Dismiss. Matter referred to Judge O&apos;Neill. Signed by Magistrate Judge Stanley A. Boone on 6/24/2014. (Hernandez, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc454ee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-8</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-06-24</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS recommending granting in part and denying in part defendants Beard, Brazelton, Brown, Cate, Hartley, Hubbard, Rothchild, Schwarzenegger and Yates&apos; Motion to Dismiss and granting defendants Igbinosa and Winslow&apos;s Motion to Dismiss. Matter referred to Judge O&apos;Neill. Signed by Magistrate Judge Stanley A. Boone on 6/24/2014. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-9/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER RE Plaintiff&apos;s Objections to Findings and Recommendations signed by District Judge Lawrence J. O&apos;Neill on 7/30/2014. (Sant Agata, S)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc454f0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-9</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-07-30</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER RE Plaintiff&apos;s Objections to Findings and Recommendations signed by District Judge Lawrence J. O&apos;Neill on 7/30/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-10/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER CONSOLIDATING CASES: Lead Case is 1:14-cv-00060 LJO-SAB Civil Case, Member Cases are 1:14-cv-00430 LJO-SAB, 1:14-cv-00816 LJO-SAB, 1:14-cv-1226 LJO-SAB; MEMBER CASES CLOSED; all Future Filings to be made in Lead Case; signed by Magistrate Judge Stanley A. Boone on 08/18/2014. (Flores, E)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc4654f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-10</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-08-18</dateIssued>
+  <docketText>ORDER CONSOLIDATING CASES: Lead Case is 1:14-cv-00060 LJO-SAB Civil Case, Member Cases are 1:14-cv-00430 LJO-SAB, 1:14-cv-00816 LJO-SAB, 1:14-cv-1226 LJO-SAB; MEMBER CASES CLOSED; all Future Filings to be made in Lead Case; signed by Magistrate Judge Stanley A. Boone on 08/18/2014. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-11/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER requiring plaintiffs to identify the consolidated complaint. Deadline of August 26, 2014. Signed by Magistrate Judge Stanley A. Boone on 8/25/2014. (Hernandez, M)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46537</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-11</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2014-08-25</dateIssued>
+  <docketText>ORDER requiring plaintiffs to identify the consolidated complaint. Deadline of August 26, 2014. Signed by Magistrate Judge Stanley A. Boone on 8/25/2014. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-12/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER striking first and second amended complaints and granting extension of time to file consolidated complaint. Deadline 12/1/2014. Signed by Magistrate Judge Stanley A. Boone on 8/27/2014. (Hernandez, M)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46548</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-12</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2014-08-28</dateIssued>
+  <docketText>ORDER striking first and second amended complaints and granting extension of time to file consolidated complaint. Deadline 12/1/2014. Signed by Magistrate Judge Stanley A. Boone on 8/27/2014. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-13/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER vacating Initial Scheduling Conference set for 10/10/2014. A status conference is set for 11/25/2014 at 10:00 a.m. before Magistrate Judge Stanley A. Boone. Signed by Magistrate Judge Stanley A. Boone on 9/15/2014. (Hernandez, M)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc4653a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-13</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2014-09-15</dateIssued>
+  <docketText>ORDER vacating Initial Scheduling Conference set for 10/10/2014. A status conference is set for 11/25/2014 at 10:00 a.m. before Magistrate Judge Stanley A. Boone. Signed by Magistrate Judge Stanley A. Boone on 9/15/2014. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-14/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORORDER DISCHARGING Order to Show Cause and GRANTING Motion to Consolidate Action With Case Number 1:14-cv-00060-LJO-SAB (PC); ORDER CONSOLIDATING CASES signed by Magistrate Judge Sheila K. Oberto on 9/24/2014. Lead Case is 1:14-cv-00060-LJO-SAB (PC). Member Case is 1:13-cv-01618-AWI-SKO (PC). All future filings to be made in Lead Case. MEMBER CASE CLOSED. (Jessen, A)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc454ef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-14</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2014-09-25</dateIssued>
+  <docketText>ORORDER DISCHARGING Order to Show Cause and GRANTING Motion to Consolidate Action With Case Number 1:14-cv-00060-LJO-SAB (PC); ORDER CONSOLIDATING CASES signed by Magistrate Judge Sheila K. Oberto on 9/24/2014. Lead Case is 1:14-cv-00060-LJO-SAB (PC). Member Case is 1:13-cv-01618-AWI-SKO (PC). All future filings to be made in Lead Case. MEMBER CASE CLOSED. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-15/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER re Stipulation on Consolidation. Signed by Magistrate Judge Stanley A. Boone on 9/24/2014. (Hernandez, M)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46546</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-15</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-09-25</dateIssued>
+  <docketText>ORDER re Stipulation on Consolidation. Signed by Magistrate Judge Stanley A. Boone on 9/24/2014. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-16/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER Vacating Findings and Recommendations of September 4, 2014 and Granting Request for Consolidation in Case Number: 1:13-cv-01822-AWI-GSA (PC); ORDER for Clerk to Consolidate Case Number: 1:13-cv-01822-AWI-GSA (PC) with Case Number: 1:14-cv-00060-LJO-SAB, signed by Magistrate Judge Gary S. Austin on 9/30/14. (Verduzco, M)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46545</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-16</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2014-09-30</dateIssued>
+  <docketText>ORDER Vacating Findings and Recommendations of September 4, 2014 and Granting Request for Consolidation in Case Number: 1:13-cv-01822-AWI-GSA (PC); ORDER for Clerk to Consolidate Case Number: 1:13-cv-01822-AWI-GSA (PC) with Case Number: 1:14-cv-00060-LJO-SAB, signed by Magistrate Judge Gary S. Austin on 9/30/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-17/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER CONSOLIDATING CASE: Lead Case is 1:14-cv-00060 LJO SAB, Member Case is 1:14-cv-1395 LJO SAB; MEMBER CASE CLOSED; all Future Filings to be made in Lead Case signed by Magistrate Judge Stanley A. Boone on 10/07/2014.(Flores, E)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc4654c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-17</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2014-10-09</dateIssued>
+  <docketText>ORDER CONSOLIDATING CASE: Lead Case is 1:14-cv-00060 LJO SAB, Member Case is 1:14-cv-1395 LJO SAB; MEMBER CASE CLOSED; all Future Filings to be made in Lead Case signed by Magistrate Judge Stanley A. Boone on 10/07/2014.(Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-18/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER REGARDING DISCOVERY, signed by Magistrate Judge Stanley A. Boone on 10/10/2014. (Kusamura, W)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc4653f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-18</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2014-10-10</dateIssued>
+  <docketText>ORDER REGARDING DISCOVERY, signed by Magistrate Judge Stanley A. Boone on 10/10/2014. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-19/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER CONSOLIDATING CASES: Lead Case is 1:14-cv-00060-LJO-SAB, Member Case 1:14-cv-01559-LJO-MJS; Plaintiffs Added: Corey Campbell, Robert Conley, Sinohe Hercules, Juan Martinez, Juan Penalva, Robert Preston, John Ruggles, Willie Steels and Solomon Vasquez, represented by Benjamin L. Pavone added; MEMBER CASE CLOSED; all future filings to be made in Lead Case, signed by Magistrate Judge Michael J. Seng on 10/21/14. (Martin-Gill, S)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46555</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-19</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2014-10-22</dateIssued>
+  <docketText>ORDER CONSOLIDATING CASES: Lead Case is 1:14-cv-00060-LJO-SAB, Member Case 1:14-cv-01559-LJO-MJS; Plaintiffs Added: Corey Campbell, Robert Conley, Sinohe Hercules, Juan Martinez, Juan Penalva, Robert Preston, John Ruggles, Willie Steels and Solomon Vasquez, represented by Benjamin L. Pavone added; MEMBER CASE CLOSED; all future filings to be made in Lead Case, signed by Magistrate Judge Michael J. Seng on 10/21/14. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-20/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER CONSOLIDATING ACTION, signed by District Judge Lawrence J. O&apos;Neill on 10/30/14: The Clerk&apos;s Office is directed to consolidate this action with Smith v. Schwarzenegger, No. 1:14-cv-00060 LJO SAB; and The Clerk&apos;s Office is directed to close Member Case No. 1:14-cv-01697 LJO DLB; ALL FUTURE FILINGS TO BE MADE IN LEAD CASE. (Hellings, J)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46553</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-20</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2014-10-31</dateIssued>
+  <docketText>ORDER CONSOLIDATING ACTION, signed by District Judge Lawrence J. O&apos;Neill on 10/30/14: The Clerk&apos;s Office is directed to consolidate this action with Smith v. Schwarzenegger, No. 1:14-cv-00060 LJO SAB; and The Clerk&apos;s Office is directed to close Member Case No. 1:14-cv-01697 LJO DLB; ALL FUTURE FILINGS TO BE MADE IN LEAD CASE. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-21/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER Following Joint Discovery Plan Conference signed by Magistrate Judge Stanley A. Boone on 12/5/2014. (Kusamura, W)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46551</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-21</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2014-12-08</dateIssued>
+  <docketText>ORDER Following Joint Discovery Plan Conference signed by Magistrate Judge Stanley A. Boone on 12/5/2014. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-22/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER GRANTING Defendants Request for an Extension of Time to File a Responsive Pleading and DENYING Plaintiffs&apos; Order Request for Discovery. Responsive Pleading Due January 30, 2015. Motion Hearing set for 3/27/2015 at 01:30 PM in Courtroom 9 (SAB) before Magistrate Judge Stanley A. Boone, signed by Magistrate Judge Stanley A. Boone on 12/5/2014. (Kusamura, W)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc4653d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-22</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2014-12-08</dateIssued>
+  <docketText>ORDER GRANTING Defendants Request for an Extension of Time to File a Responsive Pleading and DENYING Plaintiffs&apos; Order Request for Discovery. Responsive Pleading Due January 30, 2015. Motion Hearing set for 3/27/2015 at 01:30 PM in Courtroom 9 (SAB) before Magistrate Judge Stanley A. Boone, signed by Magistrate Judge Stanley A. Boone on 12/5/2014. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-23/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER Setting Informal Telephonic Conference to Discuss Amendment of the Consolidate Complaint for 1/16/2015 at 9:30 a.m. before Magistrate Judge Stanley A. Boone. Signed by Magistrate Judge Stanley A. Boone on 12/30/2014. (Hernandez, M)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46554</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-23</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2014-12-30</dateIssued>
+  <docketText>ORDER Setting Informal Telephonic Conference to Discuss Amendment of the Consolidate Complaint for 1/16/2015 at 9:30 a.m. before Magistrate Judge Stanley A. Boone. Signed by Magistrate Judge Stanley A. Boone on 12/30/2014. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-24/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>Joint Discovery Plan ORDER signed by Magistrate Judge Stanley A. Boone on 1/5/15.(Marrujo, C)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46556</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-24</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>Joint Discovery Plan ORDER signed by Magistrate Judge Stanley A. Boone on 1/5/15.(Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-25/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER following informal telephonic conference. Signed by Magistrate Judge Stanley A. Boone on 1/22/2015. (Hernandez, M)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46558</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-25</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2015-01-22</dateIssued>
+  <docketText>ORDER following informal telephonic conference. Signed by Magistrate Judge Stanley A. Boone on 1/22/2015. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-26/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER Re Plantiffs&apos; Voluntary Dismissal of Defendant J. Clark Kelso 133, signed by District Judge Lawrence J. O&apos;Neill on 01/23/20015. (Martin-Gill, S)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc454eb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-26</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2015-01-23</dateIssued>
+  <docketText>ORDER Re Plantiffs&apos; Voluntary Dismissal of Defendant J. Clark Kelso 133, signed by District Judge Lawrence J. O&apos;Neill on 01/23/20015. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-27/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER EXTENDING TIME FOR DEFENDANTS TO FILE RESPONSIVE PLEADING. Signed by Magistrate Judge Stanley A. Boone on 1/27/2015. (Hernandez, M)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-27.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46549</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-27</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2015-01-27</dateIssued>
+  <docketText>ORDER EXTENDING TIME FOR DEFENDANTS TO FILE RESPONSIVE PLEADING. Signed by Magistrate Judge Stanley A. Boone on 1/27/2015. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-28/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Stanley A. Boone on 2/24/2015. (Sant Agata, S)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-28.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc4654e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-28</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2015-02-24</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Stanley A. Boone on 2/24/2015. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-29/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>Order shortening time to hear Motion to Continue hearing on Motion to Dismiss, signed by Magistrate Judge Stanley A. Boone on 3/5/2015. (Plaintiff&apos;s Opposition Deadline: 3/10/2015) (Rosales, O)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-29.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc4653b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-29</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2015-03-06</dateIssued>
+  <docketText>Order shortening time to hear Motion to Continue hearing on Motion to Dismiss, signed by Magistrate Judge Stanley A. Boone on 3/5/2015. (Plaintiff&apos;s Opposition Deadline: 3/10/2015) (Rosales, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-30/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER RE STIPULATION TO CONTINUE HEARING as to 138 140 DEFENDANTS&apos; MOTION to DISMISS: The Motion Hearing is reset from 3/27/2015 to 4/15/2015 at 10:00 AM in Courtroom 9 (SAB) before Magistrate Judge Stanley A. Boone. Signed by Magistrate Judge Stanley A. Boone on 3/10/2015. (Hernandez, M)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-30.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc454ec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-30</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2015-03-10</dateIssued>
+  <docketText>ORDER RE STIPULATION TO CONTINUE HEARING as to 138 140 DEFENDANTS&apos; MOTION to DISMISS: The Motion Hearing is reset from 3/27/2015 to 4/15/2015 at 10:00 AM in Courtroom 9 (SAB) before Magistrate Judge Stanley A. Boone. Signed by Magistrate Judge Stanley A. Boone on 3/10/2015. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-31/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER ON STIPULATION to Continue Hearing on Defendants&apos; Motions to Dismiss (Docs. 138, 140, 152), Signed by Magistrate Judge Stanley A. Boone on 4/1/2015. The Motion Hearing now set for 4/15/2015 is CONTINUED to 4/29/2015 at 10:00 AM in Courtroom 9 before Magistrate Judge Stanley A. Boone. Plaintiffs&apos; opposition to the motion to dismiss shall be filed on or before 4/15/2015. Defendants&apos; reply, if any, shall be filed on or before 4/22/2015. (Arellano, S.)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-31.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46538</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-31</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2015-04-03</dateIssued>
+  <docketText>ORDER ON STIPULATION to Continue Hearing on Defendants&apos; Motions to Dismiss (Docs. 138, 140, 152), Signed by Magistrate Judge Stanley A. Boone on 4/1/2015. The Motion Hearing now set for 4/15/2015 is CONTINUED to 4/29/2015 at 10:00 AM in Courtroom 9 before Magistrate Judge Stanley A. Boone. Plaintiffs&apos; opposition to the motion to dismiss shall be filed on or before 4/15/2015. Defendants&apos; reply, if any, shall be filed on or before 4/22/2015. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-32/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>Finding and Recommendations recommending Granting Defendants&apos; 138 140 Motion to Dismiss on the Grounds of Qualified Immunity, signed by Magistrate Judge Stanley A. Boone on 5/19/2015. Motions referred to Judge O&apos; Neill. Objections to F&amp;R due by 6/3/2015. (Rosales, O)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-32.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc454ed</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-32</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2015-05-20</dateIssued>
+  <docketText>Finding and Recommendations recommending Granting Defendants&apos; 138 140 Motion to Dismiss on the Grounds of Qualified Immunity, signed by Magistrate Judge Stanley A. Boone on 5/19/2015. Motions referred to Judge O&apos; Neill. Objections to F&amp;R due by 6/3/2015. (Rosales, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-33/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>STIPULATION and ORDER FOR PAGE LENGTH EXTENSION OF F&amp;R OBJECTION signed by District Judge Lawrence J. O&apos;Neill on June 3, 2015. (Munoz, I)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-33.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46544</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-33</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2015-06-03</dateIssued>
+  <docketText>STIPULATION and ORDER FOR PAGE LENGTH EXTENSION OF F&amp;R OBJECTION signed by District Judge Lawrence J. O&apos;Neill on June 3, 2015. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-34/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>Stipulation and Order for extension to file Plaintiffs&apos; objections to F&amp;R and Defense reply brief, signed by Magistrate Judge Stanley A. Boone on 6/15/2015. (Objections to F&amp;R due by 6/24/2015; Reply due by 7/20/2015) (Rosales, O)</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-34.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46550</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-34</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2015-06-16</dateIssued>
+  <docketText>Stipulation and Order for extension to file Plaintiffs&apos; objections to F&amp;R and Defense reply brief, signed by Magistrate Judge Stanley A. Boone on 6/15/2015. (Objections to F&amp;R due by 6/24/2015; Reply due by 7/20/2015) (Rosales, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-35" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-35/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>ORDER STAYING Motion to Amend the Consolidated Complaint and VACATING October 14, 2015 Hearing signed by Magistrate Judge Stanley A. Boone on 9/10/2015. (Sant Agata, S)</subTitle>
+  <partNumber>35</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-35.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46552</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-35</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_35.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-35/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-35.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-35</accessId>
+  <sequenceNumber>35</sequenceNumber>
+  <dateIssued>2015-09-10</dateIssued>
+  <docketText>ORDER STAYING Motion to Amend the Consolidated Complaint and VACATING October 14, 2015 Hearing signed by Magistrate Judge Stanley A. Boone on 9/10/2015. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-36" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-36/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>MEMORANDUM DECISION and ORDER re 164 FINDINGS AND RECOMMENDATIONS re Defendants&apos; Motions to Dismiss signed by District Judge Lawrence J. O&apos;Neill on 10/7/2015. (Sant Agata, S)</subTitle>
+  <partNumber>36</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-36.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc46557</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-36</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_36.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-36/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-36.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-36</accessId>
+  <sequenceNumber>36</sequenceNumber>
+  <dateIssued>2015-10-07</dateIssued>
+  <docketText>MEMORANDUM DECISION and ORDER re 164 FINDINGS AND RECOMMENDATIONS re Defendants&apos; Motions to Dismiss signed by District Judge Lawrence J. O&apos;Neill on 10/7/2015. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00060-37" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-37/mods.xml">
+ <titleInfo>
+  <title>Smith et al v. Schwarzenegger et al</title>
+  <subTitle>FINDINGS And RECOMMENDATIONS Recommending Denying Plaintiffs&apos; Motion To Amend The Consolidated Complaint (ECF No.182), Objections Due Within Fourteen Days, signed by Magistrate Judge Stanley A. Boone on 10/19/2015. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 11/4/2015. (Fahrney, E)</subTitle>
+  <partNumber>37</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-37.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dc4654a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-37</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00060_37.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00060/USCOURTS-caed-1_14-cv-00060-37/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00060/pdf/USCOURTS-caed-1_14-cv-00060-37.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00060; Smith et al v. Schwarzenegger et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00060-37</accessId>
+  <sequenceNumber>37</sequenceNumber>
+  <dateIssued>2015-10-19</dateIssued>
+  <docketText>FINDINGS And RECOMMENDATIONS Recommending Denying Plaintiffs&apos; Motion To Amend The Consolidated Complaint (ECF No.182), Objections Due Within Fourteen Days, signed by Magistrate Judge Stanley A. Boone on 10/19/2015. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 11/4/2015. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,183 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817381a2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03076</identifier>
+<identifier type="local">P0b002ee1817381a2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_04-cr-03076</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_04-cr-03076</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:04-cr-03076</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Melissa" fullName="Melissa Ann Pickering" lastName="Pickering" middleName="Ann" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Melissa" fullName="Melissa Ann Vicars" lastName="Vicars" middleName="Ann" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Vicars</title>
+ <partNumber>4:04-cr-03076</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03076/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:04-cr-03076;04-3076</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Melissa Ann Pickering</displayForm>
+ <namePart type="family">Pickering</namePart>
+ <namePart type="given">Melissa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Melissa Ann Vicars</displayForm>
+ <namePart type="family">Vicars</namePart>
+ <namePart type="given">Melissa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_04-cr-03076</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:04-cr-03076</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Melissa" fullName="Melissa Ann Pickering" lastName="Pickering" middleName="Ann" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Melissa" fullName="Melissa Ann Vicars" lastName="Vicars" middleName="Ann" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_04-cr-03076-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03076/USCOURTS-ned-4_04-cr-03076-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Vicars</title>
+  <subTitle>ORDER as to defendant Melissa Ann Vicars. ***Rule 35 Motion Hearing set for 1/26/2006 12:15 PM in Courtroom 1 (Lincoln) before Judge Richard G. Kopf. The defendant is held to have waived her right to be present. Signed by Judge Richard G. Kopf on 1/18/2006. (KLL, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_04-cr-03076-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181762df8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03076/USCOURTS-ned-4_04-cr-03076-0</identifier>
+ <identifier type="former granule identifier">ned-4_04-cr-03076_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03076/USCOURTS-ned-4_04-cr-03076-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03076/pdf/USCOURTS-ned-4_04-cr-03076-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:04-cr-03076; USA v. Vicars; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_04-cr-03076-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-18</dateIssued>
+  <docketText>ORDER as to defendant Melissa Ann Vicars. ***Rule 35 Motion Hearing set for 1/26/2006 12:15 PM in Courtroom 1 (Lincoln) before Judge Richard G. Kopf. The defendant is held to have waived her right to be present. Signed by Judge Richard G. Kopf on 1/18/2006. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_04-cr-03076-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03076/USCOURTS-ned-4_04-cr-03076-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Vicars</title>
+  <subTitle>AMENDED JUDGMENT - Government&apos;s motion for reduction of sentence 55 pursuant to Rule 35(b) is granted. Defendant&apos;s sentence of imprisonment is reduced from the original sentence to a term of 84 months, followed by 5 years supervised release with special conditions, and pay $100 ($50 Balance Due) Special Assessment as to defendant Melissa Ann Vicars. Signed by Judge Richard G. Kopf on 1/26/2006. (4 Certified Copies to USM)(CS, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_04-cr-03076-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181762df7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03076/USCOURTS-ned-4_04-cr-03076-1</identifier>
+ <identifier type="former granule identifier">ned-4_04-cr-03076_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03076/USCOURTS-ned-4_04-cr-03076-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03076/pdf/USCOURTS-ned-4_04-cr-03076-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:04-cr-03076; USA v. Vicars; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_04-cr-03076-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-26</dateIssued>
+  <docketText>AMENDED JUDGMENT - Government&apos;s motion for reduction of sentence 55 pursuant to Rule 35(b) is granted. Defendant&apos;s sentence of imprisonment is reduced from the original sentence to a term of 84 months, followed by 5 years supervised release with special conditions, and pay $100 ($50 Balance Due) Special Assessment as to defendant Melissa Ann Vicars. Signed by Judge Richard G. Kopf on 1/26/2006. (4 Certified Copies to USM)(CS, )</docketText>
+</extension>
+</relatedItem>
+</mods>

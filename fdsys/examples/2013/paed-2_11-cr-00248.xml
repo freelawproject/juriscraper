@@ -1,0 +1,729 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee185b901d2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-08-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-08-01</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248</identifier>
+<identifier type="local">P0b002ee185b901d2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-08-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-08-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_11-cr-00248</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_11-cr-00248</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:11-cr-00248</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="MICHAEL" fullName="MICHAEL BARCLAY" lastName="BARCLAY" role="Defendant"></party>
+ <party firstName="KEITH" fullName="KEITH EBNER" lastName="EBNER" role="Defendant"></party>
+ <party firstName="JEFFREY" fullName="JEFFREY FILOON" lastName="FILOON" role="Defendant"></party>
+ <party firstName="KEITH" fullName="KEITH GIDELSON" lastName="GIDELSON" role="Defendant"></party>
+ <party firstName="KIRSTEN" fullName="KIRSTEN GIDELSON" lastName="GIDELSON" role="Defendant"></party>
+ <party firstName="JAY" fullName="JAY GIULIANO" lastName="GIULIANO" role="Defendant"></party>
+ <party firstName="CHRISTIAN" fullName="CHRISTIAN KOWALKO" lastName="KOWALKO" role="Defendant"></party>
+ <party firstName="JOEL" fullName="JOEL LEVIN" lastName="LEVIN" role="Defendant"></party>
+ <party firstName="LUKE" fullName="LUKE LORS" lastName="LORS" role="Defendant"></party>
+ <party fullName="LUCAS" lastName="LUCAS" role="Defendant"></party>
+ <party firstName="JOSEPH" fullName="JOSEPH MCINTYRE" lastName="MCINTYRE" role="Defendant"></party>
+ <party firstName="GEORGE" fullName="GEORGE SAMBUCA" lastName="SAMBUCA" role="Defendant"></party>
+ <party firstName="WILLIAM" fullName="WILLIAM SCHIAVO" lastName="SCHIAVO" role="Defendant"></party>
+ <party firstName="MICHAEL" fullName="MICHAEL SUPILOWSKI" lastName="SUPILOWSKI" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="VAIDOTAS" fullName="VAIDOTAS VERIKAS" lastName="VERIKAS" role="Defendant"></party>
+ <party firstName="ROBERT" fullName="ROBERT JAMES WALTERS" lastName="WALTERS" middleName="JAMES" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. GIDELSON et al</title>
+ <partNumber>2:11-cr-00248</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cr-00248;11-248</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>MICHAEL BARCLAY</displayForm>
+ <namePart type="family">BARCLAY</namePart>
+ <namePart type="given">MICHAEL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>KEITH EBNER</displayForm>
+ <namePart type="family">EBNER</namePart>
+ <namePart type="given">KEITH</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JEFFREY FILOON</displayForm>
+ <namePart type="family">FILOON</namePart>
+ <namePart type="given">JEFFREY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>KEITH GIDELSON</displayForm>
+ <namePart type="family">GIDELSON</namePart>
+ <namePart type="given">KEITH</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>KIRSTEN GIDELSON</displayForm>
+ <namePart type="family">GIDELSON</namePart>
+ <namePart type="given">KIRSTEN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JAY GIULIANO</displayForm>
+ <namePart type="family">GIULIANO</namePart>
+ <namePart type="given">JAY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CHRISTIAN KOWALKO</displayForm>
+ <namePart type="family">KOWALKO</namePart>
+ <namePart type="given">CHRISTIAN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOEL LEVIN</displayForm>
+ <namePart type="family">LEVIN</namePart>
+ <namePart type="given">JOEL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LUKE LORS</displayForm>
+ <namePart type="family">LORS</namePart>
+ <namePart type="given">LUKE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LUCAS</displayForm>
+ <namePart type="family">LUCAS</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOSEPH MCINTYRE</displayForm>
+ <namePart type="family">MCINTYRE</namePart>
+ <namePart type="given">JOSEPH</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GEORGE SAMBUCA</displayForm>
+ <namePart type="family">SAMBUCA</namePart>
+ <namePart type="given">GEORGE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>WILLIAM SCHIAVO</displayForm>
+ <namePart type="family">SCHIAVO</namePart>
+ <namePart type="given">WILLIAM</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MICHAEL SUPILOWSKI</displayForm>
+ <namePart type="family">SUPILOWSKI</namePart>
+ <namePart type="given">MICHAEL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>VAIDOTAS VERIKAS</displayForm>
+ <namePart type="family">VERIKAS</namePart>
+ <namePart type="given">VAIDOTAS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ROBERT JAMES WALTERS</displayForm>
+ <namePart type="family">WALTERS</namePart>
+ <namePart type="given">ROBERT</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_11-cr-00248</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:11-cr-00248</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="MICHAEL" fullName="MICHAEL BARCLAY" lastName="BARCLAY" role="Defendant"></party>
+ <party firstName="KEITH" fullName="KEITH EBNER" lastName="EBNER" role="Defendant"></party>
+ <party firstName="JEFFREY" fullName="JEFFREY FILOON" lastName="FILOON" role="Defendant"></party>
+ <party firstName="KEITH" fullName="KEITH GIDELSON" lastName="GIDELSON" role="Defendant"></party>
+ <party firstName="KIRSTEN" fullName="KIRSTEN GIDELSON" lastName="GIDELSON" role="Defendant"></party>
+ <party firstName="JAY" fullName="JAY GIULIANO" lastName="GIULIANO" role="Defendant"></party>
+ <party firstName="CHRISTIAN" fullName="CHRISTIAN KOWALKO" lastName="KOWALKO" role="Defendant"></party>
+ <party firstName="JOEL" fullName="JOEL LEVIN" lastName="LEVIN" role="Defendant"></party>
+ <party firstName="LUKE" fullName="LUKE LORS" lastName="LORS" role="Defendant"></party>
+ <party fullName="LUCAS" lastName="LUCAS" role="Defendant"></party>
+ <party firstName="JOSEPH" fullName="JOSEPH MCINTYRE" lastName="MCINTYRE" role="Defendant"></party>
+ <party firstName="GEORGE" fullName="GEORGE SAMBUCA" lastName="SAMBUCA" role="Defendant"></party>
+ <party firstName="WILLIAM" fullName="WILLIAM SCHIAVO" lastName="SCHIAVO" role="Defendant"></party>
+ <party firstName="MICHAEL" fullName="MICHAEL SUPILOWSKI" lastName="SUPILOWSKI" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="VAIDOTAS" fullName="VAIDOTAS VERIKAS" lastName="VERIKAS" role="Defendant"></party>
+ <party firstName="ROBERT" fullName="ROBERT JAMES WALTERS" lastName="WALTERS" middleName="JAMES" role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-0/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>ORDER granting 83 MOTION FOR JOINDER as to CHRISTIAN KOWALKO (9) TO JOIN IN CO-DEFTS&apos; MOTIONS. Signed by HONORABLE PAUL S. DIAMOND on 6/10/11. 6/10/11 ENTERED AND COPIES E-MAILED. (cmc)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b93af8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-0</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-06-10</dateIssued>
+  <docketText>ORDER granting 83 MOTION FOR JOINDER as to CHRISTIAN KOWALKO (9) TO JOIN IN CO-DEFTS&apos; MOTIONS. Signed by HONORABLE PAUL S. DIAMOND on 6/10/11. 6/10/11 ENTERED AND COPIES E-MAILED. (cmc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-1/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO JEFFREY FILOON (8), Count(s) 1s, IMPRISONMENT ONE DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $100.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/4/13.1/4/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b93afb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-1</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>JUDGMENT AS TO JEFFREY FILOON (8), Count(s) 1s, IMPRISONMENT ONE DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $100.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/4/13.1/4/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-2/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO KEITH GIDELSON (1), Count(s) 1s-17s, IMPRISONMENT: 48 MONTHS; SUPERVISED RELEASE: 3 YEARS; SPECIAL ASSESSMENT: $1,700.00; FINE: $25,000.00; Count(s) 18s, DISMISSED ON GOVT&apos;S. MOTION. Signed by HONORABLE PAUL S. DIAMOND on 1/9/13.1/9/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b93ba2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-2</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-09</dateIssued>
+  <docketText>JUDGMENT AS TO KEITH GIDELSON (1), Count(s) 1s-17s, IMPRISONMENT: 48 MONTHS; SUPERVISED RELEASE: 3 YEARS; SPECIAL ASSESSMENT: $1,700.00; FINE: $25,000.00; Count(s) 18s, DISMISSED ON GOVT&apos;S. MOTION. Signed by HONORABLE PAUL S. DIAMOND on 1/9/13.1/9/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-3/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO KIRSTEN GIDELSON (2), Count(s) 1s, PROBATION: 36 MONTHS; SPECIAL ASSESSMENT: $100.00. Signed by HONORABLE PAUL S. DIAMOND on 1/9/13.1/9/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b934cf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-3</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-09</dateIssued>
+  <docketText>JUDGMENT AS TO KIRSTEN GIDELSON (2), Count(s) 1s, PROBATION: 36 MONTHS; SPECIAL ASSESSMENT: $100.00. Signed by HONORABLE PAUL S. DIAMOND on 1/9/13.1/9/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-4/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO KEITH EBNER (7), Count(s) 17s, 1s, IMPRISONMENT 1 DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $200.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/11/13.1/14/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b93b00</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-4</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-14</dateIssued>
+  <docketText>JUDGMENT AS TO KEITH EBNER (7), Count(s) 17s, 1s, IMPRISONMENT 1 DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $200.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/11/13.1/14/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-5/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO ROBERT JAMES WALTERS (3), Count(s) 1s, IMPRISONMENT 1 DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $100.00. Signed by HONORABLE PAUL S. DIAMOND on 1/15/13.1/15/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b93ba1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-5</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-01-15</dateIssued>
+  <docketText>JUDGMENT AS TO ROBERT JAMES WALTERS (3), Count(s) 1s, IMPRISONMENT 1 DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $100.00. Signed by HONORABLE PAUL S. DIAMOND on 1/15/13.1/15/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-6/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO MICHAEL SUPILOWSKI (5), Count(s) 1s, IMPRISONMENT 12 MONTHS AND 1 DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $100.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/16/13.1/16/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b93af9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-6</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-01-16</dateIssued>
+  <docketText>JUDGMENT AS TO MICHAEL SUPILOWSKI (5), Count(s) 1s, IMPRISONMENT 12 MONTHS AND 1 DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $100.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/16/13.1/16/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-7/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO MICHAEL BARCLAY (6), Count(s) 12s, 1s, PROBATION 2 YEARS, SPECIAL ASSESSMENT $200.00, FINE $15,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/18/13.1/18/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b934d0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-7</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-01-18</dateIssued>
+  <docketText>JUDGMENT AS TO MICHAEL BARCLAY (6), Count(s) 12s, 1s, PROBATION 2 YEARS, SPECIAL ASSESSMENT $200.00, FINE $15,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/18/13.1/18/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-8/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO JAY GIULIANO (4), Count(s) 1s, PROBATION 2 YEARS, SPECIAL ASSESSMENT $100.00, FINE $7,500.00. Signed by HONORABLE PAUL S. DIAMOND on 1/22/13.1/23/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b934d2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-8</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-01-22</dateIssued>
+  <docketText>JUDGMENT AS TO JAY GIULIANO (4), Count(s) 1s, PROBATION 2 YEARS, SPECIAL ASSESSMENT $100.00, FINE $7,500.00. Signed by HONORABLE PAUL S. DIAMOND on 1/22/13.1/23/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-9/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO JOEL LEVIN (10), Count(s) 10s, 16s, 1s, IMPRISONMENT 1 DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $300.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/23/13.1/24/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b93afe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-9</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-01-23</dateIssued>
+  <docketText>JUDGMENT AS TO JOEL LEVIN (10), Count(s) 10s, 16s, 1s, IMPRISONMENT 1 DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $300.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/23/13.1/24/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-10/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO JOSEPH MCINTYRE (12), Count(s) 13s, 1s, 8s, IMPRISONMENT 6 MONTHS, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $300.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/29/13.1/29/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b93b01</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-10</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-01-29</dateIssued>
+  <docketText>JUDGMENT AS TO JOSEPH MCINTYRE (12), Count(s) 13s, 1s, 8s, IMPRISONMENT 6 MONTHS, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $300.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/29/13.1/29/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-11/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO LUKE LORS (11), Count(s) 11s, 1s, IMPRISONMENT 1 DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $200.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/29/13.1/29/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b93afd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-11</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-01-29</dateIssued>
+  <docketText>JUDGMENT AS TO LUKE LORS (11), Count(s) 11s, 1s, IMPRISONMENT 1 DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $200.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/29/13.1/29/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-12/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO WILLIAM SCHIAVO (14), Count(s) 15s, 1s, 7s, IMPRISONMENT 1 DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $300.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/30/13.1/31/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b934ce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-12</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2013-01-31</dateIssued>
+  <docketText>JUDGMENT AS TO WILLIAM SCHIAVO (14), Count(s) 15s, 1s, 7s, IMPRISONMENT 1 DAY, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $300.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 1/30/13.1/31/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-13/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO GEORGE SAMBUCA (13), Count(s) 1s, 9s, IMPRISONMENT 6 MONTHS, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $200.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 2/6/13.2/6/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b93afc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-13</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2013-02-06</dateIssued>
+  <docketText>JUDGMENT AS TO GEORGE SAMBUCA (13), Count(s) 1s, 9s, IMPRISONMENT 6 MONTHS, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $200.00, FINE $10,000.00. Signed by HONORABLE PAUL S. DIAMOND on 2/6/13.2/6/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-14/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS as to MICHAEL SUPILOWSKI THAT IT IS RECOMMENDED THAT THE VOUCHER DATED 2/12/2013 BE APPROVED AS SUBMITTED IN THE AMOUNT OF $9,792.20, ETC OBJECTIONS TO R&amp;R DUE BY 4/2/2013. Signed by MAGISTRATE JUDGE TIMOTHY R. RICE on 3/19/2013. (Attachments: # (1) PROPOSED ORDER)3/20/2013 Entered and Copies Mailed, E-Mailed. (ke, )</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b93aff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-14</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2013-03-19</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS as to MICHAEL SUPILOWSKI THAT IT IS RECOMMENDED THAT THE VOUCHER DATED 2/12/2013 BE APPROVED AS SUBMITTED IN THE AMOUNT OF $9,792.20, ETC OBJECTIONS TO R&amp;R DUE BY 4/2/2013. Signed by MAGISTRATE JUDGE TIMOTHY R. RICE on 3/19/2013. (Attachments: # (1) PROPOSED ORDER)3/20/2013 Entered and Copies Mailed, E-Mailed. (ke, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-15/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATIONS AS TO MICHAEL SUPILOWSKI THAT 471 THE PETITION IS APPROVED AS SUBMITTED IN THE AMOUNT OF $9,792.20. Signed by HONORABLE PAUL S. DIAMOND on 3/19/2013.3/20/2013 Entered and Copies E-Mailed. (ke, )</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b934d1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-15</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2013-03-20</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATIONS AS TO MICHAEL SUPILOWSKI THAT 471 THE PETITION IS APPROVED AS SUBMITTED IN THE AMOUNT OF $9,792.20. Signed by HONORABLE PAUL S. DIAMOND on 3/19/2013.3/20/2013 Entered and Copies E-Mailed. (ke, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_11-cr-00248-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-16/mods.xml">
+ <titleInfo>
+  <title>USA v. GIDELSON et al</title>
+  <subTitle>JUDGMENT AS TO CHRISTIAN KOWALKO (9), Count(s) 1ss, 2ss, IMPRISONMENT 48 MONTHS, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $200.00, FINE $15,000.00. Signed by HONORABLE PAUL S. DIAMOND on 7/31/13.8/1/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_11-cr-00248-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b93afa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-16</identifier>
+ <identifier type="former granule identifier">paed-2_11-cr-00248_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_11-cr-00248/USCOURTS-paed-2_11-cr-00248-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_11-cr-00248/pdf/USCOURTS-paed-2_11-cr-00248-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00248; USA v. GIDELSON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_11-cr-00248-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2013-08-01</dateIssued>
+  <docketText>JUDGMENT AS TO CHRISTIAN KOWALKO (9), Count(s) 1ss, 2ss, IMPRISONMENT 48 MONTHS, SUPERVISED RELEASE 3 YEARS, SPECIAL ASSESSMENT $200.00, FINE $15,000.00. Signed by HONORABLE PAUL S. DIAMOND on 7/31/13.8/1/13 Entered and Copies Mailed, E-Mailed BY CHAMBERS. (ke)</docketText>
+</extension>
+</relatedItem>
+</mods>

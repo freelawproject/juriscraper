@@ -1,0 +1,323 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814dd795">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_03-cv-10091</identifier>
+<identifier type="local">P0b002ee1814dd795</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_03-cv-10091</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_03-cv-10091</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:03-cv-10091</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:2201 Declaratory Judgment</cause>
+ <party fullName="CFS Convenience Food Systems, Inc." lastName="CFS Convenience Food Systems, Inc." role="ThirdParty Defendant"></party>
+ <party fullName="CFS Group B.V." lastName="CFS Group B.V." role="ThirdParty Defendant"></party>
+ <party fullName="CFS Holding M.V." lastName="CFS Holding M.V." role="ThirdParty Defendant"></party>
+ <party fullName="CFS Holding N.V." lastName="CFS Holding N.V." role="ThirdParty Defendant"></party>
+ <party fullName="CFS International B.V." lastName="CFS International B.V." role="ThirdParty Defendant"></party>
+ <party fullName="CFS Kempten GmbH" lastName="CFS Kempten GmbH" role="Counter Defendant"></party>
+ <party fullName="CFS Kempten GmbH" lastName="CFS Kempten GmbH" role="Plaintiff"></party>
+ <party fullName="CFS North America" lastName="CFS North America" role="ThirdParty Defendant"></party>
+ <party fullName="Convenience Food Systems Holding B.V." lastName="Convenience Food Systems Holding B.V." role="ThirdParty Defendant"></party>
+ <party fullName="Convenience Food Systems, Inc." lastName="Convenience Food Systems, Inc." role="Counter Defendant"></party>
+ <party fullName="Convenience Food Systems, Inc." lastName="Convenience Food Systems, Inc." role="ThirdParty Defendant"></party>
+ <party fullName="Convenience Food Systems, Inc. a" lastName="Convenience Food Systems, Inc. a" role="ThirdParty Defendant"></party>
+ <party firstName="John-Ole" fullName="John-Ole Hanson" lastName="Hanson" role="Counter Defendant"></party>
+ <party firstName="John-Ole" fullName="John-Ole Hanson" lastName="Hanson" role="ThirdParty Defendant"></party>
+ <party firstName="Jan" fullName="Jan Kuhlmann" lastName="Kuhlmann" role="Counter Defendant"></party>
+ <party firstName="Jan" fullName="Jan Kuhlmann" lastName="Kuhlmann" role="ThirdParty Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Moncrief" lastName="Moncrief" role="Counter Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Moncrief" lastName="Moncrief" role="ThirdParty Defendant"></party>
+ <party fullName="Robert Reiser&amp;Co." lastName="Robert Reiser&amp;Co." role="Counter Claimant"></party>
+ <party fullName="Robert Reiser&amp;Co." lastName="Robert Reiser&amp;Co." role="Defendant"></party>
+ <party fullName="Robert Reiser&amp;Co." lastName="Robert Reiser&amp;Co." role="ThirdParty Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>CFS Kempten GmbH v. Robert Reiser&amp;Co.</title>
+ <partNumber>1:03-cv-10091</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_03-cv-10091/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:03-cv-10091;03-10091</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CFS Convenience Food Systems, Inc.</displayForm>
+ <namePart type="family">CFS Convenience Food Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CFS Group B.V.</displayForm>
+ <namePart type="family">CFS Group B.V.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CFS Holding M.V.</displayForm>
+ <namePart type="family">CFS Holding M.V.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CFS Holding N.V.</displayForm>
+ <namePart type="family">CFS Holding N.V.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CFS International B.V.</displayForm>
+ <namePart type="family">CFS International B.V.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CFS Kempten GmbH</displayForm>
+ <namePart type="family">CFS Kempten GmbH</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CFS Kempten GmbH</displayForm>
+ <namePart type="family">CFS Kempten GmbH</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CFS North America</displayForm>
+ <namePart type="family">CFS North America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Convenience Food Systems Holding B.V.</displayForm>
+ <namePart type="family">Convenience Food Systems Holding B.V.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Convenience Food Systems, Inc.</displayForm>
+ <namePart type="family">Convenience Food Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Convenience Food Systems, Inc.</displayForm>
+ <namePart type="family">Convenience Food Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Convenience Food Systems, Inc. a</displayForm>
+ <namePart type="family">Convenience Food Systems, Inc. a</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John-Ole Hanson</displayForm>
+ <namePart type="family">Hanson</namePart>
+ <namePart type="given">John-Ole</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John-Ole Hanson</displayForm>
+ <namePart type="family">Hanson</namePart>
+ <namePart type="given">John-Ole</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jan Kuhlmann</displayForm>
+ <namePart type="family">Kuhlmann</namePart>
+ <namePart type="given">Jan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jan Kuhlmann</displayForm>
+ <namePart type="family">Kuhlmann</namePart>
+ <namePart type="given">Jan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Moncrief</displayForm>
+ <namePart type="family">Moncrief</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Moncrief</displayForm>
+ <namePart type="family">Moncrief</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Reiser&amp;Co.</displayForm>
+ <namePart type="family">Robert Reiser&amp;Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Reiser&amp;Co.</displayForm>
+ <namePart type="family">Robert Reiser&amp;Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Reiser&amp;Co.</displayForm>
+ <namePart type="family">Robert Reiser&amp;Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_03-cv-10091</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:03-cv-10091</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:2201 Declaratory Judgment</cause>
+ <party fullName="CFS Convenience Food Systems, Inc." lastName="CFS Convenience Food Systems, Inc." role="ThirdParty Defendant"></party>
+ <party fullName="CFS Group B.V." lastName="CFS Group B.V." role="ThirdParty Defendant"></party>
+ <party fullName="CFS Holding M.V." lastName="CFS Holding M.V." role="ThirdParty Defendant"></party>
+ <party fullName="CFS Holding N.V." lastName="CFS Holding N.V." role="ThirdParty Defendant"></party>
+ <party fullName="CFS International B.V." lastName="CFS International B.V." role="ThirdParty Defendant"></party>
+ <party fullName="CFS Kempten GmbH" lastName="CFS Kempten GmbH" role="Counter Defendant"></party>
+ <party fullName="CFS Kempten GmbH" lastName="CFS Kempten GmbH" role="Plaintiff"></party>
+ <party fullName="CFS North America" lastName="CFS North America" role="ThirdParty Defendant"></party>
+ <party fullName="Convenience Food Systems Holding B.V." lastName="Convenience Food Systems Holding B.V." role="ThirdParty Defendant"></party>
+ <party fullName="Convenience Food Systems, Inc." lastName="Convenience Food Systems, Inc." role="Counter Defendant"></party>
+ <party fullName="Convenience Food Systems, Inc." lastName="Convenience Food Systems, Inc." role="ThirdParty Defendant"></party>
+ <party fullName="Convenience Food Systems, Inc. a" lastName="Convenience Food Systems, Inc. a" role="ThirdParty Defendant"></party>
+ <party firstName="John-Ole" fullName="John-Ole Hanson" lastName="Hanson" role="Counter Defendant"></party>
+ <party firstName="John-Ole" fullName="John-Ole Hanson" lastName="Hanson" role="ThirdParty Defendant"></party>
+ <party firstName="Jan" fullName="Jan Kuhlmann" lastName="Kuhlmann" role="Counter Defendant"></party>
+ <party firstName="Jan" fullName="Jan Kuhlmann" lastName="Kuhlmann" role="ThirdParty Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Moncrief" lastName="Moncrief" role="Counter Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Moncrief" lastName="Moncrief" role="ThirdParty Defendant"></party>
+ <party fullName="Robert Reiser&amp;Co." lastName="Robert Reiser&amp;Co." role="Counter Claimant"></party>
+ <party fullName="Robert Reiser&amp;Co." lastName="Robert Reiser&amp;Co." role="Defendant"></party>
+ <party fullName="Robert Reiser&amp;Co." lastName="Robert Reiser&amp;Co." role="ThirdParty Plaintiff"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_03-cv-10091-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_03-cv-10091/USCOURTS-mad-1_03-cv-10091-0/mods.xml">
+ <titleInfo>
+  <title>CFS Kempten GmbH v. Robert Reiser&amp;Co.</title>
+  <subTitle>Judge Robert E. Keeton : MEMORANDUM AND ORDER entered denying 164 Sealed Motion, denying 166 Sealed Motion. (Folan, Karen)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_03-cv-10091-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815539f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_03-cv-10091/USCOURTS-mad-1_03-cv-10091-0</identifier>
+ <identifier type="former granule identifier">mad-1_03-cv-10091_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_03-cv-10091/USCOURTS-mad-1_03-cv-10091-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_03-cv-10091/pdf/USCOURTS-mad-1_03-cv-10091-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:03-cv-10091; CFS Kempten GmbH v. Robert Reiser&amp;Co.; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_03-cv-10091-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-03</dateIssued>
+  <docketText>Judge Robert E. Keeton : MEMORANDUM AND ORDER entered denying 164 Sealed Motion, denying 166 Sealed Motion. (Folan, Karen)</docketText>
+</extension>
+</relatedItem>
+</mods>

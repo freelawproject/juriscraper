@@ -1,0 +1,239 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee187668db8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40154</identifier>
+<identifier type="local">P0b002ee187668db8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_04-cr-40154</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_04-cr-40154</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:04-cr-40154</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jose" fullName="Jose Luis Negron-Torres" lastName="Negron-Torres" middleName="Luis" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Padilla-Rodriguez" lastName="Padilla-Rodriguez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Padilla-Rodriguez</title>
+ <partNumber>5:04-cr-40154</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40154/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:04-cr-40154;04-40154</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jose Luis Negron-Torres</displayForm>
+ <namePart type="family">Negron-Torres</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul Padilla-Rodriguez</displayForm>
+ <namePart type="family">Padilla-Rodriguez</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_04-cr-40154</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:04-cr-40154</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jose" fullName="Jose Luis Negron-Torres" lastName="Negron-Torres" middleName="Luis" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Padilla-Rodriguez" lastName="Padilla-Rodriguez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cr-40154-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40154/USCOURTS-ksd-5_04-cr-40154-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Padilla-Rodriguez</title>
+  <subTitle>MEMORANDUM AND ORDER ON SENTENCING ISSUES as to defendant Paul Padilla-Rodriguez. Defendant&apos;s objections to the PSR are overruled. Signed by U.S. District Senior Judge Sam A. Crow on 3/7/06. (bmw)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40154/pdf/USCOURTS-ksd-5_04-cr-40154-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18766f3ee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40154/USCOURTS-ksd-5_04-cr-40154-0</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cr-40154_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40154/USCOURTS-ksd-5_04-cr-40154-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40154/pdf/USCOURTS-ksd-5_04-cr-40154-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cr-40154; USA v. Padilla-Rodriguez; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cr-40154-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-03-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER ON SENTENCING ISSUES as to defendant Paul Padilla-Rodriguez. Defendant&apos;s objections to the PSR are overruled. Signed by U.S. District Senior Judge Sam A. Crow on 3/7/06. (bmw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cr-40154-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40154/USCOURTS-ksd-5_04-cr-40154-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Padilla-Rodriguez</title>
+  <subTitle>MEMORANDUM AND ORDER as to defendant Paul Padilla-Rodriguez denying the 64 MOTION to Withdraw Plea of Guilty and 65 MOTION to Withdraw Edward M. Collazo as Attorney. Follows oral order of 7/6/06. Signed by U.S. District Senior Judge Sam A. Crow on 7/11/06. (Attachments: # (1) Exhibit Court Exhibit A) See attached for more details.(bmw)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40154/pdf/USCOURTS-ksd-5_04-cr-40154-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18766f3ef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40154/USCOURTS-ksd-5_04-cr-40154-1</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cr-40154_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40154/USCOURTS-ksd-5_04-cr-40154-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40154/pdf/USCOURTS-ksd-5_04-cr-40154-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cr-40154; USA v. Padilla-Rodriguez; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cr-40154-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-07-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to defendant Paul Padilla-Rodriguez denying the 64 MOTION to Withdraw Plea of Guilty and 65 MOTION to Withdraw Edward M. Collazo as Attorney. Follows oral order of 7/6/06. Signed by U.S. District Senior Judge Sam A. Crow on 7/11/06. (Attachments: # (1) Exhibit Court Exhibit A) See attached for more details.(bmw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cr-40154-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40154/USCOURTS-ksd-5_04-cr-40154-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Padilla-Rodriguez</title>
+  <subTitle>MEMORANDUM AND ORDER as to defendant Paul Padilla-Rodriguez. The government&apos;s motion to enforce the plea agreement 103 is granted in part and grounds two and three of the defendant&apos;s motion to vacate, set aside or correct sentence pursuant to 28 U.S.C. §2255 101 are dismissed. It is further ordered that with respect to ground one of the defendant&apos;s motion 101, the defendant shall have until 10/13/08 to file his memorandum and Rule 7 materials, and the government shall have until 11/10/08 to file its response. See attached for more details. Signed by U.S. District Senior Judge Sam A. Crow on 9/9/08. Copy of Memorandum and Order mailed to Mr. Padilla-Rodriquez at Petersburg, VA (bmw)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40154/pdf/USCOURTS-ksd-5_04-cr-40154-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18766f66f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40154/USCOURTS-ksd-5_04-cr-40154-2</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cr-40154_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40154/USCOURTS-ksd-5_04-cr-40154-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40154/pdf/USCOURTS-ksd-5_04-cr-40154-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cr-40154; USA v. Padilla-Rodriguez; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cr-40154-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-09-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to defendant Paul Padilla-Rodriguez. The government&apos;s motion to enforce the plea agreement 103 is granted in part and grounds two and three of the defendant&apos;s motion to vacate, set aside or correct sentence pursuant to 28 U.S.C. §2255 101 are dismissed. It is further ordered that with respect to ground one of the defendant&apos;s motion 101, the defendant shall have until 10/13/08 to file his memorandum and Rule 7 materials, and the government shall have until 11/10/08 to file its response. See attached for more details. Signed by U.S. District Senior Judge Sam A. Crow on 9/9/08. Copy of Memorandum and Order mailed to Mr. Padilla-Rodriquez at Petersburg, VA (bmw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cr-40154-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40154/USCOURTS-ksd-5_04-cr-40154-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Padilla-Rodriguez</title>
+  <subTitle>MEMORANDUM AND ORDER. The defendant&apos;s motion for relief [Dks. 101 and 106] pursuant to 28 USC § 2255 are denied as to as to Paul Padilla-Rodriguez. See attached and [Dk. 105]. Signed by U.S. District Senior Judge Sam A. Crow on 1/5/09. Copy mailed to Mr. Padilla-Rodriguez at Petersburg, VA. (bmw) Civil Case 5:08-cv-04056-SAC closed.</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40154/pdf/USCOURTS-ksd-5_04-cr-40154-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18766f66e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40154/USCOURTS-ksd-5_04-cr-40154-3</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cr-40154_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40154/USCOURTS-ksd-5_04-cr-40154-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40154/pdf/USCOURTS-ksd-5_04-cr-40154-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cr-40154; USA v. Padilla-Rodriguez; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cr-40154-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER. The defendant&apos;s motion for relief [Dks. 101 and 106] pursuant to 28 USC § 2255 are denied as to as to Paul Padilla-Rodriguez. See attached and [Dk. 105]. Signed by U.S. District Senior Judge Sam A. Crow on 1/5/09. Copy mailed to Mr. Padilla-Rodriguez at Petersburg, VA. (bmw) Civil Case 5:08-cv-04056-SAC closed.</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,226 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1862d5c05">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-09-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-09-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40164</identifier>
+<identifier type="local">P0b002ee1862d5c05</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-09-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-09-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-4_10-cv-40164</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-4_10-cv-40164</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>4:10-cv-40164</caseNumber>
+ <caseOffice>Worcester</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>15:1692 Fair Debt Collection Act</cause>
+ <party firstName="Timothy" fullName="Timothy S. Hillman" lastName="Hillman" middleName="S." role="Mediator"></party>
+ <party fullName="SCI Services, Inc." lastName="SCI Services, Inc." role="Defendant"></party>
+ <party fullName="Saxon Mortgage Services, Inc." lastName="Saxon Mortgage Services, Inc." role="Defendant"></party>
+ <party firstName="John" fullName="John Stagikas" lastName="Stagikas" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Stagikas v. Saxon Mortgage Services, Inc.</title>
+ <partNumber>4:10-cv-40164</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40164/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:10-cv-40164;10-40164</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Worcester</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Timothy S. Hillman</displayForm>
+ <namePart type="family">Hillman</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<name type="personal">
+ <displayForm>SCI Services, Inc.</displayForm>
+ <namePart type="family">SCI Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Saxon Mortgage Services, Inc.</displayForm>
+ <namePart type="family">Saxon Mortgage Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Stagikas</displayForm>
+ <namePart type="family">Stagikas</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-4_10-cv-40164</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>4:10-cv-40164</caseNumber>
+ <caseOffice>Worcester</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>15:1692 Fair Debt Collection Act</cause>
+ <party firstName="Timothy" fullName="Timothy S. Hillman" lastName="Hillman" middleName="S." role="Mediator"></party>
+ <party fullName="SCI Services, Inc." lastName="SCI Services, Inc." role="Defendant"></party>
+ <party fullName="Saxon Mortgage Services, Inc." lastName="Saxon Mortgage Services, Inc." role="Defendant"></party>
+ <party firstName="John" fullName="John Stagikas" lastName="Stagikas" role="Plaintiff"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_10-cv-40164-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40164/USCOURTS-mad-4_10-cv-40164-0/mods.xml">
+ <titleInfo>
+  <title>Stagikas v. Saxon Mortgage Services, Inc.</title>
+  <subTitle>District Judge Timothy S Hillman: MEMORANDUM AND ORDER entered granting 37 Motion to Compel. (Castles, Martin)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_10-cv-40164-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862da0a0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40164/USCOURTS-mad-4_10-cv-40164-0</identifier>
+ <identifier type="former granule identifier">mad-4_10-cv-40164_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40164/USCOURTS-mad-4_10-cv-40164-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40164/pdf/USCOURTS-mad-4_10-cv-40164-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-40164; Stagikas v. Saxon Mortgage Services, Inc.; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_10-cv-40164-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>District Judge Timothy S Hillman: MEMORANDUM AND ORDER entered granting 37 Motion to Compel. (Castles, Martin)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_10-cv-40164-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40164/USCOURTS-mad-4_10-cv-40164-1/mods.xml">
+ <titleInfo>
+  <title>Stagikas v. Saxon Mortgage Services, Inc.</title>
+  <subTitle>District Judge Timothy S Hillman: ORDER entered denying 79 Motion to Strike. (Castles, Martin)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_10-cv-40164-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862da09f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40164/USCOURTS-mad-4_10-cv-40164-1</identifier>
+ <identifier type="former granule identifier">mad-4_10-cv-40164_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40164/USCOURTS-mad-4_10-cv-40164-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40164/pdf/USCOURTS-mad-4_10-cv-40164-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-40164; Stagikas v. Saxon Mortgage Services, Inc.; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_10-cv-40164-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-09-24</dateIssued>
+  <docketText>District Judge Timothy S Hillman: ORDER entered denying 79 Motion to Strike. (Castles, Martin)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_10-cv-40164-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40164/USCOURTS-mad-4_10-cv-40164-2/mods.xml">
+ <titleInfo>
+  <title>Stagikas v. Saxon Mortgage Services, Inc.</title>
+  <subTitle>District Judge Timothy S Hillman: MEMORANDUM OF DECISION entered denying 41 Motion for Summary Judgment. (Castles, Martin)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_10-cv-40164-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862da09e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40164/USCOURTS-mad-4_10-cv-40164-2</identifier>
+ <identifier type="former granule identifier">mad-4_10-cv-40164_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40164/USCOURTS-mad-4_10-cv-40164-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40164/pdf/USCOURTS-mad-4_10-cv-40164-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-40164; Stagikas v. Saxon Mortgage Services, Inc.; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_10-cv-40164-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-09-24</dateIssued>
+  <docketText>District Judge Timothy S Hillman: MEMORANDUM OF DECISION entered denying 41 Motion for Summary Judgment. (Castles, Martin)</docketText>
+</extension>
+</relatedItem>
+</mods>

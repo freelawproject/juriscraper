@@ -1,0 +1,290 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c329d7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_13-cv-00180</identifier>
+<identifier type="local">P0b002ee186c329d7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-5_13-cv-00180</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_13-cv-00180</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:13-cv-00180</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>15:1601 Truth in Lending</cause>
+ <party firstName="CHERRYE" fullName="CHERRYE E BRADLEY" lastName="BRADLEY" middleName="E" role="Plaintiff"></party>
+ <party firstName="PAUL" fullName="PAUL E BRADLEY" lastName="BRADLEY" middleName="E" role="Plaintiff"></party>
+ <party fullName="CHASE HOME FINANCE LLC" lastName="CHASE HOME FINANCE LLC" role="Defendant"></party>
+ <party fullName="JPMORGAN CHASE BANK NATIONAL ASSOCIATION" lastName="JPMORGAN CHASE BANK NATIONAL ASSOCIATION" role="Defendant"></party>
+ <party fullName="JPMorgan Chase&amp;Co." lastName="JPMorgan Chase&amp;Co." role="Defendant"></party>
+ <party fullName="MERSCORP HOLDINGS INC" lastName="MERSCORP HOLDINGS INC" role="Defendant"></party>
+ <party fullName="MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INC" lastName="MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INC" role="Defendant"></party>
+ <party fullName="PROMISS SOLUTIONS LLC" lastName="PROMISS SOLUTIONS LLC" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>BRADLEY et al v. JPMORGAN CHASE BANK NATIONAL ASSOCIATION et al</title>
+ <partNumber>5:13-cv-00180</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_13-cv-00180/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:13-cv-00180;13-180</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Macon</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CHERRYE E BRADLEY</displayForm>
+ <namePart type="family">BRADLEY</namePart>
+ <namePart type="given">CHERRYE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>PAUL E BRADLEY</displayForm>
+ <namePart type="family">BRADLEY</namePart>
+ <namePart type="given">PAUL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CHASE HOME FINANCE LLC</displayForm>
+ <namePart type="family">CHASE HOME FINANCE LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JPMORGAN CHASE BANK NATIONAL ASSOCIATION</displayForm>
+ <namePart type="family">JPMORGAN CHASE BANK NATIONAL ASSOCIATION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JPMorgan Chase&amp;Co.</displayForm>
+ <namePart type="family">JPMorgan Chase&amp;Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MERSCORP HOLDINGS INC</displayForm>
+ <namePart type="family">MERSCORP HOLDINGS INC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INC</displayForm>
+ <namePart type="family">MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PROMISS SOLUTIONS LLC</displayForm>
+ <namePart type="family">PROMISS SOLUTIONS LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_13-cv-00180</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:13-cv-00180</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>15:1601 Truth in Lending</cause>
+ <party firstName="CHERRYE" fullName="CHERRYE E BRADLEY" lastName="BRADLEY" middleName="E" role="Plaintiff"></party>
+ <party firstName="PAUL" fullName="PAUL E BRADLEY" lastName="BRADLEY" middleName="E" role="Plaintiff"></party>
+ <party fullName="CHASE HOME FINANCE LLC" lastName="CHASE HOME FINANCE LLC" role="Defendant"></party>
+ <party fullName="JPMORGAN CHASE BANK NATIONAL ASSOCIATION" lastName="JPMORGAN CHASE BANK NATIONAL ASSOCIATION" role="Defendant"></party>
+ <party fullName="JPMorgan Chase&amp;Co." lastName="JPMorgan Chase&amp;Co." role="Defendant"></party>
+ <party fullName="MERSCORP HOLDINGS INC" lastName="MERSCORP HOLDINGS INC" role="Defendant"></party>
+ <party fullName="MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INC" lastName="MORTGAGE ELECTRONIC REGISTRATION SYSTEMS INC" role="Defendant"></party>
+ <party fullName="PROMISS SOLUTIONS LLC" lastName="PROMISS SOLUTIONS LLC" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_13-cv-00180-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00180/USCOURTS-gamd-5_13-cv-00180-0/mods.xml">
+ <titleInfo>
+  <title>BRADLEY et al v. JPMORGAN CHASE BANK NATIONAL ASSOCIATION et al</title>
+  <subTitle>ORDER GRANTING 4 Motion to Dismiss for Failure to State a Claim and GRANTING 7 Motion to Dismiss for Failure to State a Claim. The case is dismissed without prejudice. Ordered by Judge Marc Thomas Treadwell on 9/18/2013. (tlh)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_13-cv-00180-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4ae68</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00180/USCOURTS-gamd-5_13-cv-00180-0</identifier>
+ <identifier type="former granule identifier">gamd-5_13-cv-00180_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00180/USCOURTS-gamd-5_13-cv-00180-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_13-cv-00180/pdf/USCOURTS-gamd-5_13-cv-00180-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cv-00180; BRADLEY et al v. JPMORGAN CHASE BANK NATIONAL ASSOCIATION et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_13-cv-00180-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-09-18</dateIssued>
+  <docketText>ORDER GRANTING 4 Motion to Dismiss for Failure to State a Claim and GRANTING 7 Motion to Dismiss for Failure to State a Claim. The case is dismissed without prejudice. Ordered by Judge Marc Thomas Treadwell on 9/18/2013. (tlh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_13-cv-00180-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00180/USCOURTS-gamd-5_13-cv-00180-1/mods.xml">
+ <titleInfo>
+  <title>BRADLEY et al v. JPMORGAN CHASE BANK NATIONAL ASSOCIATION et al</title>
+  <subTitle>ORDER DENYING 24 Rule 60 Motion for Relief from Judgment. Ordered by U.S. District Judge Marc Thomas Treadwell on 11/12/2013. (tlh)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_13-cv-00180-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4ae67</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00180/USCOURTS-gamd-5_13-cv-00180-1</identifier>
+ <identifier type="former granule identifier">gamd-5_13-cv-00180_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00180/USCOURTS-gamd-5_13-cv-00180-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_13-cv-00180/pdf/USCOURTS-gamd-5_13-cv-00180-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cv-00180; BRADLEY et al v. JPMORGAN CHASE BANK NATIONAL ASSOCIATION et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_13-cv-00180-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-11-12</dateIssued>
+  <docketText>ORDER DENYING 24 Rule 60 Motion for Relief from Judgment. Ordered by U.S. District Judge Marc Thomas Treadwell on 11/12/2013. (tlh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_13-cv-00180-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00180/USCOURTS-gamd-5_13-cv-00180-2/mods.xml">
+ <titleInfo>
+  <title>BRADLEY et al v. JPMORGAN CHASE BANK NATIONAL ASSOCIATION et al</title>
+  <subTitle>ORDER DENYING 28 Motion for Reconsideration. Ordered by U.S. District Judge Marc Thomas Treadwell on 12/10/2013. (tlh)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_13-cv-00180-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4ae69</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00180/USCOURTS-gamd-5_13-cv-00180-2</identifier>
+ <identifier type="former granule identifier">gamd-5_13-cv-00180_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00180/USCOURTS-gamd-5_13-cv-00180-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_13-cv-00180/pdf/USCOURTS-gamd-5_13-cv-00180-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cv-00180; BRADLEY et al v. JPMORGAN CHASE BANK NATIONAL ASSOCIATION et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_13-cv-00180-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-12-10</dateIssued>
+  <docketText>ORDER DENYING 28 Motion for Reconsideration. Ordered by U.S. District Judge Marc Thomas Treadwell on 12/10/2013. (tlh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_13-cv-00180-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00180/USCOURTS-gamd-5_13-cv-00180-3/mods.xml">
+ <titleInfo>
+  <title>BRADLEY et al v. JPMORGAN CHASE BANK NATIONAL ASSOCIATION et al</title>
+  <subTitle>ORDER DENYING 31 Motion for Reconsideration. Ordered by U.S. District Judge Marc Thomas Treadwell on 1/3/2014. (tlh)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_13-cv-00180-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4ae66</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00180/USCOURTS-gamd-5_13-cv-00180-3</identifier>
+ <identifier type="former granule identifier">gamd-5_13-cv-00180_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00180/USCOURTS-gamd-5_13-cv-00180-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_13-cv-00180/pdf/USCOURTS-gamd-5_13-cv-00180-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cv-00180; BRADLEY et al v. JPMORGAN CHASE BANK NATIONAL ASSOCIATION et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_13-cv-00180-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER DENYING 31 Motion for Reconsideration. Ordered by U.S. District Judge Marc Thomas Treadwell on 1/3/2014. (tlh)</docketText>
+</extension>
+</relatedItem>
+</mods>

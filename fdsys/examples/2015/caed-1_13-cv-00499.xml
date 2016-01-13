@@ -1,0 +1,506 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18cda5807">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-07-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-07-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499</identifier>
+<identifier type="local">P0b002ee18cda5807</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-07-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-07-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-00499</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00499</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00499</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>245</natureSuitCode>
+ <natureSuit>Real Property Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party firstName="Gary" fullName="Gary Hawkins" lastName="Hawkins" role="Plaintiff"></party>
+ <party fullName="Medtronic Sofamor Danek USA Inc" lastName="Medtronic Sofamor Danek USA Inc" role="Defendant"></party>
+ <party fullName="Medtronic, Inc." lastName="Medtronic, Inc." role="Defendant"></party>
+ <party fullName="State Compensation Insurance Fund" lastName="State Compensation Insurance Fund" role="Claimant"></party>
+</extension>
+<titleInfo>
+ <title>Hawkins v. Medtronic, Inc. et al</title>
+ <partNumber>1:13-cv-00499</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-00499;13-499</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Gary Hawkins</displayForm>
+ <namePart type="family">Hawkins</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Medtronic Sofamor Danek USA Inc</displayForm>
+ <namePart type="family">Medtronic Sofamor Danek USA Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Medtronic, Inc.</displayForm>
+ <namePart type="family">Medtronic, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State Compensation Insurance Fund</displayForm>
+ <namePart type="family">State Compensation Insurance Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00499</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00499</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>245</natureSuitCode>
+ <natureSuit>Real Property Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party firstName="Gary" fullName="Gary Hawkins" lastName="Hawkins" role="Plaintiff"></party>
+ <party fullName="Medtronic Sofamor Danek USA Inc" lastName="Medtronic Sofamor Danek USA Inc" role="Defendant"></party>
+ <party fullName="Medtronic, Inc." lastName="Medtronic, Inc." role="Defendant"></party>
+ <party fullName="State Compensation Insurance Fund" lastName="State Compensation Insurance Fund" role="Claimant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-0/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>ORDER signed by District Judge Anthony W. Ishii on 7/16/2013 vacating hearing date and taking matter under submission re 11 Motion to Dismiss. (Lundstrom, T)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ece</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-07-17</dateIssued>
+  <docketText>ORDER signed by District Judge Anthony W. Ishii on 7/16/2013 vacating hearing date and taking matter under submission re 11 Motion to Dismiss. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-1/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>STIPULATION and ORDER to CONTINUE the Scheduling Conference. The Scheduling Conference currently set for 9/24/2013, is CONTINUED to 11/12/2013, at 10:30 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. Order signed by Magistrate Judge Sheila K. Oberto on 9/12/2013. (Timken, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ab2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-09-12</dateIssued>
+  <docketText>STIPULATION and ORDER to CONTINUE the Scheduling Conference. The Scheduling Conference currently set for 9/24/2013, is CONTINUED to 11/12/2013, at 10:30 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. Order signed by Magistrate Judge Sheila K. Oberto on 9/12/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-2/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>STIPULATION and ORDER to CONTINUE Scheduling Conference. The Scheduling Conference currently set for 11/12/2013, is CONTINUED to 12/12/2013, at 09:45 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. Order signed by Magistrate Judge Sheila K. Oberto on 11/1/2013. (Timken, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ed1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-11-01</dateIssued>
+  <docketText>STIPULATION and ORDER to CONTINUE Scheduling Conference. The Scheduling Conference currently set for 11/12/2013, is CONTINUED to 12/12/2013, at 09:45 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. Order signed by Magistrate Judge Sheila K. Oberto on 11/1/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-3/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>STIPULATION and ORDER to Continue Scheduling Conference, signed by Magistrate Judge Sheila K. Oberto on 1/29/2014. (IT IS HEREBY ORDERED that: 1. The scheduling conference set for February 4, 2014, is CONTINUED to May 1, 2014, at 9:45 a.m. in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto.); and 2. The parties joint scheduling report shall be filed on or before April 24, 2014.) (Gaumnitz, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ed3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-01-29</dateIssued>
+  <docketText>STIPULATION and ORDER to Continue Scheduling Conference, signed by Magistrate Judge Sheila K. Oberto on 1/29/2014. (IT IS HEREBY ORDERED that: 1. The scheduling conference set for February 4, 2014, is CONTINUED to May 1, 2014, at 9:45 a.m. in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto.); and 2. The parties joint scheduling report shall be filed on or before April 24, 2014.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-4/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>ORDER GRANTING defendants&apos; Motion to Dismiss, document 11, with leave to amend. Amended complaint due within thirty days from the date of service of this order. Order signed by District Judge Anthony W. Ishii on 1/30/2014. (Rooney, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ecf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-01-30</dateIssued>
+  <docketText>ORDER GRANTING defendants&apos; Motion to Dismiss, document 11, with leave to amend. Amended complaint due within thirty days from the date of service of this order. Order signed by District Judge Anthony W. Ishii on 1/30/2014. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-5/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>Order extending time to file amended complaint, signed by District Judge Anthony W. Ishii on 2/27/2014. ( Amended Complaint due by 4/3/2014) (Figueroa, O)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ab3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-5</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-02-27</dateIssued>
+  <docketText>Order extending time to file amended complaint, signed by District Judge Anthony W. Ishii on 2/27/2014. ( Amended Complaint due by 4/3/2014) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-6/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Sheila K. Oberto on 2/27/2014. Plaintiff shall file his First Amended Complaint on or before March 31, 2014. (Timken, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ab4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-6</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-02-28</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Sheila K. Oberto on 2/27/2014. Plaintiff shall file his First Amended Complaint on or before March 31, 2014. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-7/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>STIPULATION and ORDER to CONTINUE Scheduling Conference. The Scheduling Conference currently set for 5/1/2014, is CONTINUED to 8/7/2014, at 10:15 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. The parties shall file their joint scheduling report by no later than 7/31/2014. Order signed by Magistrate Judge Sheila K. Oberto on 4/22/2014. (Timken, A)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ed0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-7</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-04-22</dateIssued>
+  <docketText>STIPULATION and ORDER to CONTINUE Scheduling Conference. The Scheduling Conference currently set for 5/1/2014, is CONTINUED to 8/7/2014, at 10:15 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. The parties shall file their joint scheduling report by no later than 7/31/2014. Order signed by Magistrate Judge Sheila K. Oberto on 4/22/2014. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-8/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>ORDER VACATING Hearing Date and Taking Matter Under Submission, signed by District Judge Anthony W. Ishii on 5/27/2014. (The hearing date of June 2, 2014 is hereby VACATED and the parties shall not appear at that time. The Court will take motion to dismiss 49 and motion to strike 50 under submission and thereafter issue its decision.) (Gaumnitz, R)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ed5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-8</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-05-27</dateIssued>
+  <docketText>ORDER VACATING Hearing Date and Taking Matter Under Submission, signed by District Judge Anthony W. Ishii on 5/27/2014. (The hearing date of June 2, 2014 is hereby VACATED and the parties shall not appear at that time. The Court will take motion to dismiss 49 and motion to strike 50 under submission and thereafter issue its decision.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-9/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>ORDER Denying Defendants&apos; 50 Motion to Strike and Granting in Part and Denying in Part 49 Defendants&apos; Motion to Dismiss, signed by District Judge Anthony W. Ishii on 11/20/2014. (Gaumnitz, R)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ed4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-9</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-11-20</dateIssued>
+  <docketText>ORDER Denying Defendants&apos; 50 Motion to Strike and Granting in Part and Denying in Part 49 Defendants&apos; Motion to Dismiss, signed by District Judge Anthony W. Ishii on 11/20/2014. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-10/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>STIPULATION and ORDER to CONTINUE Defendants Medtronic, Inc. and Medtronic Sofamor Danek USA, Inc&apos;s last day to file answer to Plaintiff&apos;s first amended complaint. Defendant shall file a responsive pleading on or before December 30, 2014. Order signed by Magistrate Judge Sheila K. Oberto on 12/2/2014. (Timken, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ed2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-10</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-12-03</dateIssued>
+  <docketText>STIPULATION and ORDER to CONTINUE Defendants Medtronic, Inc. and Medtronic Sofamor Danek USA, Inc&apos;s last day to file answer to Plaintiff&apos;s first amended complaint. Defendant shall file a responsive pleading on or before December 30, 2014. Order signed by Magistrate Judge Sheila K. Oberto on 12/2/2014. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-11/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>ORDER entering a STAY of proceedings, including a stay of Medtronic&apos;s deadline to respond to the First Amended Complaint and VACATING the Scheduling Conference currently set for 2/10/2015. A status report or voluntary dismissal is due within sixty (60) days of this Order. Order signed by Magistrate Judge Sheila K. Oberto on 1/6/2015. (Timken, A)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ab1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-11</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER entering a STAY of proceedings, including a stay of Medtronic&apos;s deadline to respond to the First Amended Complaint and VACATING the Scheduling Conference currently set for 2/10/2015. A status report or voluntary dismissal is due within sixty (60) days of this Order. Order signed by Magistrate Judge Sheila K. Oberto on 1/6/2015. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00499-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-12/mods.xml">
+ <titleInfo>
+  <title>Hawkins v. Medtronic, Inc. et al</title>
+  <subTitle>Stipulation And ORDER DISMISSAL Of Entire Action With Prejudice Pursuant To Federal Rule Of Civil Procedure 41(A), signed by District Judge Anthony W. Ishii on 7/2/2015. CASE CLOSED.(Fahrney, E)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18cdb5ecd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-12</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00499_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00499/USCOURTS-caed-1_13-cv-00499-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00499/pdf/USCOURTS-caed-1_13-cv-00499-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00499; Hawkins v. Medtronic, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00499-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2015-07-06</dateIssued>
+  <docketText>Stipulation And ORDER DISMISSAL Of Entire Action With Prejudice Pursuant To Federal Rule Of Civil Procedure 41(A), signed by District Judge Anthony W. Ishii on 7/2/2015. CASE CLOSED.(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

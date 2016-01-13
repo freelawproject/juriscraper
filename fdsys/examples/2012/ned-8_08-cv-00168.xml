@@ -1,0 +1,475 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818ea15b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00168</identifier>
+<identifier type="local">P0b002ee1818ea15b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cv-00168</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00168</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00168</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1132 E.R.I.S.A.-Employee Benefits</cause>
+ <party fullName="" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry J. Baggett" lastName="Baggett" middleName="J." role="Defendant"></party>
+ <party firstName="Theresa" fullName="Theresa L. Baggett" lastName="Baggett" middleName="L." role="Defendant"></party>
+ <party fullName="Baggett Masonry, Inc." lastName="Baggett Masonry, Inc." role="Defendant"></party>
+ <party firstName="Ron" fullName="Ron Fucinaro" lastName="Fucinaro" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Hayes" lastName="Hayes" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Hayworth" lastName="Hayworth" role="Plaintiff"></party>
+ <party firstName="Ron" fullName="Ron Kaminski" lastName="Kaminski" role="Plaintiff"></party>
+ <party firstName="Local 1140" fullName="Local 1140 Laborers&apos; International Union of North America" lastName="Laborers&apos; International Union of North America" role="Plaintiff"></party>
+ <party firstName="Rod" fullName="Rod Marshall" lastName="Marshall" role="Plaintiff"></party>
+ <party firstName="Timothy" fullName="Timothy McCormick" lastName="McCormick" role="Plaintiff"></party>
+ <party firstName="Frank" fullName="Frank Neuvirth" lastName="Neuvirth" role="Plaintiff"></party>
+ <party firstName="Kim" fullName="Kim Quick" lastName="Quick" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Marshall et al v. Baggett et al</title>
+ <partNumber>8:08-cv-00168</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00168/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cv-00168;08-168</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm></displayForm>
+ <namePart type="family"></namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry J. Baggett</displayForm>
+ <namePart type="family">Baggett</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Theresa L. Baggett</displayForm>
+ <namePart type="family">Baggett</namePart>
+ <namePart type="given">Theresa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Baggett Masonry, Inc.</displayForm>
+ <namePart type="family">Baggett Masonry, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ron Fucinaro</displayForm>
+ <namePart type="family">Fucinaro</namePart>
+ <namePart type="given">Ron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>David Hayes</displayForm>
+ <namePart type="family">Hayes</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Hayworth</displayForm>
+ <namePart type="family">Hayworth</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ron Kaminski</displayForm>
+ <namePart type="family">Kaminski</namePart>
+ <namePart type="given">Ron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Local 1140 Laborers&apos; International Union of North America</displayForm>
+ <namePart type="family">Laborers&apos; International Union of North America</namePart>
+ <namePart type="given">Local 1140</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rod Marshall</displayForm>
+ <namePart type="family">Marshall</namePart>
+ <namePart type="given">Rod</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy McCormick</displayForm>
+ <namePart type="family">McCormick</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Frank Neuvirth</displayForm>
+ <namePart type="family">Neuvirth</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kim Quick</displayForm>
+ <namePart type="family">Quick</namePart>
+ <namePart type="given">Kim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00168</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00168</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1132 E.R.I.S.A.-Employee Benefits</cause>
+ <party fullName="" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry J. Baggett" lastName="Baggett" middleName="J." role="Defendant"></party>
+ <party firstName="Theresa" fullName="Theresa L. Baggett" lastName="Baggett" middleName="L." role="Defendant"></party>
+ <party fullName="Baggett Masonry, Inc." lastName="Baggett Masonry, Inc." role="Defendant"></party>
+ <party firstName="Ron" fullName="Ron Fucinaro" lastName="Fucinaro" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Hayes" lastName="Hayes" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Hayworth" lastName="Hayworth" role="Plaintiff"></party>
+ <party firstName="Ron" fullName="Ron Kaminski" lastName="Kaminski" role="Plaintiff"></party>
+ <party firstName="Local 1140" fullName="Local 1140 Laborers&apos; International Union of North America" lastName="Laborers&apos; International Union of North America" role="Plaintiff"></party>
+ <party firstName="Rod" fullName="Rod Marshall" lastName="Marshall" role="Plaintiff"></party>
+ <party firstName="Timothy" fullName="Timothy McCormick" lastName="McCormick" role="Plaintiff"></party>
+ <party firstName="Frank" fullName="Frank Neuvirth" lastName="Neuvirth" role="Plaintiff"></party>
+ <party firstName="Kim" fullName="Kim Quick" lastName="Quick" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00168-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-0/mods.xml">
+ <titleInfo>
+  <title>Marshall et al v. Baggett et al</title>
+  <subTitle>ORDER TO SHOW CAUSE - IT IS ORDERED:The plaintiffs shall show cause why this case should not be dismissed for failure to prosecute the defendant. The showing of cause shall be filed electronically on or before the close of business on July 11, 2008. Show Cause Deadline set for 7/11/2008.Ordered by Magistrate Judge Thomas D. Thalken. (PCV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00168-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819041af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00168_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00168/pdf/USCOURTS-ned-8_08-cv-00168-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00168; Marshall et al v. Baggett et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00168-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-06-25</dateIssued>
+  <docketText>ORDER TO SHOW CAUSE - IT IS ORDERED:The plaintiffs shall show cause why this case should not be dismissed for failure to prosecute the defendant. The showing of cause shall be filed electronically on or before the close of business on July 11, 2008. Show Cause Deadline set for 7/11/2008.Ordered by Magistrate Judge Thomas D. Thalken. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00168-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-1/mods.xml">
+ <titleInfo>
+  <title>Marshall et al v. Baggett et al</title>
+  <subTitle>ORDER granting 21 Motion for Attorney Fees Fees in the amount of $5,559.02. Ordered by Chief Judge Joseph F. Bataillon. (JAE)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-08-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00168-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819041b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00168_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00168/pdf/USCOURTS-ned-8_08-cv-00168-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00168; Marshall et al v. Baggett et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00168-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-08-03</dateIssued>
+  <docketText>ORDER granting 21 Motion for Attorney Fees Fees in the amount of $5,559.02. Ordered by Chief Judge Joseph F. Bataillon. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00168-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-2/mods.xml">
+ <titleInfo>
+  <title>Marshall et al v. Baggett et al</title>
+  <subTitle>ORDER granting 29 defendant&apos;s motion to extend time to file an appeal. Defendant is granted thirty days to file an appeal pursuant to Fed. R. App. P. 4(5). Ordered by Chief Judge Joseph F. Bataillon. (JAE)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-08-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00168-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819041b2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00168_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00168/pdf/USCOURTS-ned-8_08-cv-00168-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00168; Marshall et al v. Baggett et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00168-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-08-25</dateIssued>
+  <docketText>ORDER granting 29 defendant&apos;s motion to extend time to file an appeal. Defendant is granted thirty days to file an appeal pursuant to Fed. R. App. P. 4(5). Ordered by Chief Judge Joseph F. Bataillon. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00168-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-3/mods.xml">
+ <titleInfo>
+  <title>Marshall et al v. Baggett et al</title>
+  <subTitle>ORDER granting 42 Plaintiff&apos;s Motion for Leave to file responsive brief to defendant&apos;s reply brief. Leave is granted to file a responsive brief within five (5) days from the date of this Order. Case Management Deadline set for 9/15/2009. Ordered by Chief Judge Joseph F. Bataillon. (MKR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00168-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819041ad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-3</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00168_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00168/pdf/USCOURTS-ned-8_08-cv-00168-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00168; Marshall et al v. Baggett et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00168-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-09-08</dateIssued>
+  <docketText>ORDER granting 42 Plaintiff&apos;s Motion for Leave to file responsive brief to defendant&apos;s reply brief. Leave is granted to file a responsive brief within five (5) days from the date of this Order. Case Management Deadline set for 9/15/2009. Ordered by Chief Judge Joseph F. Bataillon. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00168-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-4/mods.xml">
+ <titleInfo>
+  <title>Marshall et al v. Baggett et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 30 Motion to Set Aside Default. Ordered by Chief Judge Joseph F. Bataillon. (JAE, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00168-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819041b3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-4</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00168_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00168/pdf/USCOURTS-ned-8_08-cv-00168-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00168; Marshall et al v. Baggett et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00168-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-12-14</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 30 Motion to Set Aside Default. Ordered by Chief Judge Joseph F. Bataillon. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00168-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-5/mods.xml">
+ <titleInfo>
+  <title>Marshall et al v. Baggett et al</title>
+  <subTitle>ORDER - The previous defaults in this case, Filing Nos. 9 and 12, and order on judgment, Filing No. 25, and judgment, Filing No. 26, are vacated. The Court&apos;s order granting attorney fees, Filing No. 27, is vacated. The plaintiffs have thirty days from the date of this order to file an amended complaint, if they so choose, and all parties have thirty days from the date of this order to file any initial motions, if they choose to do so. The magistrate judge is hereby ordered to progress this case when it is ripe for progression. Ordered by Chief Judge Joseph F. Bataillon. (AOA)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00168-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819041b4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-5</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00168_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00168/pdf/USCOURTS-ned-8_08-cv-00168-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00168; Marshall et al v. Baggett et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00168-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-09-09</dateIssued>
+  <docketText>ORDER - The previous defaults in this case, Filing Nos. 9 and 12, and order on judgment, Filing No. 25, and judgment, Filing No. 26, are vacated. The Court&apos;s order granting attorney fees, Filing No. 27, is vacated. The plaintiffs have thirty days from the date of this order to file an amended complaint, if they so choose, and all parties have thirty days from the date of this order to file any initial motions, if they choose to do so. The magistrate judge is hereby ordered to progress this case when it is ripe for progression. Ordered by Chief Judge Joseph F. Bataillon. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00168-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-6/mods.xml">
+ <titleInfo>
+  <title>Marshall et al v. Baggett et al</title>
+  <subTitle>ORDER - The parties shall have to on or before April 26, 2011, to file a joint planning report pursuant to Federal Rule of Civil Procedure 26(f). Ordered by Magistrate Judge Thomas D. Thalken. (AOA)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00168-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819041b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-6</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00168_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00168/pdf/USCOURTS-ned-8_08-cv-00168-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00168; Marshall et al v. Baggett et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00168-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-04-11</dateIssued>
+  <docketText>ORDER - The parties shall have to on or before April 26, 2011, to file a joint planning report pursuant to Federal Rule of Civil Procedure 26(f). Ordered by Magistrate Judge Thomas D. Thalken. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00168-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-7/mods.xml">
+ <titleInfo>
+  <title>Marshall et al v. Baggett et al</title>
+  <subTitle>ORDER that upon notice of settlement given to the magistrate judge on November 23, 2011, by counsel for the defendants, on or before December 23, 2011, the parties shall electronically file a joint stipulation for dismissal. Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without further notice. The pretrial conference and trial previously scheduled are cancelled upon the representation that this case is settled. Ordered by Magistrate Judge Thomas D. Thalken. (ADB, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00168-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819041ae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-7</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00168_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00168/pdf/USCOURTS-ned-8_08-cv-00168-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00168; Marshall et al v. Baggett et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00168-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-11-23</dateIssued>
+  <docketText>ORDER that upon notice of settlement given to the magistrate judge on November 23, 2011, by counsel for the defendants, on or before December 23, 2011, the parties shall electronically file a joint stipulation for dismissal. Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without further notice. The pretrial conference and trial previously scheduled are cancelled upon the representation that this case is settled. Ordered by Magistrate Judge Thomas D. Thalken. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00168-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-8/mods.xml">
+ <titleInfo>
+  <title>Marshall et al v. Baggett et al</title>
+  <subTitle>ORDER OF DISMISSAL WITH PREJUDICE sustaining 93 Stipulation for Dismissal. The above-captioned matter is hereby dismissed with prejudice, each party to bear their/its own costs and the complete record shall be waived. Ordered by Judge Joseph F. Bataillon. (ADB)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00168-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819041b5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-8</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00168_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00168/USCOURTS-ned-8_08-cv-00168-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00168/pdf/USCOURTS-ned-8_08-cv-00168-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00168; Marshall et al v. Baggett et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00168-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-01-13</dateIssued>
+  <docketText>ORDER OF DISMISSAL WITH PREJUDICE sustaining 93 Stipulation for Dismissal. The above-captioned matter is hereby dismissed with prejudice, each party to bear their/its own costs and the complete record shall be waived. Ordered by Judge Joseph F. Bataillon. (ADB)</docketText>
+</extension>
+</relatedItem>
+</mods>

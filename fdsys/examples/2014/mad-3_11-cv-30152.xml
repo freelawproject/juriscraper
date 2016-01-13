@@ -1,0 +1,179 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c688a0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_11-cv-30152</identifier>
+<identifier type="local">P0b002ee186c688a0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-3_11-cv-30152</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-3_11-cv-30152</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>3:11-cv-30152</caseNumber>
+ <caseOffice>Springfield</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>893</natureSuitCode>
+ <natureSuit>Environmental Matters</natureSuit>
+ <cause>33:1319 Pollutants &amp; Permit Violations</cause>
+ <party fullName="Berkshire Concrete Corporation" lastName="Berkshire Concrete Corporation" role="Defendant"></party>
+ <party fullName="Clean Water Action" lastName="Clean Water Action" role="Plaintiff"></party>
+ <party firstName="Kenneth" fullName="Kenneth P. Neiman" lastName="Neiman" middleName="P." role="ADR Provider"></party>
+ <party fullName="UNITED STATES DEPARTMENT OF JUSTICE" lastName="UNITED STATES DEPARTMENT OF JUSTICE" role="Interested Party"></party>
+ <party fullName="Unistress Corp." lastName="Unistress Corp." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Clean Water Action v. Berkshire Concrete Corporation</title>
+ <partNumber>3:11-cv-30152</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_11-cv-30152/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:11-cv-30152;11-30152</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Springfield</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Berkshire Concrete Corporation</displayForm>
+ <namePart type="family">Berkshire Concrete Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Clean Water Action</displayForm>
+ <namePart type="family">Clean Water Action</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth P. Neiman</displayForm>
+ <namePart type="family">Neiman</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ADR Provider</description>
+</name>
+<name type="personal">
+ <displayForm>UNITED STATES DEPARTMENT OF JUSTICE</displayForm>
+ <namePart type="family">UNITED STATES DEPARTMENT OF JUSTICE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Unistress Corp.</displayForm>
+ <namePart type="family">Unistress Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-3_11-cv-30152</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>3:11-cv-30152</caseNumber>
+ <caseOffice>Springfield</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>893</natureSuitCode>
+ <natureSuit>Environmental Matters</natureSuit>
+ <cause>33:1319 Pollutants &amp; Permit Violations</cause>
+ <party fullName="Berkshire Concrete Corporation" lastName="Berkshire Concrete Corporation" role="Defendant"></party>
+ <party fullName="Clean Water Action" lastName="Clean Water Action" role="Plaintiff"></party>
+ <party firstName="Kenneth" fullName="Kenneth P. Neiman" lastName="Neiman" middleName="P." role="ADR Provider"></party>
+ <party fullName="UNITED STATES DEPARTMENT OF JUSTICE" lastName="UNITED STATES DEPARTMENT OF JUSTICE" role="Interested Party"></party>
+ <party fullName="Unistress Corp." lastName="Unistress Corp." role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_11-cv-30152-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_11-cv-30152/USCOURTS-mad-3_11-cv-30152-0/mods.xml">
+ <titleInfo>
+  <title>Clean Water Action v. Berkshire Concrete Corporation</title>
+  <subTitle>Judge Michael A. Ponsor: ORDER entered. ORDER OF MODIFICATION OF CONSENT DECREE. (Lindsay, Maurice)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_11-cv-30152-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c753d3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_11-cv-30152/USCOURTS-mad-3_11-cv-30152-0</identifier>
+ <identifier type="former granule identifier">mad-3_11-cv-30152_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_11-cv-30152/USCOURTS-mad-3_11-cv-30152-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_11-cv-30152/pdf/USCOURTS-mad-3_11-cv-30152-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:11-cv-30152; Clean Water Action v. Berkshire Concrete Corporation; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_11-cv-30152-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>Judge Michael A. Ponsor: ORDER entered. ORDER OF MODIFICATION OF CONSENT DECREE. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,178 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118c62d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_07-cv-00328</identifier>
+<identifier type="local">P0b002ee18118c62d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_07-cv-00328</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_07-cv-00328</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:07-cv-00328</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Jerry" fullName="Jerry Adams" lastName="Adams" role="Petitioner"></party>
+ <party firstName="Michael" fullName="Michael Corcoran" lastName="Corcoran" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Adams v. Corcoran</title>
+ <partNumber>9:07-cv-00328</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_07-cv-00328/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:07-cv-00328;07-328</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jerry Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Jerry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Corcoran</displayForm>
+ <namePart type="family">Corcoran</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_07-cv-00328</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:07-cv-00328</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Jerry" fullName="Jerry Adams" lastName="Adams" role="Petitioner"></party>
+ <party firstName="Michael" fullName="Michael Corcoran" lastName="Corcoran" role="Respondent"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_07-cv-00328-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_07-cv-00328/USCOURTS-nynd-9_07-cv-00328-0/mods.xml">
+ <titleInfo>
+  <title>Adams v. Corcoran</title>
+  <subTitle>ORDER granting petitioner&apos;s 21 motion for Reconsideration / Notice of Appeal&amp;Reconsideration of Judgment under FRAP Rule 4, treated as a motion to alter or amend the judgment under FRCP Rule 59. FURTHER ORDERED that the petition for habeas corpus relief under 28 U.S.C. § 2254 is GRANTED. FURTHER ORDERED that, unless the People NYS have initiated proceedings in the Kings County Supreme Court to correct the sentence under otherwise applicable NYS law w/in 60 days of the date that the judgment in this matter becomes final upon direct review, or the time for further direct review has lapsed, and the Kings County Supreme Court corrects the sentence imposed, NYSDOC Services must re-compute the release dates for Petitioner treating the sentence imposed by the Kings County Supreme Court in this case in June 1989 as running concurrently with the undischarged portion, if any, of the sentences imposed in 1981&amp;1985. The Court Clerk is directed to enter an amended judgment accordingly; Signed by Sr. Judge James K. Singleton dtd 12/09/08 (cml) [ CRD traditionally served upon non-NEF petitioner @ NYSDOC Woodbourne facility ]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_07-cv-00328-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143821b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_07-cv-00328/USCOURTS-nynd-9_07-cv-00328-0</identifier>
+ <identifier type="former granule identifier">nynd-9_07-cv-00328_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_07-cv-00328/USCOURTS-nynd-9_07-cv-00328-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_07-cv-00328/pdf/USCOURTS-nynd-9_07-cv-00328-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:07-cv-00328; Adams v. Corcoran; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_07-cv-00328-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-12-09</dateIssued>
+  <docketText>ORDER granting petitioner&apos;s 21 motion for Reconsideration / Notice of Appeal&amp;Reconsideration of Judgment under FRAP Rule 4, treated as a motion to alter or amend the judgment under FRCP Rule 59. FURTHER ORDERED that the petition for habeas corpus relief under 28 U.S.C. § 2254 is GRANTED. FURTHER ORDERED that, unless the People NYS have initiated proceedings in the Kings County Supreme Court to correct the sentence under otherwise applicable NYS law w/in 60 days of the date that the judgment in this matter becomes final upon direct review, or the time for further direct review has lapsed, and the Kings County Supreme Court corrects the sentence imposed, NYSDOC Services must re-compute the release dates for Petitioner treating the sentence imposed by the Kings County Supreme Court in this case in June 1989 as running concurrently with the undischarged portion, if any, of the sentences imposed in 1981&amp;1985. The Court Clerk is directed to enter an amended judgment accordingly; Signed by Sr. Judge James K. Singleton dtd 12/09/08 (cml) [ CRD traditionally served upon non-NEF petitioner @ NYSDOC Woodbourne facility ]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_07-cv-00328-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_07-cv-00328/USCOURTS-nynd-9_07-cv-00328-1/mods.xml">
+ <titleInfo>
+  <title>Adams v. Corcoran</title>
+  <subTitle>ORDER denying petitioner&apos;s 38 letter requesting that 27 amended judgment be amended. Court declines to issue COA. Any further request for COA must be addressed by 2nd CCA; Signed by Sr. Judge James K. Singleton dtd 1/16/09 (cml) [ CRD traditionally served upon non-NEF petitioner @ NYSDOC Woodbourne correctional facility ]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_07-cv-00328-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143821a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_07-cv-00328/USCOURTS-nynd-9_07-cv-00328-1</identifier>
+ <identifier type="former granule identifier">nynd-9_07-cv-00328_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_07-cv-00328/USCOURTS-nynd-9_07-cv-00328-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_07-cv-00328/pdf/USCOURTS-nynd-9_07-cv-00328-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:07-cv-00328; Adams v. Corcoran; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_07-cv-00328-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-16</dateIssued>
+  <docketText>ORDER denying petitioner&apos;s 38 letter requesting that 27 amended judgment be amended. Court declines to issue COA. Any further request for COA must be addressed by 2nd CCA; Signed by Sr. Judge James K. Singleton dtd 1/16/09 (cml) [ CRD traditionally served upon non-NEF petitioner @ NYSDOC Woodbourne correctional facility ]</docketText>
+</extension>
+</relatedItem>
+</mods>

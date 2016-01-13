@@ -1,0 +1,273 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817afa7a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00462</identifier>
+<identifier type="local">P0b002ee1817afa7a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cv-00462</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00462</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00462</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="City of Omaha" lastName="City of Omaha" role="Defendant"></party>
+ <party fullName="Douglas County Court Administration" lastName="Douglas County Court Administration" role="Defendant"></party>
+ <party firstName="Beatrice" fullName="Beatrice Hudson" lastName="Hudson" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Hudson v. City of Omaha et al</title>
+ <partNumber>8:05-cv-00462</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00462/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cv-00462;05-462</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>City of Omaha</displayForm>
+ <namePart type="family">City of Omaha</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Douglas County Court Administration</displayForm>
+ <namePart type="family">Douglas County Court Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Beatrice Hudson</displayForm>
+ <namePart type="family">Hudson</namePart>
+ <namePart type="given">Beatrice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00462</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00462</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="City of Omaha" lastName="City of Omaha" role="Defendant"></party>
+ <party fullName="Douglas County Court Administration" lastName="Douglas County Court Administration" role="Defendant"></party>
+ <party firstName="Beatrice" fullName="Beatrice Hudson" lastName="Hudson" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00462-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-0/mods.xml">
+ <titleInfo>
+  <title>Hudson v. City of Omaha et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 2 Motion for Leave to Proceed in forma pauperis. Plaintiff shall pay the court&apos;s $250 filing fee by 10/17/05. In the absence of the filing fee by 10/17/05, this case may be subject to dismissal without prejudice. Signed by Magistrate Judge F. A. Gossett on 10/3/2005. (JSF)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00462-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181895cea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00462_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00462/pdf/USCOURTS-ned-8_05-cv-00462-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00462; Hudson v. City of Omaha et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00462-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-10-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 2 Motion for Leave to Proceed in forma pauperis. Plaintiff shall pay the court&apos;s $250 filing fee by 10/17/05. In the absence of the filing fee by 10/17/05, this case may be subject to dismissal without prejudice. Signed by Magistrate Judge F. A. Gossett on 10/3/2005. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00462-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-1/mods.xml">
+ <titleInfo>
+  <title>Hudson v. City of Omaha et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 5 Motion to Extend. The plaintiff shall have until 11/29/05 to pay the entire $250 filing fee. Signed by Magistrate Judge F. A. Gossett on 11/21/2005. (JSF)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00462-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181895ceb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00462_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00462/pdf/USCOURTS-ned-8_05-cv-00462-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00462; Hudson v. City of Omaha et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00462-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-11-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 5 Motion to Extend. The plaintiff shall have until 11/29/05 to pay the entire $250 filing fee. Signed by Magistrate Judge F. A. Gossett on 11/21/2005. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00462-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-2/mods.xml">
+ <titleInfo>
+  <title>Hudson v. City of Omaha et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 8. The plaintiff shall have until no later than the close of business on 12/26/05, to pay the entire $250 filing fee, in the absence of which this case will be subject todismissal without prejudice. The plaintiff&apos;s second Motion for Leaveto Proceed IFP 9 is denied. Signed by Magistrate Judge F. A. Gossett on 11/29/2005. (JSF)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00462-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181895ce9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00462_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00462/pdf/USCOURTS-ned-8_05-cv-00462-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00462; Hudson v. City of Omaha et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00462-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-11-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 8. The plaintiff shall have until no later than the close of business on 12/26/05, to pay the entire $250 filing fee, in the absence of which this case will be subject todismissal without prejudice. The plaintiff&apos;s second Motion for Leaveto Proceed IFP 9 is denied. Signed by Magistrate Judge F. A. Gossett on 11/29/2005. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00462-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-3/mods.xml">
+ <titleInfo>
+  <title>Hudson v. City of Omaha et al</title>
+  <subTitle>MEMORANDUM AND ORDER that the plaintiff&apos;s complaint and the above-entitled action are dismissed without prejudice. Signed by Judge Lyle E. Strom on 12/29/2005. (MKR, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00462-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181895ce7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00462_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00462/pdf/USCOURTS-ned-8_05-cv-00462-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00462; Hudson v. City of Omaha et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00462-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-12-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the plaintiff&apos;s complaint and the above-entitled action are dismissed without prejudice. Signed by Judge Lyle E. Strom on 12/29/2005. (MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00462-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-4/mods.xml">
+ <titleInfo>
+  <title>Hudson v. City of Omaha et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 13 Motion for Leave to Proceed in forma pauperis on appeal and unless the Eighth Circuit Courtof Appeals rules otherwise, the plaintiff shall pay the $255 appellate filing fees by 1/30/06, to proceed with this appeal. Theclerk of court shall immediately notify the plaintiff and theEighth Circuit that the plaintiff has been denied IFP status onappeal, and that this appeal has been determined not to be ingood faith. Signed by Judge Lyle E. Strom on 1/10/2006. (JSF)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00462-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181895ce8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00462_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00462/USCOURTS-ned-8_05-cv-00462-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00462/pdf/USCOURTS-ned-8_05-cv-00462-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00462; Hudson v. City of Omaha et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00462-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-01-10</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 13 Motion for Leave to Proceed in forma pauperis on appeal and unless the Eighth Circuit Courtof Appeals rules otherwise, the plaintiff shall pay the $255 appellate filing fees by 1/30/06, to proceed with this appeal. Theclerk of court shall immediately notify the plaintiff and theEighth Circuit that the plaintiff has been denied IFP status onappeal, and that this appeal has been determined not to be ingood faith. Signed by Judge Lyle E. Strom on 1/10/2006. (JSF)</docketText>
+</extension>
+</relatedItem>
+</mods>

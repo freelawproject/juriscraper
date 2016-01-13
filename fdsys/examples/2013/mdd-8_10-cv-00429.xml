@@ -1,0 +1,307 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1883edd06">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-04-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-04-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_10-cv-00429</identifier>
+<identifier type="local">P0b002ee1883edd06</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-04-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-04-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-8_10-cv-00429</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-8_10-cv-00429</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>8:10-cv-00429</caseNumber>
+ <caseOffice>Greenbelt</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party firstName="Nancy" fullName="Nancy Becker" lastName="Becker" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Brown" lastName="Brown" role="Defendant"></party>
+ <party fullName="CCB II, LLC" lastName="CCB II, LLC" role="Counter Claimant"></party>
+ <party fullName="CCB II, LLC" lastName="CCB II, LLC" role="Defendant"></party>
+ <party fullName="DecisionHealth, LLC" lastName="DecisionHealth, LLC" role="Defendant"></party>
+ <party firstName="Todd" fullName="Todd Foreman" lastName="Foreman" role="Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly Jorgensen" lastName="Jorgensen" role="Counter Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly Jorgensen" lastName="Jorgensen" role="Plaintiff"></party>
+ <party firstName="Bruce" fullName="Bruce Levenson" lastName="Levenson" role="Defendant"></party>
+ <party firstName="Edwin" fullName="Edwin Peskowitz" lastName="Peskowitz" role="Defendant"></party>
+ <party fullName="UCG, Inc." lastName="UCG, Inc." role="Defendant"></party>
+ <party fullName="United Communications Group Limited Partnership" lastName="United Communications Group Limited Partnership" role="Counter Claimant"></party>
+ <party fullName="United Communications Group Limited Partnership" lastName="United Communications Group Limited Partnership" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Jorgensen v. United Communications Group Limited Partnership et al</title>
+ <partNumber>8:10-cv-00429</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_10-cv-00429/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:10-cv-00429;10-429</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Greenbelt</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Nancy Becker</displayForm>
+ <namePart type="family">Becker</namePart>
+ <namePart type="given">Nancy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CCB II, LLC</displayForm>
+ <namePart type="family">CCB II, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>CCB II, LLC</displayForm>
+ <namePart type="family">CCB II, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DecisionHealth, LLC</displayForm>
+ <namePart type="family">DecisionHealth, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Todd Foreman</displayForm>
+ <namePart type="family">Foreman</namePart>
+ <namePart type="given">Todd</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kelly Jorgensen</displayForm>
+ <namePart type="family">Jorgensen</namePart>
+ <namePart type="given">Kelly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kelly Jorgensen</displayForm>
+ <namePart type="family">Jorgensen</namePart>
+ <namePart type="given">Kelly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Bruce Levenson</displayForm>
+ <namePart type="family">Levenson</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Edwin Peskowitz</displayForm>
+ <namePart type="family">Peskowitz</namePart>
+ <namePart type="given">Edwin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>UCG, Inc.</displayForm>
+ <namePart type="family">UCG, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United Communications Group Limited Partnership</displayForm>
+ <namePart type="family">United Communications Group Limited Partnership</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>United Communications Group Limited Partnership</displayForm>
+ <namePart type="family">United Communications Group Limited Partnership</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-8_10-cv-00429</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>8:10-cv-00429</caseNumber>
+ <caseOffice>Greenbelt</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party firstName="Nancy" fullName="Nancy Becker" lastName="Becker" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Brown" lastName="Brown" role="Defendant"></party>
+ <party fullName="CCB II, LLC" lastName="CCB II, LLC" role="Counter Claimant"></party>
+ <party fullName="CCB II, LLC" lastName="CCB II, LLC" role="Defendant"></party>
+ <party fullName="DecisionHealth, LLC" lastName="DecisionHealth, LLC" role="Defendant"></party>
+ <party firstName="Todd" fullName="Todd Foreman" lastName="Foreman" role="Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly Jorgensen" lastName="Jorgensen" role="Counter Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly Jorgensen" lastName="Jorgensen" role="Plaintiff"></party>
+ <party firstName="Bruce" fullName="Bruce Levenson" lastName="Levenson" role="Defendant"></party>
+ <party firstName="Edwin" fullName="Edwin Peskowitz" lastName="Peskowitz" role="Defendant"></party>
+ <party fullName="UCG, Inc." lastName="UCG, Inc." role="Defendant"></party>
+ <party fullName="United Communications Group Limited Partnership" lastName="United Communications Group Limited Partnership" role="Counter Claimant"></party>
+ <party fullName="United Communications Group Limited Partnership" lastName="United Communications Group Limited Partnership" role="Defendant"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-8_10-cv-00429-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_10-cv-00429/USCOURTS-mdd-8_10-cv-00429-0/mods.xml">
+ <titleInfo>
+  <title>Jorgensen v. United Communications Group Limited Partnership et al</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge Alexander Williams, Jr on 8/25/11. (cms, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_10-cv-00429/pdf/USCOURTS-mdd-8_10-cv-00429-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee188417911</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_10-cv-00429/USCOURTS-mdd-8_10-cv-00429-0</identifier>
+ <identifier type="former granule identifier">mdd-8_10-cv-00429_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_10-cv-00429/USCOURTS-mdd-8_10-cv-00429-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_10-cv-00429/pdf/USCOURTS-mdd-8_10-cv-00429-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00429; Jorgensen v. United Communications Group Limited Partnership et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-8_10-cv-00429-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-08-25</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge Alexander Williams, Jr on 8/25/11. (cms, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-8_10-cv-00429-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_10-cv-00429/USCOURTS-mdd-8_10-cv-00429-1/mods.xml">
+ <titleInfo>
+  <title>Jorgensen v. United Communications Group Limited Partnership et al</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge Alexander Williams, Jr on 1/2/2013. (rss, Deputy Clerk)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_10-cv-00429/pdf/USCOURTS-mdd-8_10-cv-00429-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18841790f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_10-cv-00429/USCOURTS-mdd-8_10-cv-00429-1</identifier>
+ <identifier type="former granule identifier">mdd-8_10-cv-00429_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_10-cv-00429/USCOURTS-mdd-8_10-cv-00429-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_10-cv-00429/pdf/USCOURTS-mdd-8_10-cv-00429-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00429; Jorgensen v. United Communications Group Limited Partnership et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-8_10-cv-00429-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge Alexander Williams, Jr on 1/2/2013. (rss, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-8_10-cv-00429-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_10-cv-00429/USCOURTS-mdd-8_10-cv-00429-2/mods.xml">
+ <titleInfo>
+  <title>Jorgensen v. United Communications Group Limited Partnership et al</title>
+  <subTitle>AMENDED MEMORANDUM OPINION. Signed by Judge Alexander Williams, Jr on 04/19/2013. (bas, Deputy Clerk)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_10-cv-00429/pdf/USCOURTS-mdd-8_10-cv-00429-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee188417910</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_10-cv-00429/USCOURTS-mdd-8_10-cv-00429-2</identifier>
+ <identifier type="former granule identifier">mdd-8_10-cv-00429_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_10-cv-00429/USCOURTS-mdd-8_10-cv-00429-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_10-cv-00429/pdf/USCOURTS-mdd-8_10-cv-00429-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00429; Jorgensen v. United Communications Group Limited Partnership et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-8_10-cv-00429-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-04-19</dateIssued>
+  <docketText>AMENDED MEMORANDUM OPINION. Signed by Judge Alexander Williams, Jr on 04/19/2013. (bas, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

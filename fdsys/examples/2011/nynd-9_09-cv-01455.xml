@@ -1,0 +1,187 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181181f8c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_09-cv-01455</identifier>
+<identifier type="local">P0b002ee181181f8c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_09-cv-01455</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_09-cv-01455</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:09-cv-01455</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Warden" fullName="Warden Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="Salvatore" fullName="Salvatore LaMagna" lastName="LaMagna" role="Plaintiff"></party>
+ <party firstName="Jimmie" fullName="Jimmie Miller" lastName="Miller" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>LaMagna v. Miller et al</title>
+ <partNumber>9:09-cv-01455</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_09-cv-01455/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:09-cv-01455;09-1455</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Warden Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Warden</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Salvatore LaMagna</displayForm>
+ <namePart type="family">LaMagna</namePart>
+ <namePart type="given">Salvatore</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jimmie Miller</displayForm>
+ <namePart type="family">Miller</namePart>
+ <namePart type="given">Jimmie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_09-cv-01455</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:09-cv-01455</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Warden" fullName="Warden Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="Salvatore" fullName="Salvatore LaMagna" lastName="LaMagna" role="Plaintiff"></party>
+ <party firstName="Jimmie" fullName="Jimmie Miller" lastName="Miller" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_09-cv-01455-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_09-cv-01455/USCOURTS-nynd-9_09-cv-01455-0/mods.xml">
+ <titleInfo>
+  <title>LaMagna v. Miller et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS. RECOMMENDED that 17 MOTION to Dismiss be GRANTED with leave to amend. {Objections to R&amp;R due by 12/3/2010, Case Review Deadline 12/10/2010}. Signed by Magistrate Judge George H. Lowe on 11/19/10. {report-recommendations served via regular mail on all non-ecf parties}(nas)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_09-cv-01455-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18142acb3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_09-cv-01455/USCOURTS-nynd-9_09-cv-01455-0</identifier>
+ <identifier type="former granule identifier">nynd-9_09-cv-01455_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_09-cv-01455/USCOURTS-nynd-9_09-cv-01455-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_09-cv-01455/pdf/USCOURTS-nynd-9_09-cv-01455-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:09-cv-01455; LaMagna v. Miller et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_09-cv-01455-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-11-19</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS. RECOMMENDED that 17 MOTION to Dismiss be GRANTED with leave to amend. {Objections to R&amp;R due by 12/3/2010, Case Review Deadline 12/10/2010}. Signed by Magistrate Judge George H. Lowe on 11/19/10. {report-recommendations served via regular mail on all non-ecf parties}(nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_09-cv-01455-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_09-cv-01455/USCOURTS-nynd-9_09-cv-01455-1/mods.xml">
+ <titleInfo>
+  <title>LaMagna v. Miller et al</title>
+  <subTitle>DECISION AND ORDER adopting the 23 Report and Recommendations; granting Defts&apos; 17 Motion to Dismiss; and dismissing the amended complaint with prejudice. Signed by Senior Judge Thomas J. McAvoy on 1/5/2011. (amt) [Pltf served via reg. mail]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_09-cv-01455-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18142acb2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_09-cv-01455/USCOURTS-nynd-9_09-cv-01455-1</identifier>
+ <identifier type="former granule identifier">nynd-9_09-cv-01455_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_09-cv-01455/USCOURTS-nynd-9_09-cv-01455-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_09-cv-01455/pdf/USCOURTS-nynd-9_09-cv-01455-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:09-cv-01455; LaMagna v. Miller et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_09-cv-01455-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-05</dateIssued>
+  <docketText>DECISION AND ORDER adopting the 23 Report and Recommendations; granting Defts&apos; 17 Motion to Dismiss; and dismissing the amended complaint with prejudice. Signed by Senior Judge Thomas J. McAvoy on 1/5/2011. (amt) [Pltf served via reg. mail]</docketText>
+</extension>
+</relatedItem>
+</mods>

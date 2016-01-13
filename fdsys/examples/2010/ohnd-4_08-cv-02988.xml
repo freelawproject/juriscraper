@@ -1,0 +1,215 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d2a6e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_08-cv-02988</identifier>
+<identifier type="local">P0b002ee1815d2a6e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-4_08-cv-02988</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_08-cv-02988</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:08-cv-02988</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>29:201 Denial of Overtime Compensation</cause>
+ <party firstName="John" fullName="John Barker" lastName="Barker" role="Plaintiff"></party>
+ <party firstName="Anthony" fullName="Anthony Bolen" lastName="Bolen" role="Plaintiff"></party>
+ <party firstName="Robby" fullName="Robby Burchfield" lastName="Burchfield" role="Plaintiff"></party>
+ <party fullName="Chasidy Burchfield" lastName="Chasidy Burchfield" role="Plaintiff"></party>
+ <party firstName="Gary" fullName="Gary Collard" lastName="Collard" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard S. Gurbst" lastName="Gurbst" middleName="S." role="Evaluator"></party>
+ <party firstName="Kim" fullName="Kim Nezbeth" lastName="Nezbeth" role="Plaintiff"></party>
+ <party fullName="RWJ Corporation" lastName="RWJ Corporation" role="Defendant"></party>
+ <party firstName="William" fullName="William Raabe" lastName="Raabe" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Bolen et al v. RWJ Corporation</title>
+ <partNumber>4:08-cv-02988</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_08-cv-02988/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:08-cv-02988;08-2988</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Youngstown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John Barker</displayForm>
+ <namePart type="family">Barker</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Bolen</displayForm>
+ <namePart type="family">Bolen</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robby Burchfield</displayForm>
+ <namePart type="family">Burchfield</namePart>
+ <namePart type="given">Robby</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Chasidy Burchfield</displayForm>
+ <namePart type="family">Chasidy Burchfield</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Collard</displayForm>
+ <namePart type="family">Collard</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Richard S. Gurbst</displayForm>
+ <namePart type="family">Gurbst</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Evaluator</description>
+</name>
+<name type="personal">
+ <displayForm>Kim Nezbeth</displayForm>
+ <namePart type="family">Nezbeth</namePart>
+ <namePart type="given">Kim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>RWJ Corporation</displayForm>
+ <namePart type="family">RWJ Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Raabe</displayForm>
+ <namePart type="family">Raabe</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_08-cv-02988</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:08-cv-02988</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>29:201 Denial of Overtime Compensation</cause>
+ <party firstName="John" fullName="John Barker" lastName="Barker" role="Plaintiff"></party>
+ <party firstName="Anthony" fullName="Anthony Bolen" lastName="Bolen" role="Plaintiff"></party>
+ <party firstName="Robby" fullName="Robby Burchfield" lastName="Burchfield" role="Plaintiff"></party>
+ <party fullName="Chasidy Burchfield" lastName="Chasidy Burchfield" role="Plaintiff"></party>
+ <party firstName="Gary" fullName="Gary Collard" lastName="Collard" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard S. Gurbst" lastName="Gurbst" middleName="S." role="Evaluator"></party>
+ <party firstName="Kim" fullName="Kim Nezbeth" lastName="Nezbeth" role="Plaintiff"></party>
+ <party fullName="RWJ Corporation" lastName="RWJ Corporation" role="Defendant"></party>
+ <party firstName="William" fullName="William Raabe" lastName="Raabe" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_08-cv-02988-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_08-cv-02988/USCOURTS-ohnd-4_08-cv-02988-0/mods.xml">
+ <titleInfo>
+  <title>Bolen et al v. RWJ Corporation</title>
+  <subTitle>Order granting Plaintiff&apos;s Motion for order (Related Doc # 23) with fairness hearing to be held on 3/30/2010 at 10:00 AM in Chambers 313. Judge Peter C. Economus on 1/21/10.(BR,S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_08-cv-02988-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816e096c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_08-cv-02988/USCOURTS-ohnd-4_08-cv-02988-0</identifier>
+ <identifier type="former granule identifier">ohnd-4_08-cv-02988_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_08-cv-02988/USCOURTS-ohnd-4_08-cv-02988-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_08-cv-02988/pdf/USCOURTS-ohnd-4_08-cv-02988-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-02988; Bolen et al v. RWJ Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_08-cv-02988-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-21</dateIssued>
+  <docketText>Order granting Plaintiff&apos;s Motion for order (Related Doc # 23) with fairness hearing to be held on 3/30/2010 at 10:00 AM in Chambers 313. Judge Peter C. Economus on 1/21/10.(BR,S)</docketText>
+</extension>
+</relatedItem>
+</mods>

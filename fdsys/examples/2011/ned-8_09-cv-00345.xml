@@ -1,0 +1,783 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b89ec">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345</identifier>
+<identifier type="local">P0b002ee1817b89ec</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cv-00345</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00345</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00345</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>840</natureSuitCode>
+ <natureSuit>Trademark</natureSuit>
+ <cause>15:1125 Trademark Infringement (Lanham Act)</cause>
+ <party fullName="Alpharma" lastName="Alpharma" role="Counter Claimant"></party>
+ <party fullName="Alpharma" lastName="Alpharma" role="Defendant"></party>
+ <party fullName="Alpharma LLC" lastName="Alpharma LLC" role="Counter Claimant"></party>
+ <party fullName="Alpharma LLC" lastName="Alpharma LLC" role="Defendant"></party>
+ <party fullName="King Pharmaceuticals Holdings, Inc." lastName="King Pharmaceuticals Holdings, Inc." role="Counter Claimant"></party>
+ <party fullName="King Pharmaceuticals Holdings, Inc." lastName="King Pharmaceuticals Holdings, Inc." role="Defendant"></party>
+ <party fullName="King Pharmaceuticals, Inc." lastName="King Pharmaceuticals, Inc." role="Counter Claimant"></party>
+ <party fullName="King Pharmaceuticals, Inc." lastName="King Pharmaceuticals, Inc." role="Defendant"></party>
+ <party fullName="Pennfield Animal Health, A Nebraska Corporation" lastName="Pennfield Animal Health, A Nebraska Corporation" role="Plaintiff"></party>
+ <party fullName="Pennfield Oil Company" lastName="Pennfield Oil Company" role="Counter Defendant"></party>
+ <party fullName="Pennfield Oil Company" lastName="Pennfield Oil Company" role="Plaintiff"></party>
+ <party fullName="Pfizer, Inc." lastName="Pfizer, Inc." role="Counter Claimant"></party>
+ <party fullName="Pfizer, Inc." lastName="Pfizer, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+ <partNumber>8:09-cv-00345</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cv-00345;09-345</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Alpharma</displayForm>
+ <namePart type="family">Alpharma</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Alpharma</displayForm>
+ <namePart type="family">Alpharma</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alpharma LLC</displayForm>
+ <namePart type="family">Alpharma LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Alpharma LLC</displayForm>
+ <namePart type="family">Alpharma LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>King Pharmaceuticals Holdings, Inc.</displayForm>
+ <namePart type="family">King Pharmaceuticals Holdings, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>King Pharmaceuticals Holdings, Inc.</displayForm>
+ <namePart type="family">King Pharmaceuticals Holdings, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>King Pharmaceuticals, Inc.</displayForm>
+ <namePart type="family">King Pharmaceuticals, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>King Pharmaceuticals, Inc.</displayForm>
+ <namePart type="family">King Pharmaceuticals, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pennfield Animal Health, A Nebraska Corporation</displayForm>
+ <namePart type="family">Pennfield Animal Health, A Nebraska Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Pennfield Oil Company</displayForm>
+ <namePart type="family">Pennfield Oil Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pennfield Oil Company</displayForm>
+ <namePart type="family">Pennfield Oil Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Pfizer, Inc.</displayForm>
+ <namePart type="family">Pfizer, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Pfizer, Inc.</displayForm>
+ <namePart type="family">Pfizer, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00345</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00345</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>840</natureSuitCode>
+ <natureSuit>Trademark</natureSuit>
+ <cause>15:1125 Trademark Infringement (Lanham Act)</cause>
+ <party fullName="Alpharma" lastName="Alpharma" role="Counter Claimant"></party>
+ <party fullName="Alpharma" lastName="Alpharma" role="Defendant"></party>
+ <party fullName="Alpharma LLC" lastName="Alpharma LLC" role="Counter Claimant"></party>
+ <party fullName="Alpharma LLC" lastName="Alpharma LLC" role="Defendant"></party>
+ <party fullName="King Pharmaceuticals Holdings, Inc." lastName="King Pharmaceuticals Holdings, Inc." role="Counter Claimant"></party>
+ <party fullName="King Pharmaceuticals Holdings, Inc." lastName="King Pharmaceuticals Holdings, Inc." role="Defendant"></party>
+ <party fullName="King Pharmaceuticals, Inc." lastName="King Pharmaceuticals, Inc." role="Counter Claimant"></party>
+ <party fullName="King Pharmaceuticals, Inc." lastName="King Pharmaceuticals, Inc." role="Defendant"></party>
+ <party fullName="Pennfield Animal Health, A Nebraska Corporation" lastName="Pennfield Animal Health, A Nebraska Corporation" role="Plaintiff"></party>
+ <party fullName="Pennfield Oil Company" lastName="Pennfield Oil Company" role="Counter Defendant"></party>
+ <party fullName="Pennfield Oil Company" lastName="Pennfield Oil Company" role="Plaintiff"></party>
+ <party fullName="Pfizer, Inc." lastName="Pfizer, Inc." role="Counter Claimant"></party>
+ <party fullName="Pfizer, Inc." lastName="Pfizer, Inc." role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-0/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - Scheduling Conference set for 1/26/2010 08:00 AM in Chambers before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (CJP)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d7fbc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-04</dateIssued>
+  <docketText>ORDER - Scheduling Conference set for 1/26/2010 08:00 AM in Chambers before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-1/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - Plaintiff&apos;s motion for expedited hearing 54 is granted; said hearing is scheduled for: Monday, April 19, 2010, at 2 p.m. Courtroom No. 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d8030</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-04-15</dateIssued>
+  <docketText>ORDER - Plaintiff&apos;s motion for expedited hearing 54 is granted; said hearing is scheduled for: Monday, April 19, 2010, at 2 p.m. Courtroom No. 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-2/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - The motion for protective order 46 is granted. The protective order will be filed as a separate order. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d802a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-2</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-04-28</dateIssued>
+  <docketText>ORDER - The motion for protective order 46 is granted. The protective order will be filed as a separate order. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-3/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>PROTECTIVE ORDER. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d803d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-3</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-04-28</dateIssued>
+  <docketText>PROTECTIVE ORDER. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-4/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>MEMORANDUM AND ORDER - Alpharma&apos;s objection to notice on the ground of absence of a protective order 36 is denied; Pennfield&apos;s motion to compel 37 is granted in part and denied in part as set forth in this Order. Pennfield&apos;s motion to compel Alpharma to remove its objections and fully respond to Pennfield&apos;s request for admissions is denied as moot. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d8028</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-4</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-05-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Alpharma&apos;s objection to notice on the ground of absence of a protective order 36 is denied; Pennfield&apos;s motion to compel 37 is granted in part and denied in part as set forth in this Order. Pennfield&apos;s motion to compel Alpharma to remove its objections and fully respond to Pennfield&apos;s request for admissions is denied as moot. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-5/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>MEMORANDUM AND ORDER -Pennfields motion to file a surreply brief (Filing No. 80) is granted; Alpharmas motion to compel (Filing No. 58) is granted in part and denied in part: (a) Alpharmas motion to compel with respect to Request Nos. 2 and 3 is denied without prejudice; (b) Alpharmas motion to compel with respect to Request Nos. 8, 26, 27, and 53-55 is denied; (c) Alpharmas motion to compel with respect to Request Nos. 4, 7, 9, 18, 44-47, 61, 63, 65, and 66 is granted. To the extent it has not already done so, Pennfield is ordered to produce all responsive documents to said requests on or before June 28, 2010; (d) To the extent Alpharma moves to compel the production of documents to other requests not specifically identified above, such request is denied at this time; (3) Alpharma is granted leave to serve ten interrogatories on Pennfield to obtain information regarding the application and approval process for Pennchlor, to the extent such information is relevant to whether Pennchlor100 is generic. Such interrogatories shall be served on or before June 14, 2010. Ordered by Judge Lyle E. Strom. (MKR)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d802b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-5</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-06-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER -Pennfields motion to file a surreply brief (Filing No. 80) is granted; Alpharmas motion to compel (Filing No. 58) is granted in part and denied in part: (a) Alpharmas motion to compel with respect to Request Nos. 2 and 3 is denied without prejudice; (b) Alpharmas motion to compel with respect to Request Nos. 8, 26, 27, and 53-55 is denied; (c) Alpharmas motion to compel with respect to Request Nos. 4, 7, 9, 18, 44-47, 61, 63, 65, and 66 is granted. To the extent it has not already done so, Pennfield is ordered to produce all responsive documents to said requests on or before June 28, 2010; (d) To the extent Alpharma moves to compel the production of documents to other requests not specifically identified above, such request is denied at this time; (3) Alpharma is granted leave to serve ten interrogatories on Pennfield to obtain information regarding the application and approval process for Pennchlor, to the extent such information is relevant to whether Pennchlor100 is generic. Such interrogatories shall be served on or before June 14, 2010. Ordered by Judge Lyle E. Strom. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-6/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - Plaintiff&apos;s motion112 to file amended complaint and answer to counterclaim and add additional parties is granted. Plaintiff shall have until September 8, 2010, to file its amended complaint and answer to counterclaim and add additional parties. Defendant&apos;s motion116 for leave to file amended answer and counterclaim is granted. Defendant Alpharma shall have until September 15, 2010, to file its amended answer and counterclaim. Ordered by Senior Judge Lyle E. Strom. (JAB)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d7fc0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-6</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-09-02</dateIssued>
+  <docketText>ORDER - Plaintiff&apos;s motion112 to file amended complaint and answer to counterclaim and add additional parties is granted. Plaintiff shall have until September 8, 2010, to file its amended complaint and answer to counterclaim and add additional parties. Defendant&apos;s motion116 for leave to file amended answer and counterclaim is granted. Defendant Alpharma shall have until September 15, 2010, to file its amended answer and counterclaim. Ordered by Senior Judge Lyle E. Strom. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-7/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - The motion to seal brief and accompanying index of evidence 125 is granted. The documents shall remain sealed pending further order of this Court. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d802d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-7</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-09-08</dateIssued>
+  <docketText>ORDER - The motion to seal brief and accompanying index of evidence 125 is granted. The documents shall remain sealed pending further order of this Court. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-8/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER granting 140 Motion to Seal. The brief in opposition to Alpharma, Inc.&apos;s second motion to compel, index of evidence, and Exhibits 1-6 shall be sealed pursuant to the protective order. Ordered by Senior Judge Lyle E. Strom. (JAE)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d7fbd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-8</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2010-09-27</dateIssued>
+  <docketText>ORDER granting 140 Motion to Seal. The brief in opposition to Alpharma, Inc.&apos;s second motion to compel, index of evidence, and Exhibits 1-6 shall be sealed pursuant to the protective order. Ordered by Senior Judge Lyle E. Strom. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-9/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER granting 150 Motion to Seal. The reply brief shall remain sealed pending further order of this Court. Ordered by Senior Judge Lyle E. Strom. (JSF)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d7fbe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-9</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2010-10-12</dateIssued>
+  <docketText>ORDER granting 150 Motion to Seal. The reply brief shall remain sealed pending further order of this Court. Ordered by Senior Judge Lyle E. Strom. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-10/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - The motion to seal 164 is granted. The documents shall remain sealed pending further order of this court. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d802c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-10</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2010-10-21</dateIssued>
+  <docketText>ORDER - The motion to seal 164 is granted. The documents shall remain sealed pending further order of this court. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-11/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - The motion to seal 172 is granted. The index (Filing Nos. l73, 174 and l75) shall remain sealed pending further order of this Court. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d7fc3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-11</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-10-26</dateIssued>
+  <docketText>ORDER - The motion to seal 172 is granted. The index (Filing Nos. l73, 174 and l75) shall remain sealed pending further order of this Court. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-12/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - Pursuant to the issues discussed at the hearing held October 25, 2010. The Court withholds ruling on all pending motions. Pennfield Oil Company (Pennfield) will submit to the Court for in camera inspection by Monday, November 1, 2010, the following items listed in this Order. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d802f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-12</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2010-10-27</dateIssued>
+  <docketText>ORDER - Pursuant to the issues discussed at the hearing held October 25, 2010. The Court withholds ruling on all pending motions. Pennfield Oil Company (Pennfield) will submit to the Court for in camera inspection by Monday, November 1, 2010, the following items listed in this Order. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-13/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - The motion to seal 182 is granted. The designation of expert witnesses (Filing No. l83) shall remain sealed pending further order of this Court. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d8031</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-13</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2010-11-02</dateIssued>
+  <docketText>ORDER - The motion to seal 182 is granted. The designation of expert witnesses (Filing No. l83) shall remain sealed pending further order of this Court. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-14/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - The motion to seal 195 is granted. The brief in opposition to Alpharma Inc.s motion for protection from Pennfields request for access to its SalesLogix Database, plaintiffs index of evidence, and Exhibits #s 1-3 (Filing Nos. 196 and 197) shall remain sealed pending further order of thisCourt. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d8029</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-14</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2010-11-09</dateIssued>
+  <docketText>ORDER - The motion to seal 195 is granted. The brief in opposition to Alpharma Inc.s motion for protection from Pennfields request for access to its SalesLogix Database, plaintiffs index of evidence, and Exhibits #s 1-3 (Filing Nos. 196 and 197) shall remain sealed pending further order of thisCourt. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-15/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - IT IS ORDERED: 1. Alpharma&apos;s second motion to compel (Filing No. 124) is granted in part and denied in part: a. Alpharma&apos;s motion to compel with respect to RFP Nos. 2, 3, 18, 30, 31, 32, 33, 34, 35, 36, 37, 44, 45, 46, 47, 61, 65, 66, 80, 81, 92,and 93 and with respect to RFA No. 52 is granted. Pennfield may redact formulation information related to is NADA products. Pennfield may designate all information produced from its regulatory file as Highly Confidential, pursuant to the protective order entered in the case (Filing No. 69). To the extent it has not already done so, Pennfield is ordered to produce all responsive documents to said requests on or before December 3, 2010; and b. Alpharma&apos;s motion to compel with respect to RFP Nos. 7&amp;9 and with respect to RFA Nos. 78, 79, 80, and 81 is denied; and 2. Pursuant to the parties&apos; agreement that Pennfield may supplement its expert reports regarding the issue of damages (See Pennfield&apos;s Designation of Expert Witnesses, Filing 183, 7), Pennfield&apos;s motion to modify the amended final progression order per agreement of the parties (Filing No. 165) is granted. Ordered by Senior Judge Lyle E. Strom. (TCL ) Modified on 11/10/2010 to change restriction (TCL ).</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d7fc1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-15</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2010-11-10</dateIssued>
+  <docketText>ORDER - IT IS ORDERED: 1. Alpharma&apos;s second motion to compel (Filing No. 124) is granted in part and denied in part: a. Alpharma&apos;s motion to compel with respect to RFP Nos. 2, 3, 18, 30, 31, 32, 33, 34, 35, 36, 37, 44, 45, 46, 47, 61, 65, 66, 80, 81, 92,and 93 and with respect to RFA No. 52 is granted. Pennfield may redact formulation information related to is NADA products. Pennfield may designate all information produced from its regulatory file as Highly Confidential, pursuant to the protective order entered in the case (Filing No. 69). To the extent it has not already done so, Pennfield is ordered to produce all responsive documents to said requests on or before December 3, 2010; and b. Alpharma&apos;s motion to compel with respect to RFP Nos. 7&amp;9 and with respect to RFA Nos. 78, 79, 80, and 81 is denied; and 2. Pursuant to the parties&apos; agreement that Pennfield may supplement its expert reports regarding the issue of damages (See Pennfield&apos;s Designation of Expert Witnesses, Filing 183, 7), Pennfield&apos;s motion to modify the amended final progression order per agreement of the parties (Filing No. 165) is granted. Ordered by Senior Judge Lyle E. Strom. (TCL ) Modified on 11/10/2010 to change restriction (TCL ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-16/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - The stipulation of the parties 202 is approved and adopted. King Pharmaceuticals Holdings, Inc., and King Pharmaceuticals, Inc., are dismissed without prejudice as defendants in this action. Plaintiff is granted leave to file a second amended complaint, on or before November 30, 2010, removing those parties from the action. King Pharmaceuticals Holdings, Inc., and King Pharmaceuticals, Inc.s motion to dismiss 187 is denied as moot. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d802e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-16</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2010-11-18</dateIssued>
+  <docketText>ORDER - The stipulation of the parties 202 is approved and adopted. King Pharmaceuticals Holdings, Inc., and King Pharmaceuticals, Inc., are dismissed without prejudice as defendants in this action. Plaintiff is granted leave to file a second amended complaint, on or before November 30, 2010, removing those parties from the action. King Pharmaceuticals Holdings, Inc., and King Pharmaceuticals, Inc.s motion to dismiss 187 is denied as moot. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-17/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER granting 223 Motion to Seal. The second amended complaint (Filing No. 222) shall remain sealed pending further order of this Court. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d7fc2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-17</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2010-11-30</dateIssued>
+  <docketText>ORDER granting 223 Motion to Seal. The second amended complaint (Filing No. 222) shall remain sealed pending further order of this Court. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-18/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER denying without prejudice motion for protective order 170. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d7fc4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-18</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2010-12-02</dateIssued>
+  <docketText>ORDER denying without prejudice motion for protective order 170. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00345-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-19/mods.xml">
+ <titleInfo>
+  <title>Pennfield Oil Company v. Alpharma, Inc.</title>
+  <subTitle>ORDER - The motion to seal 250 is granted. The index of evidence (Filing No. 251) shall remain sealed pending further order of this Court. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00345-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d7fbf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-19</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00345_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00345/USCOURTS-ned-8_09-cv-00345-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00345/pdf/USCOURTS-ned-8_09-cv-00345-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00345; Pennfield Oil Company v. Alpharma, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00345-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2011-01-31</dateIssued>
+  <docketText>ORDER - The motion to seal 250 is granted. The index of evidence (Filing No. 251) shall remain sealed pending further order of this Court. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

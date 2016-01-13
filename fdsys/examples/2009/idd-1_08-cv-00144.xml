@@ -1,0 +1,206 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180fd28cb">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00144</identifier>
+<identifier type="local">P0b002ee180fd28cb</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-1_08-cv-00144</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_08-cv-00144</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:08-cv-00144</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Gary" fullName="Gary Barrier" lastName="Barrier" role="Respondent"></party>
+ <party firstName="Michael" fullName="Michael D Deuel" lastName="Deuel" middleName="D" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Deuel v. Barrier</title>
+ <partNumber>1:08-cv-00144</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00144/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-00144;08-144</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Boise - Southern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Gary Barrier</displayForm>
+ <namePart type="family">Barrier</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Michael D Deuel</displayForm>
+ <namePart type="family">Deuel</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_08-cv-00144</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:08-cv-00144</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Gary" fullName="Gary Barrier" lastName="Barrier" role="Respondent"></party>
+ <party firstName="Michael" fullName="Michael D Deuel" lastName="Deuel" middleName="D" role="Petitioner"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-cv-00144-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00144/USCOURTS-idd-1_08-cv-00144-0/mods.xml">
+ <titleInfo>
+  <title>Deuel v. Barrier</title>
+  <subTitle>INITIAL REVIEW ORDER granting 4 Motion for Leave to Proceed in forma pauperis; denying without prejudice pet&apos;s motion for appointment of counsel (contained within the petition); Res shall file an answer or other appropriate responsive motion within 60 days after entry of this order. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-cv-00144-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180ffb043</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00144/USCOURTS-idd-1_08-cv-00144-0</identifier>
+ <identifier type="former granule identifier">idd-1_08-cv-00144_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00144/USCOURTS-idd-1_08-cv-00144-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00144/pdf/USCOURTS-idd-1_08-cv-00144-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00144; Deuel v. Barrier; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-cv-00144-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-05-06</dateIssued>
+  <docketText>INITIAL REVIEW ORDER granting 4 Motion for Leave to Proceed in forma pauperis; denying without prejudice pet&apos;s motion for appointment of counsel (contained within the petition); Res shall file an answer or other appropriate responsive motion within 60 days after entry of this order. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-cv-00144-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00144/USCOURTS-idd-1_08-cv-00144-1/mods.xml">
+ <titleInfo>
+  <title>Deuel v. Barrier</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER granting 18 Motion for Summary Judgment; The petition for writ of habeas corpus is denied. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-cv-00144-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180ffb041</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00144/USCOURTS-idd-1_08-cv-00144-1</identifier>
+ <identifier type="former granule identifier">idd-1_08-cv-00144_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00144/USCOURTS-idd-1_08-cv-00144-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00144/pdf/USCOURTS-idd-1_08-cv-00144-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00144; Deuel v. Barrier; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-cv-00144-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-08</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER granting 18 Motion for Summary Judgment; The petition for writ of habeas corpus is denied. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-cv-00144-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00144/USCOURTS-idd-1_08-cv-00144-2/mods.xml">
+ <titleInfo>
+  <title>Deuel v. Barrier</title>
+  <subTitle>JUDGMENT dismissing case with prejudice. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-cv-00144-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180ffb042</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00144/USCOURTS-idd-1_08-cv-00144-2</identifier>
+ <identifier type="former granule identifier">idd-1_08-cv-00144_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00144/USCOURTS-idd-1_08-cv-00144-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00144/pdf/USCOURTS-idd-1_08-cv-00144-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00144; Deuel v. Barrier; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-cv-00144-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-01-08</dateIssued>
+  <docketText>JUDGMENT dismissing case with prejudice. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,314 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18387ba7c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-11-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-11-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03138</identifier>
+<identifier type="local">P0b002ee18387ba7c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-11-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-11-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_11-cr-03138</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cr-03138</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cr-03138</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Thomas" fullName="Thomas J. Schildt" lastName="Schildt" middleName="J." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Schildt</title>
+ <partNumber>4:11-cr-03138</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03138/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:11-cr-03138;11-3138</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Thomas J. Schildt</displayForm>
+ <namePart type="family">Schildt</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cr-03138</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cr-03138</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Thomas" fullName="Thomas J. Schildt" lastName="Schildt" middleName="J." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03138-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Schildt</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Thomas J. Schildt. The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03138-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18387d8d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-0</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03138_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03138/pdf/USCOURTS-ned-4_11-cr-03138-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03138; USA v. Schildt; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03138-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Thomas J. Schildt. The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03138-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Schildt</title>
+  <subTitle>ORDER granting 11, Motion for Detention as to Thomas J. Schildt. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03138-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18387d875</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-1</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03138_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03138/pdf/USCOURTS-ned-4_11-cr-03138-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03138; USA v. Schildt; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03138-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>ORDER granting 11, Motion for Detention as to Thomas J. Schildt. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03138-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Schildt</title>
+  <subTitle>FINDINGS AND RECOMMENDATION - motion to suppress28 should be denied, ORDER SETTING TRIAL - Jury Trial set for 6/4/2012 at 09:00 AM before Senior Judge Richard G. Kopf as to defendant Thomas J. Schildt. Ordered by Magistrate Judge Cheryl R. Zwart. (BHC)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03138-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18387d8d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-2</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03138_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03138/pdf/USCOURTS-ned-4_11-cr-03138-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03138; USA v. Schildt; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03138-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-04-11</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATION - motion to suppress28 should be denied, ORDER SETTING TRIAL - Jury Trial set for 6/4/2012 at 09:00 AM before Senior Judge Richard G. Kopf as to defendant Thomas J. Schildt. Ordered by Magistrate Judge Cheryl R. Zwart. (BHC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03138-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Schildt</title>
+  <subTitle>MEMORANDUM AND ORDER adopting 42 Findings and Recommendations as to Thomas J. Schildt (1); denying 28 Motion to Suppress as to Thomas J. Schildt (1). Ordered by Senior Judge Richard G. Kopf. ( ADB )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03138-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18387d874</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-3</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03138_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03138/pdf/USCOURTS-ned-4_11-cr-03138-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03138; USA v. Schildt; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03138-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-05-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER adopting 42 Findings and Recommendations as to Thomas J. Schildt (1); denying 28 Motion to Suppress as to Thomas J. Schildt (1). Ordered by Senior Judge Richard G. Kopf. ( ADB )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03138-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Schildt</title>
+  <subTitle>MEMORANDUM AND ORDER granting 46 defendant&apos;s Unopposed Oral Motion as to Thomas J. Schildt (1). Change of Plea Hearing continued to 7/12/2012 02:00 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. The time between today&apos;s date and July 12, 2012 shall be excluded for speedy trial calculation purposes. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03138-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18387d877</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-4</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03138_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03138/pdf/USCOURTS-ned-4_11-cr-03138-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03138; USA v. Schildt; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03138-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-06-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 46 defendant&apos;s Unopposed Oral Motion as to Thomas J. Schildt (1). Change of Plea Hearing continued to 7/12/2012 02:00 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. The time between today&apos;s date and July 12, 2012 shall be excluded for speedy trial calculation purposes. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03138-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Schildt</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Thomas J. Schildt. It is ordered that:... (2)The defendant&apos;s objection as to the number of images and his variance motion will be resolved at sentencing. (3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Senior Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03138-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18387d8d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-5</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03138_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03138/pdf/USCOURTS-ned-4_11-cr-03138-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03138; USA v. Schildt; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03138-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-10-01</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Thomas J. Schildt. It is ordered that:... (2)The defendant&apos;s objection as to the number of images and his variance motion will be resolved at sentencing. (3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Senior Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03138-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Schildt</title>
+  <subTitle>JUDGMENT as to Thomas J. Schildt (1), Count 1 - Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of 84 months; 10 years supervised release with special conditions; $100.00 special assessment (PAID). Count 2 - Count II of the Indictment is dismissed on the motion of the United States as to this defendant only as to defendant Thomas J. Schildt. Ordered by Senior Judge Richard G. Kopf. (4 Certified copies to USM)(ADB, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03138-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18387d876</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-6</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03138_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03138/USCOURTS-ned-4_11-cr-03138-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03138/pdf/USCOURTS-ned-4_11-cr-03138-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03138; USA v. Schildt; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03138-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-11-28</dateIssued>
+  <docketText>JUDGMENT as to Thomas J. Schildt (1), Count 1 - Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of 84 months; 10 years supervised release with special conditions; $100.00 special assessment (PAID). Count 2 - Count II of the Indictment is dismissed on the motion of the United States as to this defendant only as to defendant Thomas J. Schildt. Ordered by Senior Judge Richard G. Kopf. (4 Certified copies to USM)(ADB, )</docketText>
+</extension>
+</relatedItem>
+</mods>

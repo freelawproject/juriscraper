@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18173f0e3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00456</identifier>
+<identifier type="local">P0b002ee18173f0e3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cv-00456</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00456</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00456</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1345 Foreclosure</cause>
+ <party firstName="Rose" fullName="Rose Leah Fuss" lastName="Fuss" middleName="Leah" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Fuss</title>
+ <partNumber>8:06-cv-00456</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00456/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cv-00456;06-456</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Rose Leah Fuss</displayForm>
+ <namePart type="family">Fuss</namePart>
+ <namePart type="given">Rose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00456</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00456</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1345 Foreclosure</cause>
+ <party firstName="Rose" fullName="Rose Leah Fuss" lastName="Fuss" middleName="Leah" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00456-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00456/USCOURTS-ned-8_06-cv-00456-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Fuss</title>
+  <subTitle>ORDER - IT IS ORDERED that the hearing on plaintiff&apos;s Motion for Default Judgment, Filing No. 17, is scheduled before the undersigned on January 25, 2007, at 10:45 a.m., in Courtroom No. 3, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. Any party may participate telephonically by contacting chambers (402/661-7302) at least 24 hours before the hearing.The Clerk&apos;s Office is directed to mail a copy of this order to the defendant at her last known address of record as to MOTION for Default Judgment against Rose Leah Fuss7. Ordered by Judge Joseph F. Bataillon. (copy mailed as directed)(TJS)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00456-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18176c461</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00456/USCOURTS-ned-8_06-cv-00456-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00456_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00456/USCOURTS-ned-8_06-cv-00456-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00456/pdf/USCOURTS-ned-8_06-cv-00456-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00456; United States of America v. Fuss; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00456-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-12-14</dateIssued>
+  <docketText>ORDER - IT IS ORDERED that the hearing on plaintiff&apos;s Motion for Default Judgment, Filing No. 17, is scheduled before the undersigned on January 25, 2007, at 10:45 a.m., in Courtroom No. 3, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. Any party may participate telephonically by contacting chambers (402/661-7302) at least 24 hours before the hearing.The Clerk&apos;s Office is directed to mail a copy of this order to the defendant at her last known address of record as to MOTION for Default Judgment against Rose Leah Fuss7. Ordered by Judge Joseph F. Bataillon. (copy mailed as directed)(TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00456-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00456/USCOURTS-ned-8_06-cv-00456-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Fuss</title>
+  <subTitle>ORDER that the hearing on the MOTION for Default Judgment against Rose Leah Fuss7 is rescheduled for 1/23/2007 09:45 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon.Ordered by Judge Joseph F. Bataillon. (copies mailed as directed)(ADB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00456-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18176c45f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00456/USCOURTS-ned-8_06-cv-00456-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00456_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00456/USCOURTS-ned-8_06-cv-00456-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00456/pdf/USCOURTS-ned-8_06-cv-00456-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00456; United States of America v. Fuss; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00456-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-08</dateIssued>
+  <docketText>ORDER that the hearing on the MOTION for Default Judgment against Rose Leah Fuss7 is rescheduled for 1/23/2007 09:45 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon.Ordered by Judge Joseph F. Bataillon. (copies mailed as directed)(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00456-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00456/USCOURTS-ned-8_06-cv-00456-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Fuss</title>
+  <subTitle>JUDGMENT AND DECREE OF FORECLOSURE AND ORDER OF SALE in the amount of $50,629.28 plus accrued interest of 5.08% computed daily and compounded annually until paid in full; setting priority of liens and directing sale of premises; granting Plaintiff USA&apos;s motion for default judgment against Defendant Rose Leah Fuss. Ordered by Judge Joseph F. Bataillon. (PCV, ) (Copies sent to defendant via mail)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00456-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18176c460</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00456/USCOURTS-ned-8_06-cv-00456-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00456_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00456/USCOURTS-ned-8_06-cv-00456-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00456/pdf/USCOURTS-ned-8_06-cv-00456-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00456; United States of America v. Fuss; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00456-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-23</dateIssued>
+  <docketText>JUDGMENT AND DECREE OF FORECLOSURE AND ORDER OF SALE in the amount of $50,629.28 plus accrued interest of 5.08% computed daily and compounded annually until paid in full; setting priority of liens and directing sale of premises; granting Plaintiff USA&apos;s motion for default judgment against Defendant Rose Leah Fuss. Ordered by Judge Joseph F. Bataillon. (PCV, ) (Copies sent to defendant via mail)</docketText>
+</extension>
+</relatedItem>
+</mods>

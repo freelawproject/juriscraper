@@ -1,0 +1,2027 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18df2f912">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-11-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329</identifier>
+<identifier type="local">P0b002ee18df2f912</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-11-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_09-cv-01329</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_09-cv-01329</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:09-cv-01329</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="M.H." fullName="M.H. Lopez" lastName="Lopez" role="Defendant"></party>
+ <party firstName="C." fullName="C. Love" lastName="Love" role="Defendant"></party>
+ <party firstName="J." fullName="J. Palmer" lastName="Palmer" role="Defendant"></party>
+ <party firstName="R.S." fullName="R.S. Rivera" lastName="Rivera" role="Defendant"></party>
+ <party firstName="Floyd" fullName="Floyd Scott" lastName="Scott" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC)Scott v. Palmer et al</title>
+ <partNumber>1:09-cv-01329</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cv-01329;09-1329</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>M.H. Lopez</displayForm>
+ <namePart type="family">Lopez</namePart>
+ <namePart type="given">M.H.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Love</displayForm>
+ <namePart type="family">Love</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Palmer</displayForm>
+ <namePart type="family">Palmer</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R.S. Rivera</displayForm>
+ <namePart type="family">Rivera</namePart>
+ <namePart type="given">R.S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Floyd Scott</displayForm>
+ <namePart type="family">Scott</namePart>
+ <namePart type="given">Floyd</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_09-cv-01329</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:09-cv-01329</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="M.H." fullName="M.H. Lopez" lastName="Lopez" role="Defendant"></party>
+ <party firstName="C." fullName="C. Love" lastName="Love" role="Defendant"></party>
+ <party firstName="J." fullName="J. Palmer" lastName="Palmer" role="Defendant"></party>
+ <party firstName="R.S." fullName="R.S. Rivera" lastName="Rivera" role="Defendant"></party>
+ <party firstName="Floyd" fullName="Floyd Scott" lastName="Scott" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-0/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS recommending that Plaintiff&apos;s 2 Motion to Proceed In Forma Pauperis be Denied; Objections, if any, Due in 30 Days signed by Magistrate Judge Sandra M. Snyder on 8/10/2009. Referred to Judge Anthony W. Ishii. Objections to F&amp;R due by 9/14/2009. (Sant Agata, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-08-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f475</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-0</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-08-10</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS recommending that Plaintiff&apos;s 2 Motion to Proceed In Forma Pauperis be Denied; Objections, if any, Due in 30 Days signed by Magistrate Judge Sandra M. Snyder on 8/10/2009. Referred to Judge Anthony W. Ishii. Objections to F&amp;R due by 9/14/2009. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-1/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER ADOPTING 5 Findings and Recommendations; ORDER DENYING 2 Motion to Proceed In Fotma Pauperis; ORDER for Plaintiff to Pay $350.00 Filing Fee for this Action in Full within Thirty Days signed by Chief Judge Anthony W. Ishii on 10/16/2009. (Figueroa, O)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f459</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-1</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-10-16</dateIssued>
+  <docketText>ORDER ADOPTING 5 Findings and Recommendations; ORDER DENYING 2 Motion to Proceed In Fotma Pauperis; ORDER for Plaintiff to Pay $350.00 Filing Fee for this Action in Full within Thirty Days signed by Chief Judge Anthony W. Ishii on 10/16/2009. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-2/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER DISMISSING 1 Action, Without Prejudice, for Failure to Pay Filing Fee; ORDER for Clerk to Close Case signed by Chief Judge Anthony W. Ishii on 12/9/2009. CASE CLOSED. (Sant Agata, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f44a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-2</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-12-09</dateIssued>
+  <docketText>ORDER DISMISSING 1 Action, Without Prejudice, for Failure to Pay Filing Fee; ORDER for Clerk to Close Case signed by Chief Judge Anthony W. Ishii on 12/9/2009. CASE CLOSED. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-3/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER GRANTING Plaintiff&apos;s 11, 12 Motion to Reopen this Case; ORDER for Clerk to REOPEN this Case and Correct the Record to Reflect PAYMENT OF FILING FEE signed by Chief Judge Anthony W. Ishii on 2/17/2010. CASE REOPENED. FILING FEE PAID. (Sant Agata, S)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f483</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-3</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-02-18</dateIssued>
+  <docketText>ORDER GRANTING Plaintiff&apos;s 11, 12 Motion to Reopen this Case; ORDER for Clerk to REOPEN this Case and Correct the Record to Reflect PAYMENT OF FILING FEE signed by Chief Judge Anthony W. Ishii on 2/17/2010. CASE REOPENED. FILING FEE PAID. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-4/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Sandra M. Snyder on 6/10/2010 denying 14 Motion as moot and directing clerk to send Plaintiff copy of Docket. (Lundstrom, T)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f481</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-4</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-06-10</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Sandra M. Snyder on 6/10/2010 denying 14 Motion as moot and directing clerk to send Plaintiff copy of Docket. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-5/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Denying 17 Plaintiff&apos;s Motion for an Order to Deliver his Property, signed by Magistrate Judge Sandra M. Snyder on 1/20/11. (Verduzco, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f478</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-5</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-01-21</dateIssued>
+  <docketText>ORDER Denying 17 Plaintiff&apos;s Motion for an Order to Deliver his Property, signed by Magistrate Judge Sandra M. Snyder on 1/20/11. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-6/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER REQUIRING Plaintiff to Either File Amended Complaint or Notify Court of Willingness to Proceed Only on Cognizable Excessive Force Claim, signed by Magistrate Judge Sandra M. Snyder on 1/20/2011. (Filing Deadline: 2/28/2011.) (Marrujo, C)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f3bb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-6</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-01-24</dateIssued>
+  <docketText>ORDER REQUIRING Plaintiff to Either File Amended Complaint or Notify Court of Willingness to Proceed Only on Cognizable Excessive Force Claim, signed by Magistrate Judge Sandra M. Snyder on 1/20/2011. (Filing Deadline: 2/28/2011.) (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-7/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>SCREENING ORDER DISMISSING Due Process and Conspiracy Claims; DISMISSING Defendant Love; FINDING Service of Complaint Appropriate; and DIRECTING Plaintiff to Complete Service of Process within One-Hundred Twenty Days signed by Magistrate Judge Sandra M. Snyder on 2/3/2011. Service Completed by 6/7/2011. (Attachments: # (1) Summons, # (2) Notice of Lawsuit, # (3) Waiver of Service, # (4) Rule 4)(Sant Agata, S)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f45f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-7</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-02-04</dateIssued>
+  <docketText>SCREENING ORDER DISMISSING Due Process and Conspiracy Claims; DISMISSING Defendant Love; FINDING Service of Complaint Appropriate; and DIRECTING Plaintiff to Complete Service of Process within One-Hundred Twenty Days signed by Magistrate Judge Sandra M. Snyder on 2/3/2011. Service Completed by 6/7/2011. (Attachments: # (1) Summons, # (2) Notice of Lawsuit, # (3) Waiver of Service, # (4) Rule 4)(Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-8/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER GRANTING Plaintiff&apos;s 25 Motion for Appointment of the Marshal to Effect Service and DENYING 24 Motion for Extension of Time as MOOT ; ORDER REQUIRING Plaintiff to Return Service Documents and Complaint Copies within Thirty Days signed by Magistrate Judge Sandra M. Snyder on 2/20/2011. Service is appropriate for M.H. Lopez, J. Palmer, R.S. Rivera. Clerk to send plaintiff: 3 Summons, 3 USM-285 Forms. (Attachments: # (1) USM Instructions)(Sant Agata, S)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f449</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-8</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-02-22</dateIssued>
+  <docketText>ORDER GRANTING Plaintiff&apos;s 25 Motion for Appointment of the Marshal to Effect Service and DENYING 24 Motion for Extension of Time as MOOT ; ORDER REQUIRING Plaintiff to Return Service Documents and Complaint Copies within Thirty Days signed by Magistrate Judge Sandra M. Snyder on 2/20/2011. Service is appropriate for M.H. Lopez, J. Palmer, R.S. Rivera. Clerk to send plaintiff: 3 Summons, 3 USM-285 Forms. (Attachments: # (1) USM Instructions)(Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-9/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Striking 36 Reply to Answer, signed by Magistrate Judge Sheila K. Oberto on 7/7/11. (Gonzalez, R)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f469</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-9</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2011-07-07</dateIssued>
+  <docketText>ORDER Striking 36 Reply to Answer, signed by Magistrate Judge Sheila K. Oberto on 7/7/11. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-10/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Striking Motion (Doc.38), signed by Magistrate Judge Sheila K. Oberto on 7/15/2011. (Fahrney, E)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f480</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-10</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2011-07-15</dateIssued>
+  <docketText>ORDER Striking Motion (Doc.38), signed by Magistrate Judge Sheila K. Oberto on 7/15/2011. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-11/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Partially Granting 42 Motion and Staying Discovery Pending Receipt of Plaintiff&apos;s Response to Motion to Stay and Motion for Summary Judgment, signed by Magistrate Judge Sheila K. Oberto on 9/2/11. Forty-Five Day Response Deadline. (Gonzalez, R)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f45a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-11</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2011-09-02</dateIssued>
+  <docketText>ORDER Partially Granting 42 Motion and Staying Discovery Pending Receipt of Plaintiff&apos;s Response to Motion to Stay and Motion for Summary Judgment, signed by Magistrate Judge Sheila K. Oberto on 9/2/11. Forty-Five Day Response Deadline. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-12/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER (1)Denying Motion to Compel and for Sanctions; (2) Granting Motion for Re-Service of Summary Judgment Motion and Denying Motion for Sanctions; (3) Requiring Defendants to Re-Serve Motion; (4) and Requiring Plaintiff to Comply With Order Filed September 2, 2011, 44, 45, 46, signed by Magistrate Judge Sheila K. Oberto on 9/18/11. 45-Day Deadline to Respond to September 2, 2011 44. (Gonzalez, R)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f44f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-12</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2011-09-19</dateIssued>
+  <docketText>ORDER (1)Denying Motion to Compel and for Sanctions; (2) Granting Motion for Re-Service of Summary Judgment Motion and Denying Motion for Sanctions; (3) Requiring Defendants to Re-Serve Motion; (4) and Requiring Plaintiff to Comply With Order Filed September 2, 2011, 44, 45, 46, signed by Magistrate Judge Sheila K. Oberto on 9/18/11. 45-Day Deadline to Respond to September 2, 2011 44. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-13/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER DENYING 50 Motion Rule 56 (D) ; ORDER GRANTING 42 Defendants&apos; Motion to Stay Discovery; ORDER OVERRULING Objections, Disregarding Reply and Evidentiary Objections; ORDER GRANTING 60 Motion for Extension of Time within which to file a reply; ORDER DENYING Plaintiff&apos;s Motion for an Extension of Time as MOOT 54, 55, 62, signed by Magistrate Judge Sheila K. Oberto on 12/07/2011. (Case Management Deadline: 1/10/2012) (Martin-Gill, S)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f458</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-13</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2011-12-08</dateIssued>
+  <docketText>ORDER DENYING 50 Motion Rule 56 (D) ; ORDER GRANTING 42 Defendants&apos; Motion to Stay Discovery; ORDER OVERRULING Objections, Disregarding Reply and Evidentiary Objections; ORDER GRANTING 60 Motion for Extension of Time within which to file a reply; ORDER DENYING Plaintiff&apos;s Motion for an Extension of Time as MOOT 54, 55, 62, signed by Magistrate Judge Sheila K. Oberto on 12/07/2011. (Case Management Deadline: 1/10/2012) (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-14/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Recommending Defendants&apos; 40 MOTION for SUMMARY JUDGMENT Be Granted in Part and Denied in Part, signed by Magistrate Judge Sheila K. Oberto on 2/6/12. Referred to Judge O&apos;Neill. Thirty-Day Objection Deadline. (Gonzalez, R)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f45c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-14</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-02-07</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Recommending Defendants&apos; 40 MOTION for SUMMARY JUDGMENT Be Granted in Part and Denied in Part, signed by Magistrate Judge Sheila K. Oberto on 2/6/12. Referred to Judge O&apos;Neill. Thirty-Day Objection Deadline. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-15/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Setting Settlement Conference Before the Honorable Jennifer L. Thurston, signed by Magistrate Judge Sheila K. Oberto on 3/12/12. Settlement Conference set for 4/20/2012 at 12:00 PM at California State Prison, Los Angeles County (LAC), before Magistrate Judge Jennifer L. Thurston. (Gonzalez, R)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f44d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-15</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-03-12</dateIssued>
+  <docketText>ORDER Setting Settlement Conference Before the Honorable Jennifer L. Thurston, signed by Magistrate Judge Sheila K. Oberto on 3/12/12. Settlement Conference set for 4/20/2012 at 12:00 PM at California State Prison, Los Angeles County (LAC), before Magistrate Judge Jennifer L. Thurston. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-16/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Adopting 69 Findings and Recommendations in Full, Granting in Part and Denying in Part 40 Motion for Summary Judgment, and Staying Action Pending Settement Conference, signed by District Judge Lawrence J. O&apos;Neill on 3/19/12. (Gonzalez, R)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f465</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-16</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2012-03-19</dateIssued>
+  <docketText>ORDER Adopting 69 Findings and Recommendations in Full, Granting in Part and Denying in Part 40 Motion for Summary Judgment, and Staying Action Pending Settement Conference, signed by District Judge Lawrence J. O&apos;Neill on 3/19/12. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-17/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Striking Plaintiff&apos;s Untimely Objection 72, signed by District Judge Lawrence J. O&apos;Neill on 3/21/12. (Gonzalez, R)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f451</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-17</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2012-03-21</dateIssued>
+  <docketText>ORDER Striking Plaintiff&apos;s Untimely Objection 72, signed by District Judge Lawrence J. O&apos;Neill on 3/21/12. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-18/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Striking 75 Motion for Reconsideration, signed by District Judge Lawrence J. O&apos;Neill on 3/29/12. (Verduzco, M)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f453</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-18</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2012-03-29</dateIssued>
+  <docketText>ORDER Striking 75 Motion for Reconsideration, signed by District Judge Lawrence J. O&apos;Neill on 3/29/12. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-19/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER LIFTING STAYS 64, 71, 79; AMENDED SCHEDULING ORDER 35, 64, signed by Magistrate Judge Sheila K. Oberto on 4/24/12. Deadline to Amend Pleadings - 07/30/12, Discovery Cut-Off Date - 10/30/2012, Dispositive Motions filed by 11/30/2012. (Gonzalez, R)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f485</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-19</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2012-04-24</dateIssued>
+  <docketText>ORDER LIFTING STAYS 64, 71, 79; AMENDED SCHEDULING ORDER 35, 64, signed by Magistrate Judge Sheila K. Oberto on 4/24/12. Deadline to Amend Pleadings - 07/30/12, Discovery Cut-Off Date - 10/30/2012, Dispositive Motions filed by 11/30/2012. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-20/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Denying 82 Motion to Appoint Counsel, signed by Magistrate Judge Sheila K. Oberto on 5/1/12. (Gonzalez, R)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f472</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-20</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2012-05-01</dateIssued>
+  <docketText>ORDER Denying 82 Motion to Appoint Counsel, signed by Magistrate Judge Sheila K. Oberto on 5/1/12. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-21/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER DENYING AS MOOT 84 Motion to Lift Stay and Continue with Discovery, signed by Magistrate Judge Sheila K. Oberto on 05/02/2012. (Martin-Gill, S)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f486</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-21</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2012-05-02</dateIssued>
+  <docketText>ORDER DENYING AS MOOT 84 Motion to Lift Stay and Continue with Discovery, signed by Magistrate Judge Sheila K. Oberto on 05/02/2012. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-22/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS recommending that Defendants&apos;92 Motion to Declare Plaintiff a Vexatious Litigant and issue a pre-filing order against him be DENIED, with prejudice; Defendants&apos; Motion for an order requiring Plaintiff to furnish security be DENIED, with prejudice; Defandants&apos; Motion to Strike Plaintiff&apos;s surreply be DENIED as moot re 97 MOTION Strike Plaintiff&apos;s Surreply to Vexatious Litigant Motion; referred to Judge O&apos;Neill,signed by Magistrate Judge Sheila K. Oberto on 11/15/2012. Objections to F&amp;R due by 12/20/2012 (Martin-Gill, S)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f47e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-22</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2012-11-16</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS recommending that Defendants&apos;92 Motion to Declare Plaintiff a Vexatious Litigant and issue a pre-filing order against him be DENIED, with prejudice; Defendants&apos; Motion for an order requiring Plaintiff to furnish security be DENIED, with prejudice; Defandants&apos; Motion to Strike Plaintiff&apos;s surreply be DENIED as moot re 97 MOTION Strike Plaintiff&apos;s Surreply to Vexatious Litigant Motion; referred to Judge O&apos;Neill,signed by Magistrate Judge Sheila K. Oberto on 11/15/2012. Objections to F&amp;R due by 12/20/2012 (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-23/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Striking Motion Seeking An Order Granting Reconsideration (Doc. 95), ORDER (1) Granting Motion For Reconsideration And Setting Aside Order Dismissing Claim As Barred By Favorable Termination Rule, And (2) Referring Matter Back To Magistrate Judge For Further Scheduling (Docs.71 and 83), signed by District Judge Lawrence J. O&apos;Neill on 11/19/2012. (Fahrney, E)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f456</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-23</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2012-11-19</dateIssued>
+  <docketText>ORDER Striking Motion Seeking An Order Granting Reconsideration (Doc. 95), ORDER (1) Granting Motion For Reconsideration And Setting Aside Order Dismissing Claim As Barred By Favorable Termination Rule, And (2) Referring Matter Back To Magistrate Judge For Further Scheduling (Docs.71 and 83), signed by District Judge Lawrence J. O&apos;Neill on 11/19/2012. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-24/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER GRANTING 99 Motion to Modify Scheduling Order and Extending Deadlines signed by Magistrate Judge Sheila K. Oberto on 11/20/2012. Discovery Deadline: 3/29/2013; Pretrial Dispositive Motion Deadline: 4/29/2013. (Sant Agata, S)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f476</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-24</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2012-11-20</dateIssued>
+  <docketText>ORDER GRANTING 99 Motion to Modify Scheduling Order and Extending Deadlines signed by Magistrate Judge Sheila K. Oberto on 11/20/2012. Discovery Deadline: 3/29/2013; Pretrial Dispositive Motion Deadline: 4/29/2013. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-25/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER DENYING Defendants&apos; 105 Motion for Extension of Time to File Objections, with Prejudice; ORDER (1) Adopting 102 FINDINGS AND RECOMMENDATIONS in Full, (2) DENYING 92 Defendants&apos; Motion to Declare Plaintiff a Vexatious Litigant, Issue a Prefiling Order, and Require Plaintiff to Furnish Security, and (3) DENYING Defendants&apos; 97 Motion to Strike Surreply as MOOT signed by District Judge Lawrence J. O&apos;Neill on 12/21/2012. (Sant Agata, S)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f473</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-25</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2012-12-21</dateIssued>
+  <docketText>ORDER DENYING Defendants&apos; 105 Motion for Extension of Time to File Objections, with Prejudice; ORDER (1) Adopting 102 FINDINGS AND RECOMMENDATIONS in Full, (2) DENYING 92 Defendants&apos; Motion to Declare Plaintiff a Vexatious Litigant, Issue a Prefiling Order, and Require Plaintiff to Furnish Security, and (3) DENYING Defendants&apos; 97 Motion to Strike Surreply as MOOT signed by District Judge Lawrence J. O&apos;Neill on 12/21/2012. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-26/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Granting 109 Motion for Reconsideration and Requiring Defendants to File an Opposition or a Statement of Non-Opposition to Plaintiff&apos;s Motion for Reconsideration Within Fifteen Days, signed by District Judge Lawrence J. O&apos;Neill on 2/21/13. Fifteen-Day Deadline. (Gonzalez, R)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f484</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-26</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2013-02-21</dateIssued>
+  <docketText>ORDER Granting 109 Motion for Reconsideration and Requiring Defendants to File an Opposition or a Statement of Non-Opposition to Plaintiff&apos;s Motion for Reconsideration Within Fifteen Days, signed by District Judge Lawrence J. O&apos;Neill on 2/21/13. Fifteen-Day Deadline. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-27/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Denying 101 Motion to Compel, Without Prejudice, signed by Magistrate Judge Sheila K. Oberto on 2/22/13. (Gonzalez, R)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-27.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f3bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-27</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2013-02-22</dateIssued>
+  <docketText>ORDER Denying 101 Motion to Compel, Without Prejudice, signed by Magistrate Judge Sheila K. Oberto on 2/22/13. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-28/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Granting Defendants&apos; 107 Request for Clarification and/or Extension of Time, Amending Scheduling Order, and Denying Plaintiff&apos;s Request for Sanctions 110, signed by Magistrate Judge Sheila K. Oberto on 2/22/13. Discovery due by 7/9/2013, Dispositive Motions filed by 9/9/2013. (Gonzalez, R)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-28.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f46f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-28</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2013-02-22</dateIssued>
+  <docketText>ORDER Granting Defendants&apos; 107 Request for Clarification and/or Extension of Time, Amending Scheduling Order, and Denying Plaintiff&apos;s Request for Sanctions 110, signed by Magistrate Judge Sheila K. Oberto on 2/22/13. Discovery due by 7/9/2013, Dispositive Motions filed by 9/9/2013. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-29/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Granting 111 Defendants&apos; Motion to Depose Plaintiff by Video Conference, signed by Magistrate Judge Sheila K. Oberto on 2/22/13. (Gonzalez, R)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-29.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f457</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-29</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2013-02-22</dateIssued>
+  <docketText>ORDER Granting 111 Defendants&apos; Motion to Depose Plaintiff by Video Conference, signed by Magistrate Judge Sheila K. Oberto on 2/22/13. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-30/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Overruling 120 Objection, signed by Magistrate Judge Sheila K. Oberto on 2/22/13. (Gonzalez, R)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-30.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f46a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-30</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2013-02-22</dateIssued>
+  <docketText>ORDER Overruling 120 Objection, signed by Magistrate Judge Sheila K. Oberto on 2/22/13. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-31/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER DENYING 127 Plaintiff&apos;s Motion to Compel as Premature signed by Magistrate Judge Sheila K. Oberto on 2/28/2013. (Jessen, A)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-31.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f45e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-31</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2013-02-28</dateIssued>
+  <docketText>ORDER DENYING 127 Plaintiff&apos;s Motion to Compel as Premature signed by Magistrate Judge Sheila K. Oberto on 2/28/2013. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-32/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER STRIKING 128 Surreply signed by Magistrate Judge Sheila K. Oberto on 2/28/2013. (Jessen, A)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-32.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f467</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-32</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2013-03-01</dateIssued>
+  <docketText>ORDER STRIKING 128 Surreply signed by Magistrate Judge Sheila K. Oberto on 2/28/2013. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-33/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER signed by District Judge Lawrence J. O&apos;Neill on 3/12/2013 deeming 11/19/2012 103 Order granting Plaintiff&apos;s Motion for Reconsideration reissued and denying 112 Motion for Sanctions. (Lundstrom, T)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-33.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f44b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-33</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2013-03-12</dateIssued>
+  <docketText>ORDER signed by District Judge Lawrence J. O&apos;Neill on 3/12/2013 deeming 11/19/2012 103 Order granting Plaintiff&apos;s Motion for Reconsideration reissued and denying 112 Motion for Sanctions. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-34/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Denying Motion And Directing Clerk&apos;s Office To Send Plaintiff Courtesy Copy Of Docket (Doc.137), signed by Magistrate Judge Sheila K. Oberto on 3/25/2013. (Fahrney, E)</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-34.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f44c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-34</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2013-03-25</dateIssued>
+  <docketText>ORDER Denying Motion And Directing Clerk&apos;s Office To Send Plaintiff Courtesy Copy Of Docket (Doc.137), signed by Magistrate Judge Sheila K. Oberto on 3/25/2013. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-35" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-35/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER (1) GRANTING IN PART AND DENYING IN PART PLAINTIFFS MOTION TO COMPEL RFP, SET ONE, (2) DENYING MOTION FOR IN CAMERA REVIEW, (3) DENYING MOTION FOR ORDER RE MAIL LOG AS MOOT, (4) DENYING MOTION TO COMPEL RFP, SET TWO, (5) REQUIRING DEFENDANTS TO SERVE INITIAL RESPONSE TO RFP, SET TWO, (6) DENYING MOTION TO COMPEL RFA AND ROG, SET TWO, (7) DENYING MOTION TO STRIKE, AND (8) DENYING SECOND MOTION TO COMPEL RFP, SET TWO, AS MOOT re 117, 143, 147, 149, 160, 165, 169 signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. (Lundstrom, T)</subTitle>
+  <partNumber>35</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-35.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f454</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-35</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_35.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-35/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-35.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-35</accessId>
+  <sequenceNumber>35</sequenceNumber>
+  <dateIssued>2014-11-26</dateIssued>
+  <docketText>ORDER (1) GRANTING IN PART AND DENYING IN PART PLAINTIFFS MOTION TO COMPEL RFP, SET ONE, (2) DENYING MOTION FOR IN CAMERA REVIEW, (3) DENYING MOTION FOR ORDER RE MAIL LOG AS MOOT, (4) DENYING MOTION TO COMPEL RFP, SET TWO, (5) REQUIRING DEFENDANTS TO SERVE INITIAL RESPONSE TO RFP, SET TWO, (6) DENYING MOTION TO COMPEL RFA AND ROG, SET TWO, (7) DENYING MOTION TO STRIKE, AND (8) DENYING SECOND MOTION TO COMPEL RFP, SET TWO, AS MOOT re 117, 143, 147, 149, 160, 165, 169 signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-36" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-36/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER (1) DISREGARDING SURREPLY, (2) DENYING MOTION TO STRIKE AS MOOT, (3) GRANTING DEFENDANTS MOTION TO COMPEL PLAINTIFFS DEPOSITION, AND (4) DIRECTING DEFENDANTS TO FILE NOTICE OF REASONABLE EXPENSES INCURRED WITHIN TWENTY DAYS re 133, 144, 145 signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. (Lundstrom, T)</subTitle>
+  <partNumber>36</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-36.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f474</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-36</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_36.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-36/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-36.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-36</accessId>
+  <sequenceNumber>36</sequenceNumber>
+  <dateIssued>2014-11-26</dateIssued>
+  <docketText>ORDER (1) DISREGARDING SURREPLY, (2) DENYING MOTION TO STRIKE AS MOOT, (3) GRANTING DEFENDANTS MOTION TO COMPEL PLAINTIFFS DEPOSITION, AND (4) DIRECTING DEFENDANTS TO FILE NOTICE OF REASONABLE EXPENSES INCURRED WITHIN TWENTY DAYS re 133, 144, 145 signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-37" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-37/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER DENYING PLAINTIFFS MOTION RE MAIL DELIVERY AND SERVICE ISSUES re 151 signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. (Lundstrom, T)</subTitle>
+  <partNumber>37</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-37.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f47f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-37</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_37.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-37/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-37.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-37</accessId>
+  <sequenceNumber>37</sequenceNumber>
+  <dateIssued>2014-11-26</dateIssued>
+  <docketText>ORDER DENYING PLAINTIFFS MOTION RE MAIL DELIVERY AND SERVICE ISSUES re 151 signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-38" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-38/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER DENYING PLAINTIFFS MOTION TO COMPEL DEPOSITION BY WRITTEN QUESTIONS, AND PROVIDING PLAINTIFF THIRTY DAYS WITHIN WHICH TO FILE NOTICE AND OFFER OF PROOF OF WILLINGNESS AND ABILITY TO COMPENSATE OFFICER TO TAKE RESPONSE AND PREPARE RECORD re 162 signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. (Lundstrom, T)</subTitle>
+  <partNumber>38</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-38.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f46d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-38</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_38.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-38/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-38.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-38</accessId>
+  <sequenceNumber>38</sequenceNumber>
+  <dateIssued>2014-11-26</dateIssued>
+  <docketText>ORDER DENYING PLAINTIFFS MOTION TO COMPEL DEPOSITION BY WRITTEN QUESTIONS, AND PROVIDING PLAINTIFF THIRTY DAYS WITHIN WHICH TO FILE NOTICE AND OFFER OF PROOF OF WILLINGNESS AND ABILITY TO COMPENSATE OFFICER TO TAKE RESPONSE AND PREPARE RECORD re 162 signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-39" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-39/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER DISREGARDING SURREPLY, DENYING MOTION TO STRIKE AS MOOT, GRANTING MOTION TO MODIFY SCHEDULING ORDER, AND GRANTING MOTION FOR CLARIFICATION re 153, 161, 163, 164 signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. (Lundstrom, T)</subTitle>
+  <partNumber>39</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-39.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f482</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-39</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_39.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-39/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-39.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-39</accessId>
+  <sequenceNumber>39</sequenceNumber>
+  <dateIssued>2014-11-26</dateIssued>
+  <docketText>ORDER DISREGARDING SURREPLY, DENYING MOTION TO STRIKE AS MOOT, GRANTING MOTION TO MODIFY SCHEDULING ORDER, AND GRANTING MOTION FOR CLARIFICATION re 153, 161, 163, 164 signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-40" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-40/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER ADDRESSING 135 MOTION FOR CLARIFICATION signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. (Lundstrom, T)</subTitle>
+  <partNumber>40</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-40.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f45b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-40</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_40.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-40/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-40.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-40</accessId>
+  <sequenceNumber>40</sequenceNumber>
+  <dateIssued>2014-11-26</dateIssued>
+  <docketText>ORDER ADDRESSING 135 MOTION FOR CLARIFICATION signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-41" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-41/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER STRIKING 180 Unsigned Filing signed by Magistrate Judge Sheila K. Oberto on 12/18/2014. (Jessen, A)</subTitle>
+  <partNumber>41</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-41.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f461</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-41</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_41.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-41/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-41.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-41</accessId>
+  <sequenceNumber>41</sequenceNumber>
+  <dateIssued>2014-12-18</dateIssued>
+  <docketText>ORDER STRIKING 180 Unsigned Filing signed by Magistrate Judge Sheila K. Oberto on 12/18/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-42" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-42/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Addressing 183 Motion for Clarification, signed by Magistrate Judge Sheila K. Oberto on 1/5/15. (Verduzco, M)</subTitle>
+  <partNumber>42</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-42.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f463</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-42</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_42.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-42/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-42.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-42</accessId>
+  <sequenceNumber>42</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER Addressing 183 Motion for Clarification, signed by Magistrate Judge Sheila K. Oberto on 1/5/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-43" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-43/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Addressing Notice Regarding Willingness but Inability to Compensate Officer to Take Depositions by Written Questions, signed by Magistrate Judge Sheila K. Oberto on 1/5/15. (Verduzco, M)</subTitle>
+  <partNumber>43</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-43.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f448</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-43</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_43.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-43/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-43.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-43</accessId>
+  <sequenceNumber>43</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER Addressing Notice Regarding Willingness but Inability to Compensate Officer to Take Depositions by Written Questions, signed by Magistrate Judge Sheila K. Oberto on 1/5/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-44" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-44/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Requiring Plaintiff to Pay Reasonable Expenses Incurred in the Amount of $467.50 and Staying Order in Light of Plaintiff&apos;s Indigency, signed by Magistrate Judge Sheila K. Oberto on 1/6/15. (Verduzco, M)</subTitle>
+  <partNumber>44</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-44.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f479</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-44</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_44.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-44/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-44.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-44</accessId>
+  <sequenceNumber>44</sequenceNumber>
+  <dateIssued>2015-01-07</dateIssued>
+  <docketText>ORDER Requiring Plaintiff to Pay Reasonable Expenses Incurred in the Amount of $467.50 and Staying Order in Light of Plaintiff&apos;s Indigency, signed by Magistrate Judge Sheila K. Oberto on 1/6/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-45" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-45/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Denying 193 Plaintiff&apos;s Motion for Sanctions Arising from Cancelled Deposition, signed by Magistrate Judge Sheila K. Oberto on 04/13/15. (Gonzalez, R)</subTitle>
+  <partNumber>45</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-45.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f47d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-45</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_45.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-45/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-45.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-45</accessId>
+  <sequenceNumber>45</sequenceNumber>
+  <dateIssued>2015-04-13</dateIssued>
+  <docketText>ORDER Denying 193 Plaintiff&apos;s Motion for Sanctions Arising from Cancelled Deposition, signed by Magistrate Judge Sheila K. Oberto on 04/13/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-46" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-46/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Denying 186 Motion for Sanctions as Moot in Light of Order Filed January 5, 2015, signed by Magistrate Judge Sheila K. Oberto on 04/13/15. (Gonzalez, R)</subTitle>
+  <partNumber>46</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-46.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f455</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-46</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_46.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-46/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-46.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-46</accessId>
+  <sequenceNumber>46</sequenceNumber>
+  <dateIssued>2015-04-13</dateIssued>
+  <docketText>ORDER Denying 186 Motion for Sanctions as Moot in Light of Order Filed January 5, 2015, signed by Magistrate Judge Sheila K. Oberto on 04/13/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-47" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-47/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER (1) Granting 194 Plaintiff&apos;s Motion to Compel Response to RFP 9; (2) Denying Plaintiff&apos;s Motion to Compel Responses to RFP 3, 5-8, 10, 11, 13, and 14, (3) Denying Plaintiff&apos;s Motion for Sanctions, and (4) Denying Plaintiff&apos;s Motion for Reasonable Expenses Incurred, without Prejudice to Renewal within Thirty Days, signed by Magistrate Judge Sheila K. Oberto on 04/13/15. (Gonzalez, R)</subTitle>
+  <partNumber>47</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-47.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f46e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-47</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_47.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-47/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-47.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-47</accessId>
+  <sequenceNumber>47</sequenceNumber>
+  <dateIssued>2015-04-13</dateIssued>
+  <docketText>ORDER (1) Granting 194 Plaintiff&apos;s Motion to Compel Response to RFP 9; (2) Denying Plaintiff&apos;s Motion to Compel Responses to RFP 3, 5-8, 10, 11, 13, and 14, (3) Denying Plaintiff&apos;s Motion for Sanctions, and (4) Denying Plaintiff&apos;s Motion for Reasonable Expenses Incurred, without Prejudice to Renewal within Thirty Days, signed by Magistrate Judge Sheila K. Oberto on 04/13/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-48" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-48/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Denying 195 Plaintiff&apos;s Motion for Expenses Incurred, signed by Magistrate Judge Sheila K. Oberto on 04/13/15. (Gonzalez, R)</subTitle>
+  <partNumber>48</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-48.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f477</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-48</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_48.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-48/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-48.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-48</accessId>
+  <sequenceNumber>48</sequenceNumber>
+  <dateIssued>2015-04-13</dateIssued>
+  <docketText>ORDER Denying 195 Plaintiff&apos;s Motion for Expenses Incurred, signed by Magistrate Judge Sheila K. Oberto on 04/13/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-49" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-49/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Setting Telephonic Trial Setting Hearing, signed by Magistrate Judge Sheila K. Oberto on 04/13/15. Telephonic Scheduling Conference set for 5/19/2015 at 11:00 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. (Gonzalez, R)</subTitle>
+  <partNumber>49</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-49.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f464</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-49</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_49.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-49/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-49.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-49</accessId>
+  <sequenceNumber>49</sequenceNumber>
+  <dateIssued>2015-04-14</dateIssued>
+  <docketText>ORDER Setting Telephonic Trial Setting Hearing, signed by Magistrate Judge Sheila K. Oberto on 04/13/15. Telephonic Scheduling Conference set for 5/19/2015 at 11:00 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-50" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-50/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER ADDRESSING 208 Request for Clarification, signed by Magistrate Judge Sheila K. Oberto on 5/8/2015. (Marrujo, C)</subTitle>
+  <partNumber>50</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-50.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f3ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-50</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_50.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-50/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-50.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-50</accessId>
+  <sequenceNumber>50</sequenceNumber>
+  <dateIssued>2015-05-08</dateIssued>
+  <docketText>ORDER ADDRESSING 208 Request for Clarification, signed by Magistrate Judge Sheila K. Oberto on 5/8/2015. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-51" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-51/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Denying 212 Motion to Appoint Counsel, signed by Magistrate Judge Sheila K. Oberto on 6/2/15. (Gonzalez, R)</subTitle>
+  <partNumber>51</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-51.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f46b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-51</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_51.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-51/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-51.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-51</accessId>
+  <sequenceNumber>51</sequenceNumber>
+  <dateIssued>2015-06-02</dateIssued>
+  <docketText>ORDER Denying 212 Motion to Appoint Counsel, signed by Magistrate Judge Sheila K. Oberto on 6/2/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-52" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-52/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER GRANTING IN PART AND DENYING IN PART 214 Plaintiff&apos;s Motion Regarding Copies of Additional Rules signed by Magistrate Judge Sheila K. Oberto on 6/24/2015. (Jessen, A)</subTitle>
+  <partNumber>52</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-52.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f47c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-52</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_52.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-52/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-52.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-52</accessId>
+  <sequenceNumber>52</sequenceNumber>
+  <dateIssued>2015-06-24</dateIssued>
+  <docketText>ORDER GRANTING IN PART AND DENYING IN PART 214 Plaintiff&apos;s Motion Regarding Copies of Additional Rules signed by Magistrate Judge Sheila K. Oberto on 6/24/2015. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-53" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-53/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Denying Motion For Copy Of Ninth Circuit&apos;s Model Jury Instructions (Doc.220), signed by Magistrate Judge Sheila K. Oberto on 8/31/2015. (Fahrney, E)</subTitle>
+  <partNumber>53</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-53.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f466</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-53</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_53.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-53/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-53.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-53</accessId>
+  <sequenceNumber>53</sequenceNumber>
+  <dateIssued>2015-08-31</dateIssued>
+  <docketText>ORDER Denying Motion For Copy Of Ninth Circuit&apos;s Model Jury Instructions (Doc.220), signed by Magistrate Judge Sheila K. Oberto on 8/31/2015. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-54" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-54/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Confirming Jury Trial for 8:30a.m. on October 6, 2015, and Requesting Defendants&apos; Counsel Ensure Plaintiff is Able to Make Copies of His Exhibits and Access His Legal Material for this Case, signed by Magistrate Judge Sheila K. Oberto on 9/2/15. (Gonzalez, R)</subTitle>
+  <partNumber>54</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-54.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f46c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-54</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_54.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-54/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-54.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-54</accessId>
+  <sequenceNumber>54</sequenceNumber>
+  <dateIssued>2015-09-03</dateIssued>
+  <docketText>ORDER Confirming Jury Trial for 8:30a.m. on October 6, 2015, and Requesting Defendants&apos; Counsel Ensure Plaintiff is Able to Make Copies of His Exhibits and Access His Legal Material for this Case, signed by Magistrate Judge Sheila K. Oberto on 9/2/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-55" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-55/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER and WRIT of HABEAS CORPUS AD TESTIFICANDUM to Transport Inmate Floyd Scott, CDCR #D-27081 for Trial in Courtroom #7, Sixth Floor, United States Courthouse, 2500 Tulare Street, Fresno, California on October 6, 2015, at 8:00 a.m., signed by Magistrate Judge Sheila K. Oberto on 9/2/15. (Gonzalez, R)</subTitle>
+  <partNumber>55</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-55.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f45d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-55</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_55.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-55/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-55.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-55</accessId>
+  <sequenceNumber>55</sequenceNumber>
+  <dateIssued>2015-09-03</dateIssued>
+  <docketText>ORDER and WRIT of HABEAS CORPUS AD TESTIFICANDUM to Transport Inmate Floyd Scott, CDCR #D-27081 for Trial in Courtroom #7, Sixth Floor, United States Courthouse, 2500 Tulare Street, Fresno, California on October 6, 2015, at 8:00 a.m., signed by Magistrate Judge Sheila K. Oberto on 9/2/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-56" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-56/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER DENYING 233 Motion for Subpoena signed by Magistrate Judge Sheila K. Oberto on 9/14/2015. (Sant Agata, S)</subTitle>
+  <partNumber>56</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-56.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f460</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-56</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_56.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-56/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-56.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-56</accessId>
+  <sequenceNumber>56</sequenceNumber>
+  <dateIssued>2015-09-14</dateIssued>
+  <docketText>ORDER DENYING 233 Motion for Subpoena signed by Magistrate Judge Sheila K. Oberto on 9/14/2015. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-57" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-57/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER DENYING 234 Motion as MOOT signed by Magistrate Judge Sheila K. Oberto on 9/14/2015. (Sant Agata, S)</subTitle>
+  <partNumber>57</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-57.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f44e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-57</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_57.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-57/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-57.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-57</accessId>
+  <sequenceNumber>57</sequenceNumber>
+  <dateIssued>2015-09-14</dateIssued>
+  <docketText>ORDER DENYING 234 Motion as MOOT signed by Magistrate Judge Sheila K. Oberto on 9/14/2015. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-58" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-58/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER GRANTING IN PART and DENYING IN PART Parties&apos; 222 Motion in Limine and 227 Motion in Limine, signed by Magistrate Judge Sheila K. Oberto on 9/30/2015. (Martin-Gill, S)</subTitle>
+  <partNumber>58</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-58.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f47b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-58</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_58.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-58/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-58.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-58</accessId>
+  <sequenceNumber>58</sequenceNumber>
+  <dateIssued>2015-09-30</dateIssued>
+  <docketText>ORDER GRANTING IN PART and DENYING IN PART Parties&apos; 222 Motion in Limine and 227 Motion in Limine, signed by Magistrate Judge Sheila K. Oberto on 9/30/2015. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-59" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-59/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Requiring Production of Plaintiff for Trial on October 7, 2015, at 8:15 A.M. signed by Magistrate Judge Sheila K. Oberto on 10/6/2015. (Jessen, A)</subTitle>
+  <partNumber>59</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-59.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f471</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-59</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_59.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-59/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-59.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-59</accessId>
+  <sequenceNumber>59</sequenceNumber>
+  <dateIssued>2015-10-06</dateIssued>
+  <docketText>ORDER Requiring Production of Plaintiff for Trial on October 7, 2015, at 8:15 A.M. signed by Magistrate Judge Sheila K. Oberto on 10/6/2015. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-60" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-60/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Requiring Production of Plaintiff for Trial on October 8, 2015, at 8:00A.M., signed by Magistrate Judge Sheila K. Oberto on 10/7/15. (Verduzco, M)</subTitle>
+  <partNumber>60</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-60.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f450</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-60</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_60.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-60/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-60.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-60</accessId>
+  <sequenceNumber>60</sequenceNumber>
+  <dateIssued>2015-10-07</dateIssued>
+  <docketText>ORDER Requiring Production of Plaintiff for Trial on October 8, 2015, at 8:00A.M., signed by Magistrate Judge Sheila K. Oberto on 10/7/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-61" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-61/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER (1) Discharging Writ of Habeas Corpus Ad Testificandum Following Conclusion of Trial, (2), Notifying Prison Officials of Plaintiff&apos;s Los Angeles County Court Hearing Date of October 13, 2015, and (3) Directing Clerk&apos;s Office to Serve Order on Litigation Coordinators at VSP and CSP-Lancaster, signed by Magistrate Judge Sheila K. Oberto on 10/8/15. (Verduzco, M)</subTitle>
+  <partNumber>61</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-61.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f47a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-61</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_61.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-61/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-61.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-61</accessId>
+  <sequenceNumber>61</sequenceNumber>
+  <dateIssued>2015-10-08</dateIssued>
+  <docketText>ORDER (1) Discharging Writ of Habeas Corpus Ad Testificandum Following Conclusion of Trial, (2), Notifying Prison Officials of Plaintiff&apos;s Los Angeles County Court Hearing Date of October 13, 2015, and (3) Directing Clerk&apos;s Office to Serve Order on Litigation Coordinators at VSP and CSP-Lancaster, signed by Magistrate Judge Sheila K. Oberto on 10/8/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-62" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-62/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>JUDGMENT dated *10/8/2015* in favor of Defendant against Plaintiff pursuant to order (Kusamura, W)</subTitle>
+  <partNumber>62</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-62.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f468</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-62</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_62.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-62/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-62.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-62</accessId>
+  <sequenceNumber>62</sequenceNumber>
+  <dateIssued>2015-10-09</dateIssued>
+  <docketText>JUDGMENT dated *10/8/2015* in favor of Defendant against Plaintiff pursuant to order (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-63" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-63/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER DENYING 263 Motion for Trial Transcript at Government Expense, signed by Magistrate Judge Sheila K. Oberto on 11/9/2015. (Copy electronicly served on 9th Circuit) (Martin-Gill, S)</subTitle>
+  <partNumber>63</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-63.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f452</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-63</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_63.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-63/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-63.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-63</accessId>
+  <sequenceNumber>63</sequenceNumber>
+  <dateIssued>2015-11-09</dateIssued>
+  <docketText>ORDER DENYING 263 Motion for Trial Transcript at Government Expense, signed by Magistrate Judge Sheila K. Oberto on 11/9/2015. (Copy electronicly served on 9th Circuit) (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-64" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-64/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Addressing Notice 262, signed by Magistrate Judge Sheila K. Oberto on 11/9/15. (Copy of this order served electronicly on 9th Circuit)(Martin-Gill, S)</subTitle>
+  <partNumber>64</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-64.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f487</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-64</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_64.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-64/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-64.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-64</accessId>
+  <sequenceNumber>64</sequenceNumber>
+  <dateIssued>2015-11-09</dateIssued>
+  <docketText>ORDER Addressing Notice 262, signed by Magistrate Judge Sheila K. Oberto on 11/9/15. (Copy of this order served electronicly on 9th Circuit)(Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-65" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-65/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Denying Motion Plaintiff&apos;s Second Motion For Transcripts At Government Expense (Doc.270), signed by Magistrate Judge Sheila K. Oberto on 11/16/2015. (Fahrney, E)</subTitle>
+  <partNumber>65</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-65.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f462</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-65</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_65.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-65/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-65.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-65</accessId>
+  <sequenceNumber>65</sequenceNumber>
+  <dateIssued>2015-11-16</dateIssued>
+  <docketText>ORDER Denying Motion Plaintiff&apos;s Second Motion For Transcripts At Government Expense (Doc.270), signed by Magistrate Judge Sheila K. Oberto on 11/16/2015. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01329-66" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-66/mods.xml">
+ <titleInfo>
+  <title>(PC)Scott v. Palmer et al</title>
+  <subTitle>ORDER Granting Plaintiff&apos;s Motion For Leave To Proceed In Forma Pauperis On Appeal (Doc.271), signed by Magistrate Judge Sheila K. Oberto on 11/16/2015. (Attachments: # (1) Plaintiff&apos;s Motion for IFP) (Fahrney, E)</subTitle>
+  <partNumber>66</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-66.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18df3f3bd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-66</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01329_66.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01329/USCOURTS-caed-1_09-cv-01329-66/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01329/pdf/USCOURTS-caed-1_09-cv-01329-66.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01329; (PC)Scott v. Palmer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01329-66</accessId>
+  <sequenceNumber>66</sequenceNumber>
+  <dateIssued>2015-11-16</dateIssued>
+  <docketText>ORDER Granting Plaintiff&apos;s Motion For Leave To Proceed In Forma Pauperis On Appeal (Doc.271), signed by Magistrate Judge Sheila K. Oberto on 11/16/2015. (Attachments: # (1) Plaintiff&apos;s Motion for IFP) (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

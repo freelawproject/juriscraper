@@ -1,0 +1,1127 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1843d4ab2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-04-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-04-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069</identifier>
+<identifier type="local">P0b002ee1843d4ab2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-04-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-04-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_08-cv-03069</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_08-cv-03069</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:08-cv-03069</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="A.I." fullName="A.I. Chin" lastName="Chin" role="Defendant"></party>
+ <party fullName="Doctor&apos;s Hospital" lastName="Doctor&apos;s Hospital" role="Defendant"></party>
+ <party firstName="B.R." fullName="B.R. Don" lastName="Don" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Robert Gorton" lastName="Gorton" middleName="Robert" role="Plaintiff"></party>
+ <party fullName="Hawkins" lastName="Hawkins" role="Defendant"></party>
+ <party fullName="Houser" lastName="Houser" role="Defendant"></party>
+ <party fullName="Kahn" lastName="Kahn" role="Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly Martinez" lastName="Martinez" role="Defendant"></party>
+ <party fullName="Nale" lastName="Nale" role="Defendant"></party>
+ <party fullName="Naseer" lastName="Naseer" role="Defendant"></party>
+ <party firstName="A." fullName="A. Pappoe" lastName="Pappoe" role="Defendant"></party>
+ <party firstName="H." fullName="H. Rad" lastName="Rad" role="Defendant"></party>
+ <party firstName="C." fullName="C. J. Smith" lastName="Smith" middleName="J." role="Defendant"></party>
+ <party fullName="Stevenson" lastName="Stevenson" role="Defendant"></party>
+ <party fullName="Todd" lastName="Todd" role="Defendant"></party>
+ <party fullName="U.C. Davis Medical Center" lastName="U.C. Davis Medical Center" role="Defendant"></party>
+ <party firstName="B." fullName="B. Williams" lastName="Williams" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Gorton v. Todd et al</title>
+ <partNumber>2:08-cv-03069</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:08-cv-03069;08-3069</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>A.I. Chin</displayForm>
+ <namePart type="family">Chin</namePart>
+ <namePart type="given">A.I.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Doctor&apos;s Hospital</displayForm>
+ <namePart type="family">Doctor&apos;s Hospital</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>B.R. Don</displayForm>
+ <namePart type="family">Don</namePart>
+ <namePart type="given">B.R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Robert Gorton</displayForm>
+ <namePart type="family">Gorton</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Hawkins</displayForm>
+ <namePart type="family">Hawkins</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Houser</displayForm>
+ <namePart type="family">Houser</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kahn</displayForm>
+ <namePart type="family">Kahn</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kelly Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">Kelly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nale</displayForm>
+ <namePart type="family">Nale</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Naseer</displayForm>
+ <namePart type="family">Naseer</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Pappoe</displayForm>
+ <namePart type="family">Pappoe</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>H. Rad</displayForm>
+ <namePart type="family">Rad</namePart>
+ <namePart type="given">H.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. J. Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stevenson</displayForm>
+ <namePart type="family">Stevenson</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Todd</displayForm>
+ <namePart type="family">Todd</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.C. Davis Medical Center</displayForm>
+ <namePart type="family">U.C. Davis Medical Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>B. Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">B.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_08-cv-03069</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:08-cv-03069</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="A.I." fullName="A.I. Chin" lastName="Chin" role="Defendant"></party>
+ <party fullName="Doctor&apos;s Hospital" lastName="Doctor&apos;s Hospital" role="Defendant"></party>
+ <party firstName="B.R." fullName="B.R. Don" lastName="Don" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Robert Gorton" lastName="Gorton" middleName="Robert" role="Plaintiff"></party>
+ <party fullName="Hawkins" lastName="Hawkins" role="Defendant"></party>
+ <party fullName="Houser" lastName="Houser" role="Defendant"></party>
+ <party fullName="Kahn" lastName="Kahn" role="Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly Martinez" lastName="Martinez" role="Defendant"></party>
+ <party fullName="Nale" lastName="Nale" role="Defendant"></party>
+ <party fullName="Naseer" lastName="Naseer" role="Defendant"></party>
+ <party firstName="A." fullName="A. Pappoe" lastName="Pappoe" role="Defendant"></party>
+ <party firstName="H." fullName="H. Rad" lastName="Rad" role="Defendant"></party>
+ <party firstName="C." fullName="C. J. Smith" lastName="Smith" middleName="J." role="Defendant"></party>
+ <party fullName="Stevenson" lastName="Stevenson" role="Defendant"></party>
+ <party fullName="Todd" lastName="Todd" role="Defendant"></party>
+ <party fullName="U.C. Davis Medical Center" lastName="U.C. Davis Medical Center" role="Defendant"></party>
+ <party firstName="B." fullName="B. Williams" lastName="Williams" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/26/09 ORDERING that pltf&apos;s 2 request to proceed ifp is GRANTED; pltf to pay the $350 filing fee in accordance w/ the CDC order; pltf&apos;s claims against all dfts but for Hawkins, Smith, Nale, Williams, Rad, Chin, Pappoe and Don are DISMISSED w/ leave to file an ameneded cmplt w/in 30 days; upon filing an amended cmplt or expiration of the time allowed therefor, the court will make further orders for service upon some or all of the dfts. (Yin, K)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433ca1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-0</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-26</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/26/09 ORDERING that pltf&apos;s 2 request to proceed ifp is GRANTED; pltf to pay the $350 filing fee in accordance w/ the CDC order; pltf&apos;s claims against all dfts but for Hawkins, Smith, Nale, Williams, Rad, Chin, Pappoe and Don are DISMISSED w/ leave to file an ameneded cmplt w/in 30 days; upon filing an amended cmplt or expiration of the time allowed therefor, the court will make further orders for service upon some or all of the dfts. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 3/5/09 ORDERING that service is appropriate for dfts Smith, Williams, Nale, Hawkins, Naseer, Todd, Martinez, Rad, Chin, Stevenson, Don and Pappoe. Clerk to send pltf docs for svce and a copy of the 10 amended cmplt to be completed and returned along w/ the Notice of Submission w/in 30 days. (Yin, K)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433cb2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-1</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-03-05</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 3/5/09 ORDERING that service is appropriate for dfts Smith, Williams, Nale, Hawkins, Naseer, Todd, Martinez, Rad, Chin, Stevenson, Don and Pappoe. Clerk to send pltf docs for svce and a copy of the 10 amended cmplt to be completed and returned along w/ the Notice of Submission w/in 30 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER DIRECTING USM to serve process w/in 10 days on Rad, Chin, Pappoe, Don, Todd, Martinez, Naseer, Stevenson, Hawkins, Smith, Nale and Williams signed by Magistrate Judge Gregory G. Hollows on 3/24/09. The clerk is directed to fwd to the USM instructions for service, summons, copies of the cmplt and this order. The Clerk shall also send Pltf a copy of the Local Rules. Kahn, U.C. Davis Medical Center, Doctor&apos;s Hospital and Houser terminated. (cc: USM) (Yin, K)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433ca6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-2</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-03-24</dateIssued>
+  <docketText>ORDER DIRECTING USM to serve process w/in 10 days on Rad, Chin, Pappoe, Don, Todd, Martinez, Naseer, Stevenson, Hawkins, Smith, Nale and Williams signed by Magistrate Judge Gregory G. Hollows on 3/24/09. The clerk is directed to fwd to the USM instructions for service, summons, copies of the cmplt and this order. The Clerk shall also send Pltf a copy of the Local Rules. Kahn, U.C. Davis Medical Center, Doctor&apos;s Hospital and Houser terminated. (cc: USM) (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER DIRECTING PLAINTIFF TO SUBMIT SERVICE DOCUMENTS and USM-285 Forms signed by Magistrate Judge Gregory G. Hollows on 5/14/09.(Dillon, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-05-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433cad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-3</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-05-15</dateIssued>
+  <docketText>ORDER DIRECTING PLAINTIFF TO SUBMIT SERVICE DOCUMENTS and USM-285 Forms signed by Magistrate Judge Gregory G. Hollows on 5/14/09.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 8/3/09 ORDERING that pltf and dft Rad may conduct Discovery on eachother until 11/6/2009; All Pretrial Motions re pltf&apos;s claims against Rad, except motions to compel discover, to be filed on or before 1/15/2010; Pretrial Conference and Trial dates will be set, as appropriate. (Yin, K)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-08-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433cb1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-4</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-08-04</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 8/3/09 ORDERING that pltf and dft Rad may conduct Discovery on eachother until 11/6/2009; All Pretrial Motions re pltf&apos;s claims against Rad, except motions to compel discover, to be filed on or before 1/15/2010; Pretrial Conference and Trial dates will be set, as appropriate. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 9/14/09 DENYING 29 Motion ; DENYING 30 Motion to Appoint Counsel. (Dillon, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433c38</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-5</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-09-14</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 9/14/09 DENYING 29 Motion ; DENYING 30 Motion to Appoint Counsel. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 11/17/09 denying 31 Motion to Stay; denying 37 Motion for Extension of time. Plaintiff is granted 28 days from the date of this order to file any additional motions to compel against defendants Chin, Pappoe, Stevenson, Burl and Don. Plaintiff is granted 28 days from the date of this order to serve defendant Rad with additional discovery requests. Defendant Rad&apos;s responses to any discovery requests are due 21 days thereafter. Any motions to compel are due within 84 days from the date of this order. No requests for extension of time regarding discovery will be granted to either party. The dispositive motion filing date of 01/15/10 is vacated and reset for 04/30/10. (Plummer, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433c36</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-6</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-11-17</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 11/17/09 denying 31 Motion to Stay; denying 37 Motion for Extension of time. Plaintiff is granted 28 days from the date of this order to file any additional motions to compel against defendants Chin, Pappoe, Stevenson, Burl and Don. Plaintiff is granted 28 days from the date of this order to serve defendant Rad with additional discovery requests. Defendant Rad&apos;s responses to any discovery requests are due 21 days thereafter. Any motions to compel are due within 84 days from the date of this order. No requests for extension of time regarding discovery will be granted to either party. The dispositive motion filing date of 01/15/10 is vacated and reset for 04/30/10. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 12/9/09 ORDERING that plaintiffs 36 motion to compel is DENIED as resolved; Plaintiffs motion to vacate 44 is DENIED as unnecessary; Plaintiffs motions for extension of time 46 and 48 are GRANTED; plaintiff is granted 28 days from the date of this order to file an opposition to defendants amended summary judgment motion; The 11/17/09, order is clarified as discussed in this order. (Dillon, M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433ca2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-7</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2009-12-09</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 12/9/09 ORDERING that plaintiffs 36 motion to compel is DENIED as resolved; Plaintiffs motion to vacate 44 is DENIED as unnecessary; Plaintiffs motions for extension of time 46 and 48 are GRANTED; plaintiff is granted 28 days from the date of this order to file an opposition to defendants amended summary judgment motion; The 11/17/09, order is clarified as discussed in this order. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 01/14/10 granting 58 Motion to Compel as to interrogatory no. 19 addressed to defendant Chin; within 14 days, defendants shall provide a further response; within 14 days defendants are also ordered to provide additional information, as discussed above regarding interrogatory no. 2 addressed to defendant Stevenson; the motion to compel in denied in all other respects. (Plummer, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433caa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-8</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2010-01-14</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 01/14/10 granting 58 Motion to Compel as to interrogatory no. 19 addressed to defendant Chin; within 14 days, defendants shall provide a further response; within 14 days defendants are also ordered to provide additional information, as discussed above regarding interrogatory no. 2 addressed to defendant Stevenson; the motion to compel in denied in all other respects. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/21/10 ORDERING that plaintiff&apos;s 52 request for an extension of time is DENIED as unnecessary; Plaintiff may file a supplemental motion based on the supplemental responsesto his discovery requests within 28 days; Plaintiffs motions for appointment of a medical expert 53 and 61 are DENIED. (Dillon, M)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433cab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-9</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2010-01-21</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/21/10 ORDERING that plaintiff&apos;s 52 request for an extension of time is DENIED as unnecessary; Plaintiff may file a supplemental motion based on the supplemental responsesto his discovery requests within 28 days; Plaintiffs motions for appointment of a medical expert 53 and 61 are DENIED. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 5/21/2010 ORDERING that the 71 motion for summary judgment is VACATED and dfts will be provided an opportunity to re-notice the motion at a later date; the 72 motion to stay is VACATED; pltf and dfts Todd, Martinez, Naseer, Hawkins, Smith, Nale and Williams may conduct discovery until 8/18/2010; pltf&apos;s 73 motion for an extension to file a reply to the summary judgment is DENIED. (Yin, K)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433c3c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-10</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2010-05-21</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 5/21/2010 ORDERING that the 71 motion for summary judgment is VACATED and dfts will be provided an opportunity to re-notice the motion at a later date; the 72 motion to stay is VACATED; pltf and dfts Todd, Martinez, Naseer, Hawkins, Smith, Nale and Williams may conduct discovery until 8/18/2010; pltf&apos;s 73 motion for an extension to file a reply to the summary judgment is DENIED. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 6/7/2010 RECOMMENDING that the 49 motion for summary judgment be granted and dfts Rad, Chin, Pappoe, Stevenson and Don be dismissed from this action; and pltf&apos;s state law claims be dismissed w/out prejudice. Referred to Judge Lawrence K. Karlton; Objections to F&amp;R due w/in 14 days. (Yin, K)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433ca5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-11</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-06-08</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 6/7/2010 RECOMMENDING that the 49 motion for summary judgment be granted and dfts Rad, Chin, Pappoe, Stevenson and Don be dismissed from this action; and pltf&apos;s state law claims be dismissed w/out prejudice. Referred to Judge Lawrence K. Karlton; Objections to F&amp;R due w/in 14 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 7/20/10 ORDERING that plaintiffs 80 and 81 motions to compel are denied. Plaintiffs 77 motion for subpoenas is granted; Clerk of the Court is directed to issue the subpoenas duces tecum and forward them to the United States Marshal; The United States Marshal is directed to promptly effect service of plaintiffs subpoenas.(Dillon, M)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-07-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433c39</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-12</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2010-07-20</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 7/20/10 ORDERING that plaintiffs 80 and 81 motions to compel are denied. Plaintiffs 77 motion for subpoenas is granted; Clerk of the Court is directed to issue the subpoenas duces tecum and forward them to the United States Marshal; The United States Marshal is directed to promptly effect service of plaintiffs subpoenas.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Senior Judge Lawrence K. Karlton on 8/10/10, ORDERING that the Clerk shall serve this order upon Carter Capps White, King Hall Civil Rights Clinic, UC Davis School of Law. The King Hall Civil Rights Clinic should inform the court within 30 days of the issuance of this order as to whether it will accept limited representation of pltf. Upon notice from the King Hall Civil Rights Clinic, the court will set a briefing schedule for the issue described in the order. (Kastilahn, A)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433cb0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-13</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2010-08-11</dateIssued>
+  <docketText>ORDER signed by Senior Judge Lawrence K. Karlton on 8/10/10, ORDERING that the Clerk shall serve this order upon Carter Capps White, King Hall Civil Rights Clinic, UC Davis School of Law. The King Hall Civil Rights Clinic should inform the court within 30 days of the issuance of this order as to whether it will accept limited representation of pltf. Upon notice from the King Hall Civil Rights Clinic, the court will set a briefing schedule for the issue described in the order. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Senior Judge Lawrence K. Karlton on 9/29/2010 ORDERING 49 dfts&apos; Motion for Summary Judgment is DENIED without prejudice and, thus, the court DECLINES 75 to adopt the F&amp;R&apos;s. The Court will notify the parties whether it has found counsel to represent pltf in this matter 94, at which time the magistrate judge shall set deadlines by which dfts may move again for summary judgment and, if necessary, to reopen discovery. (Reader, L)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433cae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-14</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2010-09-29</dateIssued>
+  <docketText>ORDER signed by Senior Judge Lawrence K. Karlton on 9/29/2010 ORDERING 49 dfts&apos; Motion for Summary Judgment is DENIED without prejudice and, thus, the court DECLINES 75 to adopt the F&amp;R&apos;s. The Court will notify the parties whether it has found counsel to represent pltf in this matter 94, at which time the magistrate judge shall set deadlines by which dfts may move again for summary judgment and, if necessary, to reopen discovery. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 10/07/10 vacating 84, 85, 86, 87, 88, 89, 93 Motions to Compel. Plaintiff&apos;s motions 94,99 are vacated. (Plummer, M)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433ca9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-15</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2010-10-07</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 10/07/10 vacating 84, 85, 86, 87, 88, 89, 93 Motions to Compel. Plaintiff&apos;s motions 94,99 are vacated. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Senior Judge Lawrence K. Karlton on 11/2/2010 re 99 ORDERING that Nicholas Short and Dean Morehous are appointed as attorneys for plaintiff pursuant to General Order No. 230. All contemplated costs shall be handled as described in General Order 230. A status conference shall be held on January 10, 2011 at 10:30 a.m. All parties shall file status reports fourteen (14) days prior to the status conference. (cc C. Gorton) (Duong, D) Modified on 11/3/2010 (Duong, D).</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433ca8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-16</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2010-11-03</dateIssued>
+  <docketText>ORDER signed by Senior Judge Lawrence K. Karlton on 11/2/2010 re 99 ORDERING that Nicholas Short and Dean Morehous are appointed as attorneys for plaintiff pursuant to General Order No. 230. All contemplated costs shall be handled as described in General Order 230. A status conference shall be held on January 10, 2011 at 10:30 a.m. All parties shall file status reports fourteen (14) days prior to the status conference. (cc C. Gorton) (Duong, D) Modified on 11/3/2010 (Duong, D).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Senior Judge Lawrence K. Karlton on 1/11/11, ORDERING that counsel for dfts Rad, Chin, Pappoe, Stevenson, and Don SHALL provide pltf&apos;s counsel all discovery NO LATER than 30 days from the issuance of this Order. Pltf SHALL file a motion on whether the denial of pltf&apos;s request for an expert witness offends his constitutional rights NO LATER than 60 days thereafter. Dfts SHALL respond to the motion NO LATER than 30 days thereafter. Pltf MAY file a reply 20 days thereafter. The motion SHALL be heard on June 20, 2011 at 10:00 a.m.(Kastilahn, A)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433c3a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-17</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2011-01-12</dateIssued>
+  <docketText>ORDER signed by Senior Judge Lawrence K. Karlton on 1/11/11, ORDERING that counsel for dfts Rad, Chin, Pappoe, Stevenson, and Don SHALL provide pltf&apos;s counsel all discovery NO LATER than 30 days from the issuance of this Order. Pltf SHALL file a motion on whether the denial of pltf&apos;s request for an expert witness offends his constitutional rights NO LATER than 60 days thereafter. Dfts SHALL respond to the motion NO LATER than 30 days thereafter. Pltf MAY file a reply 20 days thereafter. The motion SHALL be heard on June 20, 2011 at 10:00 a.m.(Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-18/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER TO BE PUBLISHED signed by Senior Judge Lawrence K. Karlton on 6/29/11, ORDERING that the court finds that 69 the Magistrate Judge&apos;s order denying plaintiff&apos;s request for appointment of an expert witness under Rule 706 was clearly erroneous. Plaintiff shall submit an ex parte request to incur costs and request for payment of expert witness fees pursuant to General Order No. 230 within 60 days of the issuance of this order. Plaintiff may file the request under seal. The court no longer refers this case to the Magistrate Judge. All future non-discovery motions shall be filed before this court. All previously scheduled dates are VACATED, and a Scheduling Conference is hereby SET for 9/19/2011 at 02:00 PM in Courtroom 4 (LKK) before Senior Judge Lawrence K. Karlton. The parties shall file status reports 14 days prior to the conference. (Kastilahn, A)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433ca0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-18</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2011-06-29</dateIssued>
+  <docketText>ORDER TO BE PUBLISHED signed by Senior Judge Lawrence K. Karlton on 6/29/11, ORDERING that the court finds that 69 the Magistrate Judge&apos;s order denying plaintiff&apos;s request for appointment of an expert witness under Rule 706 was clearly erroneous. Plaintiff shall submit an ex parte request to incur costs and request for payment of expert witness fees pursuant to General Order No. 230 within 60 days of the issuance of this order. Plaintiff may file the request under seal. The court no longer refers this case to the Magistrate Judge. All future non-discovery motions shall be filed before this court. All previously scheduled dates are VACATED, and a Scheduling Conference is hereby SET for 9/19/2011 at 02:00 PM in Courtroom 4 (LKK) before Senior Judge Lawrence K. Karlton. The parties shall file status reports 14 days prior to the conference. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-19/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER vacating 100 Motion for the return of the medical records signed by Magistrate Judge Gregory G. Hollows on 8/17/11. (Kaminski, H)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433cb3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-19</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2011-08-18</dateIssued>
+  <docketText>ORDER vacating 100 Motion for the return of the medical records signed by Magistrate Judge Gregory G. Hollows on 8/17/11. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-20/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 8/30/11 GRANTING 121 Request to Seal documents. (Matson, R)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433c35</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-20</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2011-08-30</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 8/30/11 GRANTING 121 Request to Seal documents. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-21/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 5/21/12 GRANTING 134 Motion for Authority to Incur Costs and Request for Payment. (Meuleman, A)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433c34</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-21</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2012-05-22</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 5/21/12 GRANTING 134 Motion for Authority to Incur Costs and Request for Payment. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-22/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>r Stevenson. (Michel, G)ORDER signed by Judge Lawrence K. Karlton on 7/9/2012 GRANTING 139 Stipulated Dismissal of U.C. Davis defendants; DISMISSING, with prejudice, Plaintiff&apos;s claims against Defendants Hanieh Rad, Andrew Chin, Burl Don, Akhenaton Pappoe, and Frazie</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-22.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433ca4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-22</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2012-07-09</dateIssued>
+  <docketText>r Stevenson. (Michel, G)ORDER signed by Judge Lawrence K. Karlton on 7/9/2012 GRANTING 139 Stipulated Dismissal of U.C. Davis defendants; DISMISSING, with prejudice, Plaintiff&apos;s claims against Defendants Hanieh Rad, Andrew Chin, Burl Don, Akhenaton Pappoe, and Frazie</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-23/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 8/1/2012 ORDERING Plaintiffs claims against defendants Kelly Martinez, R.N., Boru Nale, M.D., Karen Todd, P.A., B. Williams, M.D.,and Christopher Smith, M.D. are hereby dismissed with prejudice in accordance with the terms of the Stipulation.(Waggoner, D)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-23.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433ca3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-23</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2012-08-01</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 8/1/2012 ORDERING Plaintiffs claims against defendants Kelly Martinez, R.N., Boru Nale, M.D., Karen Todd, P.A., B. Williams, M.D.,and Christopher Smith, M.D. are hereby dismissed with prejudice in accordance with the terms of the Stipulation.(Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-24/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 8/8/2012 DENYING 140 Motion for Summary Judgment. (Zignago, K.)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-24.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433ca7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-24</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2012-08-09</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 8/8/2012 DENYING 140 Motion for Summary Judgment. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-25/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 10/23/2012 DENYING 155 Joint Stipulation to modify the 129 Scheduling Order. (Michel, G)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-25.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433c3b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-25</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2012-10-25</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 10/23/2012 DENYING 155 Joint Stipulation to modify the 129 Scheduling Order. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-26/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER and WRIT of HABEAS CORPUS AD TESTIFICANDUM ISSUED signed by Judge Lawrence K. Karlton on 1/03/13. Ordering the Custodian of California Institution for Men to temporarily transfer Charles Robert Gorton to Mule Creek State Prison. The Warden of Mule Creek State Prison subsequently shall produce Charles Robert Gorton at 2/20/13 at 10:30 a.m. in courtroom 4 before Judge Lawrence K. Karlton. Custodian is ordered to notify the court of any changes in custody and to provide new custodian with a copy of this writ. Clerk shall serve a copy of this order and writ on the custodian and Out-to-Court Desk. (cc: OTCD)(3 certified copies sent to the Warden at California Institution for Men and 3 certified copies sent to the Warden of Mule Creek State Prison)(Plummer, M) Modified on 1/4/2013 (Plummer, M). Modified on 1/4/2013 (Plummer, M).</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-26.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433cac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-26</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER and WRIT of HABEAS CORPUS AD TESTIFICANDUM ISSUED signed by Judge Lawrence K. Karlton on 1/03/13. Ordering the Custodian of California Institution for Men to temporarily transfer Charles Robert Gorton to Mule Creek State Prison. The Warden of Mule Creek State Prison subsequently shall produce Charles Robert Gorton at 2/20/13 at 10:30 a.m. in courtroom 4 before Judge Lawrence K. Karlton. Custodian is ordered to notify the court of any changes in custody and to provide new custodian with a copy of this writ. Clerk shall serve a copy of this order and writ on the custodian and Out-to-Court Desk. (cc: OTCD)(3 certified copies sent to the Warden at California Institution for Men and 3 certified copies sent to the Warden of Mule Creek State Prison)(Plummer, M) Modified on 1/4/2013 (Plummer, M). Modified on 1/4/2013 (Plummer, M).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-27/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr. on 1/8/2013. The Settlement Conference Hearing set for 1/11/2013 is VACATED. (Marciel, M)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-27.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433caf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-27</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2013-01-09</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr. on 1/8/2013. The Settlement Conference Hearing set for 1/11/2013 is VACATED. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-28/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 1/15/2013 DENYING Defendants&apos; 164 Objection requesting a separate trial of punitive damages; APPROVING Plaintiff&apos;s 165 Corrections to the Pretrial Order; OVERRULING, without prejudice to renew at trial, Defendants&apos; 167 Objections to the exhibits offered by the Plaintiff; OVERRULING Defendants&apos; 168 Objection seeking qualified immunity from suit; OVERRULING, without prejudice to renew at trial, Plaintiff&apos;s 169 Objection to Defendants&apos; trial exhibit 5D. (Michel, G)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-28.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433c37</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-28</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2013-01-16</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 1/15/2013 DENYING Defendants&apos; 164 Objection requesting a separate trial of punitive damages; APPROVING Plaintiff&apos;s 165 Corrections to the Pretrial Order; OVERRULING, without prejudice to renew at trial, Defendants&apos; 167 Objections to the exhibits offered by the Plaintiff; OVERRULING Defendants&apos; 168 Objection seeking qualified immunity from suit; OVERRULING, without prejudice to renew at trial, Plaintiff&apos;s 169 Objection to Defendants&apos; trial exhibit 5D. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-29/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 1/31/13 APPROVING 186 Third Request For Authority to Incur Costs and Request for Payment filed by Charles Robert Gorton. (Meuleman, A)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-29.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433cb5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-29</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2013-02-01</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 1/31/13 APPROVING 186 Third Request For Authority to Incur Costs and Request for Payment filed by Charles Robert Gorton. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-03069-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-30/mods.xml">
+ <titleInfo>
+  <title>(PC) Gorton v. Todd et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 4/12/13 ORDERING that the court exercises its discretion to decline to tax costs in favor of Defendants in this case. (Kastilahn, A)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-03069-30.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184433cb4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-30</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-03069_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-03069/USCOURTS-caed-2_08-cv-03069-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-03069/pdf/USCOURTS-caed-2_08-cv-03069-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03069; (PC) Gorton v. Todd et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-03069-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2013-04-15</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 4/12/13 ORDERING that the court exercises its discretion to decline to tax costs in favor of Defendants in this case. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

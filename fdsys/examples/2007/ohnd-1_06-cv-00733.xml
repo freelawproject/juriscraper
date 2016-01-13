@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d1002">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_06-cv-00733</identifier>
+<identifier type="local">P0b002ee1815d1002</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_06-cv-00733</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_06-cv-00733</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:06-cv-00733</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party firstName="Catherine" fullName="Catherine L. Bloomberg" lastName="Bloomberg" middleName="L." role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert J. Fogarty" lastName="Fogarty" middleName="J." role="Mediator"></party>
+ <party firstName="Jacob" fullName="Jacob A.H. Kronenberg" lastName="Kronenberg" middleName="A.H." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Bloomberg v. Kronenberg</title>
+ <partNumber>1:06-cv-00733</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_06-cv-00733/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:06-cv-00733;06-733</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Catherine L. Bloomberg</displayForm>
+ <namePart type="family">Bloomberg</namePart>
+ <namePart type="given">Catherine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert J. Fogarty</displayForm>
+ <namePart type="family">Fogarty</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<name type="personal">
+ <displayForm>Jacob A.H. Kronenberg</displayForm>
+ <namePart type="family">Kronenberg</namePart>
+ <namePart type="given">Jacob</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_06-cv-00733</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:06-cv-00733</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party firstName="Catherine" fullName="Catherine L. Bloomberg" lastName="Bloomberg" middleName="L." role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert J. Fogarty" lastName="Fogarty" middleName="J." role="Mediator"></party>
+ <party firstName="Jacob" fullName="Jacob A.H. Kronenberg" lastName="Kronenberg" middleName="A.H." role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_06-cv-00733-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_06-cv-00733/USCOURTS-ohnd-1_06-cv-00733-0/mods.xml">
+ <titleInfo>
+  <title>Bloomberg v. Kronenberg</title>
+  <subTitle>Order signed by Judge James S. Gwin on 11/16/06 granting in part and denying in part defendant&apos;s motion for summary judgment. (Related Docs. 45, 51, 53, 62) (M, G)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_06-cv-00733-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816d3fcd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_06-cv-00733/USCOURTS-ohnd-1_06-cv-00733-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_06-cv-00733_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_06-cv-00733/USCOURTS-ohnd-1_06-cv-00733-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_06-cv-00733/pdf/USCOURTS-ohnd-1_06-cv-00733-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00733; Bloomberg v. Kronenberg; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_06-cv-00733-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-11-16</dateIssued>
+  <docketText>Order signed by Judge James S. Gwin on 11/16/06 granting in part and denying in part defendant&apos;s motion for summary judgment. (Related Docs. 45, 51, 53, 62) (M, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_06-cv-00733-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_06-cv-00733/USCOURTS-ohnd-1_06-cv-00733-1/mods.xml">
+ <titleInfo>
+  <title>Bloomberg v. Kronenberg</title>
+  <subTitle>Order signed by Judge James S. Gwin on 1/25/07 denying plaintiff&apos;s motion for a new trial and motion to amend or alter the judgment. (Related Doc. 106, 110, 114) (M,G)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_06-cv-00733-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816d3fce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_06-cv-00733/USCOURTS-ohnd-1_06-cv-00733-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_06-cv-00733_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_06-cv-00733/USCOURTS-ohnd-1_06-cv-00733-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_06-cv-00733/pdf/USCOURTS-ohnd-1_06-cv-00733-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00733; Bloomberg v. Kronenberg; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_06-cv-00733-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-25</dateIssued>
+  <docketText>Order signed by Judge James S. Gwin on 1/25/07 denying plaintiff&apos;s motion for a new trial and motion to amend or alter the judgment. (Related Doc. 106, 110, 114) (M,G)</docketText>
+</extension>
+</relatedItem>
+</mods>

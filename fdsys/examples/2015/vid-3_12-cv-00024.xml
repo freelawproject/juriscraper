@@ -1,0 +1,353 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d33a8df">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court of the Virgin Islands</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-08-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-vid-3_12-cv-00024</identifier>
+<identifier type="local">P0b002ee18d33a8df</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-08-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-08-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-vid-3_12-cv-00024</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-vid-3_12-cv-00024</accessId>
+ <courtType>District</courtType>
+ <courtCode>vid</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Virgin Islands</courtState>
+ <courtSortOrder>2520</courtSortOrder>
+ <caseNumber>3:12-cv-00024</caseNumber>
+ <caseOffice>St. Thomas Division</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1981 Housing Discrimination</cause>
+ <party firstName="Bill" fullName="Bill Canfield" lastName="Canfield" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Cockayne" lastName="Cockayne" role="Defendant"></party>
+ <party fullName="Cowpet Bay West Condominium Association" lastName="Cowpet Bay West Condominium Association" role="Defendant"></party>
+ <party firstName="Alfred" fullName="Alfred Felice" lastName="Felice" role="Defendant"></party>
+ <party firstName="Rosemary" fullName="Rosemary Felice" lastName="Felice" role="Defendant"></party>
+ <party firstName="Max" fullName="Max Harcourt" lastName="Harcourt" role="Defendant"></party>
+ <party firstName="Herb" fullName="Herb Horwitz" lastName="Horwitz" role="Defendant"></party>
+ <party firstName="Sharon" fullName="Sharon Koehler" lastName="Koehler" role="Defendant"></party>
+ <party firstName="Doug" fullName="Doug Rebak" lastName="Rebak" role="Defendant"></party>
+ <party firstName="Lance" fullName="Lance Talkington" lastName="Talkington" role="Defendant"></party>
+ <party fullName="The Board of the Cowpet Bay West Condominium Association" lastName="The Board of the Cowpet Bay West Condominium Association" role="Defendant"></party>
+ <party firstName="Vincent" fullName="Vincent Verdiramo" lastName="Verdiramo" role="Defendant"></party>
+ <party firstName="Barbara" fullName="Barbara Walters" lastName="Walters" role="Plaintiff"></party>
+ <party firstName="Ed" fullName="Ed Wardwell" lastName="Wardwell" role="Defendant"></party>
+ <party firstName="Rosie" fullName="Rosie Wells" lastName="Wells" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Barbara Walters v. Cowpet Bay West Condominium Association</title>
+ <partNumber>3:12-cv-00024</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-vid-3_12-cv-00024/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:12-cv-00024;12-024</identifier>
+<name type="corporate">
+ <namePart>United States District Court of the Virgin Islands</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>St. Thomas Division</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bill Canfield</displayForm>
+ <namePart type="family">Canfield</namePart>
+ <namePart type="given">Bill</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Cockayne</displayForm>
+ <namePart type="family">Cockayne</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cowpet Bay West Condominium Association</displayForm>
+ <namePart type="family">Cowpet Bay West Condominium Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alfred Felice</displayForm>
+ <namePart type="family">Felice</namePart>
+ <namePart type="given">Alfred</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rosemary Felice</displayForm>
+ <namePart type="family">Felice</namePart>
+ <namePart type="given">Rosemary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Max Harcourt</displayForm>
+ <namePart type="family">Harcourt</namePart>
+ <namePart type="given">Max</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Herb Horwitz</displayForm>
+ <namePart type="family">Horwitz</namePart>
+ <namePart type="given">Herb</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sharon Koehler</displayForm>
+ <namePart type="family">Koehler</namePart>
+ <namePart type="given">Sharon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Doug Rebak</displayForm>
+ <namePart type="family">Rebak</namePart>
+ <namePart type="given">Doug</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lance Talkington</displayForm>
+ <namePart type="family">Talkington</namePart>
+ <namePart type="given">Lance</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Board of the Cowpet Bay West Condominium Association</displayForm>
+ <namePart type="family">The Board of the Cowpet Bay West Condominium Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vincent Verdiramo</displayForm>
+ <namePart type="family">Verdiramo</namePart>
+ <namePart type="given">Vincent</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Barbara Walters</displayForm>
+ <namePart type="family">Walters</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ed Wardwell</displayForm>
+ <namePart type="family">Wardwell</namePart>
+ <namePart type="given">Ed</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rosie Wells</displayForm>
+ <namePart type="family">Wells</namePart>
+ <namePart type="given">Rosie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-vid-3_12-cv-00024</accessId>
+ <courtType>District</courtType>
+ <courtCode>vid</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Virgin Islands</courtState>
+ <courtSortOrder>2520</courtSortOrder>
+ <caseNumber>3:12-cv-00024</caseNumber>
+ <caseOffice>St. Thomas Division</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1981 Housing Discrimination</cause>
+ <party firstName="Bill" fullName="Bill Canfield" lastName="Canfield" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Cockayne" lastName="Cockayne" role="Defendant"></party>
+ <party fullName="Cowpet Bay West Condominium Association" lastName="Cowpet Bay West Condominium Association" role="Defendant"></party>
+ <party firstName="Alfred" fullName="Alfred Felice" lastName="Felice" role="Defendant"></party>
+ <party firstName="Rosemary" fullName="Rosemary Felice" lastName="Felice" role="Defendant"></party>
+ <party firstName="Max" fullName="Max Harcourt" lastName="Harcourt" role="Defendant"></party>
+ <party firstName="Herb" fullName="Herb Horwitz" lastName="Horwitz" role="Defendant"></party>
+ <party firstName="Sharon" fullName="Sharon Koehler" lastName="Koehler" role="Defendant"></party>
+ <party firstName="Doug" fullName="Doug Rebak" lastName="Rebak" role="Defendant"></party>
+ <party firstName="Lance" fullName="Lance Talkington" lastName="Talkington" role="Defendant"></party>
+ <party fullName="The Board of the Cowpet Bay West Condominium Association" lastName="The Board of the Cowpet Bay West Condominium Association" role="Defendant"></party>
+ <party firstName="Vincent" fullName="Vincent Verdiramo" lastName="Verdiramo" role="Defendant"></party>
+ <party firstName="Barbara" fullName="Barbara Walters" lastName="Walters" role="Plaintiff"></party>
+ <party firstName="Ed" fullName="Ed Wardwell" lastName="Wardwell" role="Defendant"></party>
+ <party firstName="Rosie" fullName="Rosie Wells" lastName="Wells" role="Defendant"></party>
+ <state>Virgin Islands</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-vid-3_12-cv-00024-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-vid-3_12-cv-00024/USCOURTS-vid-3_12-cv-00024-0/mods.xml">
+ <titleInfo>
+  <title>Barbara Walters v. Cowpet Bay West Condominium Association</title>
+  <subTitle>ORDER (CVG) denying 55 Motion to Substitute Party. The plaintiffs shall, to the extent they wish to do so, have leave to file and serve motions to substitute until June 28, 2013, the failure of which may result in the dismissal of all claims asserted against Alfred Felice. (TDG)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-vid-3_12-cv-00024/pdf/USCOURTS-vid-3_12-cv-00024-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d34c19f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-vid-3_12-cv-00024/USCOURTS-vid-3_12-cv-00024-0</identifier>
+ <identifier type="former granule identifier">vid-3_12-cv-00024_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-vid-3_12-cv-00024/USCOURTS-vid-3_12-cv-00024-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-vid-3_12-cv-00024/pdf/USCOURTS-vid-3_12-cv-00024-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-00024; Barbara Walters v. Cowpet Bay West Condominium Association; </searchTitle>
+  <courtName>United States District Court of the Virgin Islands</courtName>
+  <state>Virgin Islands</state>
+  <accessId>USCOURTS-vid-3_12-cv-00024-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-06-14</dateIssued>
+  <docketText>ORDER (CVG) denying 55 Motion to Substitute Party. The plaintiffs shall, to the extent they wish to do so, have leave to file and serve motions to substitute until June 28, 2013, the failure of which may result in the dismissal of all claims asserted against Alfred Felice. (TDG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-vid-3_12-cv-00024-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-vid-3_12-cv-00024/USCOURTS-vid-3_12-cv-00024-1/mods.xml">
+ <titleInfo>
+  <title>Barbara Walters v. Cowpet Bay West Condominium Association</title>
+  <subTitle>ORDER (CVG) denying 117Motion to Substitute Party. (JNH)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-vid-3_12-cv-00024/pdf/USCOURTS-vid-3_12-cv-00024-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d34c19e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-vid-3_12-cv-00024/USCOURTS-vid-3_12-cv-00024-1</identifier>
+ <identifier type="former granule identifier">vid-3_12-cv-00024_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-vid-3_12-cv-00024/USCOURTS-vid-3_12-cv-00024-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-vid-3_12-cv-00024/pdf/USCOURTS-vid-3_12-cv-00024-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-00024; Barbara Walters v. Cowpet Bay West Condominium Association; </searchTitle>
+  <courtName>United States District Court of the Virgin Islands</courtName>
+  <state>Virgin Islands</state>
+  <accessId>USCOURTS-vid-3_12-cv-00024-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-03-07</dateIssued>
+  <docketText>ORDER (CVG) denying 117Motion to Substitute Party. (JNH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-vid-3_12-cv-00024-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-vid-3_12-cv-00024/USCOURTS-vid-3_12-cv-00024-2/mods.xml">
+ <titleInfo>
+  <title>Barbara Walters v. Cowpet Bay West Condominium Association</title>
+  <subTitle>ORDER (CVG) on motions to dismiss. (JNH)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-vid-3_12-cv-00024/pdf/USCOURTS-vid-3_12-cv-00024-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d34c19d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-vid-3_12-cv-00024/USCOURTS-vid-3_12-cv-00024-2</identifier>
+ <identifier type="former granule identifier">vid-3_12-cv-00024_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-vid-3_12-cv-00024/USCOURTS-vid-3_12-cv-00024-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-vid-3_12-cv-00024/pdf/USCOURTS-vid-3_12-cv-00024-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-00024; Barbara Walters v. Cowpet Bay West Condominium Association; </searchTitle>
+  <courtName>United States District Court of the Virgin Islands</courtName>
+  <state>Virgin Islands</state>
+  <accessId>USCOURTS-vid-3_12-cv-00024-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-03-31</dateIssued>
+  <docketText>ORDER (CVG) on motions to dismiss. (JNH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-vid-3_12-cv-00024-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-vid-3_12-cv-00024/USCOURTS-vid-3_12-cv-00024-3/mods.xml">
+ <titleInfo>
+  <title>Barbara Walters v. Cowpet Bay West Condominium Association</title>
+  <subTitle>MEMORANDUM OPINION (CVG) (HRH)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-vid-3_12-cv-00024/pdf/USCOURTS-vid-3_12-cv-00024-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d34c19c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-vid-3_12-cv-00024/USCOURTS-vid-3_12-cv-00024-3</identifier>
+ <identifier type="former granule identifier">vid-3_12-cv-00024_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-vid-3_12-cv-00024/USCOURTS-vid-3_12-cv-00024-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-vid-3_12-cv-00024/pdf/USCOURTS-vid-3_12-cv-00024-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-00024; Barbara Walters v. Cowpet Bay West Condominium Association; </searchTitle>
+  <courtName>United States District Court of the Virgin Islands</courtName>
+  <state>Virgin Islands</state>
+  <accessId>USCOURTS-vid-3_12-cv-00024-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-01-02</dateIssued>
+  <docketText>MEMORANDUM OPINION (CVG) (HRH)</docketText>
+</extension>
+</relatedItem>
+</mods>

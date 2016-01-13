@@ -1,0 +1,177 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18104b11e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_10-cv-01008</identifier>
+<identifier type="local">P0b002ee18104b11e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-1_10-cv-01008</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_10-cv-01008</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:10-cv-01008</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>840</natureSuitCode>
+ <natureSuit>Trademark</natureSuit>
+ <party fullName="Arbor Care Tree Experts&amp;Outdoor Services" lastName="Arbor Care Tree Experts&amp;Outdoor Services" role="Defendant"></party>
+ <party fullName="Arbor Care Tree Experts, Inc." lastName="Arbor Care Tree Experts, Inc." role="Plaintiff"></party>
+ <party firstName="Dwayne" fullName="Dwayne Gardner" lastName="Gardner" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael James Schmitt" lastName="Schmitt" middleName="James" role="Defendant"></party>
+ <party firstName="Kristin" fullName="Kristin Marie Schmitt" lastName="Schmitt" middleName="Marie" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Arbor Care Tree Experts, Inc. v. Arbor Care Tree Experts&amp;Outdoor Services, et al</title>
+ <partNumber>1:10-cv-01008</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_10-cv-01008/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-01008;10-1008</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Baltimore</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Arbor Care Tree Experts&amp;Outdoor Services</displayForm>
+ <namePart type="family">Arbor Care Tree Experts&amp;Outdoor Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Arbor Care Tree Experts, Inc.</displayForm>
+ <namePart type="family">Arbor Care Tree Experts, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dwayne Gardner</displayForm>
+ <namePart type="family">Gardner</namePart>
+ <namePart type="given">Dwayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael James Schmitt</displayForm>
+ <namePart type="family">Schmitt</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kristin Marie Schmitt</displayForm>
+ <namePart type="family">Schmitt</namePart>
+ <namePart type="given">Kristin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_10-cv-01008</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:10-cv-01008</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>840</natureSuitCode>
+ <natureSuit>Trademark</natureSuit>
+ <party fullName="Arbor Care Tree Experts&amp;Outdoor Services" lastName="Arbor Care Tree Experts&amp;Outdoor Services" role="Defendant"></party>
+ <party fullName="Arbor Care Tree Experts, Inc." lastName="Arbor Care Tree Experts, Inc." role="Plaintiff"></party>
+ <party firstName="Dwayne" fullName="Dwayne Gardner" lastName="Gardner" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael James Schmitt" lastName="Schmitt" middleName="James" role="Defendant"></party>
+ <party firstName="Kristin" fullName="Kristin Marie Schmitt" lastName="Schmitt" middleName="Marie" role="Defendant"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-1_10-cv-01008-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_10-cv-01008/USCOURTS-mdd-1_10-cv-01008-0/mods.xml">
+ <titleInfo>
+  <title>Arbor Care Tree Experts, Inc. v. Arbor Care Tree Experts&amp;Outdoor Services, et al</title>
+  <subTitle>MEMORANDUM. Signed by Judge Ellen L. Hollander on 1/21/11. (hmls, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-1_10-cv-01008-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181068333</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_10-cv-01008/USCOURTS-mdd-1_10-cv-01008-0</identifier>
+ <identifier type="former granule identifier">mdd-1_10-cv-01008_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_10-cv-01008/USCOURTS-mdd-1_10-cv-01008-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_10-cv-01008/pdf/USCOURTS-mdd-1_10-cv-01008-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01008; Arbor Care Tree Experts, Inc. v. Arbor Care Tree Experts&amp;Outdoor Services, et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-1_10-cv-01008-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-21</dateIssued>
+  <docketText>MEMORANDUM. Signed by Judge Ellen L. Hollander on 1/21/11. (hmls, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

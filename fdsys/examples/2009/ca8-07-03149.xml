@@ -1,0 +1,196 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e5d44f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-07-03149</identifier>
+<identifier type="local">P0b002ee180e5d44f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-07-03149</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-07-03149</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>07-03149</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="American RV Park" lastName="American RV Park" role="Appellant"></party>
+ <party firstName="Connie" fullName="Connie Potter" lastName="Potter" role="Appellant"></party>
+ <party firstName="Jay" fullName="Jay Potter" lastName="Potter" role="Appellant"></party>
+ <party fullName="Tontitown Planning Commission" lastName="Tontitown Planning Commission" role="Appellee"></party>
+ <party fullName="Tontitown Water and Sewer Commission" lastName="Tontitown Water and Sewer Commission" role="Appellee"></party>
+ <party fullName="Tontitown, City of" lastName="Tontitown, City of" role="Appellee"></party>
+ <party firstName="Mick" fullName="Mick Wagner" lastName="Wagner" role="Appellee"></party>
+ <party fullName="Washington County Election Commission" lastName="Washington County Election Commission" role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>Jay Potter, et al v. City of Tontitown, et al</title>
+ <partNumber>07-03149</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-07-03149/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">07-03149;07-3149</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>American RV Park</displayForm>
+ <namePart type="family">American RV Park</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Connie Potter</displayForm>
+ <namePart type="family">Potter</namePart>
+ <namePart type="given">Connie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Jay Potter</displayForm>
+ <namePart type="family">Potter</namePart>
+ <namePart type="given">Jay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Tontitown Planning Commission</displayForm>
+ <namePart type="family">Tontitown Planning Commission</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Tontitown Water and Sewer Commission</displayForm>
+ <namePart type="family">Tontitown Water and Sewer Commission</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Tontitown, City of</displayForm>
+ <namePart type="family">Tontitown, City of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Mick Wagner</displayForm>
+ <namePart type="family">Wagner</namePart>
+ <namePart type="given">Mick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Washington County Election Commission</displayForm>
+ <namePart type="family">Washington County Election Commission</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-07-03149</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>07-03149</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="American RV Park" lastName="American RV Park" role="Appellant"></party>
+ <party firstName="Connie" fullName="Connie Potter" lastName="Potter" role="Appellant"></party>
+ <party firstName="Jay" fullName="Jay Potter" lastName="Potter" role="Appellant"></party>
+ <party fullName="Tontitown Planning Commission" lastName="Tontitown Planning Commission" role="Appellee"></party>
+ <party fullName="Tontitown Water and Sewer Commission" lastName="Tontitown Water and Sewer Commission" role="Appellee"></party>
+ <party fullName="Tontitown, City of" lastName="Tontitown, City of" role="Appellee"></party>
+ <party firstName="Mick" fullName="Mick Wagner" lastName="Wagner" role="Appellee"></party>
+ <party fullName="Washington County Election Commission" lastName="Washington County Election Commission" role="Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-07-03149-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-07-03149/USCOURTS-ca8-07-03149-0/mods.xml">
+ <titleInfo>
+  <title>Jay Potter, et al v. City of Tontitown, et al</title>
+  <subTitle>PER CURIAM OPINION FILED - THE COURT: DIANA E. MURPHY, KERMIT E. BYE and DUANE BENTON (UNPUBLISHED) [3505995] [07-3149]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-07-03149-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e66734</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-07-03149/USCOURTS-ca8-07-03149-0</identifier>
+ <identifier type="former granule identifier">ca8-07-03149_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-07-03149/USCOURTS-ca8-07-03149-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-07-03149/pdf/USCOURTS-ca8-07-03149-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 07-03149; Jay Potter, et al v. City of Tontitown, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-07-03149-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-12</dateIssued>
+  <docketText>PER CURIAM OPINION FILED - THE COURT: DIANA E. MURPHY, KERMIT E. BYE and DUANE BENTON (UNPUBLISHED) [3505995] [07-3149]</docketText>
+</extension>
+</relatedItem>
+</mods>

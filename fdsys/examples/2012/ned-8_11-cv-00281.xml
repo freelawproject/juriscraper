@@ -1,0 +1,382 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee182a180ff">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-06-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-06-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00281</identifier>
+<identifier type="local">P0b002ee182a180ff</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-06-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-06-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cv-00281</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00281</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00281</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1441 Petition for Removal- Product Liability</cause>
+ <party firstName="Mary" fullName="Mary Cochran" lastName="Cochran" role="Plaintiff"></party>
+ <party firstName="Milton" fullName="Milton Cochran" lastName="Cochran" role="Plaintiff"></party>
+ <party fullName="General Motors Company" lastName="General Motors Company" role="Defendant"></party>
+ <party fullName="General Motors Holdings LLC" lastName="General Motors Holdings LLC" role="Defendant"></party>
+ <party fullName="General Motors, LLC" lastName="General Motors, LLC" role="Cross Defendant"></party>
+ <party fullName="General Motors, LLC" lastName="General Motors, LLC" role="Defendant"></party>
+ <party fullName="Hertz Global Holdings, Inc." lastName="Hertz Global Holdings, Inc." role="Defendant"></party>
+ <party fullName="Hertz Investors, Inc." lastName="Hertz Investors, Inc." role="Defendant"></party>
+ <party fullName="Hertz Rent-A-Car" lastName="Hertz Rent-A-Car" role="Defendant"></party>
+ <party fullName="Liberty Mutual Insurance Company" lastName="Liberty Mutual Insurance Company" role="Defendant"></party>
+ <party fullName="The Hertz Corporation" lastName="The Hertz Corporation" role="Cross Claimant"></party>
+ <party fullName="The Hertz Corporation" lastName="The Hertz Corporation" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Cochran et al v. The Hertz Corporation et al</title>
+ <partNumber>8:11-cv-00281</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00281/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cv-00281;11-281</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mary Cochran</displayForm>
+ <namePart type="family">Cochran</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Milton Cochran</displayForm>
+ <namePart type="family">Cochran</namePart>
+ <namePart type="given">Milton</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>General Motors Company</displayForm>
+ <namePart type="family">General Motors Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>General Motors Holdings LLC</displayForm>
+ <namePart type="family">General Motors Holdings LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>General Motors, LLC</displayForm>
+ <namePart type="family">General Motors, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>General Motors, LLC</displayForm>
+ <namePart type="family">General Motors, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hertz Global Holdings, Inc.</displayForm>
+ <namePart type="family">Hertz Global Holdings, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hertz Investors, Inc.</displayForm>
+ <namePart type="family">Hertz Investors, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hertz Rent-A-Car</displayForm>
+ <namePart type="family">Hertz Rent-A-Car</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Liberty Mutual Insurance Company</displayForm>
+ <namePart type="family">Liberty Mutual Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Hertz Corporation</displayForm>
+ <namePart type="family">The Hertz Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>The Hertz Corporation</displayForm>
+ <namePart type="family">The Hertz Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00281</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00281</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1441 Petition for Removal- Product Liability</cause>
+ <party firstName="Mary" fullName="Mary Cochran" lastName="Cochran" role="Plaintiff"></party>
+ <party firstName="Milton" fullName="Milton Cochran" lastName="Cochran" role="Plaintiff"></party>
+ <party fullName="General Motors Company" lastName="General Motors Company" role="Defendant"></party>
+ <party fullName="General Motors Holdings LLC" lastName="General Motors Holdings LLC" role="Defendant"></party>
+ <party fullName="General Motors, LLC" lastName="General Motors, LLC" role="Cross Defendant"></party>
+ <party fullName="General Motors, LLC" lastName="General Motors, LLC" role="Defendant"></party>
+ <party fullName="Hertz Global Holdings, Inc." lastName="Hertz Global Holdings, Inc." role="Defendant"></party>
+ <party fullName="Hertz Investors, Inc." lastName="Hertz Investors, Inc." role="Defendant"></party>
+ <party fullName="Hertz Rent-A-Car" lastName="Hertz Rent-A-Car" role="Defendant"></party>
+ <party fullName="Liberty Mutual Insurance Company" lastName="Liberty Mutual Insurance Company" role="Defendant"></party>
+ <party fullName="The Hertz Corporation" lastName="The Hertz Corporation" role="Cross Claimant"></party>
+ <party fullName="The Hertz Corporation" lastName="The Hertz Corporation" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00281-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-0/mods.xml">
+ <titleInfo>
+  <title>Cochran et al v. The Hertz Corporation et al</title>
+  <subTitle>ORDER - Scheduling Conference set for 10/11/2011 08:45 AM in Chambers before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (TCL )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00281-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a1cde2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00281_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00281/pdf/USCOURTS-ned-8_11-cv-00281-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00281; Cochran et al v. The Hertz Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00281-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-09-30</dateIssued>
+  <docketText>ORDER - Scheduling Conference set for 10/11/2011 08:45 AM in Chambers before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00281-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-1/mods.xml">
+ <titleInfo>
+  <title>Cochran et al v. The Hertz Corporation et al</title>
+  <subTitle>ORDER granting Plaintiff&apos;s MOTION to Extend Plaintiffs&apos; Reply Brief Deadline32 filed by Milton Cochran. Plaintiffs shall have until January 4, 2012 to file a reply brief to defendant Liberty Mutual Insurance Company&apos;s motion for summary judgment28. Ordered by Senior Judge Lyle E. Strom. (JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00281-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a1cde5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00281_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00281/pdf/USCOURTS-ned-8_11-cv-00281-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00281; Cochran et al v. The Hertz Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00281-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-12-09</dateIssued>
+  <docketText>ORDER granting Plaintiff&apos;s MOTION to Extend Plaintiffs&apos; Reply Brief Deadline32 filed by Milton Cochran. Plaintiffs shall have until January 4, 2012 to file a reply brief to defendant Liberty Mutual Insurance Company&apos;s motion for summary judgment28. Ordered by Senior Judge Lyle E. Strom. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00281-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-2/mods.xml">
+ <titleInfo>
+  <title>Cochran et al v. The Hertz Corporation et al</title>
+  <subTitle>ORDER granting 34 Motion to Withdraw as Attorney. Richard P. Lavin, II, is deemed withdrawn as co-counsel for defendant Liberty Mutual Insurance Company. Ordered by Senior Judge Lyle E. Strom. (JAB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00281-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a1cde6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00281_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00281/pdf/USCOURTS-ned-8_11-cv-00281-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00281; Cochran et al v. The Hertz Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00281-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-12-12</dateIssued>
+  <docketText>ORDER granting 34 Motion to Withdraw as Attorney. Richard P. Lavin, II, is deemed withdrawn as co-counsel for defendant Liberty Mutual Insurance Company. Ordered by Senior Judge Lyle E. Strom. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00281-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-3/mods.xml">
+ <titleInfo>
+  <title>Cochran et al v. The Hertz Corporation et al</title>
+  <subTitle>ORDER - The motion for dismissal without prejudice 43 is granted; Liberty Mutual Insurance Company is dismissed from this action without prejudice, each party to pay their own costs. Ordered by Senior Judge Lyle E. Strom. (AOA)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00281-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a1cde7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00281_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00281/pdf/USCOURTS-ned-8_11-cv-00281-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00281; Cochran et al v. The Hertz Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00281-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>ORDER - The motion for dismissal without prejudice 43 is granted; Liberty Mutual Insurance Company is dismissed from this action without prejudice, each party to pay their own costs. Ordered by Senior Judge Lyle E. Strom. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00281-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-4/mods.xml">
+ <titleInfo>
+  <title>Cochran et al v. The Hertz Corporation et al</title>
+  <subTitle>AGREED UPON PROTECTIVE ORDER - The Court finds that the parties have agreed to the entry of this Order as a means of expediting discovery of documents and information which may be relevant herein. Ordered by Senior Judge Lyle E. Strom. (GJG)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00281-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a1cde3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-4</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00281_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00281/pdf/USCOURTS-ned-8_11-cv-00281-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00281; Cochran et al v. The Hertz Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00281-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-03-26</dateIssued>
+  <docketText>AGREED UPON PROTECTIVE ORDER - The Court finds that the parties have agreed to the entry of this Order as a means of expediting discovery of documents and information which may be relevant herein. Ordered by Senior Judge Lyle E. Strom. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00281-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-5/mods.xml">
+ <titleInfo>
+  <title>Cochran et al v. The Hertz Corporation et al</title>
+  <subTitle>ORDER - Plaintiffs&apos; motion, filing 55, is granted. Plaintiffs shall have until August 1, 2012, to provide expert reports. Defendants shall have until September 1, 2012, to provide expert reports. Ordered by Senior Judge Lyle E. Strom. (GJG)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00281-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a1cde4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-5</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00281_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00281/USCOURTS-ned-8_11-cv-00281-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00281/pdf/USCOURTS-ned-8_11-cv-00281-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00281; Cochran et al v. The Hertz Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00281-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-06-29</dateIssued>
+  <docketText>ORDER - Plaintiffs&apos; motion, filing 55, is granted. Plaintiffs shall have until August 1, 2012, to provide expert reports. Defendants shall have until September 1, 2012, to provide expert reports. Ordered by Senior Judge Lyle E. Strom. (GJG)</docketText>
+</extension>
+</relatedItem>
+</mods>

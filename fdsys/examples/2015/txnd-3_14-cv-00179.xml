@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bcfa6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_14-cv-00179</identifier>
+<identifier type="local">P0b002ee18a8bcfa6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-3_14-cv-00179</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_14-cv-00179</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:14-cv-00179</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Charles" fullName="Charles Edge" lastName="Edge" role="Defendant"></party>
+ <party firstName="Dan" fullName="Dan Planeta" lastName="Planeta" role="Plaintiff"></party>
+ <party firstName="Gayle" fullName="Gayle Sims" lastName="Sims" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Planeta v. Edge et al</title>
+ <partNumber>3:14-cv-00179</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_14-cv-00179/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:14-cv-00179;14-179</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Dallas</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Charles Edge</displayForm>
+ <namePart type="family">Edge</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dan Planeta</displayForm>
+ <namePart type="family">Planeta</namePart>
+ <namePart type="given">Dan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gayle Sims</displayForm>
+ <namePart type="family">Sims</namePart>
+ <namePart type="given">Gayle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_14-cv-00179</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:14-cv-00179</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Charles" fullName="Charles Edge" lastName="Edge" role="Defendant"></party>
+ <party firstName="Dan" fullName="Dan Planeta" lastName="Planeta" role="Plaintiff"></party>
+ <party firstName="Gayle" fullName="Gayle Sims" lastName="Sims" role="Defendant"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_14-cv-00179-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_14-cv-00179/USCOURTS-txnd-3_14-cv-00179-0/mods.xml">
+ <titleInfo>
+  <title>Planeta v. Edge et al</title>
+  <subTitle>Findings and Recommendations on Motion: Defendant&apos;s 21 MOTION for Protective Order should be granted, all discovery should be stayed, and the Court should direct Defendants to file a motion for summary judgment on the sole issue of qualified immunity. After Defendants file their motion for summary judgment, the Court should issue a further order setting forth procedures and deadlines for any request for limited discovery on the issue of qualified immunity and for Plaintiff&apos;s response to Defendants&apos; motion for summary judgment. (See order for specifics) (Ordered by Magistrate Judge David L Horan on 10/29/2014) (mcrd)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_14-cv-00179/pdf/USCOURTS-txnd-3_14-cv-00179-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c07c5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_14-cv-00179/USCOURTS-txnd-3_14-cv-00179-0</identifier>
+ <identifier type="former granule identifier">txnd-3_14-cv-00179_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_14-cv-00179/USCOURTS-txnd-3_14-cv-00179-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_14-cv-00179/pdf/USCOURTS-txnd-3_14-cv-00179-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:14-cv-00179; Planeta v. Edge et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_14-cv-00179-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-10-29</dateIssued>
+  <docketText>Findings and Recommendations on Motion: Defendant&apos;s 21 MOTION for Protective Order should be granted, all discovery should be stayed, and the Court should direct Defendants to file a motion for summary judgment on the sole issue of qualified immunity. After Defendants file their motion for summary judgment, the Court should issue a further order setting forth procedures and deadlines for any request for limited discovery on the issue of qualified immunity and for Plaintiff&apos;s response to Defendants&apos; motion for summary judgment. (See order for specifics) (Ordered by Magistrate Judge David L Horan on 10/29/2014) (mcrd)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_14-cv-00179-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_14-cv-00179/USCOURTS-txnd-3_14-cv-00179-1/mods.xml">
+ <titleInfo>
+  <title>Planeta v. Edge et al</title>
+  <subTitle>Order Accepting Findings and Recommendations re: 21 Motion for Protective Order filed by Charles Edge, Gayle Sims. As recommended by the Magistrate Judge, Defendants Charles Edge and Gayle Sims shall move for summary judgment solely on the affirmative defense of qualified immunity by February 20, 2015. (Ordered by Judge Jane J Boyle on 1/6/2015) (aaa)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_14-cv-00179/pdf/USCOURTS-txnd-3_14-cv-00179-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c07c4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_14-cv-00179/USCOURTS-txnd-3_14-cv-00179-1</identifier>
+ <identifier type="former granule identifier">txnd-3_14-cv-00179_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_14-cv-00179/USCOURTS-txnd-3_14-cv-00179-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_14-cv-00179/pdf/USCOURTS-txnd-3_14-cv-00179-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:14-cv-00179; Planeta v. Edge et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_14-cv-00179-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>Order Accepting Findings and Recommendations re: 21 Motion for Protective Order filed by Charles Edge, Gayle Sims. As recommended by the Magistrate Judge, Defendants Charles Edge and Gayle Sims shall move for summary judgment solely on the affirmative defense of qualified immunity by February 20, 2015. (Ordered by Judge Jane J Boyle on 1/6/2015) (aaa)</docketText>
+</extension>
+</relatedItem>
+</mods>

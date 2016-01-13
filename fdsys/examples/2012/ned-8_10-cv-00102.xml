@@ -1,0 +1,590 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1825e1a83">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-04-26</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-04-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102</identifier>
+<identifier type="local">P0b002ee1825e1a83</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-04-26</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-04-26</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_10-cv-00102</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00102</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00102</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>850</natureSuitCode>
+ <natureSuit>Securities, Commodities, Exchange</natureSuit>
+ <cause>12:22 Securities Fraud</cause>
+ <party firstName="Rajnish" fullName="Rajnish K. Das" lastName="Das" middleName="K." role="Defendant"></party>
+ <party firstName="Stormy" fullName="Stormy L. Dean" lastName="Dean" middleName="L." role="Defendant"></party>
+ <party fullName="Infogroup Inc." lastName="Infogroup Inc." role="Interested Party"></party>
+ <party fullName="Securities and Exchange Commission" lastName="Securities and Exchange Commission" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Securities and Exchange Commission v. Das et al</title>
+ <partNumber>8:10-cv-00102</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:10-cv-00102;10-102</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Rajnish K. Das</displayForm>
+ <namePart type="family">Das</namePart>
+ <namePart type="given">Rajnish</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stormy L. Dean</displayForm>
+ <namePart type="family">Dean</namePart>
+ <namePart type="given">Stormy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Infogroup Inc.</displayForm>
+ <namePart type="family">Infogroup Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Securities and Exchange Commission</displayForm>
+ <namePart type="family">Securities and Exchange Commission</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00102</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00102</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>850</natureSuitCode>
+ <natureSuit>Securities, Commodities, Exchange</natureSuit>
+ <cause>12:22 Securities Fraud</cause>
+ <party firstName="Rajnish" fullName="Rajnish K. Das" lastName="Das" middleName="K." role="Defendant"></party>
+ <party firstName="Stormy" fullName="Stormy L. Dean" lastName="Dean" middleName="L." role="Defendant"></party>
+ <party fullName="Infogroup Inc." lastName="Infogroup Inc." role="Interested Party"></party>
+ <party fullName="Securities and Exchange Commission" lastName="Securities and Exchange Commission" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-0/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER granting 5 Motion to Withdraw Mary Brady as Attorney. Ordered by Magistrate Judge F. A. Gossett. (ADB, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2f16</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-0</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-03-17</dateIssued>
+  <docketText>ORDER granting 5 Motion to Withdraw Mary Brady as Attorney. Ordered by Magistrate Judge F. A. Gossett. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-1/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Defendants&apos; Motions to Dismiss (Filing Nos. 16, 25) are denied. Defendants Rajnish K. Das and Stormy L. Dean must respond to the Complaint within twenty-one (21) days of this Memorandum and Order. Ordered by Judge Laurie Smith Camp. (GJG)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2eb4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-1</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-11-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Defendants&apos; Motions to Dismiss (Filing Nos. 16, 25) are denied. Defendants Rajnish K. Das and Stormy L. Dean must respond to the Complaint within twenty-one (21) days of this Memorandum and Order. Ordered by Judge Laurie Smith Camp. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-2/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER -Defendants Unopposed Motion to Amend Order Setting Final Schedule for Progression of Case for Limited Purpose of Altering Rebuttal Expert Disclosure Date (filing 72) is granted; Rebuttal expert witnesses shall be disclosed by June 6, 2011; All other scheduled dates remain the same. Ordered by Magistrate Judge F.A. Gossett. (MKR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2f1b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-2</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-05-27</dateIssued>
+  <docketText>ORDER -Defendants Unopposed Motion to Amend Order Setting Final Schedule for Progression of Case for Limited Purpose of Altering Rebuttal Expert Disclosure Date (filing 72) is granted; Rebuttal expert witnesses shall be disclosed by June 6, 2011; All other scheduled dates remain the same. Ordered by Magistrate Judge F.A. Gossett. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-3/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER granting Motion to Withdraw as Attorney 73. IT IS ORDERED: The Motion to Withdraw (filing 73) is granted. Attorney Amber L. Abbuhl is granted leave to withdraw as counsel for Defendant Rajnish Das. The Clerk shall terminate the appearance of Amber L. Abbuhl as defense counsel. The Clerk shall terminate future notices to Amber L. Abbuhl in this matter. Ordered by Magistrate Judge F.A. Gossett. (TEL)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2f14</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-3</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-05-31</dateIssued>
+  <docketText>ORDER granting Motion to Withdraw as Attorney 73. IT IS ORDERED: The Motion to Withdraw (filing 73) is granted. Attorney Amber L. Abbuhl is granted leave to withdraw as counsel for Defendant Rajnish Das. The Clerk shall terminate the appearance of Amber L. Abbuhl as defense counsel. The Clerk shall terminate future notices to Amber L. Abbuhl in this matter. Ordered by Magistrate Judge F.A. Gossett. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-4/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER - The Stipulated Motion to Amend Order Setting Final Schedule for Progression of Case for Limited Purpose of Extending the Deposition Deadline (filing 77 ) is granted. All depositions shall be completed by July 29, 2011. The other deadlines set forth in the scheduling order remain the same. Ordered by Magistrate Judge F.A. Gossett. (GJG)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2eb8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-4</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-06-07</dateIssued>
+  <docketText>ORDER - The Stipulated Motion to Amend Order Setting Final Schedule for Progression of Case for Limited Purpose of Extending the Deposition Deadline (filing 77 ) is granted. All depositions shall be completed by July 29, 2011. The other deadlines set forth in the scheduling order remain the same. Ordered by Magistrate Judge F.A. Gossett. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-5/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER - Defendants&apos; Motion to Extend Time (Filing No. 109) to file a reply brief in support of their Motion for Summary Judgment is granted. Defendants shall file their reply brief in support of their Motion for Summary Judgment (Filing No. 84) on or before August 25, 2011. Ordered by Judge Laurie Smith Camp. (GJG)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2eb5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-5</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-08-22</dateIssued>
+  <docketText>ORDER - Defendants&apos; Motion to Extend Time (Filing No. 109) to file a reply brief in support of their Motion for Summary Judgment is granted. Defendants shall file their reply brief in support of their Motion for Summary Judgment (Filing No. 84) on or before August 25, 2011. Ordered by Judge Laurie Smith Camp. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-6/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 84 Motion for summary judgment; and granting in part and denying in part 102 and 105 Motions in Limine. Ordered by Judge Laurie Smith Camp. (JSF)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2eb2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-6</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-09-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 84 Motion for summary judgment; and granting in part and denying in part 102 and 105 Motions in Limine. Ordered by Judge Laurie Smith Camp. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-7/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER - Kimberly L. Frederick&apos;s Motion for Leave to Withdraw as Counsel of Record for Defendant Stormy L. Dean (filing 146) is granted. The Clerk shall terminate the appearance of Kimberly L. Frederick as counsel for Mr. Dean. The Clerk shall terminate future notices to Kimberly L. Frederick in this matter. Ordered by Magistrate Judge F.A. Gossett. (AOA)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2eb3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-7</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-12-05</dateIssued>
+  <docketText>ORDER - Kimberly L. Frederick&apos;s Motion for Leave to Withdraw as Counsel of Record for Defendant Stormy L. Dean (filing 146) is granted. The Clerk shall terminate the appearance of Kimberly L. Frederick as counsel for Mr. Dean. The Clerk shall terminate future notices to Kimberly L. Frederick in this matter. Ordered by Magistrate Judge F.A. Gossett. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-8/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER - Olympia Z. Fay&apos;s Motion for Leave to Withdraw as Counsel of Record for Defendant Stormy L. Dean (filing 149) is granted. The Clerk shall terminate the appearance of Olympia Z. Fay as counsel for Mr. Dean. The Clerk shall terminate future notices to Olympia Z. Fay in this matter. Ordered by Magistrate Judge F.A. Gossett. (AOA)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2f19</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-8</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-12-05</dateIssued>
+  <docketText>ORDER - Olympia Z. Fay&apos;s Motion for Leave to Withdraw as Counsel of Record for Defendant Stormy L. Dean (filing 149) is granted. The Clerk shall terminate the appearance of Olympia Z. Fay as counsel for Mr. Dean. The Clerk shall terminate future notices to Olympia Z. Fay in this matter. Ordered by Magistrate Judge F.A. Gossett. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-9/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER RE: TRIAL PREPARATION (CIVIL JURY TRIAL). Ordered by Chief Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2f13</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-9</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>ORDER RE: TRIAL PREPARATION (CIVIL JURY TRIAL). Ordered by Chief Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-10/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>iling No. 176) is denied. Ordered by Chief Judge Laurie Smith Camp. (AOA)MEMORANDUM AND ORDER - The Defendants&apos; Motion in Limine to Strike Witnesses from the SEC&apos;s Nonexpert Witness List and to Limit the Testimony of Steven Henning (Filing No. 156) is denied. The Defendants&apos; Motion in Limine to Exclude Evidence of Subsequent Remedial Measures and Settlement Agreements (Filing No. 160) is granted. The Defendants&apos; Request for Fed. R. Evid. 104 Hearing Regarding the Motion in Limine to Exclude Evidence of Subsequent Remedial Measures and Settlement Agreements (Filing No. 165) is denied as moot. The Defendants&apos; Motion for Hearing regarding their Motion in Limine to Strike Witnesses from the SEC&apos;s Nonexpert Witness List and to Limit the Testimony of Steven Henning (F</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2f15</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-10</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-02-08</dateIssued>
+  <docketText>iling No. 176) is denied. Ordered by Chief Judge Laurie Smith Camp. (AOA)MEMORANDUM AND ORDER - The Defendants&apos; Motion in Limine to Strike Witnesses from the SEC&apos;s Nonexpert Witness List and to Limit the Testimony of Steven Henning (Filing No. 156) is denied. The Defendants&apos; Motion in Limine to Exclude Evidence of Subsequent Remedial Measures and Settlement Agreements (Filing No. 160) is granted. The Defendants&apos; Request for Fed. R. Evid. 104 Hearing Regarding the Motion in Limine to Exclude Evidence of Subsequent Remedial Measures and Settlement Agreements (Filing No. 165) is denied as moot. The Defendants&apos; Motion for Hearing regarding their Motion in Limine to Strike Witnesses from the SEC&apos;s Nonexpert Witness List and to Limit the Testimony of Steven Henning (F</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-11/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER orveruling the Defendants&apos; objection to Dr. Henning&apos;s testimony. Ordered by Chief Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2f1a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-11</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-02-22</dateIssued>
+  <docketText>ORDER orveruling the Defendants&apos; objection to Dr. Henning&apos;s testimony. Ordered by Chief Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-12/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER granting 226 Request for Transcript (Non-Party). The Court Reporter will prepare a transcript of the trial relating to the above captioned case that was held on February 14, 2012, through March 1, 2012, and the transcript of the closing arguments held on March 1, 2012, and deliver them to InfoUSA&apos;s counsel. InfoUSA will bear and be responsible for all charges connected with preparing the transcripts. Ordered by Chief Judge Laurie Smith Camp. (Copy mailed to counsel for party requesting transcript) (TEL)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2eb6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-12</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-03-08</dateIssued>
+  <docketText>ORDER granting 226 Request for Transcript (Non-Party). The Court Reporter will prepare a transcript of the trial relating to the above captioned case that was held on February 14, 2012, through March 1, 2012, and the transcript of the closing arguments held on March 1, 2012, and deliver them to InfoUSA&apos;s counsel. InfoUSA will bear and be responsible for all charges connected with preparing the transcripts. Ordered by Chief Judge Laurie Smith Camp. (Copy mailed to counsel for party requesting transcript) (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-13/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER regarding any payments made regarding MOTION for Judgment and Remedial Relief Against Defendants228 filed by Securities and Exchange Commission. Ordered by Chief Judge Laurie Smith Camp. (JAB)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2f17</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-13</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2012-03-12</dateIssued>
+  <docketText>ORDER regarding any payments made regarding MOTION for Judgment and Remedial Relief Against Defendants228 filed by Securities and Exchange Commission. Ordered by Chief Judge Laurie Smith Camp. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-14/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER granting 239 Motion to Seal - Defendant Rajnish K. Das is directed to provide Plaintiff Securities and Exchange Commission with a copy of the provisionally sealed document (Filing No. 240) on or before April 13, 2012. Ordered by Chief Judge Laurie Smith Camp. (TEL)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2eb7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-14</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-04-11</dateIssued>
+  <docketText>ORDER granting 239 Motion to Seal - Defendant Rajnish K. Das is directed to provide Plaintiff Securities and Exchange Commission with a copy of the provisionally sealed document (Filing No. 240) on or before April 13, 2012. Ordered by Chief Judge Laurie Smith Camp. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00102-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-15/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Das et al</title>
+  <subTitle>ORDER - The Motion by InfoGroup, Inc., for Leave to File an Amicus Curiae Brief (Filing No. 247) is granted. InfoGroup, Inc., will file its amicus curiae brief on or before May 8, 2012. All parties wishing to respond to the amicus brief filed by InfoGroup, Inc., will do so on or before May 22, 2012. Ordered by Chief Judge Laurie Smith Camp. (TEL)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00102-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825e2f18</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-15</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00102_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00102/USCOURTS-ned-8_10-cv-00102-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00102/pdf/USCOURTS-ned-8_10-cv-00102-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00102; Securities and Exchange Commission v. Das et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00102-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-04-25</dateIssued>
+  <docketText>ORDER - The Motion by InfoGroup, Inc., for Leave to File an Amicus Curiae Brief (Filing No. 247) is granted. InfoGroup, Inc., will file its amicus curiae brief on or before May 8, 2012. All parties wishing to respond to the amicus brief filed by InfoGroup, Inc., will do so on or before May 22, 2012. Ordered by Chief Judge Laurie Smith Camp. (TEL)</docketText>
+</extension>
+</relatedItem>
+</mods>

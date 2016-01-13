@@ -1,0 +1,214 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18116cfd9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00493</identifier>
+<identifier type="local">P0b002ee18116cfd9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_04-cv-00493</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_04-cv-00493</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:04-cv-00493</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="A." fullName="A. Bouchey" lastName="Bouchey" role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven Bullis" lastName="Bullis" role="Defendant"></party>
+ <party firstName="William" fullName="William Edwards" lastName="Edwards" role="Plaintiff"></party>
+ <party firstName="Roy" fullName="Roy A. Girdich" lastName="Girdich" middleName="A." role="Defendant"></party>
+ <party firstName="B." fullName="B. Poupore" lastName="Poupore" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Selsky" lastName="Selsky" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Edwards v. Selsky et al</title>
+ <partNumber>9:04-cv-00493</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00493/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:04-cv-00493;04-493</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>A. Bouchey</displayForm>
+ <namePart type="family">Bouchey</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Steven Bullis</displayForm>
+ <namePart type="family">Bullis</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Edwards</displayForm>
+ <namePart type="family">Edwards</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Roy A. Girdich</displayForm>
+ <namePart type="family">Girdich</namePart>
+ <namePart type="given">Roy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>B. Poupore</displayForm>
+ <namePart type="family">Poupore</namePart>
+ <namePart type="given">B.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Selsky</displayForm>
+ <namePart type="family">Selsky</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_04-cv-00493</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:04-cv-00493</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="A." fullName="A. Bouchey" lastName="Bouchey" role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven Bullis" lastName="Bullis" role="Defendant"></party>
+ <party firstName="William" fullName="William Edwards" lastName="Edwards" role="Plaintiff"></party>
+ <party firstName="Roy" fullName="Roy A. Girdich" lastName="Girdich" middleName="A." role="Defendant"></party>
+ <party firstName="B." fullName="B. Poupore" lastName="Poupore" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Selsky" lastName="Selsky" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_04-cv-00493-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00493/USCOURTS-nynd-9_04-cv-00493-0/mods.xml">
+ <titleInfo>
+  <title>Edwards v. Selsky et al</title>
+  <subTitle>ORDER denying as moot. 41 Motion to compel discovery issues, granting 27 Motion to Amend/Correct. Plaintiff shall file a signed copy of the amended complaint within 30 days of the filing date of this Order. ORDERED that upon filing of said amended complaint, service is directed of the additional defendants. Signed by Judge David R. Homer on 5/19/05. (nas)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_04-cv-00493-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181426563</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00493/USCOURTS-nynd-9_04-cv-00493-0</identifier>
+ <identifier type="former granule identifier">nynd-9_04-cv-00493_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00493/USCOURTS-nynd-9_04-cv-00493-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00493/pdf/USCOURTS-nynd-9_04-cv-00493-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:04-cv-00493; Edwards v. Selsky et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_04-cv-00493-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-19</dateIssued>
+  <docketText>ORDER denying as moot. 41 Motion to compel discovery issues, granting 27 Motion to Amend/Correct. Plaintiff shall file a signed copy of the amended complaint within 30 days of the filing date of this Order. ORDERED that upon filing of said amended complaint, service is directed of the additional defendants. Signed by Judge David R. Homer on 5/19/05. (nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_04-cv-00493-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00493/USCOURTS-nynd-9_04-cv-00493-1/mods.xml">
+ <titleInfo>
+  <title>Edwards v. Selsky et al</title>
+  <subTitle>ORDER that 82 Report and Recommendations is ACCEPTED IN ITS ENTIRETY. ORDERED that this action is DISMISSED pursuant to 41(b) of the Federal Rules of Civil Procedure, based upon plaintiff&apos;s failure to prosecute and Local Rule 10.1(b) based upon plaintiff&apos;s failure to notify the Court of a change of address. ORDERED that 73 Motion to Dismiss for Lack of Prosecution is GRANTED. Signed by Judge Frederick J. Scullin Jr. on 1/22/08. (nas)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_04-cv-00493-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181426562</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00493/USCOURTS-nynd-9_04-cv-00493-1</identifier>
+ <identifier type="former granule identifier">nynd-9_04-cv-00493_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00493/USCOURTS-nynd-9_04-cv-00493-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00493/pdf/USCOURTS-nynd-9_04-cv-00493-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:04-cv-00493; Edwards v. Selsky et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_04-cv-00493-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-22</dateIssued>
+  <docketText>ORDER that 82 Report and Recommendations is ACCEPTED IN ITS ENTIRETY. ORDERED that this action is DISMISSED pursuant to 41(b) of the Federal Rules of Civil Procedure, based upon plaintiff&apos;s failure to prosecute and Local Rule 10.1(b) based upon plaintiff&apos;s failure to notify the Court of a change of address. ORDERED that 73 Motion to Dismiss for Lack of Prosecution is GRANTED. Signed by Judge Frederick J. Scullin Jr. on 1/22/08. (nas)</docketText>
+</extension>
+</relatedItem>
+</mods>

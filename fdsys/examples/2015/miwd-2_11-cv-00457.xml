@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aaca0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Western District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_11-cv-00457</identifier>
+<identifier type="local">P0b002ee18a8aaca0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-miwd-2_11-cv-00457</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-miwd-2_11-cv-00457</accessId>
+ <courtType>District</courtType>
+ <courtCode>miwd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2254</courtSortOrder>
+ <caseNumber>2:11-cv-00457</caseNumber>
+ <caseOffice>Northern Division (2)</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Michael" fullName="Michael A. Cheatham #172290" lastName="Cheatham #172290" middleName="A." role="petitioner"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Woods" lastName="Woods" role="respondent"></party>
+</extension>
+<titleInfo>
+ <title>Cheatham #172290 v. Woods</title>
+ <partNumber>2:11-cv-00457</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_11-cv-00457/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-00457;11-457</identifier>
+<name type="corporate">
+ <namePart>United States District Court Western District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Northern Division (2)</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Michael A. Cheatham #172290</displayForm>
+ <namePart type="family">Cheatham #172290</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Woods</displayForm>
+ <namePart type="family">Woods</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-miwd-2_11-cv-00457</accessId>
+ <courtType>District</courtType>
+ <courtCode>miwd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2254</courtSortOrder>
+ <caseNumber>2:11-cv-00457</caseNumber>
+ <caseOffice>Northern Division (2)</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Michael" fullName="Michael A. Cheatham #172290" lastName="Cheatham #172290" middleName="A." role="petitioner"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Woods" lastName="Woods" role="respondent"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-miwd-2_11-cv-00457-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_11-cv-00457/USCOURTS-miwd-2_11-cv-00457-0/mods.xml">
+ <titleInfo>
+  <title>Cheatham #172290 v. Woods</title>
+  <subTitle>REPORT AND RECOMMENDATION that the petition be dismissed; objections to R&amp;R due within 14 days; signed by Magistrate Judge Timothy P. Greeley (Magistrate Judge Timothy P. Greeley, clp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_11-cv-00457/pdf/USCOURTS-miwd-2_11-cv-00457-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b2580</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_11-cv-00457/USCOURTS-miwd-2_11-cv-00457-0</identifier>
+ <identifier type="former granule identifier">miwd-2_11-cv-00457_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_11-cv-00457/USCOURTS-miwd-2_11-cv-00457-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_11-cv-00457/pdf/USCOURTS-miwd-2_11-cv-00457-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00457; Cheatham #172290 v. Woods; </searchTitle>
+  <courtName>United States District Court Western District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-miwd-2_11-cv-00457-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-12-04</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION that the petition be dismissed; objections to R&amp;R due within 14 days; signed by Magistrate Judge Timothy P. Greeley (Magistrate Judge Timothy P. Greeley, clp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-miwd-2_11-cv-00457-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_11-cv-00457/USCOURTS-miwd-2_11-cv-00457-1/mods.xml">
+ <titleInfo>
+  <title>Cheatham #172290 v. Woods</title>
+  <subTitle>ORDER APPROVING AND ADOPTING REPORT AND RECOMMENDATION 23, denying petition for writ of habeas corpus ; signed by Judge Robert Holmes Bell (Judge Robert Holmes Bell, kcb)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_11-cv-00457/pdf/USCOURTS-miwd-2_11-cv-00457-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b257f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_11-cv-00457/USCOURTS-miwd-2_11-cv-00457-1</identifier>
+ <identifier type="former granule identifier">miwd-2_11-cv-00457_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_11-cv-00457/USCOURTS-miwd-2_11-cv-00457-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_11-cv-00457/pdf/USCOURTS-miwd-2_11-cv-00457-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00457; Cheatham #172290 v. Woods; </searchTitle>
+  <courtName>United States District Court Western District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-miwd-2_11-cv-00457-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER APPROVING AND ADOPTING REPORT AND RECOMMENDATION 23, denying petition for writ of habeas corpus ; signed by Judge Robert Holmes Bell (Judge Robert Holmes Bell, kcb)</docketText>
+</extension>
+</relatedItem>
+</mods>

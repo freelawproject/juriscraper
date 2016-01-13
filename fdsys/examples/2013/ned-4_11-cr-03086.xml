@@ -1,0 +1,491 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a18b22">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086</identifier>
+<identifier type="local">P0b002ee183a18b22</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_11-cr-03086</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cr-03086</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cr-03086</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Ruben" fullName="Ruben Carrillo Castellon" lastName="Castellon" middleName="Carrillo" role="Defendant"></party>
+ <party firstName="Martin" fullName="Martin Quintana Morales" lastName="Morales" middleName="Quintana" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Castellon et al</title>
+ <partNumber>4:11-cr-03086</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:11-cr-03086;11-3086</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ruben Carrillo Castellon</displayForm>
+ <namePart type="family">Castellon</namePart>
+ <namePart type="given">Ruben</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Martin Quintana Morales</displayForm>
+ <namePart type="family">Morales</namePart>
+ <namePart type="given">Martin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cr-03086</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cr-03086</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Ruben" fullName="Ruben Carrillo Castellon" lastName="Castellon" middleName="Carrillo" role="Defendant"></party>
+ <party firstName="Martin" fullName="Martin Quintana Morales" lastName="Morales" middleName="Quintana" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Ruben Carrillo Castellon. Stuart J. Dornan is appointed as attorney of record for the above-named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1dcab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-0</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-09-01</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Ruben Carrillo Castellon. Stuart J. Dornan is appointed as attorney of record for the above-named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Ruben Carrillo Castellon. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1dca6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-1</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-09-01</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Ruben Carrillo Castellon. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Martin Quintana Morales. The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1dca9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-2</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-09-02</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Martin Quintana Morales. The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant(s) Martin Quintana Morales. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1e12c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-3</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-09-02</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant(s) Martin Quintana Morales. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>ORDER granting 49 Motion to Continue as to Martin Quintana Morales. Change of Plea Hearing set for 12/13/2011 at 09:30 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)ORDER granting 49 Motion to Continue as to Martin Quintana Morales. Change of Plea Hearing set for 12/13/2011 at 09:30 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1dca8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-4</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-11-21</dateIssued>
+  <docketText>ORDER granting 49 Motion to Continue as to Martin Quintana Morales. Change of Plea Hearing set for 12/13/2011 at 09:30 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)ORDER granting 49 Motion to Continue as to Martin Quintana Morales. Change of Plea Hearing set for 12/13/2011 at 09:30 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>ORDER granting 54 Motion to Withdraw as Attorney as to Martin Quintana Morales. The change of plea hearing scheduled for December 13, 2011 is cancelled. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1e128</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-5</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-12-12</dateIssued>
+  <docketText>ORDER granting 54 Motion to Withdraw as Attorney as to Martin Quintana Morales. The change of plea hearing scheduled for December 13, 2011 is cancelled. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report and Addendum as to defendant Ruben Carrillo Castellon. It is ordered that:... (2)The government&apos;s objection regarding lack of role enhancement 71 and the defendant&apos;s miscellaneous objection 68 70 will be resolved at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Senior Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1dca2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-6</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-01-24</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report and Addendum as to defendant Ruben Carrillo Castellon. It is ordered that:... (2)The government&apos;s objection regarding lack of role enhancement 71 and the defendant&apos;s miscellaneous objection 68 70 will be resolved at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Senior Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>JUDGMENT as to Ruben Carrillo Castellon (1), Count 1 - Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of eighty-seven (87) months; 4 years supervised release with special conditions; $100.00 special assessment as to defendant Ruben Carrillo Castellon. Ordered by Senior Judge Richard G. Kopf. (4 Certified copies to USM)(ADB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1e12a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-7</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-02-02</dateIssued>
+  <docketText>JUDGMENT as to Ruben Carrillo Castellon (1), Count 1 - Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of eighty-seven (87) months; 4 years supervised release with special conditions; $100.00 special assessment as to defendant Ruben Carrillo Castellon. Ordered by Senior Judge Richard G. Kopf. (4 Certified copies to USM)(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Martin Quintana Morales. Ordered by Judge John M. Gerrard. (MKR)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1dca5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-8</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-03-27</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Martin Quintana Morales. Ordered by Judge John M. Gerrard. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>ORDER - The Court finds that defendant&apos;s notice of appeal (filing 102) is not timely. The Clerk of the Court shall not process an appeal to the United States Court of Appeals for the Eighth Circuit on the basis of defendant&apos;s notice of appeal. Pursuant to Fed. R. App. P. 24(a)(3)(A), the Court certifies that defendant&apos;s appeal is not taken in good faith, as the appeal is untimely and is without any apparent legal basis. Pursuant to Fed. R. App. P. 24(a)(4), the Clerk of the Court shall forward a copy of this memorandum and order to the Clerk of the United States Court of Appeals for the Eighth Circuit. The Clerk is also directed to mail a copy of this memorandum and order to the defendant at his last known address as to defendant Ruben Carrillo Castellon. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party and as directed) (MKR)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1e129</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-9</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-06-19</dateIssued>
+  <docketText>ORDER - The Court finds that defendant&apos;s notice of appeal (filing 102) is not timely. The Clerk of the Court shall not process an appeal to the United States Court of Appeals for the Eighth Circuit on the basis of defendant&apos;s notice of appeal. Pursuant to Fed. R. App. P. 24(a)(3)(A), the Court certifies that defendant&apos;s appeal is not taken in good faith, as the appeal is untimely and is without any apparent legal basis. Pursuant to Fed. R. App. P. 24(a)(4), the Clerk of the Court shall forward a copy of this memorandum and order to the Clerk of the United States Court of Appeals for the Eighth Circuit. The Clerk is also directed to mail a copy of this memorandum and order to the defendant at his last known address as to defendant Ruben Carrillo Castellon. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party and as directed) (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>MEMORANDUM AND ORDER - IT IS ORDERED: Castellon&apos;s motion for return of property (filing 109) is denied. The Clerk&apos;s Office is directed to mail a copy of this order to Castellon at his last known address as to Ruben Carrillo Castellon. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party)( TCL )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1dca3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-10</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-10-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - IT IS ORDERED: Castellon&apos;s motion for return of property (filing 109) is denied. The Clerk&apos;s Office is directed to mail a copy of this order to Castellon at his last known address as to Ruben Carrillo Castellon. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party)( TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>MEMORANDUM AND ORDER - IT IS ORDERED: On or before November 7, 2012, Castellon shall either: inform the Court that he wishes to proceed with his motion as submitted; withdraw the current motion; or submit an amended motion. If Castellon does not respond, he will be deemed to have consented to having the present motion treated as a § 2255 motion, and the Court will rule on it as currently submitted. The Clerk&apos;s Office is directed to send a copy of this order and a § 2255 motion form to Castellon at his last known address. The Clerk&apos;s Office is directed to set a pro se case management deadline with the following text: November 8, 2012: Check for Castellon&apos;s response regarding conversion to § 2255 as to defendant Ruben Carrillo Castellon. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party with 2255 Form)(TCL )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1dca7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-11</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-10-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - IT IS ORDERED: On or before November 7, 2012, Castellon shall either: inform the Court that he wishes to proceed with his motion as submitted; withdraw the current motion; or submit an amended motion. If Castellon does not respond, he will be deemed to have consented to having the present motion treated as a § 2255 motion, and the Court will rule on it as currently submitted. The Clerk&apos;s Office is directed to send a copy of this order and a § 2255 motion form to Castellon at his last known address. The Clerk&apos;s Office is directed to set a pro se case management deadline with the following text: November 8, 2012: Check for Castellon&apos;s response regarding conversion to § 2255 as to defendant Ruben Carrillo Castellon. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party with 2255 Form)(TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03086-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Castellon et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Castellon&apos;s pro se motion to dismiss the indictment in his case (filing 115), which the Court has construed as a motion to vacate, set aside, or correct a sentence under 28 U.S.C. § 2255, is denied; A separate judgment will be entered; and The Clerk is directed to mail a copy of this memorandum and order to the defendant at his last known address. as to Ruben Carrillo Castellon as to defendant Ruben Carrillo Castellon. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party)(MKR)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03086-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1dca4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-12</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03086_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03086/USCOURTS-ned-4_11-cr-03086-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03086/pdf/USCOURTS-ned-4_11-cr-03086-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03086; USA v. Castellon et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03086-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Castellon&apos;s pro se motion to dismiss the indictment in his case (filing 115), which the Court has construed as a motion to vacate, set aside, or correct a sentence under 28 U.S.C. § 2255, is denied; A separate judgment will be entered; and The Clerk is directed to mail a copy of this memorandum and order to the defendant at his last known address. as to Ruben Carrillo Castellon as to defendant Ruben Carrillo Castellon. Ordered by Judge John M. Gerrard. (Copy mailed to pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

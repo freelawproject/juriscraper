@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a0a00">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00444</identifier>
+<identifier type="local">P0b002ee1817a0a00</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_04-cr-00444</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cr-00444</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cr-00444</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Shawn" fullName="Shawn A. Stewart" lastName="Stewart" middleName="A." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Stewart</title>
+ <partNumber>8:04-cr-00444</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00444/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:04-cr-00444;04-444</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Shawn A. Stewart</displayForm>
+ <namePart type="family">Stewart</namePart>
+ <namePart type="given">Shawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cr-00444</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cr-00444</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Shawn" fullName="Shawn A. Stewart" lastName="Stewart" middleName="A." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00444-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Stewart</title>
+  <subTitle>JUDGMENT as to Shawn A. Stewart (1) - Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 42 months; 3 years supervised with special conditions; $100 special assessment. Count II of the Indictment is dismissed on the motion of the United States as to this defendant only, as to defendant Shawn A. Stewart. Signed by Judge Joseph F. Bataillon on 5/5/2005. 5 certified copies USM (JAE, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00444-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187ee9d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-0</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00444_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00444/pdf/USCOURTS-ned-8_04-cr-00444-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00444; USA v. Stewart; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00444-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-05</dateIssued>
+  <docketText>JUDGMENT as to Shawn A. Stewart (1) - Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 42 months; 3 years supervised with special conditions; $100 special assessment. Count II of the Indictment is dismissed on the motion of the United States as to this defendant only, as to defendant Shawn A. Stewart. Signed by Judge Joseph F. Bataillon on 5/5/2005. 5 certified copies USM (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00444-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Stewart</title>
+  <subTitle>ORDER FOR DISMISSAL - Leave of Court is granted for the United States to dismiss, without prejudice, the Petition 28 for Offender Under Supervision filed herein. The Motion 30 for Dismissal is sustained. The Indictment filed herein is hereby dismissed, without prejudice, as it pertains to thedefendant Shawn A. Stewart (1). Ordered by Chief Judge Joseph F. Bataillon. (1 Certified copy to USM)( JAE, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00444-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187ee9b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-1</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00444_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00444/pdf/USCOURTS-ned-8_04-cr-00444-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00444; USA v. Stewart; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00444-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-31</dateIssued>
+  <docketText>ORDER FOR DISMISSAL - Leave of Court is granted for the United States to dismiss, without prejudice, the Petition 28 for Offender Under Supervision filed herein. The Motion 30 for Dismissal is sustained. The Indictment filed herein is hereby dismissed, without prejudice, as it pertains to thedefendant Shawn A. Stewart (1). Ordered by Chief Judge Joseph F. Bataillon. (1 Certified copy to USM)( JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00444-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Stewart</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Deborah D. Cunningham is appointed as counsel for defendant Shawn A. Stewart. Ordered by Magistrate Judge F. A. Gossett. (JAE)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-08-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00444-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187ee9a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-2</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00444_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00444/pdf/USCOURTS-ned-8_04-cr-00444-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00444; USA v. Stewart; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00444-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-08-18</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Deborah D. Cunningham is appointed as counsel for defendant Shawn A. Stewart. Ordered by Magistrate Judge F. A. Gossett. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00444-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Stewart</title>
+  <subTitle>ORDER as to defendant Shawn A. Stewart. The government&apos;s oral motion for detention is granted. The defendant is committed to the custody of the Attorney General or his designated representative for confinement in a correctional facility. Ordered by Magistrate Judge F. A. Gossett. (1 Certified copy to USM)( MLF, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00444-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187ee9c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-3</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00444_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00444/pdf/USCOURTS-ned-8_04-cr-00444-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00444; USA v. Stewart; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00444-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-09-28</dateIssued>
+  <docketText>ORDER as to defendant Shawn A. Stewart. The government&apos;s oral motion for detention is granted. The defendant is committed to the custody of the Attorney General or his designated representative for confinement in a correctional facility. Ordered by Magistrate Judge F. A. Gossett. (1 Certified copy to USM)( MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00444-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Stewart</title>
+  <subTitle>ORDER denying 56 Motion for Reconsideration as to Shawn A. Stewart (1). Pursuant to NECrimR 57.2, a party may appeal this order by filing a &quot;Statement of Appeal of Magistrate Judge&apos;s Order&quot; within ten (10) business days after being served with the order. The party shall specifically state the order or portion thereof appealed from and the basis of the appeal. The appealing party shall file contemporaneously with the statement of appeal a brief setting forth the party&apos;s arguments that the magistrate judge&apos;s order is clearly erroneous or contrary to law. The filing of a statement of appeal does not automatically stay the magistrate judge&apos;s order pending appeal. See NECrimR 57.2.. Ordered by Magistrate Judge F. A. Gossett. (MKR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00444-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187ee9e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-4</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00444_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00444/pdf/USCOURTS-ned-8_04-cr-00444-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00444; USA v. Stewart; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00444-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-11-17</dateIssued>
+  <docketText>ORDER denying 56 Motion for Reconsideration as to Shawn A. Stewart (1). Pursuant to NECrimR 57.2, a party may appeal this order by filing a &quot;Statement of Appeal of Magistrate Judge&apos;s Order&quot; within ten (10) business days after being served with the order. The party shall specifically state the order or portion thereof appealed from and the basis of the appeal. The appealing party shall file contemporaneously with the statement of appeal a brief setting forth the party&apos;s arguments that the magistrate judge&apos;s order is clearly erroneous or contrary to law. The filing of a statement of appeal does not automatically stay the magistrate judge&apos;s order pending appeal. See NECrimR 57.2.. Ordered by Magistrate Judge F. A. Gossett. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00444-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Stewart</title>
+  <subTitle>ORDER that defendant&apos;s attorney is authorized to retain a mental health professional to perform a presentence neuropsyhological evaluation of the defendant and to prepare a written report of the findings as to defendant Shawn A. Stewart. The US Marshal is directed to hold the defendant in the Douglas County, Nebraska - Council Bluffs, Iowa area until completion of the evaluation. The evaluation should be completed by 3/5/2010. Ordered by Chief Judge Joseph F. Bataillon. (1 Certified copy to USM) (JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00444-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187ee57</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-5</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00444_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00444/USCOURTS-ned-8_04-cr-00444-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00444/pdf/USCOURTS-ned-8_04-cr-00444-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00444; USA v. Stewart; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00444-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-01-11</dateIssued>
+  <docketText>ORDER that defendant&apos;s attorney is authorized to retain a mental health professional to perform a presentence neuropsyhological evaluation of the defendant and to prepare a written report of the findings as to defendant Shawn A. Stewart. The US Marshal is directed to hold the defendant in the Douglas County, Nebraska - Council Bluffs, Iowa area until completion of the evaluation. The evaluation should be completed by 3/5/2010. Ordered by Chief Judge Joseph F. Bataillon. (1 Certified copy to USM) (JSF)</docketText>
+</extension>
+</relatedItem>
+</mods>

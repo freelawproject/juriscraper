@@ -1,0 +1,261 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180eb345e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Southern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-26</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-4_05-bk-36501</identifier>
+<identifier type="local">P0b002ee180eb345e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-26</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nysb-4_05-bk-36501</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nysb-4_05-bk-36501</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nysb</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>3353</courtSortOrder>
+ <caseNumber>4:05-bk-36501</caseNumber>
+ <caseOffice>Poughkeepsie</caseOffice>
+ <party fullName="Griffin Valuation &amp; Realty Services, Ltd." lastName="Griffin Valuation &amp; Realty Services, Ltd." role="Appraiser"></party>
+ <party fullName="Capitol Records, Inc." lastName="Capitol Records, Inc." role="Unknown"></party>
+ <party firstName="Mark" fullName="Mark Levon Helm" lastName="Helm" middleName="Levon" role="Debtor"></party>
+ <party firstName="Sandra" fullName="Sandra Dodd Helm" lastName="Helm" middleName="Dodd" role="Debtor"></party>
+ <party fullName="United States Trustee" lastName="United States Trustee" role="U.S. Trustee"></party>
+ <party firstName="Michael" fullName="Michael O&apos;Leary" lastName="O&apos;Leary" role="Trustee"></party>
+ <party fullName="Wachovia Bank, N.A." lastName="Wachovia Bank, N.A." role="Creditor"></party>
+ <party fullName="Clerk of the Court" lastName="Clerk of the Court" role="Clerk of Court"></party>
+ <party fullName="Century 21 - Teran Realty, LLC" lastName="Century 21 - Teran Realty, LLC" role="Realtor"></party>
+ <party firstName="Michael" fullName="Michael O&apos;Leary" lastName="O&apos;Leary" role="Interested Party"></party>
+ <party fullName="Levon Helm Studios, Inc." lastName="Levon Helm Studios, Inc." role="Interested Party"></party>
+ <party fullName="Royalty Recovery, Inc." lastName="Royalty Recovery, Inc." role="Creditor"></party>
+ <party fullName="Advantage Pride Music" lastName="Advantage Pride Music" role="Unknown"></party>
+ <party fullName="United States Internal Revenue Service" lastName="United States Internal Revenue Service" role="Creditor"></party>
+ <party firstName="Joseph" fullName="Joseph J. Forno Jr." generation="Jr." lastName="Forno" middleName="J." role="Creditor"></party>
+</extension>
+<titleInfo>
+ <title>Mark Levon Helm and Sandra Dodd Helm</title>
+ <partNumber>4:05-bk-36501</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-4_05-bk-36501/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">4:05-bk-36501;05-36501</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Southern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Poughkeepsie</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Griffin Valuation &amp; Realty Services, Ltd.</displayForm>
+ <namePart type="family">Griffin Valuation &amp; Realty Services, Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appraiser</description>
+</name>
+<name type="personal">
+ <displayForm>Capitol Records, Inc.</displayForm>
+ <namePart type="family">Capitol Records, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Unknown</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Levon Helm</displayForm>
+ <namePart type="family">Helm</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Sandra Dodd Helm</displayForm>
+ <namePart type="family">Helm</namePart>
+ <namePart type="given">Sandra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>United States Trustee</displayForm>
+ <namePart type="family">United States Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>U.S. Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Michael O&apos;Leary</displayForm>
+ <namePart type="family">O&apos;Leary</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Wachovia Bank, N.A.</displayForm>
+ <namePart type="family">Wachovia Bank, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Clerk of the Court</displayForm>
+ <namePart type="family">Clerk of the Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Clerk of Court</description>
+</name>
+<name type="personal">
+ <displayForm>Century 21 - Teran Realty, LLC</displayForm>
+ <namePart type="family">Century 21 - Teran Realty, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Realtor</description>
+</name>
+<name type="personal">
+ <displayForm>Michael O&apos;Leary</displayForm>
+ <namePart type="family">O&apos;Leary</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Levon Helm Studios, Inc.</displayForm>
+ <namePart type="family">Levon Helm Studios, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Royalty Recovery, Inc.</displayForm>
+ <namePart type="family">Royalty Recovery, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Advantage Pride Music</displayForm>
+ <namePart type="family">Advantage Pride Music</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Unknown</description>
+</name>
+<name type="personal">
+ <displayForm>United States Internal Revenue Service</displayForm>
+ <namePart type="family">United States Internal Revenue Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph J. Forno Jr.</displayForm>
+ <namePart type="family">Forno</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Creditor</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nysb-4_05-bk-36501</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nysb</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>3353</courtSortOrder>
+ <caseNumber>4:05-bk-36501</caseNumber>
+ <caseOffice>Poughkeepsie</caseOffice>
+ <party fullName="Griffin Valuation &amp; Realty Services, Ltd." lastName="Griffin Valuation &amp; Realty Services, Ltd." role="Appraiser"></party>
+ <party fullName="Capitol Records, Inc." lastName="Capitol Records, Inc." role="Unknown"></party>
+ <party firstName="Mark" fullName="Mark Levon Helm" lastName="Helm" middleName="Levon" role="Debtor"></party>
+ <party firstName="Sandra" fullName="Sandra Dodd Helm" lastName="Helm" middleName="Dodd" role="Debtor"></party>
+ <party fullName="United States Trustee" lastName="United States Trustee" role="U.S. Trustee"></party>
+ <party firstName="Michael" fullName="Michael O&apos;Leary" lastName="O&apos;Leary" role="Trustee"></party>
+ <party fullName="Wachovia Bank, N.A." lastName="Wachovia Bank, N.A." role="Creditor"></party>
+ <party fullName="Clerk of the Court" lastName="Clerk of the Court" role="Clerk of Court"></party>
+ <party fullName="Century 21 - Teran Realty, LLC" lastName="Century 21 - Teran Realty, LLC" role="Realtor"></party>
+ <party firstName="Michael" fullName="Michael O&apos;Leary" lastName="O&apos;Leary" role="Interested Party"></party>
+ <party fullName="Levon Helm Studios, Inc." lastName="Levon Helm Studios, Inc." role="Interested Party"></party>
+ <party fullName="Royalty Recovery, Inc." lastName="Royalty Recovery, Inc." role="Creditor"></party>
+ <party fullName="Advantage Pride Music" lastName="Advantage Pride Music" role="Unknown"></party>
+ <party fullName="United States Internal Revenue Service" lastName="United States Internal Revenue Service" role="Creditor"></party>
+ <party firstName="Joseph" fullName="Joseph J. Forno Jr." generation="Jr." lastName="Forno" middleName="J." role="Creditor"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nysb-4_05-bk-36501-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-4_05-bk-36501/USCOURTS-nysb-4_05-bk-36501-0/mods.xml">
+ <titleInfo>
+  <title>Mark Levon Helm and Sandra Dodd Helm</title>
+  <subTitle>Memorandum Opinion granting Debtor&apos;s Motion rejecting executory contract with Royalty Recovery, Inc. signed on 1/9/2006. Debtor&apos;s counsel is to submit an order consistent with this Opinion. (Aguila, Milton)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nysb-4_05-bk-36501-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813c81b4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-4_05-bk-36501/USCOURTS-nysb-4_05-bk-36501-0</identifier>
+ <identifier type="former granule identifier">nysb-4_05-bk-36501_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-4_05-bk-36501/USCOURTS-nysb-4_05-bk-36501-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-4_05-bk-36501/pdf/USCOURTS-nysb-4_05-bk-36501-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-bk-36501; Mark Levon Helm and Sandra Dodd Helm; </searchTitle>
+  <courtName>United States Bankruptcy Court Southern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nysb-4_05-bk-36501-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-09</dateIssued>
+  <docketText>Memorandum Opinion granting Debtor&apos;s Motion rejecting executory contract with Royalty Recovery, Inc. signed on 1/9/2006. Debtor&apos;s counsel is to submit an order consistent with this Opinion. (Aguila, Milton)</docketText>
+</extension>
+</relatedItem>
+</mods>

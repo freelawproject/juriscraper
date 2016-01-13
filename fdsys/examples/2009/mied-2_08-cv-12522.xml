@@ -1,0 +1,178 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18195dfe8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-12522</identifier>
+<identifier type="local">P0b002ee18195dfe8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_08-cv-12522</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_08-cv-12522</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:08-cv-12522</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <party firstName="Annette" fullName="Annette Jackson" lastName="Jackson" role="Plaintiff"></party>
+ <party fullName="Social Security, Commissioner of" lastName="Social Security, Commissioner of" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Jackson v. Social Security, Commissioner of</title>
+ <partNumber>2:08-cv-12522</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-12522/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:08-cv-12522;08-12522</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Annette Jackson</displayForm>
+ <namePart type="family">Jackson</namePart>
+ <namePart type="given">Annette</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security, Commissioner of</displayForm>
+ <namePart type="family">Social Security, Commissioner of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_08-cv-12522</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:08-cv-12522</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <party firstName="Annette" fullName="Annette Jackson" lastName="Jackson" role="Plaintiff"></party>
+ <party fullName="Social Security, Commissioner of" lastName="Social Security, Commissioner of" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-12522-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-12522/USCOURTS-mied-2_08-cv-12522-0/mods.xml">
+ <titleInfo>
+  <title>Jackson v. Social Security, Commissioner of</title>
+  <subTitle>REPORT AND RECOMMENDATION recommending reversing the Commissioner&apos;s decision and remanding case to the Commissioner for further proceedings pursuant to sentence four of 42 U.S.C. 405(g) in accordance with the stipulation of the parties filed this day. Signed by Magistrate Judge Charles E Binder. (PMor)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-12522-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a76e54</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-12522/USCOURTS-mied-2_08-cv-12522-0</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-12522_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-12522/USCOURTS-mied-2_08-cv-12522-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-12522/pdf/USCOURTS-mied-2_08-cv-12522-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-12522; Jackson v. Social Security, Commissioner of; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-12522-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-14</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION recommending reversing the Commissioner&apos;s decision and remanding case to the Commissioner for further proceedings pursuant to sentence four of 42 U.S.C. 405(g) in accordance with the stipulation of the parties filed this day. Signed by Magistrate Judge Charles E Binder. (PMor)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-12522-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-12522/USCOURTS-mied-2_08-cv-12522-1/mods.xml">
+ <titleInfo>
+  <title>Jackson v. Social Security, Commissioner of</title>
+  <subTitle>ORDER Adopting Report and Recommendation 15. The Commissioner&apos;s decision is reversed and this case is remanded to the Commissioner for further proceedings pursuant to sentence four of 42 USC 405(g). Signed by District Judge Arthur J Tarnow. (PMil)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-12522-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a76f17</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-12522/USCOURTS-mied-2_08-cv-12522-1</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-12522_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-12522/USCOURTS-mied-2_08-cv-12522-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-12522/pdf/USCOURTS-mied-2_08-cv-12522-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-12522; Jackson v. Social Security, Commissioner of; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-12522-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-16</dateIssued>
+  <docketText>ORDER Adopting Report and Recommendation 15. The Commissioner&apos;s decision is reversed and this case is remanded to the Commissioner for further proceedings pursuant to sentence four of 42 USC 405(g). Signed by District Judge Arthur J Tarnow. (PMil)</docketText>
+</extension>
+</relatedItem>
+</mods>

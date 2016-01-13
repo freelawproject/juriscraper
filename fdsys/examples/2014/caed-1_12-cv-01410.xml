@@ -1,0 +1,627 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1895b9442">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-06-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-06-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410</identifier>
+<identifier type="local">P0b002ee1895b9442</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-06-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-06-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-01410</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01410</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01410</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>790</natureSuitCode>
+ <natureSuit>Other Labor Litigation</natureSuit>
+ <cause>05:704 Labor Litigation</cause>
+ <party fullName="Memorial Hospital Foundation" lastName="Memorial Hospital Foundation" role="Defendant"></party>
+ <party fullName="Memorial Medical Center" lastName="Memorial Medical Center" role="Defendant"></party>
+ <party fullName="Sutter Central Valley Hospitals dba Memorial Medical Center" lastName="Sutter Central Valley Hospitals dba Memorial Medical Center" role="Defendant"></party>
+ <party fullName="Sutter Health" lastName="Sutter Health" role="Defendant"></party>
+ <party firstName="Diane" fullName="Diane Thomas-Young" lastName="Thomas-Young" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+ <partNumber>1:12-cv-01410</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-01410;12-1410</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Memorial Hospital Foundation</displayForm>
+ <namePart type="family">Memorial Hospital Foundation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Memorial Medical Center</displayForm>
+ <namePart type="family">Memorial Medical Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sutter Central Valley Hospitals dba Memorial Medical Center</displayForm>
+ <namePart type="family">Sutter Central Valley Hospitals dba Memorial Medical Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sutter Health</displayForm>
+ <namePart type="family">Sutter Health</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Diane Thomas-Young</displayForm>
+ <namePart type="family">Thomas-Young</namePart>
+ <namePart type="given">Diane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01410</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01410</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>790</natureSuitCode>
+ <natureSuit>Other Labor Litigation</natureSuit>
+ <cause>05:704 Labor Litigation</cause>
+ <party fullName="Memorial Hospital Foundation" lastName="Memorial Hospital Foundation" role="Defendant"></party>
+ <party fullName="Memorial Medical Center" lastName="Memorial Medical Center" role="Defendant"></party>
+ <party fullName="Sutter Central Valley Hospitals dba Memorial Medical Center" lastName="Sutter Central Valley Hospitals dba Memorial Medical Center" role="Defendant"></party>
+ <party fullName="Sutter Health" lastName="Sutter Health" role="Defendant"></party>
+ <party firstName="Diane" fullName="Diane Thomas-Young" lastName="Thomas-Young" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-0/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>SCHEDULING ORDER (Fed.R.Civ.P 16), signed by Magistrate Judge Sheila K. Oberto on 12/4/2012. (Initial Disclosures: 12/3/2012, Non Expert Discovery ddl 9/20/2013, Expert Discovery ddl 10/30/2013, Non Dispositive Motion Filing ddl 10/30/2013, Dispositive Motion Filing ddl 12/16/2013, Mid-Discovery Status Conference set for 6/12/2013 at 10:00 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto, Settlement Conference set for 8/29/2013 at 10:00 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto, Pretrial Conference set for 3/19/2014 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, and Jury Trial set for 5/13/2014 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2ce9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-12-04</dateIssued>
+  <docketText>SCHEDULING ORDER (Fed.R.Civ.P 16), signed by Magistrate Judge Sheila K. Oberto on 12/4/2012. (Initial Disclosures: 12/3/2012, Non Expert Discovery ddl 9/20/2013, Expert Discovery ddl 10/30/2013, Non Dispositive Motion Filing ddl 10/30/2013, Dispositive Motion Filing ddl 12/16/2013, Mid-Discovery Status Conference set for 6/12/2013 at 10:00 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto, Settlement Conference set for 8/29/2013 at 10:00 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto, Pretrial Conference set for 3/19/2014 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, and Jury Trial set for 5/13/2014 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-1/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>ORDER on Request for Stipulated Protective Order. The parties&apos; stipulated request for a protective order (Doc. 12) is DENIED without prejudice to renewing the request. Order signed by Magistrate Judge Sheila K. Oberto on 5/17/2013. (Timken, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2c3b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-05-20</dateIssued>
+  <docketText>ORDER on Request for Stipulated Protective Order. The parties&apos; stipulated request for a protective order (Doc. 12) is DENIED without prejudice to renewing the request. Order signed by Magistrate Judge Sheila K. Oberto on 5/17/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-2/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>STIPULATION and PROTECTIVE ORDER regarding confidential proprietary, private information. Order signed by Magistrate Judge Sheila K. Oberto on 5/29/2013. (Timken, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2cea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-05-30</dateIssued>
+  <docketText>STIPULATION and PROTECTIVE ORDER regarding confidential proprietary, private information. Order signed by Magistrate Judge Sheila K. Oberto on 5/29/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-3/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>ORDER requiring supplemental briefing re: Informal Discovery Dispute Conference, signed by Magistrate Judge Sheila K. Oberto on 6/17/2013. (Kusamura, W)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2cee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-06-17</dateIssued>
+  <docketText>ORDER requiring supplemental briefing re: Informal Discovery Dispute Conference, signed by Magistrate Judge Sheila K. Oberto on 6/17/2013. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-4/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>ORDER Re: Informal Discovery Dispute Conference, signed by Magistrate Judge Sheila K. Oberto on 6/27/2013. (Defendant may file a supplemental brief re plaintiff&apos;s emotional distress damages no later than July 1, 2013, at 12:00 p.m. (noon). Plaintiff shall file an opposition brief by no later than July 3, 2013, at 12:00 p.m. (noon). The motion shall be deemed submitted at that time; no further argument or briefing will be permitted unless requested by the Court. The discovery deadline is not continued at this time.)(Gaumnitz, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2ce8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-06-27</dateIssued>
+  <docketText>ORDER Re: Informal Discovery Dispute Conference, signed by Magistrate Judge Sheila K. Oberto on 6/27/2013. (Defendant may file a supplemental brief re plaintiff&apos;s emotional distress damages no later than July 1, 2013, at 12:00 p.m. (noon). Plaintiff shall file an opposition brief by no later than July 3, 2013, at 12:00 p.m. (noon). The motion shall be deemed submitted at that time; no further argument or briefing will be permitted unless requested by the Court. The discovery deadline is not continued at this time.)(Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-5/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>ORDER DENYING Defendant&apos;s request for production of Plaintiff&apos;s medical and psychotherapy records. Defendant&apos;s request that Plaintiff produce her medical and psychotherapy records is DENIED; Plaintiff need not respond to Defendant&apos;s Special Interrogatory No. 21, which requires Plaintiff to identify all medical providers she has sought treatment with over the last eight (8) years; and pursuant to Plaintiff&apos;s representations, Plaintiff shall not introduce evidence of medical records or expert testimony at trial regarding her claim for emotional distress. Order signed by Magistrate Judge Sheila K. Oberto on 7/10/2013. (Timken, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2c39</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-07-10</dateIssued>
+  <docketText>ORDER DENYING Defendant&apos;s request for production of Plaintiff&apos;s medical and psychotherapy records. Defendant&apos;s request that Plaintiff produce her medical and psychotherapy records is DENIED; Plaintiff need not respond to Defendant&apos;s Special Interrogatory No. 21, which requires Plaintiff to identify all medical providers she has sought treatment with over the last eight (8) years; and pursuant to Plaintiff&apos;s representations, Plaintiff shall not introduce evidence of medical records or expert testimony at trial regarding her claim for emotional distress. Order signed by Magistrate Judge Sheila K. Oberto on 7/10/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-6/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>ORDER re SETTLEMENT CONFERENCE signed by Magistrate Judge Sheila K. Oberto on 7/22/2013. (Timken, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2c3c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-07-22</dateIssued>
+  <docketText>ORDER re SETTLEMENT CONFERENCE signed by Magistrate Judge Sheila K. Oberto on 7/22/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-7/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>STIPULATION and ORDER to CONTINUE the Settlement Conference. The Settlement Conference currently set for 8/29/2013, is CONTINUED to 12/10/2013, at 10:00 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. Order signed by Magistrate Judge Sheila K. Oberto on 7/30/2013. (Timken, A)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2ce6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-07-30</dateIssued>
+  <docketText>STIPULATION and ORDER to CONTINUE the Settlement Conference. The Settlement Conference currently set for 8/29/2013, is CONTINUED to 12/10/2013, at 10:00 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. Order signed by Magistrate Judge Sheila K. Oberto on 7/30/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-8/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>ORDER re SETTLEMENT CONFERENCE signed by Magistrate Judge Sheila K. Oberto on 11/13/2013. (Timken, A)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2cf1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-8</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-11-13</dateIssued>
+  <docketText>ORDER re SETTLEMENT CONFERENCE signed by Magistrate Judge Sheila K. Oberto on 11/13/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-9/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>STIPULATION and ORDER Regarding new dates for filing and responding to motion for summary judgment. Defendant will file a motion for summary judgment and/or dispositive motion by December 18, 2013; Plaintiff will file her opposition brief to the motion for summary judgment and/or dispositive motion by January 8, 2014; Defendant will file its reply brief by January 20, 2014; and the hearing for the motion for summary judgment shall be set for January 27, 2014. To the extent that Plaintiff elects to file a dispositive motion on January 8, 2014, Defendants opposition shall be filed by January 21, 2014, any reply shall be filed by January 27, 2014, and the hearing on both motions shall be set for February 3, 2014. If Plaintiff elects not to file a dispositive motion, the dates stipulated to by the parties stand. Order signed by Magistrate Judge Sheila K. Oberto on 12/12/2013. (Timken, A)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2cec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-9</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-12-12</dateIssued>
+  <docketText>STIPULATION and ORDER Regarding new dates for filing and responding to motion for summary judgment. Defendant will file a motion for summary judgment and/or dispositive motion by December 18, 2013; Plaintiff will file her opposition brief to the motion for summary judgment and/or dispositive motion by January 8, 2014; Defendant will file its reply brief by January 20, 2014; and the hearing for the motion for summary judgment shall be set for January 27, 2014. To the extent that Plaintiff elects to file a dispositive motion on January 8, 2014, Defendants opposition shall be filed by January 21, 2014, any reply shall be filed by January 27, 2014, and the hearing on both motions shall be set for February 3, 2014. If Plaintiff elects not to file a dispositive motion, the dates stipulated to by the parties stand. Order signed by Magistrate Judge Sheila K. Oberto on 12/12/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-10/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>ORDER re SETTLEMENT CONFERENCE signed by Magistrate Judge Sheila K. Oberto on 1/2/2014. (Timken, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2c3a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-10</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER re SETTLEMENT CONFERENCE signed by Magistrate Judge Sheila K. Oberto on 1/2/2014. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-11/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>ORDER vacating hearing date of January 27, 2014 and taking matter under submission. signed by District Judge Anthony W. Ishii on 1/23/14. (Nazaroff, H)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2ceb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-11</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2014-01-23</dateIssued>
+  <docketText>ORDER vacating hearing date of January 27, 2014 and taking matter under submission. signed by District Judge Anthony W. Ishii on 1/23/14. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-12/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>ORDER re SETTLEMENT CONFERENCE, signed by Magistrate Judge Sheila K. Oberto on 1/27/2014. (Gaumnitz, R)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2cf2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-12</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2014-01-27</dateIssued>
+  <docketText>ORDER re SETTLEMENT CONFERENCE, signed by Magistrate Judge Sheila K. Oberto on 1/27/2014. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-13/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>STIPULATION and ORDER to Vacate Trial Date, signed by District Judge Anthony W. Ishii on 2/21/14. (Gonzalez, R)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2ce7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-13</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2014-02-24</dateIssued>
+  <docketText>STIPULATION and ORDER to Vacate Trial Date, signed by District Judge Anthony W. Ishii on 2/21/14. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-14/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>ORDER ; granting in part and denying in part 43 Motion for Summary Judgment ; resolved 29 Motion for Reconsideration signed by District Judge Anthony W. Ishii on 3/19/14. (Nazaroff, H)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2cef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-14</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2014-03-19</dateIssued>
+  <docketText>ORDER ; granting in part and denying in part 43 Motion for Summary Judgment ; resolved 29 Motion for Reconsideration signed by District Judge Anthony W. Ishii on 3/19/14. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-15/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>ORDER Directing Briefing on 80 Issue of Merit Pay Increases, signed by District Judge Anthony W. Ishii on 4/4/2014. (Defendant to file supplemental motion not later than twenty-one (21) days from the date of service of this order. Defendant shall file an opposition not later than fourteen (14) days from the date of service of Defendant&apos;s motion. Defendants may file and serve any reply brief within seven (7) days of the filing of Plaintiff&apos;s opposition.)(Gaumnitz, R)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2ced</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-15</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-04-04</dateIssued>
+  <docketText>ORDER Directing Briefing on 80 Issue of Merit Pay Increases, signed by District Judge Anthony W. Ishii on 4/4/2014. (Defendant to file supplemental motion not later than twenty-one (21) days from the date of service of this order. Defendant shall file an opposition not later than fourteen (14) days from the date of service of Defendant&apos;s motion. Defendants may file and serve any reply brief within seven (7) days of the filing of Plaintiff&apos;s opposition.)(Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01410-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-16/mods.xml">
+ <titleInfo>
+  <title>Thomas-Young v. Memorial Hospital Foundation et al</title>
+  <subTitle>MEMORANDUM, OPINION and ORDER; ORDERED Judgment In Favor of Defendant, signed by District Judge Anthony W. Ishii on 06/17/2014. CASE CLOSED (Martin-Gill, S)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895c2cf0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-16</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01410_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01410/USCOURTS-caed-1_12-cv-01410-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01410/pdf/USCOURTS-caed-1_12-cv-01410-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01410; Thomas-Young v. Memorial Hospital Foundation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01410-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2014-06-18</dateIssued>
+  <docketText>MEMORANDUM, OPINION and ORDER; ORDERED Judgment In Favor of Defendant, signed by District Judge Anthony W. Ishii on 06/17/2014. CASE CLOSED (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

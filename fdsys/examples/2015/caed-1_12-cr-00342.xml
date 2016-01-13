@@ -1,0 +1,910 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c27684a">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-04-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-04-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342</identifier>
+<identifier type="local">P0b002ee18c27684a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-04-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-04-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cr-00342</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cr-00342</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cr-00342</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Sengphachanh" fullName="Sengphachanh Boungnavong" lastName="Boungnavong" role="Defendant"></party>
+ <party firstName="Sam" fullName="Sam Kounhavong" lastName="Kounhavong" role="Defendant"></party>
+ <party firstName="Symery" fullName="Symery Saykganya" lastName="Saykganya" role="Defendant"></party>
+ <party firstName="Phanetavanh" fullName="Phanetavanh Southammavong" lastName="Southammavong" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Thounethepmith" fullName="Thounethepmith Vongsenekeo" lastName="Vongsenekeo" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Vongsenekeo et al</title>
+ <partNumber>1:12-cr-00342</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cr-00342;12-342</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Sengphachanh Boungnavong</displayForm>
+ <namePart type="family">Boungnavong</namePart>
+ <namePart type="given">Sengphachanh</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sam Kounhavong</displayForm>
+ <namePart type="family">Kounhavong</namePart>
+ <namePart type="given">Sam</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Symery Saykganya</displayForm>
+ <namePart type="family">Saykganya</namePart>
+ <namePart type="given">Symery</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Phanetavanh Southammavong</displayForm>
+ <namePart type="family">Southammavong</namePart>
+ <namePart type="given">Phanetavanh</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Thounethepmith Vongsenekeo</displayForm>
+ <namePart type="family">Vongsenekeo</namePart>
+ <namePart type="given">Thounethepmith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cr-00342</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cr-00342</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Sengphachanh" fullName="Sengphachanh Boungnavong" lastName="Boungnavong" role="Defendant"></party>
+ <party firstName="Sam" fullName="Sam Kounhavong" lastName="Kounhavong" role="Defendant"></party>
+ <party firstName="Symery" fullName="Symery Saykganya" lastName="Saykganya" role="Defendant"></party>
+ <party firstName="Phanetavanh" fullName="Phanetavanh Southammavong" lastName="Southammavong" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Thounethepmith" fullName="Thounethepmith Vongsenekeo" lastName="Vongsenekeo" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>DETENTION ORDER as to Sengphachanh Boungnavong (4), signed by Magistrate Judge Barbara A. McAuliffe on 9/26/2012. (Herman, H)[1:12-mj-00220-BAM]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c42a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-09-26</dateIssued>
+  <docketText>DETENTION ORDER as to Sengphachanh Boungnavong (4), signed by Magistrate Judge Barbara A. McAuliffe on 9/26/2012. (Herman, H)[1:12-mj-00220-BAM]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>ORDER SETTING CONDITIONS of RELEASE as to Sam Kounhavong (3), signed by Magistrate Judge Gary S. Austin on 10/1/12. (Gonzalez, R)[1:12-mj-00220-BAM]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c404</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-10-01</dateIssued>
+  <docketText>ORDER SETTING CONDITIONS of RELEASE as to Sam Kounhavong (3), signed by Magistrate Judge Gary S. Austin on 10/1/12. (Gonzalez, R)[1:12-mj-00220-BAM]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>DETENTION ORDER as to Thounethepmith Vongsenekeo signed by Magistrate Judge Gary S. Austin on 10/1/2012. (Bradley, A)[1:12-mj-00220-BAM]</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c40f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-10-03</dateIssued>
+  <docketText>DETENTION ORDER as to Thounethepmith Vongsenekeo signed by Magistrate Judge Gary S. Austin on 10/1/2012. (Bradley, A)[1:12-mj-00220-BAM]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>DETENTION ORDER as to Phanetavanh Southammavong signed by Magistrate Judge Gary S. Austin on 10/1/2012. (Bradley, A)[1:12-mj-00220-BAM]</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c3fc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-10-03</dateIssued>
+  <docketText>DETENTION ORDER as to Phanetavanh Southammavong signed by Magistrate Judge Gary S. Austin on 10/1/2012. (Bradley, A)[1:12-mj-00220-BAM]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>DETENTION ORDER as to Symery Saykganya signed by Magistrate Judge Gary S. Austin on 10/3/2012. (Bradley, A)[1:12-mj-00220-BAM]</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c3fe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-10-03</dateIssued>
+  <docketText>DETENTION ORDER as to Symery Saykganya signed by Magistrate Judge Gary S. Austin on 10/3/2012. (Bradley, A)[1:12-mj-00220-BAM]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>STIPULATION to continue Status Conference Hearing ; ORDER, signed by Magistrate Judge Dennis L. Beck on 10/19/2012. (Status Conference as to Thounethepmith Vongsenekeo (1), Phanetavanh Southammavong (2), Sam Kounhavong (3), Sengphachanh Boungnavong (4), and Symery Saykganya (5) currently set for 10/22/2012 has been CONTINUED to 12/10/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck) Excludable started : XT Start: 10/22/2012 Stop: 12/10/2012. (Figueroa, O)STIPULATION to continue Status Conference Hearing ; ORDER, signed by Magistrate Judge Dennis L. Beck on 10/19/2012. (Status Conference as to Thounethepmith Vongsenekeo (1), Phanetavanh Southammavong (2), Sam Kounhavong (3), Sengphachanh Boungnavong (4), and Symery Saykganya (5) currently set for 10/22/2012 has been CONTINUED to 12/10/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck) Excludable started : XT Start: 10/22/2012 Stop: 12/10/2012. (Figueroa, O)STIPULATION to continue Status Conference Hearing ; ORDER, signed by Magistrate Judge Dennis L. Beck on 10/19/2012. (Status Conference as to Thounethepmith Vongsenekeo (1), Phanetavanh Southammavong (2), Sam Kounhavong (3), Sengphachanh Boungnavong (4), and Symery Saykganya (5) currently set for 10/22/2012 has been CONTINUED to 12/10/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck) Excludable started : XT Start: 10/22/2012 Stop: 12/10/2012. (Figueroa, O)STIPULATION to continue Status Conference Hearing ; ORDER, signed by Magistrate Judge Dennis L. Beck on 10/19/2012. (Status Conference as to Thounethepmith Vongsenekeo (1), Phanetavanh Southammavong (2), Sam Kounhavong (3), Sengphachanh Boungnavong (4), and Symery Saykganya (5) currently set for 10/22/2012 has been CONTINUED to 12/10/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck) Excludable started : XT Start: 10/22/2012 Stop: 12/10/2012. (Figueroa, O)STIPULATION to continue Status Conference Hearing ; ORDER, signed by Magistrate Judge Dennis L. Beck on 10/19/2012. (Status Conference as to Thounethepmith Vongsenekeo (1), Phanetavanh Southammavong (2), Sam Kounhavong (3), Sengphachanh Boungnavong (4), and Symery Saykganya (5) currently set for 10/22/2012 has been CONTINUED to 12/10/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck) Excludable started : XT Start: 10/22/2012 Stop: 12/10/2012. (Figueroa, O)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c3aa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-10-19</dateIssued>
+  <docketText>STIPULATION to continue Status Conference Hearing ; ORDER, signed by Magistrate Judge Dennis L. Beck on 10/19/2012. (Status Conference as to Thounethepmith Vongsenekeo (1), Phanetavanh Southammavong (2), Sam Kounhavong (3), Sengphachanh Boungnavong (4), and Symery Saykganya (5) currently set for 10/22/2012 has been CONTINUED to 12/10/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck) Excludable started : XT Start: 10/22/2012 Stop: 12/10/2012. (Figueroa, O)STIPULATION to continue Status Conference Hearing ; ORDER, signed by Magistrate Judge Dennis L. Beck on 10/19/2012. (Status Conference as to Thounethepmith Vongsenekeo (1), Phanetavanh Southammavong (2), Sam Kounhavong (3), Sengphachanh Boungnavong (4), and Symery Saykganya (5) currently set for 10/22/2012 has been CONTINUED to 12/10/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck) Excludable started : XT Start: 10/22/2012 Stop: 12/10/2012. (Figueroa, O)STIPULATION to continue Status Conference Hearing ; ORDER, signed by Magistrate Judge Dennis L. Beck on 10/19/2012. (Status Conference as to Thounethepmith Vongsenekeo (1), Phanetavanh Southammavong (2), Sam Kounhavong (3), Sengphachanh Boungnavong (4), and Symery Saykganya (5) currently set for 10/22/2012 has been CONTINUED to 12/10/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck) Excludable started : XT Start: 10/22/2012 Stop: 12/10/2012. (Figueroa, O)STIPULATION to continue Status Conference Hearing ; ORDER, signed by Magistrate Judge Dennis L. Beck on 10/19/2012. (Status Conference as to Thounethepmith Vongsenekeo (1), Phanetavanh Southammavong (2), Sam Kounhavong (3), Sengphachanh Boungnavong (4), and Symery Saykganya (5) currently set for 10/22/2012 has been CONTINUED to 12/10/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck) Excludable started : XT Start: 10/22/2012 Stop: 12/10/2012. (Figueroa, O)STIPULATION to continue Status Conference Hearing ; ORDER, signed by Magistrate Judge Dennis L. Beck on 10/19/2012. (Status Conference as to Thounethepmith Vongsenekeo (1), Phanetavanh Southammavong (2), Sam Kounhavong (3), Sengphachanh Boungnavong (4), and Symery Saykganya (5) currently set for 10/22/2012 has been CONTINUED to 12/10/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck) Excludable started : XT Start: 10/22/2012 Stop: 12/10/2012. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>ORDER SETTING Briefing Schedule and Hearing on Motion for Conflict of Interest Inquiry [Doc. 49] as to Thounethepmith Vongsenekeo. Defendant shall file a response to the motion no later than Jan. 4, 2013. The Court SETS a hearing on the Motion for January 9, 2013 at 01:30 PM in Courtroom 8 (BAM) before Magistrate Judge Barbara A. McAuliffe. signed by Magistrate Judge Barbara A. McAuliffe on 12/20/2012. (Herman, H)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c42d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-12-20</dateIssued>
+  <docketText>ORDER SETTING Briefing Schedule and Hearing on Motion for Conflict of Interest Inquiry [Doc. 49] as to Thounethepmith Vongsenekeo. Defendant shall file a response to the motion no later than Jan. 4, 2013. The Court SETS a hearing on the Motion for January 9, 2013 at 01:30 PM in Courtroom 8 (BAM) before Magistrate Judge Barbara A. McAuliffe. signed by Magistrate Judge Barbara A. McAuliffe on 12/20/2012. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>STIPULATION and ORDER GRANTING the continuance of the briefing schedule and motions hearing currently set for 5/6/2013 before Judge Anthony W. Ishii. The Motions Hearing will now be held on 5/13/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Motions to be filed by 3/18/2013; responses due by 4/18/2013; and replies, if any, due by 4/29/2013. Time is excluded under the Speedy Trial Act under 18 USC 3161(h)(1)(D) and 18 USC 3161(h)(7)(A). Order signed by District Judge Anthony W. Ishii on 3/15/2013. (Rooney, M)STIPULATION and ORDER GRANTING the continuance of the briefing schedule and motions hearing currently set for 5/6/2013 before Judge Anthony W. Ishii. The Motions Hearing will now be held on 5/13/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Motions to be filed by 3/18/2013; responses due by 4/18/2013; and replies, if any, due by 4/29/2013. Time is excluded under the Speedy Trial Act under 18 USC 3161(h)(1)(D) and 18 USC 3161(h)(7)(A). Order signed by District Judge Anthony W. Ishii on 3/15/2013. (Rooney, M)STIPULATION and ORDER GRANTING the continuance of the briefing schedule and motions hearing currently set for 5/6/2013 before Judge Anthony W. Ishii. The Motions Hearing will now be held on 5/13/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Motions to be filed by 3/18/2013; responses due by 4/18/2013; and replies, if any, due by 4/29/2013. Time is excluded under the Speedy Trial Act under 18 USC 3161(h)(1)(D) and 18 USC 3161(h)(7)(A). Order signed by District Judge Anthony W. Ishii on 3/15/2013. (Rooney, M)STIPULATION and ORDER GRANTING the continuance of the briefing schedule and motions hearing currently set for 5/6/2013 before Judge Anthony W. Ishii. The Motions Hearing will now be held on 5/13/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Motions to be filed by 3/18/2013; responses due by 4/18/2013; and replies, if any, due by 4/29/2013. Time is excluded under the Speedy Trial Act under 18 USC 3161(h)(1)(D) and 18 USC 3161(h)(7)(A). Order signed by District Judge Anthony W. Ishii on 3/15/2013. (Rooney, M)STIPULATION and ORDER GRANTING the continuance of the briefing schedule and motions hearing currently set for 5/6/2013 before Judge Anthony W. Ishii. The Motions Hearing will now be held on 5/13/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Motions to be filed by 3/18/2013; responses due by 4/18/2013; and replies, if any, due by 4/29/2013. Time is excluded under the Speedy Trial Act under 18 USC 3161(h)(1)(D) and 18 USC 3161(h)(7)(A). Order signed by District Judge Anthony W. Ishii on 3/15/2013. (Rooney, M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c42b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-03-15</dateIssued>
+  <docketText>STIPULATION and ORDER GRANTING the continuance of the briefing schedule and motions hearing currently set for 5/6/2013 before Judge Anthony W. Ishii. The Motions Hearing will now be held on 5/13/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Motions to be filed by 3/18/2013; responses due by 4/18/2013; and replies, if any, due by 4/29/2013. Time is excluded under the Speedy Trial Act under 18 USC 3161(h)(1)(D) and 18 USC 3161(h)(7)(A). Order signed by District Judge Anthony W. Ishii on 3/15/2013. (Rooney, M)STIPULATION and ORDER GRANTING the continuance of the briefing schedule and motions hearing currently set for 5/6/2013 before Judge Anthony W. Ishii. The Motions Hearing will now be held on 5/13/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Motions to be filed by 3/18/2013; responses due by 4/18/2013; and replies, if any, due by 4/29/2013. Time is excluded under the Speedy Trial Act under 18 USC 3161(h)(1)(D) and 18 USC 3161(h)(7)(A). Order signed by District Judge Anthony W. Ishii on 3/15/2013. (Rooney, M)STIPULATION and ORDER GRANTING the continuance of the briefing schedule and motions hearing currently set for 5/6/2013 before Judge Anthony W. Ishii. The Motions Hearing will now be held on 5/13/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Motions to be filed by 3/18/2013; responses due by 4/18/2013; and replies, if any, due by 4/29/2013. Time is excluded under the Speedy Trial Act under 18 USC 3161(h)(1)(D) and 18 USC 3161(h)(7)(A). Order signed by District Judge Anthony W. Ishii on 3/15/2013. (Rooney, M)STIPULATION and ORDER GRANTING the continuance of the briefing schedule and motions hearing currently set for 5/6/2013 before Judge Anthony W. Ishii. The Motions Hearing will now be held on 5/13/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Motions to be filed by 3/18/2013; responses due by 4/18/2013; and replies, if any, due by 4/29/2013. Time is excluded under the Speedy Trial Act under 18 USC 3161(h)(1)(D) and 18 USC 3161(h)(7)(A). Order signed by District Judge Anthony W. Ishii on 3/15/2013. (Rooney, M)STIPULATION and ORDER GRANTING the continuance of the briefing schedule and motions hearing currently set for 5/6/2013 before Judge Anthony W. Ishii. The Motions Hearing will now be held on 5/13/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Motions to be filed by 3/18/2013; responses due by 4/18/2013; and replies, if any, due by 4/29/2013. Time is excluded under the Speedy Trial Act under 18 USC 3161(h)(1)(D) and 18 USC 3161(h)(7)(A). Order signed by District Judge Anthony W. Ishii on 3/15/2013. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>Stipulation regarding advancement; ORDER, signed by District Judge Anthony W. Ishii on 04/24/2013. (Change of Plea Hearing as to Phanetavanh Southammavong (2), currently set for 5/13/2013 has been ADVANCED to 4/29/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii) (Figueroa, O)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c429</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-8</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-04-24</dateIssued>
+  <docketText>Stipulation regarding advancement; ORDER, signed by District Judge Anthony W. Ishii on 04/24/2013. (Change of Plea Hearing as to Phanetavanh Southammavong (2), currently set for 5/13/2013 has been ADVANCED to 4/29/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>DETENTION ORDER as to Thounethepmith Vongsenekeo signed by Magistrate Judge Gary S. Austin on 5/6/2013. (Martinez, A)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c40e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-9</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-05-07</dateIssued>
+  <docketText>DETENTION ORDER as to Thounethepmith Vongsenekeo signed by Magistrate Judge Gary S. Austin on 5/6/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>ORDER RECONVEYING PROPERTY BOND as to Thounethepmith Vongsenekeo signed by Magistrate Judge Gary S. Austin on 5/7/2013. (Jessen, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c42c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-10</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-05-07</dateIssued>
+  <docketText>ORDER RECONVEYING PROPERTY BOND as to Thounethepmith Vongsenekeo signed by Magistrate Judge Gary S. Austin on 5/7/2013. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>STIPULATION and ORDER to Withdraw Motion to Compel Discovery and Vacating Hearing Date of 5/13/2013 as to Thounethepmith Vongsenekeo, signed by District Judge Anthony W. Ishii on 5/9/2013. (Jessen, A)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c403</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-11</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-05-10</dateIssued>
+  <docketText>STIPULATION and ORDER to Withdraw Motion to Compel Discovery and Vacating Hearing Date of 5/13/2013 as to Thounethepmith Vongsenekeo, signed by District Judge Anthony W. Ishii on 5/9/2013. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>JUDGMENT and COMMITMENT, as to Phanetavanh Southammavong (2), signed by District Judge Anthony W. Ishii on 07/10/2013. (Figueroa, O)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c40c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-12</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2013-07-10</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT, as to Phanetavanh Southammavong (2), signed by District Judge Anthony W. Ishii on 07/10/2013. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>ORDER RECONVEYING PROPERTY BOND as to Thounethepmith Vongsenekeo signed by Magistrate Judge Gary S. Austin on 9/16/2013. (Jessen, A)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c42e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-13</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2013-09-16</dateIssued>
+  <docketText>ORDER RECONVEYING PROPERTY BOND as to Thounethepmith Vongsenekeo signed by Magistrate Judge Gary S. Austin on 9/16/2013. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>JUDGMENT and COMMITMENT, as to Thounethepmith Vongsenekeo (1), signed by District Judge Anthony W. Ishii on 3/4/2014. (Figueroa, O)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c402</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-14</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2014-03-04</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT, as to Thounethepmith Vongsenekeo (1), signed by District Judge Anthony W. Ishii on 3/4/2014. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>ORDER as to Sam Kounhavong Change of Plea Hearing set for 3/24/2014 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Status Conference set before Magistrate McAuliffe on 3/24/14 is ordered vacated. signed by District Judge Anthony W. Ishii on 3/13/14. (Nazaroff, H)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c3fd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-15</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-03-14</dateIssued>
+  <docketText>ORDER as to Sam Kounhavong Change of Plea Hearing set for 3/24/2014 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Status Conference set before Magistrate McAuliffe on 3/24/14 is ordered vacated. signed by District Judge Anthony W. Ishii on 3/13/14. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>JUDGMENT and COMMITMENT, as to Sengphachanh Boungnavong (4), signed by District Judge Anthony W. Ishii on 05/02/2014. (Figueroa, O)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c401</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-16</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2014-05-02</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT, as to Sengphachanh Boungnavong (4), signed by District Judge Anthony W. Ishii on 05/02/2014. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>ORDER GRANTING the parties&apos; stipulation as to Sam Kounhavong to continue the Sentencing Hearing currently set for 6/2/2014 to 7/7/2014 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Order signed by District Judge Anthony W. Ishii on 5/21/2014. (Rooney, M)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c411</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-17</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2014-05-21</dateIssued>
+  <docketText>ORDER GRANTING the parties&apos; stipulation as to Sam Kounhavong to continue the Sentencing Hearing currently set for 6/2/2014 to 7/7/2014 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Order signed by District Judge Anthony W. Ishii on 5/21/2014. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>Stipulation and Order to continue, signed by District Judge Anthony W. Ishii on 05/22/2014. (Sentencing as to Symery Saykganya (5), currently set for 06/16/2014 has been CONTINUED to 7/7/2014 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii) (Figueroa, O)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c410</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-18</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2014-05-23</dateIssued>
+  <docketText>Stipulation and Order to continue, signed by District Judge Anthony W. Ishii on 05/22/2014. (Sentencing as to Symery Saykganya (5), currently set for 06/16/2014 has been CONTINUED to 7/7/2014 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>Order to continue sentencing hearing, signed by District Judge Anthony W. Ishii on 07/01/2014. (Sentencing as to Sam Kounhavong (3), currently set for 7/7/2014 HAS BEEN CONTINUED TO 9/8/2014 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii) (Figueroa, O)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c40d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-19</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2014-07-02</dateIssued>
+  <docketText>Order to continue sentencing hearing, signed by District Judge Anthony W. Ishii on 07/01/2014. (Sentencing as to Sam Kounhavong (3), currently set for 7/7/2014 HAS BEEN CONTINUED TO 9/8/2014 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>JUDGMENT and COMMITMENT, as to Symery Saykganya (5), signed by District Judge Anthony W. Ishii on 07/08/2014. (Figueroa, O)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c412</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-20</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2014-07-08</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT, as to Symery Saykganya (5), signed by District Judge Anthony W. Ishii on 07/08/2014. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-21/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>JUDGMENT and COMMITMENT, as to Sam Kounhavong (3), signed by District Judge Anthony W. Ishii on 9/12/2014. (Figueroa, O)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c40b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-21</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2014-09-12</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT, as to Sam Kounhavong (3), signed by District Judge Anthony W. Ishii on 9/12/2014. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-22/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>ORDER Extending Self-Surrender Date as to Sam Kounhavong (3), signed by District Judge Anthony W. Ishii on 1/5/2015. (IT IS HEREBY ORDERED that the defendants previously ordered self-surrender date of January 5, 2015, is delayed until January 26, 2015. All other orders regarding sentencing remain in full force and effect.) (Gaumnitz, R)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c3fb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-22</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER Extending Self-Surrender Date as to Sam Kounhavong (3), signed by District Judge Anthony W. Ishii on 1/5/2015. (IT IS HEREBY ORDERED that the defendants previously ordered self-surrender date of January 5, 2015, is delayed until January 26, 2015. All other orders regarding sentencing remain in full force and effect.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-23/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>SECOND ORDER Extending Self-Surrender Date as to Sam Kounhavong (3), signed by District Judge Anthony W. Ishii on 1/23/2015. (IT IS HEREBY ORDERED that the defendant&apos;s previously ordered self-surrender date of January 26, 2015, is delayed until March 2, 2015. All other orders regarding sentencing remain in full force and effect.) (Gaumnitz, R)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c3ff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-23</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2015-01-23</dateIssued>
+  <docketText>SECOND ORDER Extending Self-Surrender Date as to Sam Kounhavong (3), signed by District Judge Anthony W. Ishii on 1/23/2015. (IT IS HEREBY ORDERED that the defendant&apos;s previously ordered self-surrender date of January 26, 2015, is delayed until March 2, 2015. All other orders regarding sentencing remain in full force and effect.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-24/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>THIRD ORDER Extending Self-Surrender Date as to Sam Kounhavong (3), signed by District Judge Anthony W. Ishii on 3/2/2015. (IT IS HEREBY ORDERED that the defendant&apos;s previously ordered self-surrender date of March 2, 2015, is delayed until April 20, 2015. All other orders regarding sentencing remain in full force and effect.) (Gaumnitz, R)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c413</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-24</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2015-03-02</dateIssued>
+  <docketText>THIRD ORDER Extending Self-Surrender Date as to Sam Kounhavong (3), signed by District Judge Anthony W. Ishii on 3/2/2015. (IT IS HEREBY ORDERED that the defendant&apos;s previously ordered self-surrender date of March 2, 2015, is delayed until April 20, 2015. All other orders regarding sentencing remain in full force and effect.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-25/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>FOURTH ORDER Extending Self-Surrender Date as to Sam Kounhavong (3), signed by District Judge Anthony W. Ishii on 4/20/2015. (IT IS HEREBY ORDERED that the defendant&apos;s previously ordered self-surrender date of April 20, 2015, is delayed until April 27, 2015. All other orders regarding sentencing remain in full force and effect.) (Gaumnitz, R)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c400</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-25</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2015-04-20</dateIssued>
+  <docketText>FOURTH ORDER Extending Self-Surrender Date as to Sam Kounhavong (3), signed by District Judge Anthony W. Ishii on 4/20/2015. (IT IS HEREBY ORDERED that the defendant&apos;s previously ordered self-surrender date of April 20, 2015, is delayed until April 27, 2015. All other orders regarding sentencing remain in full force and effect.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00342-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-26/mods.xml">
+ <titleInfo>
+  <title>USA v. Vongsenekeo et al</title>
+  <subTitle>FIFTH ORDER Extending Self-Surrender Date as to Sam Kounhavong (3), signed by District Judge Anthony W. Ishii on 4/28/2015. (IT IS HEREBY ORDERED that the defendant&apos;s previously ordered self-surrender date of April 27, 2015, is delayed until June 22, 2015. All other orders regarding sentencing remain in full force and effect.) (Gaumnitz, R)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28c414</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-26</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00342_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00342/USCOURTS-caed-1_12-cr-00342-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00342/pdf/USCOURTS-caed-1_12-cr-00342-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00342; USA v. Vongsenekeo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00342-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2015-04-28</dateIssued>
+  <docketText>FIFTH ORDER Extending Self-Surrender Date as to Sam Kounhavong (3), signed by District Judge Anthony W. Ishii on 4/28/2015. (IT IS HEREBY ORDERED that the defendant&apos;s previously ordered self-surrender date of April 27, 2015, is delayed until June 22, 2015. All other orders regarding sentencing remain in full force and effect.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

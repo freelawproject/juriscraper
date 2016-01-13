@@ -1,0 +1,196 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e8c48b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_08-cv-00152</identifier>
+<identifier type="local">P0b002ee180e8c48b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-rid-1_08-cv-00152</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_08-cv-00152</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:08-cv-00152</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <party firstName="Kevin" fullName="Kevin McBurney" lastName="McBurney" role="Plaintiff"></party>
+ <party firstName="Alice" fullName="Alice Peszke" lastName="Peszke" role="Defendant"></party>
+ <party firstName="Catherine" fullName="Catherine Racine" lastName="Racine" role="Defendant"></party>
+ <party firstName="Alice" fullName="Alice Smith" lastName="Smith" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>McBurney v. Smith et al</title>
+ <partNumber>1:08-cv-00152</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_08-cv-00152/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-00152;08-152</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Providence</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kevin McBurney</displayForm>
+ <namePart type="family">McBurney</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alice Peszke</displayForm>
+ <namePart type="family">Peszke</namePart>
+ <namePart type="given">Alice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Catherine Racine</displayForm>
+ <namePart type="family">Racine</namePart>
+ <namePart type="given">Catherine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alice Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Alice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_08-cv-00152</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:08-cv-00152</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <party firstName="Kevin" fullName="Kevin McBurney" lastName="McBurney" role="Plaintiff"></party>
+ <party firstName="Alice" fullName="Alice Peszke" lastName="Peszke" role="Defendant"></party>
+ <party firstName="Catherine" fullName="Catherine Racine" lastName="Racine" role="Defendant"></party>
+ <party firstName="Alice" fullName="Alice Smith" lastName="Smith" role="Defendant"></party>
+ <state>Rhode Island</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_08-cv-00152-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_08-cv-00152/USCOURTS-rid-1_08-cv-00152-0/mods.xml">
+ <titleInfo>
+  <title>McBurney v. Smith et al</title>
+  <subTitle>ORDER TO SHOW CAUSE IN WRITING; Show Cause Response due by 1/1/2009. So Ordered by Judge Ernest C. Torres on 12/9/08. (Jackson, Ryan)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_08-cv-00152-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e8d32d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_08-cv-00152/USCOURTS-rid-1_08-cv-00152-0</identifier>
+ <identifier type="former granule identifier">rid-1_08-cv-00152_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_08-cv-00152/USCOURTS-rid-1_08-cv-00152-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_08-cv-00152/pdf/USCOURTS-rid-1_08-cv-00152-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00152; McBurney v. Smith et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_08-cv-00152-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-12-10</dateIssued>
+  <docketText>ORDER TO SHOW CAUSE IN WRITING; Show Cause Response due by 1/1/2009. So Ordered by Judge Ernest C. Torres on 12/9/08. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_08-cv-00152-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_08-cv-00152/USCOURTS-rid-1_08-cv-00152-1/mods.xml">
+ <titleInfo>
+  <title>McBurney v. Smith et al</title>
+  <subTitle>ORDER OF DISMISSAL of Defendants Alice Peszke and Catherine Racine re 3 Order to Show Cause. So Ordered by Judge Mary M. Lisi on 1/26/09. (Jackson, Ryan)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_08-cv-00152-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e8d32e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_08-cv-00152/USCOURTS-rid-1_08-cv-00152-1</identifier>
+ <identifier type="former granule identifier">rid-1_08-cv-00152_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_08-cv-00152/USCOURTS-rid-1_08-cv-00152-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_08-cv-00152/pdf/USCOURTS-rid-1_08-cv-00152-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00152; McBurney v. Smith et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_08-cv-00152-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-26</dateIssued>
+  <docketText>ORDER OF DISMISSAL of Defendants Alice Peszke and Catherine Racine re 3 Order to Show Cause. So Ordered by Judge Mary M. Lisi on 1/26/09. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+</mods>

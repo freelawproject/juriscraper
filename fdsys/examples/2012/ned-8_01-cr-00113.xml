@@ -1,0 +1,622 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1829f5f1a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-06-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-06-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113</identifier>
+<identifier type="local">P0b002ee1829f5f1a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-06-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-06-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_01-cr-00113</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_01-cr-00113</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:01-cr-00113</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Damion" fullName="Damion Wells" lastName="Wells" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Wells</title>
+ <partNumber>8:01-cr-00113</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:01-cr-00113;01-113</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Damion Wells</displayForm>
+ <namePart type="family">Wells</namePart>
+ <namePart type="given">Damion</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_01-cr-00113</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:01-cr-00113</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Damion" fullName="Damion Wells" lastName="Wells" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>MEMORANDUM AND ORDER that defendant&apos;s Motion to Amend (Filing No. 123) is granted;that upon initial review, the court finds and concludes that summary dismissalof the defendant&apos;s Section 2255 motion (Filing No. 120) is not appropriate;that by January 6, 2006, the United States shall answer or otherwise respondto the defendant&apos;s Section 2255 motion, and shall file an accompanying brief; andthat by February 6, 2006, the defendant may file a reply briefas to Damion Wells (1). Signed by Judge Joseph F. Bataillon on 12/5/2005. (ADB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f767b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-0</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-12-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that defendant&apos;s Motion to Amend (Filing No. 123) is granted;that upon initial review, the court finds and concludes that summary dismissalof the defendant&apos;s Section 2255 motion (Filing No. 120) is not appropriate;that by January 6, 2006, the United States shall answer or otherwise respondto the defendant&apos;s Section 2255 motion, and shall file an accompanying brief; andthat by February 6, 2006, the defendant may file a reply briefas to Damion Wells (1). Signed by Judge Joseph F. Bataillon on 12/5/2005. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>MEMORANDUM/ORDER denying 120 Motion to Vacate (2255) as to Damion Wells (1); a separate judgment will be issued; and the Clerk is directed to mail a copy of this Memorandum and Order to the defendant at his last known address. Signed by Judge Joseph F. Bataillon on 3/29/2006. (copy of memo/order sent to defendant as directed) (PCV, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f76fa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-1</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-03-29</dateIssued>
+  <docketText>MEMORANDUM/ORDER denying 120 Motion to Vacate (2255) as to Damion Wells (1); a separate judgment will be issued; and the Clerk is directed to mail a copy of this Memorandum and Order to the defendant at his last known address. Signed by Judge Joseph F. Bataillon on 3/29/2006. (copy of memo/order sent to defendant as directed) (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>JUDGMENT regarding Memorandum and Order on Motion to Vacate (2255); Pursuant to the Memorandum and Order entered on this date, judgment is entered in favor of the government and against the defendant. The defendant&apos;s Motion under 28 U.S.C. 2255, Filing No. 120, is dismissed, with prejudice as to defendant(s) Damion Wells. Signed by Judge Joseph F. Bataillon on 3/29/2006. (PCV, ) (copy sent to defendant)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f76f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-2</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-03-29</dateIssued>
+  <docketText>JUDGMENT regarding Memorandum and Order on Motion to Vacate (2255); Pursuant to the Memorandum and Order entered on this date, judgment is entered in favor of the government and against the defendant. The defendant&apos;s Motion under 28 U.S.C. 2255, Filing No. 120, is dismissed, with prejudice as to defendant(s) Damion Wells. Signed by Judge Joseph F. Bataillon on 3/29/2006. (PCV, ) (copy sent to defendant)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER denying 131 Motion for Certificate of Appealability; granting 132 Motion for Leave to Appeal In Forma Pauperis as to Damion Wells; the Clerk of Court shall provide a copy of this Order to the Eighth Circuit Court of Appeals; and that a copy of ths Order shall be mailed to the defendant at his last known address Signed by Judge Joseph F. Bataillon on 5/19/2006. (PCV, ) (copies to USCA and defendant as directed)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f76fc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-3</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-05-18</dateIssued>
+  <docketText>ORDER denying 131 Motion for Certificate of Appealability; granting 132 Motion for Leave to Appeal In Forma Pauperis as to Damion Wells; the Clerk of Court shall provide a copy of this Order to the Eighth Circuit Court of Appeals; and that a copy of ths Order shall be mailed to the defendant at his last known address Signed by Judge Joseph F. Bataillon on 5/19/2006. (PCV, ) (copies to USCA and defendant as directed)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-4/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS SHOULD NOT BE DESTROYED as to defendant Damion Wells. Ordered by Judge Joseph F. Bataillon.(CJP)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f767a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-4</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-06-25</dateIssued>
+  <docketText>ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS SHOULD NOT BE DESTROYED as to defendant Damion Wells. Ordered by Judge Joseph F. Bataillon.(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-5/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER REGARDING MOTION FOR SENTENCE REDUCTION PURSUANT TO 18:3582(c)(2) - denying 149 motion to reduce sentence pursuant to crack cocaine Amendment 706. as to Damion Wells (1); granting 152 Motion to Withdraw as Attorney as to Damion Wells (1) Ordered by Chief Judge Joseph F. Bataillon. ( PCV, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f76ff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-5</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-06-19</dateIssued>
+  <docketText>ORDER REGARDING MOTION FOR SENTENCE REDUCTION PURSUANT TO 18:3582(c)(2) - denying 149 motion to reduce sentence pursuant to crack cocaine Amendment 706. as to Damion Wells (1); granting 152 Motion to Withdraw as Attorney as to Damion Wells (1) Ordered by Chief Judge Joseph F. Bataillon. ( PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-6/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER that the defendant is given thirty days from the date of this orderin which to file his reasons for failing to timely file the Notice of Appeal to USCA 155 as to defendant Damion Wells. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(ADB, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f76fe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-6</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2008-08-20</dateIssued>
+  <docketText>ORDER that the defendant is given thirty days from the date of this orderin which to file his reasons for failing to timely file the Notice of Appeal to USCA 155 as to defendant Damion Wells. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-7/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER that the defendant is permitted to proceed on appeal in forma pauperis regarding Notice of Appeal to USCA155 as to defendant Damion Wells. Ordered by Chief Judge Jospeh F. Bataillon. (Copy mailed to pro se party)(JAE, ) Modified on 9/4/2008 to correct signing judge. (JAE, ).</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f76f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-7</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-08-22</dateIssued>
+  <docketText>ORDER that the defendant is permitted to proceed on appeal in forma pauperis regarding Notice of Appeal to USCA155 as to defendant Damion Wells. Ordered by Chief Judge Jospeh F. Bataillon. (Copy mailed to pro se party)(JAE, ) Modified on 9/4/2008 to correct signing judge. (JAE, ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-8/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER that the defendant&apos;s Notice of Appeal to USCA 155 is denied as untimely as to defendant(s) Damion Wells. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(ADB, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f7679</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-8</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-09-25</dateIssued>
+  <docketText>ORDER that the defendant&apos;s Notice of Appeal to USCA 155 is denied as untimely as to defendant(s) Damion Wells. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-9/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER denying 162 Motion for Reconsideration as to Damion Wells (1). Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (JSF)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f76fb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-9</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2008-10-10</dateIssued>
+  <docketText>ORDER denying 162 Motion for Reconsideration as to Damion Wells (1). Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-10/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER as to defendant Damion Wells. The defendant shall show cause in writing on or before February 13, 2012, as to why this court should not dismiss his motion to reduce sentence, Filing No. 172. The Clerk of Court shall mail a copy of this order to the defendant at his last known address. Ordered by Judge Joseph F. Bataillon. (Copy mailed/e-mailed to pro se party)(GJG)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f7678</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-10</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>ORDER as to defendant Damion Wells. The defendant shall show cause in writing on or before February 13, 2012, as to why this court should not dismiss his motion to reduce sentence, Filing No. 172. The Clerk of Court shall mail a copy of this order to the defendant at his last known address. Ordered by Judge Joseph F. Bataillon. (Copy mailed/e-mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-11/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER as to defendant Damion Wells. Defendant&apos;s motion to reduce sentence, Filing No. 172, is denied. Defendant&apos;s motion to amend, Filing No. 178 is likewise denied. Ordered by Judge Joseph F. Bataillon. (Copy mailed/e-mailed to pro se party)( GJG)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f7677</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-11</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-01-24</dateIssued>
+  <docketText>ORDER as to defendant Damion Wells. Defendant&apos;s motion to reduce sentence, Filing No. 172, is denied. Defendant&apos;s motion to amend, Filing No. 178 is likewise denied. Ordered by Judge Joseph F. Bataillon. (Copy mailed/e-mailed to pro se party)( GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-12/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER permitting the defendant to proceed on appeal in forma pauperis as to defendant Damion Wells. Ordered by Judge Joseph F. Bataillon. (Copy mailed/e-mailed to pro se party)(GJG)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f7700</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-12</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-02-09</dateIssued>
+  <docketText>ORDER permitting the defendant to proceed on appeal in forma pauperis as to defendant Damion Wells. Ordered by Judge Joseph F. Bataillon. (Copy mailed/e-mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-13/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER as to defendant Damion Wells. The Clerk of Court shall file the Provisional Notice of Appeal in cm/ecf. The defendant shall re-file the notice of appeal with his personal signature on the filing within 30 days from the date of this order. Failure to do so shall result in the striking of the Provisional Notice of Appeal. Ordered by Judge Joseph F. Bataillon. (GJG)(Copy mailed to pro se party)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f767c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-13</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2012-03-14</dateIssued>
+  <docketText>ORDER as to defendant Damion Wells. The Clerk of Court shall file the Provisional Notice of Appeal in cm/ecf. The defendant shall re-file the notice of appeal with his personal signature on the filing within 30 days from the date of this order. Failure to do so shall result in the striking of the Provisional Notice of Appeal. Ordered by Judge Joseph F. Bataillon. (GJG)(Copy mailed to pro se party)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-14/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER regarding Provisional Notice of Appeal 190, Notice of Appeal to USCA 193, and Copy of IFP Memo 194 as to defendant Damion Wells. The Clerk of Court is directed to strike from the record Filing Nos. 190, 193, and 194. Ordered by Judge Joseph F. Bataillon. (Copy mailed to pro se party) (TEL)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f7676</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-14</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-03-28</dateIssued>
+  <docketText>ORDER regarding Provisional Notice of Appeal 190, Notice of Appeal to USCA 193, and Copy of IFP Memo 194 as to defendant Damion Wells. The Clerk of Court is directed to strike from the record Filing Nos. 190, 193, and 194. Ordered by Judge Joseph F. Bataillon. (Copy mailed to pro se party) (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-15/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER - Defendant&apos;s motion to dismiss, Filing No. 199, is denied as to defendant Damion Wells. Ordered by Judge Joseph F. Bataillon. (Copy mailed to pro se party)(GJG)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f767d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-15</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-05-09</dateIssued>
+  <docketText>ORDER - Defendant&apos;s motion to dismiss, Filing No. 199, is denied as to defendant Damion Wells. Ordered by Judge Joseph F. Bataillon. (Copy mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-16/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER - This matter is before the court on defendant&apos;s Rule 59(e) motion to alter or amend a judgment. Filing No. 201. The court has reviewed the motion and finds it to be frivolous and without merit. Accordingly, the motion is denied as to defendant Damion Wells. Ordered by Judge Joseph F. Bataillon. (Copy mailed to pro se party)(GJG)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f76fd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-16</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2012-05-22</dateIssued>
+  <docketText>ORDER - This matter is before the court on defendant&apos;s Rule 59(e) motion to alter or amend a judgment. Filing No. 201. The court has reviewed the motion and finds it to be frivolous and without merit. Accordingly, the motion is denied as to defendant Damion Wells. Ordered by Judge Joseph F. Bataillon. (Copy mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_01-cr-00113-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-17/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Wells</title>
+  <subTitle>ORDER as to defendant Damion Wells. The motions for a certificate of appealability, Filing No. 203, and for in forma pauperis status, Filing No. 206, are denied. Ordered by Judge Joseph F. Bataillon. (Copy mailed to pro se party)(GJG)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_01-cr-00113-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1829f7701</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-17</identifier>
+ <identifier type="former granule identifier">ned-8_01-cr-00113_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_01-cr-00113/USCOURTS-ned-8_01-cr-00113-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_01-cr-00113/pdf/USCOURTS-ned-8_01-cr-00113-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:01-cr-00113; United States of America v. Wells; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_01-cr-00113-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2012-06-26</dateIssued>
+  <docketText>ORDER as to defendant Damion Wells. The motions for a certificate of appealability, Filing No. 203, and for in forma pauperis status, Filing No. 206, are denied. Ordered by Judge Joseph F. Bataillon. (Copy mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,553 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817663f2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482</identifier>
+<identifier type="local">P0b002ee1817663f2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cv-00482</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00482</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00482</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>330</natureSuitCode>
+ <natureSuit>Federal Employers&apos; Liability</natureSuit>
+ <cause>45:51 Railways: Fed. Employer&apos;s Liability Act</cause>
+ <party firstName="Donald" fullName="Donald L. Crago" lastName="Crago" middleName="L." role="Plaintiff"></party>
+ <party fullName="Union Pacific Corporation" lastName="Union Pacific Corporation" role="Defendant"></party>
+ <party fullName="Union Pacific Railroad Company" lastName="Union Pacific Railroad Company" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Crago v. Union Pacific Railroad Company</title>
+ <partNumber>8:08-cv-00482</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cv-00482;08-482</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Donald L. Crago</displayForm>
+ <namePart type="family">Crago</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Union Pacific Corporation</displayForm>
+ <namePart type="family">Union Pacific Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Union Pacific Railroad Company</displayForm>
+ <namePart type="family">Union Pacific Railroad Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00482</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00482</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>330</natureSuitCode>
+ <natureSuit>Federal Employers&apos; Liability</natureSuit>
+ <cause>45:51 Railways: Fed. Employer&apos;s Liability Act</cause>
+ <party firstName="Donald" fullName="Donald L. Crago" lastName="Crago" middleName="L." role="Plaintiff"></party>
+ <party fullName="Union Pacific Corporation" lastName="Union Pacific Corporation" role="Defendant"></party>
+ <party fullName="Union Pacific Railroad Company" lastName="Union Pacific Railroad Company" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-0/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER referring case to Magistrate Judge Judith K. Guthrie. Ordered by Judge Thad Heartfield. (JSF)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0253</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-10-28</dateIssued>
+  <docketText>ORDER referring case to Magistrate Judge Judith K. Guthrie. Ordered by Judge Thad Heartfield. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-1/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>SCHEDULING ORDER setting case-specific deadlines, including date parties should be prepared to try case as 8/4/08. Ordered by Judge Judith K. Guthrie. (JSF)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c023e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-10-28</dateIssued>
+  <docketText>SCHEDULING ORDER setting case-specific deadlines, including date parties should be prepared to try case as 8/4/08. Ordered by Judge Judith K. Guthrie. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-2/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER granting 13 Motion to Amend Scheduling Order as stated herein. Ordered by Magistrate Judge Judith K. Guthrie. (JSF)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0252</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-10-28</dateIssued>
+  <docketText>ORDER granting 13 Motion to Amend Scheduling Order as stated herein. Ordered by Magistrate Judge Judith K. Guthrie. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-3/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER granting 36 Motion to Continue. Ordered by Magistrate Judge Judith K. Guthrie. (JSF)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0241</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-3</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-10-28</dateIssued>
+  <docketText>ORDER granting 36 Motion to Continue. Ordered by Magistrate Judge Judith K. Guthrie. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-4/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>AMENDED SCHEDULING ORDER granting 40 Motion to Modify Scheduling Order. Ordered by Magistrate Judge Judtih K. Guthrie. (JSF)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c023c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-4</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-10-28</dateIssued>
+  <docketText>AMENDED SCHEDULING ORDER granting 40 Motion to Modify Scheduling Order. Ordered by Magistrate Judge Judtih K. Guthrie. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-5/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER that the above-styled case is stayed, pending the en banc decision of the Fifth Circuit in the matter of In Re Volkswagen. Ordered by Magistrate Judge Judith K. Guthrie. (JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0256</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-5</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-10-28</dateIssued>
+  <docketText>ORDER that the above-styled case is stayed, pending the en banc decision of the Fifth Circuit in the matter of In Re Volkswagen. Ordered by Magistrate Judge Judith K. Guthrie. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-6/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER that the Final Pretrial Conference and Jury Selection are set for 10/6/08 at 9:00 a.m. Ordered by Judge Thad Heartfield. (JSF)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0239</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-6</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2008-10-28</dateIssued>
+  <docketText>ORDER that the Final Pretrial Conference and Jury Selection are set for 10/6/08 at 9:00 a.m. Ordered by Judge Thad Heartfield. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-7/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER vacating notice of trial set for 10/6/08. Ordered by Judge Thad Heartfield. (JSF)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0255</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-7</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-10-28</dateIssued>
+  <docketText>ORDER vacating notice of trial set for 10/6/08. Ordered by Judge Thad Heartfield. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-8/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER that the stay is lifted. The defendant&apos;s motion for severance 44 is granted. Defendant&apos;s motion to transfer venue as to plaintiff John M. Staggs 45 is granted. The claims of John M. Staggs are hereby severed and transferred to the Eastern District of California. Defendant&apos;s Motion to transfer venue as to plaintiff Donald L. Crago 46 is granted. The claims of Donald L. Crago are hereby severed and transferred to the District of Nebraska. Defendant&apos;s motion to transfer venue as to plaintiff Phillip Thomas 47 is granted. The claims of Phillip Thomas are hereby severed and transferred to the Eastern District of Arkansas. The defendant&apos;s motion to transfer venue as to Plaintiff Horace E. Fogle 48 is granted. The claims of Horace Fogle are hereby severed and transferred to the Western District of Arkansas, El Dorado Division. Ordered by Magistrate Judge Judith K. Guthrie. (JSF)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0254</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-8</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-10-28</dateIssued>
+  <docketText>ORDER that the stay is lifted. The defendant&apos;s motion for severance 44 is granted. Defendant&apos;s motion to transfer venue as to plaintiff John M. Staggs 45 is granted. The claims of John M. Staggs are hereby severed and transferred to the Eastern District of California. Defendant&apos;s Motion to transfer venue as to plaintiff Donald L. Crago 46 is granted. The claims of Donald L. Crago are hereby severed and transferred to the District of Nebraska. Defendant&apos;s motion to transfer venue as to plaintiff Phillip Thomas 47 is granted. The claims of Phillip Thomas are hereby severed and transferred to the Eastern District of Arkansas. The defendant&apos;s motion to transfer venue as to Plaintiff Horace E. Fogle 48 is granted. The claims of Horace Fogle are hereby severed and transferred to the Western District of Arkansas, El Dorado Division. Ordered by Magistrate Judge Judith K. Guthrie. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-9/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER granting 60 Motion to Withdraw as Attorney. George E. Chandler is deemed withdrawn as counsel for plaintiff. Ordered by Senior Judge Lyle E. Strom. (ADB, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0240</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-9</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2008-11-13</dateIssued>
+  <docketText>ORDER granting 60 Motion to Withdraw as Attorney. George E. Chandler is deemed withdrawn as counsel for plaintiff. Ordered by Senior Judge Lyle E. Strom. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-10/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER granting 72 Motion for Leave to withdraw. Mainess Gibson and Amy Nilsen are deemed withdrawn as counsel for defendant. Ordered by Senior Judge Lyle E. Strom. (JSF)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c023f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-10</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2009-01-05</dateIssued>
+  <docketText>ORDER granting 72 Motion for Leave to withdraw. Mainess Gibson and Amy Nilsen are deemed withdrawn as counsel for defendant. Ordered by Senior Judge Lyle E. Strom. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-11/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER - Scheduling Conference set for 2/4/2009 at 01:30 PM before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (CJP)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c023b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-11</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2009-01-21</dateIssued>
+  <docketText>ORDER - Scheduling Conference set for 2/4/2009 at 01:30 PM before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-12/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER denying 65 motion to change place of trial. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c023a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-12</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2009-03-05</dateIssued>
+  <docketText>ORDER denying 65 motion to change place of trial. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-13/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER granting 105 Motion to Withdraw Document; filings 102 Motion to Exclude, 103 and 104 are deemed withdrawn. Ordered by Senior Judge Lyle E. Strom. (ADB, )</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c023d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-13</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2009-10-14</dateIssued>
+  <docketText>ORDER granting 105 Motion to Withdraw Document; filings 102 Motion to Exclude, 103 and 104 are deemed withdrawn. Ordered by Senior Judge Lyle E. Strom. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00482-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-14/mods.xml">
+ <titleInfo>
+  <title>Crago v. Union Pacific Railroad Company</title>
+  <subTitle>MEMORANDUM OPINION that the Court finds Crago&apos;s motion to continue trial setting, amend order setting schedule for progression of a civil case, and extend motion for summary judgment 99 should be denied. Union Pacific&apos;s motion for summary judgment 92 should be granted and Union Pacific&apos;s motion in limine re: Robert O. Andres, Ph.D. 89 should be denied as moot. A separate order will be entered in accordance with this memorandum opinion. Ordered by Senior Judge Lyle E. Strom. (JSF)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00482-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c0238</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-14</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00482_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00482/USCOURTS-ned-8_08-cv-00482-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00482/pdf/USCOURTS-ned-8_08-cv-00482-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00482; Crago v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00482-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2010-01-11</dateIssued>
+  <docketText>MEMORANDUM OPINION that the Court finds Crago&apos;s motion to continue trial setting, amend order setting schedule for progression of a civil case, and extend motion for summary judgment 99 should be denied. Union Pacific&apos;s motion for summary judgment 92 should be granted and Union Pacific&apos;s motion in limine re: Robert O. Andres, Ph.D. 89 should be denied as moot. A separate order will be entered in accordance with this memorandum opinion. Ordered by Senior Judge Lyle E. Strom. (JSF)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,161 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aad29">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Southern District of Indiana</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-insd-1_14-cv-00107</identifier>
+<identifier type="local">P0b002ee18a8aad29</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-insd-1_14-cv-00107</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-insd-1_14-cv-00107</accessId>
+ <courtType>District</courtType>
+ <courtCode>insd</courtCode>
+ <courtCircuit>7th</courtCircuit>
+ <courtState>Indiana</courtState>
+ <courtSortOrder>2173</courtSortOrder>
+ <caseNumber>1:14-cv-00107</caseNumber>
+ <caseOffice>Indianapolis</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Acton" lastName="Acton" role="Defendant"></party>
+ <party fullName="JENNINGS COUNTY JAIL" lastName="JENNINGS COUNTY JAIL" role="Defendant"></party>
+ <party firstName="JEFFREY" fullName="JEFFREY A. WOOTEN" lastName="WOOTEN" middleName="A." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>WOOTEN v. ACTON</title>
+ <partNumber>1:14-cv-00107</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-insd-1_14-cv-00107/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-00107;14-107</identifier>
+<name type="corporate">
+ <namePart>United States District Court Southern District of Indiana</namePart>
+ <namePart>7th Circuit</namePart>
+ <namePart>Indianapolis</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Acton</displayForm>
+ <namePart type="family">Acton</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JENNINGS COUNTY JAIL</displayForm>
+ <namePart type="family">JENNINGS COUNTY JAIL</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JEFFREY A. WOOTEN</displayForm>
+ <namePart type="family">WOOTEN</namePart>
+ <namePart type="given">JEFFREY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-insd-1_14-cv-00107</accessId>
+ <courtType>District</courtType>
+ <courtCode>insd</courtCode>
+ <courtCircuit>7th</courtCircuit>
+ <courtState>Indiana</courtState>
+ <courtSortOrder>2173</courtSortOrder>
+ <caseNumber>1:14-cv-00107</caseNumber>
+ <caseOffice>Indianapolis</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Acton" lastName="Acton" role="Defendant"></party>
+ <party fullName="JENNINGS COUNTY JAIL" lastName="JENNINGS COUNTY JAIL" role="Defendant"></party>
+ <party firstName="JEFFREY" fullName="JEFFREY A. WOOTEN" lastName="WOOTEN" middleName="A." role="Plaintiff"></party>
+ <state>Indiana</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-insd-1_14-cv-00107-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-insd-1_14-cv-00107/USCOURTS-insd-1_14-cv-00107-0/mods.xml">
+ <titleInfo>
+  <title>WOOTEN v. ACTON</title>
+  <subTitle>ORDER granting Defendant&apos;s 35 Motion for Summary Judgment. Judgment consistent with this Entry shall now issue. SEE ORDER. Signed by Judge William T. Lawrence on 1/5/2015. Copy sent to Plaintiff via U.S. Mail. (BGT)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-insd-1_14-cv-00107/pdf/USCOURTS-insd-1_14-cv-00107-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8afe43</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-insd-1_14-cv-00107/USCOURTS-insd-1_14-cv-00107-0</identifier>
+ <identifier type="former granule identifier">insd-1_14-cv-00107_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-insd-1_14-cv-00107/USCOURTS-insd-1_14-cv-00107-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-insd-1_14-cv-00107/pdf/USCOURTS-insd-1_14-cv-00107-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00107; WOOTEN v. ACTON; </searchTitle>
+  <courtName>United States District Court Southern District of Indiana</courtName>
+  <state>Indiana</state>
+  <accessId>USCOURTS-insd-1_14-cv-00107-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER granting Defendant&apos;s 35 Motion for Summary Judgment. Judgment consistent with this Entry shall now issue. SEE ORDER. Signed by Judge William T. Lawrence on 1/5/2015. Copy sent to Plaintiff via U.S. Mail. (BGT)</docketText>
+</extension>
+</relatedItem>
+</mods>

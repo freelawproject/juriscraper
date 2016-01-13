@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee189880500">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-07-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-07-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-05976</identifier>
+<identifier type="local">P0b002ee189880500</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-07-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-07-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-laed-2_13-cv-05976</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_13-cv-05976</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:13-cv-05976</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>150</natureSuitCode>
+ <natureSuit>Overpayments &amp; Enforcement of Judgments</natureSuit>
+ <cause>28:1332 Diversity-Declaratory Judgement</cause>
+ <party fullName="AT&amp;T Louisiana" lastName="AT&amp;T Louisiana" role="Plaintiff"></party>
+ <party fullName="BellSouth Telecommunications, LLC" lastName="BellSouth Telecommunications, LLC" role="Plaintiff"></party>
+ <party fullName="New Orleans City" lastName="New Orleans City" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Bellsouth Telecommunications, LLC v. New Orleans City</title>
+ <partNumber>2:13-cv-05976</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-05976/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-05976;13-5976</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>New Orleans</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>AT&amp;T Louisiana</displayForm>
+ <namePart type="family">AT&amp;T Louisiana</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>BellSouth Telecommunications, LLC</displayForm>
+ <namePart type="family">BellSouth Telecommunications, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>New Orleans City</displayForm>
+ <namePart type="family">New Orleans City</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_13-cv-05976</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:13-cv-05976</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>150</natureSuitCode>
+ <natureSuit>Overpayments &amp; Enforcement of Judgments</natureSuit>
+ <cause>28:1332 Diversity-Declaratory Judgement</cause>
+ <party fullName="AT&amp;T Louisiana" lastName="AT&amp;T Louisiana" role="Plaintiff"></party>
+ <party fullName="BellSouth Telecommunications, LLC" lastName="BellSouth Telecommunications, LLC" role="Plaintiff"></party>
+ <party fullName="New Orleans City" lastName="New Orleans City" role="Defendant"></party>
+ <state>Louisiana</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-05976-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-05976/USCOURTS-laed-2_13-cv-05976-0/mods.xml">
+ <titleInfo>
+  <title>Bellsouth Telecommunications, LLC v. New Orleans City</title>
+  <subTitle>ORDER denying 6 Motion to Dismiss for Failure to State a Claim. Signed by Judge Mary Ann Vial Lemmon. (cbn)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-05976/pdf/USCOURTS-laed-2_13-cv-05976-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18988e2af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-05976/USCOURTS-laed-2_13-cv-05976-0</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-05976_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-05976/USCOURTS-laed-2_13-cv-05976-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-05976/pdf/USCOURTS-laed-2_13-cv-05976-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-05976; Bellsouth Telecommunications, LLC v. New Orleans City; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-05976-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER denying 6 Motion to Dismiss for Failure to State a Claim. Signed by Judge Mary Ann Vial Lemmon. (cbn)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-05976-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-05976/USCOURTS-laed-2_13-cv-05976-1/mods.xml">
+ <titleInfo>
+  <title>Bellsouth Telecommunications, LLC v. New Orleans City</title>
+  <subTitle>ORDER AND REASONS GRANTING 18 Motion for Summary Judgment; DENYING 20 Motion for Summary Judgment. Signed by Judge Mary Ann Vial Lemmon on 7/7/2014. (my)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-05976/pdf/USCOURTS-laed-2_13-cv-05976-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18988e2b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-05976/USCOURTS-laed-2_13-cv-05976-1</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-05976_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-05976/USCOURTS-laed-2_13-cv-05976-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-05976/pdf/USCOURTS-laed-2_13-cv-05976-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-05976; Bellsouth Telecommunications, LLC v. New Orleans City; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-05976-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-07-07</dateIssued>
+  <docketText>ORDER AND REASONS GRANTING 18 Motion for Summary Judgment; DENYING 20 Motion for Summary Judgment. Signed by Judge Mary Ann Vial Lemmon on 7/7/2014. (my)</docketText>
+</extension>
+</relatedItem>
+</mods>

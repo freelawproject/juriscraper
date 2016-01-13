@@ -1,0 +1,179 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817254bd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03041</identifier>
+<identifier type="local">P0b002ee1817254bd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_07-cv-03041</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03041</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03041</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>445</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Employment</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party firstName="Mark" fullName="Mark A. Christensen" lastName="Christensen" middleName="A." role="Mediator"></party>
+ <party fullName="Cornhusker Marriott Hotel" lastName="Cornhusker Marriott Hotel" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Rasmussen" lastName="Rasmussen" role="Plaintiff"></party>
+ <party firstName="Deborah" fullName="Deborah Schmidt" lastName="Schmidt" role="Plaintiff"></party>
+ <party fullName="Shubh Hotels Lincoln" lastName="Shubh Hotels Lincoln" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Rasmussen et al v. Shubh Hotels Lincoln</title>
+ <partNumber>4:07-cv-03041</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03041/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:07-cv-03041;07-3041</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mark A. Christensen</displayForm>
+ <namePart type="family">Christensen</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<name type="personal">
+ <displayForm>Cornhusker Marriott Hotel</displayForm>
+ <namePart type="family">Cornhusker Marriott Hotel</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Rasmussen</displayForm>
+ <namePart type="family">Rasmussen</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Deborah Schmidt</displayForm>
+ <namePart type="family">Schmidt</namePart>
+ <namePart type="given">Deborah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Shubh Hotels Lincoln</displayForm>
+ <namePart type="family">Shubh Hotels Lincoln</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03041</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03041</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>445</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Employment</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party firstName="Mark" fullName="Mark A. Christensen" lastName="Christensen" middleName="A." role="Mediator"></party>
+ <party fullName="Cornhusker Marriott Hotel" lastName="Cornhusker Marriott Hotel" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Rasmussen" lastName="Rasmussen" role="Plaintiff"></party>
+ <party firstName="Deborah" fullName="Deborah Schmidt" lastName="Schmidt" role="Plaintiff"></party>
+ <party fullName="Shubh Hotels Lincoln" lastName="Shubh Hotels Lincoln" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03041-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03041/USCOURTS-ned-4_07-cv-03041-0/mods.xml">
+ <titleInfo>
+  <title>Rasmussen et al v. Shubh Hotels Lincoln</title>
+  <subTitle>SETTLEMENT ORDER. It is ordered that: (1) Within thirty (30) calendar days of the date of this order, the parties shall file a joint stipulation for dismissal (or other dispositive stipulation) with the clerk of the court (and provide a copy to the magistrate judge and to United States District Judge Richard G. Kopf, the trial judge to whom this case is assigned), together with submitting to the trial judge a draft order which will fully dispose of the case; (2) Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without further notice; (3) This case is removed from the court&apos;s February 19, 2008 trial docket upon representation by the parties that the case has settled. ***Dismissal Papers Deadline due by 2/11/2008. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03041-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173596b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03041/USCOURTS-ned-4_07-cv-03041-0</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03041_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03041/USCOURTS-ned-4_07-cv-03041-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03041/pdf/USCOURTS-ned-4_07-cv-03041-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03041; Rasmussen et al v. Shubh Hotels Lincoln; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03041-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-09</dateIssued>
+  <docketText>SETTLEMENT ORDER. It is ordered that: (1) Within thirty (30) calendar days of the date of this order, the parties shall file a joint stipulation for dismissal (or other dispositive stipulation) with the clerk of the court (and provide a copy to the magistrate judge and to United States District Judge Richard G. Kopf, the trial judge to whom this case is assigned), together with submitting to the trial judge a draft order which will fully dispose of the case; (2) Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without further notice; (3) This case is removed from the court&apos;s February 19, 2008 trial docket upon representation by the parties that the case has settled. ***Dismissal Papers Deadline due by 2/11/2008. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+</mods>
