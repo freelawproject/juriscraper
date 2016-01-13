@@ -1,0 +1,906 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818ea55c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-14841</identifier>
+<identifier type="local">P0b002ee1818ea55c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_07-cv-14841</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-cv-14841</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-cv-14841</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <party fullName="AF and G, L. L. C." lastName="AF and G, L. L. C." role="Counter Claimant"></party>
+ <party fullName="AF and G, L. L. C." lastName="AF and G, L. L. C." role="Defendant"></party>
+ <party fullName="AF and G, L. L. C." lastName="AF and G, L. L. C." role="ThirdParty Plaintiff"></party>
+ <party firstName="Charles" fullName="Charles Agrusa" lastName="Agrusa" role="Counter Claimant"></party>
+ <party firstName="Charles" fullName="Charles Agrusa" lastName="Agrusa" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Agrusa" lastName="Agrusa" role="ThirdParty Plaintiff"></party>
+ <party fullName="American Credit Education Services" lastName="American Credit Education Services" role="Defendant"></party>
+ <party fullName="American Credit Education and Consulting, Incorporated" lastName="American Credit Education and Consulting, Incorporated" role="Defendant"></party>
+ <party firstName="Marco" fullName="Marco Carbajo" lastName="Carbajo" role="Counter Claimant"></party>
+ <party firstName="Marco" fullName="Marco Carbajo" lastName="Carbajo" role="Defendant"></party>
+ <party firstName="Marco" fullName="Marco Carbajo" lastName="Carbajo" role="ThirdParty Plaintiff"></party>
+ <party fullName="Charles Agrusa, Incorporated" lastName="Charles Agrusa, Incorporated" role="Counter Claimant"></party>
+ <party fullName="Charles Agrusa, Incorporated" lastName="Charles Agrusa, Incorporated" role="Defendant"></party>
+ <party fullName="Charles Agrusa, Incorporated" lastName="Charles Agrusa, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party firstName="George" fullName="George Cole" lastName="Cole" role="Counter Claimant"></party>
+ <party firstName="George" fullName="George Cole" lastName="Cole" role="Defendant"></party>
+ <party firstName="George" fullName="George Cole" lastName="Cole" role="ThirdParty Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Curry" lastName="Curry" role="Counter Claimant"></party>
+ <party firstName="Michael" fullName="Michael Curry" lastName="Curry" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Curry" lastName="Curry" role="ThirdParty Plaintiff"></party>
+ <party firstName="Shaoqui" fullName="Shaoqui Feng" lastName="Feng" role="Counter Claimant"></party>
+ <party firstName="Shaoqui" fullName="Shaoqui Feng" lastName="Feng" role="Defendant"></party>
+ <party firstName="Shaoqui" fullName="Shaoqui Feng" lastName="Feng" role="ThirdParty Plaintiff"></party>
+ <party firstName="Frank" fullName="Frank Gigliotti" lastName="Gigliotti" role="Counter Claimant"></party>
+ <party firstName="Frank" fullName="Frank Gigliotti" lastName="Gigliotti" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank Gigliotti" lastName="Gigliotti" role="ThirdParty Plaintiff"></party>
+ <party firstName="Sue" fullName="Sue Griffin" lastName="Griffin" role="Counter Claimant"></party>
+ <party firstName="Sue" fullName="Sue Griffin" lastName="Griffin" role="Defendant"></party>
+ <party firstName="Sue" fullName="Sue Griffin" lastName="Griffin" role="ThirdParty Plaintiff"></party>
+ <party firstName="John" fullName="John Honos" lastName="Honos" role="Counter Claimant"></party>
+ <party firstName="John" fullName="John Honos" lastName="Honos" role="Defendant"></party>
+ <party firstName="John" fullName="John Honos" lastName="Honos" role="ThirdParty Plaintiff"></party>
+ <party fullName="JMS and Associates" lastName="JMS and Associates" role="Counter Claimant"></party>
+ <party fullName="JMS and Associates" lastName="JMS and Associates" role="Defendant"></party>
+ <party fullName="JMS and Associates" lastName="JMS and Associates" role="ThirdParty Plaintiff"></party>
+ <party fullName="JMS and Associates, Incorporated" lastName="JMS and Associates, Incorporated" role="Counter Claimant"></party>
+ <party fullName="JMS and Associates, Incorporated" lastName="JMS and Associates, Incorporated" role="Defendant"></party>
+ <party fullName="JMS and Associates, Incorporated" lastName="JMS and Associates, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party firstName="Pat" fullName="Pat Karas" lastName="Karas" role="Counter Claimant"></party>
+ <party firstName="Pat" fullName="Pat Karas" lastName="Karas" role="Defendant"></party>
+ <party firstName="Pat" fullName="Pat Karas" lastName="Karas" role="ThirdParty Plaintiff"></party>
+ <party firstName="Parimal" fullName="Parimal Naik" lastName="Naik" role="Counter Claimant"></party>
+ <party firstName="Parimal" fullName="Parimal Naik" lastName="Naik" role="Defendant"></party>
+ <party firstName="Parimal" fullName="Parimal Naik" lastName="Naik" role="ThirdParty Plaintiff"></party>
+ <party fullName="National Business Development Services, Incorporated" lastName="National Business Development Services, Incorporated" role="Counter Defendant"></party>
+ <party fullName="National Business Development Services, Incorporated" lastName="National Business Development Services, Incorporated" role="Plaintiff"></party>
+ <party fullName="National Financial Credit, Incorporated" lastName="National Financial Credit, Incorporated" role="Counter Claimant"></party>
+ <party fullName="National Financial Credit, Incorporated" lastName="National Financial Credit, Incorporated" role="Defendant"></party>
+ <party fullName="National Financial Credit, Incorporated" lastName="National Financial Credit, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark Owens" lastName="Owens" role="Counter Claimant"></party>
+ <party firstName="Mark" fullName="Mark Owens" lastName="Owens" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Owens" lastName="Owens" role="ThirdParty Plaintiff"></party>
+ <party firstName="Bernadino" fullName="Bernadino J. Pavone" lastName="Pavone" middleName="J." role="ThirdParty Defendant"></party>
+ <party firstName="Harmik" fullName="Harmik Poghossian" lastName="Poghossian" role="Counter Claimant"></party>
+ <party firstName="Harmik" fullName="Harmik Poghossian" lastName="Poghossian" role="Defendant"></party>
+ <party firstName="Harmik" fullName="Harmik Poghossian" lastName="Poghossian" role="ThirdParty Plaintiff"></party>
+ <party firstName="Delcie" fullName="Delcie Rahaim" lastName="Rahaim" role="Defendant"></party>
+ <party firstName="Jimmy" fullName="Jimmy Rahaim" lastName="Rahaim" role="Defendant"></party>
+ <party firstName="Abood" fullName="Abood Samaan" lastName="Samaan" role="ThirdParty Defendant"></party>
+ <party firstName="Rodney" fullName="Rodney Schram" lastName="Schram" role="Defendant"></party>
+ <party fullName="Third Eye, Incorporated" lastName="Third Eye, Incorporated" role="Counter Claimant"></party>
+ <party fullName="Third Eye, Incorporated" lastName="Third Eye, Incorporated" role="Defendant"></party>
+ <party fullName="Third Eye, Incorporated" lastName="Third Eye, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party firstName="Mike" fullName="Mike Toloff" lastName="Toloff" role="Counter Claimant"></party>
+ <party firstName="Mike" fullName="Mike Toloff" lastName="Toloff" role="Defendant"></party>
+ <party firstName="Mike" fullName="Mike Toloff" lastName="Toloff" role="ThirdParty Plaintiff"></party>
+ <party fullName="U Can 2 Opportunity, Incorporated" lastName="U Can 2 Opportunity, Incorporated" role="Counter Claimant"></party>
+ <party fullName="U Can 2 Opportunity, Incorporated" lastName="U Can 2 Opportunity, Incorporated" role="Defendant"></party>
+ <party fullName="U Can 2 Opportunity, Incorporated" lastName="U Can 2 Opportunity, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party fullName="U Can 2, Incorporated" lastName="U Can 2, Incorporated" role="Counter Claimant"></party>
+ <party fullName="U Can 2, Incorporated" lastName="U Can 2, Incorporated" role="Defendant"></party>
+ <party fullName="U Can 2, Incorporated" lastName="U Can 2, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party fullName="United Credit Education Services" lastName="United Credit Education Services" role="Defendant"></party>
+ <party fullName="VR-Tech Data Processing Solutions, L. L. C." lastName="VR-Tech Data Processing Solutions, L. L. C." role="Counter Claimant"></party>
+ <party fullName="VR-Tech Data Processing Solutions, L. L. C." lastName="VR-Tech Data Processing Solutions, L. L. C." role="Defendant"></party>
+ <party fullName="VR-Tech Data Processing Solutions, L. L. C." lastName="VR-Tech Data Processing Solutions, L. L. C." role="ThirdParty Plaintiff"></party>
+ <party fullName="VR-Tech Marketing Group, L. L. C." lastName="VR-Tech Marketing Group, L. L. C." role="Counter Claimant"></party>
+ <party fullName="VR-Tech Marketing Group, L. L. C." lastName="VR-Tech Marketing Group, L. L. C." role="Defendant"></party>
+ <party fullName="VR-Tech Marketing Group, L. L. C." lastName="VR-Tech Marketing Group, L. L. C." role="ThirdParty Plaintiff"></party>
+ <party fullName="VR-Tech Real Estate Holdings, Incorporated" lastName="VR-Tech Real Estate Holdings, Incorporated" role="Counter Claimant"></party>
+ <party fullName="VR-Tech Real Estate Holdings, Incorporated" lastName="VR-Tech Real Estate Holdings, Incorporated" role="Defendant"></party>
+ <party fullName="VR-Tech Real Estate Holdings, Incorporated" lastName="VR-Tech Real Estate Holdings, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party fullName="VR-Tech Software Solutions, L. L. C." lastName="VR-Tech Software Solutions, L. L. C." role="Counter Claimant"></party>
+ <party fullName="VR-Tech Software Solutions, L. L. C." lastName="VR-Tech Software Solutions, L. L. C." role="Defendant"></party>
+ <party fullName="VR-Tech Software Solutions, L. L. C." lastName="VR-Tech Software Solutions, L. L. C." role="ThirdParty Plaintiff"></party>
+ <party firstName="Scott" fullName="Scott Winningham" lastName="Winningham" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>National Business Development Services, Incorporated v. American Credit Education and Consulting, Incorporated et al</title>
+ <partNumber>2:07-cv-14841</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-14841/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-14841;07-14841</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>AF and G, L. L. C.</displayForm>
+ <namePart type="family">AF and G, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>AF and G, L. L. C.</displayForm>
+ <namePart type="family">AF and G, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>AF and G, L. L. C.</displayForm>
+ <namePart type="family">AF and G, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Agrusa</displayForm>
+ <namePart type="family">Agrusa</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Agrusa</displayForm>
+ <namePart type="family">Agrusa</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Agrusa</displayForm>
+ <namePart type="family">Agrusa</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>American Credit Education Services</displayForm>
+ <namePart type="family">American Credit Education Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>American Credit Education and Consulting, Incorporated</displayForm>
+ <namePart type="family">American Credit Education and Consulting, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marco Carbajo</displayForm>
+ <namePart type="family">Carbajo</namePart>
+ <namePart type="given">Marco</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Marco Carbajo</displayForm>
+ <namePart type="family">Carbajo</namePart>
+ <namePart type="given">Marco</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marco Carbajo</displayForm>
+ <namePart type="family">Carbajo</namePart>
+ <namePart type="given">Marco</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Agrusa, Incorporated</displayForm>
+ <namePart type="family">Charles Agrusa, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Agrusa, Incorporated</displayForm>
+ <namePart type="family">Charles Agrusa, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Agrusa, Incorporated</displayForm>
+ <namePart type="family">Charles Agrusa, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>George Cole</displayForm>
+ <namePart type="family">Cole</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>George Cole</displayForm>
+ <namePart type="family">Cole</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George Cole</displayForm>
+ <namePart type="family">Cole</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Curry</displayForm>
+ <namePart type="family">Curry</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Curry</displayForm>
+ <namePart type="family">Curry</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Curry</displayForm>
+ <namePart type="family">Curry</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Shaoqui Feng</displayForm>
+ <namePart type="family">Feng</namePart>
+ <namePart type="given">Shaoqui</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Shaoqui Feng</displayForm>
+ <namePart type="family">Feng</namePart>
+ <namePart type="given">Shaoqui</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shaoqui Feng</displayForm>
+ <namePart type="family">Feng</namePart>
+ <namePart type="given">Shaoqui</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Frank Gigliotti</displayForm>
+ <namePart type="family">Gigliotti</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Frank Gigliotti</displayForm>
+ <namePart type="family">Gigliotti</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frank Gigliotti</displayForm>
+ <namePart type="family">Gigliotti</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sue Griffin</displayForm>
+ <namePart type="family">Griffin</namePart>
+ <namePart type="given">Sue</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Sue Griffin</displayForm>
+ <namePart type="family">Griffin</namePart>
+ <namePart type="given">Sue</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sue Griffin</displayForm>
+ <namePart type="family">Griffin</namePart>
+ <namePart type="given">Sue</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Honos</displayForm>
+ <namePart type="family">Honos</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>John Honos</displayForm>
+ <namePart type="family">Honos</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Honos</displayForm>
+ <namePart type="family">Honos</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>JMS and Associates</displayForm>
+ <namePart type="family">JMS and Associates</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>JMS and Associates</displayForm>
+ <namePart type="family">JMS and Associates</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JMS and Associates</displayForm>
+ <namePart type="family">JMS and Associates</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>JMS and Associates, Incorporated</displayForm>
+ <namePart type="family">JMS and Associates, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>JMS and Associates, Incorporated</displayForm>
+ <namePart type="family">JMS and Associates, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JMS and Associates, Incorporated</displayForm>
+ <namePart type="family">JMS and Associates, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Pat Karas</displayForm>
+ <namePart type="family">Karas</namePart>
+ <namePart type="given">Pat</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Pat Karas</displayForm>
+ <namePart type="family">Karas</namePart>
+ <namePart type="given">Pat</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pat Karas</displayForm>
+ <namePart type="family">Karas</namePart>
+ <namePart type="given">Pat</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Parimal Naik</displayForm>
+ <namePart type="family">Naik</namePart>
+ <namePart type="given">Parimal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Parimal Naik</displayForm>
+ <namePart type="family">Naik</namePart>
+ <namePart type="given">Parimal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Parimal Naik</displayForm>
+ <namePart type="family">Naik</namePart>
+ <namePart type="given">Parimal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>National Business Development Services, Incorporated</displayForm>
+ <namePart type="family">National Business Development Services, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>National Business Development Services, Incorporated</displayForm>
+ <namePart type="family">National Business Development Services, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>National Financial Credit, Incorporated</displayForm>
+ <namePart type="family">National Financial Credit, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>National Financial Credit, Incorporated</displayForm>
+ <namePart type="family">National Financial Credit, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>National Financial Credit, Incorporated</displayForm>
+ <namePart type="family">National Financial Credit, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Owens</displayForm>
+ <namePart type="family">Owens</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Owens</displayForm>
+ <namePart type="family">Owens</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Owens</displayForm>
+ <namePart type="family">Owens</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Bernadino J. Pavone</displayForm>
+ <namePart type="family">Pavone</namePart>
+ <namePart type="given">Bernadino</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harmik Poghossian</displayForm>
+ <namePart type="family">Poghossian</namePart>
+ <namePart type="given">Harmik</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Harmik Poghossian</displayForm>
+ <namePart type="family">Poghossian</namePart>
+ <namePart type="given">Harmik</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harmik Poghossian</displayForm>
+ <namePart type="family">Poghossian</namePart>
+ <namePart type="given">Harmik</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Delcie Rahaim</displayForm>
+ <namePart type="family">Rahaim</namePart>
+ <namePart type="given">Delcie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jimmy Rahaim</displayForm>
+ <namePart type="family">Rahaim</namePart>
+ <namePart type="given">Jimmy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Abood Samaan</displayForm>
+ <namePart type="family">Samaan</namePart>
+ <namePart type="given">Abood</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rodney Schram</displayForm>
+ <namePart type="family">Schram</namePart>
+ <namePart type="given">Rodney</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Third Eye, Incorporated</displayForm>
+ <namePart type="family">Third Eye, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Third Eye, Incorporated</displayForm>
+ <namePart type="family">Third Eye, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Third Eye, Incorporated</displayForm>
+ <namePart type="family">Third Eye, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mike Toloff</displayForm>
+ <namePart type="family">Toloff</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Mike Toloff</displayForm>
+ <namePart type="family">Toloff</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mike Toloff</displayForm>
+ <namePart type="family">Toloff</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>U Can 2 Opportunity, Incorporated</displayForm>
+ <namePart type="family">U Can 2 Opportunity, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>U Can 2 Opportunity, Incorporated</displayForm>
+ <namePart type="family">U Can 2 Opportunity, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U Can 2 Opportunity, Incorporated</displayForm>
+ <namePart type="family">U Can 2 Opportunity, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>U Can 2, Incorporated</displayForm>
+ <namePart type="family">U Can 2, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>U Can 2, Incorporated</displayForm>
+ <namePart type="family">U Can 2, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U Can 2, Incorporated</displayForm>
+ <namePart type="family">U Can 2, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>United Credit Education Services</displayForm>
+ <namePart type="family">United Credit Education Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>VR-Tech Data Processing Solutions, L. L. C.</displayForm>
+ <namePart type="family">VR-Tech Data Processing Solutions, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>VR-Tech Data Processing Solutions, L. L. C.</displayForm>
+ <namePart type="family">VR-Tech Data Processing Solutions, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>VR-Tech Data Processing Solutions, L. L. C.</displayForm>
+ <namePart type="family">VR-Tech Data Processing Solutions, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>VR-Tech Marketing Group, L. L. C.</displayForm>
+ <namePart type="family">VR-Tech Marketing Group, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>VR-Tech Marketing Group, L. L. C.</displayForm>
+ <namePart type="family">VR-Tech Marketing Group, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>VR-Tech Marketing Group, L. L. C.</displayForm>
+ <namePart type="family">VR-Tech Marketing Group, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>VR-Tech Real Estate Holdings, Incorporated</displayForm>
+ <namePart type="family">VR-Tech Real Estate Holdings, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>VR-Tech Real Estate Holdings, Incorporated</displayForm>
+ <namePart type="family">VR-Tech Real Estate Holdings, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>VR-Tech Real Estate Holdings, Incorporated</displayForm>
+ <namePart type="family">VR-Tech Real Estate Holdings, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>VR-Tech Software Solutions, L. L. C.</displayForm>
+ <namePart type="family">VR-Tech Software Solutions, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>VR-Tech Software Solutions, L. L. C.</displayForm>
+ <namePart type="family">VR-Tech Software Solutions, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>VR-Tech Software Solutions, L. L. C.</displayForm>
+ <namePart type="family">VR-Tech Software Solutions, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Winningham</displayForm>
+ <namePart type="family">Winningham</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-cv-14841</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-cv-14841</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <party fullName="AF and G, L. L. C." lastName="AF and G, L. L. C." role="Counter Claimant"></party>
+ <party fullName="AF and G, L. L. C." lastName="AF and G, L. L. C." role="Defendant"></party>
+ <party fullName="AF and G, L. L. C." lastName="AF and G, L. L. C." role="ThirdParty Plaintiff"></party>
+ <party firstName="Charles" fullName="Charles Agrusa" lastName="Agrusa" role="Counter Claimant"></party>
+ <party firstName="Charles" fullName="Charles Agrusa" lastName="Agrusa" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Agrusa" lastName="Agrusa" role="ThirdParty Plaintiff"></party>
+ <party fullName="American Credit Education Services" lastName="American Credit Education Services" role="Defendant"></party>
+ <party fullName="American Credit Education and Consulting, Incorporated" lastName="American Credit Education and Consulting, Incorporated" role="Defendant"></party>
+ <party firstName="Marco" fullName="Marco Carbajo" lastName="Carbajo" role="Counter Claimant"></party>
+ <party firstName="Marco" fullName="Marco Carbajo" lastName="Carbajo" role="Defendant"></party>
+ <party firstName="Marco" fullName="Marco Carbajo" lastName="Carbajo" role="ThirdParty Plaintiff"></party>
+ <party fullName="Charles Agrusa, Incorporated" lastName="Charles Agrusa, Incorporated" role="Counter Claimant"></party>
+ <party fullName="Charles Agrusa, Incorporated" lastName="Charles Agrusa, Incorporated" role="Defendant"></party>
+ <party fullName="Charles Agrusa, Incorporated" lastName="Charles Agrusa, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party firstName="George" fullName="George Cole" lastName="Cole" role="Counter Claimant"></party>
+ <party firstName="George" fullName="George Cole" lastName="Cole" role="Defendant"></party>
+ <party firstName="George" fullName="George Cole" lastName="Cole" role="ThirdParty Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Curry" lastName="Curry" role="Counter Claimant"></party>
+ <party firstName="Michael" fullName="Michael Curry" lastName="Curry" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Curry" lastName="Curry" role="ThirdParty Plaintiff"></party>
+ <party firstName="Shaoqui" fullName="Shaoqui Feng" lastName="Feng" role="Counter Claimant"></party>
+ <party firstName="Shaoqui" fullName="Shaoqui Feng" lastName="Feng" role="Defendant"></party>
+ <party firstName="Shaoqui" fullName="Shaoqui Feng" lastName="Feng" role="ThirdParty Plaintiff"></party>
+ <party firstName="Frank" fullName="Frank Gigliotti" lastName="Gigliotti" role="Counter Claimant"></party>
+ <party firstName="Frank" fullName="Frank Gigliotti" lastName="Gigliotti" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank Gigliotti" lastName="Gigliotti" role="ThirdParty Plaintiff"></party>
+ <party firstName="Sue" fullName="Sue Griffin" lastName="Griffin" role="Counter Claimant"></party>
+ <party firstName="Sue" fullName="Sue Griffin" lastName="Griffin" role="Defendant"></party>
+ <party firstName="Sue" fullName="Sue Griffin" lastName="Griffin" role="ThirdParty Plaintiff"></party>
+ <party firstName="John" fullName="John Honos" lastName="Honos" role="Counter Claimant"></party>
+ <party firstName="John" fullName="John Honos" lastName="Honos" role="Defendant"></party>
+ <party firstName="John" fullName="John Honos" lastName="Honos" role="ThirdParty Plaintiff"></party>
+ <party fullName="JMS and Associates" lastName="JMS and Associates" role="Counter Claimant"></party>
+ <party fullName="JMS and Associates" lastName="JMS and Associates" role="Defendant"></party>
+ <party fullName="JMS and Associates" lastName="JMS and Associates" role="ThirdParty Plaintiff"></party>
+ <party fullName="JMS and Associates, Incorporated" lastName="JMS and Associates, Incorporated" role="Counter Claimant"></party>
+ <party fullName="JMS and Associates, Incorporated" lastName="JMS and Associates, Incorporated" role="Defendant"></party>
+ <party fullName="JMS and Associates, Incorporated" lastName="JMS and Associates, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party firstName="Pat" fullName="Pat Karas" lastName="Karas" role="Counter Claimant"></party>
+ <party firstName="Pat" fullName="Pat Karas" lastName="Karas" role="Defendant"></party>
+ <party firstName="Pat" fullName="Pat Karas" lastName="Karas" role="ThirdParty Plaintiff"></party>
+ <party firstName="Parimal" fullName="Parimal Naik" lastName="Naik" role="Counter Claimant"></party>
+ <party firstName="Parimal" fullName="Parimal Naik" lastName="Naik" role="Defendant"></party>
+ <party firstName="Parimal" fullName="Parimal Naik" lastName="Naik" role="ThirdParty Plaintiff"></party>
+ <party fullName="National Business Development Services, Incorporated" lastName="National Business Development Services, Incorporated" role="Counter Defendant"></party>
+ <party fullName="National Business Development Services, Incorporated" lastName="National Business Development Services, Incorporated" role="Plaintiff"></party>
+ <party fullName="National Financial Credit, Incorporated" lastName="National Financial Credit, Incorporated" role="Counter Claimant"></party>
+ <party fullName="National Financial Credit, Incorporated" lastName="National Financial Credit, Incorporated" role="Defendant"></party>
+ <party fullName="National Financial Credit, Incorporated" lastName="National Financial Credit, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark Owens" lastName="Owens" role="Counter Claimant"></party>
+ <party firstName="Mark" fullName="Mark Owens" lastName="Owens" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Owens" lastName="Owens" role="ThirdParty Plaintiff"></party>
+ <party firstName="Bernadino" fullName="Bernadino J. Pavone" lastName="Pavone" middleName="J." role="ThirdParty Defendant"></party>
+ <party firstName="Harmik" fullName="Harmik Poghossian" lastName="Poghossian" role="Counter Claimant"></party>
+ <party firstName="Harmik" fullName="Harmik Poghossian" lastName="Poghossian" role="Defendant"></party>
+ <party firstName="Harmik" fullName="Harmik Poghossian" lastName="Poghossian" role="ThirdParty Plaintiff"></party>
+ <party firstName="Delcie" fullName="Delcie Rahaim" lastName="Rahaim" role="Defendant"></party>
+ <party firstName="Jimmy" fullName="Jimmy Rahaim" lastName="Rahaim" role="Defendant"></party>
+ <party firstName="Abood" fullName="Abood Samaan" lastName="Samaan" role="ThirdParty Defendant"></party>
+ <party firstName="Rodney" fullName="Rodney Schram" lastName="Schram" role="Defendant"></party>
+ <party fullName="Third Eye, Incorporated" lastName="Third Eye, Incorporated" role="Counter Claimant"></party>
+ <party fullName="Third Eye, Incorporated" lastName="Third Eye, Incorporated" role="Defendant"></party>
+ <party fullName="Third Eye, Incorporated" lastName="Third Eye, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party firstName="Mike" fullName="Mike Toloff" lastName="Toloff" role="Counter Claimant"></party>
+ <party firstName="Mike" fullName="Mike Toloff" lastName="Toloff" role="Defendant"></party>
+ <party firstName="Mike" fullName="Mike Toloff" lastName="Toloff" role="ThirdParty Plaintiff"></party>
+ <party fullName="U Can 2 Opportunity, Incorporated" lastName="U Can 2 Opportunity, Incorporated" role="Counter Claimant"></party>
+ <party fullName="U Can 2 Opportunity, Incorporated" lastName="U Can 2 Opportunity, Incorporated" role="Defendant"></party>
+ <party fullName="U Can 2 Opportunity, Incorporated" lastName="U Can 2 Opportunity, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party fullName="U Can 2, Incorporated" lastName="U Can 2, Incorporated" role="Counter Claimant"></party>
+ <party fullName="U Can 2, Incorporated" lastName="U Can 2, Incorporated" role="Defendant"></party>
+ <party fullName="U Can 2, Incorporated" lastName="U Can 2, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party fullName="United Credit Education Services" lastName="United Credit Education Services" role="Defendant"></party>
+ <party fullName="VR-Tech Data Processing Solutions, L. L. C." lastName="VR-Tech Data Processing Solutions, L. L. C." role="Counter Claimant"></party>
+ <party fullName="VR-Tech Data Processing Solutions, L. L. C." lastName="VR-Tech Data Processing Solutions, L. L. C." role="Defendant"></party>
+ <party fullName="VR-Tech Data Processing Solutions, L. L. C." lastName="VR-Tech Data Processing Solutions, L. L. C." role="ThirdParty Plaintiff"></party>
+ <party fullName="VR-Tech Marketing Group, L. L. C." lastName="VR-Tech Marketing Group, L. L. C." role="Counter Claimant"></party>
+ <party fullName="VR-Tech Marketing Group, L. L. C." lastName="VR-Tech Marketing Group, L. L. C." role="Defendant"></party>
+ <party fullName="VR-Tech Marketing Group, L. L. C." lastName="VR-Tech Marketing Group, L. L. C." role="ThirdParty Plaintiff"></party>
+ <party fullName="VR-Tech Real Estate Holdings, Incorporated" lastName="VR-Tech Real Estate Holdings, Incorporated" role="Counter Claimant"></party>
+ <party fullName="VR-Tech Real Estate Holdings, Incorporated" lastName="VR-Tech Real Estate Holdings, Incorporated" role="Defendant"></party>
+ <party fullName="VR-Tech Real Estate Holdings, Incorporated" lastName="VR-Tech Real Estate Holdings, Incorporated" role="ThirdParty Plaintiff"></party>
+ <party fullName="VR-Tech Software Solutions, L. L. C." lastName="VR-Tech Software Solutions, L. L. C." role="Counter Claimant"></party>
+ <party fullName="VR-Tech Software Solutions, L. L. C." lastName="VR-Tech Software Solutions, L. L. C." role="Defendant"></party>
+ <party fullName="VR-Tech Software Solutions, L. L. C." lastName="VR-Tech Software Solutions, L. L. C." role="ThirdParty Plaintiff"></party>
+ <party firstName="Scott" fullName="Scott Winningham" lastName="Winningham" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-14841-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14841/USCOURTS-mied-2_07-cv-14841-0/mods.xml">
+ <titleInfo>
+  <title>National Business Development Services, Incorporated v. American Credit Education and Consulting, Incorporated et al</title>
+  <subTitle>ORDER finding as moot 6 Motion to Dismiss; granting 8 Motion to Remand. Signed by Honorable Lawrence P Zatkoff. (SSch)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-14841-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819237b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14841/USCOURTS-mied-2_07-cv-14841-0</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-14841_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14841/USCOURTS-mied-2_07-cv-14841-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-14841/pdf/USCOURTS-mied-2_07-cv-14841-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-14841; National Business Development Services, Incorporated v. American Credit Education and Consulting, Incorporated et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-14841-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-18</dateIssued>
+  <docketText>ORDER finding as moot 6 Motion to Dismiss; granting 8 Motion to Remand. Signed by Honorable Lawrence P Zatkoff. (SSch)</docketText>
+</extension>
+</relatedItem>
+</mods>

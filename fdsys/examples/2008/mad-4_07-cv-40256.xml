@@ -1,0 +1,188 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814db468">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_07-cv-40256</identifier>
+<identifier type="local">P0b002ee1814db468</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-4_07-cv-40256</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-4_07-cv-40256</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>4:07-cv-40256</caseNumber>
+ <caseOffice>Worcester</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>15:1126 Patent Infringement</cause>
+ <party fullName="Anti-Marking Systems, Inc." lastName="Anti-Marking Systems, Inc." role="Counter Claimant"></party>
+ <party fullName="Anti-Marking Systems, Inc." lastName="Anti-Marking Systems, Inc." role="Defendant"></party>
+ <party firstName="Shigeki" fullName="Shigeki Matsukawa" lastName="Matsukawa" role="Defendant"></party>
+ <party fullName="PrintGuard, Inc." lastName="PrintGuard, Inc." role="Counter Defendant"></party>
+ <party fullName="PrintGuard, Inc." lastName="PrintGuard, Inc." role="Plaintiff"></party>
+ <party fullName="Sivex Corporation" lastName="Sivex Corporation" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>PrintGuard, Inc. V. Sivex Corporation</title>
+ <partNumber>4:07-cv-40256</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_07-cv-40256/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:07-cv-40256;07-40256</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Worcester</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Anti-Marking Systems, Inc.</displayForm>
+ <namePart type="family">Anti-Marking Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Anti-Marking Systems, Inc.</displayForm>
+ <namePart type="family">Anti-Marking Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shigeki Matsukawa</displayForm>
+ <namePart type="family">Matsukawa</namePart>
+ <namePart type="given">Shigeki</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PrintGuard, Inc.</displayForm>
+ <namePart type="family">PrintGuard, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PrintGuard, Inc.</displayForm>
+ <namePart type="family">PrintGuard, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sivex Corporation</displayForm>
+ <namePart type="family">Sivex Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-4_07-cv-40256</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>4:07-cv-40256</caseNumber>
+ <caseOffice>Worcester</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>15:1126 Patent Infringement</cause>
+ <party fullName="Anti-Marking Systems, Inc." lastName="Anti-Marking Systems, Inc." role="Counter Claimant"></party>
+ <party fullName="Anti-Marking Systems, Inc." lastName="Anti-Marking Systems, Inc." role="Defendant"></party>
+ <party firstName="Shigeki" fullName="Shigeki Matsukawa" lastName="Matsukawa" role="Defendant"></party>
+ <party fullName="PrintGuard, Inc." lastName="PrintGuard, Inc." role="Counter Defendant"></party>
+ <party fullName="PrintGuard, Inc." lastName="PrintGuard, Inc." role="Plaintiff"></party>
+ <party fullName="Sivex Corporation" lastName="Sivex Corporation" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_07-cv-40256-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_07-cv-40256/USCOURTS-mad-4_07-cv-40256-0/mods.xml">
+ <titleInfo>
+  <title>PrintGuard, Inc. V. Sivex Corporation</title>
+  <subTitle>Judge F. Dennis Saylor, IV: MEMORANDUM AND ORDER entered denying 5 Motion for Preliminary Injunction and denying as moot 10 Motion to Expedite discovery. (Castles, Martin)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_07-cv-40256-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181541584</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_07-cv-40256/USCOURTS-mad-4_07-cv-40256-0</identifier>
+ <identifier type="former granule identifier">mad-4_07-cv-40256_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_07-cv-40256/USCOURTS-mad-4_07-cv-40256-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_07-cv-40256/pdf/USCOURTS-mad-4_07-cv-40256-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-40256; PrintGuard, Inc. V. Sivex Corporation; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_07-cv-40256-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-16</dateIssued>
+  <docketText>Judge F. Dennis Saylor, IV: MEMORANDUM AND ORDER entered denying 5 Motion for Preliminary Injunction and denying as moot 10 Motion to Expedite discovery. (Castles, Martin)</docketText>
+</extension>
+</relatedItem>
+</mods>

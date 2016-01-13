@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814da242">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cr-10297</identifier>
+<identifier type="local">P0b002ee1814da242</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_10-cr-10297</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_10-cr-10297</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:10-cr-10297</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Linda" fullName="Linda Matson Crasco" lastName="Crasco" middleName="Matson" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Crasco</title>
+ <partNumber>1:10-cr-10297</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cr-10297/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cr-10297;10-10297</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Linda Matson Crasco</displayForm>
+ <namePart type="family">Crasco</namePart>
+ <namePart type="given">Linda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_10-cr-10297</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:10-cr-10297</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Linda" fullName="Linda Matson Crasco" lastName="Crasco" middleName="Matson" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_10-cr-10297-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cr-10297/USCOURTS-mad-1_10-cr-10297-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Crasco</title>
+  <subTitle>Judge Douglas P. Woodlock: ORDER entered. JUDGMENT as to Linda Matson Crasco (1), Count 1, Defendant sentenced to 5 years probation with standard and special conditions. $100 special assessment. $500 Fine. Restitution in the amount of $5,056.29.00. (Lovett, Jarrett)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_10-cr-10297-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18153792c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cr-10297/USCOURTS-mad-1_10-cr-10297-0</identifier>
+ <identifier type="former granule identifier">mad-1_10-cr-10297_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cr-10297/USCOURTS-mad-1_10-cr-10297-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cr-10297/pdf/USCOURTS-mad-1_10-cr-10297-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cr-10297; USA v. Crasco; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_10-cr-10297-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-19</dateIssued>
+  <docketText>Judge Douglas P. Woodlock: ORDER entered. JUDGMENT as to Linda Matson Crasco (1), Count 1, Defendant sentenced to 5 years probation with standard and special conditions. $100 special assessment. $500 Fine. Restitution in the amount of $5,056.29.00. (Lovett, Jarrett)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_10-cr-10297-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cr-10297/USCOURTS-mad-1_10-cr-10297-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Crasco</title>
+  <subTitle>Judge Douglas P. Woodlock: ORDER entered. AMENDED JUDGMENT as to Linda Matson Crasco (1), Count 1, Defendant sentenced to 5 years probation with standard and special conditions. $100 special assessment. $500 Fine. Restitution in the amount of $5,056.29.00. (Lovett, Jarrett)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_10-cr-10297-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18153792b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cr-10297/USCOURTS-mad-1_10-cr-10297-1</identifier>
+ <identifier type="former granule identifier">mad-1_10-cr-10297_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cr-10297/USCOURTS-mad-1_10-cr-10297-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cr-10297/pdf/USCOURTS-mad-1_10-cr-10297-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cr-10297; USA v. Crasco; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_10-cr-10297-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-31</dateIssued>
+  <docketText>Judge Douglas P. Woodlock: ORDER entered. AMENDED JUDGMENT as to Linda Matson Crasco (1), Count 1, Defendant sentenced to 5 years probation with standard and special conditions. $100 special assessment. $500 Fine. Restitution in the amount of $5,056.29.00. (Lovett, Jarrett)</docketText>
+</extension>
+</relatedItem>
+</mods>

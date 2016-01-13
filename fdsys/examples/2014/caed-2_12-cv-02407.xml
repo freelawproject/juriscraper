@@ -1,0 +1,457 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee189dc5910">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-10-09</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-10-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407</identifier>
+<identifier type="local">P0b002ee189dc5910</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-10-09</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-10-09</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02407</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02407</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02407</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>362</natureSuitCode>
+ <natureSuit>Medical Malpractice</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party firstName="Amelia" fullName="Amelia Bauermann" lastName="Bauermann" role="Cross Defendant"></party>
+ <party fullName="E.R." lastName="E.R." role="Plaintiff"></party>
+ <party firstName="Tamara" fullName="Tamara Johnson" lastName="Johnson" role="Cross Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Lara" lastName="Lara" role="Plaintiff"></party>
+ <party firstName="Susan" fullName="Susan Maayah" lastName="Maayah" role="Defendant"></party>
+ <party fullName="Salud Clinic" lastName="Salud Clinic" role="Cross Defendant"></party>
+ <party fullName="Sutter Davis Hospital" lastName="Sutter Davis Hospital" role="Cross Claimant"></party>
+ <party fullName="Sutter Davis Hospital" lastName="Sutter Davis Hospital" role="Defendant"></party>
+ <party fullName="Sutter West Women&apos;s Health" lastName="Sutter West Women&apos;s Health" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Cross Defendant"></party>
+ <party firstName="Carolyn" fullName="Carolyn Young" lastName="Young" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Lara v. Sutter Davis Hospital et al</title>
+ <partNumber>2:12-cv-02407</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02407;12-2407</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Amelia Bauermann</displayForm>
+ <namePart type="family">Bauermann</namePart>
+ <namePart type="given">Amelia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>E.R.</displayForm>
+ <namePart type="family">E.R.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tamara Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Tamara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jennifer Lara</displayForm>
+ <namePart type="family">Lara</namePart>
+ <namePart type="given">Jennifer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Susan Maayah</displayForm>
+ <namePart type="family">Maayah</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Salud Clinic</displayForm>
+ <namePart type="family">Salud Clinic</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sutter Davis Hospital</displayForm>
+ <namePart type="family">Sutter Davis Hospital</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Sutter Davis Hospital</displayForm>
+ <namePart type="family">Sutter Davis Hospital</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sutter West Women&apos;s Health</displayForm>
+ <namePart type="family">Sutter West Women&apos;s Health</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carolyn Young</displayForm>
+ <namePart type="family">Young</namePart>
+ <namePart type="given">Carolyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02407</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02407</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>362</natureSuitCode>
+ <natureSuit>Medical Malpractice</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party firstName="Amelia" fullName="Amelia Bauermann" lastName="Bauermann" role="Cross Defendant"></party>
+ <party fullName="E.R." lastName="E.R." role="Plaintiff"></party>
+ <party firstName="Tamara" fullName="Tamara Johnson" lastName="Johnson" role="Cross Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Lara" lastName="Lara" role="Plaintiff"></party>
+ <party firstName="Susan" fullName="Susan Maayah" lastName="Maayah" role="Defendant"></party>
+ <party fullName="Salud Clinic" lastName="Salud Clinic" role="Cross Defendant"></party>
+ <party fullName="Sutter Davis Hospital" lastName="Sutter Davis Hospital" role="Cross Claimant"></party>
+ <party fullName="Sutter Davis Hospital" lastName="Sutter Davis Hospital" role="Defendant"></party>
+ <party fullName="Sutter West Women&apos;s Health" lastName="Sutter West Women&apos;s Health" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Cross Defendant"></party>
+ <party firstName="Carolyn" fullName="Carolyn Young" lastName="Young" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02407-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-0/mods.xml">
+ <titleInfo>
+  <title>Lara v. Sutter Davis Hospital et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge William B. Shubb on 10/25/2012 GRANTING 9 the US Second extension of time to respond to cross-complaint on or before 11/1/2012.(Reader, L)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189dcf3be</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02407_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02407; Lara v. Sutter Davis Hospital et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02407-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-10-26</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge William B. Shubb on 10/25/2012 GRANTING 9 the US Second extension of time to respond to cross-complaint on or before 11/1/2012.(Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02407-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-1/mods.xml">
+ <titleInfo>
+  <title>Lara v. Sutter Davis Hospital et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 10/8/2013 granting plaintiff&apos;s request to appear by telephone at the hearing on the Motion for Leave to File the First Amended Complaint on 12/16/2013 at 2:00 p.m. The courtroom deputy shall email counsel with instructions on how to participate in the telephone conference call. (Kirksey Smith, K)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189dcf3c1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02407_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02407; Lara v. Sutter Davis Hospital et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02407-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-10-09</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 10/8/2013 granting plaintiff&apos;s request to appear by telephone at the hearing on the Motion for Leave to File the First Amended Complaint on 12/16/2013 at 2:00 p.m. The courtroom deputy shall email counsel with instructions on how to participate in the telephone conference call. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02407-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-2/mods.xml">
+ <titleInfo>
+  <title>Lara v. Sutter Davis Hospital et al</title>
+  <subTitle>STIPULATION and ORDER 27 signed by Senior Judge William B. Shubb on 10/10/13 ORDERING that 21 the Status and Pretrial Scheduling Order is amended as follows: Designation of Expert Witnesses is due by 4/18/2014, Rebuttal experts and reports due by 5/9/2014, all Discovery shall be completed by 6/27/2013, all Motions, for continuance, temporary restraining orders or other emergency applications, shall be filed on or before 7/25/2014. (Kastilahn, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189dcf3bf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02407_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02407; Lara v. Sutter Davis Hospital et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02407-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-10-11</dateIssued>
+  <docketText>STIPULATION and ORDER 27 signed by Senior Judge William B. Shubb on 10/10/13 ORDERING that 21 the Status and Pretrial Scheduling Order is amended as follows: Designation of Expert Witnesses is due by 4/18/2014, Rebuttal experts and reports due by 5/9/2014, all Discovery shall be completed by 6/27/2013, all Motions, for continuance, temporary restraining orders or other emergency applications, shall be filed on or before 7/25/2014. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02407-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-3/mods.xml">
+ <titleInfo>
+  <title>Lara v. Sutter Davis Hospital et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 12/18/2013 GRANTING 37 Motion to Appoint ad Litem. Carolyn Young is APPOINTED as guardian ad litem for minor petitioner, E.R.(Donati, J)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189dcf3bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02407_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02407; Lara v. Sutter Davis Hospital et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02407-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-12-18</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 12/18/2013 GRANTING 37 Motion to Appoint ad Litem. Carolyn Young is APPOINTED as guardian ad litem for minor petitioner, E.R.(Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02407-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-4/mods.xml">
+ <titleInfo>
+  <title>Lara v. Sutter Davis Hospital et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 12/23/13 GRANTING 39 Request filed by United States of America. IT IS HEREBY ORDERED that the Assistant United States Attorney may appear telephonically at the hearing on 12/30/13 at 2:00 p.m. The courtroom deputy shall email counsel with instructions on how to participate in the telephone conference call. (Meuleman, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189dcf3bb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02407_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02407; Lara v. Sutter Davis Hospital et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02407-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-12-23</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 12/23/13 GRANTING 39 Request filed by United States of America. IT IS HEREBY ORDERED that the Assistant United States Attorney may appear telephonically at the hearing on 12/30/13 at 2:00 p.m. The courtroom deputy shall email counsel with instructions on how to participate in the telephone conference call. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02407-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-5/mods.xml">
+ <titleInfo>
+  <title>Lara v. Sutter Davis Hospital et al</title>
+  <subTitle>MEMORANDUM AND ORDER RE: MOTION FOR LEAVE TO FILE FIRST AMENDED COMPLAINT signed by Senior Judge William B. Shubb on 1/2/14 ORDERING that Within 14 days from the date of this Order, counsel for defendants shall submit a statement of the time and expenses incurred in opposing this motion, which shall include a statement of the hourly rate charged for each attorney for whose time reimbursement is requested; the number of hours spent; a breakdown of the time spent on each task; and a description of the work done; Upon review of such statement, the court will determine the amount of fees and expenses for which plaintiff shall reimburse defendants&apos; attorneys, and will enter an Order accordingly; Upon payment of the sum ordered by the court to defendants&apos; attorneys, plaintiff will be permitted to file her amended complaint adding Eliceo Rehg as an additional party plaintiff. (Becknal, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189dcf3b9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02407_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02407; Lara v. Sutter Davis Hospital et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02407-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>MEMORANDUM AND ORDER RE: MOTION FOR LEAVE TO FILE FIRST AMENDED COMPLAINT signed by Senior Judge William B. Shubb on 1/2/14 ORDERING that Within 14 days from the date of this Order, counsel for defendants shall submit a statement of the time and expenses incurred in opposing this motion, which shall include a statement of the hourly rate charged for each attorney for whose time reimbursement is requested; the number of hours spent; a breakdown of the time spent on each task; and a description of the work done; Upon review of such statement, the court will determine the amount of fees and expenses for which plaintiff shall reimburse defendants&apos; attorneys, and will enter an Order accordingly; Upon payment of the sum ordered by the court to defendants&apos; attorneys, plaintiff will be permitted to file her amended complaint adding Eliceo Rehg as an additional party plaintiff. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02407-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-6/mods.xml">
+ <titleInfo>
+  <title>Lara v. Sutter Davis Hospital et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 1/17/2014: IT IS THEREFORE ORDERED that within ten days of the date this Order is signed, plaintiff shall send payment in the amount of $5,153.50 to LaFollette, Johnson, DeHaas, Fesler &amp; Ames, and payment in the amount of $2,338.50 to Schuering Zimmerman &amp; Doyle, LLP. Upon payment, plaintiff will be permitted to file her amended complaint. (Kirksey Smith, K)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189dcf3c0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02407_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02407; Lara v. Sutter Davis Hospital et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02407-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-01-17</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 1/17/2014: IT IS THEREFORE ORDERED that within ten days of the date this Order is signed, plaintiff shall send payment in the amount of $5,153.50 to LaFollette, Johnson, DeHaas, Fesler &amp; Ames, and payment in the amount of $2,338.50 to Schuering Zimmerman &amp; Doyle, LLP. Upon payment, plaintiff will be permitted to file her amended complaint. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02407-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-7/mods.xml">
+ <titleInfo>
+  <title>Lara v. Sutter Davis Hospital et al</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 2/28/14 ORDERING pursuant to Rule 41(a)(1)(A)(ii) of the Federal Rules of Civil Procedure, the Plaintiff, Jennifer Lara, and her counsel, Linda Fermoyle Rice of Rice &amp; Bloomfield, LLP, hereby stipulate to a voluntary dismissal of all claims asserted against Defendants, Sutter Davis Hospital, Sutter West Women&apos;s Health and Susan Maayah, M.D., without prejudice, in the above-captioned matter. This Stipulation is not intended to dismiss with or without prejudice any claims that may be brought on behalf of plaintiff&apos;s minor child, ER. Defendant/Cross-Complainant, Sutter Davis Hospital, hereby stipulates to a voluntary dismissal of its third party complaint asserted against Cross-Defendant, United States of America, with prejudice. CASE CLOSED (Becknal, R)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189dcf3ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02407_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02407; Lara v. Sutter Davis Hospital et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02407-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-03-03</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 2/28/14 ORDERING pursuant to Rule 41(a)(1)(A)(ii) of the Federal Rules of Civil Procedure, the Plaintiff, Jennifer Lara, and her counsel, Linda Fermoyle Rice of Rice &amp; Bloomfield, LLP, hereby stipulate to a voluntary dismissal of all claims asserted against Defendants, Sutter Davis Hospital, Sutter West Women&apos;s Health and Susan Maayah, M.D., without prejudice, in the above-captioned matter. This Stipulation is not intended to dismiss with or without prejudice any claims that may be brought on behalf of plaintiff&apos;s minor child, ER. Defendant/Cross-Complainant, Sutter Davis Hospital, hereby stipulates to a voluntary dismissal of its third party complaint asserted against Cross-Defendant, United States of America, with prejudice. CASE CLOSED (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02407-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-8/mods.xml">
+ <titleInfo>
+  <title>Lara v. Sutter Davis Hospital et al</title>
+  <subTitle>RELATED CASE 52 ORDER signed by Senior Judge William B. Shubb. Actions denominated 12-CV-2407 WBS CKD and 14-CV-2053 KJM KJN are deemed related. Therefore 14-CV-2053 KJM KJN is REASSIGNED to Senior Judge William B. Shubb and Magistrate Judge Carolyn K. Delaney for all further proceedings. Henceforth, documents filed in case shall be shown as 14-CV-2053 WBS CKD. Clerk to make appropriate adjustment to compensate for reassignment. (Marciel, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189dcf3bd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02407_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02407/USCOURTS-caed-2_12-cv-02407-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02407/pdf/USCOURTS-caed-2_12-cv-02407-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02407; Lara v. Sutter Davis Hospital et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02407-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-10-08</dateIssued>
+  <docketText>RELATED CASE 52 ORDER signed by Senior Judge William B. Shubb. Actions denominated 12-CV-2407 WBS CKD and 14-CV-2053 KJM KJN are deemed related. Therefore 14-CV-2053 KJM KJN is REASSIGNED to Senior Judge William B. Shubb and Magistrate Judge Carolyn K. Delaney for all further proceedings. Henceforth, documents filed in case shall be shown as 14-CV-2053 WBS CKD. Clerk to make appropriate adjustment to compensate for reassignment. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

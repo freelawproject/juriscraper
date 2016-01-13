@@ -1,0 +1,348 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c65d2ff">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-05-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-05-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103</identifier>
+<identifier type="local">P0b002ee18c65d2ff</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-05-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-05-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-01103</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01103</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01103</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Dr. Akanno" lastName="Akanno" middleName="Dr." role="Defendant"></party>
+ <party firstName="Tristan" fullName="Tristan D. Allan" lastName="Allan" middleName="D." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Tristan Allan v. Akanno</title>
+ <partNumber>1:12-cv-01103</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-01103;12-1103</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dr. Akanno</displayForm>
+ <namePart type="family">Akanno</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tristan D. Allan</displayForm>
+ <namePart type="family">Allan</namePart>
+ <namePart type="given">Tristan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01103</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01103</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Dr. Akanno" lastName="Akanno" middleName="Dr." role="Defendant"></party>
+ <party firstName="Tristan" fullName="Tristan D. Allan" lastName="Allan" middleName="D." role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01103-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Tristan Allan v. Akanno</title>
+  <subTitle>ORDER Denying 3 Plaintiff&apos;s Motion for Service of Summons and Complaint 3, signed by Magistrate Judge Barbara A. McAuliffe on 7/12/12. (Gonzalez, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c66a988</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01103_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01103; (PC) Tristan Allan v. Akanno; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01103-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-07-12</dateIssued>
+  <docketText>ORDER Denying 3 Plaintiff&apos;s Motion for Service of Summons and Complaint 3, signed by Magistrate Judge Barbara A. McAuliffe on 7/12/12. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01103-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Tristan Allan v. Akanno</title>
+  <subTitle>ORDER Addressing 9 Plaintiff&apos;s Motion for Tentative Date of Ruling signed by Magistrate Judge Barbara A. McAuliffe on 11/21/2012. (Jessen, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c66a989</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01103_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01103; (PC) Tristan Allan v. Akanno; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01103-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-11-21</dateIssued>
+  <docketText>ORDER Addressing 9 Plaintiff&apos;s Motion for Tentative Date of Ruling signed by Magistrate Judge Barbara A. McAuliffe on 11/21/2012. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01103-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Tristan Allan v. Akanno</title>
+  <subTitle>ORDER Finding Service Of Complaint Appropriate, And Forwarding Service Documents To Plaintiff For Completion And Return Within Thirty Days (ECF No.1), signed by Magistrate Judge Barbara A. McAuliffe on 10/8/2013. (Filing Deadline: 11/13/2013.) (Attachments: # (1) Complaint filed July 9, 2012, # (2) USM Prisoner Instructions, #(3)USM-285 Form)(Fahrney, E)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c66a985</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01103_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01103; (PC) Tristan Allan v. Akanno; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01103-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-10-08</dateIssued>
+  <docketText>ORDER Finding Service Of Complaint Appropriate, And Forwarding Service Documents To Plaintiff For Completion And Return Within Thirty Days (ECF No.1), signed by Magistrate Judge Barbara A. McAuliffe on 10/8/2013. (Filing Deadline: 11/13/2013.) (Attachments: # (1) Complaint filed July 9, 2012, # (2) USM Prisoner Instructions, #(3)USM-285 Form)(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01103-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Tristan Allan v. Akanno</title>
+  <subTitle>ORDER GRANTING Defendant&apos;s 21 Request to Conduct Non-Party Depositions Via Videoconference signed by Magistrate Judge Barbara A. McAuliffe on 8/4/2014. (Marrujo, C)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c66a983</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01103_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01103; (PC) Tristan Allan v. Akanno; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01103-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-08-05</dateIssued>
+  <docketText>ORDER GRANTING Defendant&apos;s 21 Request to Conduct Non-Party Depositions Via Videoconference signed by Magistrate Judge Barbara A. McAuliffe on 8/4/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01103-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Tristan Allan v. Akanno</title>
+  <subTitle>SECOND SCHDULING ORDER; ORDER Requiring Parties to Notify Court Whether they Consent to Magistrate Judge Jurisdiction within Thirty Days signed by Magistrate Judge Barbara A. McAuliffe on 01/05/2015. Telephonic Trial Confirmation Hearing set for 5/18/2015 at 03:00 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii; Jury Trial set for 6/30/2015 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. # (1) Local Rule 281) (Flores, E)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c66a984</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01103_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01103; (PC) Tristan Allan v. Akanno; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01103-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>SECOND SCHDULING ORDER; ORDER Requiring Parties to Notify Court Whether they Consent to Magistrate Judge Jurisdiction within Thirty Days signed by Magistrate Judge Barbara A. McAuliffe on 01/05/2015. Telephonic Trial Confirmation Hearing set for 5/18/2015 at 03:00 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii; Jury Trial set for 6/30/2015 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. # (1) Local Rule 281) (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01103-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Tristan Allan v. Akanno</title>
+  <subTitle>ORDER Denying 31 Motion to Appoint Counsel, signed by Magistrate Judge Barbara A. McAuliffe on 03/04/15. (Gonzalez, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c66ab55</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01103_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01103; (PC) Tristan Allan v. Akanno; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01103-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-03-04</dateIssued>
+  <docketText>ORDER Denying 31 Motion to Appoint Counsel, signed by Magistrate Judge Barbara A. McAuliffe on 03/04/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01103-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Tristan Allan v. Akanno</title>
+  <subTitle>ORDER After Settlement (ECF No.33), signed by Magistrate Judge Barbara A. McAuliffe on 5/5/2015. (Filing Deadline: 5/20/2015)(Fahrney, E)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c66a986</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01103_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01103; (PC) Tristan Allan v. Akanno; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01103-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-05-05</dateIssued>
+  <docketText>ORDER After Settlement (ECF No.33), signed by Magistrate Judge Barbara A. McAuliffe on 5/5/2015. (Filing Deadline: 5/20/2015)(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01103-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Tristan Allan v. Akanno</title>
+  <subTitle>ORDER DISMISSING Action with Prejudice, signed by District Judge Anthony W. Ishii on 5/13/15. CASE CLOSED. (Gonzalez, R)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c66a987</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01103_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01103/USCOURTS-caed-1_12-cv-01103-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01103/pdf/USCOURTS-caed-1_12-cv-01103-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01103; (PC) Tristan Allan v. Akanno; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01103-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-05-13</dateIssued>
+  <docketText>ORDER DISMISSING Action with Prejudice, signed by District Judge Anthony W. Ishii on 5/13/15. CASE CLOSED. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

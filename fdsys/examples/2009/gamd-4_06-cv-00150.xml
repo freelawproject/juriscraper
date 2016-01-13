@@ -1,0 +1,354 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812db881">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_06-cv-00150</identifier>
+<identifier type="local">P0b002ee1812db881</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-4_06-cv-00150</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-4_06-cv-00150</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>4:06-cv-00150</caseNumber>
+ <caseOffice>Columbus</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000 Job Discrimination (Sex)</cause>
+ <party firstName="Thomas" fullName="Thomas E Barron" lastName="Barron" middleName="E" role="Defendant"></party>
+ <party firstName="R. T." fullName="R. T. Boren" lastName="Boren" role="Defendant"></party>
+ <party fullName="COLUMBUS GEORGIA" lastName="COLUMBUS GEORGIA" role="Defendant"></party>
+ <party firstName="Alicia" fullName="Alicia Davenport" lastName="Davenport" role="Plaintiff"></party>
+ <party firstName="J." fullName="J. D. Hawk" lastName="Hawk" middleName="D." role="Defendant"></party>
+ <party firstName="David" fullName="David Horiuchi" lastName="Horiuchi" role="Defendant"></party>
+ <party firstName="Isiah" fullName="Isiah Hugley" lastName="Hugley" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert S. Poydasheff" lastName="Poydasheff" middleName="S." role="Defendant"></party>
+ <party firstName="Rodney" fullName="Rodney Spears" lastName="Spears" role="Defendant"></party>
+ <party firstName="Stan" fullName="Stan Swiney" lastName="Swiney" role="Defendant"></party>
+ <party firstName="Maxwell" fullName="Maxwell Todd" lastName="Todd" role="Defendant"></party>
+ <party firstName="Dean" fullName="Dean Walton" lastName="Walton" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Davenport v. City of Columbus, Georgia et al</title>
+ <partNumber>4:06-cv-00150</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_06-cv-00150/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:06-cv-00150;06-150</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Columbus</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Thomas E Barron</displayForm>
+ <namePart type="family">Barron</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. T. Boren</displayForm>
+ <namePart type="family">Boren</namePart>
+ <namePart type="given">R. T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>COLUMBUS GEORGIA</displayForm>
+ <namePart type="family">COLUMBUS GEORGIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alicia Davenport</displayForm>
+ <namePart type="family">Davenport</namePart>
+ <namePart type="given">Alicia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>J. D. Hawk</displayForm>
+ <namePart type="family">Hawk</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Horiuchi</displayForm>
+ <namePart type="family">Horiuchi</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Isiah Hugley</displayForm>
+ <namePart type="family">Hugley</namePart>
+ <namePart type="given">Isiah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert S. Poydasheff</displayForm>
+ <namePart type="family">Poydasheff</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rodney Spears</displayForm>
+ <namePart type="family">Spears</namePart>
+ <namePart type="given">Rodney</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stan Swiney</displayForm>
+ <namePart type="family">Swiney</namePart>
+ <namePart type="given">Stan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maxwell Todd</displayForm>
+ <namePart type="family">Todd</namePart>
+ <namePart type="given">Maxwell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dean Walton</displayForm>
+ <namePart type="family">Walton</namePart>
+ <namePart type="given">Dean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-4_06-cv-00150</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>4:06-cv-00150</caseNumber>
+ <caseOffice>Columbus</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000 Job Discrimination (Sex)</cause>
+ <party firstName="Thomas" fullName="Thomas E Barron" lastName="Barron" middleName="E" role="Defendant"></party>
+ <party firstName="R. T." fullName="R. T. Boren" lastName="Boren" role="Defendant"></party>
+ <party fullName="COLUMBUS GEORGIA" lastName="COLUMBUS GEORGIA" role="Defendant"></party>
+ <party firstName="Alicia" fullName="Alicia Davenport" lastName="Davenport" role="Plaintiff"></party>
+ <party firstName="J." fullName="J. D. Hawk" lastName="Hawk" middleName="D." role="Defendant"></party>
+ <party firstName="David" fullName="David Horiuchi" lastName="Horiuchi" role="Defendant"></party>
+ <party firstName="Isiah" fullName="Isiah Hugley" lastName="Hugley" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert S. Poydasheff" lastName="Poydasheff" middleName="S." role="Defendant"></party>
+ <party firstName="Rodney" fullName="Rodney Spears" lastName="Spears" role="Defendant"></party>
+ <party firstName="Stan" fullName="Stan Swiney" lastName="Swiney" role="Defendant"></party>
+ <party firstName="Maxwell" fullName="Maxwell Todd" lastName="Todd" role="Defendant"></party>
+ <party firstName="Dean" fullName="Dean Walton" lastName="Walton" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-4_06-cv-00150-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-0/mods.xml">
+ <titleInfo>
+  <title>Davenport v. City of Columbus, Georgia et al</title>
+  <subTitle>ORDER granting in part and denying in part 45 Motion for Summary Judgment Ordered by Judge Clay D. Land on 07/23/2008 (CGC)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-4_06-cv-00150-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18131aac7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-0</identifier>
+ <identifier type="former granule identifier">gamd-4_06-cv-00150_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_06-cv-00150/pdf/USCOURTS-gamd-4_06-cv-00150-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-00150; Davenport v. City of Columbus, Georgia et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-4_06-cv-00150-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-07-23</dateIssued>
+  <docketText>ORDER granting in part and denying in part 45 Motion for Summary Judgment Ordered by Judge Clay D. Land on 07/23/2008 (CGC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-4_06-cv-00150-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-1/mods.xml">
+ <titleInfo>
+  <title>Davenport v. City of Columbus, Georgia et al</title>
+  <subTitle>ORDER denying 105 Motion for Reconsideration ; denying 107 Motion for Leave to File Ordered by Judge Clay D. Land on 08/04/2008 (CGC)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-4_06-cv-00150-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18131aac6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-1</identifier>
+ <identifier type="former granule identifier">gamd-4_06-cv-00150_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_06-cv-00150/pdf/USCOURTS-gamd-4_06-cv-00150-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-00150; Davenport v. City of Columbus, Georgia et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-4_06-cv-00150-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-08-04</dateIssued>
+  <docketText>ORDER denying 105 Motion for Reconsideration ; denying 107 Motion for Leave to File Ordered by Judge Clay D. Land on 08/04/2008 (CGC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-4_06-cv-00150-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-2/mods.xml">
+ <titleInfo>
+  <title>Davenport v. City of Columbus, Georgia et al</title>
+  <subTitle>ORDER denying 110 Motion to Stay Ordered by Judge Clay D. Land on 08/18/2008 (CGC)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-4_06-cv-00150-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18131aac8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-2</identifier>
+ <identifier type="former granule identifier">gamd-4_06-cv-00150_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_06-cv-00150/pdf/USCOURTS-gamd-4_06-cv-00150-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-00150; Davenport v. City of Columbus, Georgia et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-4_06-cv-00150-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-08-18</dateIssued>
+  <docketText>ORDER denying 110 Motion to Stay Ordered by Judge Clay D. Land on 08/18/2008 (CGC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-4_06-cv-00150-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-3/mods.xml">
+ <titleInfo>
+  <title>Davenport v. City of Columbus, Georgia et al</title>
+  <subTitle>ORDER denying 168 Motion for New Trial. Ordered by Judge Clay D. Land on 10/07/2008. (CGC)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-4_06-cv-00150-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18131ac5a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-3</identifier>
+ <identifier type="former granule identifier">gamd-4_06-cv-00150_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_06-cv-00150/pdf/USCOURTS-gamd-4_06-cv-00150-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-00150; Davenport v. City of Columbus, Georgia et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-4_06-cv-00150-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-10-07</dateIssued>
+  <docketText>ORDER denying 168 Motion for New Trial. Ordered by Judge Clay D. Land on 10/07/2008. (CGC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-4_06-cv-00150-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-4/mods.xml">
+ <titleInfo>
+  <title>Davenport v. City of Columbus, Georgia et al</title>
+  <subTitle>ORDER granting 175 Motion for Attorney Fees, as modified by the Court. Ordered by Judge Clay D. Land on 01/30/2009. (CGC)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-4_06-cv-00150-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18131aac9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-4</identifier>
+ <identifier type="former granule identifier">gamd-4_06-cv-00150_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_06-cv-00150/USCOURTS-gamd-4_06-cv-00150-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_06-cv-00150/pdf/USCOURTS-gamd-4_06-cv-00150-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-00150; Davenport v. City of Columbus, Georgia et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-4_06-cv-00150-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-01-30</dateIssued>
+  <docketText>ORDER granting 175 Motion for Attorney Fees, as modified by the Court. Ordered by Judge Clay D. Land on 01/30/2009. (CGC)</docketText>
+</extension>
+</relatedItem>
+</mods>

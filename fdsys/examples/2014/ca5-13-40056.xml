@@ -1,0 +1,138 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c7b72c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Fifth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-13-40056</identifier>
+<identifier type="local">P0b002ee186c7b72c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca5-13-40056</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca5-13-40056</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca5</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtSortOrder>1050</courtSortOrder>
+ <caseNumber>13-40056</caseNumber>
+ <party firstName="Malone" fullName="Malone Burns" lastName="Burns" role="Appellant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Malone Burns</title>
+ <partNumber>13-40056</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-13-40056/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">13-40056;13-40056</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Fifth Circuit</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Malone Burns</displayForm>
+ <namePart type="family">Burns</namePart>
+ <namePart type="given">Malone</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca5-13-40056</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca5</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtSortOrder>1050</courtSortOrder>
+ <caseNumber>13-40056</caseNumber>
+ <party firstName="Malone" fullName="Malone Burns" lastName="Burns" role="Appellant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca5-13-40056-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-13-40056/USCOURTS-ca5-13-40056-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Malone Burns</title>
+  <subTitle>UNPUBLISHED OPINION FILED. [13-40056 Dismissed as Frivolous] Judge: EGJ , Judge: JES , Judge: EBC Mandate pull date is 01/28/2014 for Appellant Malone Burns; denying motion to appoint counsel filed by Appellant Mr. Malone Burns [7477949-3]; granting motion to withdraw as counsel filed by Mr. Robert Gerard Arrambide, Esq. [7431458-2]; granting motion to file motion out of time filed by Appellant Mr. Malone Burns [7424083-2] [13-40056]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-13-40056/pdf/USCOURTS-ca5-13-40056-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c81e73</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-13-40056/USCOURTS-ca5-13-40056-0</identifier>
+ <identifier type="former granule identifier">ca5-13-40056_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-13-40056/USCOURTS-ca5-13-40056-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-13-40056/pdf/USCOURTS-ca5-13-40056-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 13-40056; USA v. Malone Burns; </searchTitle>
+  <courtName>United States Court of Appeals for the Fifth Circuit</courtName>
+  <accessId>USCOURTS-ca5-13-40056-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-07</dateIssued>
+  <docketText>UNPUBLISHED OPINION FILED. [13-40056 Dismissed as Frivolous] Judge: EGJ , Judge: JES , Judge: EBC Mandate pull date is 01/28/2014 for Appellant Malone Burns; denying motion to appoint counsel filed by Appellant Mr. Malone Burns [7477949-3]; granting motion to withdraw as counsel filed by Mr. Robert Gerard Arrambide, Esq. [7431458-2]; granting motion to file motion out of time filed by Appellant Mr. Malone Burns [7424083-2] [13-40056]</docketText>
+</extension>
+</relatedItem>
+</mods>

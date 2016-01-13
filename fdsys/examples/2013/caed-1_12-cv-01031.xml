@@ -1,0 +1,226 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a21d8c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01031</identifier>
+<identifier type="local">P0b002ee183a21d8c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-01031</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01031</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01031</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party fullName="Blackstone Commercial Plaza, LLC" lastName="Blackstone Commercial Plaza, LLC" role="Defendant"></party>
+ <party fullName="Herb Bauer Sporting Goods" lastName="Herb Bauer Sporting Goods" role="Defendant"></party>
+ <party fullName="Herb Bauer&apos;s Sporting Goods, Inc." lastName="Herb Bauer&apos;s Sporting Goods, Inc." role="Defendant"></party>
+ <party firstName="Cecil" fullName="Cecil Shaw" lastName="Shaw" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Shaw v. Blackstone Commercial Plaza, LLC et al.</title>
+ <partNumber>1:12-cv-01031</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01031/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-01031;12-1031</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Blackstone Commercial Plaza, LLC</displayForm>
+ <namePart type="family">Blackstone Commercial Plaza, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Herb Bauer Sporting Goods</displayForm>
+ <namePart type="family">Herb Bauer Sporting Goods</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Herb Bauer&apos;s Sporting Goods, Inc.</displayForm>
+ <namePart type="family">Herb Bauer&apos;s Sporting Goods, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cecil Shaw</displayForm>
+ <namePart type="family">Shaw</namePart>
+ <namePart type="given">Cecil</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01031</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01031</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party fullName="Blackstone Commercial Plaza, LLC" lastName="Blackstone Commercial Plaza, LLC" role="Defendant"></party>
+ <party fullName="Herb Bauer Sporting Goods" lastName="Herb Bauer Sporting Goods" role="Defendant"></party>
+ <party fullName="Herb Bauer&apos;s Sporting Goods, Inc." lastName="Herb Bauer&apos;s Sporting Goods, Inc." role="Defendant"></party>
+ <party firstName="Cecil" fullName="Cecil Shaw" lastName="Shaw" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01031-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01031/USCOURTS-caed-1_12-cv-01031-0/mods.xml">
+ <titleInfo>
+  <title>Shaw v. Blackstone Commercial Plaza, LLC et al.</title>
+  <subTitle>STIPULATION to Extend Time to Respond to Complaint and Continue the Mandatory Scheduling Conference; ORDER thereon - (1) Defendants shall have until 9/6/2012 to answer or otherwise respond to the complaint. (2) Initial SCHEDULING CONFERENCE is continued from 9/6/2012 to October 23, 2012 at 09:00 AM in Courtroom 8 (BAM) before Magistrate Judge Barbara A. McAuliffe. signed by Magistrate Judge Barbara A. McAuliffe on 7/24/2012. (Herman, H)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01031-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a24731</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01031/USCOURTS-caed-1_12-cv-01031-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01031_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01031/USCOURTS-caed-1_12-cv-01031-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01031/pdf/USCOURTS-caed-1_12-cv-01031-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01031; Shaw v. Blackstone Commercial Plaza, LLC et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01031-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-07-25</dateIssued>
+  <docketText>STIPULATION to Extend Time to Respond to Complaint and Continue the Mandatory Scheduling Conference; ORDER thereon - (1) Defendants shall have until 9/6/2012 to answer or otherwise respond to the complaint. (2) Initial SCHEDULING CONFERENCE is continued from 9/6/2012 to October 23, 2012 at 09:00 AM in Courtroom 8 (BAM) before Magistrate Judge Barbara A. McAuliffe. signed by Magistrate Judge Barbara A. McAuliffe on 7/24/2012. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01031-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01031/USCOURTS-caed-1_12-cv-01031-1/mods.xml">
+ <titleInfo>
+  <title>Shaw v. Blackstone Commercial Plaza, LLC et al.</title>
+  <subTitle>ORDER AFTER SETTLEMENT, Signed by District Judge Lawrence J. O&apos;Neill on 11/20/2012. Pursuant to this Courts Local Rule 160, this Court ORDERS the parties, no later than January 7, 2013, to file appropriate papers to dismiss or conclude this action in its entirety, or to show good cause why the action has not been dismissed. (Arellano, S.)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01031-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a24732</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01031/USCOURTS-caed-1_12-cv-01031-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01031_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01031/USCOURTS-caed-1_12-cv-01031-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01031/pdf/USCOURTS-caed-1_12-cv-01031-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01031; Shaw v. Blackstone Commercial Plaza, LLC et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01031-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-11-20</dateIssued>
+  <docketText>ORDER AFTER SETTLEMENT, Signed by District Judge Lawrence J. O&apos;Neill on 11/20/2012. Pursuant to this Courts Local Rule 160, this Court ORDERS the parties, no later than January 7, 2013, to file appropriate papers to dismiss or conclude this action in its entirety, or to show good cause why the action has not been dismissed. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01031-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01031/USCOURTS-caed-1_12-cv-01031-2/mods.xml">
+ <titleInfo>
+  <title>Shaw v. Blackstone Commercial Plaza, LLC et al.</title>
+  <subTitle>ORDER DISMISSING CASE signed by District Judge Lawrence J. O&apos;Neill on 1/4/2013. CASE CLOSED. (Jessen, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01031-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a24729</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01031/USCOURTS-caed-1_12-cv-01031-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01031_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01031/USCOURTS-caed-1_12-cv-01031-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01031/pdf/USCOURTS-caed-1_12-cv-01031-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01031; Shaw v. Blackstone Commercial Plaza, LLC et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01031-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER DISMISSING CASE signed by District Judge Lawrence J. O&apos;Neill on 1/4/2013. CASE CLOSED. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

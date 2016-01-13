@@ -1,0 +1,232 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18117dba4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_06-cv-00286</identifier>
+<identifier type="local">P0b002ee18117dba4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-5_06-cv-00286</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_06-cv-00286</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:06-cv-00286</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <party fullName="Central New York Joint Apprenticeship and Training Committee for the Electrical Industry" lastName="Central New York Joint Apprenticeship and Training Committee for the Electrical Industry" role="Plaintiff"></party>
+ <party fullName="Central New York Labor Management Cooperation Committee" lastName="Central New York Labor Management Cooperation Committee" role="Plaintiff"></party>
+ <party fullName="Finger Lakes New York Chapter, National Electrical Contractors Association" lastName="Finger Lakes New York Chapter, National Electrical Contractors Association" role="Plaintiff"></party>
+ <party fullName="I.B.E.W. Local Union No. 43" lastName="I.B.E.W. Local Union No. 43" role="Plaintiff"></party>
+ <party fullName="International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds" lastName="International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds" role="Plaintiff"></party>
+ <party fullName="JPL Electric, Inc." lastName="JPL Electric, Inc." role="Defendant"></party>
+ <party fullName="NECA-IBEW National Labor-Management Cooperation Committee Trust Fund" lastName="NECA-IBEW National Labor-Management Cooperation Committee Trust Fund" role="Plaintiff"></party>
+ <party fullName="National Electrical Benefit Fund" lastName="National Electrical Benefit Fund" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds et al v. JPL Electric, Inc.</title>
+ <partNumber>5:06-cv-00286</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_06-cv-00286/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:06-cv-00286;06-286</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Syracuse</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Central New York Joint Apprenticeship and Training Committee for the Electrical Industry</displayForm>
+ <namePart type="family">Central New York Joint Apprenticeship and Training Committee for the Electrical Industry</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Central New York Labor Management Cooperation Committee</displayForm>
+ <namePart type="family">Central New York Labor Management Cooperation Committee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Finger Lakes New York Chapter, National Electrical Contractors Association</displayForm>
+ <namePart type="family">Finger Lakes New York Chapter, National Electrical Contractors Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>I.B.E.W. Local Union No. 43</displayForm>
+ <namePart type="family">I.B.E.W. Local Union No. 43</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds</displayForm>
+ <namePart type="family">International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>JPL Electric, Inc.</displayForm>
+ <namePart type="family">JPL Electric, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>NECA-IBEW National Labor-Management Cooperation Committee Trust Fund</displayForm>
+ <namePart type="family">NECA-IBEW National Labor-Management Cooperation Committee Trust Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>National Electrical Benefit Fund</displayForm>
+ <namePart type="family">National Electrical Benefit Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_06-cv-00286</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:06-cv-00286</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <party fullName="Central New York Joint Apprenticeship and Training Committee for the Electrical Industry" lastName="Central New York Joint Apprenticeship and Training Committee for the Electrical Industry" role="Plaintiff"></party>
+ <party fullName="Central New York Labor Management Cooperation Committee" lastName="Central New York Labor Management Cooperation Committee" role="Plaintiff"></party>
+ <party fullName="Finger Lakes New York Chapter, National Electrical Contractors Association" lastName="Finger Lakes New York Chapter, National Electrical Contractors Association" role="Plaintiff"></party>
+ <party fullName="I.B.E.W. Local Union No. 43" lastName="I.B.E.W. Local Union No. 43" role="Plaintiff"></party>
+ <party fullName="International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds" lastName="International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds" role="Plaintiff"></party>
+ <party fullName="JPL Electric, Inc." lastName="JPL Electric, Inc." role="Defendant"></party>
+ <party fullName="NECA-IBEW National Labor-Management Cooperation Committee Trust Fund" lastName="NECA-IBEW National Labor-Management Cooperation Committee Trust Fund" role="Plaintiff"></party>
+ <party fullName="National Electrical Benefit Fund" lastName="National Electrical Benefit Fund" role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_06-cv-00286-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_06-cv-00286/USCOURTS-nynd-5_06-cv-00286-0/mods.xml">
+ <titleInfo>
+  <title>International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds et al v. JPL Electric, Inc.</title>
+  <subTitle>MEMORANDUM-DECISION&amp;ORDER: denying the # 9 Motion to Dismiss for Lack of Prosecution; and granting the # 10 Motion for Default Judgment, the Clerk is directed to enter default judgment in favor of the plaintiffs&apos; and against defendant JPL Electric, Inc., for the sum of $122,466.34, plus interest thereon at the rate provided for by 28 USC section 1961(a). Signed by Judge Norman A. Mordue on 1/29/07. (jmb)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_06-cv-00286-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813ffe7c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_06-cv-00286/USCOURTS-nynd-5_06-cv-00286-0</identifier>
+ <identifier type="former granule identifier">nynd-5_06-cv-00286_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_06-cv-00286/USCOURTS-nynd-5_06-cv-00286-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_06-cv-00286/pdf/USCOURTS-nynd-5_06-cv-00286-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-00286; International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds et al v. JPL Electric, Inc.; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_06-cv-00286-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-29</dateIssued>
+  <docketText>MEMORANDUM-DECISION&amp;ORDER: denying the # 9 Motion to Dismiss for Lack of Prosecution; and granting the # 10 Motion for Default Judgment, the Clerk is directed to enter default judgment in favor of the plaintiffs&apos; and against defendant JPL Electric, Inc., for the sum of $122,466.34, plus interest thereon at the rate provided for by 28 USC section 1961(a). Signed by Judge Norman A. Mordue on 1/29/07. (jmb)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_06-cv-00286-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_06-cv-00286/USCOURTS-nynd-5_06-cv-00286-1/mods.xml">
+ <titleInfo>
+  <title>International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds et al v. JPL Electric, Inc.</title>
+  <subTitle>JUDGMENT: in favor of Central New York Joint Apprenticeship and Training Committee for the Electrical Industry, Central New York Labor Management Cooperation Committee, Finger Lakes New York Chapter, National Electrical Contractors Association, I.B.E.W. Local Union No. 43, International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds, NECA-IBEW National Labor-Management Cooperation Committee Trust Fund, National Electrical Benefit Fund against JPL Electric, Inc in the amount of $122,466.34, plus interest at the rate provided by 28 USC section 1961(a). (jmb)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_06-cv-00286-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813ffe7d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_06-cv-00286/USCOURTS-nynd-5_06-cv-00286-1</identifier>
+ <identifier type="former granule identifier">nynd-5_06-cv-00286_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_06-cv-00286/USCOURTS-nynd-5_06-cv-00286-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_06-cv-00286/pdf/USCOURTS-nynd-5_06-cv-00286-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-00286; International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds et al v. JPL Electric, Inc.; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_06-cv-00286-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-30</dateIssued>
+  <docketText>JUDGMENT: in favor of Central New York Joint Apprenticeship and Training Committee for the Electrical Industry, Central New York Labor Management Cooperation Committee, Finger Lakes New York Chapter, National Electrical Contractors Association, I.B.E.W. Local Union No. 43, International Brotherhood of Electrical Workers Local No. 43 Pension, Annuity and Health and Welfare Funds, NECA-IBEW National Labor-Management Cooperation Committee Trust Fund, National Electrical Benefit Fund against JPL Electric, Inc in the amount of $122,466.34, plus interest at the rate provided by 28 USC section 1961(a). (jmb)</docketText>
+</extension>
+</relatedItem>
+</mods>

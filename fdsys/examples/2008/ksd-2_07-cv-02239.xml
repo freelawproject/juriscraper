@@ -1,0 +1,234 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18761dbc6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-24</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02239</identifier>
+<identifier type="local">P0b002ee18761dbc6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-24</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-24</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_07-cv-02239</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_07-cv-02239</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:07-cv-02239</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>445</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Employment</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party firstName="George" fullName="George R. Kolb" lastName="Kolb" middleName="R." role="Defendant"></party>
+ <party firstName="Darren" fullName="Darren Moore" lastName="Moore" role="Defendant"></party>
+ <party firstName="Terri" fullName="Terri S. Moses" lastName="Moses" middleName="S." role="Defendant"></party>
+ <party fullName="Wichita Police Department" lastName="Wichita Police Department" role="Defendant"></party>
+ <party fullName="Wichita, Kansas, City of" lastName="Wichita, Kansas, City of" role="Defendant"></party>
+ <party firstName="Norman" fullName="Norman D. Williams" lastName="Williams" middleName="D." role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis Wilson" lastName="Wilson" role="Defendant"></party>
+ <party firstName="Mitchell" fullName="Mitchell Lee Woods" lastName="Woods" middleName="Lee" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Woods v. City of Wichita et al</title>
+ <partNumber>2:07-cv-02239</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02239/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-02239;07-2239</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>George R. Kolb</displayForm>
+ <namePart type="family">Kolb</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Darren Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">Darren</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terri S. Moses</displayForm>
+ <namePart type="family">Moses</namePart>
+ <namePart type="given">Terri</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wichita Police Department</displayForm>
+ <namePart type="family">Wichita Police Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wichita, Kansas, City of</displayForm>
+ <namePart type="family">Wichita, Kansas, City of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Norman D. Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Norman</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mitchell Lee Woods</displayForm>
+ <namePart type="family">Woods</namePart>
+ <namePart type="given">Mitchell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_07-cv-02239</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:07-cv-02239</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>445</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Employment</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party firstName="George" fullName="George R. Kolb" lastName="Kolb" middleName="R." role="Defendant"></party>
+ <party firstName="Darren" fullName="Darren Moore" lastName="Moore" role="Defendant"></party>
+ <party firstName="Terri" fullName="Terri S. Moses" lastName="Moses" middleName="S." role="Defendant"></party>
+ <party fullName="Wichita Police Department" lastName="Wichita Police Department" role="Defendant"></party>
+ <party fullName="Wichita, Kansas, City of" lastName="Wichita, Kansas, City of" role="Defendant"></party>
+ <party firstName="Norman" fullName="Norman D. Williams" lastName="Williams" middleName="D." role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis Wilson" lastName="Wilson" role="Defendant"></party>
+ <party firstName="Mitchell" fullName="Mitchell Lee Woods" lastName="Woods" middleName="Lee" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_07-cv-02239-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_07-cv-02239/USCOURTS-ksd-2_07-cv-02239-0/mods.xml">
+ <titleInfo>
+  <title>Woods v. City of Wichita et al</title>
+  <subTitle>PROTECTIVE ORDER entered. Signed by Magistrate Judge Gerald L. Rushfelt on 10/23/07. (mh) (Signed date corrected on 10/23/2007 to reflect 10/23/07.(mg))</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02239/pdf/USCOURTS-ksd-2_07-cv-02239-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187645982</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_07-cv-02239/USCOURTS-ksd-2_07-cv-02239-0</identifier>
+ <identifier type="former granule identifier">ksd-2_07-cv-02239_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_07-cv-02239/USCOURTS-ksd-2_07-cv-02239-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02239/pdf/USCOURTS-ksd-2_07-cv-02239-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02239; Woods v. City of Wichita et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_07-cv-02239-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-10-23</dateIssued>
+  <docketText>PROTECTIVE ORDER entered. Signed by Magistrate Judge Gerald L. Rushfelt on 10/23/07. (mh) (Signed date corrected on 10/23/2007 to reflect 10/23/07.(mg))</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_07-cv-02239-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_07-cv-02239/USCOURTS-ksd-2_07-cv-02239-1/mods.xml">
+ <titleInfo>
+  <title>Woods v. City of Wichita et al</title>
+  <subTitle>ORDER rejecting parties&apos; proposed Agreed Order directing non-party to produce records pertaining to plaintiff. Signed by Magistrate Judge Gerald L. Rushfelt on 1/30/2008.(byk)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02239/pdf/USCOURTS-ksd-2_07-cv-02239-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187645981</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_07-cv-02239/USCOURTS-ksd-2_07-cv-02239-1</identifier>
+ <identifier type="former granule identifier">ksd-2_07-cv-02239_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_07-cv-02239/USCOURTS-ksd-2_07-cv-02239-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02239/pdf/USCOURTS-ksd-2_07-cv-02239-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02239; Woods v. City of Wichita et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_07-cv-02239-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-30</dateIssued>
+  <docketText>ORDER rejecting parties&apos; proposed Agreed Order directing non-party to produce records pertaining to plaintiff. Signed by Magistrate Judge Gerald L. Rushfelt on 1/30/2008.(byk)</docketText>
+</extension>
+</relatedItem>
+</mods>

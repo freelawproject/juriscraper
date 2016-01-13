@@ -1,0 +1,215 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8ab5f8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Missouri</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_14-cv-02019</identifier>
+<identifier type="local">P0b002ee18a8ab5f8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-moed-4_14-cv-02019</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-moed-4_14-cv-02019</accessId>
+ <courtType>District</courtType>
+ <courtCode>moed</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Missouri</courtState>
+ <courtSortOrder>2281</courtSortOrder>
+ <caseNumber>4:14-cv-02019</caseNumber>
+ <caseOffice>St. Louis</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1983 Civil Rights</cause>
+ <party firstName="Kira" fullName="Kira Hudson Banks" lastName="Banks" middleName="Hudson" role="Plaintiff"></party>
+ <party firstName="Jon" fullName="Jon Belmar" lastName="Belmar" role="Defendant"></party>
+ <party firstName="Maureen" fullName="Maureen Costello" lastName="Costello" role="Plaintiff"></party>
+ <party firstName="Sam" fullName="Sam Dotson" lastName="Dotson" role="Defendant"></party>
+ <party firstName="Brittany" fullName="Brittany Ferrell" lastName="Ferrell" role="Plaintiff"></party>
+ <party firstName="Steven" fullName="Steven Hoffman" lastName="Hoffman" role="Plaintiff"></party>
+ <party firstName="Ronald" fullName="Ronald Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="Nile" fullName="Nile McClain" lastName="McClain" role="Plaintiff"></party>
+ <party firstName="Alexis" fullName="Alexis Templeton" lastName="Templeton" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Templeton et al v. Dotson et al</title>
+ <partNumber>4:14-cv-02019</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_14-cv-02019/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:14-cv-02019;14-2019</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Missouri</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>St. Louis</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kira Hudson Banks</displayForm>
+ <namePart type="family">Banks</namePart>
+ <namePart type="given">Kira</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jon Belmar</displayForm>
+ <namePart type="family">Belmar</namePart>
+ <namePart type="given">Jon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maureen Costello</displayForm>
+ <namePart type="family">Costello</namePart>
+ <namePart type="given">Maureen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sam Dotson</displayForm>
+ <namePart type="family">Dotson</namePart>
+ <namePart type="given">Sam</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brittany Ferrell</displayForm>
+ <namePart type="family">Ferrell</namePart>
+ <namePart type="given">Brittany</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Steven Hoffman</displayForm>
+ <namePart type="family">Hoffman</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nile McClain</displayForm>
+ <namePart type="family">McClain</namePart>
+ <namePart type="given">Nile</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alexis Templeton</displayForm>
+ <namePart type="family">Templeton</namePart>
+ <namePart type="given">Alexis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-moed-4_14-cv-02019</accessId>
+ <courtType>District</courtType>
+ <courtCode>moed</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Missouri</courtState>
+ <courtSortOrder>2281</courtSortOrder>
+ <caseNumber>4:14-cv-02019</caseNumber>
+ <caseOffice>St. Louis</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1983 Civil Rights</cause>
+ <party firstName="Kira" fullName="Kira Hudson Banks" lastName="Banks" middleName="Hudson" role="Plaintiff"></party>
+ <party firstName="Jon" fullName="Jon Belmar" lastName="Belmar" role="Defendant"></party>
+ <party firstName="Maureen" fullName="Maureen Costello" lastName="Costello" role="Plaintiff"></party>
+ <party firstName="Sam" fullName="Sam Dotson" lastName="Dotson" role="Defendant"></party>
+ <party firstName="Brittany" fullName="Brittany Ferrell" lastName="Ferrell" role="Plaintiff"></party>
+ <party firstName="Steven" fullName="Steven Hoffman" lastName="Hoffman" role="Plaintiff"></party>
+ <party firstName="Ronald" fullName="Ronald Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="Nile" fullName="Nile McClain" lastName="McClain" role="Plaintiff"></party>
+ <party firstName="Alexis" fullName="Alexis Templeton" lastName="Templeton" role="Plaintiff"></party>
+ <state>Missouri</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_14-cv-02019-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_14-cv-02019/USCOURTS-moed-4_14-cv-02019-0/mods.xml">
+ <titleInfo>
+  <title>Templeton et al v. Dotson et al</title>
+  <subTitle>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that the motion of defendant Jon Belmar for expedited discovery [Doc. # 23] is denied. IT IS FURTHER ORDERED that the plaintiffs motion to quash deposition notices [Doc. # 22] is granted. Signed by District Judge Carol E. Jackson on 1/5/2015. (KMS)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_14-cv-02019/pdf/USCOURTS-moed-4_14-cv-02019-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b673a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_14-cv-02019/USCOURTS-moed-4_14-cv-02019-0</identifier>
+ <identifier type="former granule identifier">moed-4_14-cv-02019_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_14-cv-02019/USCOURTS-moed-4_14-cv-02019-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_14-cv-02019/pdf/USCOURTS-moed-4_14-cv-02019-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:14-cv-02019; Templeton et al v. Dotson et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_14-cv-02019-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that the motion of defendant Jon Belmar for expedited discovery [Doc. # 23] is denied. IT IS FURTHER ORDERED that the plaintiffs motion to quash deposition notices [Doc. # 22] is granted. Signed by District Judge Carol E. Jackson on 1/5/2015. (KMS)</docketText>
+</extension>
+</relatedItem>
+</mods>

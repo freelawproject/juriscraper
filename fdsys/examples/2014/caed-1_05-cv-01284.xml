@@ -1,0 +1,1372 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a316b04">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-10-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284</identifier>
+<identifier type="local">P0b002ee18a316b04</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_05-cv-01284</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_05-cv-01284</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:05-cv-01284</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="-" fullName="- Babb" lastName="Babb" role="Defendant"></party>
+ <party fullName="Bhatt" lastName="Bhatt" role="Defendant"></party>
+ <party firstName="Jamisi" fullName="Jamisi Jermaine Calloway" lastName="Calloway" middleName="Jermaine" role="Plaintiff"></party>
+ <party fullName="Corcoran State Prison" lastName="Corcoran State Prison" role="Defendant"></party>
+ <party fullName="Correctional Officers" lastName="Correctional Officers" role="Defendant"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party fullName="Gambro Health Care Selma Clinic" lastName="Gambro Health Care Selma Clinic" role="Defendant"></party>
+ <party fullName="Kappa" lastName="Kappa" role="Defendant"></party>
+ <party fullName="Montgomery" lastName="Montgomery" role="Defendant"></party>
+ <party fullName="Spears" lastName="Spears" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+ <partNumber>1:05-cv-01284</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-01284;05-1284</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>- Babb</displayForm>
+ <namePart type="family">Babb</namePart>
+ <namePart type="given">-</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bhatt</displayForm>
+ <namePart type="family">Bhatt</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jamisi Jermaine Calloway</displayForm>
+ <namePart type="family">Calloway</namePart>
+ <namePart type="given">Jamisi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Corcoran State Prison</displayForm>
+ <namePart type="family">Corcoran State Prison</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Correctional Officers</displayForm>
+ <namePart type="family">Correctional Officers</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jane Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">Jane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gambro Health Care Selma Clinic</displayForm>
+ <namePart type="family">Gambro Health Care Selma Clinic</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kappa</displayForm>
+ <namePart type="family">Kappa</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Montgomery</displayForm>
+ <namePart type="family">Montgomery</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Spears</displayForm>
+ <namePart type="family">Spears</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_05-cv-01284</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:05-cv-01284</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="-" fullName="- Babb" lastName="Babb" role="Defendant"></party>
+ <party fullName="Bhatt" lastName="Bhatt" role="Defendant"></party>
+ <party firstName="Jamisi" fullName="Jamisi Jermaine Calloway" lastName="Calloway" middleName="Jermaine" role="Plaintiff"></party>
+ <party fullName="Corcoran State Prison" lastName="Corcoran State Prison" role="Defendant"></party>
+ <party fullName="Correctional Officers" lastName="Correctional Officers" role="Defendant"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party fullName="Gambro Health Care Selma Clinic" lastName="Gambro Health Care Selma Clinic" role="Defendant"></party>
+ <party fullName="Kappa" lastName="Kappa" role="Defendant"></party>
+ <party fullName="Montgomery" lastName="Montgomery" role="Defendant"></party>
+ <party fullName="Spears" lastName="Spears" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER to submit IFP Application or pay filing fee Case Management due by 12/19/2005 for plaintiff to comply signed by Judge William M. Wunderlich on 11/15/05. (Sent IFP Application Form).(Lundstrom, T)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abd0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-0</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-11-16</dateIssued>
+  <docketText>ORDER to submit IFP Application or pay filing fee Case Management due by 12/19/2005 for plaintiff to comply signed by Judge William M. Wunderlich on 11/15/05. (Sent IFP Application Form).(Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>SECOND ORDER. Case Management due by 3/7/2006 for plaintiff to submit a completed application to proceed in forma pauperis and an original certified copy of his prison trust account statement for the six month period immediately preceding the filing of the complaint or pay the $250 filing fee for this action., signed by Judge William M. Wunderlich on 2/1/06. (enclosures: one blank application to proceed in forma pauperis sent to plaintiff)(Robles, S)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-02-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36ab35</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-1</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-02-02</dateIssued>
+  <docketText>SECOND ORDER. Case Management due by 3/7/2006 for plaintiff to submit a completed application to proceed in forma pauperis and an original certified copy of his prison trust account statement for the six month period immediately preceding the filing of the complaint or pay the $250 filing fee for this action., signed by Judge William M. Wunderlich on 2/1/06. (enclosures: one blank application to proceed in forma pauperis sent to plaintiff)(Robles, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS recommending that IFP application be denied 6 11 Motion referred to Judge Coyle, Objections to F&amp;R due by 4/13/2006 signed by Judge William M. Wunderlich on 3/6/06. (Gil-Garcia, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abcc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-2</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-03-07</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS recommending that IFP application be denied 6 11 Motion referred to Judge Coyle, Objections to F&amp;R due by 4/13/2006 signed by Judge William M. Wunderlich on 3/6/06. (Gil-Garcia, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS recommending that plaintiff&apos;s 4 MOTION for PRELIMINARY INJUNCTION filed by Jamisi Jermaine Calloway BE DENIED and was REFERRED back to Judge Ishii; objections to F&amp;R due by 8/21/2006; order signed by Judge William M. Wunderlich on 7/18/06. (Rooney, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abd6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-3</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-07-18</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS recommending that plaintiff&apos;s 4 MOTION for PRELIMINARY INJUNCTION filed by Jamisi Jermaine Calloway BE DENIED and was REFERRED back to Judge Ishii; objections to F&amp;R due by 8/21/2006; order signed by Judge William M. Wunderlich on 7/18/06. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER GRANTING, nunc pro tunc, plaintiff&apos;s 8 MOTION to AMEND/CORRECT complaint filed by Jamisi Jermaine Calloway; motions terminated; order signed by Judge William M. Wunderlich on 7/18/06. (Rooney, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abcf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-4</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-07-18</dateIssued>
+  <docketText>ORDER GRANTING, nunc pro tunc, plaintiff&apos;s 8 MOTION to AMEND/CORRECT complaint filed by Jamisi Jermaine Calloway; motions terminated; order signed by Judge William M. Wunderlich on 7/18/06. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER ADOPTING FINDINGS and RECOMMENDATIONS re 17, Order Denying 4 Motion for Preliminary Injunction filed by Jamisi Jermaine Calloway. signed by Judge Anthony W. Ishii on 9/23/2006. (Timken, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36ab36</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-5</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-09-26</dateIssued>
+  <docketText>ORDER ADOPTING FINDINGS and RECOMMENDATIONS re 17, Order Denying 4 Motion for Preliminary Injunction filed by Jamisi Jermaine Calloway. signed by Judge Anthony W. Ishii on 9/23/2006. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>First Informational ORDER signed by Judge William M. Wunderlich on 9/27/2006. (Timken, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abbf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-6</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-09-28</dateIssued>
+  <docketText>First Informational ORDER signed by Judge William M. Wunderlich on 9/27/2006. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER DISMISSING Plaintiff&apos;s Claims against Doctor Bhatt, L. Kappe, Lieutenant Kennedy, Sergeant Phillips, Assistant Warden Stockton, Warden A.K. Scribner, Ronald L. Calhoun, R. Tyner, Correctional Officer R. Mobert, Correctional officer Scott, Correctional Officer Mendoza, Correctional Officer Zavala, Doctor M. Talisman, Psychiatrist A. Syedud, Correctional Officer Leos, Doctor Chan, Erica Casanova, Gambro President Richard Turner, Gambro Health Care Selma Clinic and Corcoran State Prison #1 &amp; #2 S.A.T.F, with leave to file an amended complaint within thirty-five (35) days signed by Judge Arthur L. Alarcon on 11/26/2007. Amended Complaint due by 1/7/2008. (Flores, E)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abb9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-7</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2007-11-28</dateIssued>
+  <docketText>ORDER DISMISSING Plaintiff&apos;s Claims against Doctor Bhatt, L. Kappe, Lieutenant Kennedy, Sergeant Phillips, Assistant Warden Stockton, Warden A.K. Scribner, Ronald L. Calhoun, R. Tyner, Correctional Officer R. Mobert, Correctional officer Scott, Correctional Officer Mendoza, Correctional Officer Zavala, Doctor M. Talisman, Psychiatrist A. Syedud, Correctional Officer Leos, Doctor Chan, Erica Casanova, Gambro President Richard Turner, Gambro Health Care Selma Clinic and Corcoran State Prison #1 &amp; #2 S.A.T.F, with leave to file an amended complaint within thirty-five (35) days signed by Judge Arthur L. Alarcon on 11/26/2007. Amended Complaint due by 1/7/2008. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER DENYING 21, 24 Motions signed by Magistrate Judge William M. Wunderlich on 3/31/2008. (Sondheim, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36ab34</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-8</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-03-31</dateIssued>
+  <docketText>ORDER DENYING 21, 24 Motions signed by Magistrate Judge William M. Wunderlich on 3/31/2008. (Sondheim, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Sandra M. Snyder on 1/27/2010 recommending dismissal of certain claims re 28 Amended Complaint. Objections to F&amp;R due by 3/1/2010. (Lundstrom, T)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abc4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-9</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2010-01-27</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Sandra M. Snyder on 1/27/2010 recommending dismissal of certain claims re 28 Amended Complaint. Objections to F&amp;R due by 3/1/2010. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER ADOPTING 34 FINDINGS AND RECOMMENDATIONS, signed by Judge Oliver W. Wanger on 3/9/2010. This action proceeds on the December 13, 2007, first amended complaint against Defendants Montgomery, Babb, Spears, Bhatt, Kappa, and Jane Doe for violating Plaintiffs rights under the Eighth Amendment by subjecting Plaintiff to unnecessary and harassing searches. (Sondheim, M)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abc8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-10</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2010-03-10</dateIssued>
+  <docketText>ORDER ADOPTING 34 FINDINGS AND RECOMMENDATIONS, signed by Judge Oliver W. Wanger on 3/9/2010. This action proceeds on the December 13, 2007, first amended complaint against Defendants Montgomery, Babb, Spears, Bhatt, Kappa, and Jane Doe for violating Plaintiffs rights under the Eighth Amendment by subjecting Plaintiff to unnecessary and harassing searches. (Sondheim, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER DIRECTING PLAINTIFF TO SUBMIT SERVICE DOCUMENTS and USM-285 Forms, signed by Magistrate Judge Sandra M. Snyder on 3/15/2010. Service is appropriate for Montgomery, Babb, Spears, Bhatt, Kappa, Jane Doe. Clerk to send plaintiff: 6 Summonses, 6 USM-285 Forms, and 1 copy of the Second Amended Complaint filed on December 13, 2007. Case Management Deadline: 4/19/2010. (Attachments: # (1) Second Amended Complaint, # (2) USM Prisoner Instructions). (Jessen, A)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abd1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-11</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-03-15</dateIssued>
+  <docketText>ORDER DIRECTING PLAINTIFF TO SUBMIT SERVICE DOCUMENTS and USM-285 Forms, signed by Magistrate Judge Sandra M. Snyder on 3/15/2010. Service is appropriate for Montgomery, Babb, Spears, Bhatt, Kappa, Jane Doe. Clerk to send plaintiff: 6 Summonses, 6 USM-285 Forms, and 1 copy of the Second Amended Complaint filed on December 13, 2007. Case Management Deadline: 4/19/2010. (Attachments: # (1) Second Amended Complaint, # (2) USM Prisoner Instructions). (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER denying 37 Motion to Appoint Counsel signed by Magistrate Judge Sheila K. Oberto on 8/10/2010. (Lundstrom, T)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abc7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-12</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2010-08-11</dateIssued>
+  <docketText>ORDER denying 37 Motion to Appoint Counsel signed by Magistrate Judge Sheila K. Oberto on 8/10/2010. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>T)***DISCHARGED; pursuant to ORDER 56***ORDER to SHOW CAUSE why Defendants should not be dismissed from this action signed by Magistrate Judge Sheila K. Oberto on 9/21/2010. Plaintiff&apos;s Show Cause Response due by 10/25/2010. (Lundstrom,</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abd3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-13</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2010-09-21</dateIssued>
+  <docketText>T)***DISCHARGED; pursuant to ORDER 56***ORDER to SHOW CAUSE why Defendants should not be dismissed from this action signed by Magistrate Judge Sheila K. Oberto on 9/21/2010. Plaintiff&apos;s Show Cause Response due by 10/25/2010. (Lundstrom,</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Discharging Order To Show Cause (Doc. 45), and ORDER Denying Motion (Doc. 48), signed by Magistrate Judge Sheila K. Oberto on 12/8/2010. (Case Management Deadline: 3/14/2011) (Fahrney, E)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abd7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-14</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2010-12-09</dateIssued>
+  <docketText>ORDER Discharging Order To Show Cause (Doc. 45), and ORDER Denying Motion (Doc. 48), signed by Magistrate Judge Sheila K. Oberto on 12/8/2010. (Case Management Deadline: 3/14/2011) (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER DENYING 64 Motion to Appoint Counsel signed by Magistrate Judge Sandra M. Snyder on 8/12/2011. (Marrujo, C)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abc2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-15</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2011-08-12</dateIssued>
+  <docketText>ORDER DENYING 64 Motion to Appoint Counsel signed by Magistrate Judge Sandra M. Snyder on 8/12/2011. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Requiring Plaintiff to SHOW CAUSE Why Defendants Kappa and Spears Should Not be Dismissed From This Action For Failure to Serve, signed by Magistrate Judge Barbara A. McAuliffe on 10/21/2011. 30-Day Deadline. (Marrujo, C)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abd5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-16</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2011-10-21</dateIssued>
+  <docketText>ORDER Requiring Plaintiff to SHOW CAUSE Why Defendants Kappa and Spears Should Not be Dismissed From This Action For Failure to Serve, signed by Magistrate Judge Barbara A. McAuliffe on 10/21/2011. 30-Day Deadline. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER DISMISSING Defendants Kappa and Spears for Failure to Effect Service of Process, signed by District Judge Lawrence J. O&apos;Neill on 11/10/2011. (Jessen, A)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abbe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-17</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2011-11-10</dateIssued>
+  <docketText>ORDER DISMISSING Defendants Kappa and Spears for Failure to Effect Service of Process, signed by District Judge Lawrence J. O&apos;Neill on 11/10/2011. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-18/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Granting Defendant&apos;s Motion to Modify the Scheduling Order 71; AMENDED DISCOVERY and SCHEDULING ORDER, signed by Magistrate Judge Barbara A. McAuliffe on 12/7/11. Unenumerated Rule 12(b) Motion Deadline 2/8/2012; Deadline to Amend Pleadings: 6/8/2012; Discovery Cut-Off Date: 8/8/2012; Dispositive Motion Deadline: 10/8/2012. (Verduzco, M)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abc1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-18</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2011-12-09</dateIssued>
+  <docketText>ORDER Granting Defendant&apos;s Motion to Modify the Scheduling Order 71; AMENDED DISCOVERY and SCHEDULING ORDER, signed by Magistrate Judge Barbara A. McAuliffe on 12/7/11. Unenumerated Rule 12(b) Motion Deadline 2/8/2012; Deadline to Amend Pleadings: 6/8/2012; Discovery Cut-Off Date: 8/8/2012; Dispositive Motion Deadline: 10/8/2012. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-19/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Motion To Compel As ProcedurallyDeficient (Docs. 90 &amp; 92), signed by Magistrate Judge Barbara A. McAuliffe on 7/23/2012. (Fahrney, E)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abca</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-19</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2012-07-24</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Motion To Compel As ProcedurallyDeficient (Docs. 90 &amp; 92), signed by Magistrate Judge Barbara A. McAuliffe on 7/23/2012. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-20/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>t Agata, S)ORDER REQUIRING Plaintiff to SHOW CAUSE Why Defendant Doe should not be Dismissed from this Action for Failure to Serve; Thirty Day Deadline signed by Magistrate Judge Barbara A. McAuliffe on 8/2/2012. Show Cause Response due by 9/5/2012. (San</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abb8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-20</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2012-08-03</dateIssued>
+  <docketText>t Agata, S)ORDER REQUIRING Plaintiff to SHOW CAUSE Why Defendant Doe should not be Dismissed from this Action for Failure to Serve; Thirty Day Deadline signed by Magistrate Judge Barbara A. McAuliffe on 8/2/2012. Show Cause Response due by 9/5/2012. (San</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-21/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER DISMISSING Doe Defendant: (Jane Doe terminated), from action, without prejudice, as to 94, signed by District Judge Lawrence J. O&apos;Neill on 9/25/2012. (Martin-Gill, S)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-21</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2012-09-26</dateIssued>
+  <docketText>ORDER DISMISSING Doe Defendant: (Jane Doe terminated), from action, without prejudice, as to 94, signed by District Judge Lawrence J. O&apos;Neill on 9/25/2012. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-22/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Granting Defendants&apos; Motion To Amend The Scheduling Order (ECF No.96), Deadline: October 18, 2012, signed by Magistrate Judge Barbara A. McAuliffe on 10/4/2012. (Fahrney, E)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abcb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-22</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2012-10-04</dateIssued>
+  <docketText>ORDER Granting Defendants&apos; Motion To Amend The Scheduling Order (ECF No.96), Deadline: October 18, 2012, signed by Magistrate Judge Barbara A. McAuliffe on 10/4/2012. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-23/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Barbara A. McAuliffe on 8/20/2013 recommending that 98 MOTION for SUMMARY JUDGMENT filed by Bhatt, Babb,Montgomery; 109 MOTION for 90-DAY EXTENSION OF TIME to to file reply to objections to evidence filed by Jamisi Jermaine Calloway and 85 MOTION for SUMMARY JUDGMENT filed by Jamisi Jermaine Calloway all be DENIED. Referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 9/23/2013.(Lundstrom, T)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abc9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-23</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2013-08-21</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Barbara A. McAuliffe on 8/20/2013 recommending that 98 MOTION for SUMMARY JUDGMENT filed by Bhatt, Babb,Montgomery; 109 MOTION for 90-DAY EXTENSION OF TIME to to file reply to objections to evidence filed by Jamisi Jermaine Calloway and 85 MOTION for SUMMARY JUDGMENT filed by Jamisi Jermaine Calloway all be DENIED. Referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 9/23/2013.(Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-24/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS recommending that Plaintiff&apos;s 114Motion for an Injunction to be Transferred be DENIED ;referred to Judge O&apos;Neill, signed by Magistrate Judge Barbara A. McAuliffe on 10/16/13. Objections to F&amp;R (30) Day Deadline (Martin-Gill, S)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abbd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-24</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2013-10-17</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS recommending that Plaintiff&apos;s 114Motion for an Injunction to be Transferred be DENIED ;referred to Judge O&apos;Neill, signed by Magistrate Judge Barbara A. McAuliffe on 10/16/13. Objections to F&amp;R (30) Day Deadline (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-25/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER adopting 111 FINDINGS AND RECOMMENDATIONS re 85, 98, 109 signed by District Judge Lawrence J. O&apos;Neill on 10/30/2013. (Lundstrom, T)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abd8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-25</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2013-10-30</dateIssued>
+  <docketText>ORDER adopting 111 FINDINGS AND RECOMMENDATIONS re 85, 98, 109 signed by District Judge Lawrence J. O&apos;Neill on 10/30/2013. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-26/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>SECOND SCHEDULING ORDER; ORDER Requiring Parties to Notify Court Whether They Consent to Magistrate Judge Jurisdiction within Thirty Days; ORDER Directing Clerk&apos;s Office to Send Local Rule 281 to Plaintiff, signed by Magistrate Judge Barbara A. McAuliffe on 10/31/13. Telephonic Trial Confirmation Hearing set for 1/17/2014 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill; Jury Trial set for 2/25/2014 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill. (Attachments: # (1) Consent Form, # (2) Local Rule 281)(Verduzco, M)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abd2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-26</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2013-11-01</dateIssued>
+  <docketText>SECOND SCHEDULING ORDER; ORDER Requiring Parties to Notify Court Whether They Consent to Magistrate Judge Jurisdiction within Thirty Days; ORDER Directing Clerk&apos;s Office to Send Local Rule 281 to Plaintiff, signed by Magistrate Judge Barbara A. McAuliffe on 10/31/13. Telephonic Trial Confirmation Hearing set for 1/17/2014 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill; Jury Trial set for 2/25/2014 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill. (Attachments: # (1) Consent Form, # (2) Local Rule 281)(Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-27/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Adopting FINDINGS AND RECOMMENDATIONS Regarding Plaintiff&apos;s Motion For An Injunction To Be Transferred Out Of CSATF CSP #11 Davita Inc. Health Care And CSP #1 Custody (ECF Nos.114,115), signed by District Judge Lawrence J. O&apos;Neill on 11/26/2013. (Fahrney, E)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-27.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abcd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-27</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2013-11-26</dateIssued>
+  <docketText>ORDER Adopting FINDINGS AND RECOMMENDATIONS Regarding Plaintiff&apos;s Motion For An Injunction To Be Transferred Out Of CSATF CSP #11 Davita Inc. Health Care And CSP #1 Custody (ECF Nos.114,115), signed by District Judge Lawrence J. O&apos;Neill on 11/26/2013. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-28/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Motion For Appointment Of Counsel Without Prejudice And Denying Plaintiff&apos;s Motion For Ninety-Day Extension Of Time, ORDER Denying Plaintiff&apos;s Request For Appointment Of Expert Witnesses (ECF No.122), signed by Magistrate Judge Barbara A. McAuliffe on 12/2/2013. (Fahrney, E)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-28.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abb6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-28</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2013-12-02</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Motion For Appointment Of Counsel Without Prejudice And Denying Plaintiff&apos;s Motion For Ninety-Day Extension Of Time, ORDER Denying Plaintiff&apos;s Request For Appointment Of Expert Witnesses (ECF No.122), signed by Magistrate Judge Barbara A. McAuliffe on 12/2/2013. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-29/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Requiring Parties To Notify Court Whether A Settlement Conference Would Be Beneficial, Fourteen-Day Deadline, signed by Magistrate Judge Barbara A. McAuliffe on 12/3/2013. (Case Management Deadline: 12/20/2013) (Fahrney, E)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-29.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abc0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-29</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2013-12-04</dateIssued>
+  <docketText>ORDER Requiring Parties To Notify Court Whether A Settlement Conference Would Be Beneficial, Fourteen-Day Deadline, signed by Magistrate Judge Barbara A. McAuliffe on 12/3/2013. (Case Management Deadline: 12/20/2013) (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-30/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s 138 Motion Requesting Settlement Conference signed by Magistrate Judge Barbara A. McAuliffe on 1/2/2014. (Sant Agata, S)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-30.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abbb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-30</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s 138 Motion Requesting Settlement Conference signed by Magistrate Judge Barbara A. McAuliffe on 1/2/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-31/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER GRANTING Plaintiff&apos;s Motion to Modify December 4, 2013 Amended Second Scheduling Order to Continue Trial Date and Pretrial Deadlines 135; ORDER DENYING Plaintiff&apos;s Motion for Extension of Time to Comply With Court Orders as Moot 137, signed by Magistrate Judge Barbara A. McAuliffe on 1/13/14: Telephonic Trial Confirmation Hearing set for 5/7/2014 at 10:00 AM in Courtroom 8 (BAM) before Magistrate Judge Barbara A. McAuliffe; Joint Pretrial Statement ddl 4/23/2014; Motion for Attendance of Incarcerated Witnesses ddl 4/9/2014; Opposition to Motion for Attendance ddl 4/23/2014; Submission of Money Orders for Witness Fees ddl 4/23/2014; Plaintiff&apos;s Motion to Reopen Disovery due within fifteen (15) days of the date of this order. (Hellings, J)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-31.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-31</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2014-01-14</dateIssued>
+  <docketText>ORDER GRANTING Plaintiff&apos;s Motion to Modify December 4, 2013 Amended Second Scheduling Order to Continue Trial Date and Pretrial Deadlines 135; ORDER DENYING Plaintiff&apos;s Motion for Extension of Time to Comply With Court Orders as Moot 137, signed by Magistrate Judge Barbara A. McAuliffe on 1/13/14: Telephonic Trial Confirmation Hearing set for 5/7/2014 at 10:00 AM in Courtroom 8 (BAM) before Magistrate Judge Barbara A. McAuliffe; Joint Pretrial Statement ddl 4/23/2014; Motion for Attendance of Incarcerated Witnesses ddl 4/9/2014; Opposition to Motion for Attendance ddl 4/23/2014; Submission of Money Orders for Witness Fees ddl 4/23/2014; Plaintiff&apos;s Motion to Reopen Disovery due within fifteen (15) days of the date of this order. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-32/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Barbara A. McAuliffe on 3/26/2014 continuing Telephonic Trial Confirmation Hearing set for 6/19/2014 at 10:00 AM in Courtroom 8 (BAM) before Magistrate Judge Barbara A. McAuliffe. (Lundstrom, T)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-32.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abc6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-32</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2014-03-27</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Barbara A. McAuliffe on 3/26/2014 continuing Telephonic Trial Confirmation Hearing set for 6/19/2014 at 10:00 AM in Courtroom 8 (BAM) before Magistrate Judge Barbara A. McAuliffe. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-33/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER granting in part and denying in part 145 Motion to reopen Discovery signed by Magistrate Judge Barbara A. McAuliffe on 3/27/2014. (Lundstrom, T)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-33.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36ab33</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-33</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2014-03-27</dateIssued>
+  <docketText>ORDER granting in part and denying in part 145 Motion to reopen Discovery signed by Magistrate Judge Barbara A. McAuliffe on 3/27/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-34/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER GRANTING Stipulation to Proceed to Mandatory Settlement Conference and to Extend Discovery Deadlines; ORDER Setting Settlement Conference, signed by Magistrate Judge Barbara A. McAuliffe on 5/14/2014. Settlement Conference set for 6/24/2014 at 10:00 AM in Courtroom 9 (SAB) before Magistrate Judge Stanley A. Boone. (Marrujo, C)</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-34.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abc3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-34</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2014-05-15</dateIssued>
+  <docketText>ORDER GRANTING Stipulation to Proceed to Mandatory Settlement Conference and to Extend Discovery Deadlines; ORDER Setting Settlement Conference, signed by Magistrate Judge Barbara A. McAuliffe on 5/14/2014. Settlement Conference set for 6/24/2014 at 10:00 AM in Courtroom 9 (SAB) before Magistrate Judge Stanley A. Boone. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-35" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-35/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER &amp; WRIT of Habeas Corpus Ad Testificandum, signed by Magistrate Judge Barbara A. McAuliffe on 5/14/2014. (Marrujo, C)</subTitle>
+  <partNumber>35</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-35.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abc5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-35</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_35.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-35/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-35.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-35</accessId>
+  <sequenceNumber>35</sequenceNumber>
+  <dateIssued>2014-05-15</dateIssued>
+  <docketText>ORDER &amp; WRIT of Habeas Corpus Ad Testificandum, signed by Magistrate Judge Barbara A. McAuliffe on 5/14/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-36" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-36/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER continuing Telephonic Trial Confirmation Hearing signed by Magistrate Judge Barbara A. McAuliffe on 6/6/2014. (Telephonic Trial Confirmation Hearing re-set for 8/27/2014 at 10:00 AM in Courtroom 8 (BAM) before Magistrate Judge Barbara A. McAuliffe).(Lundstrom, T)</subTitle>
+  <partNumber>36</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-36.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abbc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-36</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_36.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-36/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-36.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-36</accessId>
+  <sequenceNumber>36</sequenceNumber>
+  <dateIssued>2014-06-09</dateIssued>
+  <docketText>ORDER continuing Telephonic Trial Confirmation Hearing signed by Magistrate Judge Barbara A. McAuliffe on 6/6/2014. (Telephonic Trial Confirmation Hearing re-set for 8/27/2014 at 10:00 AM in Courtroom 8 (BAM) before Magistrate Judge Barbara A. McAuliffe).(Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-37" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-37/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Following Settlement; Vacating Dates and Directing Parties to File Dispositive Documents within Thirty Days, signed by Magistrate Judge Stanley A. Boone on 6/24/14. (Verduzco, M)</subTitle>
+  <partNumber>37</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-37.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36ab32</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-37</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_37.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-37/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-37.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-37</accessId>
+  <sequenceNumber>37</sequenceNumber>
+  <dateIssued>2014-06-25</dateIssued>
+  <docketText>ORDER Following Settlement; Vacating Dates and Directing Parties to File Dispositive Documents within Thirty Days, signed by Magistrate Judge Stanley A. Boone on 6/24/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-38" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-38/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Directing Parties To File Status Report Regarding Dispositive Documents (ECF No.159), Fourteen-Day Deadline, signed by Magistrate Judge Barbara A. McAuliffe on 8/11/2014.(Status Report Deadline: 8/27/2014) (Fahrney, E)</subTitle>
+  <partNumber>38</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-38.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abb5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-38</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_38.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-38/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-38.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-38</accessId>
+  <sequenceNumber>38</sequenceNumber>
+  <dateIssued>2014-08-11</dateIssued>
+  <docketText>ORDER Directing Parties To File Status Report Regarding Dispositive Documents (ECF No.159), Fourteen-Day Deadline, signed by Magistrate Judge Barbara A. McAuliffe on 8/11/2014.(Status Report Deadline: 8/27/2014) (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-39" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-39/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Directing Parties to File Dispositive Documents Within Thirty (30) Days, signed by Magistrate Judge Barbara A. McAuliffe on 8/22/2014. (Jessen, A)</subTitle>
+  <partNumber>39</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-39.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abb7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-39</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_39.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-39/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-39.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-39</accessId>
+  <sequenceNumber>39</sequenceNumber>
+  <dateIssued>2014-08-22</dateIssued>
+  <docketText>ORDER Directing Parties to File Dispositive Documents Within Thirty (30) Days, signed by Magistrate Judge Barbara A. McAuliffe on 8/22/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-40" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-40/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Granting Defendants&apos; First Stipulation To Extend Time To File Dispositive Documents (Document#163), October 22, 2014 Deadline, signed by Magistrate Judge Barbara A. McAuliffe on 9/18/2014. (Dispositive Documents filed by 10/22/2014)(Fahrney, E)</subTitle>
+  <partNumber>40</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-40.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abd4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-40</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_40.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-40/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-40.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-40</accessId>
+  <sequenceNumber>40</sequenceNumber>
+  <dateIssued>2014-09-18</dateIssued>
+  <docketText>ORDER Granting Defendants&apos; First Stipulation To Extend Time To File Dispositive Documents (Document#163), October 22, 2014 Deadline, signed by Magistrate Judge Barbara A. McAuliffe on 9/18/2014. (Dispositive Documents filed by 10/22/2014)(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_05-cv-01284-41" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-41/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Warden Corcoran State Prison et al</title>
+  <subTitle>ORDER Dismissing Action with Prejudice, signed by Magistrate Judge Barbara A. McAuliffe on 10/22/14. CASE CLOSED. (Gonzalez, R)</subTitle>
+  <partNumber>41</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-41.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36abb4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-41</identifier>
+ <identifier type="former granule identifier">caed-1_05-cv-01284_41.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_05-cv-01284/USCOURTS-caed-1_05-cv-01284-41/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_05-cv-01284/pdf/USCOURTS-caed-1_05-cv-01284-41.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01284; (PC) Calloway v. Warden Corcoran State Prison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_05-cv-01284-41</accessId>
+  <sequenceNumber>41</sequenceNumber>
+  <dateIssued>2014-10-22</dateIssued>
+  <docketText>ORDER Dismissing Action with Prejudice, signed by Magistrate Judge Barbara A. McAuliffe on 10/22/14. CASE CLOSED. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

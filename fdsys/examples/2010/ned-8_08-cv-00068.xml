@@ -1,0 +1,291 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b1c85">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00068</identifier>
+<identifier type="local">P0b002ee1817b1c85</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cv-00068</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00068</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00068</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity - Legal Malpractice</cause>
+ <party fullName="Berkshire Hathaway Inc." lastName="Berkshire Hathaway Inc." role="Plaintiff"></party>
+ <party fullName="Martin, Pringle, Oliver, Wallace&amp;Bauer" lastName="Martin, Pringle, Oliver, Wallace&amp;Bauer" role="Defendant"></party>
+ <party fullName="MidAmerican Energy Holdings" lastName="MidAmerican Energy Holdings" role="Plaintiff"></party>
+ <party fullName="NNGC Acquisition, LLC" lastName="NNGC Acquisition, LLC" role="Plaintiff"></party>
+ <party fullName="Northern Natural Gas Company" lastName="Northern Natural Gas Company" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Northern Natural Gas Company v. Martin, Pringle, Oliver, Wallace&amp;Bauer</title>
+ <partNumber>8:08-cv-00068</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00068/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cv-00068;08-068</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Berkshire Hathaway Inc.</displayForm>
+ <namePart type="family">Berkshire Hathaway Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Martin, Pringle, Oliver, Wallace&amp;Bauer</displayForm>
+ <namePart type="family">Martin, Pringle, Oliver, Wallace&amp;Bauer</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MidAmerican Energy Holdings</displayForm>
+ <namePart type="family">MidAmerican Energy Holdings</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>NNGC Acquisition, LLC</displayForm>
+ <namePart type="family">NNGC Acquisition, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Northern Natural Gas Company</displayForm>
+ <namePart type="family">Northern Natural Gas Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00068</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00068</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity - Legal Malpractice</cause>
+ <party fullName="Berkshire Hathaway Inc." lastName="Berkshire Hathaway Inc." role="Plaintiff"></party>
+ <party fullName="Martin, Pringle, Oliver, Wallace&amp;Bauer" lastName="Martin, Pringle, Oliver, Wallace&amp;Bauer" role="Defendant"></party>
+ <party fullName="MidAmerican Energy Holdings" lastName="MidAmerican Energy Holdings" role="Plaintiff"></party>
+ <party fullName="NNGC Acquisition, LLC" lastName="NNGC Acquisition, LLC" role="Plaintiff"></party>
+ <party fullName="Northern Natural Gas Company" lastName="Northern Natural Gas Company" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00068-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-0/mods.xml">
+ <titleInfo>
+  <title>Northern Natural Gas Company v. Martin, Pringle, Oliver, Wallace&amp;Bauer</title>
+  <subTitle>ORDER regarding Reassignment Order 6 - To avoid potential conflicts of interest, the Nebraska Judicial Council has agreed that all cases filed on the Omaha and North Platte dockets subsequent to the date of this order in which Berkshire Hathaway or one of its subsidiaries is a party shall be directly assigned to Senior United States District Judge Lyle E. Strom for full pretrial management and trial. The court will identify a corporate entity as a Berkshire Hathaway subsidiary based solely on Joseph F. Bataillon, Judge Richard G. Kopf and Judge Laurie Smith Camp (PCV, ) information that the entity discloses in the disclosure statement required by Federal Rule of Civil Procedure 7.1 and Federal Rule of Criminal Procedure 12.4. This disclosurestatement must be filed in each new case in which the corporate entity is a party. The clerks office is directed to file a copy of this order in each case assigned or reassigned to Judge Strom because Berkshire Hathaway or one of its subsidiaries is a party. This order shall take effect immediately. Ordered by Chief Judge</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00068-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4ddd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00068_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00068/pdf/USCOURTS-ned-8_08-cv-00068-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00068; Northern Natural Gas Company v. Martin, Pringle, Oliver, Wallace&amp;Bauer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00068-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-02-13</dateIssued>
+  <docketText>ORDER regarding Reassignment Order 6 - To avoid potential conflicts of interest, the Nebraska Judicial Council has agreed that all cases filed on the Omaha and North Platte dockets subsequent to the date of this order in which Berkshire Hathaway or one of its subsidiaries is a party shall be directly assigned to Senior United States District Judge Lyle E. Strom for full pretrial management and trial. The court will identify a corporate entity as a Berkshire Hathaway subsidiary based solely on Joseph F. Bataillon, Judge Richard G. Kopf and Judge Laurie Smith Camp (PCV, ) information that the entity discloses in the disclosure statement required by Federal Rule of Civil Procedure 7.1 and Federal Rule of Criminal Procedure 12.4. This disclosurestatement must be filed in each new case in which the corporate entity is a party. The clerks office is directed to file a copy of this order in each case assigned or reassigned to Judge Strom because Berkshire Hathaway or one of its subsidiaries is a party. This order shall take effect immediately. Ordered by Chief Judge</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00068-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-1/mods.xml">
+ <titleInfo>
+  <title>Northern Natural Gas Company v. Martin, Pringle, Oliver, Wallace&amp;Bauer</title>
+  <subTitle>ORDER granting 20 Motion to Extend; the parties shall have until March 6, 2008, to furnish a statement of facts to accompany the certified question to the Supreme Court of Kansas. Ordered by Senior Judge Lyle E. Strom. (CJP)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00068-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4d18</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00068_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00068/pdf/USCOURTS-ned-8_08-cv-00068-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00068; Northern Natural Gas Company v. Martin, Pringle, Oliver, Wallace&amp;Bauer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00068-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-03-03</dateIssued>
+  <docketText>ORDER granting 20 Motion to Extend; the parties shall have until March 6, 2008, to furnish a statement of facts to accompany the certified question to the Supreme Court of Kansas. Ordered by Senior Judge Lyle E. Strom. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00068-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-2/mods.xml">
+ <titleInfo>
+  <title>Northern Natural Gas Company v. Martin, Pringle, Oliver, Wallace&amp;Bauer</title>
+  <subTitle>ORDER CERTIFYING QUESTION TO THE KANSAS STATE SUPREME COURT that pending determination by the Kansas State Supreme Court as to whether or not it will accept for review the certified question, this action is stayed pending proceedings in that Court; if the Kansas State Supreme Court accepts review, then the action will be considered stayed until ruling by the Kansas State Supreme Court; no responsive pleadings need be filed at this time; the clerk of this court is hereby directed to transmit forthwith to the Kansas State Supreme Court, under the official seal of the United States District Court for the District of Nebraska, a copy of this order. Ordered by Senior Judge Lyle E. Strom. (copies mailed as directed)(CJP)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00068-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4d1a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00068_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00068/pdf/USCOURTS-ned-8_08-cv-00068-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00068; Northern Natural Gas Company v. Martin, Pringle, Oliver, Wallace&amp;Bauer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00068-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-04-02</dateIssued>
+  <docketText>ORDER CERTIFYING QUESTION TO THE KANSAS STATE SUPREME COURT that pending determination by the Kansas State Supreme Court as to whether or not it will accept for review the certified question, this action is stayed pending proceedings in that Court; if the Kansas State Supreme Court accepts review, then the action will be considered stayed until ruling by the Kansas State Supreme Court; no responsive pleadings need be filed at this time; the clerk of this court is hereby directed to transmit forthwith to the Kansas State Supreme Court, under the official seal of the United States District Court for the District of Nebraska, a copy of this order. Ordered by Senior Judge Lyle E. Strom. (copies mailed as directed)(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00068-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-3/mods.xml">
+ <titleInfo>
+  <title>Northern Natural Gas Company v. Martin, Pringle, Oliver, Wallace&amp;Bauer</title>
+  <subTitle>ORDER - The unopposed motion for withdrawal and substitution of counsel 27 is granted. Steven D. Ruse is deemed withdrawn as counsel for defendant and Anthony F. Rupp is substituted as counsel for defendant. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00068-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4d19</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-3</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00068_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00068/pdf/USCOURTS-ned-8_08-cv-00068-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00068; Northern Natural Gas Company v. Martin, Pringle, Oliver, Wallace&amp;Bauer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00068-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-03-02</dateIssued>
+  <docketText>ORDER - The unopposed motion for withdrawal and substitution of counsel 27 is granted. Steven D. Ruse is deemed withdrawn as counsel for defendant and Anthony F. Rupp is substituted as counsel for defendant. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00068-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-4/mods.xml">
+ <titleInfo>
+  <title>Northern Natural Gas Company v. Martin, Pringle, Oliver, Wallace&amp;Bauer</title>
+  <subTitle>ORDER approving and adopting 31 Joint Stipulation for Dismissal. This action is dismissed with prejudice, each party to pay their own costs, attorney fees and related expenses of litigation. Ordered by Senior Judge Lyle E. Strom. (JAE)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00068-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4dde</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-4</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00068_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00068/USCOURTS-ned-8_08-cv-00068-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00068/pdf/USCOURTS-ned-8_08-cv-00068-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00068; Northern Natural Gas Company v. Martin, Pringle, Oliver, Wallace&amp;Bauer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00068-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-01-22</dateIssued>
+  <docketText>ORDER approving and adopting 31 Joint Stipulation for Dismissal. This action is dismissed with prejudice, each party to pay their own costs, attorney fees and related expenses of litigation. Ordered by Senior Judge Lyle E. Strom. (JAE)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,318 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18db99993">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-10-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-10-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00540</identifier>
+<identifier type="local">P0b002ee18db99993</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-10-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-10-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cv-00540</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00540</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00540</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:451 Employment Discrimination</cause>
+ <party fullName="AgReserves, Inc." lastName="AgReserves, Inc." role="Counter Claimant"></party>
+ <party fullName="AgReserves, Inc." lastName="AgReserves, Inc." role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Campos" lastName="Campos" role="Defendant"></party>
+ <party firstName="Jay" fullName="Jay Payne" lastName="Payne" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Carlos Robles" lastName="Robles" middleName="Carlos" role="Counter Defendant"></party>
+ <party firstName="Juan" fullName="Juan Carlos Robles" lastName="Robles" middleName="Carlos" role="Plaintiff"></party>
+ <party fullName="South Valley Farms" lastName="South Valley Farms" role="Defendant"></party>
+ <party fullName="The Church of Jesus Christ of Latter Day Saints" lastName="The Church of Jesus Christ of Latter Day Saints" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Robles v. AgReserves, Inc. et al</title>
+ <partNumber>1:14-cv-00540</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00540/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-00540;14-540</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>AgReserves, Inc.</displayForm>
+ <namePart type="family">AgReserves, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>AgReserves, Inc.</displayForm>
+ <namePart type="family">AgReserves, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jorge Campos</displayForm>
+ <namePart type="family">Campos</namePart>
+ <namePart type="given">Jorge</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jay Payne</displayForm>
+ <namePart type="family">Payne</namePart>
+ <namePart type="given">Jay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Juan Carlos Robles</displayForm>
+ <namePart type="family">Robles</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Juan Carlos Robles</displayForm>
+ <namePart type="family">Robles</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>South Valley Farms</displayForm>
+ <namePart type="family">South Valley Farms</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Church of Jesus Christ of Latter Day Saints</displayForm>
+ <namePart type="family">The Church of Jesus Christ of Latter Day Saints</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00540</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00540</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:451 Employment Discrimination</cause>
+ <party fullName="AgReserves, Inc." lastName="AgReserves, Inc." role="Counter Claimant"></party>
+ <party fullName="AgReserves, Inc." lastName="AgReserves, Inc." role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Campos" lastName="Campos" role="Defendant"></party>
+ <party firstName="Jay" fullName="Jay Payne" lastName="Payne" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Carlos Robles" lastName="Robles" middleName="Carlos" role="Counter Defendant"></party>
+ <party firstName="Juan" fullName="Juan Carlos Robles" lastName="Robles" middleName="Carlos" role="Plaintiff"></party>
+ <party fullName="South Valley Farms" lastName="South Valley Farms" role="Defendant"></party>
+ <party fullName="The Church of Jesus Christ of Latter Day Saints" lastName="The Church of Jesus Christ of Latter Day Saints" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00540-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-0/mods.xml">
+ <titleInfo>
+  <title>Robles v. AgReserves, Inc. et al</title>
+  <subTitle>ORDER DENYING 4 Plaintiff&apos;s Motion to Remand, signed by Magistrate Judge Jennifer L. Thurston on 6/26/2014. (Hall, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00540/pdf/USCOURTS-caed-1_14-cv-00540-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dba8c32</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00540_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00540/pdf/USCOURTS-caed-1_14-cv-00540-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00540; Robles v. AgReserves, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00540-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-06-26</dateIssued>
+  <docketText>ORDER DENYING 4 Plaintiff&apos;s Motion to Remand, signed by Magistrate Judge Jennifer L. Thurston on 6/26/2014. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00540-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-1/mods.xml">
+ <titleInfo>
+  <title>Robles v. AgReserves, Inc. et al</title>
+  <subTitle>SCHEDULING ORDER, signed by Magistrate Judge Jennifer L. Thurston on 8/1/2014. Consent/Decline Deadline 8/11/2014. Pleading Amendment Deadline 10/1/2014. Discovery Deadlines: Initial Disclosures 8/8/2014; Non-Expert 6/15/2015; Expert 8/24/2015. Mid-Discovery Status Conference set for 1/15/2015 at 09:00 AM in Bakersfield at 510 19th Street (JLT) before Magistrate Judge Jennifer L. Thurston. Non-Dispositive Motion Deadlines: Filed by 9/9/2015; Hearing by 10/7/2015. Dispositive Motion Deadlines: Filed by 10/20/2015; Hearing by 12/1/2015. Pretrial Conference set for 1/16/2016 at 10:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Jury Trial set for 3/22/2016 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Hall, S)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00540/pdf/USCOURTS-caed-1_14-cv-00540-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dba8c31</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00540_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00540/pdf/USCOURTS-caed-1_14-cv-00540-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00540; Robles v. AgReserves, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00540-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-08-01</dateIssued>
+  <docketText>SCHEDULING ORDER, signed by Magistrate Judge Jennifer L. Thurston on 8/1/2014. Consent/Decline Deadline 8/11/2014. Pleading Amendment Deadline 10/1/2014. Discovery Deadlines: Initial Disclosures 8/8/2014; Non-Expert 6/15/2015; Expert 8/24/2015. Mid-Discovery Status Conference set for 1/15/2015 at 09:00 AM in Bakersfield at 510 19th Street (JLT) before Magistrate Judge Jennifer L. Thurston. Non-Dispositive Motion Deadlines: Filed by 9/9/2015; Hearing by 10/7/2015. Dispositive Motion Deadlines: Filed by 10/20/2015; Hearing by 12/1/2015. Pretrial Conference set for 1/16/2016 at 10:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Jury Trial set for 3/22/2016 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00540-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-2/mods.xml">
+ <titleInfo>
+  <title>Robles v. AgReserves, Inc. et al</title>
+  <subTitle>ORDER GRANTING 19 Stipulation for Defendant AgReserves, Inc. to File a Counterclaim, signed by Magistrate Judge Jennifer L. Thurston on 1/6/2015. (Hall, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00540/pdf/USCOURTS-caed-1_14-cv-00540-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dba8c30</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00540_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00540/pdf/USCOURTS-caed-1_14-cv-00540-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00540; Robles v. AgReserves, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00540-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER GRANTING 19 Stipulation for Defendant AgReserves, Inc. to File a Counterclaim, signed by Magistrate Judge Jennifer L. Thurston on 1/6/2015. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00540-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-3/mods.xml">
+ <titleInfo>
+  <title>Robles v. AgReserves, Inc. et al</title>
+  <subTitle>STIPULATION and ORDER 26 for Plaintiff Juan Carlos Robles to Submit to Mental Examination, signed by Magistrate Judge Jennifer L. Thurston on 5/4/2015. (Hall, S)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00540/pdf/USCOURTS-caed-1_14-cv-00540-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dba8c34</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-3</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00540_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00540/pdf/USCOURTS-caed-1_14-cv-00540-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00540; Robles v. AgReserves, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00540-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-05-04</dateIssued>
+  <docketText>STIPULATION and ORDER 26 for Plaintiff Juan Carlos Robles to Submit to Mental Examination, signed by Magistrate Judge Jennifer L. Thurston on 5/4/2015. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00540-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-4/mods.xml">
+ <titleInfo>
+  <title>Robles v. AgReserves, Inc. et al</title>
+  <subTitle>STIPULATION AND ORDER for DISMISSAL with prejudice of Defendant South Valley Almond Company, LLC and The Church of Jesus Christ of Latter Day Saints, signed by District Judge Anthony W. Ishii on 10/13/2015. (Martin-Gill, S)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00540/pdf/USCOURTS-caed-1_14-cv-00540-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dba8c33</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-4</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00540_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00540/USCOURTS-caed-1_14-cv-00540-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00540/pdf/USCOURTS-caed-1_14-cv-00540-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00540; Robles v. AgReserves, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00540-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-10-14</dateIssued>
+  <docketText>STIPULATION AND ORDER for DISMISSAL with prejudice of Defendant South Valley Almond Company, LLC and The Church of Jesus Christ of Latter Day Saints, signed by District Judge Anthony W. Ishii on 10/13/2015. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

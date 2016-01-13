@@ -1,0 +1,267 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813cf5f7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cr-00320</identifier>
+<identifier type="local">P0b002ee1813cf5f7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_09-cr-00320</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_09-cr-00320</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:09-cr-00320</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="DAVID" fullName="DAVID IVINS" lastName="IVINS" role="Defendant"></party>
+ <party firstName="IRENE" fullName="IRENE IVINS" lastName="IVINS" role="Notice Only Party"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. IVINS</title>
+ <partNumber>2:09-cr-00320</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cr-00320/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cr-00320;09-320</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>DAVID IVINS</displayForm>
+ <namePart type="family">IVINS</namePart>
+ <namePart type="given">DAVID</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>IRENE IVINS</displayForm>
+ <namePart type="family">IVINS</namePart>
+ <namePart type="given">IRENE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_09-cr-00320</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:09-cr-00320</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="DAVID" fullName="DAVID IVINS" lastName="IVINS" role="Defendant"></party>
+ <party firstName="IRENE" fullName="IRENE IVINS" lastName="IVINS" role="Notice Only Party"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cr-00320-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-0/mods.xml">
+ <titleInfo>
+  <title>USA v. IVINS</title>
+  <subTitle>OPINION AS TO DAVID IVINS. Signed by HONORABLE JOEL H. SLOMSKY on 3/31/2010.3/31/2010 Entered and Copies E-Mailed. (ap, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cr-00320-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814b88e2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-0</identifier>
+ <identifier type="former granule identifier">paed-2_09-cr-00320_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cr-00320/pdf/USCOURTS-paed-2_09-cr-00320-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cr-00320; USA v. IVINS; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cr-00320-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-03-31</dateIssued>
+  <docketText>OPINION AS TO DAVID IVINS. Signed by HONORABLE JOEL H. SLOMSKY on 3/31/2010.3/31/2010 Entered and Copies E-Mailed. (ap, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cr-00320-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-1/mods.xml">
+ <titleInfo>
+  <title>USA v. IVINS</title>
+  <subTitle>ORDER AS TO DAVID IVINS THAT THE GOVERNMENT&apos;S MOTION TO ADMIT EVIDENCE OF OTHER CRIMES UNDER FED.R.EVID. 414 AND FED.R.EVID. 404(b) IS DENIED. Signed by HONORABLE JOEL H. SLOMSKY on 3/31/2010.3/31/2010 Entered and Copies E-Mailed. (ap, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cr-00320-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814b88df</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-1</identifier>
+ <identifier type="former granule identifier">paed-2_09-cr-00320_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cr-00320/pdf/USCOURTS-paed-2_09-cr-00320-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cr-00320; USA v. IVINS; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cr-00320-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-03-31</dateIssued>
+  <docketText>ORDER AS TO DAVID IVINS THAT THE GOVERNMENT&apos;S MOTION TO ADMIT EVIDENCE OF OTHER CRIMES UNDER FED.R.EVID. 414 AND FED.R.EVID. 404(b) IS DENIED. Signed by HONORABLE JOEL H. SLOMSKY on 3/31/2010.3/31/2010 Entered and Copies E-Mailed. (ap, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cr-00320-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-2/mods.xml">
+ <titleInfo>
+  <title>USA v. IVINS</title>
+  <subTitle>OPINION AS TO DAVID IVINS RE: GOVERNMENT&apos;S MOTION TO EXCLUDE EVIDENCE REGARDING THE PRIOR CONVICTIONS OF WITNESS AND DEFENDANT&apos;S MOTION IN LIMINE TO ADMIT EVIDENCE OF WITNESS MICHAEL MASTRANDUONO&apos;S PRIOR CRIMINAL CONVICTIONS. Signed by HONORABLE JOEL H. SLOMSKY on 6/28/10.6/28/10 Entered and Copies E-Mailed. (mac, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cr-00320-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814b88e1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-2</identifier>
+ <identifier type="former granule identifier">paed-2_09-cr-00320_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cr-00320/pdf/USCOURTS-paed-2_09-cr-00320-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cr-00320; USA v. IVINS; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cr-00320-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-06-28</dateIssued>
+  <docketText>OPINION AS TO DAVID IVINS RE: GOVERNMENT&apos;S MOTION TO EXCLUDE EVIDENCE REGARDING THE PRIOR CONVICTIONS OF WITNESS AND DEFENDANT&apos;S MOTION IN LIMINE TO ADMIT EVIDENCE OF WITNESS MICHAEL MASTRANDUONO&apos;S PRIOR CRIMINAL CONVICTIONS. Signed by HONORABLE JOEL H. SLOMSKY on 6/28/10.6/28/10 Entered and Copies E-Mailed. (mac, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cr-00320-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-3/mods.xml">
+ <titleInfo>
+  <title>USA v. IVINS</title>
+  <subTitle>ORDER AS TO DAVID IVINS THAT THE GOVERNMENT&apos;S MOTION TO EXCLUDE EVIDENCE REGARDING THE PRIOR CONVICTIONS OF WITNESS AND DEFENDANT&apos;S MOTION IN LIMINE TO ADMIT EVIDENCE OF WITNESS MICHAEL MASTRANDUONO&apos;S PRIOR CRIMINAL CONVICTIONS ARE GRANTED IN PART AND DENIED IN PART AS OUTLINED HEREIN. Signed by HONORABLE JOEL H. SLOMSKY on 6/28/10.6/28/10 Entered and Copies E-Mailed. (mac, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cr-00320-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814b88e3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-3</identifier>
+ <identifier type="former granule identifier">paed-2_09-cr-00320_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cr-00320/pdf/USCOURTS-paed-2_09-cr-00320-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cr-00320; USA v. IVINS; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cr-00320-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-06-28</dateIssued>
+  <docketText>ORDER AS TO DAVID IVINS THAT THE GOVERNMENT&apos;S MOTION TO EXCLUDE EVIDENCE REGARDING THE PRIOR CONVICTIONS OF WITNESS AND DEFENDANT&apos;S MOTION IN LIMINE TO ADMIT EVIDENCE OF WITNESS MICHAEL MASTRANDUONO&apos;S PRIOR CRIMINAL CONVICTIONS ARE GRANTED IN PART AND DENIED IN PART AS OUTLINED HEREIN. Signed by HONORABLE JOEL H. SLOMSKY on 6/28/10.6/28/10 Entered and Copies E-Mailed. (mac, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cr-00320-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-4/mods.xml">
+ <titleInfo>
+  <title>USA v. IVINS</title>
+  <subTitle>JUDGMENT AS TO DAVID IVINS (1), Count 1, IMPRISONMENT: 72 MONTHS; SUPERVISED RELEASE: 10 YEARS; SPECIAL ASSESSMENT: $100.00; FINE: $1500.00. Signed by HONORABLE JOEL H. SLOMSKY on 1/24/11.1/24/11 Entered. (mac, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cr-00320-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814b88e0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-4</identifier>
+ <identifier type="former granule identifier">paed-2_09-cr-00320_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cr-00320/USCOURTS-paed-2_09-cr-00320-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cr-00320/pdf/USCOURTS-paed-2_09-cr-00320-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cr-00320; USA v. IVINS; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cr-00320-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-01-24</dateIssued>
+  <docketText>JUDGMENT AS TO DAVID IVINS (1), Count 1, IMPRISONMENT: 72 MONTHS; SUPERVISED RELEASE: 10 YEARS; SPECIAL ASSESSMENT: $100.00; FINE: $1500.00. Signed by HONORABLE JOEL H. SLOMSKY on 1/24/11.1/24/11 Entered. (mac, )</docketText>
+</extension>
+</relatedItem>
+</mods>

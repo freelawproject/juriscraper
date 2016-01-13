@@ -1,0 +1,510 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18e14613f">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-12-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-12-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152</identifier>
+<identifier type="local">P0b002ee18e14613f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-12-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-12-11</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_14-cr-00152</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cr-00152</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cr-00152</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Sarah" fullName="Sarah N Nattress" lastName="Nattress" middleName="N" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Nattress</title>
+ <partNumber>2:14-cr-00152</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cr-00152;14-152</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Sarah N Nattress</displayForm>
+ <namePart type="family">Nattress</namePart>
+ <namePart type="given">Sarah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cr-00152</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cr-00152</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Sarah" fullName="Sarah N Nattress" lastName="Nattress" middleName="N" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-0" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>ORDER for RELEASE of PERSON IN CUSTODY, as to defendant Sarah N Nattress, signed by Magistrate Judge Dale A. Drozd on 5/30/2014. (Marciel, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1a4c</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-0</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-05-30</dateIssued>
+  <docketText>ORDER for RELEASE of PERSON IN CUSTODY, as to defendant Sarah N Nattress, signed by Magistrate Judge Dale A. Drozd on 5/30/2014. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-1" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>STIPULATION and ORDER 10 signed by District Judge Troy L. Nunley on 6/19/2014 ORDERING the Status Conference set for 6/19/2014 CONTINUED to 7/10/2014 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Sarah N Nattress: T4 Start: 6/19/2014 - Stop: 7/10/2014. (Krueger, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1adb</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-1</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-06-19</dateIssued>
+  <docketText>STIPULATION and ORDER 10 signed by District Judge Troy L. Nunley on 6/19/2014 ORDERING the Status Conference set for 6/19/2014 CONTINUED to 7/10/2014 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Sarah N Nattress: T4 Start: 6/19/2014 - Stop: 7/10/2014. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-2" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>STIPULATION and ORDER 13 signed by District Judge Troy L. Nunley on 7/3/2014 ORDERING the Status Conference set for 7/10/2014 CONTINUED to 8/7/2014 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Sarah N. Nattress: T4 Start: 7/10/2014 - Stop: 8/7/2014. (Krueger, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1a4d</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-2</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-07-07</dateIssued>
+  <docketText>STIPULATION and ORDER 13 signed by District Judge Troy L. Nunley on 7/3/2014 ORDERING the Status Conference set for 7/10/2014 CONTINUED to 8/7/2014 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Sarah N. Nattress: T4 Start: 7/10/2014 - Stop: 8/7/2014. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-3" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>STIPULATED PROTECTIVE ORDER as to Sarah N Nattress signed by Magistrate Judge Allison Claire on 7/3/2014. (Zignago, K.)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1ad7</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-3</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-07-07</dateIssued>
+  <docketText>STIPULATED PROTECTIVE ORDER as to Sarah N Nattress signed by Magistrate Judge Allison Claire on 7/3/2014. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-4" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>STIPULATION and ORDER as to Sarah N Nattress signed by District Judge Troy L. Nunley on 8/7/14: Status Conference RESET for 9/18/2014 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Sarah N Nattress: T-4 Start: 8/7/14 Stop: 9/18/14. (Kaminski, H)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1ad3</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-4</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-08-08</dateIssued>
+  <docketText>STIPULATION and ORDER as to Sarah N Nattress signed by District Judge Troy L. Nunley on 8/7/14: Status Conference RESET for 9/18/2014 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Sarah N Nattress: T-4 Start: 8/7/14 Stop: 9/18/14. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-5" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>STIPULATION AND ORDER signed by District Judge Troy L. Nunley on September 16, 2014 as to defendant Sarah N Nattress re 18. The Status Conference set for 09/18/2014 is CONTINUED TO 9/25/2014 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. **Excludable started as to Sarah N Nattress: Excludable T4 Start: 09/18/2014 Stop: 09/25/2014. (Rivas, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1ae2</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-5</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-09-17</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by District Judge Troy L. Nunley on September 16, 2014 as to defendant Sarah N Nattress re 18. The Status Conference set for 09/18/2014 is CONTINUED TO 9/25/2014 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. **Excludable started as to Sarah N Nattress: Excludable T4 Start: 09/18/2014 Stop: 09/25/2014. (Rivas, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-6" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>STIPULATION and ORDER signed by District Judge Troy L. Nunley on 9/24/14 ORDERING that the Status Conference is CONTINUED to 10/2/2014 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Sarah N Nattress: XT4 Start: 9/25/14, Stop: 10/2/14. (Kastilahn, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1ad4</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-6</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-09-25</dateIssued>
+  <docketText>STIPULATION and ORDER signed by District Judge Troy L. Nunley on 9/24/14 ORDERING that the Status Conference is CONTINUED to 10/2/2014 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Sarah N Nattress: XT4 Start: 9/25/14, Stop: 10/2/14. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-7" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>STIPULATION AND ORDER signed by District Judge Troy L. Nunley on 10/15/2014 ORDERING 23 Status Conference Reset for 10/23/2014 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Sarah N Nattress: XT4 Start: 10/16/2014 Stop: 10/23/2014. (Reader, L)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1ad9</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-7</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-10-16</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by District Judge Troy L. Nunley on 10/15/2014 ORDERING 23 Status Conference Reset for 10/23/2014 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Sarah N Nattress: XT4 Start: 10/16/2014 Stop: 10/23/2014. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-8" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>STIPULATION and ORDER 29 signed by District Judge Troy L. Nunley on 1/6/2015 ORDERING Judgment and Sentencing set for 1/8/2015 VACATED and a Status Conference regarding Sentencing is SET for 11/5/2015 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. (Krueger, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1ad8</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-8</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>STIPULATION and ORDER 29 signed by District Judge Troy L. Nunley on 1/6/2015 ORDERING Judgment and Sentencing set for 1/8/2015 VACATED and a Status Conference regarding Sentencing is SET for 11/5/2015 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-9" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>RELATED CASE ORDER signed by District Judge Troy L. Nunley on 1/16/2015 ORDERING that cases 2:14-cr-00152-TLN, 2:14-cr-00153-GEB and 2:15-cr-00005-TLN are RELATED. The action denominated 2:14-cr-00153-GEB is hereby REASSIGNED to District Judge Troy L. Nunley for all further proceedings. Any dates currently set in the reassigned case are hereby VACATED. Henceforth, the caption on documents filed in the reassigned case shall be shown as 2:14-cr-00153-TLN. (Zignago, K.)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1ad2</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-9</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2015-01-16</dateIssued>
+  <docketText>RELATED CASE ORDER signed by District Judge Troy L. Nunley on 1/16/2015 ORDERING that cases 2:14-cr-00152-TLN, 2:14-cr-00153-GEB and 2:15-cr-00005-TLN are RELATED. The action denominated 2:14-cr-00153-GEB is hereby REASSIGNED to District Judge Troy L. Nunley for all further proceedings. Any dates currently set in the reassigned case are hereby VACATED. Henceforth, the caption on documents filed in the reassigned case shall be shown as 2:14-cr-00153-TLN. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-10" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>STIPULATION and ORDER signed by District Judge Troy L. Nunley on 10/06/15 ORDERING that cases 2:15-cr-0005 TLN, 2:15-cr-0153 TLN and 2:15-cr-0152 TLN are RELATED. (Benson, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1ad6</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-10</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2015-10-07</dateIssued>
+  <docketText>STIPULATION and ORDER signed by District Judge Troy L. Nunley on 10/06/15 ORDERING that cases 2:15-cr-0005 TLN, 2:15-cr-0153 TLN and 2:15-cr-0152 TLN are RELATED. (Benson, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-11" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>[DISREGARD - DUPLICATE OF 33 ORDER] STIPULATION and ORDER signed by District Judge Troy L. Nunley on 10/06/15 ORDERING that cases 2:15-cr-0005 TLN, 2:15-cr-0153 TLN and 2:15-cr-0152 TLN are RELATED. (Benson, A) Modified on 10/26/2015 (Benson, A).</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1ada</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-11</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2015-10-07</dateIssued>
+  <docketText>[DISREGARD - DUPLICATE OF 33 ORDER] STIPULATION and ORDER signed by District Judge Troy L. Nunley on 10/06/15 ORDERING that cases 2:15-cr-0005 TLN, 2:15-cr-0153 TLN and 2:15-cr-0152 TLN are RELATED. (Benson, A) Modified on 10/26/2015 (Benson, A).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-12" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>STIPULATION and ORDER 35 signed by District Judge Troy L. Nunley on 11/3/2015 ORDERING Status Re: Judgment and Sentencing RESET for 12/10/2015 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. (Shaddox-Waldrop, A)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1ad5</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-12</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2015-11-03</dateIssued>
+  <docketText>STIPULATION and ORDER 35 signed by District Judge Troy L. Nunley on 11/3/2015 ORDERING Status Re: Judgment and Sentencing RESET for 12/10/2015 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. (Shaddox-Waldrop, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00152-13" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Nattress</title>
+  <subTitle>STIPULATION and ORDER as to Sarah N. Nattress signed by District Judge Troy L. Nunley on 12/8/2015 ORDERING that the Status Conference regarding Judgment and Sentencing is CONTINUED to 1/7/2016 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. (Zignago, K.)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1f1ae1</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-13</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00152_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00152/USCOURTS-caed-2_14-cr-00152-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00152/pdf/USCOURTS-caed-2_14-cr-00152-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00152; USA v. Nattress; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00152-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2015-12-09</dateIssued>
+  <docketText>STIPULATION and ORDER as to Sarah N. Nattress signed by District Judge Troy L. Nunley on 12/8/2015 ORDERING that the Status Conference regarding Judgment and Sentencing is CONTINUED to 1/7/2016 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+</mods>

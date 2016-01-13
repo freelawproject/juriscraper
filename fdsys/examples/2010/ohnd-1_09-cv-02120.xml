@@ -1,0 +1,253 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181566765">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-02120</identifier>
+<identifier type="local">P0b002ee181566765</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_09-cv-02120</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-cv-02120</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-cv-02120</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party firstName="Andrew" fullName="Andrew Daniels" lastName="Daniels" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Does" lastName="Does" role="Defendant"></party>
+ <party fullName="Hartford Insurance" lastName="Hartford Insurance" role="Defendant"></party>
+ <party firstName="Ernest" fullName="Ernest E. Horner" lastName="Horner" middleName="E." role="Defendant"></party>
+ <party fullName="Lorain County Sheriff" lastName="Lorain County Sheriff" role="Defendant"></party>
+ <party firstName="Stanley" fullName="Stanley Qualls" lastName="Qualls" role="Defendant"></party>
+ <party firstName="Heath" fullName="Heath W. Tester" lastName="Tester" middleName="W." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Daniels v. Lorain County Sheriff et al</title>
+ <partNumber>1:09-cv-02120</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-02120/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cv-02120;09-2120</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Andrew Daniels</displayForm>
+ <namePart type="family">Daniels</namePart>
+ <namePart type="given">Andrew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Does</displayForm>
+ <namePart type="family">Does</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hartford Insurance</displayForm>
+ <namePart type="family">Hartford Insurance</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ernest E. Horner</displayForm>
+ <namePart type="family">Horner</namePart>
+ <namePart type="given">Ernest</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lorain County Sheriff</displayForm>
+ <namePart type="family">Lorain County Sheriff</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stanley Qualls</displayForm>
+ <namePart type="family">Qualls</namePart>
+ <namePart type="given">Stanley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Heath W. Tester</displayForm>
+ <namePart type="family">Tester</namePart>
+ <namePart type="given">Heath</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-cv-02120</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-cv-02120</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party firstName="Andrew" fullName="Andrew Daniels" lastName="Daniels" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Does" lastName="Does" role="Defendant"></party>
+ <party fullName="Hartford Insurance" lastName="Hartford Insurance" role="Defendant"></party>
+ <party firstName="Ernest" fullName="Ernest E. Horner" lastName="Horner" middleName="E." role="Defendant"></party>
+ <party fullName="Lorain County Sheriff" lastName="Lorain County Sheriff" role="Defendant"></party>
+ <party firstName="Stanley" fullName="Stanley Qualls" lastName="Qualls" role="Defendant"></party>
+ <party firstName="Heath" fullName="Heath W. Tester" lastName="Tester" middleName="W." role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-cv-02120-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02120/USCOURTS-ohnd-1_09-cv-02120-0/mods.xml">
+ <titleInfo>
+  <title>Daniels v. Lorain County Sheriff et al</title>
+  <subTitle>Report and Recommendation that the amended motion of the Lorain County defendants for summary judgment be granted as to the federal claims and that the Court decline to exercise supplemental jurisdiction over any remaining state law claims, without prejudice to refiling of those claims in state court (Related Doc # 5, 20, 17). Objections to R&amp;R due by 1/29/2010. Signed by Magistrate Judge William H. Baughman, Jr. on 01/15/2010. (Hard copy mailed to plaintiff on 01/15/2010.) (G,GS)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-cv-02120-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18164cdd3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02120/USCOURTS-ohnd-1_09-cv-02120-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-cv-02120_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02120/USCOURTS-ohnd-1_09-cv-02120-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-02120/pdf/USCOURTS-ohnd-1_09-cv-02120-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-02120; Daniels v. Lorain County Sheriff et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-cv-02120-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-15</dateIssued>
+  <docketText>Report and Recommendation that the amended motion of the Lorain County defendants for summary judgment be granted as to the federal claims and that the Court decline to exercise supplemental jurisdiction over any remaining state law claims, without prejudice to refiling of those claims in state court (Related Doc # 5, 20, 17). Objections to R&amp;R due by 1/29/2010. Signed by Magistrate Judge William H. Baughman, Jr. on 01/15/2010. (Hard copy mailed to plaintiff on 01/15/2010.) (G,GS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-cv-02120-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02120/USCOURTS-ohnd-1_09-cv-02120-1/mods.xml">
+ <titleInfo>
+  <title>Daniels v. Lorain County Sheriff et al</title>
+  <subTitle>Memorandum and Order re 528 that this court adopts the R&amp;R in its entirety and grants summary judgment for the Lorain County defendants with respect to claims asserted under 42 U.S.C. § 1983 and 15 U.S.C. § 1681. The court also dismisses, without prejudice, any claims that may be construed as state law claims. This order is final and appealable. Judge Ann Aldrich on 1-27-2010. (K,V)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-cv-02120-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18164cdd4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02120/USCOURTS-ohnd-1_09-cv-02120-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-cv-02120_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02120/USCOURTS-ohnd-1_09-cv-02120-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-02120/pdf/USCOURTS-ohnd-1_09-cv-02120-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-02120; Daniels v. Lorain County Sheriff et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-cv-02120-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-27</dateIssued>
+  <docketText>Memorandum and Order re 528 that this court adopts the R&amp;R in its entirety and grants summary judgment for the Lorain County defendants with respect to claims asserted under 42 U.S.C. § 1983 and 15 U.S.C. § 1681. The court also dismisses, without prejudice, any claims that may be construed as state law claims. This order is final and appealable. Judge Ann Aldrich on 1-27-2010. (K,V)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-cv-02120-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02120/USCOURTS-ohnd-1_09-cv-02120-2/mods.xml">
+ <titleInfo>
+  <title>Daniels v. Lorain County Sheriff et al</title>
+  <subTitle>Rule 58 Judgment Entry in favor of defendants and against plaintiff. This order is final and appealable. Judge Ann Aldrich on 1-27-2010. (K,V)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-cv-02120-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18164cdd5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02120/USCOURTS-ohnd-1_09-cv-02120-2</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-cv-02120_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02120/USCOURTS-ohnd-1_09-cv-02120-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-02120/pdf/USCOURTS-ohnd-1_09-cv-02120-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-02120; Daniels v. Lorain County Sheriff et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-cv-02120-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-01-27</dateIssued>
+  <docketText>Rule 58 Judgment Entry in favor of defendants and against plaintiff. This order is final and appealable. Judge Ann Aldrich on 1-27-2010. (K,V)</docketText>
+</extension>
+</relatedItem>
+</mods>

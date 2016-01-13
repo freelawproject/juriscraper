@@ -1,0 +1,173 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814da345">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_04-cr-10230</identifier>
+<identifier type="local">P0b002ee1814da345</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_04-cr-10230</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_04-cr-10230</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:04-cr-10230</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Chando" fullName="Chando Patel" lastName="Patel" role="Defendant"></party>
+ <party firstName="Chandrakant" fullName="Chandrakant Patel Jr" generation="Jr" lastName="Patel" role="Defendant"></party>
+ <party firstName="Chandu" fullName="Chandu Patel" lastName="Patel" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Patel Jr." generation="Jr." lastName="Patel" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Patel</title>
+ <partNumber>1:04-cr-10230</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_04-cr-10230/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:04-cr-10230;04-10230</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Chando Patel</displayForm>
+ <namePart type="family">Patel</namePart>
+ <namePart type="given">Chando</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chandrakant Patel Jr</displayForm>
+ <namePart type="family">Patel</namePart>
+ <namePart type="given">Chandrakant</namePart>
+ <namePart type="termsOfAddress">Jr</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chandu Patel</displayForm>
+ <namePart type="family">Patel</namePart>
+ <namePart type="given">Chandu</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Patel Jr.</displayForm>
+ <namePart type="family">Patel</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_04-cr-10230</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:04-cr-10230</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Chando" fullName="Chando Patel" lastName="Patel" role="Defendant"></party>
+ <party firstName="Chandrakant" fullName="Chandrakant Patel Jr" generation="Jr" lastName="Patel" role="Defendant"></party>
+ <party firstName="Chandu" fullName="Chandu Patel" lastName="Patel" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Patel Jr." generation="Jr." lastName="Patel" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_04-cr-10230-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_04-cr-10230/USCOURTS-mad-1_04-cr-10230-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Patel</title>
+  <subTitle>Judge Joseph L. Tauro: ORDER entered. JUDGMENT as to Charles Patel, Jr. (1), Count(s) 1-2, The defendant is sentenced to: Time served. Supervised Release for a term of 3 years. Standard conditions of supervision shall apply. Special conditions are imposed. A special assessment fee of $200.00, Fine of $5000.00, and Restitution of $80,404.00 are to be paid. (Abaid, Kimberly)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_04-cr-10230-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181536ba3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_04-cr-10230/USCOURTS-mad-1_04-cr-10230-0</identifier>
+ <identifier type="former granule identifier">mad-1_04-cr-10230_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_04-cr-10230/USCOURTS-mad-1_04-cr-10230-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_04-cr-10230/pdf/USCOURTS-mad-1_04-cr-10230-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-10230; USA v. Patel; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_04-cr-10230-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-29</dateIssued>
+  <docketText>Judge Joseph L. Tauro: ORDER entered. JUDGMENT as to Charles Patel, Jr. (1), Count(s) 1-2, The defendant is sentenced to: Time served. Supervised Release for a term of 3 years. Standard conditions of supervision shall apply. Special conditions are imposed. A special assessment fee of $200.00, Fine of $5000.00, and Restitution of $80,404.00 are to be paid. (Abaid, Kimberly)</docketText>
+</extension>
+</relatedItem>
+</mods>

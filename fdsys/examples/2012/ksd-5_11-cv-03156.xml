@@ -1,0 +1,187 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1823f34b1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-03-23</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-03-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_11-cv-03156</identifier>
+<identifier type="local">P0b002ee1823f34b1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-03-23</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-03-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_11-cv-03156</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_11-cv-03156</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:11-cv-03156</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <party firstName="Willis" fullName="Willis Shane Gordon" lastName="Gordon" middleName="Shane" role="Plaintiff"></party>
+ <party firstName="Ray" fullName="Ray Roberts" lastName="Roberts" role="Defendant"></party>
+ <party firstName="Roger" fullName="Roger Werholtz" lastName="Werholtz" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Gordon v. Roberts et al</title>
+ <partNumber>5:11-cv-03156</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_11-cv-03156/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:11-cv-03156;11-3156</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Willis Shane Gordon</displayForm>
+ <namePart type="family">Gordon</namePart>
+ <namePart type="given">Willis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ray Roberts</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given">Ray</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roger Werholtz</displayForm>
+ <namePart type="family">Werholtz</namePart>
+ <namePart type="given">Roger</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_11-cv-03156</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:11-cv-03156</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <party firstName="Willis" fullName="Willis Shane Gordon" lastName="Gordon" middleName="Shane" role="Plaintiff"></party>
+ <party firstName="Ray" fullName="Ray Roberts" lastName="Roberts" role="Defendant"></party>
+ <party firstName="Roger" fullName="Roger Werholtz" lastName="Werholtz" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_11-cv-03156-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_11-cv-03156/USCOURTS-ksd-5_11-cv-03156-0/mods.xml">
+ <titleInfo>
+  <title>Gordon v. Roberts et al</title>
+  <subTitle>MEMORANDUM AND ORDER ENTERED: Plaintiff&apos;s motion 4 for leave to amend complaint is granted. (SEE ORDER FOR DETAILS.) Signed by Senior District Judge Sam A. Crow on 1/11/2012. (Mailed to pro se party Willis Shane Gordon by regular mail.) (smnd)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_11-cv-03156-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182400e6f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_11-cv-03156/USCOURTS-ksd-5_11-cv-03156-0</identifier>
+ <identifier type="former granule identifier">ksd-5_11-cv-03156_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_11-cv-03156/USCOURTS-ksd-5_11-cv-03156-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_11-cv-03156/pdf/USCOURTS-ksd-5_11-cv-03156-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-03156; Gordon v. Roberts et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_11-cv-03156-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER ENTERED: Plaintiff&apos;s motion 4 for leave to amend complaint is granted. (SEE ORDER FOR DETAILS.) Signed by Senior District Judge Sam A. Crow on 1/11/2012. (Mailed to pro se party Willis Shane Gordon by regular mail.) (smnd)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_11-cv-03156-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_11-cv-03156/USCOURTS-ksd-5_11-cv-03156-1/mods.xml">
+ <titleInfo>
+  <title>Gordon v. Roberts et al</title>
+  <subTitle>ORDER ENTERED: Plaintiff&apos;s motions 2 and 6 for leave to proceed in forma pauperis are denied. This action is dismissed and all relief is denied without prejudice. Signed by Senior District Judge Sam A. Crow on 3/21/2012. (Mailed to pro se party Willis Shane Gordon by regular mail.) (smnd)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_11-cv-03156-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182400e70</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_11-cv-03156/USCOURTS-ksd-5_11-cv-03156-1</identifier>
+ <identifier type="former granule identifier">ksd-5_11-cv-03156_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_11-cv-03156/USCOURTS-ksd-5_11-cv-03156-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_11-cv-03156/pdf/USCOURTS-ksd-5_11-cv-03156-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-03156; Gordon v. Roberts et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_11-cv-03156-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-03-21</dateIssued>
+  <docketText>ORDER ENTERED: Plaintiff&apos;s motions 2 and 6 for leave to proceed in forma pauperis are denied. This action is dismissed and all relief is denied without prejudice. Signed by Senior District Judge Sam A. Crow on 3/21/2012. (Mailed to pro se party Willis Shane Gordon by regular mail.) (smnd)</docketText>
+</extension>
+</relatedItem>
+</mods>

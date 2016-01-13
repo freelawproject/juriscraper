@@ -1,0 +1,263 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c2c8e4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Northern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-canb-1_11-bk-12469</identifier>
+<identifier type="local">P0b002ee186c2c8e4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-canb-1_11-bk-12469</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-canb-1_11-bk-12469</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>canb</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>3062</courtSortOrder>
+ <caseNumber>1:11-bk-12469</caseNumber>
+ <caseOffice>Santa Rosa</caseOffice>
+ <party firstName="Patrick" fullName="Patrick Rene Nobriga" lastName="Nobriga" middleName="Rene" role="Debtor"></party>
+ <party firstName="Lee" fullName="Lee Ann Nobriga" lastName="Nobriga" middleName="Ann" role="Joint Debtor"></party>
+ <party fullName="Office of the U.S. Trustee / SR" lastName="Office of the U.S. Trustee / SR" role="U.S. Trustee"></party>
+ <party firstName="Jeffry" fullName="Jeffry Locke" lastName="Locke" role="Trustee"></party>
+ <party fullName="Ascension Capital Group" lastName="Ascension Capital Group" role="Creditor"></party>
+ <party firstName="Glen" fullName="Glen Olives" lastName="Olives" role="Creditor"></party>
+ <party fullName="Fidelity National Law Group" lastName="Fidelity National Law Group" role="Creditor"></party>
+ <party fullName="Fidelity National Title Group, Inc" lastName="Fidelity National Title Group, Inc" role="Creditor"></party>
+ <party fullName="Fidelity National Title Insurance Company" lastName="Fidelity National Title Insurance Company" role="Creditor"></party>
+</extension>
+<titleInfo>
+ <title>Patrick Rene Nobriga and Lee Ann Nobriga</title>
+ <partNumber>1:11-bk-12469</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-canb-1_11-bk-12469/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">1:11-bk-12469;11-12469</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Northern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Santa Rosa</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Patrick Rene Nobriga</displayForm>
+ <namePart type="family">Nobriga</namePart>
+ <namePart type="given">Patrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Lee Ann Nobriga</displayForm>
+ <namePart type="family">Nobriga</namePart>
+ <namePart type="given">Lee</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Joint Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Office of the U.S. Trustee / SR</displayForm>
+ <namePart type="family">Office of the U.S. Trustee / SR</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>U.S. Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffry Locke</displayForm>
+ <namePart type="family">Locke</namePart>
+ <namePart type="given">Jeffry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Ascension Capital Group</displayForm>
+ <namePart type="family">Ascension Capital Group</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Glen Olives</displayForm>
+ <namePart type="family">Olives</namePart>
+ <namePart type="given">Glen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Fidelity National Law Group</displayForm>
+ <namePart type="family">Fidelity National Law Group</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Fidelity National Title Group, Inc</displayForm>
+ <namePart type="family">Fidelity National Title Group, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Fidelity National Title Insurance Company</displayForm>
+ <namePart type="family">Fidelity National Title Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-canb-1_11-bk-12469</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>canb</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>3062</courtSortOrder>
+ <caseNumber>1:11-bk-12469</caseNumber>
+ <caseOffice>Santa Rosa</caseOffice>
+ <party firstName="Patrick" fullName="Patrick Rene Nobriga" lastName="Nobriga" middleName="Rene" role="Debtor"></party>
+ <party firstName="Lee" fullName="Lee Ann Nobriga" lastName="Nobriga" middleName="Ann" role="Joint Debtor"></party>
+ <party fullName="Office of the U.S. Trustee / SR" lastName="Office of the U.S. Trustee / SR" role="U.S. Trustee"></party>
+ <party firstName="Jeffry" fullName="Jeffry Locke" lastName="Locke" role="Trustee"></party>
+ <party fullName="Ascension Capital Group" lastName="Ascension Capital Group" role="Creditor"></party>
+ <party firstName="Glen" fullName="Glen Olives" lastName="Olives" role="Creditor"></party>
+ <party fullName="Fidelity National Law Group" lastName="Fidelity National Law Group" role="Creditor"></party>
+ <party fullName="Fidelity National Title Group, Inc" lastName="Fidelity National Title Group, Inc" role="Creditor"></party>
+ <party fullName="Fidelity National Title Insurance Company" lastName="Fidelity National Title Insurance Company" role="Creditor"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-canb-1_11-bk-12469-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-canb-1_11-bk-12469/USCOURTS-canb-1_11-bk-12469-0/mods.xml">
+ <titleInfo>
+  <title>Patrick Rene Nobriga and Lee Ann Nobriga</title>
+  <subTitle>Memorandum of Findings on Remand. (RE: related document(s)44 Amended Motion for Contempt filed by Debtor Patrick Rene Nobriga, Joint Debtor Lee Ann Nobriga). (kl)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-canb-1_11-bk-12469-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c40240</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-canb-1_11-bk-12469/USCOURTS-canb-1_11-bk-12469-0</identifier>
+ <identifier type="former granule identifier">canb-1_11-bk-12469_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-canb-1_11-bk-12469/USCOURTS-canb-1_11-bk-12469-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-canb-1_11-bk-12469/pdf/USCOURTS-canb-1_11-bk-12469-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-bk-12469; Patrick Rene Nobriga and Lee Ann Nobriga; </searchTitle>
+  <courtName>United States Bankruptcy Court Northern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-canb-1_11-bk-12469-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-06-12</dateIssued>
+  <docketText>Memorandum of Findings on Remand. (RE: related document(s)44 Amended Motion for Contempt filed by Debtor Patrick Rene Nobriga, Joint Debtor Lee Ann Nobriga). (kl)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-canb-1_11-bk-12469-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-canb-1_11-bk-12469/USCOURTS-canb-1_11-bk-12469-1/mods.xml">
+ <titleInfo>
+  <title>Patrick Rene Nobriga and Lee Ann Nobriga</title>
+  <subTitle>Memorandum on Motion for Additional Attorneys Fees (RE: related document(s)57 Motion for Attorney&apos;s Fees filed by Debtor Patrick Rene Nobriga, Joint Debtor Lee Ann Nobriga). (lj)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-canb-1_11-bk-12469-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4023f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-canb-1_11-bk-12469/USCOURTS-canb-1_11-bk-12469-1</identifier>
+ <identifier type="former granule identifier">canb-1_11-bk-12469_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-canb-1_11-bk-12469/USCOURTS-canb-1_11-bk-12469-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-canb-1_11-bk-12469/pdf/USCOURTS-canb-1_11-bk-12469-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-bk-12469; Patrick Rene Nobriga and Lee Ann Nobriga; </searchTitle>
+  <courtName>United States Bankruptcy Court Northern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-canb-1_11-bk-12469-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-08-28</dateIssued>
+  <docketText>Memorandum on Motion for Additional Attorneys Fees (RE: related document(s)57 Motion for Attorney&apos;s Fees filed by Debtor Patrick Rene Nobriga, Joint Debtor Lee Ann Nobriga). (lj)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-canb-1_11-bk-12469-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-canb-1_11-bk-12469/USCOURTS-canb-1_11-bk-12469-2/mods.xml">
+ <titleInfo>
+  <title>Patrick Rene Nobriga and Lee Ann Nobriga</title>
+  <subTitle>Memorandum on Motion For Attorney&apos;s Fees Incurred on Appeal (RE: related document(s)57 Motion for Damages for Creditor Misconduct filed by Debtor Patrick Rene Nobriga, Joint Debtor Lee Ann Nobriga). (lj)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-canb-1_11-bk-12469-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4023e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-canb-1_11-bk-12469/USCOURTS-canb-1_11-bk-12469-2</identifier>
+ <identifier type="former granule identifier">canb-1_11-bk-12469_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-canb-1_11-bk-12469/USCOURTS-canb-1_11-bk-12469-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-canb-1_11-bk-12469/pdf/USCOURTS-canb-1_11-bk-12469-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-bk-12469; Patrick Rene Nobriga and Lee Ann Nobriga; </searchTitle>
+  <courtName>United States Bankruptcy Court Northern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-canb-1_11-bk-12469-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>Memorandum on Motion For Attorney&apos;s Fees Incurred on Appeal (RE: related document(s)57 Motion for Damages for Creditor Misconduct filed by Debtor Patrick Rene Nobriga, Joint Debtor Lee Ann Nobriga). (lj)</docketText>
+</extension>
+</relatedItem>
+</mods>

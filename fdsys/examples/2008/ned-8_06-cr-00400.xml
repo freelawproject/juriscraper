@@ -1,0 +1,379 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817283e7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00400</identifier>
+<identifier type="local">P0b002ee1817283e7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cr-00400</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00400</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00400</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Anuar" fullName="Anuar Nunez" lastName="Nunez" role="Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly W. Peters" lastName="Peters" middleName="W." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Peters et al</title>
+ <partNumber>8:06-cr-00400</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00400/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cr-00400;06-400</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Anuar Nunez</displayForm>
+ <namePart type="family">Nunez</namePart>
+ <namePart type="given">Anuar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kelly W. Peters</displayForm>
+ <namePart type="family">Peters</namePart>
+ <namePart type="given">Kelly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00400</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00400</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Anuar" fullName="Anuar Nunez" lastName="Nunez" role="Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly W. Peters" lastName="Peters" middleName="W." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00400-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant(s) Anuar Nunez Ordered by Magistrate Judge Thomas D. Thalken.(PCV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00400-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750110</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00400_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00400/pdf/USCOURTS-ned-8_06-cr-00400-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00400; USA v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00400-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-09</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant(s) Anuar Nunez Ordered by Magistrate Judge Thomas D. Thalken.(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00400-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters et al</title>
+  <subTitle>ORDER - Defendant Peters&apos;s motion for an extension of time 10 is granted. Defendants Peters and Nunez are given until on or before 2/27/07, in whichto file pretrial motions pursuant to the progression order. The time between 1/11/07 and 2/27/07 shall be excluded under the Speedy Trial Act. The evidentiary hearings tentatively scheduled for 2:00 p.m. on 1/19/07, and the hearing tentatively scheduled for 1:30 p.m. on 2/7/07, are canceled and will be rescheduled, if necessary, following the filing of any pretrial motionsin accordance with this order as to defendants, Kelly W. Peters and Anuar Nunez. Pretrial Motion Deadline set for 2/27/2007. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00400-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750111</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00400_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00400/pdf/USCOURTS-ned-8_06-cr-00400-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00400; USA v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00400-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-11</dateIssued>
+  <docketText>ORDER - Defendant Peters&apos;s motion for an extension of time 10 is granted. Defendants Peters and Nunez are given until on or before 2/27/07, in whichto file pretrial motions pursuant to the progression order. The time between 1/11/07 and 2/27/07 shall be excluded under the Speedy Trial Act. The evidentiary hearings tentatively scheduled for 2:00 p.m. on 1/19/07, and the hearing tentatively scheduled for 1:30 p.m. on 2/7/07, are canceled and will be rescheduled, if necessary, following the filing of any pretrial motionsin accordance with this order as to defendants, Kelly W. Peters and Anuar Nunez. Pretrial Motion Deadline set for 2/27/2007. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00400-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters et al</title>
+  <subTitle>ORDER - Ms. Bazis&apos;s motion to withdraw as counsel for Peters 23 is granted. Beau G. Finley shall enter his appearance as counsel for Peters forthwith. The motion for a continuance of the trial in this matter 23 is granted. Trial of this matter is rescheduled before Chief Judge Joseph F. Bataillon and a jury commencing at 8:30 a.m. on 5/14/07. The time between 3/28/07 and 5/14/07 shall be excluded under the Speedy Trial Act as to defendant Kelly W. Peters. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00400-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750113</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00400_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00400/pdf/USCOURTS-ned-8_06-cr-00400-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00400; USA v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00400-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-03-28</dateIssued>
+  <docketText>ORDER - Ms. Bazis&apos;s motion to withdraw as counsel for Peters 23 is granted. Beau G. Finley shall enter his appearance as counsel for Peters forthwith. The motion for a continuance of the trial in this matter 23 is granted. Trial of this matter is rescheduled before Chief Judge Joseph F. Bataillon and a jury commencing at 8:30 a.m. on 5/14/07. The time between 3/28/07 and 5/14/07 shall be excluded under the Speedy Trial Act as to defendant Kelly W. Peters. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00400-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters et al</title>
+  <subTitle>ORDER - The oral motion of attorney James E. Mitchell to withdraw as counsel of record is granted. The Federal Public Defender is appointed as CJA counsel to represent the above named defendant; A status hearing is scheduled before the undersigned in Courtroom No. 3, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on Monday, July 9, 2007, at 2:00 p.m. Since this is a criminal case, the defendant shall be present, unless excused by the court as to defendant Anuar Nunez. Status Hearing set for 7/9/2007 02:00 PM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon. Ordered by Judge Joseph F. Bataillon. (KBJ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00400-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750114</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-3</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00400_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00400/pdf/USCOURTS-ned-8_06-cr-00400-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00400; USA v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00400-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-06-25</dateIssued>
+  <docketText>ORDER - The oral motion of attorney James E. Mitchell to withdraw as counsel of record is granted. The Federal Public Defender is appointed as CJA counsel to represent the above named defendant; A status hearing is scheduled before the undersigned in Courtroom No. 3, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on Monday, July 9, 2007, at 2:00 p.m. Since this is a criminal case, the defendant shall be present, unless excused by the court as to defendant Anuar Nunez. Status Hearing set for 7/9/2007 02:00 PM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon. Ordered by Judge Joseph F. Bataillon. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00400-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters et al</title>
+  <subTitle>JUDGMENT as to Kelly W. Peters. The defendant plead guilty to Count V of the Indictment and is sentenced to the custody of the Bureau of Prisons for 34 months, the sentence is adjusted by 3 months pursuant to 5G1.3(b) order to provide credit for the time spent in state custody from 10/4/06 through 12/21/06; and shall surrender for service at the institution designated by the Bureau of Prisons on or after 11/6/07. 3 years Supervised Release with special conditions; $100.00 Special Assessment. Counts I through IV of the Indictment are dismissed on the motion of the government as to this defendant only as to defendant Kelly W. Peters. Ordered by Judge Joseph F. Bataillon. - (4 certified copies to the USM)(KBJ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00400-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18175010f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-4</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00400_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00400/pdf/USCOURTS-ned-8_06-cr-00400-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00400; USA v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00400-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-08-08</dateIssued>
+  <docketText>JUDGMENT as to Kelly W. Peters. The defendant plead guilty to Count V of the Indictment and is sentenced to the custody of the Bureau of Prisons for 34 months, the sentence is adjusted by 3 months pursuant to 5G1.3(b) order to provide credit for the time spent in state custody from 10/4/06 through 12/21/06; and shall surrender for service at the institution designated by the Bureau of Prisons on or after 11/6/07. 3 years Supervised Release with special conditions; $100.00 Special Assessment. Counts I through IV of the Indictment are dismissed on the motion of the government as to this defendant only as to defendant Kelly W. Peters. Ordered by Judge Joseph F. Bataillon. - (4 certified copies to the USM)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00400-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters et al</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITURE - the United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 63 is hereby sustained. The United States Marshal for the District of Nebraska (&quot;Marshal&quot;) is hereby authorized to seize $4,639.00 in US currency and the Taurus PT 145.45 caliber pistol, serial no. NY135361. The Defendant&apos;s interest in said properties is hereby forfeited to the United States of America for disposition in accordance with the law. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture in which all interests will be addressed as to defendant Anuar Nunez. Ordered by Judge Joseph F. Bataillon. - (2 certified copies to the USM)(KBJ)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00400-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750115</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-5</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00400_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00400/pdf/USCOURTS-ned-8_06-cr-00400-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00400; USA v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00400-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-09-27</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITURE - the United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 63 is hereby sustained. The United States Marshal for the District of Nebraska (&quot;Marshal&quot;) is hereby authorized to seize $4,639.00 in US currency and the Taurus PT 145.45 caliber pistol, serial no. NY135361. The Defendant&apos;s interest in said properties is hereby forfeited to the United States of America for disposition in accordance with the law. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture in which all interests will be addressed as to defendant Anuar Nunez. Ordered by Judge Joseph F. Bataillon. - (2 certified copies to the USM)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00400-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters et al</title>
+  <subTitle>AMENDED JUDGMENT (Reduction of Sentence) as to Kelly W. Peters. The defendant plead guilty to Count V of the Indictment and is sentenced to the custody of the Bureau of Prisons for twelve (12) months and one (1) day with credit for time served from 10/4/06 - 12/20/06. 3 years Supervised Release with special conditions; $100.00 Special Assessment due and payable. Counts I through IV of the Indictment are dismissed on the motion of the government as to this defendant only. The defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons as notified by the United States Marshal on or after 11/6/07 as to defendant Kelly W. Peters. Ordered by Judge Joseph F. Bataillon. (4 Certified copies to USM)(KBJ)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00400-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181750112</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-6</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00400_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00400/pdf/USCOURTS-ned-8_06-cr-00400-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00400; USA v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00400-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-10-22</dateIssued>
+  <docketText>AMENDED JUDGMENT (Reduction of Sentence) as to Kelly W. Peters. The defendant plead guilty to Count V of the Indictment and is sentenced to the custody of the Bureau of Prisons for twelve (12) months and one (1) day with credit for time served from 10/4/06 - 12/20/06. 3 years Supervised Release with special conditions; $100.00 Special Assessment due and payable. Counts I through IV of the Indictment are dismissed on the motion of the government as to this defendant only. The defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons as notified by the United States Marshal on or after 11/6/07 as to defendant Kelly W. Peters. Ordered by Judge Joseph F. Bataillon. (4 Certified copies to USM)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00400-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters et al</title>
+  <subTitle>FINAL ORDER OF FORFEITURE granting 75 Motion for Final Forfeiture as to Anuar Nunez (2). The $4,639.00 in United States currency and a Taurus PT 145.45 caliber pistol, serial no. NY135361, be, and the same hereby are, forfeited to the United States of America. The United States Marshals Service for the District of Nebraska is directed to dispose of said properties in accordance with law. Ordered by Chief Judge Joseph F. Bataillon. (1 Certified copy to USM)( ADB, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00400-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817501e5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-7</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00400_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00400/pdf/USCOURTS-ned-8_06-cr-00400-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00400; USA v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00400-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2007-12-11</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE granting 75 Motion for Final Forfeiture as to Anuar Nunez (2). The $4,639.00 in United States currency and a Taurus PT 145.45 caliber pistol, serial no. NY135361, be, and the same hereby are, forfeited to the United States of America. The United States Marshals Service for the District of Nebraska is directed to dispose of said properties in accordance with law. Ordered by Chief Judge Joseph F. Bataillon. (1 Certified copy to USM)( ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00400-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters et al</title>
+  <subTitle>JUDGMENT as to Anuar Nunez. The defendant plead guilty to Counts I, VII, VIII, and IX of the Indictment and is sentenced to the custody of the Bureau of Prisons for 120 months on Count I and 60 months on Count VII to be served consecutive; and shall be given credit for time served from 1/5/07. Supervised Release of 5 years on Count I and 5 years on Count VII to be run concurrently with special conditions; $200.00 Special Assessment due and payable immediately. Count VI of the Indictment is dismissed on the motion of the government as to this defendant only. Final Order of Forfeiture filed on 12/11/07 as to Counts VIII and IX as to defendant Anuar Nunez. Ordered by Chief Judge Joseph F. Bataillon.(4 Certified copies to USM)(KBJ)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00400-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817501e4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-8</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00400_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00400/USCOURTS-ned-8_06-cr-00400-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00400/pdf/USCOURTS-ned-8_06-cr-00400-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00400; USA v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00400-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-01-08</dateIssued>
+  <docketText>JUDGMENT as to Anuar Nunez. The defendant plead guilty to Counts I, VII, VIII, and IX of the Indictment and is sentenced to the custody of the Bureau of Prisons for 120 months on Count I and 60 months on Count VII to be served consecutive; and shall be given credit for time served from 1/5/07. Supervised Release of 5 years on Count I and 5 years on Count VII to be run concurrently with special conditions; $200.00 Special Assessment due and payable immediately. Count VI of the Indictment is dismissed on the motion of the government as to this defendant only. Final Order of Forfeiture filed on 12/11/07 as to Counts VIII and IX as to defendant Anuar Nunez. Ordered by Chief Judge Joseph F. Bataillon.(4 Certified copies to USM)(KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,161 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8988e8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Illinois</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ilnd-1_14-cv-03306</identifier>
+<identifier type="local">P0b002ee18a8988e8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ilnd-1_14-cv-03306</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ilnd-1_14-cv-03306</accessId>
+ <courtType>District</courtType>
+ <courtCode>ilnd</courtCode>
+ <courtCircuit>7th</courtCircuit>
+ <courtState>Illinois</courtState>
+ <courtSortOrder>2162</courtSortOrder>
+ <caseNumber>1:14-cv-03306</caseNumber>
+ <caseOffice>Chicago</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>480</natureSuitCode>
+ <natureSuit>Consumer Credit</natureSuit>
+ <cause>15:1692 Fair Debt Collection Act</cause>
+ <party firstName="Melissa" fullName="Melissa Calvillo" lastName="Calvillo" role="Plaintiff"></party>
+ <party fullName="Midland Credit Management, Inc" lastName="Midland Credit Management, Inc" role="Defendant"></party>
+ <party fullName="Midland Funding LLC" lastName="Midland Funding LLC" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Calvillo v. Midland Funding LLC et al</title>
+ <partNumber>1:14-cv-03306</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ilnd-1_14-cv-03306/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-03306;14-3306</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Illinois</namePart>
+ <namePart>7th Circuit</namePart>
+ <namePart>Chicago</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Melissa Calvillo</displayForm>
+ <namePart type="family">Calvillo</namePart>
+ <namePart type="given">Melissa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Midland Credit Management, Inc</displayForm>
+ <namePart type="family">Midland Credit Management, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Midland Funding LLC</displayForm>
+ <namePart type="family">Midland Funding LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ilnd-1_14-cv-03306</accessId>
+ <courtType>District</courtType>
+ <courtCode>ilnd</courtCode>
+ <courtCircuit>7th</courtCircuit>
+ <courtState>Illinois</courtState>
+ <courtSortOrder>2162</courtSortOrder>
+ <caseNumber>1:14-cv-03306</caseNumber>
+ <caseOffice>Chicago</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>480</natureSuitCode>
+ <natureSuit>Consumer Credit</natureSuit>
+ <cause>15:1692 Fair Debt Collection Act</cause>
+ <party firstName="Melissa" fullName="Melissa Calvillo" lastName="Calvillo" role="Plaintiff"></party>
+ <party fullName="Midland Credit Management, Inc" lastName="Midland Credit Management, Inc" role="Defendant"></party>
+ <party fullName="Midland Funding LLC" lastName="Midland Funding LLC" role="Defendant"></party>
+ <state>Illinois</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ilnd-1_14-cv-03306-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ilnd-1_14-cv-03306/USCOURTS-ilnd-1_14-cv-03306-0/mods.xml">
+ <titleInfo>
+  <title>Calvillo v. Midland Funding LLC et al</title>
+  <subTitle>MOTION by Plaintiff Melissa Calvillo for judgment on reasonable attorneys fees and costs (Attachments: # (1) Exhibit)(Thompson, Bryan)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ilnd-1_14-cv-03306/pdf/USCOURTS-ilnd-1_14-cv-03306-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a89de87</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ilnd-1_14-cv-03306/USCOURTS-ilnd-1_14-cv-03306-0</identifier>
+ <identifier type="former granule identifier">ilnd-1_14-cv-03306_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ilnd-1_14-cv-03306/USCOURTS-ilnd-1_14-cv-03306-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ilnd-1_14-cv-03306/pdf/USCOURTS-ilnd-1_14-cv-03306-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-03306; Calvillo v. Midland Funding LLC et al; </searchTitle>
+  <courtName>United States District Court Northern District of Illinois</courtName>
+  <state>Illinois</state>
+  <accessId>USCOURTS-ilnd-1_14-cv-03306-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-02</dateIssued>
+  <docketText>MOTION by Plaintiff Melissa Calvillo for judgment on reasonable attorneys fees and costs (Attachments: # (1) Exhibit)(Thompson, Bryan)</docketText>
+</extension>
+</relatedItem>
+</mods>

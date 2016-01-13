@@ -1,0 +1,160 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a4aab1c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Tenth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-13-01498</identifier>
+<identifier type="local">P0b002ee18a4aab1c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca10-13-01498</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca10-13-01498</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca10</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtSortOrder>1100</courtSortOrder>
+ <caseNumber>13-01498</caseNumber>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party firstName="D." fullName="D. Berkebile" lastName="Berkebile" role="Appellee"></party>
+ <party fullName="Hewitt" lastName="Hewitt" role="Appellee"></party>
+ <party firstName="Patricia" fullName="Patricia Rangel" lastName="Rangel" role="Appellee"></party>
+ <party firstName="Mikeal" fullName="Mikeal G. Stine" lastName="Stine" middleName="G." role="Appellant"></party>
+</extension>
+<titleInfo>
+ <title>Stine v. Berkebile, et al</title>
+ <partNumber>13-01498</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-13-01498/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">13-01498;13-1498</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Tenth Circuit</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>D. Berkebile</displayForm>
+ <namePart type="family">Berkebile</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Hewitt</displayForm>
+ <namePart type="family">Hewitt</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Patricia Rangel</displayForm>
+ <namePart type="family">Rangel</namePart>
+ <namePart type="given">Patricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Mikeal G. Stine</displayForm>
+ <namePart type="family">Stine</namePart>
+ <namePart type="given">Mikeal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca10-13-01498</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca10</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtSortOrder>1100</courtSortOrder>
+ <caseNumber>13-01498</caseNumber>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party firstName="D." fullName="D. Berkebile" lastName="Berkebile" role="Appellee"></party>
+ <party fullName="Hewitt" lastName="Hewitt" role="Appellee"></party>
+ <party firstName="Patricia" fullName="Patricia Rangel" lastName="Rangel" role="Appellee"></party>
+ <party firstName="Mikeal" fullName="Mikeal G. Stine" lastName="Stine" middleName="G." role="Appellant"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca10-13-01498-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-13-01498/USCOURTS-ca10-13-01498-0/mods.xml">
+ <titleInfo>
+  <title>Stine v. Berkebile, et al</title>
+  <subTitle>[10137371] Default;Procedural termination without judicial action;Clerk of the Court. [13-1498]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-13-01498/pdf/USCOURTS-ca10-13-01498-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a4b20cd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-13-01498/USCOURTS-ca10-13-01498-0</identifier>
+ <identifier type="former granule identifier">ca10-13-01498_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-13-01498/USCOURTS-ca10-13-01498-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-13-01498/pdf/USCOURTS-ca10-13-01498-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 13-01498; Stine v. Berkebile, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Tenth Circuit</courtName>
+  <accessId>USCOURTS-ca10-13-01498-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>[10137371] Default;Procedural termination without judicial action;Clerk of the Court. [13-1498]</docketText>
+</extension>
+</relatedItem>
+</mods>

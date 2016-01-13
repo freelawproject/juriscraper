@@ -1,0 +1,515 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c9b3988">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-06-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-06-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127</identifier>
+<identifier type="local">P0b002ee18c9b3988</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-06-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-06-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cv-00127</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00127</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00127</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Chief Jerry Dyer" lastName="Chief Jerry Dyer" role="Defendant"></party>
+ <party fullName="City Of Fresno" lastName="City Of Fresno" role="Defendant"></party>
+ <party firstName="Sergeant Larry" fullName="Sergeant Larry Hustedde" lastName="Hustedde" role="Defendant"></party>
+ <party firstName="Officer Jeffrey" fullName="Officer Jeffrey Kaiser" lastName="Kaiser" role="Defendant"></party>
+ <party firstName="Idalia" fullName="Idalia J. Morgutia-Johnson" lastName="Morgutia-Johnson" middleName="J." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Morgutia-Johnson v. City Of Fresno et al</title>
+ <partNumber>1:14-cv-00127</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-00127;14-127</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Chief Jerry Dyer</displayForm>
+ <namePart type="family">Chief Jerry Dyer</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>City Of Fresno</displayForm>
+ <namePart type="family">City Of Fresno</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sergeant Larry Hustedde</displayForm>
+ <namePart type="family">Hustedde</namePart>
+ <namePart type="given">Sergeant Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Officer Jeffrey Kaiser</displayForm>
+ <namePart type="family">Kaiser</namePart>
+ <namePart type="given">Officer Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Idalia J. Morgutia-Johnson</displayForm>
+ <namePart type="family">Morgutia-Johnson</namePart>
+ <namePart type="given">Idalia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00127</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00127</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Chief Jerry Dyer" lastName="Chief Jerry Dyer" role="Defendant"></party>
+ <party fullName="City Of Fresno" lastName="City Of Fresno" role="Defendant"></party>
+ <party firstName="Sergeant Larry" fullName="Sergeant Larry Hustedde" lastName="Hustedde" role="Defendant"></party>
+ <party firstName="Officer Jeffrey" fullName="Officer Jeffrey Kaiser" lastName="Kaiser" role="Defendant"></party>
+ <party firstName="Idalia" fullName="Idalia J. Morgutia-Johnson" lastName="Morgutia-Johnson" middleName="J." role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-0/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>ORDER GRANTING Request for Stipulated Protective Order. The Stipulation for Entry of Protective Order Regarding Confidential Documents (Doc. 15, Stipulation) is hereby incorporated into this Order; and the Court retains jurisdiction over the confidentiality obligations imposed by the Stipulation and this Order until final disposition of this case, as defined in the Stipulation (Doc. 15, paragraph 5) and Section 10 above. Order signed by Magistrate Judge Sheila K. Oberto on 5/8/2014. (Timken, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3d8e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-05-08</dateIssued>
+  <docketText>ORDER GRANTING Request for Stipulated Protective Order. The Stipulation for Entry of Protective Order Regarding Confidential Documents (Doc. 15, Stipulation) is hereby incorporated into this Order; and the Court retains jurisdiction over the confidentiality obligations imposed by the Stipulation and this Order until final disposition of this case, as defined in the Stipulation (Doc. 15, paragraph 5) and Section 10 above. Order signed by Magistrate Judge Sheila K. Oberto on 5/8/2014. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-1/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>SCHEDULING ORDER (Fed. R. Civ. P 16), signed by Magistrate Judge Sheila K. Oberto on 5/9/2014. (Initial Disclosures: 6/20/2014, Expert Disclosures: 1/16/2015, Rebuttal Disclosures: 1/30/2015, Non Expert Discovery: 12/19/2014, Expert Discovery: 2/20/2015, Non-Dispositive Motions to be filed by: 2/20/2015, Non-Dispositive Motions to be heard on or before: 3/25/2015, Dispositive Motions to be filed by: 2/27/2015, Dispositive Motions to be heard on or before: 4/2/2015, Settlement Conference set for 4/13/2015, at 10:30 AM in Courtroom 9 (SAB) before Magistrate Judge Stanley A. Boone, Pretrial Conference set for 5/7/2015, at 08:15 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill, and Jury Trial (7-10 Days) set for 6/9/2015, at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill.) (Gaumnitz, R)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3d93</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-05-12</dateIssued>
+  <docketText>SCHEDULING ORDER (Fed. R. Civ. P 16), signed by Magistrate Judge Sheila K. Oberto on 5/9/2014. (Initial Disclosures: 6/20/2014, Expert Disclosures: 1/16/2015, Rebuttal Disclosures: 1/30/2015, Non Expert Discovery: 12/19/2014, Expert Discovery: 2/20/2015, Non-Dispositive Motions to be filed by: 2/20/2015, Non-Dispositive Motions to be heard on or before: 3/25/2015, Dispositive Motions to be filed by: 2/27/2015, Dispositive Motions to be heard on or before: 4/2/2015, Settlement Conference set for 4/13/2015, at 10:30 AM in Courtroom 9 (SAB) before Magistrate Judge Stanley A. Boone, Pretrial Conference set for 5/7/2015, at 08:15 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill, and Jury Trial (7-10 Days) set for 6/9/2015, at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-2/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>STIPULATION and ORDER CONTINUING and RESETTING CASE MANAGEMENT DATES AND DEADLINES. The parties do not provide good cause for a wholesale modification to the scheduling order, particularly the trial date. A modification to the deadlines that can be adjusted without affecting the trial date will be permitted. The Court hereby orders that the Court&apos;s scheduling order of May 12, 2014, is hereby modified as follows: Non-Expert Discovery Deadline: 1/5/2015; Expert Disclosures: 2/4/2015; Rebuttal-Supplemental Expert Disclosures: 2/18/2015; Expert Discovery Deadline: 3/11/2015; Non-Dispositive Motion Filing Deadline: 3/11/2015; Non-Dispositive Motion Hearing Deadline: 4/8/2015; Dispositive Motion (MSJ) Filing Deadline: 3/18/2015; Dispositive Motion (MSJ) Hearing Deadline: 4/15/2015. Settlement Conference: No Modification. Final Pre-Trial Conference: 5/13/2015, at 08:15 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill. Trial: No Modification. Nothing in this Order shall be construed as vacating, rescinding, amending or modifying (in whole or in part) the Court&apos;s operative protective order re confidential documents 27. Order signed by Magistrate Judge Sheila K. Oberto on 11/6/2014. (Timken, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3d8f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-11-06</dateIssued>
+  <docketText>STIPULATION and ORDER CONTINUING and RESETTING CASE MANAGEMENT DATES AND DEADLINES. The parties do not provide good cause for a wholesale modification to the scheduling order, particularly the trial date. A modification to the deadlines that can be adjusted without affecting the trial date will be permitted. The Court hereby orders that the Court&apos;s scheduling order of May 12, 2014, is hereby modified as follows: Non-Expert Discovery Deadline: 1/5/2015; Expert Disclosures: 2/4/2015; Rebuttal-Supplemental Expert Disclosures: 2/18/2015; Expert Discovery Deadline: 3/11/2015; Non-Dispositive Motion Filing Deadline: 3/11/2015; Non-Dispositive Motion Hearing Deadline: 4/8/2015; Dispositive Motion (MSJ) Filing Deadline: 3/18/2015; Dispositive Motion (MSJ) Hearing Deadline: 4/15/2015. Settlement Conference: No Modification. Final Pre-Trial Conference: 5/13/2015, at 08:15 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill. Trial: No Modification. Nothing in this Order shall be construed as vacating, rescinding, amending or modifying (in whole or in part) the Court&apos;s operative protective order re confidential documents 27. Order signed by Magistrate Judge Sheila K. Oberto on 11/6/2014. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-3/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>STIPULATION and ORDER RESETTING Non-Expert Discovery and Expert Disclosure Deadline Dates. Non-Expert Discovery Deadline: 1/26/2015; Expert Disclosures Deadline: 1/26/2015. Order signed by Magistrate Judge Sheila K. Oberto on 1/6/2015. (Timken, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3d94</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-3</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>STIPULATION and ORDER RESETTING Non-Expert Discovery and Expert Disclosure Deadline Dates. Non-Expert Discovery Deadline: 1/26/2015; Expert Disclosures Deadline: 1/26/2015. Order signed by Magistrate Judge Sheila K. Oberto on 1/6/2015. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-4/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>ORDER re JOINT STIPULATION TO EXTEND EXPERT DESIGNATION AND EXPERT DISCOVERY CUTOFF. The following dates are extended as follows: Expert Designation: 2/18/2015; Rebuttal-Supplemental Expert Designation: 3/4/2015; Expert Discovery Cutoff: 3/18/2015. Order signed by Magistrate Judge Sheila K. Oberto on 1/30/2015. (Timken, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3dac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-4</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-01-30</dateIssued>
+  <docketText>ORDER re JOINT STIPULATION TO EXTEND EXPERT DESIGNATION AND EXPERT DISCOVERY CUTOFF. The following dates are extended as follows: Expert Designation: 2/18/2015; Rebuttal-Supplemental Expert Designation: 3/4/2015; Expert Discovery Cutoff: 3/18/2015. Order signed by Magistrate Judge Sheila K. Oberto on 1/30/2015. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-5/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>ORDER that TASHA COLE Appear on 3/18/2015 to Show Cause Why She Should Not Be Held in Contempt for Failure to Comply witha Subopena to Appear for a Deposition. Defendants&apos; application for an order to show cause is GRANTED; Ms. Cole is ORDERED to appear before the undersigned on March 18, 2015, at 9:30 a.m. in Courtroom 7, 6th Floor, United States District Court, 2500 Tulare Street, Fresno, California, 93721 to SHOW CAUSE why she should not be held in contempt for her failure to comply with the subpoena and appear for her deposition; Failure to comply with this order to show cause may subject Ms. Cole to contempt sanctions, including monetary sanctions; and Defendants are directed to effect service of this order on Tasha Cole by no later than March 11, 2015, and to file proof of service of this order by no later than March 16, 2015. Order signed by Magistrate Judge Sheila K. Oberto on 3/9/2015. (Timken, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3dad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-5</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-03-09</dateIssued>
+  <docketText>ORDER that TASHA COLE Appear on 3/18/2015 to Show Cause Why She Should Not Be Held in Contempt for Failure to Comply witha Subopena to Appear for a Deposition. Defendants&apos; application for an order to show cause is GRANTED; Ms. Cole is ORDERED to appear before the undersigned on March 18, 2015, at 9:30 a.m. in Courtroom 7, 6th Floor, United States District Court, 2500 Tulare Street, Fresno, California, 93721 to SHOW CAUSE why she should not be held in contempt for her failure to comply with the subpoena and appear for her deposition; Failure to comply with this order to show cause may subject Ms. Cole to contempt sanctions, including monetary sanctions; and Defendants are directed to effect service of this order on Tasha Cole by no later than March 11, 2015, and to file proof of service of this order by no later than March 16, 2015. Order signed by Magistrate Judge Sheila K. Oberto on 3/9/2015. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-6/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>ORDER re Joint Stipulation to Dismiss Entire Action Against Defendants City Of Fresno and Chief Jerry Dyer ONLY, signed by District Judge Lawrence J. O&apos;Neill on 3/9/2015. (Marrujo, C)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3d92</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-6</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-03-10</dateIssued>
+  <docketText>ORDER re Joint Stipulation to Dismiss Entire Action Against Defendants City Of Fresno and Chief Jerry Dyer ONLY, signed by District Judge Lawrence J. O&apos;Neill on 3/9/2015. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-7/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>STIPULATION and ORDER to Extend Expert Discovery Cut-Off. Expert Discovery Deadline Extended to 4/17/2015. Order signed by Magistrate Judge Sheila K. Oberto on 3/23/2015. (Timken, A)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3d8d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-7</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-03-23</dateIssued>
+  <docketText>STIPULATION and ORDER to Extend Expert Discovery Cut-Off. Expert Discovery Deadline Extended to 4/17/2015. Order signed by Magistrate Judge Sheila K. Oberto on 3/23/2015. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-8/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>ORDER DISCHARGING March 9, 2015 Order to Show Cause re Contempt, 34. Order signed by Magistrate Judge Sheila K. Oberto on 3/24/2015. (Timken, A)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3d96</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-8</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-03-24</dateIssued>
+  <docketText>ORDER DISCHARGING March 9, 2015 Order to Show Cause re Contempt, 34. Order signed by Magistrate Judge Sheila K. Oberto on 3/24/2015. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-9/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>ORDER CONTINUING and RESETTING Expert Discovery Deadline Date. The Expert Discovery Deadline currently set for 4/17/2015, is CONTINUED to 5/1/2015. Order signed by Magistrate Judge Sheila K. Oberto on 4/8/2015. (Timken, A)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3d3a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-9</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2015-04-08</dateIssued>
+  <docketText>ORDER CONTINUING and RESETTING Expert Discovery Deadline Date. The Expert Discovery Deadline currently set for 4/17/2015, is CONTINUED to 5/1/2015. Order signed by Magistrate Judge Sheila K. Oberto on 4/8/2015. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-10/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>MEMORANDUM DECISION and ORDER re Defendants&apos; 37 Motion for Summary Judgment, signed by District Judge Lawrence J. O&apos;Neill on 4/23/15. (Verduzco, M)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3d95</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-10</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2015-04-24</dateIssued>
+  <docketText>MEMORANDUM DECISION and ORDER re Defendants&apos; 37 Motion for Summary Judgment, signed by District Judge Lawrence J. O&apos;Neill on 4/23/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-11/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>ORDER SETTING SETTLEMENT CONFERENCE, signed by Magistrate Judge Jennifer L. Thurston on 5/12/2015. Settlement Conference set for 5/27/2015 at 10:00 AM in Bakersfield at 510 19th Street (JLT) before Magistrate Judge Jennifer L. Thurston. (Hall, S)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3d90</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-11</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2015-05-21</dateIssued>
+  <docketText>ORDER SETTING SETTLEMENT CONFERENCE, signed by Magistrate Judge Jennifer L. Thurston on 5/12/2015. Settlement Conference set for 5/27/2015 at 10:00 AM in Bakersfield at 510 19th Street (JLT) before Magistrate Judge Jennifer L. Thurston. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00127-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-12/mods.xml">
+ <titleInfo>
+  <title>Morgutia-Johnson v. City Of Fresno et al</title>
+  <subTitle>ORDER ON PARTIES MOTIONS IN LIMINE signed by District Judge Lawrence J. O&apos;Neill on June 3, 2015. (Munoz, I)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c9c3d91</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-12</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00127_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00127/USCOURTS-caed-1_14-cv-00127-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00127/pdf/USCOURTS-caed-1_14-cv-00127-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00127; Morgutia-Johnson v. City Of Fresno et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00127-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2015-06-03</dateIssued>
+  <docketText>ORDER ON PARTIES MOTIONS IN LIMINE signed by District Judge Lawrence J. O&apos;Neill on June 3, 2015. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+</mods>

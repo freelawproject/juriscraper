@@ -1,0 +1,147 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814c163c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Second Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca2-10-03258</identifier>
+<identifier type="local">P0b002ee1814c163c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca2-10-03258</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca2-10-03258</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca2</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtSortOrder>1020</courtSortOrder>
+ <caseNumber>10-03258</caseNumber>
+ <party firstName="Ronald" fullName="Ronald Anderson" lastName="Anderson" role="Appellant"></party>
+ <party firstName="Derek" fullName="Derek Andre English" lastName="English" middleName="Andre" role="Appellant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Appellee USA"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. English</title>
+ <partNumber>10-03258</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca2-10-03258/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">10-03258;10-3258</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Second Circuit</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ronald Anderson</displayForm>
+ <namePart type="family">Anderson</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Derek Andre English</displayForm>
+ <namePart type="family">English</namePart>
+ <namePart type="given">Derek</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee USA</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca2-10-03258</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca2</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtSortOrder>1020</courtSortOrder>
+ <caseNumber>10-03258</caseNumber>
+ <party firstName="Ronald" fullName="Ronald Anderson" lastName="Anderson" role="Appellant"></party>
+ <party firstName="Derek" fullName="Derek Andre English" lastName="English" middleName="Andre" role="Appellant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Appellee USA"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca2-10-03258-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca2-10-03258/USCOURTS-ca2-10-03258-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. English</title>
+  <subTitle>OPINION, affirmed, by ALK, RKW, PWH, FILED.[190419] [10-3258, 10-4045]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca2-10-03258-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181530acf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca2-10-03258/USCOURTS-ca2-10-03258-0</identifier>
+ <identifier type="former granule identifier">ca2-10-03258_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca2-10-03258/USCOURTS-ca2-10-03258-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca2-10-03258/pdf/USCOURTS-ca2-10-03258-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 10-03258; United States of America v. English; </searchTitle>
+  <courtName>United States Court of Appeals for the Second Circuit</courtName>
+  <accessId>USCOURTS-ca2-10-03258-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>OPINION, affirmed, by ALK, RKW, PWH, FILED.[190419] [10-3258, 10-4045]</docketText>
+</extension>
+</relatedItem>
+</mods>

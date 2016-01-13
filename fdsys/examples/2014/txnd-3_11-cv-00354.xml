@@ -1,0 +1,234 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c6896a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_11-cv-00354</identifier>
+<identifier type="local">P0b002ee186c6896a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-3_11-cv-00354</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_11-cv-00354</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:11-cv-00354</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>31:3729 False Claims Act</cause>
+ <party fullName="City of Dallas" lastName="City of Dallas" role="Defendant"></party>
+ <party fullName="Dallas County Health and Human Services" lastName="Dallas County Health and Human Services" role="Defendant"></party>
+ <party fullName="Dallas County Housing Agency" lastName="Dallas County Housing Agency" role="Defendant"></party>
+ <party fullName="Dallas County, Texas" lastName="Dallas County, Texas" role="Defendant"></party>
+ <party fullName="Dallas Housing Authority" lastName="Dallas Housing Authority" role="Defendant"></party>
+ <party firstName="Curtis" fullName="Curtis Lockey" lastName="Lockey" role="Plaintiff"></party>
+ <party firstName="Craig" fullName="Craig MacKenzie" lastName="MacKenzie" role="Plaintiff"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Lockey et al v. City of Dallas, Texas et al</title>
+ <partNumber>3:11-cv-00354</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_11-cv-00354/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:11-cv-00354;11-354</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Dallas</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>City of Dallas</displayForm>
+ <namePart type="family">City of Dallas</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dallas County Health and Human Services</displayForm>
+ <namePart type="family">Dallas County Health and Human Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dallas County Housing Agency</displayForm>
+ <namePart type="family">Dallas County Housing Agency</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dallas County, Texas</displayForm>
+ <namePart type="family">Dallas County, Texas</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dallas Housing Authority</displayForm>
+ <namePart type="family">Dallas Housing Authority</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Curtis Lockey</displayForm>
+ <namePart type="family">Lockey</namePart>
+ <namePart type="given">Curtis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Craig MacKenzie</displayForm>
+ <namePart type="family">MacKenzie</namePart>
+ <namePart type="given">Craig</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_11-cv-00354</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:11-cv-00354</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>31:3729 False Claims Act</cause>
+ <party fullName="City of Dallas" lastName="City of Dallas" role="Defendant"></party>
+ <party fullName="Dallas County Health and Human Services" lastName="Dallas County Health and Human Services" role="Defendant"></party>
+ <party fullName="Dallas County Housing Agency" lastName="Dallas County Housing Agency" role="Defendant"></party>
+ <party fullName="Dallas County, Texas" lastName="Dallas County, Texas" role="Defendant"></party>
+ <party fullName="Dallas Housing Authority" lastName="Dallas Housing Authority" role="Defendant"></party>
+ <party firstName="Curtis" fullName="Curtis Lockey" lastName="Lockey" role="Plaintiff"></party>
+ <party firstName="Craig" fullName="Craig MacKenzie" lastName="MacKenzie" role="Plaintiff"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_11-cv-00354-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_11-cv-00354/USCOURTS-txnd-3_11-cv-00354-0/mods.xml">
+ <titleInfo>
+  <title>Lockey et al v. City of Dallas, Texas et al</title>
+  <subTitle>Memorandum Opinion and Order: City&apos;s motion to dismiss for lack of jurisdiction is granted. DHA&apos;s motion to dismiss is granted in part and denied in part. (Ordered by Judge Reed C O&apos;Connor on 1/23/2013) (svc)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_11-cv-00354-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c726e8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_11-cv-00354/USCOURTS-txnd-3_11-cv-00354-0</identifier>
+ <identifier type="former granule identifier">txnd-3_11-cv-00354_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_11-cv-00354/USCOURTS-txnd-3_11-cv-00354-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_11-cv-00354/pdf/USCOURTS-txnd-3_11-cv-00354-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:11-cv-00354; Lockey et al v. City of Dallas, Texas et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_11-cv-00354-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-23</dateIssued>
+  <docketText>Memorandum Opinion and Order: City&apos;s motion to dismiss for lack of jurisdiction is granted. DHA&apos;s motion to dismiss is granted in part and denied in part. (Ordered by Judge Reed C O&apos;Connor on 1/23/2013) (svc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_11-cv-00354-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_11-cv-00354/USCOURTS-txnd-3_11-cv-00354-1/mods.xml">
+ <titleInfo>
+  <title>Lockey et al v. City of Dallas, Texas et al</title>
+  <subTitle>Memorandum Opinion and Order Denying 146 Motion to Alter Judgment and Request for Expedited Indicative Ruling under Rule 62.1, filed by Craig MacKenzie, Curtis Lockey. The Court concludes that Relators have not met their burden to merit relief from judgment based on newly discovered evidence. (Ordered by Judge Reed C O&apos;Connor on 1/6/2014) (cea)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_11-cv-00354-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c726e7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_11-cv-00354/USCOURTS-txnd-3_11-cv-00354-1</identifier>
+ <identifier type="former granule identifier">txnd-3_11-cv-00354_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_11-cv-00354/USCOURTS-txnd-3_11-cv-00354-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_11-cv-00354/pdf/USCOURTS-txnd-3_11-cv-00354-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:11-cv-00354; Lockey et al v. City of Dallas, Texas et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_11-cv-00354-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>Memorandum Opinion and Order Denying 146 Motion to Alter Judgment and Request for Expedited Indicative Ruling under Rule 62.1, filed by Craig MacKenzie, Curtis Lockey. The Court concludes that Relators have not met their burden to merit relief from judgment based on newly discovered evidence. (Ordered by Judge Reed C O&apos;Connor on 1/6/2014) (cea)</docketText>
+</extension>
+</relatedItem>
+</mods>

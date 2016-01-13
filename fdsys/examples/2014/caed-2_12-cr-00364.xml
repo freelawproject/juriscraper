@@ -1,0 +1,901 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a3179b1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-10-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364</identifier>
+<identifier type="local">P0b002ee18a3179b1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cr-00364</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cr-00364</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cr-00364</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Theresa" fullName="Theresa Helena Campbell" lastName="Campbell" middleName="Helena" role="Defendant"></party>
+ <party firstName="Simeon" fullName="Simeon Shawnise Gregory" lastName="Gregory" middleName="Shawnise" role="Defendant"></party>
+ <party firstName="Terrance" fullName="Terrance Rychan Smalls" lastName="Smalls" middleName="Rychan" role="Defendant"></party>
+ <party firstName="Sarah" fullName="Sarah Elizabeth Trout" lastName="Trout" middleName="Elizabeth" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Gregory et al</title>
+ <partNumber>2:12-cr-00364</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cr-00364;12-364</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Theresa Helena Campbell</displayForm>
+ <namePart type="family">Campbell</namePart>
+ <namePart type="given">Theresa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Simeon Shawnise Gregory</displayForm>
+ <namePart type="family">Gregory</namePart>
+ <namePart type="given">Simeon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terrance Rychan Smalls</displayForm>
+ <namePart type="family">Smalls</namePart>
+ <namePart type="given">Terrance</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sarah Elizabeth Trout</displayForm>
+ <namePart type="family">Trout</namePart>
+ <namePart type="given">Sarah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cr-00364</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cr-00364</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Theresa" fullName="Theresa Helena Campbell" lastName="Campbell" middleName="Helena" role="Defendant"></party>
+ <party firstName="Simeon" fullName="Simeon Shawnise Gregory" lastName="Gregory" middleName="Shawnise" role="Defendant"></party>
+ <party firstName="Terrance" fullName="Terrance Rychan Smalls" lastName="Smalls" middleName="Rychan" role="Defendant"></party>
+ <party firstName="Sarah" fullName="Sarah Elizabeth Trout" lastName="Trout" middleName="Elizabeth" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>ORDER TO SEAL as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12. (Matson, R)ORDER TO SEAL as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12. (Matson, R)ORDER TO SEAL as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12. (Matson, R)ORDER TO SEAL as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12. (Matson, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c2f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-10-11</dateIssued>
+  <docketText>ORDER TO SEAL as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12. (Matson, R)ORDER TO SEAL as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12. (Matson, R)ORDER TO SEAL as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12. (Matson, R)ORDER TO SEAL as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>SEALING ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12 ORDERING this matter shall be sealed until the arrest of the defendant or until further order of the Court. (Matson, R)SEALING ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12 ORDERING this matter shall be sealed until the arrest of the defendant or until further order of the Court. (Matson, R)SEALING ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12 ORDERING this matter shall be sealed until the arrest of the defendant or until further order of the Court. (Matson, R)SEALING ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12 ORDERING this matter shall be sealed until the arrest of the defendant or until further order of the Court. (Matson, R)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c2f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-10-11</dateIssued>
+  <docketText>SEALING ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12 ORDERING this matter shall be sealed until the arrest of the defendant or until further order of the Court. (Matson, R)SEALING ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12 ORDERING this matter shall be sealed until the arrest of the defendant or until further order of the Court. (Matson, R)SEALING ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12 ORDERING this matter shall be sealed until the arrest of the defendant or until further order of the Court. (Matson, R)SEALING ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/11/12 ORDERING this matter shall be sealed until the arrest of the defendant or until further order of the Court. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/16/2012 GRANTING the government&apos;s Request to Unseal the Indictment. (Michel, G)ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/16/2012 GRANTING the government&apos;s Request to Unseal the Indictment. (Michel, G)ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/16/2012 GRANTING the government&apos;s Request to Unseal the Indictment. (Michel, G)ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/16/2012 GRANTING the government&apos;s Request to Unseal the Indictment. (Michel, G)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c323</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-10-16</dateIssued>
+  <docketText>ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/16/2012 GRANTING the government&apos;s Request to Unseal the Indictment. (Michel, G)ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/16/2012 GRANTING the government&apos;s Request to Unseal the Indictment. (Michel, G)ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/16/2012 GRANTING the government&apos;s Request to Unseal the Indictment. (Michel, G)ORDER as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, Terrance Rychan Smalls signed by Magistrate Judge Edmund F. Brennan on 10/16/2012 GRANTING the government&apos;s Request to Unseal the Indictment. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>DETENTION ORDER as to Theresa Helena Campbell signed by Magistrate Judge Dale A. Drozd on 11/1/2012. (Zignago, K.) Modified on 5/23/2013 (Donati, J).</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c2f5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-11-01</dateIssued>
+  <docketText>DETENTION ORDER as to Theresa Helena Campbell signed by Magistrate Judge Dale A. Drozd on 11/1/2012. (Zignago, K.) Modified on 5/23/2013 (Donati, J).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION and ORDER 35 as to all defendants, signed by Judge Garland E. Burrell, Jr., on 11/29/12: the Status Conference is CONTINUED to 1/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: XT4 Start: 11/29/12, Stop: 1/25/13. (Kastilahn, A)STIPULATION and ORDER 35 as to all defendants, signed by Judge Garland E. Burrell, Jr., on 11/29/12: the Status Conference is CONTINUED to 1/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: XT4 Start: 11/29/12, Stop: 1/25/13. (Kastilahn, A)STIPULATION and ORDER 35 as to all defendants, signed by Judge Garland E. Burrell, Jr., on 11/29/12: the Status Conference is CONTINUED to 1/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: XT4 Start: 11/29/12, Stop: 1/25/13. (Kastilahn, A)STIPULATION and ORDER 35 as to all defendants, signed by Judge Garland E. Burrell, Jr., on 11/29/12: the Status Conference is CONTINUED to 1/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: XT4 Start: 11/29/12, Stop: 1/25/13. (Kastilahn, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c317</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-11-29</dateIssued>
+  <docketText>STIPULATION and ORDER 35 as to all defendants, signed by Judge Garland E. Burrell, Jr., on 11/29/12: the Status Conference is CONTINUED to 1/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: XT4 Start: 11/29/12, Stop: 1/25/13. (Kastilahn, A)STIPULATION and ORDER 35 as to all defendants, signed by Judge Garland E. Burrell, Jr., on 11/29/12: the Status Conference is CONTINUED to 1/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: XT4 Start: 11/29/12, Stop: 1/25/13. (Kastilahn, A)STIPULATION and ORDER 35 as to all defendants, signed by Judge Garland E. Burrell, Jr., on 11/29/12: the Status Conference is CONTINUED to 1/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: XT4 Start: 11/29/12, Stop: 1/25/13. (Kastilahn, A)STIPULATION and ORDER 35 as to all defendants, signed by Judge Garland E. Burrell, Jr., on 11/29/12: the Status Conference is CONTINUED to 1/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: XT4 Start: 11/29/12, Stop: 1/25/13. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION and ORDER 43 signed by Judge Garland E. Burrell, Jr on 1/23/2013 ORDERING Status Conference CONTINUED to 3/22/2013 at 9:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: T4 Start: 1/25/2013 - Stop: 3/22/2013. (Krueger, M)STIPULATION and ORDER 43 signed by Judge Garland E. Burrell, Jr on 1/23/2013 ORDERING Status Conference CONTINUED to 3/22/2013 at 9:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: T4 Start: 1/25/2013 - Stop: 3/22/2013. (Krueger, M)STIPULATION and ORDER 43 signed by Judge Garland E. Burrell, Jr on 1/23/2013 ORDERING Status Conference CONTINUED to 3/22/2013 at 9:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: T4 Start: 1/25/2013 - Stop: 3/22/2013. (Krueger, M)STIPULATION and ORDER 43 signed by Judge Garland E. Burrell, Jr on 1/23/2013 ORDERING Status Conference CONTINUED to 3/22/2013 at 9:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: T4 Start: 1/25/2013 - Stop: 3/22/2013. (Krueger, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c2f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-01-23</dateIssued>
+  <docketText>STIPULATION and ORDER 43 signed by Judge Garland E. Burrell, Jr on 1/23/2013 ORDERING Status Conference CONTINUED to 3/22/2013 at 9:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: T4 Start: 1/25/2013 - Stop: 3/22/2013. (Krueger, M)STIPULATION and ORDER 43 signed by Judge Garland E. Burrell, Jr on 1/23/2013 ORDERING Status Conference CONTINUED to 3/22/2013 at 9:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: T4 Start: 1/25/2013 - Stop: 3/22/2013. (Krueger, M)STIPULATION and ORDER 43 signed by Judge Garland E. Burrell, Jr on 1/23/2013 ORDERING Status Conference CONTINUED to 3/22/2013 at 9:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: T4 Start: 1/25/2013 - Stop: 3/22/2013. (Krueger, M)STIPULATION and ORDER 43 signed by Judge Garland E. Burrell, Jr on 1/23/2013 ORDERING Status Conference CONTINUED to 3/22/2013 at 9:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa Helena Campbell, and Terrance Rychan Smalls: T4 Start: 1/25/2013 - Stop: 3/22/2013. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 3/22/13 ORDERING the Status Conference Reset for 5/3/13 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa H. Campbell, Terrance R. Smalls: T4 Start: 3/22/13 Stop: 5/3/13. (Becknal, R)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 3/22/13 ORDERING the Status Conference Reset for 5/3/13 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa H. Campbell, Terrance R. Smalls: T4 Start: 3/22/13 Stop: 5/3/13. (Becknal, R)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 3/22/13 ORDERING the Status Conference Reset for 5/3/13 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa H. Campbell, Terrance R. Smalls: T4 Start: 3/22/13 Stop: 5/3/13. (Becknal, R)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 3/22/13 ORDERING the Status Conference Reset for 5/3/13 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa H. Campbell, Terrance R. Smalls: T4 Start: 3/22/13 Stop: 5/3/13. (Becknal, R)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c318</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-03-25</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 3/22/13 ORDERING the Status Conference Reset for 5/3/13 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa H. Campbell, Terrance R. Smalls: T4 Start: 3/22/13 Stop: 5/3/13. (Becknal, R)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 3/22/13 ORDERING the Status Conference Reset for 5/3/13 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa H. Campbell, Terrance R. Smalls: T4 Start: 3/22/13 Stop: 5/3/13. (Becknal, R)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 3/22/13 ORDERING the Status Conference Reset for 5/3/13 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa H. Campbell, Terrance R. Smalls: T4 Start: 3/22/13 Stop: 5/3/13. (Becknal, R)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 3/22/13 ORDERING the Status Conference Reset for 5/3/13 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Theresa H. Campbell, Terrance R. Smalls: T4 Start: 3/22/13 Stop: 5/3/13. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr. on 5/2/13 ORDERING that the Status Conference as to all defendants is CONTINUED from 5/3/13 to 6/28/2013. Time is EXCLUDED between 5/3/13 and 6/28/13 pursuant to Local Code T4. (Mena-Sanchez, L)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr. on 5/2/13 ORDERING that the Status Conference as to all defendants is CONTINUED from 5/3/13 to 6/28/2013. Time is EXCLUDED between 5/3/13 and 6/28/13 pursuant to Local Code T4. (Mena-Sanchez, L)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr. on 5/2/13 ORDERING that the Status Conference as to all defendants is CONTINUED from 5/3/13 to 6/28/2013. Time is EXCLUDED between 5/3/13 and 6/28/13 pursuant to Local Code T4. (Mena-Sanchez, L)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr. on 5/2/13 ORDERING that the Status Conference as to all defendants is CONTINUED from 5/3/13 to 6/28/2013. Time is EXCLUDED between 5/3/13 and 6/28/13 pursuant to Local Code T4. (Mena-Sanchez, L)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c326</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-05-03</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr. on 5/2/13 ORDERING that the Status Conference as to all defendants is CONTINUED from 5/3/13 to 6/28/2013. Time is EXCLUDED between 5/3/13 and 6/28/13 pursuant to Local Code T4. (Mena-Sanchez, L)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr. on 5/2/13 ORDERING that the Status Conference as to all defendants is CONTINUED from 5/3/13 to 6/28/2013. Time is EXCLUDED between 5/3/13 and 6/28/13 pursuant to Local Code T4. (Mena-Sanchez, L)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr. on 5/2/13 ORDERING that the Status Conference as to all defendants is CONTINUED from 5/3/13 to 6/28/2013. Time is EXCLUDED between 5/3/13 and 6/28/13 pursuant to Local Code T4. (Mena-Sanchez, L)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr. on 5/2/13 ORDERING that the Status Conference as to all defendants is CONTINUED from 5/3/13 to 6/28/2013. Time is EXCLUDED between 5/3/13 and 6/28/13 pursuant to Local Code T4. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION and ORDER 67 for continuance signed by Judge Garland E. Burrell, Jr. on 6/20/2013. Status Conference, as to Simeon Shawnise Gregory; Sarah Elizabeth Trout; and Terrance Rychan Smalls, is RE-SET for 8/23/2013 at 9:00 AM in Courtroom 10 (GEB). Excludable Time (T4): Start Date - 6/28/2013 through Stop Date - 8/23/2013 (Marciel, M)STIPULATION and ORDER 67 for continuance signed by Judge Garland E. Burrell, Jr. on 6/20/2013. Status Conference, as to Simeon Shawnise Gregory; Sarah Elizabeth Trout; and Terrance Rychan Smalls, is RE-SET for 8/23/2013 at 9:00 AM in Courtroom 10 (GEB). Excludable Time (T4): Start Date - 6/28/2013 through Stop Date - 8/23/2013 (Marciel, M)STIPULATION and ORDER 67 for continuance signed by Judge Garland E. Burrell, Jr. on 6/20/2013. Status Conference, as to Simeon Shawnise Gregory; Sarah Elizabeth Trout; and Terrance Rychan Smalls, is RE-SET for 8/23/2013 at 9:00 AM in Courtroom 10 (GEB). Excludable Time (T4): Start Date - 6/28/2013 through Stop Date - 8/23/2013 (Marciel, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c2f4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-06-21</dateIssued>
+  <docketText>STIPULATION and ORDER 67 for continuance signed by Judge Garland E. Burrell, Jr. on 6/20/2013. Status Conference, as to Simeon Shawnise Gregory; Sarah Elizabeth Trout; and Terrance Rychan Smalls, is RE-SET for 8/23/2013 at 9:00 AM in Courtroom 10 (GEB). Excludable Time (T4): Start Date - 6/28/2013 through Stop Date - 8/23/2013 (Marciel, M)STIPULATION and ORDER 67 for continuance signed by Judge Garland E. Burrell, Jr. on 6/20/2013. Status Conference, as to Simeon Shawnise Gregory; Sarah Elizabeth Trout; and Terrance Rychan Smalls, is RE-SET for 8/23/2013 at 9:00 AM in Courtroom 10 (GEB). Excludable Time (T4): Start Date - 6/28/2013 through Stop Date - 8/23/2013 (Marciel, M)STIPULATION and ORDER 67 for continuance signed by Judge Garland E. Burrell, Jr. on 6/20/2013. Status Conference, as to Simeon Shawnise Gregory; Sarah Elizabeth Trout; and Terrance Rychan Smalls, is RE-SET for 8/23/2013 at 9:00 AM in Courtroom 10 (GEB). Excludable Time (T4): Start Date - 6/28/2013 through Stop Date - 8/23/2013 (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 8/20/13 as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Terrance Rychan Smalls CONTINUING Status Conference to 10/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started: XT-4 Start: 8/23/13 Stop: 10/25/13. (Meuleman, A)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 8/20/13 as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Terrance Rychan Smalls CONTINUING Status Conference to 10/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started: XT-4 Start: 8/23/13 Stop: 10/25/13. (Meuleman, A)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 8/20/13 as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Terrance Rychan Smalls CONTINUING Status Conference to 10/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started: XT-4 Start: 8/23/13 Stop: 10/25/13. (Meuleman, A)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c2f6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-9</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-08-21</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 8/20/13 as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Terrance Rychan Smalls CONTINUING Status Conference to 10/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started: XT-4 Start: 8/23/13 Stop: 10/25/13. (Meuleman, A)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 8/20/13 as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Terrance Rychan Smalls CONTINUING Status Conference to 10/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started: XT-4 Start: 8/23/13 Stop: 10/25/13. (Meuleman, A)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 8/20/13 as to Simeon Shawnise Gregory, Sarah Elizabeth Trout, Terrance Rychan Smalls CONTINUING Status Conference to 10/25/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. Excludable started: XT-4 Start: 8/23/13 Stop: 10/25/13. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION and ORDER TO CHANGE THE SURETY FOR THE DEFENDANT&apos;S UNSECURED BOND signed by Magistrate Judge Edmund F. Brennan on 9/6/13. Kencal Clayton is allowed to act as the surety for Ms. Trout&apos;s $50,000 unsecured bond. Once Mr. Clayton signs the bond documents, it is Ms. Barham-Angulo may be removed as the surety. (Kastilahn, A)STIPULATION and ORDER TO CHANGE THE SURETY FOR THE DEFENDANT&apos;S UNSECURED BOND signed by Magistrate Judge Edmund F. Brennan on 9/6/13. Kencal Clayton is allowed to act as the surety for Ms. Trout&apos;s $50,000 unsecured bond. Once Mr. Clayton signs the bond documents, it is Ms. Barham-Angulo may be removed as the surety. (Kastilahn, A)STIPULATION and ORDER TO CHANGE THE SURETY FOR THE DEFENDANT&apos;S UNSECURED BOND signed by Magistrate Judge Edmund F. Brennan on 9/6/13. Kencal Clayton is allowed to act as the surety for Ms. Trout&apos;s $50,000 unsecured bond. Once Mr. Clayton signs the bond documents, it is Ms. Barham-Angulo may be removed as the surety. (Kastilahn, A)STIPULATION and ORDER TO CHANGE THE SURETY FOR THE DEFENDANT&apos;S UNSECURED BOND signed by Magistrate Judge Edmund F. Brennan on 9/6/13. Kencal Clayton is allowed to act as the surety for Ms. Trout&apos;s $50,000 unsecured bond. Once Mr. Clayton signs the bond documents, it is Ms. Barham-Angulo may be removed as the surety. (Kastilahn, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c324</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-10</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-09-06</dateIssued>
+  <docketText>STIPULATION and ORDER TO CHANGE THE SURETY FOR THE DEFENDANT&apos;S UNSECURED BOND signed by Magistrate Judge Edmund F. Brennan on 9/6/13. Kencal Clayton is allowed to act as the surety for Ms. Trout&apos;s $50,000 unsecured bond. Once Mr. Clayton signs the bond documents, it is Ms. Barham-Angulo may be removed as the surety. (Kastilahn, A)STIPULATION and ORDER TO CHANGE THE SURETY FOR THE DEFENDANT&apos;S UNSECURED BOND signed by Magistrate Judge Edmund F. Brennan on 9/6/13. Kencal Clayton is allowed to act as the surety for Ms. Trout&apos;s $50,000 unsecured bond. Once Mr. Clayton signs the bond documents, it is Ms. Barham-Angulo may be removed as the surety. (Kastilahn, A)STIPULATION and ORDER TO CHANGE THE SURETY FOR THE DEFENDANT&apos;S UNSECURED BOND signed by Magistrate Judge Edmund F. Brennan on 9/6/13. Kencal Clayton is allowed to act as the surety for Ms. Trout&apos;s $50,000 unsecured bond. Once Mr. Clayton signs the bond documents, it is Ms. Barham-Angulo may be removed as the surety. (Kastilahn, A)STIPULATION and ORDER TO CHANGE THE SURETY FOR THE DEFENDANT&apos;S UNSECURED BOND signed by Magistrate Judge Edmund F. Brennan on 9/6/13. Kencal Clayton is allowed to act as the surety for Ms. Trout&apos;s $50,000 unsecured bond. Once Mr. Clayton signs the bond documents, it is Ms. Barham-Angulo may be removed as the surety. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>ORDER as to defendant Sarah Trout, signed by Magistrate Judge Kendall J. Newman on 10/15/13 ORDERING that Sharon Barham-Angulo is removed as a surety. (Kastilahn, A)ORDER as to defendant Sarah Trout, signed by Magistrate Judge Kendall J. Newman on 10/15/13 ORDERING that Sharon Barham-Angulo is removed as a surety. (Kastilahn, A)ORDER as to defendant Sarah Trout, signed by Magistrate Judge Kendall J. Newman on 10/15/13 ORDERING that Sharon Barham-Angulo is removed as a surety. (Kastilahn, A)ORDER as to defendant Sarah Trout, signed by Magistrate Judge Kendall J. Newman on 10/15/13 ORDERING that Sharon Barham-Angulo is removed as a surety. (Kastilahn, A)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c2f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-11</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-10-15</dateIssued>
+  <docketText>ORDER as to defendant Sarah Trout, signed by Magistrate Judge Kendall J. Newman on 10/15/13 ORDERING that Sharon Barham-Angulo is removed as a surety. (Kastilahn, A)ORDER as to defendant Sarah Trout, signed by Magistrate Judge Kendall J. Newman on 10/15/13 ORDERING that Sharon Barham-Angulo is removed as a surety. (Kastilahn, A)ORDER as to defendant Sarah Trout, signed by Magistrate Judge Kendall J. Newman on 10/15/13 ORDERING that Sharon Barham-Angulo is removed as a surety. (Kastilahn, A)ORDER as to defendant Sarah Trout, signed by Magistrate Judge Kendall J. Newman on 10/15/13 ORDERING that Sharon Barham-Angulo is removed as a surety. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION AND ORDER signed by Judge Garland E. Burrell, Jr. on 10/25/2013 CONTINUING the Status Conference for Simeon Shawnise Gregory, Terrance Rychan Smalls to 12/13/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell, Jr.; EXCLUDING TIME as to Simeon Shawnise Gregory, Terrance Rychan Smalls: XT4 Start: 10/25/2013 Stop: 12/13/2013. (Michel, G)STIPULATION AND ORDER signed by Judge Garland E. Burrell, Jr. on 10/25/2013 CONTINUING the Status Conference for Simeon Shawnise Gregory, Terrance Rychan Smalls to 12/13/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell, Jr.; EXCLUDING TIME as to Simeon Shawnise Gregory, Terrance Rychan Smalls: XT4 Start: 10/25/2013 Stop: 12/13/2013. (Michel, G)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c320</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-12</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2013-10-28</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Judge Garland E. Burrell, Jr. on 10/25/2013 CONTINUING the Status Conference for Simeon Shawnise Gregory, Terrance Rychan Smalls to 12/13/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell, Jr.; EXCLUDING TIME as to Simeon Shawnise Gregory, Terrance Rychan Smalls: XT4 Start: 10/25/2013 Stop: 12/13/2013. (Michel, G)STIPULATION AND ORDER signed by Judge Garland E. Burrell, Jr. on 10/25/2013 CONTINUING the Status Conference for Simeon Shawnise Gregory, Terrance Rychan Smalls to 12/13/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell, Jr.; EXCLUDING TIME as to Simeon Shawnise Gregory, Terrance Rychan Smalls: XT4 Start: 10/25/2013 Stop: 12/13/2013. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION and ORDER as to Simeon Shawnise Gregory and Terrance Rychan Smalls signed by Judge Garland E. Burrell, Jr. on 12/11/2013 ORDERING that the Status Conference is CONTINUED to 1/24/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Simeon Shawnise Gregory, Terrance Rychan Smalls: T4 Start: 12/13/2013 Stop: 1/24/2014. (Zignago, K.)STIPULATION and ORDER as to Simeon Shawnise Gregory and Terrance Rychan Smalls signed by Judge Garland E. Burrell, Jr. on 12/11/2013 ORDERING that the Status Conference is CONTINUED to 1/24/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Simeon Shawnise Gregory, Terrance Rychan Smalls: T4 Start: 12/13/2013 Stop: 1/24/2014. (Zignago, K.)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c31f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-13</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2013-12-11</dateIssued>
+  <docketText>STIPULATION and ORDER as to Simeon Shawnise Gregory and Terrance Rychan Smalls signed by Judge Garland E. Burrell, Jr. on 12/11/2013 ORDERING that the Status Conference is CONTINUED to 1/24/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Simeon Shawnise Gregory, Terrance Rychan Smalls: T4 Start: 12/13/2013 Stop: 1/24/2014. (Zignago, K.)STIPULATION and ORDER as to Simeon Shawnise Gregory and Terrance Rychan Smalls signed by Judge Garland E. Burrell, Jr. on 12/11/2013 ORDERING that the Status Conference is CONTINUED to 1/24/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Simeon Shawnise Gregory, Terrance Rychan Smalls: T4 Start: 12/13/2013 Stop: 1/24/2014. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 12/30/2013 GRANTING 105 Request for Order; DIRECTING the U.S. Marshal to arrange air travel for Defendant Simeon Shawnise Gregory from Los Angeles, CA to Sacramento, CA on 1/8/2014 and from Sacramento, CA to Los Angeles, CA on 1/9/2014, or on such date as proceedings are completed; ORDERING defense counsel to confer with the U.S. Marshal with respect to the dates of travel. (Hand-delivered to U.S. Marshal) (Michel, G)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c2f3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-14</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2013-12-31</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 12/30/2013 GRANTING 105 Request for Order; DIRECTING the U.S. Marshal to arrange air travel for Defendant Simeon Shawnise Gregory from Los Angeles, CA to Sacramento, CA on 1/8/2014 and from Sacramento, CA to Los Angeles, CA on 1/9/2014, or on such date as proceedings are completed; ORDERING defense counsel to confer with the U.S. Marshal with respect to the dates of travel. (Hand-delivered to U.S. Marshal) (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 1/3/2014 GRANTING 108 Amended Request for Order; DIRECTING the U.S. Marshal to arrange air travel for Defendant Simeon Shawnise Gregory from Los Angeles, CA to Sacramento, CA on 1/8/2014 and from Sacramento, CA to Los Angeles, CA on 1/9/2014, or on such date as proceedings are completed; ORDERING defense counsel to confer with the U.S. Marshal with respect to the dates of travel. (Hand-delivered to U.S. Marshal). (Michel, G)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c327</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-15</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 1/3/2014 GRANTING 108 Amended Request for Order; DIRECTING the U.S. Marshal to arrange air travel for Defendant Simeon Shawnise Gregory from Los Angeles, CA to Sacramento, CA on 1/8/2014 and from Sacramento, CA to Los Angeles, CA on 1/9/2014, or on such date as proceedings are completed; ORDERING defense counsel to confer with the U.S. Marshal with respect to the dates of travel. (Hand-delivered to U.S. Marshal). (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>ORDER granting 112 MOTION as to Simeon Shawnise Gregory (1) signed by Magistrate Judge Dale A. Drozd on 1/8/14: The U.S. Marshal is directed to arrange for Ms. Gregory to fly from Sacramento on January 9, 2014, or on such date as proceedings in the captioned case are completed with a destination of Ontario International Airport in Ontario California. Defense counsel is directed to confer with the U.S. Marshal with respect to the specific details of such travel. (Hand-delivered to U.S. Marshal) (Kaminski, H)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c31e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-16</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2014-01-09</dateIssued>
+  <docketText>ORDER granting 112 MOTION as to Simeon Shawnise Gregory (1) signed by Magistrate Judge Dale A. Drozd on 1/8/14: The U.S. Marshal is directed to arrange for Ms. Gregory to fly from Sacramento on January 9, 2014, or on such date as proceedings in the captioned case are completed with a destination of Ontario International Airport in Ontario California. Defense counsel is directed to confer with the U.S. Marshal with respect to the specific details of such travel. (Hand-delivered to U.S. Marshal) (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Theresa Helena Campbell signed by Judge Garland E. Burrell, Jr on 1/21/14. (Furstenau, S)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c31a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-17</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2014-01-21</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Theresa Helena Campbell signed by Judge Garland E. Burrell, Jr on 1/21/14. (Furstenau, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION and ORDER as to Terrance Rychan Smalls signed by Judge Garland E. Burrell, Jr. on 1/22/2014 ORDERING that the Status Conference is CONTINUED to 2/21/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Terrance Rychan Smalls: T4 Start: 1/24/2014 Stop: 2/21/2014. (Zignago, K.)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c31b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-18</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2014-01-23</dateIssued>
+  <docketText>STIPULATION and ORDER as to Terrance Rychan Smalls signed by Judge Garland E. Burrell, Jr. on 1/22/2014 ORDERING that the Status Conference is CONTINUED to 2/21/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. Excludable started as to Terrance Rychan Smalls: T4 Start: 1/24/2014 Stop: 2/21/2014. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION and ORDER as to Simeon Gregory signed by Judge Garland E. Burrell, Jr on 3/19/14: Sentencing set for 5/23/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. (Kaminski, H)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c325</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-19</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2014-03-20</dateIssued>
+  <docketText>STIPULATION and ORDER as to Simeon Gregory signed by Judge Garland E. Burrell, Jr on 3/19/14: Sentencing set for 5/23/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Sarah Elizabeth Trout signed by Judge Garland E. Burrell, Jr on 3/21/14. (Furstenau, S)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c328</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-20</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2014-03-21</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Sarah Elizabeth Trout signed by Judge Garland E. Burrell, Jr on 3/21/14. (Furstenau, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-21/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION and ORDER as to Simeon Shawnise Gregory, and Terrance Rychan signed by Judge Garland E. Burrell, Jr., on 8/6/14 ORDERING that the Judgment and Sentencing hearing is CONTINUED to 8/22/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell, Jr.. (Kastilahn, A)STIPULATION and ORDER as to Simeon Shawnise Gregory, and Terrance Rychan signed by Judge Garland E. Burrell, Jr., on 8/6/14 ORDERING that the Judgment and Sentencing hearing is CONTINUED to 8/22/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell, Jr.. (Kastilahn, A)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c319</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-21</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2014-08-06</dateIssued>
+  <docketText>STIPULATION and ORDER as to Simeon Shawnise Gregory, and Terrance Rychan signed by Judge Garland E. Burrell, Jr., on 8/6/14 ORDERING that the Judgment and Sentencing hearing is CONTINUED to 8/22/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell, Jr.. (Kastilahn, A)STIPULATION and ORDER as to Simeon Shawnise Gregory, and Terrance Rychan signed by Judge Garland E. Burrell, Jr., on 8/6/14 ORDERING that the Judgment and Sentencing hearing is CONTINUED to 8/22/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell, Jr.. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-22/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 8/20/14 ORDERING that the Judgment and Sentencing hearing as to Simeon Shawnise Gregory, Terrance Rychan Smalls is CONTINUED from 8/22/14 to 10/3/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. (Mena-Sanchez, L)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 8/20/14 ORDERING that the Judgment and Sentencing hearing as to Simeon Shawnise Gregory, Terrance Rychan Smalls is CONTINUED from 8/22/14 to 10/3/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. (Mena-Sanchez, L)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c31c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-22</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2014-08-21</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 8/20/14 ORDERING that the Judgment and Sentencing hearing as to Simeon Shawnise Gregory, Terrance Rychan Smalls is CONTINUED from 8/22/14 to 10/3/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. (Mena-Sanchez, L)STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 8/20/14 ORDERING that the Judgment and Sentencing hearing as to Simeon Shawnise Gregory, Terrance Rychan Smalls is CONTINUED from 8/22/14 to 10/3/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-23/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Simeon Shawnise Gregory signed by Judge Garland E. Burrell, Jr on 10/17/14. (Furstenau, S)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c2f1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-23</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2014-10-17</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Simeon Shawnise Gregory signed by Judge Garland E. Burrell, Jr on 10/17/14. (Furstenau, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-24/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Terrance Rychan Smalls signed by Judge Garland E. Burrell, Jr on 10/17/14. (Furstenau, S)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c2a3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-24</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2014-10-17</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Terrance Rychan Smalls signed by Judge Garland E. Burrell, Jr on 10/17/14. (Furstenau, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-25/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Terrance Rychan Smalls signed by Judge Garland E. Burrell, Jr on 10/20/14. (Furstenau, S)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c2fa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-25</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2014-10-20</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Terrance Rychan Smalls signed by Judge Garland E. Burrell, Jr on 10/20/14. (Furstenau, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00364-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-26/mods.xml">
+ <titleInfo>
+  <title>USA v. Gregory et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Terrance Rychan Smalls signed by Judge Garland E. Burrell, Jr on 10/23/14. (Furstenau, S)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36c31d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-26</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00364_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00364/USCOURTS-caed-2_12-cr-00364-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00364/pdf/USCOURTS-caed-2_12-cr-00364-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00364; USA v. Gregory et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00364-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2014-10-23</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Terrance Rychan Smalls signed by Judge Garland E. Burrell, Jr on 10/23/14. (Furstenau, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

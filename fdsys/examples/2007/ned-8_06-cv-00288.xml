@@ -1,0 +1,272 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18172e56e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00288</identifier>
+<identifier type="local">P0b002ee18172e56e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cv-00288</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00288</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00288</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>625</natureSuitCode>
+ <natureSuit>Drug Related Seizure of Property</natureSuit>
+ <cause>28:1345 Complaint for Forfeiture</cause>
+ <party fullName="$2468.00 in United States Currency" lastName="$2468.00 in United States Currency" role="Defendant"></party>
+ <party fullName="$7124.00 in United States Currency" lastName="$7124.00 in United States Currency" role="Defendant"></party>
+ <party firstName="Brant" fullName="Brant W. Borg" lastName="Borg" middleName="W." role="Claimant"></party>
+ <party firstName="Robert" fullName="Robert J. Hintz" lastName="Hintz" middleName="J." role="Claimant"></party>
+ <party fullName="Jeep Liberty 2003 VIN 1J4GL58K43W582172" lastName="Jeep Liberty 2003 VIN 1J4GL58K43W582172" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. $7124.00 in United States Currency et al</title>
+ <partNumber>8:06-cv-00288</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00288/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cv-00288;06-288</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>$2468.00 in United States Currency</displayForm>
+ <namePart type="family">$2468.00 in United States Currency</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>$7124.00 in United States Currency</displayForm>
+ <namePart type="family">$7124.00 in United States Currency</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brant W. Borg</displayForm>
+ <namePart type="family">Borg</namePart>
+ <namePart type="given">Brant</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert J. Hintz</displayForm>
+ <namePart type="family">Hintz</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeep Liberty 2003 VIN 1J4GL58K43W582172</displayForm>
+ <namePart type="family">Jeep Liberty 2003 VIN 1J4GL58K43W582172</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00288</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00288</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>625</natureSuitCode>
+ <natureSuit>Drug Related Seizure of Property</natureSuit>
+ <cause>28:1345 Complaint for Forfeiture</cause>
+ <party fullName="$2468.00 in United States Currency" lastName="$2468.00 in United States Currency" role="Defendant"></party>
+ <party fullName="$7124.00 in United States Currency" lastName="$7124.00 in United States Currency" role="Defendant"></party>
+ <party firstName="Brant" fullName="Brant W. Borg" lastName="Borg" middleName="W." role="Claimant"></party>
+ <party firstName="Robert" fullName="Robert J. Hintz" lastName="Hintz" middleName="J." role="Claimant"></party>
+ <party fullName="Jeep Liberty 2003 VIN 1J4GL58K43W582172" lastName="Jeep Liberty 2003 VIN 1J4GL58K43W582172" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00288-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00288/USCOURTS-ned-8_06-cv-00288-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. $7124.00 in United States Currency et al</title>
+  <subTitle>ORDER continuing the final pretrial conference to December 20, 2006 at 1:00 p.m. Prior to the pretrial conference, the parties shall prepare an exhibit list and proposed final pretrial order in accordance with NECivR 16.2. Ordered by Magistrate Judge David L. Piester. (CRZ)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00288-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18175a9c0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00288/USCOURTS-ned-8_06-cv-00288-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00288_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00288/USCOURTS-ned-8_06-cv-00288-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00288/pdf/USCOURTS-ned-8_06-cv-00288-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00288; United States of America v. $7124.00 in United States Currency et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00288-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-12-04</dateIssued>
+  <docketText>ORDER continuing the final pretrial conference to December 20, 2006 at 1:00 p.m. Prior to the pretrial conference, the parties shall prepare an exhibit list and proposed final pretrial order in accordance with NECivR 16.2. Ordered by Magistrate Judge David L. Piester. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00288-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00288/USCOURTS-ned-8_06-cv-00288-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. $7124.00 in United States Currency et al</title>
+  <subTitle>ORDER that the unopposed oral motion of claimant Robert J. Hintz for continuance of the pretrial conference is granted and the pretrial conference is continued from December 20 to December 21, 2006 at 1:00 p.m. in the chambers of the undersigned, 566 Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Magistrate Judge David L. Piester.(CS, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00288-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18175a9be</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00288/USCOURTS-ned-8_06-cv-00288-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00288_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00288/USCOURTS-ned-8_06-cv-00288-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00288/pdf/USCOURTS-ned-8_06-cv-00288-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00288; United States of America v. $7124.00 in United States Currency et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00288-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-12-20</dateIssued>
+  <docketText>ORDER that the unopposed oral motion of claimant Robert J. Hintz for continuance of the pretrial conference is granted and the pretrial conference is continued from December 20 to December 21, 2006 at 1:00 p.m. in the chambers of the undersigned, 566 Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Magistrate Judge David L. Piester.(CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00288-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00288/USCOURTS-ned-8_06-cv-00288-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. $7124.00 in United States Currency et al</title>
+  <subTitle>ORDER that the court has been advised that the parties in the abovecaptioned matter have reached a settlement of their claims. Accordingly, IT IS ORDERED: (1) Within thirty days of the date of this order the parties shall file a joint stipulation for dismissal (or other dispositive stipulation) with the clerk of the court and provide a draft order to the undersigned magistrate judge which will fully dispose of the case; (2) Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without further notice; (3) This case has been removed from the trial docket upon representation by the parties that the case has settled. Ordered by Magistrate Judge David L. Piester. (CS, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00288-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18175a9c1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00288/USCOURTS-ned-8_06-cv-00288-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00288_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00288/USCOURTS-ned-8_06-cv-00288-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00288/pdf/USCOURTS-ned-8_06-cv-00288-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00288; United States of America v. $7124.00 in United States Currency et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00288-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-12-20</dateIssued>
+  <docketText>ORDER that the court has been advised that the parties in the abovecaptioned matter have reached a settlement of their claims. Accordingly, IT IS ORDERED: (1) Within thirty days of the date of this order the parties shall file a joint stipulation for dismissal (or other dispositive stipulation) with the clerk of the court and provide a draft order to the undersigned magistrate judge which will fully dispose of the case; (2) Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without further notice; (3) This case has been removed from the trial docket upon representation by the parties that the case has settled. Ordered by Magistrate Judge David L. Piester. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00288-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00288/USCOURTS-ned-8_06-cv-00288-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. $7124.00 in United States Currency et al</title>
+  <subTitle>ORDER approving 24 Stipulation. Ordered by Magistrate Judge David L. Piester. (CC to USM)(JAR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00288-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18175a9bf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00288/USCOURTS-ned-8_06-cv-00288-3</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00288_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00288/USCOURTS-ned-8_06-cv-00288-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00288/pdf/USCOURTS-ned-8_06-cv-00288-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00288; United States of America v. $7124.00 in United States Currency et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00288-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-01-11</dateIssued>
+  <docketText>ORDER approving 24 Stipulation. Ordered by Magistrate Judge David L. Piester. (CC to USM)(JAR)</docketText>
+</extension>
+</relatedItem>
+</mods>

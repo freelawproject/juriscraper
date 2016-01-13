@@ -1,0 +1,397 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8ab5f5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Missouri</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01995</identifier>
+<identifier type="local">P0b002ee18a8ab5f5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-moed-4_13-cv-01995</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-moed-4_13-cv-01995</accessId>
+ <courtType>District</courtType>
+ <courtCode>moed</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Missouri</courtState>
+ <courtSortOrder>2281</courtSortOrder>
+ <caseNumber>4:13-cv-01995</caseNumber>
+ <caseOffice>St. Louis</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1132 E.R.I.S.A.-Employee Benefits</cause>
+ <party firstName="William" fullName="William Boevingloh" lastName="Boevingloh" role="Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark Borgmann" lastName="Borgmann" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Doerr" lastName="Doerr" role="Plaintiff"></party>
+ <party firstName="Carl" fullName="Carl Farrell" lastName="Farrell" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Hanson" lastName="Hanson" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Keipp" lastName="Keipp" role="Plaintiff"></party>
+ <party firstName="Rich" fullName="Rich Lucks" lastName="Lucks" role="Plaintiff"></party>
+ <party fullName="Painters District Council No. 2" lastName="Painters District Council No. 2" role="Plaintiff"></party>
+ <party fullName="Painters District Council No. 2 Apprenticeship and Journeyman Training Trust" lastName="Painters District Council No. 2 Apprenticeship and Journeyman Training Trust" role="Plaintiff"></party>
+ <party fullName="Painters District Council No. 2 Pension Trust" lastName="Painters District Council No. 2 Pension Trust" role="Plaintiff"></party>
+ <party fullName="Painters District Council No. 2 Vacation Trust" lastName="Painters District Council No. 2 Vacation Trust" role="Plaintiff"></party>
+ <party fullName="Painters District Council No. 2 Welfare Trust" lastName="Painters District Council No. 2 Welfare Trust" role="Plaintiff"></party>
+ <party firstName="Fred" fullName="Fred Phillipp Jr." generation="Jr." lastName="Phillipp" role="Plaintiff"></party>
+ <party firstName="Steve" fullName="Steve Phillipp Jr." generation="Jr." lastName="Phillipp" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Slattery" lastName="Slattery" role="Plaintiff"></party>
+ <party firstName="Gregg" fullName="Gregg Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald Thomas" lastName="Thomas" role="Plaintiff"></party>
+ <party firstName="Tim" fullName="Tim Weis" lastName="Weis" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Wienstroer" lastName="Wienstroer" role="Plaintiff"></party>
+ <party firstName="Mike" fullName="Mike Wynn" lastName="Wynn" role="Defendant"></party>
+ <party firstName="Pamela" fullName="Pamela Wynn" lastName="Wynn" role="Defendant"></party>
+ <party fullName="Wynn Decorating" lastName="Wynn Decorating" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Painters District Council No. 2 et al v. Wynn et al</title>
+ <partNumber>4:13-cv-01995</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01995/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:13-cv-01995;13-1995</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Missouri</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>St. Louis</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>William Boevingloh</displayForm>
+ <namePart type="family">Boevingloh</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Borgmann</displayForm>
+ <namePart type="family">Borgmann</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>David Doerr</displayForm>
+ <namePart type="family">Doerr</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Carl Farrell</displayForm>
+ <namePart type="family">Farrell</namePart>
+ <namePart type="given">Carl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Hanson</displayForm>
+ <namePart type="family">Hanson</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Keipp</displayForm>
+ <namePart type="family">Keipp</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rich Lucks</displayForm>
+ <namePart type="family">Lucks</namePart>
+ <namePart type="given">Rich</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Painters District Council No. 2</displayForm>
+ <namePart type="family">Painters District Council No. 2</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Painters District Council No. 2 Apprenticeship and Journeyman Training Trust</displayForm>
+ <namePart type="family">Painters District Council No. 2 Apprenticeship and Journeyman Training Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Painters District Council No. 2 Pension Trust</displayForm>
+ <namePart type="family">Painters District Council No. 2 Pension Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Painters District Council No. 2 Vacation Trust</displayForm>
+ <namePart type="family">Painters District Council No. 2 Vacation Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Painters District Council No. 2 Welfare Trust</displayForm>
+ <namePart type="family">Painters District Council No. 2 Welfare Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Fred Phillipp Jr.</displayForm>
+ <namePart type="family">Phillipp</namePart>
+ <namePart type="given">Fred</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Steve Phillipp Jr.</displayForm>
+ <namePart type="family">Phillipp</namePart>
+ <namePart type="given">Steve</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Slattery</displayForm>
+ <namePart type="family">Slattery</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gregg Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Gregg</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Thomas</displayForm>
+ <namePart type="family">Thomas</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tim Weis</displayForm>
+ <namePart type="family">Weis</namePart>
+ <namePart type="given">Tim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Wienstroer</displayForm>
+ <namePart type="family">Wienstroer</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mike Wynn</displayForm>
+ <namePart type="family">Wynn</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pamela Wynn</displayForm>
+ <namePart type="family">Wynn</namePart>
+ <namePart type="given">Pamela</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wynn Decorating</displayForm>
+ <namePart type="family">Wynn Decorating</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-moed-4_13-cv-01995</accessId>
+ <courtType>District</courtType>
+ <courtCode>moed</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Missouri</courtState>
+ <courtSortOrder>2281</courtSortOrder>
+ <caseNumber>4:13-cv-01995</caseNumber>
+ <caseOffice>St. Louis</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1132 E.R.I.S.A.-Employee Benefits</cause>
+ <party firstName="William" fullName="William Boevingloh" lastName="Boevingloh" role="Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark Borgmann" lastName="Borgmann" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Doerr" lastName="Doerr" role="Plaintiff"></party>
+ <party firstName="Carl" fullName="Carl Farrell" lastName="Farrell" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Hanson" lastName="Hanson" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Keipp" lastName="Keipp" role="Plaintiff"></party>
+ <party firstName="Rich" fullName="Rich Lucks" lastName="Lucks" role="Plaintiff"></party>
+ <party fullName="Painters District Council No. 2" lastName="Painters District Council No. 2" role="Plaintiff"></party>
+ <party fullName="Painters District Council No. 2 Apprenticeship and Journeyman Training Trust" lastName="Painters District Council No. 2 Apprenticeship and Journeyman Training Trust" role="Plaintiff"></party>
+ <party fullName="Painters District Council No. 2 Pension Trust" lastName="Painters District Council No. 2 Pension Trust" role="Plaintiff"></party>
+ <party fullName="Painters District Council No. 2 Vacation Trust" lastName="Painters District Council No. 2 Vacation Trust" role="Plaintiff"></party>
+ <party fullName="Painters District Council No. 2 Welfare Trust" lastName="Painters District Council No. 2 Welfare Trust" role="Plaintiff"></party>
+ <party firstName="Fred" fullName="Fred Phillipp Jr." generation="Jr." lastName="Phillipp" role="Plaintiff"></party>
+ <party firstName="Steve" fullName="Steve Phillipp Jr." generation="Jr." lastName="Phillipp" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Slattery" lastName="Slattery" role="Plaintiff"></party>
+ <party firstName="Gregg" fullName="Gregg Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald Thomas" lastName="Thomas" role="Plaintiff"></party>
+ <party firstName="Tim" fullName="Tim Weis" lastName="Weis" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Wienstroer" lastName="Wienstroer" role="Plaintiff"></party>
+ <party firstName="Mike" fullName="Mike Wynn" lastName="Wynn" role="Defendant"></party>
+ <party firstName="Pamela" fullName="Pamela Wynn" lastName="Wynn" role="Defendant"></party>
+ <party fullName="Wynn Decorating" lastName="Wynn Decorating" role="Defendant"></party>
+ <state>Missouri</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01995-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01995/USCOURTS-moed-4_13-cv-01995-0/mods.xml">
+ <titleInfo>
+  <title>Painters District Council No. 2 et al v. Wynn et al</title>
+  <subTitle>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that plaintiffs Motion for Entry of Partial Default Judgment is GRANTED in part and DENIED in part without prejudice. The motion is GRANTED as to plaintiffs motion for an Order compelling an accounting, and DENIED without prejudice as to the entry of a default judgment. Doc. 10 IT IS FURTHER ORDERED that defendant Mike Wynn, d/b/a Wynn Decorating, shall provide to plaintiffs not later than May 5, 2014, all of the books, ledgers, payroll records, cash disbursements ledgers, bank statements and other documents reflecting or pertaining to all hours worked by and wages paid to defendants employees from November 1, 2013 to the present. IT IS FURTHER ORDERED that the Clerk of the Court shall mail a copy of this Order to Mike Wynn, d/b/a Wynn Decorating, at the following address: Mike Wynn d/b/a Wynn Decorating 24 South Lang Dr. OFallon, Missouri 63366. Signed by District Judge Charles A. Shaw on 4/7/2014. (RAK)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01995/pdf/USCOURTS-moed-4_13-cv-01995-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b7574</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01995/USCOURTS-moed-4_13-cv-01995-0</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01995_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01995/USCOURTS-moed-4_13-cv-01995-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01995/pdf/USCOURTS-moed-4_13-cv-01995-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01995; Painters District Council No. 2 et al v. Wynn et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01995-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-04-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that plaintiffs Motion for Entry of Partial Default Judgment is GRANTED in part and DENIED in part without prejudice. The motion is GRANTED as to plaintiffs motion for an Order compelling an accounting, and DENIED without prejudice as to the entry of a default judgment. Doc. 10 IT IS FURTHER ORDERED that defendant Mike Wynn, d/b/a Wynn Decorating, shall provide to plaintiffs not later than May 5, 2014, all of the books, ledgers, payroll records, cash disbursements ledgers, bank statements and other documents reflecting or pertaining to all hours worked by and wages paid to defendants employees from November 1, 2013 to the present. IT IS FURTHER ORDERED that the Clerk of the Court shall mail a copy of this Order to Mike Wynn, d/b/a Wynn Decorating, at the following address: Mike Wynn d/b/a Wynn Decorating 24 South Lang Dr. OFallon, Missouri 63366. Signed by District Judge Charles A. Shaw on 4/7/2014. (RAK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01995-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01995/USCOURTS-moed-4_13-cv-01995-1/mods.xml">
+ <titleInfo>
+  <title>Painters District Council No. 2 et al v. Wynn et al</title>
+  <subTitle>MEMORANDUM AND ORDER IT IS HEREBY ORDERED that defendant Mike Wynn is ordered to show cause why he should not be held in contempt of Court for failure to produce books and records as ordered on April 7, 2014. IT IS FURTHER ORDERED that a hearing is set for Tuesday, July 1, 2014, at 2:30 p.m. in Courtroom No. 3-N of the Thomas F. Eagleton United States Courthouse, at which defendant Mike Wynn may show cause why civil contempt sanctions should not be imposed against him for failure to comply with the Court&apos;s Order of April 7, 2014. Because incarceration is a possible civil contempt sanction, defendant Wynn has the right to representation by counsel. Failure to appear for the hearing as ordered may subject defendant Wynn to arrest by the United States Marshal&apos;s Service. IT IS FURTHER ORDERED that the United States Marshal&apos;s Service is directed to serve a copy of this Memorandum and Order on defendant Mike Wynn, d/b/a Wynn Decorating, at 24 South Lang Drive, OFallon, Missouri 63366, or wherever he may be found. Show Cause Hearing set for 7/1/2014 02:30 PM before District Judge Charles A. Shaw. Signed by District Judge Charles A. Shaw on 5/29/2014. (NCL)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01995/pdf/USCOURTS-moed-4_13-cv-01995-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b7573</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01995/USCOURTS-moed-4_13-cv-01995-1</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01995_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01995/USCOURTS-moed-4_13-cv-01995-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01995/pdf/USCOURTS-moed-4_13-cv-01995-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01995; Painters District Council No. 2 et al v. Wynn et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01995-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-05-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER IT IS HEREBY ORDERED that defendant Mike Wynn is ordered to show cause why he should not be held in contempt of Court for failure to produce books and records as ordered on April 7, 2014. IT IS FURTHER ORDERED that a hearing is set for Tuesday, July 1, 2014, at 2:30 p.m. in Courtroom No. 3-N of the Thomas F. Eagleton United States Courthouse, at which defendant Mike Wynn may show cause why civil contempt sanctions should not be imposed against him for failure to comply with the Court&apos;s Order of April 7, 2014. Because incarceration is a possible civil contempt sanction, defendant Wynn has the right to representation by counsel. Failure to appear for the hearing as ordered may subject defendant Wynn to arrest by the United States Marshal&apos;s Service. IT IS FURTHER ORDERED that the United States Marshal&apos;s Service is directed to serve a copy of this Memorandum and Order on defendant Mike Wynn, d/b/a Wynn Decorating, at 24 South Lang Drive, OFallon, Missouri 63366, or wherever he may be found. Show Cause Hearing set for 7/1/2014 02:30 PM before District Judge Charles A. Shaw. Signed by District Judge Charles A. Shaw on 5/29/2014. (NCL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01995-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01995/USCOURTS-moed-4_13-cv-01995-2/mods.xml">
+ <titleInfo>
+  <title>Painters District Council No. 2 et al v. Wynn et al</title>
+  <subTitle>DEFAULT JUDGMENT IT IS HEREBY ORDERED that plaintiffs&apos; motion for default judgment, as supplemented, is GRANTED. [Doc. 21] IT IS FURTHER ORDERED, ADJUDGED and DECREED that judgment by default is entered in favor of plaintiffs and against defendants Mike Wynn, d/b/a Wynn Decorating, and Pamela Wynn, jointly and severally, in the total amount of Eight Thousand Four Hundred Eighteen Dollars and Twenty-Two Cents ($8,418.22), as and for delinquent benefit contributions, liquidated damages and interest for the period of December 1, 2012 through June 30, 2014, together with court costs, accounting fees and attorneys&apos; fees. Signed by District Judge Charles A. Shaw on 1/5/15. (KXS)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01995/pdf/USCOURTS-moed-4_13-cv-01995-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b7575</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01995/USCOURTS-moed-4_13-cv-01995-2</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01995_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01995/USCOURTS-moed-4_13-cv-01995-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01995/pdf/USCOURTS-moed-4_13-cv-01995-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01995; Painters District Council No. 2 et al v. Wynn et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01995-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>DEFAULT JUDGMENT IT IS HEREBY ORDERED that plaintiffs&apos; motion for default judgment, as supplemented, is GRANTED. [Doc. 21] IT IS FURTHER ORDERED, ADJUDGED and DECREED that judgment by default is entered in favor of plaintiffs and against defendants Mike Wynn, d/b/a Wynn Decorating, and Pamela Wynn, jointly and severally, in the total amount of Eight Thousand Four Hundred Eighteen Dollars and Twenty-Two Cents ($8,418.22), as and for delinquent benefit contributions, liquidated damages and interest for the period of December 1, 2012 through June 30, 2014, together with court costs, accounting fees and attorneys&apos; fees. Signed by District Judge Charles A. Shaw on 1/5/15. (KXS)</docketText>
+</extension>
+</relatedItem>
+</mods>

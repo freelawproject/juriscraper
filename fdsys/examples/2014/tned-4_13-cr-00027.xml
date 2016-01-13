@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c6928f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-4_13-cr-00027</identifier>
+<identifier type="local">P0b002ee186c6928f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-tned-4_13-cr-00027</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-4_13-cr-00027</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>4:13-cr-00027</caseNumber>
+ <caseOffice>Winchester</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Larry" fullName="Larry Allan Billingsley" lastName="Billingsley" middleName="Allan" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Billingsley</title>
+ <partNumber>4:13-cr-00027</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-4_13-cr-00027/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:13-cr-00027;13-027</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Winchester</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Larry Allan Billingsley</displayForm>
+ <namePart type="family">Billingsley</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-4_13-cr-00027</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>4:13-cr-00027</caseNumber>
+ <caseOffice>Winchester</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Larry" fullName="Larry Allan Billingsley" lastName="Billingsley" middleName="Allan" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Tennessee</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-4_13-cr-00027-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-4_13-cr-00027/USCOURTS-tned-4_13-cr-00027-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Billingsley</title>
+  <subTitle>REPORT AND RECOMMENDATIONS on Plea of Guilty as to Larry Allan Billingsley. Signed by Magistrate Judge William B Carter on 12/17/13. (KFB, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-tned-4_13-cr-00027-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75bb4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-4_13-cr-00027/USCOURTS-tned-4_13-cr-00027-0</identifier>
+ <identifier type="former granule identifier">tned-4_13-cr-00027_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-4_13-cr-00027/USCOURTS-tned-4_13-cr-00027-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-4_13-cr-00027/pdf/USCOURTS-tned-4_13-cr-00027-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cr-00027; USA v. Billingsley; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-4_13-cr-00027-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-12-17</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS on Plea of Guilty as to Larry Allan Billingsley. Signed by Magistrate Judge William B Carter on 12/17/13. (KFB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-4_13-cr-00027-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-4_13-cr-00027/USCOURTS-tned-4_13-cr-00027-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Billingsley</title>
+  <subTitle>ORDER adopting Report and Recommendations re 16 Report and Recommendations on Plea of Guilty as to Larry Allan Billingsley (1). Signed by District Judge Harry S Mattice, Jr on 1/6/14. (KFB, ) Modified on 1/6/2014 (KFB, ). This Order serviced via US Mail to Thomas Austin.</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-tned-4_13-cr-00027-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75bb3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-4_13-cr-00027/USCOURTS-tned-4_13-cr-00027-1</identifier>
+ <identifier type="former granule identifier">tned-4_13-cr-00027_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-4_13-cr-00027/USCOURTS-tned-4_13-cr-00027-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-4_13-cr-00027/pdf/USCOURTS-tned-4_13-cr-00027-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cr-00027; USA v. Billingsley; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-4_13-cr-00027-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER adopting Report and Recommendations re 16 Report and Recommendations on Plea of Guilty as to Larry Allan Billingsley (1). Signed by District Judge Harry S Mattice, Jr on 1/6/14. (KFB, ) Modified on 1/6/2014 (KFB, ). This Order serviced via US Mail to Thomas Austin.</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,261 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180eb0912">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Southern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-26</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-1_05-ap-02437</identifier>
+<identifier type="local">P0b002ee180eb0912</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-26</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nysb-1_05-ap-02437</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nysb-1_05-ap-02437</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nysb</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>3353</courtSortOrder>
+ <caseNumber>1:05-ap-02437</caseNumber>
+ <caseOffice>Manhattan</caseOffice>
+ <party firstName="Ruth" fullName="Ruth Kassover" lastName="Kassover" role="Plaintiff"></party>
+ <party firstName="Philip" fullName="Philip Kassover" lastName="Kassover" role="Plaintiff"></party>
+ <party fullName="Prism Venture Partners, L.L.C." lastName="Prism Venture Partners, L.L.C." role="Defendant"></party>
+ <party fullName="PVP-GCC Holdingco II, L.L.C." lastName="PVP-GCC Holdingco II, L.L.C." role="Defendant"></party>
+ <party fullName="The Garden City Company, Inc." lastName="The Garden City Company, Inc." role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Sabella" lastName="Sabella" role="Defendant"></party>
+ <party firstName="Rosalie" fullName="Rosalie Erickson" lastName="Erickson" role="Defendant"></party>
+ <party firstName="Rosalie" fullName="Rosalie Erickson" lastName="Erickson" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Baime" lastName="Baime" role="Defendant"></party>
+ <party firstName="Lulu" fullName="Lulu Kassover" lastName="Kassover" role="Defendant"></party>
+ <party firstName="Harriette" fullName="Harriette K. Baime" lastName="Baime" middleName="K." role="Defendant"></party>
+ <party firstName="Morton" fullName="Morton Kassover" lastName="Kassover" role="Defendant"></party>
+ <party fullName="Slobodien Family Partnership, L.P." lastName="Slobodien Family Partnership, L.P." role="Defendant"></party>
+ <party firstName="R." fullName="R. Peyton Gibson" lastName="Gibson" middleName="Peyton" role="Defendant"></party>
+ <party fullName="Clerk&apos;s Office of the U.S. Bankruptcy Court, S.D.N.Y." lastName="Clerk&apos;s Office of the U.S. Bankruptcy Court, S.D.N.Y." role="Unknown"></party>
+</extension>
+<titleInfo>
+ <title>Kassover et al v. Prism Venture Partners, L.L.C. et al</title>
+ <partNumber>1:05-ap-02437</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-1_05-ap-02437/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">1:05-ap-02437;05-2437</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Southern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Manhattan</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ruth Kassover</displayForm>
+ <namePart type="family">Kassover</namePart>
+ <namePart type="given">Ruth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Philip Kassover</displayForm>
+ <namePart type="family">Kassover</namePart>
+ <namePart type="given">Philip</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Prism Venture Partners, L.L.C.</displayForm>
+ <namePart type="family">Prism Venture Partners, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PVP-GCC Holdingco II, L.L.C.</displayForm>
+ <namePart type="family">PVP-GCC Holdingco II, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Garden City Company, Inc.</displayForm>
+ <namePart type="family">The Garden City Company, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Sabella</displayForm>
+ <namePart type="family">Sabella</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rosalie Erickson</displayForm>
+ <namePart type="family">Erickson</namePart>
+ <namePart type="given">Rosalie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rosalie Erickson</displayForm>
+ <namePart type="family">Erickson</namePart>
+ <namePart type="given">Rosalie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Baime</displayForm>
+ <namePart type="family">Baime</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lulu Kassover</displayForm>
+ <namePart type="family">Kassover</namePart>
+ <namePart type="given">Lulu</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harriette K. Baime</displayForm>
+ <namePart type="family">Baime</namePart>
+ <namePart type="given">Harriette</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Morton Kassover</displayForm>
+ <namePart type="family">Kassover</namePart>
+ <namePart type="given">Morton</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Slobodien Family Partnership, L.P.</displayForm>
+ <namePart type="family">Slobodien Family Partnership, L.P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. Peyton Gibson</displayForm>
+ <namePart type="family">Gibson</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Clerk&apos;s Office of the U.S. Bankruptcy Court, S.D.N.Y.</displayForm>
+ <namePart type="family">Clerk&apos;s Office of the U.S. Bankruptcy Court, S.D.N.Y.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Unknown</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nysb-1_05-ap-02437</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nysb</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>3353</courtSortOrder>
+ <caseNumber>1:05-ap-02437</caseNumber>
+ <caseOffice>Manhattan</caseOffice>
+ <party firstName="Ruth" fullName="Ruth Kassover" lastName="Kassover" role="Plaintiff"></party>
+ <party firstName="Philip" fullName="Philip Kassover" lastName="Kassover" role="Plaintiff"></party>
+ <party fullName="Prism Venture Partners, L.L.C." lastName="Prism Venture Partners, L.L.C." role="Defendant"></party>
+ <party fullName="PVP-GCC Holdingco II, L.L.C." lastName="PVP-GCC Holdingco II, L.L.C." role="Defendant"></party>
+ <party fullName="The Garden City Company, Inc." lastName="The Garden City Company, Inc." role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Sabella" lastName="Sabella" role="Defendant"></party>
+ <party firstName="Rosalie" fullName="Rosalie Erickson" lastName="Erickson" role="Defendant"></party>
+ <party firstName="Rosalie" fullName="Rosalie Erickson" lastName="Erickson" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Baime" lastName="Baime" role="Defendant"></party>
+ <party firstName="Lulu" fullName="Lulu Kassover" lastName="Kassover" role="Defendant"></party>
+ <party firstName="Harriette" fullName="Harriette K. Baime" lastName="Baime" middleName="K." role="Defendant"></party>
+ <party firstName="Morton" fullName="Morton Kassover" lastName="Kassover" role="Defendant"></party>
+ <party fullName="Slobodien Family Partnership, L.P." lastName="Slobodien Family Partnership, L.P." role="Defendant"></party>
+ <party firstName="R." fullName="R. Peyton Gibson" lastName="Gibson" middleName="Peyton" role="Defendant"></party>
+ <party fullName="Clerk&apos;s Office of the U.S. Bankruptcy Court, S.D.N.Y." lastName="Clerk&apos;s Office of the U.S. Bankruptcy Court, S.D.N.Y." role="Unknown"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nysb-1_05-ap-02437-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-1_05-ap-02437/USCOURTS-nysb-1_05-ap-02437-0/mods.xml">
+ <titleInfo>
+  <title>Kassover et al v. Prism Venture Partners, L.L.C. et al</title>
+  <subTitle>Written Opinion/Memorandum Decision and Order signed on 1/12/2006 Granting Motion to Remand (related document(s)2, 1). (Saenz De Viteri, Monica)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nysb-1_05-ap-02437-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813bc5ac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-1_05-ap-02437/USCOURTS-nysb-1_05-ap-02437-0</identifier>
+ <identifier type="former granule identifier">nysb-1_05-ap-02437_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-1_05-ap-02437/USCOURTS-nysb-1_05-ap-02437-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-1_05-ap-02437/pdf/USCOURTS-nysb-1_05-ap-02437-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-ap-02437; Kassover et al v. Prism Venture Partners, L.L.C. et al; </searchTitle>
+  <courtName>United States Bankruptcy Court Southern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nysb-1_05-ap-02437-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-12</dateIssued>
+  <docketText>Written Opinion/Memorandum Decision and Order signed on 1/12/2006 Granting Motion to Remand (related document(s)2, 1). (Saenz De Viteri, Monica)</docketText>
+</extension>
+</relatedItem>
+</mods>

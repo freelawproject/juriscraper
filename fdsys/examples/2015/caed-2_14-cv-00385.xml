@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bdd24">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00385</identifier>
+<identifier type="local">P0b002ee18a8bdd24</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_14-cv-00385</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-00385</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-00385</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Babatov" fullName="Babatov Khadzhimurad" lastName="Khadzhimurad" role="Plaintiff"></party>
+ <party fullName="Sacramento County" lastName="Sacramento County" role="Defendant"></party>
+ <party fullName="Sacramento County Sheriff Department" lastName="Sacramento County Sheriff Department" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Khadzhimurad v. Sacramento County Sheriff Department</title>
+ <partNumber>2:14-cv-00385</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00385/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-00385;14-385</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Babatov Khadzhimurad</displayForm>
+ <namePart type="family">Khadzhimurad</namePart>
+ <namePart type="given">Babatov</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sacramento County</displayForm>
+ <namePart type="family">Sacramento County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sacramento County Sheriff Department</displayForm>
+ <namePart type="family">Sacramento County Sheriff Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-00385</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-00385</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Babatov" fullName="Babatov Khadzhimurad" lastName="Khadzhimurad" role="Plaintiff"></party>
+ <party fullName="Sacramento County" lastName="Sacramento County" role="Defendant"></party>
+ <party fullName="Sacramento County Sheriff Department" lastName="Sacramento County Sheriff Department" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00385-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00385/USCOURTS-caed-2_14-cv-00385-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Khadzhimurad v. Sacramento County Sheriff Department</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 2/12/2014 ORDERING plaintiff to submit, within 30 days, a certified copy of his prison trust account statement. Plaintiff&apos;s failure to comply will result in a recommendations that this action be dismissed without prejudice.(Yin, K)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00385/pdf/USCOURTS-caed-2_14-cv-00385-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6e3b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00385/USCOURTS-caed-2_14-cv-00385-0</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00385_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00385/USCOURTS-caed-2_14-cv-00385-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00385/pdf/USCOURTS-caed-2_14-cv-00385-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00385; (PC) Khadzhimurad v. Sacramento County Sheriff Department; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00385-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-02-12</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 2/12/2014 ORDERING plaintiff to submit, within 30 days, a certified copy of his prison trust account statement. Plaintiff&apos;s failure to comply will result in a recommendations that this action be dismissed without prejudice.(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00385-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00385/USCOURTS-caed-2_14-cv-00385-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Khadzhimurad v. Sacramento County Sheriff Department</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 4/9/14 ORDERING that 2 Motion to Proceed IFP is GRANTED; Plaintiff is obligated to pay the statutory filing fee of $350.00 for this action. Plaintiff&apos;s complaint 1 is DISMISSED with 30 days to amend. Clerk of Court is directed to send plaintiff a copy of the form used by prisoners in this district for filing a civil rights complaint.(Dillon, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00385/pdf/USCOURTS-caed-2_14-cv-00385-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6ea3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00385/USCOURTS-caed-2_14-cv-00385-1</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00385_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00385/USCOURTS-caed-2_14-cv-00385-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00385/pdf/USCOURTS-caed-2_14-cv-00385-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00385; (PC) Khadzhimurad v. Sacramento County Sheriff Department; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00385-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-04-09</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 4/9/14 ORDERING that 2 Motion to Proceed IFP is GRANTED; Plaintiff is obligated to pay the statutory filing fee of $350.00 for this action. Plaintiff&apos;s complaint 1 is DISMISSED with 30 days to amend. Clerk of Court is directed to send plaintiff a copy of the form used by prisoners in this district for filing a civil rights complaint.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00385-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00385/USCOURTS-caed-2_14-cv-00385-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Khadzhimurad v. Sacramento County Sheriff Department</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Kendall J. Newman on 4/9/14 ORDERING that the Sheriff of Sacramento County or a designee shall collect from the prison trust account of Babatov Khadzhimurad an initial partial filing fee and shall forward the amount to the Clerk of the Court. The Clerk of the Court is directed to serve a copy of this order and a copy of plaintiffs signed in forma pauperis affidavit on the Sheriff of Sacramento County. Clerk of the Court is directed to serve a copy of this order on the Financial Department of the court. (cc Financial)(Dillon, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00385/pdf/USCOURTS-caed-2_14-cv-00385-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6ea2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00385/USCOURTS-caed-2_14-cv-00385-2</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00385_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00385/USCOURTS-caed-2_14-cv-00385-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00385/pdf/USCOURTS-caed-2_14-cv-00385-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00385; (PC) Khadzhimurad v. Sacramento County Sheriff Department; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00385-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-04-09</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Kendall J. Newman on 4/9/14 ORDERING that the Sheriff of Sacramento County or a designee shall collect from the prison trust account of Babatov Khadzhimurad an initial partial filing fee and shall forward the amount to the Clerk of the Court. The Clerk of the Court is directed to serve a copy of this order and a copy of plaintiffs signed in forma pauperis affidavit on the Sheriff of Sacramento County. Clerk of the Court is directed to serve a copy of this order on the Financial Department of the court. (cc Financial)(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00385-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00385/USCOURTS-caed-2_14-cv-00385-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Khadzhimurad v. Sacramento County Sheriff Department</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 1/6/2015 RECOMMENDING that this action be dismissed without prejudice. Referred to Judge John A. Mendez; Objections due within 14 days. (Yin, K)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00385/pdf/USCOURTS-caed-2_14-cv-00385-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6e3c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00385/USCOURTS-caed-2_14-cv-00385-3</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00385_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00385/USCOURTS-caed-2_14-cv-00385-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00385/pdf/USCOURTS-caed-2_14-cv-00385-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00385; (PC) Khadzhimurad v. Sacramento County Sheriff Department; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00385-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 1/6/2015 RECOMMENDING that this action be dismissed without prejudice. Referred to Judge John A. Mendez; Objections due within 14 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+</mods>

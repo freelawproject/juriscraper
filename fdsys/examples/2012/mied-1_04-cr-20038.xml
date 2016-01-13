@@ -1,0 +1,554 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181d11565">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038</identifier>
+<identifier type="local">P0b002ee181d11565</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-1_04-cr-20038</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-1_04-cr-20038</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>1:04-cr-20038</caseNumber>
+ <caseOffice>Bay City</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Sergio" fullName="Sergio Coria" lastName="Coria" role="Defendant"></party>
+ <party firstName="James" fullName="James Laughton" lastName="Laughton" role="Defendant"></party>
+ <party firstName="Jonathan" fullName="Jonathan Patrick Rose" lastName="Rose" middleName="Patrick" role="Defendant"></party>
+ <party firstName="David" fullName="David Tice" lastName="Tice" role="Defendant"></party>
+ <party firstName="Shelli" fullName="Shelli Tice" lastName="Tice" role="Defendant"></party>
+ <party firstName="David" fullName="David Warren Tice Jr." generation="Jr." lastName="Tice" middleName="Warren" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Tyler" lastName="Tyler" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald York" lastName="York" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Norton York" lastName="York" middleName="Norton" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. York et al</title>
+ <partNumber>1:04-cr-20038</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:04-cr-20038;04-20038</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Bay City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Sergio Coria</displayForm>
+ <namePart type="family">Coria</namePart>
+ <namePart type="given">Sergio</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Laughton</displayForm>
+ <namePart type="family">Laughton</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jonathan Patrick Rose</displayForm>
+ <namePart type="family">Rose</namePart>
+ <namePart type="given">Jonathan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Tice</displayForm>
+ <namePart type="family">Tice</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shelli Tice</displayForm>
+ <namePart type="family">Tice</namePart>
+ <namePart type="given">Shelli</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Warren Tice Jr.</displayForm>
+ <namePart type="family">Tice</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Tyler</displayForm>
+ <namePart type="family">Tyler</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Donald York</displayForm>
+ <namePart type="family">York</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Norton York</displayForm>
+ <namePart type="family">York</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-1_04-cr-20038</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>1:04-cr-20038</caseNumber>
+ <caseOffice>Bay City</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Sergio" fullName="Sergio Coria" lastName="Coria" role="Defendant"></party>
+ <party firstName="James" fullName="James Laughton" lastName="Laughton" role="Defendant"></party>
+ <party firstName="Jonathan" fullName="Jonathan Patrick Rose" lastName="Rose" middleName="Patrick" role="Defendant"></party>
+ <party firstName="David" fullName="David Tice" lastName="Tice" role="Defendant"></party>
+ <party firstName="Shelli" fullName="Shelli Tice" lastName="Tice" role="Defendant"></party>
+ <party firstName="David" fullName="David Warren Tice Jr." generation="Jr." lastName="Tice" middleName="Warren" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Tyler" lastName="Tyler" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald York" lastName="York" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Norton York" lastName="York" middleName="Norton" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>ORDER for Appointment of Second Counsel as to Donald Norton York Status Conference set for 9/20/2005 02:00 PM before Honorable David M Lawson. Signed by Honorable David M Lawson. (TJac, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e2b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-0</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-08-26</dateIssued>
+  <docketText>ORDER for Appointment of Second Counsel as to Donald Norton York Status Conference set for 9/20/2005 02:00 PM before Honorable David M Lawson. Signed by Honorable David M Lawson. (TJac, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>ORDER for Appointment of Second Counsel as to David Warren Tice, Jr Status Conference set for 9/20/2005 02:00 PM before Honorable David M Lawson. Signed by Honorable David M Lawson. (TJac, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e2d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-1</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-08-26</dateIssued>
+  <docketText>ORDER for Appointment of Second Counsel as to David Warren Tice, Jr Status Conference set for 9/20/2005 02:00 PM before Honorable David M Lawson. Signed by Honorable David M Lawson. (TJac, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>ORDER for Appointment of Second Counsel as to James Laughton Status Conference set for 9/20/2005 02:00 PM before Honorable David M Lawson. Signed by Honorable David M Lawson. (TJac, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e2a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-2</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-08-26</dateIssued>
+  <docketText>ORDER for Appointment of Second Counsel as to James Laughton Status Conference set for 9/20/2005 02:00 PM before Honorable David M Lawson. Signed by Honorable David M Lawson. (TJac, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>ORDER denying without prejudice 172 Motion in Limine as to Matthew Tyler (6). Signed by Honorable David M Lawson. (SGam, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e30</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-3</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-01-05</dateIssued>
+  <docketText>ORDER denying without prejudice 172 Motion in Limine as to Matthew Tyler (6). Signed by Honorable David M Lawson. (SGam, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-4/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>ORDER allowing the parties to file additional briefs and ordering agent Cecil&apos;s personnel file preserved. Signed by Honorable David M Lawson. (SGam, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e2e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-4</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-01-06</dateIssued>
+  <docketText>ORDER allowing the parties to file additional briefs and ordering agent Cecil&apos;s personnel file preserved. Signed by Honorable David M Lawson. (SGam, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-5/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>ORDER denying without prejudice 177 Motion to Compel as to Sergio Coria (5). Signed by Honorable David M Lawson. (SGam, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e4d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-5</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-01-13</dateIssued>
+  <docketText>ORDER denying without prejudice 177 Motion to Compel as to Sergio Coria (5). Signed by Honorable David M Lawson. (SGam, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-6/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>ORDER denying motion to suppress evidence re 82 Motion to Suppress as to David Warren Tice Jr. Signed by Honorable David M Lawson. (FMos, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e32</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-6</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-10-30</dateIssued>
+  <docketText>ORDER denying motion to suppress evidence re 82 Motion to Suppress as to David Warren Tice Jr. Signed by Honorable David M Lawson. (FMos, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-7/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>ORDER granting 349 Motion to adjourn as to Donald Norton York (1); denying 350 Motion for change of venue as to Donald Norton York (1); granting 372 Motion to adjourn as to Donald Norton York (1); denying 336 Motion for additional peremptory charges as to David Warren Tice Jr. (2); denying 337 Motion in limine as to David Warren Tice Jr. (2); denying 338 Motion to sever defendant as to David Warren Tice Jr. (2); denying 339 Motion in limine as to David Warren Tice Jr. (2); granting in part and denying in part 340 Motion in limine as to David Warren Tice Jr. (2); denying 346 Motion to limit the scope of cross-examination as to David Warren Tice Jr. (2); granting in part and denying in part 347 Motion in limine as to David Warren Tice Jr. (2); denying 348 Motion to sever as to David Warren Tice Jr. (2); and granting 351 Motion to extend date for motion cutoff as to James Laughton (7). (see order for additional deadlines.) Signed by Honorable Thomas L Ludington. (DPer)ORDER granting 349 Motion to adjourn as to Donald Norton York (1); denying 350 Motion for change of venue as to Donald Norton York (1); granting 372 Motion to adjourn as to Donald Norton York (1); denying 336 Motion for additional peremptory charges as to David Warren Tice Jr. (2); denying 337 Motion in limine as to David Warren Tice Jr. (2); denying 338 Motion to sever defendant as to David Warren Tice Jr. (2); denying 339 Motion in limine as to David Warren Tice Jr. (2); granting in part and denying in part 340 Motion in limine as to David Warren Tice Jr. (2); denying 346 Motion to limit the scope of cross-examination as to David Warren Tice Jr. (2); granting in part and denying in part 347 Motion in limine as to David Warren Tice Jr. (2); denying 348 Motion to sever as to David Warren Tice Jr. (2); and granting 351 Motion to extend date for motion cutoff as to James Laughton (7). (see order for additional deadlines.) Signed by Honorable Thomas L Ludington. (DPer)ORDER granting 349 Motion to adjourn as to Donald Norton York (1); denying 350 Motion for change of venue as to Donald Norton York (1); granting 372 Motion to adjourn as to Donald Norton York (1); denying 336 Motion for additional peremptory charges as to David Warren Tice Jr. (2); denying 337 Motion in limine as to David Warren Tice Jr. (2); denying 338 Motion to sever defendant as to David Warren Tice Jr. (2); denying 339 Motion in limine as to David Warren Tice Jr. (2); granting in part and denying in part 340 Motion in limine as to David Warren Tice Jr. (2); denying 346 Motion to limit the scope of cross-examination as to David Warren Tice Jr. (2); granting in part and denying in part 347 Motion in limine as to David Warren Tice Jr. (2); denying 348 Motion to sever as to David Warren Tice Jr. (2); and granting 351 Motion to extend date for motion cutoff as to James Laughton (7). (see order for additional deadlines.) Signed by Honorable Thomas L Ludington. (DPer)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e31</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-7</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2007-05-07</dateIssued>
+  <docketText>ORDER granting 349 Motion to adjourn as to Donald Norton York (1); denying 350 Motion for change of venue as to Donald Norton York (1); granting 372 Motion to adjourn as to Donald Norton York (1); denying 336 Motion for additional peremptory charges as to David Warren Tice Jr. (2); denying 337 Motion in limine as to David Warren Tice Jr. (2); denying 338 Motion to sever defendant as to David Warren Tice Jr. (2); denying 339 Motion in limine as to David Warren Tice Jr. (2); granting in part and denying in part 340 Motion in limine as to David Warren Tice Jr. (2); denying 346 Motion to limit the scope of cross-examination as to David Warren Tice Jr. (2); granting in part and denying in part 347 Motion in limine as to David Warren Tice Jr. (2); denying 348 Motion to sever as to David Warren Tice Jr. (2); and granting 351 Motion to extend date for motion cutoff as to James Laughton (7). (see order for additional deadlines.) Signed by Honorable Thomas L Ludington. (DPer)ORDER granting 349 Motion to adjourn as to Donald Norton York (1); denying 350 Motion for change of venue as to Donald Norton York (1); granting 372 Motion to adjourn as to Donald Norton York (1); denying 336 Motion for additional peremptory charges as to David Warren Tice Jr. (2); denying 337 Motion in limine as to David Warren Tice Jr. (2); denying 338 Motion to sever defendant as to David Warren Tice Jr. (2); denying 339 Motion in limine as to David Warren Tice Jr. (2); granting in part and denying in part 340 Motion in limine as to David Warren Tice Jr. (2); denying 346 Motion to limit the scope of cross-examination as to David Warren Tice Jr. (2); granting in part and denying in part 347 Motion in limine as to David Warren Tice Jr. (2); denying 348 Motion to sever as to David Warren Tice Jr. (2); and granting 351 Motion to extend date for motion cutoff as to James Laughton (7). (see order for additional deadlines.) Signed by Honorable Thomas L Ludington. (DPer)ORDER granting 349 Motion to adjourn as to Donald Norton York (1); denying 350 Motion for change of venue as to Donald Norton York (1); granting 372 Motion to adjourn as to Donald Norton York (1); denying 336 Motion for additional peremptory charges as to David Warren Tice Jr. (2); denying 337 Motion in limine as to David Warren Tice Jr. (2); denying 338 Motion to sever defendant as to David Warren Tice Jr. (2); denying 339 Motion in limine as to David Warren Tice Jr. (2); granting in part and denying in part 340 Motion in limine as to David Warren Tice Jr. (2); denying 346 Motion to limit the scope of cross-examination as to David Warren Tice Jr. (2); granting in part and denying in part 347 Motion in limine as to David Warren Tice Jr. (2); denying 348 Motion to sever as to David Warren Tice Jr. (2); and granting 351 Motion to extend date for motion cutoff as to James Laughton (7). (see order for additional deadlines.) Signed by Honorable Thomas L Ludington. (DPer)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-8/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>ORDER denying 390 Motion to Compel as to Donald Norton York (1); denying 381 Motion for Bill of Particulars as to James Laughton (7); denying 382 Motion for Disclosure as to James Laughton (7); denying 383 Motion for Disclosure as to James Laughton (7); denying 384 Motion to Sever Defendant as to James Laughton (7); denying 392 Joinder to Motion as to James Laughton (7). Signed by Honorable Thomas L Ludington. (JCre)ORDER denying 390 Motion to Compel as to Donald Norton York (1); denying 381 Motion for Bill of Particulars as to James Laughton (7); denying 382 Motion for Disclosure as to James Laughton (7); denying 383 Motion for Disclosure as to James Laughton (7); denying 384 Motion to Sever Defendant as to James Laughton (7); denying 392 Joinder to Motion as to James Laughton (7). Signed by Honorable Thomas L Ludington. (JCre)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e00</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-8</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2007-06-27</dateIssued>
+  <docketText>ORDER denying 390 Motion to Compel as to Donald Norton York (1); denying 381 Motion for Bill of Particulars as to James Laughton (7); denying 382 Motion for Disclosure as to James Laughton (7); denying 383 Motion for Disclosure as to James Laughton (7); denying 384 Motion to Sever Defendant as to James Laughton (7); denying 392 Joinder to Motion as to James Laughton (7). Signed by Honorable Thomas L Ludington. (JCre)ORDER denying 390 Motion to Compel as to Donald Norton York (1); denying 381 Motion for Bill of Particulars as to James Laughton (7); denying 382 Motion for Disclosure as to James Laughton (7); denying 383 Motion for Disclosure as to James Laughton (7); denying 384 Motion to Sever Defendant as to James Laughton (7); denying 392 Joinder to Motion as to James Laughton (7). Signed by Honorable Thomas L Ludington. (JCre)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-9/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>ORDER Determining Scope of Defendant&apos;s Waiver of Attorney-Client Privilgege as to Donald Norton York. Signed by District Judge Thomas L Ludington. (SGam)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e2f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-9</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2008-09-18</dateIssued>
+  <docketText>ORDER Determining Scope of Defendant&apos;s Waiver of Attorney-Client Privilgege as to Donald Norton York. Signed by District Judge Thomas L Ludington. (SGam)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-10/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>REPORT AND RECOMMENDATION as to Donald Norton York recommending 583 MOTION to Vacate Sentence under 28 U.S.C. 2255 be denied. Signed by Magistrate Judge Charles E. Binder. (PMor)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e29</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-10</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2011-11-07</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION as to Donald Norton York recommending 583 MOTION to Vacate Sentence under 28 U.S.C. 2255 be denied. Signed by Magistrate Judge Charles E. Binder. (PMor)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-11/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>ORDER adopting 591 Report and Recommendation and denying 583 Motion to Vacate (2255) as to Donald Norton York (1). Signed by District Judge Thomas L. Ludington. (SGam) Civil Case 1:11-cv-13282-TLL closed.</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e4e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-11</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-01-11</dateIssued>
+  <docketText>ORDER adopting 591 Report and Recommendation and denying 583 Motion to Vacate (2255) as to Donald Norton York (1). Signed by District Judge Thomas L. Ludington. (SGam) Civil Case 1:11-cv-13282-TLL closed.</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_04-cr-20038-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-12/mods.xml">
+ <titleInfo>
+  <title>United States of America v. York et al</title>
+  <subTitle>ORDER denying as moot 596 Motion to accept notice of appeal without payment of filing fee as to Donald Norton York (1); denying 597 Motion for Certificate of Appealability as to Donald Norton York (1). Signed by District Judge Thomas L. Ludington. (SGam)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_04-cr-20038-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d11e2c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-12</identifier>
+ <identifier type="former granule identifier">mied-1_04-cr-20038_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_04-cr-20038/USCOURTS-mied-1_04-cr-20038-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_04-cr-20038/pdf/USCOURTS-mied-1_04-cr-20038-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-20038; United States of America v. York et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_04-cr-20038-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-01-27</dateIssued>
+  <docketText>ORDER denying as moot 596 Motion to accept notice of appeal without payment of filing fee as to Donald Norton York (1); denying 597 Motion for Certificate of Appealability as to Donald Norton York (1). Signed by District Judge Thomas L. Ludington. (SGam)</docketText>
+</extension>
+</relatedItem>
+</mods>

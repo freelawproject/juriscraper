@@ -1,0 +1,477 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1849d2248">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-05-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-05-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789</identifier>
+<identifier type="local">P0b002ee1849d2248</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-05-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-05-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-00789</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00789</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00789</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party firstName="Donna" fullName="Donna Beiter" lastName="Beiter" role="Defendant"></party>
+ <party firstName="Kulvinder" fullName="Kulvinder S. Boparai" lastName="Boparai" middleName="S." role="Plaintiff"></party>
+ <party firstName="Dean" fullName="Dean Norman" lastName="Norman" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric K. Shinseki" lastName="Shinseki" middleName="K." role="Defendant"></party>
+ <party fullName="US Department of Veterans Affairs" lastName="US Department of Veterans Affairs" role="Defendant"></party>
+ <party firstName="Jo Ann" fullName="Jo Ann Van Horn" lastName="Van Horn" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Yoshikawa" lastName="Yoshikawa" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Boparai v. Shinseki et al</title>
+ <partNumber>1:12-cv-00789</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-00789;12-789</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Donna Beiter</displayForm>
+ <namePart type="family">Beiter</namePart>
+ <namePart type="given">Donna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kulvinder S. Boparai</displayForm>
+ <namePart type="family">Boparai</namePart>
+ <namePart type="given">Kulvinder</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dean Norman</displayForm>
+ <namePart type="family">Norman</namePart>
+ <namePart type="given">Dean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eric K. Shinseki</displayForm>
+ <namePart type="family">Shinseki</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>US Department of Veterans Affairs</displayForm>
+ <namePart type="family">US Department of Veterans Affairs</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jo Ann Van Horn</displayForm>
+ <namePart type="family">Van Horn</namePart>
+ <namePart type="given">Jo Ann</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Yoshikawa</displayForm>
+ <namePart type="family">Yoshikawa</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00789</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00789</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party firstName="Donna" fullName="Donna Beiter" lastName="Beiter" role="Defendant"></party>
+ <party firstName="Kulvinder" fullName="Kulvinder S. Boparai" lastName="Boparai" middleName="S." role="Plaintiff"></party>
+ <party firstName="Dean" fullName="Dean Norman" lastName="Norman" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric K. Shinseki" lastName="Shinseki" middleName="K." role="Defendant"></party>
+ <party fullName="US Department of Veterans Affairs" lastName="US Department of Veterans Affairs" role="Defendant"></party>
+ <party firstName="Jo Ann" fullName="Jo Ann Van Horn" lastName="Van Horn" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Yoshikawa" lastName="Yoshikawa" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00789-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-0/mods.xml">
+ <titleInfo>
+  <title>Boparai v. Shinseki et al</title>
+  <subTitle>ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND, signed by Magistrate Judge Jennifer L. Thurston on 7/20/2012. (Hall, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00789-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d8488</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00789_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789/pdf/USCOURTS-caed-1_12-cv-00789-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00789; Boparai v. Shinseki et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00789-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-07-20</dateIssued>
+  <docketText>ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND, signed by Magistrate Judge Jennifer L. Thurston on 7/20/2012. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00789-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-1/mods.xml">
+ <titleInfo>
+  <title>Boparai v. Shinseki et al</title>
+  <subTitle>ORDER GRANTING Extension to File Amended Complaint 4 5, signed by Magistrate Judge Jennifer L. Thurston on 8/22/2012. (Hall, S)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00789-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d8489</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00789_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789/pdf/USCOURTS-caed-1_12-cv-00789-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00789; Boparai v. Shinseki et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00789-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-08-22</dateIssued>
+  <docketText>ORDER GRANTING Extension to File Amended Complaint 4 5, signed by Magistrate Judge Jennifer L. Thurston on 8/22/2012. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00789-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-2/mods.xml">
+ <titleInfo>
+  <title>Boparai v. Shinseki et al</title>
+  <subTitle>ORDER DISMISSING FIRST AMENDED COMPLAINT WITH LEAVE TO AMEND, signed by Magistrate Judge Jennifer L. Thurston on 10/4/2012. (Hall, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00789-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d848a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00789_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789/pdf/USCOURTS-caed-1_12-cv-00789-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00789; Boparai v. Shinseki et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00789-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-10-04</dateIssued>
+  <docketText>ORDER DISMISSING FIRST AMENDED COMPLAINT WITH LEAVE TO AMEND, signed by Magistrate Judge Jennifer L. Thurston on 10/4/2012. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00789-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-3/mods.xml">
+ <titleInfo>
+  <title>Boparai v. Shinseki et al</title>
+  <subTitle>ORDER DISMISSING SECOND AMENDED COMPLAINT WITH LEAVE TO AMEND, signed by Magistrate Judge Jennifer L. Thurston on 12/6/2012. (Hall, S)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00789-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d8487</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00789_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789/pdf/USCOURTS-caed-1_12-cv-00789-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00789; Boparai v. Shinseki et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00789-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-12-07</dateIssued>
+  <docketText>ORDER DISMISSING SECOND AMENDED COMPLAINT WITH LEAVE TO AMEND, signed by Magistrate Judge Jennifer L. Thurston on 12/6/2012. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00789-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-4/mods.xml">
+ <titleInfo>
+  <title>Boparai v. Shinseki et al</title>
+  <subTitle>ORDER to SHOW CAUSE Why the Action Should Not Be Dismissed for Plaintiff&apos;s Failure to Prosecute and Failure to Comply with the Court Order, signed by Magistrate Judge Jennifer L. Thurston on 1/2/2013. (Hall, S)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00789-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d831b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00789_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789/pdf/USCOURTS-caed-1_12-cv-00789-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00789; Boparai v. Shinseki et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00789-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER to SHOW CAUSE Why the Action Should Not Be Dismissed for Plaintiff&apos;s Failure to Prosecute and Failure to Comply with the Court Order, signed by Magistrate Judge Jennifer L. Thurston on 1/2/2013. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00789-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-5/mods.xml">
+ <titleInfo>
+  <title>Boparai v. Shinseki et al</title>
+  <subTitle>ORDER DISCHARGING the Order to Show Cause Issued January 2, 2013; ORDER GRANTING Plaintiff&apos;s Motion for an Extension of Time 12, signed by Magistrate Judge Jennifer L. Thurston on 1/7/2013. (Hall, S)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00789-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d831a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00789_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789/pdf/USCOURTS-caed-1_12-cv-00789-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00789; Boparai v. Shinseki et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00789-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-01-07</dateIssued>
+  <docketText>ORDER DISCHARGING the Order to Show Cause Issued January 2, 2013; ORDER GRANTING Plaintiff&apos;s Motion for an Extension of Time 12, signed by Magistrate Judge Jennifer L. Thurston on 1/7/2013. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00789-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-6/mods.xml">
+ <titleInfo>
+  <title>Boparai v. Shinseki et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Dismissing Plaintiff&apos;s Third Amended Complaint Without Leave to Amend re 14, signed by Magistrate Judge Jennifer L. Thurston on 2/21/2013. Referred to Judge O&apos;Neill. Objections to F&amp;R due by 3/8/2013. (Hall, S)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00789-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d831c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00789_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789/pdf/USCOURTS-caed-1_12-cv-00789-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00789; Boparai v. Shinseki et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00789-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-02-22</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Dismissing Plaintiff&apos;s Third Amended Complaint Without Leave to Amend re 14, signed by Magistrate Judge Jennifer L. Thurston on 2/21/2013. Referred to Judge O&apos;Neill. Objections to F&amp;R due by 3/8/2013. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00789-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-7/mods.xml">
+ <titleInfo>
+  <title>Boparai v. Shinseki et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s Motion Seal Documents 17, signed by Magistrate Judge Jennifer L. Thurston on 3/14/2013. (Hall, S)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00789-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d831d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00789_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789/pdf/USCOURTS-caed-1_12-cv-00789-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00789; Boparai v. Shinseki et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00789-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-03-14</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s Motion Seal Documents 17, signed by Magistrate Judge Jennifer L. Thurston on 3/14/2013. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00789-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-8/mods.xml">
+ <titleInfo>
+  <title>Boparai v. Shinseki et al</title>
+  <subTitle>ORDER WITHDRAWING the Findings and Recommendations Issued February 22, 2013, signed by Magistrate Judge Jennifer L. Thurston on 3/14/2013. (Hall, S)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00789-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d848b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-8</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00789_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789/pdf/USCOURTS-caed-1_12-cv-00789-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00789; Boparai v. Shinseki et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00789-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-03-14</dateIssued>
+  <docketText>ORDER WITHDRAWING the Findings and Recommendations Issued February 22, 2013, signed by Magistrate Judge Jennifer L. Thurston on 3/14/2013. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00789-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-9/mods.xml">
+ <titleInfo>
+  <title>Boparai v. Shinseki et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s Motion for Guidance and Directing Plaintiff to File the Fourth Amended Complaint on or Before April 30, 2013 re 20, signed by Magistrate Judge Jennifer L. Thurston on 4/12/2013. (Hall, S)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00789-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d831e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-9</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00789_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789/pdf/USCOURTS-caed-1_12-cv-00789-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00789; Boparai v. Shinseki et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00789-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-04-12</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s Motion for Guidance and Directing Plaintiff to File the Fourth Amended Complaint on or Before April 30, 2013 re 20, signed by Magistrate Judge Jennifer L. Thurston on 4/12/2013. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00789-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-10/mods.xml">
+ <titleInfo>
+  <title>Boparai v. Shinseki et al</title>
+  <subTitle>ORDER Granting Plaintiff&apos;s 22 Motion to Dismiss; ORDER Directing Clerk of the Court to Close this Action Pursuant to the Plaintiff&apos;s Rule 41 Notice, signed by District Judge Lawrence J. O&apos;Neill on 5/1/13. CASE CLOSED. (Gonzalez, R)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00789-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d8319</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-10</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00789_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00789/USCOURTS-caed-1_12-cv-00789-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00789/pdf/USCOURTS-caed-1_12-cv-00789-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00789; Boparai v. Shinseki et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00789-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-05-02</dateIssued>
+  <docketText>ORDER Granting Plaintiff&apos;s 22 Motion to Dismiss; ORDER Directing Clerk of the Court to Close this Action Pursuant to the Plaintiff&apos;s Rule 41 Notice, signed by District Judge Lawrence J. O&apos;Neill on 5/1/13. CASE CLOSED. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

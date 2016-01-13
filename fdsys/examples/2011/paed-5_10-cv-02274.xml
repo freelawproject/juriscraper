@@ -1,0 +1,214 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181394dbf">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_10-cv-02274</identifier>
+<identifier type="local">P0b002ee181394dbf</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-5_10-cv-02274</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-5_10-cv-02274</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>5:10-cv-02274</caseNumber>
+ <caseOffice>Allentown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party fullName="BEM SERVICES, INC." lastName="BEM SERVICES, INC." role="Defendant"></party>
+ <party fullName="BRUSH ENGINEERED MATERIALS, INC." lastName="BRUSH ENGINEERED MATERIALS, INC." role="Defendant"></party>
+ <party fullName="BRUSH WELLMAN, INC." lastName="BRUSH WELLMAN, INC." role="Defendant"></party>
+ <party fullName="METLIFE, INC." lastName="METLIFE, INC." role="Defendant"></party>
+ <party fullName="METROPOLITAN LIFE INSURANCE CO." lastName="METROPOLITAN LIFE INSURANCE CO." role="Defendant"></party>
+ <party firstName="ZOA" fullName="ZOA K. REBER" lastName="REBER" middleName="K." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>REBER v. BRUSH WELLMAN, INC. et al</title>
+ <partNumber>5:10-cv-02274</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_10-cv-02274/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:10-cv-02274;10-2274</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Allentown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>BEM SERVICES, INC.</displayForm>
+ <namePart type="family">BEM SERVICES, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>BRUSH ENGINEERED MATERIALS, INC.</displayForm>
+ <namePart type="family">BRUSH ENGINEERED MATERIALS, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>BRUSH WELLMAN, INC.</displayForm>
+ <namePart type="family">BRUSH WELLMAN, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>METLIFE, INC.</displayForm>
+ <namePart type="family">METLIFE, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>METROPOLITAN LIFE INSURANCE CO.</displayForm>
+ <namePart type="family">METROPOLITAN LIFE INSURANCE CO.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ZOA K. REBER</displayForm>
+ <namePart type="family">REBER</namePart>
+ <namePart type="given">ZOA</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-5_10-cv-02274</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>5:10-cv-02274</caseNumber>
+ <caseOffice>Allentown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party fullName="BEM SERVICES, INC." lastName="BEM SERVICES, INC." role="Defendant"></party>
+ <party fullName="BRUSH ENGINEERED MATERIALS, INC." lastName="BRUSH ENGINEERED MATERIALS, INC." role="Defendant"></party>
+ <party fullName="BRUSH WELLMAN, INC." lastName="BRUSH WELLMAN, INC." role="Defendant"></party>
+ <party fullName="METLIFE, INC." lastName="METLIFE, INC." role="Defendant"></party>
+ <party fullName="METROPOLITAN LIFE INSURANCE CO." lastName="METROPOLITAN LIFE INSURANCE CO." role="Defendant"></party>
+ <party firstName="ZOA" fullName="ZOA K. REBER" lastName="REBER" middleName="K." role="Plaintiff"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-5_10-cv-02274-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_10-cv-02274/USCOURTS-paed-5_10-cv-02274-0/mods.xml">
+ <titleInfo>
+  <title>REBER v. BRUSH WELLMAN, INC. et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 1/24/11. 1/25/11 ENTERED AND COPIES E-MAILED.(ti, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-5_10-cv-02274-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18148ffd0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_10-cv-02274/USCOURTS-paed-5_10-cv-02274-0</identifier>
+ <identifier type="former granule identifier">paed-5_10-cv-02274_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_10-cv-02274/USCOURTS-paed-5_10-cv-02274-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_10-cv-02274/pdf/USCOURTS-paed-5_10-cv-02274-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cv-02274; REBER v. BRUSH WELLMAN, INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-5_10-cv-02274-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-25</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 1/24/11. 1/25/11 ENTERED AND COPIES E-MAILED.(ti, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-5_10-cv-02274-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_10-cv-02274/USCOURTS-paed-5_10-cv-02274-1/mods.xml">
+ <titleInfo>
+  <title>REBER v. BRUSH WELLMAN, INC. et al</title>
+  <subTitle>ORDER THAT UPON CONSIDERATION OF THE UNCONTESTED MOTION OF DEFENDANT BRUSH WELLMAN, INC., AND DEFENDANT BRUSH ENGINEERING MATERIALS, INC., 6, IT IS HEREBY ORDERED THAT THE MOTION IS GRANTED IN ITS ENTIRETY. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 1/24/11. 1/25/11 ENTERED AND COPIES E-MAILED.(ti, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-5_10-cv-02274-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18148ffcf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_10-cv-02274/USCOURTS-paed-5_10-cv-02274-1</identifier>
+ <identifier type="former granule identifier">paed-5_10-cv-02274_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_10-cv-02274/USCOURTS-paed-5_10-cv-02274-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_10-cv-02274/pdf/USCOURTS-paed-5_10-cv-02274-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cv-02274; REBER v. BRUSH WELLMAN, INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-5_10-cv-02274-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-25</dateIssued>
+  <docketText>ORDER THAT UPON CONSIDERATION OF THE UNCONTESTED MOTION OF DEFENDANT BRUSH WELLMAN, INC., AND DEFENDANT BRUSH ENGINEERING MATERIALS, INC., 6, IT IS HEREBY ORDERED THAT THE MOTION IS GRANTED IN ITS ENTIRETY. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 1/24/11. 1/25/11 ENTERED AND COPIES E-MAILED.(ti, )</docketText>
+</extension>
+</relatedItem>
+</mods>

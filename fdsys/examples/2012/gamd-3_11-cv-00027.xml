@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817191ae">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_11-cv-00027</identifier>
+<identifier type="local">P0b002ee1817191ae</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-3_11-cv-00027</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-3_11-cv-00027</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>3:11-cv-00027</caseNumber>
+ <caseOffice>Athens</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:405 Review of HHS Decision (SSID)</cause>
+ <party firstName="MICHAEL" fullName="MICHAEL J ASTRUE" lastName="ASTRUE" middleName="J" role="Defendant"></party>
+ <party firstName="Elberta" fullName="Elberta Keenan" lastName="Keenan" role="Plaintiff"></party>
+ <party fullName="SOCIAL SECURITY ADMINISTRATION (NOTICE)" lastName="SOCIAL SECURITY ADMINISTRATION (NOTICE)" role="Notice"></party>
+</extension>
+<titleInfo>
+ <title>Keenan v. Astrue</title>
+ <partNumber>3:11-cv-00027</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_11-cv-00027/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:11-cv-00027;11-027</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Athens</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>MICHAEL J ASTRUE</displayForm>
+ <namePart type="family">ASTRUE</namePart>
+ <namePart type="given">MICHAEL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Elberta Keenan</displayForm>
+ <namePart type="family">Keenan</namePart>
+ <namePart type="given">Elberta</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>SOCIAL SECURITY ADMINISTRATION (NOTICE)</displayForm>
+ <namePart type="family">SOCIAL SECURITY ADMINISTRATION (NOTICE)</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-3_11-cv-00027</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>3:11-cv-00027</caseNumber>
+ <caseOffice>Athens</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:405 Review of HHS Decision (SSID)</cause>
+ <party firstName="MICHAEL" fullName="MICHAEL J ASTRUE" lastName="ASTRUE" middleName="J" role="Defendant"></party>
+ <party firstName="Elberta" fullName="Elberta Keenan" lastName="Keenan" role="Plaintiff"></party>
+ <party fullName="SOCIAL SECURITY ADMINISTRATION (NOTICE)" lastName="SOCIAL SECURITY ADMINISTRATION (NOTICE)" role="Notice"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-3_11-cv-00027-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_11-cv-00027/USCOURTS-gamd-3_11-cv-00027-0/mods.xml">
+ <titleInfo>
+  <title>Keenan v. Astrue</title>
+  <subTitle>REPORT AND RECOMMENDATION re 1 Complaint filed by Elberta Keenan. Ordered by US Mag Judge Thomas Q Langstaff on 12/14/2011. (llf)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-3_11-cv-00027-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181719a1a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_11-cv-00027/USCOURTS-gamd-3_11-cv-00027-0</identifier>
+ <identifier type="former granule identifier">gamd-3_11-cv-00027_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_11-cv-00027/USCOURTS-gamd-3_11-cv-00027-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_11-cv-00027/pdf/USCOURTS-gamd-3_11-cv-00027-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:11-cv-00027; Keenan v. Astrue; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-3_11-cv-00027-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-12-14</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 1 Complaint filed by Elberta Keenan. Ordered by US Mag Judge Thomas Q Langstaff on 12/14/2011. (llf)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-3_11-cv-00027-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_11-cv-00027/USCOURTS-gamd-3_11-cv-00027-1/mods.xml">
+ <titleInfo>
+  <title>Keenan v. Astrue</title>
+  <subTitle>ORDER adopting 13 Report and Recommendations. The final decision of the Commissioner is Affirmed.Ordered by Judge C. Ashley Royal on 1/9/2012 (lap)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-3_11-cv-00027-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181719a19</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_11-cv-00027/USCOURTS-gamd-3_11-cv-00027-1</identifier>
+ <identifier type="former granule identifier">gamd-3_11-cv-00027_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_11-cv-00027/USCOURTS-gamd-3_11-cv-00027-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_11-cv-00027/pdf/USCOURTS-gamd-3_11-cv-00027-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:11-cv-00027; Keenan v. Astrue; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-3_11-cv-00027-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>ORDER adopting 13 Report and Recommendations. The final decision of the Commissioner is Affirmed.Ordered by Judge C. Ashley Royal on 1/9/2012 (lap)</docketText>
+</extension>
+</relatedItem>
+</mods>

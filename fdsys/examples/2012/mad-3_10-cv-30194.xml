@@ -1,0 +1,348 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183d550da">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-09-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30194</identifier>
+<identifier type="local">P0b002ee183d550da</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-3_10-cv-30194</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-3_10-cv-30194</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>3:10-cv-30194</caseNumber>
+ <caseOffice>Springfield</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="James" fullName="James Saba" lastName="Saba" role="Respondent"></party>
+ <party firstName="James" fullName="James Sullivan" lastName="Sullivan" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Sullivan v. Saba</title>
+ <partNumber>3:10-cv-30194</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30194/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:10-cv-30194;10-30194</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Springfield</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>James Saba</displayForm>
+ <namePart type="family">Saba</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>James Sullivan</displayForm>
+ <namePart type="family">Sullivan</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-3_10-cv-30194</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>3:10-cv-30194</caseNumber>
+ <caseOffice>Springfield</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="James" fullName="James Saba" lastName="Saba" role="Respondent"></party>
+ <party firstName="James" fullName="James Sullivan" lastName="Sullivan" role="Petitioner"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_10-cv-30194-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-0/mods.xml">
+ <titleInfo>
+  <title>Sullivan v. Saba</title>
+  <subTitle>Judge Michael A Ponsor: ORDER entered. JUDGMENT for Respondent (Lindsay, Maurice)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_10-cv-30194-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d56ea6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-0</identifier>
+ <identifier type="former granule identifier">mad-3_10-cv-30194_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30194/pdf/USCOURTS-mad-3_10-cv-30194-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:10-cv-30194; Sullivan v. Saba; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_10-cv-30194-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-11-29</dateIssued>
+  <docketText>Judge Michael A Ponsor: ORDER entered. JUDGMENT for Respondent (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_10-cv-30194-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-1/mods.xml">
+ <titleInfo>
+  <title>Sullivan v. Saba</title>
+  <subTitle>Judge Michael A. Ponsor: MEMORANDUM AND ORDER entered. As follows: Petitioners Motion for Stay and Abeyance (Dkt. No. 25) is hereby DENIED. Respondents Motion to Dismiss (Dkt. No. 7) will be ALLOWED in its entirety on February 10, 2012 unless, on or before that date, Petitioner files an amended petition deleting Grounds Three and Four. See the attached memo and order for complete details. (Lindsay, Maurice)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_10-cv-30194-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d56ea4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-1</identifier>
+ <identifier type="former granule identifier">mad-3_10-cv-30194_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30194/pdf/USCOURTS-mad-3_10-cv-30194-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:10-cv-30194; Sullivan v. Saba; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_10-cv-30194-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>Judge Michael A. Ponsor: MEMORANDUM AND ORDER entered. As follows: Petitioners Motion for Stay and Abeyance (Dkt. No. 25) is hereby DENIED. Respondents Motion to Dismiss (Dkt. No. 7) will be ALLOWED in its entirety on February 10, 2012 unless, on or before that date, Petitioner files an amended petition deleting Grounds Three and Four. See the attached memo and order for complete details. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_10-cv-30194-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-2/mods.xml">
+ <titleInfo>
+  <title>Sullivan v. Saba</title>
+  <subTitle>Judge Michael A. Ponsor: MEMORANDUM AND ORDER entered. As follows: Respondents Motion to Dismiss (Dkt. No. 31) is hereby ALLOWED. Petitioners Motion toVacate (Dkt. No. 29) is correspondingly DENIED. The clerk will enter judgment for Respondent; this case may now be closed. See the attached memo and order for complete details. (Lindsay, Maurice)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_10-cv-30194-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d56ea7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-2</identifier>
+ <identifier type="former granule identifier">mad-3_10-cv-30194_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30194/pdf/USCOURTS-mad-3_10-cv-30194-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:10-cv-30194; Sullivan v. Saba; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_10-cv-30194-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-04-20</dateIssued>
+  <docketText>Judge Michael A. Ponsor: MEMORANDUM AND ORDER entered. As follows: Respondents Motion to Dismiss (Dkt. No. 31) is hereby ALLOWED. Petitioners Motion toVacate (Dkt. No. 29) is correspondingly DENIED. The clerk will enter judgment for Respondent; this case may now be closed. See the attached memo and order for complete details. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_10-cv-30194-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-3/mods.xml">
+ <titleInfo>
+  <title>Sullivan v. Saba</title>
+  <subTitle>Judge Michael A. Ponsor: ORDER entered. JUDGMENT for Respondent. (Lindsay, Maurice)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_10-cv-30194-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d56ea0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-3</identifier>
+ <identifier type="former granule identifier">mad-3_10-cv-30194_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30194/pdf/USCOURTS-mad-3_10-cv-30194-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:10-cv-30194; Sullivan v. Saba; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_10-cv-30194-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-04-20</dateIssued>
+  <docketText>Judge Michael A. Ponsor: ORDER entered. JUDGMENT for Respondent. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_10-cv-30194-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-4/mods.xml">
+ <titleInfo>
+  <title>Sullivan v. Saba</title>
+  <subTitle>Judge Michael A. Ponsor: ENDORSED ORDER entered denying 41 Motion to Vacate previous order of dismissal and accept second amended petition. DENIED for the reasons set forth in Respondent&apos;s opposition, Dkt. Nos. 39 and 46. (Lindsay, Maurice)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_10-cv-30194-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d56ea3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-4</identifier>
+ <identifier type="former granule identifier">mad-3_10-cv-30194_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30194/pdf/USCOURTS-mad-3_10-cv-30194-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:10-cv-30194; Sullivan v. Saba; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_10-cv-30194-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-06-25</dateIssued>
+  <docketText>Judge Michael A. Ponsor: ENDORSED ORDER entered denying 41 Motion to Vacate previous order of dismissal and accept second amended petition. DENIED for the reasons set forth in Respondent&apos;s opposition, Dkt. Nos. 39 and 46. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_10-cv-30194-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-5/mods.xml">
+ <titleInfo>
+  <title>Sullivan v. Saba</title>
+  <subTitle>Judge Michael A. Ponsor: ENDORSED ORDER entered denying 34 Motion to Reconsider dismissal of habeas petition. DENIED, for reasons set forth in Respondent&apos;s opposition (Dkt. 39) (Lindsay, Maurice)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_10-cv-30194-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d56ea5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-5</identifier>
+ <identifier type="former granule identifier">mad-3_10-cv-30194_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30194/pdf/USCOURTS-mad-3_10-cv-30194-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:10-cv-30194; Sullivan v. Saba; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_10-cv-30194-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-06-25</dateIssued>
+  <docketText>Judge Michael A. Ponsor: ENDORSED ORDER entered denying 34 Motion to Reconsider dismissal of habeas petition. DENIED, for reasons set forth in Respondent&apos;s opposition (Dkt. 39) (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_10-cv-30194-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-6/mods.xml">
+ <titleInfo>
+  <title>Sullivan v. Saba</title>
+  <subTitle>Judge Michael A. Ponsor: ENDORSED ORDER entered denying 38 Motion to Vacate, Set Aside or Correct sentence. DENIED. The court has denied Petitioner&apos;s motions to reconsider (Dkt 34) and to vacate (Dkt 41). (Lindsay, Maurice)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_10-cv-30194-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d56ea2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-6</identifier>
+ <identifier type="former granule identifier">mad-3_10-cv-30194_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30194/pdf/USCOURTS-mad-3_10-cv-30194-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:10-cv-30194; Sullivan v. Saba; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_10-cv-30194-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-06-25</dateIssued>
+  <docketText>Judge Michael A. Ponsor: ENDORSED ORDER entered denying 38 Motion to Vacate, Set Aside or Correct sentence. DENIED. The court has denied Petitioner&apos;s motions to reconsider (Dkt 34) and to vacate (Dkt 41). (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_10-cv-30194-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-7/mods.xml">
+ <titleInfo>
+  <title>Sullivan v. Saba</title>
+  <subTitle>Judge Michael A. Ponsor: MEMORANDUM AND ORDER entered. As follows. Based on the attached memo and order, the motion for a Certificate of Appealability (Dkt.No. 55) is hereby DENIED. It is So Ordered. See the attached memo and order for complete details. (Lindsay, Maurice)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_10-cv-30194-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d56ea1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-7</identifier>
+ <identifier type="former granule identifier">mad-3_10-cv-30194_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30194/USCOURTS-mad-3_10-cv-30194-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30194/pdf/USCOURTS-mad-3_10-cv-30194-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:10-cv-30194; Sullivan v. Saba; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_10-cv-30194-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-09-25</dateIssued>
+  <docketText>Judge Michael A. Ponsor: MEMORANDUM AND ORDER entered. As follows. Based on the attached memo and order, the motion for a Certificate of Appealability (Dkt.No. 55) is hereby DENIED. It is So Ordered. See the attached memo and order for complete details. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+</mods>

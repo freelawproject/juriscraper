@@ -1,0 +1,575 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d80b445">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-09-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-09-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385</identifier>
+<identifier type="local">P0b002ee18d80b445</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-09-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-09-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_11-cr-00385</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cr-00385</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cr-00385</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Richard" fullName="Richard Daleman" lastName="Daleman" role="Defendant"></party>
+ <party fullName="TULARE COUNTY SHERIFF&apos;S DEPARTMENT" lastName="TULARE COUNTY SHERIFF&apos;S DEPARTMENT" role="Movant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Daleman</title>
+ <partNumber>1:11-cr-00385</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cr-00385;11-385</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Richard Daleman</displayForm>
+ <namePart type="family">Daleman</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TULARE COUNTY SHERIFF&apos;S DEPARTMENT</displayForm>
+ <namePart type="family">TULARE COUNTY SHERIFF&apos;S DEPARTMENT</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cr-00385</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cr-00385</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Richard" fullName="Richard Daleman" lastName="Daleman" role="Defendant"></party>
+ <party fullName="TULARE COUNTY SHERIFF&apos;S DEPARTMENT" lastName="TULARE COUNTY SHERIFF&apos;S DEPARTMENT" role="Movant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>DETENTION ORDER as to Richard Daleman, signed by Magistrate Judge Barbara A. McAuliffe on 11/3/2011. (Herman, H)[1:11-mj-00229-BAM]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d813509</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-0</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-11-07</dateIssued>
+  <docketText>DETENTION ORDER as to Richard Daleman, signed by Magistrate Judge Barbara A. McAuliffe on 11/3/2011. (Herman, H)[1:11-mj-00229-BAM]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>ORDER as to Richard Daleman, ( Status Conference set for 12/19/11 is continued to 1/30/2012 at 09:00 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii.) signed by Chief Judge Anthony W. Ishii on 12/16/11. (Nazaroff, H)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d813507</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-1</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-12-16</dateIssued>
+  <docketText>ORDER as to Richard Daleman, ( Status Conference set for 12/19/11 is continued to 1/30/2012 at 09:00 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii.) signed by Chief Judge Anthony W. Ishii on 12/16/11. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>STIPULATION to Continue Motions Schedule and Hearing; ORDER, signed by Magistrate Judge Dennis L. Beck on 5/23/2012. (Motions to be filed by 6/11/2012, Responses due by 6/25/2012, and Motion Hearing as to Richard Daleman previously set for 5/29/2012 has been CONTINUED to 7/9/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck. XT Start: 5/29/2012, XT Stop: 7/9/2012.) (Gaumnitz, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d81350e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-2</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-05-23</dateIssued>
+  <docketText>STIPULATION to Continue Motions Schedule and Hearing; ORDER, signed by Magistrate Judge Dennis L. Beck on 5/23/2012. (Motions to be filed by 6/11/2012, Responses due by 6/25/2012, and Motion Hearing as to Richard Daleman previously set for 5/29/2012 has been CONTINUED to 7/9/2012 at 01:00 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck. XT Start: 5/29/2012, XT Stop: 7/9/2012.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>STIPULATION to continue motions schedule and hearing ; ORDER, signed by District Judge Anthony W. Ishii on 12/28/2012. (Motions filed by 1/14/2013; Responses due by 1/30/2013; Motion Hearing set for 2/19/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii) (Figueroa, O)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d81350f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-3</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>STIPULATION to continue motions schedule and hearing ; ORDER, signed by District Judge Anthony W. Ishii on 12/28/2012. (Motions filed by 1/14/2013; Responses due by 1/30/2013; Motion Hearing set for 2/19/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>STIPULATION to Continue Motions Hearing and to Extend Time For Filing of Government&apos;s Response to Defendant&apos;s Motions; ORDER, signed by District Judge Anthony W. Ishii on 1/31/2013. (Governments response to the defendants motions in this case be filed on or before 2/13/2013, Motions Hearing as to Richard Daleman previously set for 2/19/2013, has been CONTINUED to 3/4/2013, at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. XT Start: 2/19/2013, XT Stop: 3/4/2013.) (Gaumnitz, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d8133f4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-4</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-31</dateIssued>
+  <docketText>STIPULATION to Continue Motions Hearing and to Extend Time For Filing of Government&apos;s Response to Defendant&apos;s Motions; ORDER, signed by District Judge Anthony W. Ishii on 1/31/2013. (Governments response to the defendants motions in this case be filed on or before 2/13/2013, Motions Hearing as to Richard Daleman previously set for 2/19/2013, has been CONTINUED to 3/4/2013, at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. XT Start: 2/19/2013, XT Stop: 3/4/2013.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>STIPULATION to continue motions hearing and to extend time for filing of Governments&apos;s response to Defendant&apos;s motions; ORDER, signed by District Judge Anthony W. Ishii on 2/15/2013. (Government&apos;s Responses due by 2/27/2013; Motion Hearing currently set for 3/4/2013 has been CONTINUED to 3/18/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii) (Figueroa, O)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d813513</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-5</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-02-15</dateIssued>
+  <docketText>STIPULATION to continue motions hearing and to extend time for filing of Governments&apos;s response to Defendant&apos;s motions; ORDER, signed by District Judge Anthony W. Ishii on 2/15/2013. (Government&apos;s Responses due by 2/27/2013; Motion Hearing currently set for 3/4/2013 has been CONTINUED to 3/18/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>STIPULATION and ORDER CONTINUING Motions Hearing and Extending Time for Filing of Government&apos;s Response to Defendant&apos;s Motions, Signed by District Judge Anthony W. Ishii on 3/6/2013. Responses due on or before 3/13/2013. The Motion Hearing currently set for set for 3/18/2013 is CONTINUED to 4/1/2013 at 01:30 PM in Courtroom 2 before District Judge Anthony W. Ishii. XT Start: 3/18/2013, Stop: 4/1/2013. (Arellano, S.)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d81350d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-6</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-03-06</dateIssued>
+  <docketText>STIPULATION and ORDER CONTINUING Motions Hearing and Extending Time for Filing of Government&apos;s Response to Defendant&apos;s Motions, Signed by District Judge Anthony W. Ishii on 3/6/2013. Responses due on or before 3/13/2013. The Motion Hearing currently set for set for 3/18/2013 is CONTINUED to 4/1/2013 at 01:30 PM in Courtroom 2 before District Judge Anthony W. Ishii. XT Start: 3/18/2013, Stop: 4/1/2013. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>STIPULATION and ORDER to Continue Motion Hearing and to Extend Time for Filing of Government&apos;s Response to Defendant&apos;s Motions signed by District Judge Anthony W. Ishii on 03/22/2013. Motion Hearing set for 4/22/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Flores, E)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d813508</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-7</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-03-26</dateIssued>
+  <docketText>STIPULATION and ORDER to Continue Motion Hearing and to Extend Time for Filing of Government&apos;s Response to Defendant&apos;s Motions signed by District Judge Anthony W. Ishii on 03/22/2013. Motion Hearing set for 4/22/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>STIPULATION to continue Motion Hearing; ORDER Therein, signed by District Judge Anthony W. Ishii on 4/15/2013. Motion Hearing as to Richard Daleman, currently set for 4/22/2013 has been CONTINUED to 5/20/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Excludable started : XT Start: 4/22/2013 Stop: 5/20/2013. (Figueroa, O)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d8133f5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-8</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-04-16</dateIssued>
+  <docketText>STIPULATION to continue Motion Hearing; ORDER Therein, signed by District Judge Anthony W. Ishii on 4/15/2013. Motion Hearing as to Richard Daleman, currently set for 4/22/2013 has been CONTINUED to 5/20/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Excludable started : XT Start: 4/22/2013 Stop: 5/20/2013. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>ORDER as to Richard Daleman,Motion to Suppress Hearing set for 5/20/13 is continued to 6/10/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) signed by District Judge Anthony W. Ishii on 5/16/13. (Nazaroff, H)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d813511</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-9</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-05-17</dateIssued>
+  <docketText>ORDER as to Richard Daleman,Motion to Suppress Hearing set for 5/20/13 is continued to 6/10/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) signed by District Judge Anthony W. Ishii on 5/16/13. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>STIPULATION and ORDER to continue the Motion Hearing currently set for 6/10/2013 to 7/8/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, signed by District Judge Anthony W. Ishii on 6/5/2013. (Kusamura, W)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d8133f3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-10</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-06-05</dateIssued>
+  <docketText>STIPULATION and ORDER to continue the Motion Hearing currently set for 6/10/2013 to 7/8/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, signed by District Judge Anthony W. Ishii on 6/5/2013. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>ORDER as to Richard Daleman, ( Status Conference set for 11/25/13 is continued to 12/9/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) signed by District Judge Anthony W. Ishii on 11/21/13. (Nazaroff, H)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d81350c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-11</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-11-22</dateIssued>
+  <docketText>ORDER as to Richard Daleman, ( Status Conference set for 11/25/13 is continued to 12/9/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) signed by District Judge Anthony W. Ishii on 11/21/13. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>STIPULATION and ORDER to Continue Trial Date and Corresponding Dates Set Forth in Court&apos;s Pretrial Order as to Richard Daleman, signed by District Judge Anthony W. Ishii on 10/15/2014. (Motions in limine to be filed by 2/9/2015, Oppositions to be filed by 3/2/2015, any Replies to be filed by 3/9/2015, Trial Confirmation/Motions in Limine Hearing previously set for 12/1/2014 has been CONTINUED to 3/16/2015 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, Jury Trial previously set for 12/16/2014 has been CONTINUED to 3/31/2015 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d81350a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-12</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2014-10-16</dateIssued>
+  <docketText>STIPULATION and ORDER to Continue Trial Date and Corresponding Dates Set Forth in Court&apos;s Pretrial Order as to Richard Daleman, signed by District Judge Anthony W. Ishii on 10/15/2014. (Motions in limine to be filed by 2/9/2015, Oppositions to be filed by 3/2/2015, any Replies to be filed by 3/9/2015, Trial Confirmation/Motions in Limine Hearing previously set for 12/1/2014 has been CONTINUED to 3/16/2015 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, Jury Trial previously set for 12/16/2014 has been CONTINUED to 3/31/2015 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>ORDER on 91 Motion to Withdraw the Federal Defender as Counsel, Appoint Ad Hoc CJA Counsel, and Defendant&apos;s Consent, as to Richard Daleman (1), signed by Magistrate Judge Barbara A. McAuliffe on 1/5/2015. (Marrujo, C)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d813512</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-13</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER on 91 Motion to Withdraw the Federal Defender as Counsel, Appoint Ad Hoc CJA Counsel, and Defendant&apos;s Consent, as to Richard Daleman (1), signed by Magistrate Judge Barbara A. McAuliffe on 1/5/2015. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>STIPULATION and ORDER to Continue Motions Hearing, signed by District Judge Anthony W. Ishii on 5/14/2015. (95 Motion to Dismiss Hearing as to Richard Daleman previously set for 5/18/2015, has been CONTINUED to 8/24/2015, at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Time is excluded, XT Start: 5/18/2015, XT Stop: 8/24/2015.) (Gaumnitz, R)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d813510</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-14</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2015-05-14</dateIssued>
+  <docketText>STIPULATION and ORDER to Continue Motions Hearing, signed by District Judge Anthony W. Ishii on 5/14/2015. (95 Motion to Dismiss Hearing as to Richard Daleman previously set for 5/18/2015, has been CONTINUED to 8/24/2015, at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Time is excluded, XT Start: 5/18/2015, XT Stop: 8/24/2015.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cr-00385-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Daleman</title>
+  <subTitle>STIPULATION to Continue Status Conference; ORDER thereon as to Richard Daleman - the 11th STATUS CONFERENCE from 10/13/2015 to November 9, 2015 at 01:00 PM in Courtroom 3 (or 8) before Magistrate Judge Barbara A. McAuliffe. Excludable started as to Richard Daleman: XT Start: 10/13/2015 Stop: 11/9/15. signed by Magistrate Judge Barbara A. McAuliffe on 9/8/2015. (Herman, H)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d81350b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-15</identifier>
+ <identifier type="former granule identifier">caed-1_11-cr-00385_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cr-00385/USCOURTS-caed-1_11-cr-00385-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cr-00385/pdf/USCOURTS-caed-1_11-cr-00385-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00385; USA v. Daleman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cr-00385-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2015-09-09</dateIssued>
+  <docketText>STIPULATION to Continue Status Conference; ORDER thereon as to Richard Daleman - the 11th STATUS CONFERENCE from 10/13/2015 to November 9, 2015 at 01:00 PM in Courtroom 3 (or 8) before Magistrate Judge Barbara A. McAuliffe. Excludable started as to Richard Daleman: XT Start: 10/13/2015 Stop: 11/9/15. signed by Magistrate Judge Barbara A. McAuliffe on 9/8/2015. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,727 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183fcc393">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-04-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-03-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830</identifier>
+<identifier type="local">P0b002ee183fcc393</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-04-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-04-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_09-cv-01830</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_09-cv-01830</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:09-cv-01830</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Chambers" lastName="Chambers" role="Defendant"></party>
+ <party firstName="William" fullName="William Thomas Coats" lastName="Coats" middleName="Thomas" role="Plaintiff"></party>
+ <party fullName="Coppola" lastName="Coppola" role="Defendant"></party>
+ <party fullName="Evans" lastName="Evans" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Fox" lastName="Fox" role="Defendant"></party>
+ <party fullName="Francheschi" lastName="Francheschi" role="Defendant"></party>
+ <party firstName="T." fullName="T. Kimura" lastName="Kimura" role="Defendant"></party>
+ <party firstName="A." fullName="A. Livingston" lastName="Livingston" role="Defendant"></party>
+ <party firstName="T." fullName="T. Nolan" lastName="Nolan" role="Defendant"></party>
+ <party fullName="Ranseki" lastName="Ranseki" role="Defendant"></party>
+ <party firstName="T." fullName="T. Robinson" lastName="Robinson" role="Defendant"></party>
+ <party firstName="Renee" fullName="Renee Rodriguez" lastName="Rodriguez" role="Defendant"></party>
+ <party firstName="April" fullName="April Wilson" lastName="Wilson" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Coats v. Kimura et al</title>
+ <partNumber>2:09-cv-01830</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-01830;09-1830</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Chambers</displayForm>
+ <namePart type="family">Chambers</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Thomas Coats</displayForm>
+ <namePart type="family">Coats</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Coppola</displayForm>
+ <namePart type="family">Coppola</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Evans</displayForm>
+ <namePart type="family">Evans</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Fox</displayForm>
+ <namePart type="family">Fox</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Francheschi</displayForm>
+ <namePart type="family">Francheschi</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. Kimura</displayForm>
+ <namePart type="family">Kimura</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Livingston</displayForm>
+ <namePart type="family">Livingston</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. Nolan</displayForm>
+ <namePart type="family">Nolan</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ranseki</displayForm>
+ <namePart type="family">Ranseki</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. Robinson</displayForm>
+ <namePart type="family">Robinson</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Renee Rodriguez</displayForm>
+ <namePart type="family">Rodriguez</namePart>
+ <namePart type="given">Renee</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>April Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">April</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_09-cv-01830</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:09-cv-01830</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Chambers" lastName="Chambers" role="Defendant"></party>
+ <party firstName="William" fullName="William Thomas Coats" lastName="Coats" middleName="Thomas" role="Plaintiff"></party>
+ <party fullName="Coppola" lastName="Coppola" role="Defendant"></party>
+ <party fullName="Evans" lastName="Evans" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Fox" lastName="Fox" role="Defendant"></party>
+ <party fullName="Francheschi" lastName="Francheschi" role="Defendant"></party>
+ <party firstName="T." fullName="T. Kimura" lastName="Kimura" role="Defendant"></party>
+ <party firstName="A." fullName="A. Livingston" lastName="Livingston" role="Defendant"></party>
+ <party firstName="T." fullName="T. Nolan" lastName="Nolan" role="Defendant"></party>
+ <party fullName="Ranseki" lastName="Ranseki" role="Defendant"></party>
+ <party firstName="T." fullName="T. Robinson" lastName="Robinson" role="Defendant"></party>
+ <party firstName="Renee" fullName="Renee Rodriguez" lastName="Rodriguez" role="Defendant"></party>
+ <party firstName="April" fullName="April Wilson" lastName="Wilson" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 7/17/09 ORDERING that plaintiff has 30 days to submit the required trust account statement. Clerk of the court is directed to send to plaintiff a new form Application to Proceed IFP by a Prisoner.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c37</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-0</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-07-17</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 7/17/09 ORDERING that plaintiff has 30 days to submit the required trust account statement. Clerk of the court is directed to send to plaintiff a new form Application to Proceed IFP by a Prisoner.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of William Thomas Coats signed by Magistrate Judge Kendall J. Newman on 2/23/2010. CDC is to collect an initial partial filing fee and thereafter monthly payments and fwd to the clerk until the $350 filing fee is paid in full. Clerk is directed to serve this order and copy of pltf&apos;s IFP on the Director of CDC. Clerk to also serve Financial w/ a copy of this order. (cc: CDC, Financial)(Yin, K)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3b55</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-1</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-02-24</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of William Thomas Coats signed by Magistrate Judge Kendall J. Newman on 2/23/2010. CDC is to collect an initial partial filing fee and thereafter monthly payments and fwd to the clerk until the $350 filing fee is paid in full. Clerk is directed to serve this order and copy of pltf&apos;s IFP on the Director of CDC. Clerk to also serve Financial w/ a copy of this order. (cc: CDC, Financial)(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 6/28/2010 ORDERING that pltf&apos;s amended cmplt is DISMISSED; w/in 30 days, pltf to complete and return the Notice of Amendment w/ the required documents. (Yin, K)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3b54</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-2</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-06-29</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 6/28/2010 ORDERING that pltf&apos;s amended cmplt is DISMISSED; w/in 30 days, pltf to complete and return the Notice of Amendment w/ the required documents. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 08/25/10 ordering plaintiff&apos;s second amended complaint is dismissed. Within 30 days from the date of this order, plaintiff shall complete the attached notice of amendment and submit it to the court along with an original and 1 copy of the 3rd amended complaint. (Plummer, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c66</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-3</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-08-27</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 08/25/10 ordering plaintiff&apos;s second amended complaint is dismissed. Within 30 days from the date of this order, plaintiff shall complete the attached notice of amendment and submit it to the court along with an original and 1 copy of the 3rd amended complaint. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>[VACATED PURSUANT TO 3/11/11 ORDER]ORDER signed by Magistrate Judge Kendall J. Newman on 02/23/11 ordering the clerk of the court is directed to send to plaintiff 1 USM-285 from, instruction sheet and a copy of the 09/27/10 amended complaint to be completed and returned within 60 days. (Plummer, M) Modified on 3/11/2011 (Plummer, M).</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c3b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-4</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-02-24</dateIssued>
+  <docketText>[VACATED PURSUANT TO 3/11/11 ORDER]ORDER signed by Magistrate Judge Kendall J. Newman on 02/23/11 ordering the clerk of the court is directed to send to plaintiff 1 USM-285 from, instruction sheet and a copy of the 09/27/10 amended complaint to be completed and returned within 60 days. (Plummer, M) Modified on 3/11/2011 (Plummer, M).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 3/10/11 GRANTING 36 Motion to Strike; 35 Objections are STRICKEN from the court record; Plaintiffs request for entry of judgment on the pleadings or summary judgment in favor of plaintiff is denied without prejudice. (Dillon, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3b53</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-5</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-03-10</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 3/10/11 GRANTING 36 Motion to Strike; 35 Objections are STRICKEN from the court record; Plaintiffs request for entry of judgment on the pleadings or summary judgment in favor of plaintiff is denied without prejudice. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 03/11/11 ordering the clerk of the court shall serve on plaintiff forthwith a copy of the USM-285 form returned by the United States Marshal on 02/16/11 33 together with this order. The 02/24/11 order 34 is vacated. (Plummer, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c34</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-6</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-03-11</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 03/11/11 ordering the clerk of the court shall serve on plaintiff forthwith a copy of the USM-285 form returned by the United States Marshal on 02/16/11 33 together with this order. The 02/24/11 order 34 is vacated. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 03/28/11 ordering the clerk of the court is directed to send to plaintiff 1 USM-285 form, instruction sheet and a copy of the 07/19/10 amended complaint to be completed and returned with the Notice of submission of documents within 60 days. (Plummer, M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c68</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-7</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-03-29</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 03/28/11 ordering the clerk of the court is directed to send to plaintiff 1 USM-285 form, instruction sheet and a copy of the 07/19/10 amended complaint to be completed and returned with the Notice of submission of documents within 60 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 6/24/11 ORDERING Plaintiff&apos;s June 2, 2011 motion (dkt. no. 57) is granted; Plaintiff&apos;s June 2, 2011 motion for extension of time to serve defendant Chambers (dkt. no. 56) is granted; plaintiff is granted an additional ninety days in which to accomplish service of process for defendant Chambers; Plaintiff&apos;s June 2, 2011 motion to extend the discovery deadline (dkt. no. 56) is denied; Counsel for defendants shall take all steps necessary to assist the United States Marshal in locating an address for service of process on defendant Dr. Chambers and shall report to the court within twenty days whether he has been able to provide a valid address to the U.S. Marshal and, if not, why no address can be found; The U.S. Marshal shall maintain the confidentiality of any service address information provided by counsel for defendants. Should an address be provided, the U.S. Marshal shall, upon receipt of that address, take all steps necessary to request a waiver of service and/or to personally serve defendant Dr. Chambers in accordance with the provisions of this court&apos;s December 20, 2010 and May 11, 2011 orders; The Clerk of the Court is directed to serve a copy of this order on the U.S. Marshal; Plaintiff&apos;s June 20, 2011 motion to compel (dkt. no. 58) is denied. (cc USM-paper)(Matson, R)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c67</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-8</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-06-27</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 6/24/11 ORDERING Plaintiff&apos;s June 2, 2011 motion (dkt. no. 57) is granted; Plaintiff&apos;s June 2, 2011 motion for extension of time to serve defendant Chambers (dkt. no. 56) is granted; plaintiff is granted an additional ninety days in which to accomplish service of process for defendant Chambers; Plaintiff&apos;s June 2, 2011 motion to extend the discovery deadline (dkt. no. 56) is denied; Counsel for defendants shall take all steps necessary to assist the United States Marshal in locating an address for service of process on defendant Dr. Chambers and shall report to the court within twenty days whether he has been able to provide a valid address to the U.S. Marshal and, if not, why no address can be found; The U.S. Marshal shall maintain the confidentiality of any service address information provided by counsel for defendants. Should an address be provided, the U.S. Marshal shall, upon receipt of that address, take all steps necessary to request a waiver of service and/or to personally serve defendant Dr. Chambers in accordance with the provisions of this court&apos;s December 20, 2010 and May 11, 2011 orders; The Clerk of the Court is directed to serve a copy of this order on the U.S. Marshal; Plaintiff&apos;s June 20, 2011 motion to compel (dkt. no. 58) is denied. (cc USM-paper)(Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 8/2/11 ORDERING that any party who objects to the dismissal of defendant Dr. Evans, deceased, shall file said objection within 30 days from the date of this order. (Dillon, M)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c3a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-9</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2011-08-04</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 8/2/11 ORDERING that any party who objects to the dismissal of defendant Dr. Evans, deceased, shall file said objection within 30 days from the date of this order. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 9/13/11 RECOMMENDING that Dr. Evans be dismissed from this action. Referred to Judge Kimberly J. Mueller; Objections to F&amp;R due 14 days after service of these findings and recommendations. (Meuleman, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c36</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-10</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2011-09-14</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 9/13/11 RECOMMENDING that Dr. Evans be dismissed from this action. Referred to Judge Kimberly J. Mueller; Objections to F&amp;R due 14 days after service of these findings and recommendations. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 10/24/2011 RECOMMENDING that dft Chamber&apos;s 71 motion to dismiss be denied; and dft Chambers be directed to file an answer w/in 14 days of any district court order adopting the instant F&amp;R. Referred to Judge Kimberly J. Mueller; Objections due w/in 21 days. (Yin, K)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c39</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-11</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2011-10-25</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 10/24/2011 RECOMMENDING that dft Chamber&apos;s 71 motion to dismiss be denied; and dft Chambers be directed to file an answer w/in 14 days of any district court order adopting the instant F&amp;R. Referred to Judge Kimberly J. Mueller; Objections due w/in 21 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 12/14/2011 ADOPTING the 72&amp;77 Findings and Recommendations in full. Defendant Dr. Evans is DISMISSED from this action. Defendant Chambers&apos; 71 September 6, 2011 motion to dismiss is DENIED. Defendant Chambers is directed to file an answer within fourteen days of this order.(Duong, D) Modified on 2/1/2012 (Donati, J).</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c38</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-12</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2011-12-14</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 12/14/2011 ADOPTING the 72&amp;77 Findings and Recommendations in full. Defendant Dr. Evans is DISMISSED from this action. Defendant Chambers&apos; 71 September 6, 2011 motion to dismiss is DENIED. Defendant Chambers is directed to file an answer within fourteen days of this order.(Duong, D) Modified on 2/1/2012 (Donati, J).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 12/20/11 ordering plaintiff&apos;s 10/21/11 motion to compel 76 is denied without prejudice. Defendant Chambers 11/09/11 motion 79 is granted. The 09/06/11 scheduling order 70 is modified as follows: The discovery deadline is extended to 03/30/12. The deadline for filing all pretrial motions, except motions to compel discovery is extended to 05/30/12. (Plummer, M)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c33</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-13</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2011-12-21</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 12/20/11 ordering plaintiff&apos;s 10/21/11 motion to compel 76 is denied without prejudice. Defendant Chambers 11/09/11 motion 79 is granted. The 09/06/11 scheduling order 70 is modified as follows: The discovery deadline is extended to 03/30/12. The deadline for filing all pretrial motions, except motions to compel discovery is extended to 05/30/12. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 1/11/2012 DISREGARDING plaintiff&apos;s 85 reply. (Yin, K)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c32</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-14</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 1/11/2012 DISREGARDING plaintiff&apos;s 85 reply. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER AND RAND NOTICE signed by Magistrate Judge Kendall J. Newman on 07/25/12 ORDERING plaintiff, within 30 days, to file a supplemental opposition to the 90 Motion for Summary Judgment. Any reply from defendant is due 7 days thereafter. (Benson, A.)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c35</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-15</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-07-25</dateIssued>
+  <docketText>ORDER AND RAND NOTICE signed by Magistrate Judge Kendall J. Newman on 07/25/12 ORDERING plaintiff, within 30 days, to file a supplemental opposition to the 90 Motion for Summary Judgment. Any reply from defendant is due 7 days thereafter. (Benson, A.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 1/03/13 recommending that defendants&apos; 06/15/12 motion for summary judgment 90 be granted; and this action be dismissed. Motion for Summary Judgment 90 referred to Judge Kimberly J. Mueller. Objections due within 14 days. (Plummer, M)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c69</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-16</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 1/03/13 recommending that defendants&apos; 06/15/12 motion for summary judgment 90 be granted; and this action be dismissed. Motion for Summary Judgment 90 referred to Judge Kimberly J. Mueller. Objections due within 14 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-01830-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Coats v. Kimura et al</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on March 30, 2013. Granting 90 Motion for Summary Judgment; adopting 96 FINDINGS AND RECOMMENDATIONS and this case is closed. (Andrews, P)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-01830-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183fd3c6a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-17</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-01830_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-01830/USCOURTS-caed-2_09-cv-01830-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-01830/pdf/USCOURTS-caed-2_09-cv-01830-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-01830; (PC) Coats v. Kimura et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-01830-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2013-03-30</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on March 30, 2013. Granting 90 Motion for Summary Judgment; adopting 96 FINDINGS AND RECOMMENDATIONS and this case is closed. (Andrews, P)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a214d8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01068</identifier>
+<identifier type="local">P0b002ee183a214d8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-01068</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01068</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01068</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <cause>17:101 Copyright Infringement</cause>
+ <party fullName="AF Holdings LLC" lastName="AF Holdings LLC" role="Plaintiff"></party>
+ <party firstName="Parry" fullName="Parry Buck" lastName="Buck" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>AF Holdings LLC v. Parry Buck</title>
+ <partNumber>2:12-cv-01068</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01068/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-01068;12-1068</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>AF Holdings LLC</displayForm>
+ <namePart type="family">AF Holdings LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Parry Buck</displayForm>
+ <namePart type="family">Buck</namePart>
+ <namePart type="given">Parry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01068</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01068</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <cause>17:101 Copyright Infringement</cause>
+ <party fullName="AF Holdings LLC" lastName="AF Holdings LLC" role="Plaintiff"></party>
+ <party firstName="Parry" fullName="Parry Buck" lastName="Buck" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01068-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01068/USCOURTS-caed-2_12-cv-01068-0/mods.xml">
+ <titleInfo>
+  <title>AF Holdings LLC v. Parry Buck</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 5/24/2012 GRANTING 7 plaintiff&apos;s Ex Parte Application for leave to conduct expedited discovery. (Reader, L)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01068-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25d7a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01068/USCOURTS-caed-2_12-cv-01068-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01068_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01068/USCOURTS-caed-2_12-cv-01068-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01068/pdf/USCOURTS-caed-2_12-cv-01068-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01068; AF Holdings LLC v. Parry Buck; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01068-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-05-25</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 5/24/2012 GRANTING 7 plaintiff&apos;s Ex Parte Application for leave to conduct expedited discovery. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01068-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01068/USCOURTS-caed-2_12-cv-01068-1/mods.xml">
+ <titleInfo>
+  <title>AF Holdings LLC v. Parry Buck</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 12/5/2012 DENYING 21 Motion to Appear Telephonically. Plaintiffs counsel is directed to appear in person at the 12/20/2012 hearing re 20 Motion for Default Judgment. (Zignago, K.)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01068-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25d7c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01068/USCOURTS-caed-2_12-cv-01068-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01068_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01068/USCOURTS-caed-2_12-cv-01068-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01068/pdf/USCOURTS-caed-2_12-cv-01068-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01068; AF Holdings LLC v. Parry Buck; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01068-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-12-06</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 12/5/2012 DENYING 21 Motion to Appear Telephonically. Plaintiffs counsel is directed to appear in person at the 12/20/2012 hearing re 20 Motion for Default Judgment. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01068-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01068/USCOURTS-caed-2_12-cv-01068-2/mods.xml">
+ <titleInfo>
+  <title>AF Holdings LLC v. Parry Buck</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 12/12/12 ORDERING that the 12/20/12, hearing date currently set for Plaintiff&apos;s 20 Motion for Default Judgment and defendant&apos;s 23 Motion to Set Aside Clerk&apos;s Entry of Default is hereby VACATED. Within 21 days of the entry of this order, plaintiff shall file a Statement of Non-Opposition, or, alternatively, an Opposition, to defendant&apos;s 23 Motion to Set Aside the Clerk&apos;s Entry of Default. The court will set the pending motions for a hearing date, if one is still necessary, after plaintiff completes such filing. Defendant&apos;s 24 Motion to Appear by Telephone is hereby denied as moot. (Kastilahn, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01068-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25d79</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01068/USCOURTS-caed-2_12-cv-01068-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01068_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01068/USCOURTS-caed-2_12-cv-01068-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01068/pdf/USCOURTS-caed-2_12-cv-01068-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01068; AF Holdings LLC v. Parry Buck; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01068-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-12-13</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 12/12/12 ORDERING that the 12/20/12, hearing date currently set for Plaintiff&apos;s 20 Motion for Default Judgment and defendant&apos;s 23 Motion to Set Aside Clerk&apos;s Entry of Default is hereby VACATED. Within 21 days of the entry of this order, plaintiff shall file a Statement of Non-Opposition, or, alternatively, an Opposition, to defendant&apos;s 23 Motion to Set Aside the Clerk&apos;s Entry of Default. The court will set the pending motions for a hearing date, if one is still necessary, after plaintiff completes such filing. Defendant&apos;s 24 Motion to Appear by Telephone is hereby denied as moot. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01068-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01068/USCOURTS-caed-2_12-cv-01068-3/mods.xml">
+ <titleInfo>
+  <title>AF Holdings LLC v. Parry Buck</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 1/3/2013 ORDERING that defendant&apos;s 23 Motion to Set Aside the Clerk&apos;s Certificate of Entry of Default is GRANTED. The Clerk&apos;s 18 Certificate of Entry of Default is SET ASIDE. Defendant shall file and serve his answer or responsive pleading to plaintiff&apos;s operative complaint no later than 30 days of the date of this order. Because the Clerk&apos;s Entry of Default is set aide, plaintiff&apos;s 19, 20 Motion for Default Judgment is DENIED. (Zignago, K.)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01068-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25d7b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01068/USCOURTS-caed-2_12-cv-01068-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01068_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01068/USCOURTS-caed-2_12-cv-01068-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01068/pdf/USCOURTS-caed-2_12-cv-01068-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01068; AF Holdings LLC v. Parry Buck; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01068-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 1/3/2013 ORDERING that defendant&apos;s 23 Motion to Set Aside the Clerk&apos;s Certificate of Entry of Default is GRANTED. The Clerk&apos;s 18 Certificate of Entry of Default is SET ASIDE. Defendant shall file and serve his answer or responsive pleading to plaintiff&apos;s operative complaint no later than 30 days of the date of this order. Because the Clerk&apos;s Entry of Default is set aide, plaintiff&apos;s 19, 20 Motion for Default Judgment is DENIED. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+</mods>

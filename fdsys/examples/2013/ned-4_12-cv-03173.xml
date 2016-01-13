@@ -1,0 +1,252 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183df6614">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-03-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-03-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cv-03173</identifier>
+<identifier type="local">P0b002ee183df6614</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-03-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-03-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_12-cv-03173</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_12-cv-03173</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:12-cv-03173</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <party firstName="Michael" fullName="Michael J. Astrue" lastName="Astrue" middleName="J." role="Defendant"></party>
+ <party firstName="Carolyn" fullName="Carolyn W. Colvin" lastName="Colvin" middleName="W." role="Defendant"></party>
+ <party fullName="Office of General Counsel Social Security Administration" lastName="Office of General Counsel Social Security Administration" role="Interested Party"></party>
+ <party firstName="Chase" fullName="Chase Tyler Whitson" lastName="Whitson" middleName="Tyler" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Whitson v. Colvin</title>
+ <partNumber>4:12-cv-03173</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cv-03173/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:12-cv-03173;12-3173</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Michael J. Astrue</displayForm>
+ <namePart type="family">Astrue</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carolyn W. Colvin</displayForm>
+ <namePart type="family">Colvin</namePart>
+ <namePart type="given">Carolyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Office of General Counsel Social Security Administration</displayForm>
+ <namePart type="family">Office of General Counsel Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Chase Tyler Whitson</displayForm>
+ <namePart type="family">Whitson</namePart>
+ <namePart type="given">Chase</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_12-cv-03173</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:12-cv-03173</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <party firstName="Michael" fullName="Michael J. Astrue" lastName="Astrue" middleName="J." role="Defendant"></party>
+ <party firstName="Carolyn" fullName="Carolyn W. Colvin" lastName="Colvin" middleName="W." role="Defendant"></party>
+ <party fullName="Office of General Counsel Social Security Administration" lastName="Office of General Counsel Social Security Administration" role="Interested Party"></party>
+ <party firstName="Chase" fullName="Chase Tyler Whitson" lastName="Whitson" middleName="Tyler" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cv-03173-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03173/USCOURTS-ned-4_12-cv-03173-0/mods.xml">
+ <titleInfo>
+  <title>Whitson v. Colvin</title>
+  <subTitle>MEMORANDUM AND ORDER granting 2 Motion for Leave to Proceed in forma pauperis. This order is entered without prejudice to the court later entering an order taxing costs in this case. No one, including any plaintiff, is relieved by this order from the obligation to pay or to reimburse taxable costs after this action is over. Ordered by Magistrate Judge Cheryl R. Zwart. (Copies of Memorandum and Order, Summons Forms, and USM-285 Forms mailed as directed) (TEL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cv-03173-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183dfa28b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03173/USCOURTS-ned-4_12-cv-03173-0</identifier>
+ <identifier type="former granule identifier">ned-4_12-cv-03173_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03173/USCOURTS-ned-4_12-cv-03173-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cv-03173/pdf/USCOURTS-ned-4_12-cv-03173-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cv-03173; Whitson v. Colvin; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cv-03173-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-08-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 2 Motion for Leave to Proceed in forma pauperis. This order is entered without prejudice to the court later entering an order taxing costs in this case. No one, including any plaintiff, is relieved by this order from the obligation to pay or to reimburse taxable costs after this action is over. Ordered by Magistrate Judge Cheryl R. Zwart. (Copies of Memorandum and Order, Summons Forms, and USM-285 Forms mailed as directed) (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cv-03173-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03173/USCOURTS-ned-4_12-cv-03173-1/mods.xml">
+ <titleInfo>
+  <title>Whitson v. Colvin</title>
+  <subTitle>ORDER granting defendant&apos;s motion to extend time to respond to plaintiff&apos;s brief (Filing No. 18). Defendant shall have until January 30, 2013, to file his brief. Plaintiff shall have until February 20, 2013, to file a reply brief. Ordered by Senior Judge Lyle E. Strom. (GJG)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cv-03173-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183dfa241</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03173/USCOURTS-ned-4_12-cv-03173-1</identifier>
+ <identifier type="former granule identifier">ned-4_12-cv-03173_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03173/USCOURTS-ned-4_12-cv-03173-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cv-03173/pdf/USCOURTS-ned-4_12-cv-03173-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cv-03173; Whitson v. Colvin; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cv-03173-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER granting defendant&apos;s motion to extend time to respond to plaintiff&apos;s brief (Filing No. 18). Defendant shall have until January 30, 2013, to file his brief. Plaintiff shall have until February 20, 2013, to file a reply brief. Ordered by Senior Judge Lyle E. Strom. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cv-03173-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03173/USCOURTS-ned-4_12-cv-03173-2/mods.xml">
+ <titleInfo>
+  <title>Whitson v. Colvin</title>
+  <subTitle>ORDER granting 20 Motion to Extend. Defendant shall have until March 1, 2013, to file his brief. Plaintiff shall have until March 20, 2013, to file a reply brief. Ordered by Senior Judge Lyle E. Strom. (ADB )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cv-03173-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183dfa242</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03173/USCOURTS-ned-4_12-cv-03173-2</identifier>
+ <identifier type="former granule identifier">ned-4_12-cv-03173_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03173/USCOURTS-ned-4_12-cv-03173-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cv-03173/pdf/USCOURTS-ned-4_12-cv-03173-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cv-03173; Whitson v. Colvin; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cv-03173-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-29</dateIssued>
+  <docketText>ORDER granting 20 Motion to Extend. Defendant shall have until March 1, 2013, to file his brief. Plaintiff shall have until March 20, 2013, to file a reply brief. Ordered by Senior Judge Lyle E. Strom. (ADB )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cv-03173-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03173/USCOURTS-ned-4_12-cv-03173-3/mods.xml">
+ <titleInfo>
+  <title>Whitson v. Colvin</title>
+  <subTitle>ORDER granting 23 Motion to Extend. Defendant shall have until March 11, 2013, to file his brief. Plaintiff shall have until March 29, 2013, to file a reply brief. Ordered by Magistrate Judge Leonard T. Strand. (GJG)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cv-03173-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183dfa28a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03173/USCOURTS-ned-4_12-cv-03173-3</identifier>
+ <identifier type="former granule identifier">ned-4_12-cv-03173_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cv-03173/USCOURTS-ned-4_12-cv-03173-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cv-03173/pdf/USCOURTS-ned-4_12-cv-03173-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cv-03173; Whitson v. Colvin; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cv-03173-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-03-04</dateIssued>
+  <docketText>ORDER granting 23 Motion to Extend. Defendant shall have until March 11, 2013, to file his brief. Plaintiff shall have until March 29, 2013, to file a reply brief. Ordered by Magistrate Judge Leonard T. Strand. (GJG)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,429 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183d0f167">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-02-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02319</identifier>
+<identifier type="local">P0b002ee183d0f167</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_10-cv-02319</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_10-cv-02319</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:10-cv-02319</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="Kendall State Bank" lastName="Kendall State Bank" role="Counter Defendant"></party>
+ <party fullName="Kendall State Bank" lastName="Kendall State Bank" role="Plaintiff"></party>
+ <party fullName="Northeast Kansas Bancshares, Inc." lastName="Northeast Kansas Bancshares, Inc." role="Plaintiff"></party>
+ <party fullName="West Point Underwriters, LLC" lastName="West Point Underwriters, LLC" role="Counter Claimant"></party>
+ <party fullName="West Point Underwriters, LLC" lastName="West Point Underwriters, LLC" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Kendall State Bank v. West Point Underwriters, LLC</title>
+ <partNumber>2:10-cv-02319</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02319/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cv-02319;10-2319</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kendall State Bank</displayForm>
+ <namePart type="family">Kendall State Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kendall State Bank</displayForm>
+ <namePart type="family">Kendall State Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Northeast Kansas Bancshares, Inc.</displayForm>
+ <namePart type="family">Northeast Kansas Bancshares, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>West Point Underwriters, LLC</displayForm>
+ <namePart type="family">West Point Underwriters, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>West Point Underwriters, LLC</displayForm>
+ <namePart type="family">West Point Underwriters, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_10-cv-02319</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:10-cv-02319</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="Kendall State Bank" lastName="Kendall State Bank" role="Counter Defendant"></party>
+ <party fullName="Kendall State Bank" lastName="Kendall State Bank" role="Plaintiff"></party>
+ <party fullName="Northeast Kansas Bancshares, Inc." lastName="Northeast Kansas Bancshares, Inc." role="Plaintiff"></party>
+ <party fullName="West Point Underwriters, LLC" lastName="West Point Underwriters, LLC" role="Counter Claimant"></party>
+ <party fullName="West Point Underwriters, LLC" lastName="West Point Underwriters, LLC" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02319-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-0/mods.xml">
+ <titleInfo>
+  <title>Kendall State Bank v. West Point Underwriters, LLC</title>
+  <subTitle>MEMORANDUM AND ORDER granting 42 Motion to Amend Complaint. Signed by Magistrate Judge Kenneth G. Gale on 10/11/2011. (df)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02319-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d0faa9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-0</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02319_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02319/pdf/USCOURTS-ksd-2_10-cv-02319-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02319; Kendall State Bank v. West Point Underwriters, LLC; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02319-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-10-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 42 Motion to Amend Complaint. Signed by Magistrate Judge Kenneth G. Gale on 10/11/2011. (df)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02319-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-1/mods.xml">
+ <titleInfo>
+  <title>Kendall State Bank v. West Point Underwriters, LLC</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 47 Motion to Compel. Signed by Magistrate Judge Kenneth G. Gale on 11/9/2011. (df)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02319-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d0faa8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-1</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02319_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02319/pdf/USCOURTS-ksd-2_10-cv-02319-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02319; Kendall State Bank v. West Point Underwriters, LLC; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02319-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-11-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 47 Motion to Compel. Signed by Magistrate Judge Kenneth G. Gale on 11/9/2011. (df)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02319-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-2/mods.xml">
+ <titleInfo>
+  <title>Kendall State Bank v. West Point Underwriters, LLC</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 85 Motion for Reconsideration. Signed by Magistrate Judge Kenneth G. Gale on 12/20/2011. (df)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02319-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d0faa5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-2</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02319_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02319/pdf/USCOURTS-ksd-2_10-cv-02319-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02319; Kendall State Bank v. West Point Underwriters, LLC; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02319-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-12-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 85 Motion for Reconsideration. Signed by Magistrate Judge Kenneth G. Gale on 12/20/2011. (df)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02319-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-3/mods.xml">
+ <titleInfo>
+  <title>Kendall State Bank v. West Point Underwriters, LLC</title>
+  <subTitle>MEMORANDUM AND ORDER granting 65 Motion to Compel. Signed by Magistrate Judge Kenneth G. Gale on 1/11/2012. (df)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02319-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d0faa2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-3</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02319_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02319/pdf/USCOURTS-ksd-2_10-cv-02319-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02319; Kendall State Bank v. West Point Underwriters, LLC; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02319-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 65 Motion to Compel. Signed by Magistrate Judge Kenneth G. Gale on 1/11/2012. (df)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02319-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-4/mods.xml">
+ <titleInfo>
+  <title>Kendall State Bank v. West Point Underwriters, LLC</title>
+  <subTitle>MEMORANDUM AND ORDER denying 69 Motion to Compel. Signed by Magistrate Judge Kenneth G. Gale on 1/18/2012. (df)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02319-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d0faa4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-4</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02319_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02319/pdf/USCOURTS-ksd-2_10-cv-02319-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02319; Kendall State Bank v. West Point Underwriters, LLC; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02319-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-01-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 69 Motion to Compel. Signed by Magistrate Judge Kenneth G. Gale on 1/18/2012. (df)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02319-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-5/mods.xml">
+ <titleInfo>
+  <title>Kendall State Bank v. West Point Underwriters, LLC</title>
+  <subTitle>MEMORANDUM AND ORDER denying 112 Motion to Quash. Signed by Magistrate Judge Kenneth G. Gale on 7/13/2012. (df)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02319-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d0faa3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-5</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02319_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02319/pdf/USCOURTS-ksd-2_10-cv-02319-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02319; Kendall State Bank v. West Point Underwriters, LLC; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02319-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-07-13</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 112 Motion to Quash. Signed by Magistrate Judge Kenneth G. Gale on 7/13/2012. (df)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02319-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-6/mods.xml">
+ <titleInfo>
+  <title>Kendall State Bank v. West Point Underwriters, LLC</title>
+  <subTitle>MEMORANDUM AND ORDER denying 122 West Point Underwriters, L.L.C.&apos;s Motion to Strike Certain Affirmative Defenses to Counterclaim Asserted by Kendall State Bank. Signed by District Judge J. Thomas Marten on 9/7/2012. (jlw)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02319-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d0f983</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-6</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02319_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02319/pdf/USCOURTS-ksd-2_10-cv-02319-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02319; Kendall State Bank v. West Point Underwriters, LLC; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02319-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-09-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 122 West Point Underwriters, L.L.C.&apos;s Motion to Strike Certain Affirmative Defenses to Counterclaim Asserted by Kendall State Bank. Signed by District Judge J. Thomas Marten on 9/7/2012. (jlw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02319-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-7/mods.xml">
+ <titleInfo>
+  <title>Kendall State Bank v. West Point Underwriters, LLC</title>
+  <subTitle>MEMORANDUM AND ORDER granting 130 Second Motion to Compel. Defendant shall admit or deny the Requests for Admissions at issue, without objection, on or before October 30, 2012. Signed by Magistrate Judge Kenneth G. Gale on 10/16/2012. (df)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02319-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d0f984</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-7</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02319_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02319/pdf/USCOURTS-ksd-2_10-cv-02319-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02319; Kendall State Bank v. West Point Underwriters, LLC; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02319-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-10-16</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 130 Second Motion to Compel. Defendant shall admit or deny the Requests for Admissions at issue, without objection, on or before October 30, 2012. Signed by Magistrate Judge Kenneth G. Gale on 10/16/2012. (df)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02319-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-8/mods.xml">
+ <titleInfo>
+  <title>Kendall State Bank v. West Point Underwriters, LLC</title>
+  <subTitle>MEMORANDUM AND ORDER granting 119 Kendall&apos;s Motion to Vacate, Modify or Correct Arbitral Award. Signed by District Judge J. Thomas Marten on 1/4/2013. (mss)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02319-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d0faa7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-8</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02319_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02319/pdf/USCOURTS-ksd-2_10-cv-02319-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02319; Kendall State Bank v. West Point Underwriters, LLC; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02319-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 119 Kendall&apos;s Motion to Vacate, Modify or Correct Arbitral Award. Signed by District Judge J. Thomas Marten on 1/4/2013. (mss)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_10-cv-02319-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-9/mods.xml">
+ <titleInfo>
+  <title>Kendall State Bank v. West Point Underwriters, LLC</title>
+  <subTitle>MEMORANDUM AND ORDER granting 177 Motion to Remove Designation of Deposition Testimony as Confidential. Signed by Magistrate Judge Kenneth G. Gale on 2/15/2013. (df)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_10-cv-02319-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d0faa6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-9</identifier>
+ <identifier type="former granule identifier">ksd-2_10-cv-02319_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_10-cv-02319/USCOURTS-ksd-2_10-cv-02319-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_10-cv-02319/pdf/USCOURTS-ksd-2_10-cv-02319-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02319; Kendall State Bank v. West Point Underwriters, LLC; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_10-cv-02319-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-02-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 177 Motion to Remove Designation of Deposition Testimony as Confidential. Signed by Magistrate Judge Kenneth G. Gale on 2/15/2013. (df)</docketText>
+</extension>
+</relatedItem>
+</mods>

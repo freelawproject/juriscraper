@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a07a7c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Hawaii</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-hid-1_12-cv-00528</identifier>
+<identifier type="local">P0b002ee183a07a7c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-hid-1_12-cv-00528</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-hid-1_12-cv-00528</accessId>
+ <courtType>District</courtType>
+ <courtCode>hid</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Hawaii</courtState>
+ <courtSortOrder>2140</courtSortOrder>
+ <caseNumber>1:12-cv-00528</caseNumber>
+ <caseOffice>Hawaii</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Champion Air" lastName="Champion Air" role="Defendant"></party>
+ <party firstName="F." fullName="F. Grandinetti" lastName="Grandinetti" role="Plaintiff"></party>
+ <party firstName="Francis" fullName="Francis Grandinetti" lastName="Grandinetti" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Grandinetti v. Champion Air</title>
+ <partNumber>1:12-cv-00528</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-hid-1_12-cv-00528/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-00528;12-528</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Hawaii</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Hawaii</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Champion Air</displayForm>
+ <namePart type="family">Champion Air</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>F. Grandinetti</displayForm>
+ <namePart type="family">Grandinetti</namePart>
+ <namePart type="given">F.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Francis Grandinetti</displayForm>
+ <namePart type="family">Grandinetti</namePart>
+ <namePart type="given">Francis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-hid-1_12-cv-00528</accessId>
+ <courtType>District</courtType>
+ <courtCode>hid</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Hawaii</courtState>
+ <courtSortOrder>2140</courtSortOrder>
+ <caseNumber>1:12-cv-00528</caseNumber>
+ <caseOffice>Hawaii</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Champion Air" lastName="Champion Air" role="Defendant"></party>
+ <party firstName="F." fullName="F. Grandinetti" lastName="Grandinetti" role="Plaintiff"></party>
+ <party firstName="Francis" fullName="Francis Grandinetti" lastName="Grandinetti" role="Plaintiff"></party>
+ <state>Hawaii</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-hid-1_12-cv-00528-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-hid-1_12-cv-00528/USCOURTS-hid-1_12-cv-00528-0/mods.xml">
+ <titleInfo>
+  <title>Grandinetti v. Champion Air</title>
+  <subTitle>ORDER DISMISSING COMPLAINT AND ACTION - Signed by CHIEF JUDGE SUSAN OKI MOLLWAY on 9/27/12. (emt, )CERTIFICATE OF SERVICEParticipants registered to receive electronic notifications received this document electronically at the e-mail address listed on the Notice of Electronic Filing (NEF). Francis A. Grandinetti served by first class mail at the address of record on September 27, 2012.</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-hid-1_12-cv-00528-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1f1e0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-hid-1_12-cv-00528/USCOURTS-hid-1_12-cv-00528-0</identifier>
+ <identifier type="former granule identifier">hid-1_12-cv-00528_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-hid-1_12-cv-00528/USCOURTS-hid-1_12-cv-00528-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-hid-1_12-cv-00528/pdf/USCOURTS-hid-1_12-cv-00528-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00528; Grandinetti v. Champion Air; </searchTitle>
+  <courtName>United States District Court District of Hawaii</courtName>
+  <state>Hawaii</state>
+  <accessId>USCOURTS-hid-1_12-cv-00528-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-09-27</dateIssued>
+  <docketText>ORDER DISMISSING COMPLAINT AND ACTION - Signed by CHIEF JUDGE SUSAN OKI MOLLWAY on 9/27/12. (emt, )CERTIFICATE OF SERVICEParticipants registered to receive electronic notifications received this document electronically at the e-mail address listed on the Notice of Electronic Filing (NEF). Francis A. Grandinetti served by first class mail at the address of record on September 27, 2012.</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-hid-1_12-cv-00528-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-hid-1_12-cv-00528/USCOURTS-hid-1_12-cv-00528-1/mods.xml">
+ <titleInfo>
+  <title>Grandinetti v. Champion Air</title>
+  <subTitle>ORDER DENYING MOTION FOR RECONSIDERATION re 8 - Signed by CHIEF JUDGE SUSAN OKI MOLLWAY on 1/2/13. (emt, )CERTIFICATE OF SERVICEParticipants registered to receive electronic notifications received this document electronically at the e-mail address listed on the Notice of Electronic Filing (NEF). Francis Grandinetti served by first class mail at the address of record on January 3, 2013.</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-hid-1_12-cv-00528-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1f1df</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-hid-1_12-cv-00528/USCOURTS-hid-1_12-cv-00528-1</identifier>
+ <identifier type="former granule identifier">hid-1_12-cv-00528_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-hid-1_12-cv-00528/USCOURTS-hid-1_12-cv-00528-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-hid-1_12-cv-00528/pdf/USCOURTS-hid-1_12-cv-00528-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00528; Grandinetti v. Champion Air; </searchTitle>
+  <courtName>United States District Court District of Hawaii</courtName>
+  <state>Hawaii</state>
+  <accessId>USCOURTS-hid-1_12-cv-00528-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER DENYING MOTION FOR RECONSIDERATION re 8 - Signed by CHIEF JUDGE SUSAN OKI MOLLWAY on 1/2/13. (emt, )CERTIFICATE OF SERVICEParticipants registered to receive electronic notifications received this document electronically at the e-mail address listed on the Notice of Electronic Filing (NEF). Francis Grandinetti served by first class mail at the address of record on January 3, 2013.</docketText>
+</extension>
+</relatedItem>
+</mods>

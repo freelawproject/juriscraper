@@ -1,0 +1,197 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186dd17ee">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-06430</identifier>
+<identifier type="local">P0b002ee186dd17ee</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-laed-2_13-cv-06430</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_13-cv-06430</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:13-cv-06430</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>465</natureSuitCode>
+ <natureSuit>Other Immigration Actions</natureSuit>
+ <cause>05:552 Freedom of Information Act</cause>
+ <party firstName="Stanley" fullName="Stanley Crockett" lastName="Crockett" role="Defendant"></party>
+ <party firstName="Cindy" fullName="Cindy Gomez" lastName="Gomez" role="Defendant"></party>
+ <party firstName="Balazs" fullName="Balazs Hegyi" lastName="Hegyi" role="Plaintiff"></party>
+ <party firstName="Nicole" fullName="Nicole Hegyi" lastName="Hegyi" role="Plaintiff"></party>
+ <party fullName="U.S. Citizenship and Immigration Services" lastName="U.S. Citizenship and Immigration Services" role="Defendant"></party>
+ <party fullName="U.S. Department of Homeland Security" lastName="U.S. Department of Homeland Security" role="Defendant"></party>
+ <party fullName="U.S. Department of Justice" lastName="U.S. Department of Justice" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Hegyi et al v. Gomez et al</title>
+ <partNumber>2:13-cv-06430</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-06430/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-06430;13-6430</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>New Orleans</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Stanley Crockett</displayForm>
+ <namePart type="family">Crockett</namePart>
+ <namePart type="given">Stanley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cindy Gomez</displayForm>
+ <namePart type="family">Gomez</namePart>
+ <namePart type="given">Cindy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Balazs Hegyi</displayForm>
+ <namePart type="family">Hegyi</namePart>
+ <namePart type="given">Balazs</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Nicole Hegyi</displayForm>
+ <namePart type="family">Hegyi</namePart>
+ <namePart type="given">Nicole</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Citizenship and Immigration Services</displayForm>
+ <namePart type="family">U.S. Citizenship and Immigration Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Department of Homeland Security</displayForm>
+ <namePart type="family">U.S. Department of Homeland Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Department of Justice</displayForm>
+ <namePart type="family">U.S. Department of Justice</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_13-cv-06430</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:13-cv-06430</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>465</natureSuitCode>
+ <natureSuit>Other Immigration Actions</natureSuit>
+ <cause>05:552 Freedom of Information Act</cause>
+ <party firstName="Stanley" fullName="Stanley Crockett" lastName="Crockett" role="Defendant"></party>
+ <party firstName="Cindy" fullName="Cindy Gomez" lastName="Gomez" role="Defendant"></party>
+ <party firstName="Balazs" fullName="Balazs Hegyi" lastName="Hegyi" role="Plaintiff"></party>
+ <party firstName="Nicole" fullName="Nicole Hegyi" lastName="Hegyi" role="Plaintiff"></party>
+ <party fullName="U.S. Citizenship and Immigration Services" lastName="U.S. Citizenship and Immigration Services" role="Defendant"></party>
+ <party fullName="U.S. Department of Homeland Security" lastName="U.S. Department of Homeland Security" role="Defendant"></party>
+ <party fullName="U.S. Department of Justice" lastName="U.S. Department of Justice" role="Defendant"></party>
+ <state>Louisiana</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-06430-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-06430/USCOURTS-laed-2_13-cv-06430-0/mods.xml">
+ <titleInfo>
+  <title>Hegyi et al v. Gomez et al</title>
+  <subTitle>ORDER AND REASONS denying 28 Motion for Entry of Default; denying WITHOUT PREJUDICE 29 Motion for Judgment on the Pleadings; granting 32 Motion for Extension of Time to Answer re 1 Petition for Writ of Mandamus. Defendants shall file responsive pleadings no later than 14 days following the Court&apos;s order on the Motion to Sever. Signed by Judge Jane Triche Milazzo on 1/2/14. (ecm, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-06430/pdf/USCOURTS-laed-2_13-cv-06430-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd3971</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-06430/USCOURTS-laed-2_13-cv-06430-0</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-06430_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-06430/USCOURTS-laed-2_13-cv-06430-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-06430/pdf/USCOURTS-laed-2_13-cv-06430-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-06430; Hegyi et al v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-06430-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER AND REASONS denying 28 Motion for Entry of Default; denying WITHOUT PREJUDICE 29 Motion for Judgment on the Pleadings; granting 32 Motion for Extension of Time to Answer re 1 Petition for Writ of Mandamus. Defendants shall file responsive pleadings no later than 14 days following the Court&apos;s order on the Motion to Sever. Signed by Judge Jane Triche Milazzo on 1/2/14. (ecm, )</docketText>
+</extension>
+</relatedItem>
+</mods>

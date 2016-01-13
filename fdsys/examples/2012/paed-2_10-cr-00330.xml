@@ -1,0 +1,183 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181f3d3c6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-02-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-02-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cr-00330</identifier>
+<identifier type="local">P0b002ee181f3d3c6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-02-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-02-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_10-cr-00330</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_10-cr-00330</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:10-cr-00330</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="SALEEM" fullName="SALEEM JORDAN" lastName="JORDAN" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="SHANING" fullName="SHANING WASHINGTON" lastName="WASHINGTON" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. WASHINGTON et al</title>
+ <partNumber>2:10-cr-00330</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cr-00330/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cr-00330;10-330</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>SALEEM JORDAN</displayForm>
+ <namePart type="family">JORDAN</namePart>
+ <namePart type="given">SALEEM</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>SHANING WASHINGTON</displayForm>
+ <namePart type="family">WASHINGTON</namePart>
+ <namePart type="given">SHANING</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_10-cr-00330</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:10-cr-00330</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="SALEEM" fullName="SALEEM JORDAN" lastName="JORDAN" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="SHANING" fullName="SHANING WASHINGTON" lastName="WASHINGTON" role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_10-cr-00330-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cr-00330/USCOURTS-paed-2_10-cr-00330-0/mods.xml">
+ <titleInfo>
+  <title>USA v. WASHINGTON et al</title>
+  <subTitle>JUDGMENT AS TO SHANING WASHINGTON : ACQUITTAL AS TO CTS 1s-3s. Signed by HONORABLE EDUARDO C. ROBRENO on 1/13/12. 1/13/12 Entered and Copies E-Mailed. (cmc)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_10-cr-00330-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181f3f3d2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cr-00330/USCOURTS-paed-2_10-cr-00330-0</identifier>
+ <identifier type="former granule identifier">paed-2_10-cr-00330_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cr-00330/USCOURTS-paed-2_10-cr-00330-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cr-00330/pdf/USCOURTS-paed-2_10-cr-00330-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00330; USA v. WASHINGTON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_10-cr-00330-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-13</dateIssued>
+  <docketText>JUDGMENT AS TO SHANING WASHINGTON : ACQUITTAL AS TO CTS 1s-3s. Signed by HONORABLE EDUARDO C. ROBRENO on 1/13/12. 1/13/12 Entered and Copies E-Mailed. (cmc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_10-cr-00330-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cr-00330/USCOURTS-paed-2_10-cr-00330-1/mods.xml">
+ <titleInfo>
+  <title>USA v. WASHINGTON et al</title>
+  <subTitle>JUDGMENT AS TO SALEEM JORDAN (2), Counts 1, 2, IMPRISONMENT: 12 MONTHS; Count 3, IMPRISONMENT: 72 MONTHS CONSECUTIVE; SUPERVISED RELEASE: COUNTS 1,2: 3 YEARS, COUNT 3: 5 YEARS; SPECIAL ASSESSMENT: $300.00; FINE: $1000.00. Signed by HONORABLE EDUARDO C. ROBRENO on 2/23/12.2/24/12 Entered. (mac, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_10-cr-00330-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181f3f447</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cr-00330/USCOURTS-paed-2_10-cr-00330-1</identifier>
+ <identifier type="former granule identifier">paed-2_10-cr-00330_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cr-00330/USCOURTS-paed-2_10-cr-00330-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cr-00330/pdf/USCOURTS-paed-2_10-cr-00330-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00330; USA v. WASHINGTON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_10-cr-00330-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-02-24</dateIssued>
+  <docketText>JUDGMENT AS TO SALEEM JORDAN (2), Counts 1, 2, IMPRISONMENT: 12 MONTHS; Count 3, IMPRISONMENT: 72 MONTHS CONSECUTIVE; SUPERVISED RELEASE: COUNTS 1,2: 3 YEARS, COUNT 3: 5 YEARS; SPECIAL ASSESSMENT: $300.00; FINE: $1000.00. Signed by HONORABLE EDUARDO C. ROBRENO on 2/23/12.2/24/12 Entered. (mac, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,612 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817913a7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144</identifier>
+<identifier type="local">P0b002ee1817913a7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cr-00144</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00144</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00144</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Elvis" fullName="Elvis Patrick Henry" lastName="Henry" middleName="Patrick" role="Defendant"></party>
+ <party firstName="Curtis" fullName="Curtis Thomas Kearnes" lastName="Kearnes" middleName="Thomas" role="Defendant"></party>
+ <party firstName="Jamison" fullName="Jamison Nachez Robinson" lastName="Robinson" middleName="Nachez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Kearnes et al</title>
+ <partNumber>8:05-cr-00144</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cr-00144;05-144</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Elvis Patrick Henry</displayForm>
+ <namePart type="family">Henry</namePart>
+ <namePart type="given">Elvis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Curtis Thomas Kearnes</displayForm>
+ <namePart type="family">Kearnes</namePart>
+ <namePart type="given">Curtis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jamison Nachez Robinson</displayForm>
+ <namePart type="family">Robinson</namePart>
+ <namePart type="given">Jamison</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00144</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00144</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Elvis" fullName="Elvis Patrick Henry" lastName="Henry" middleName="Patrick" role="Defendant"></party>
+ <party firstName="Curtis" fullName="Curtis Thomas Kearnes" lastName="Kearnes" middleName="Thomas" role="Defendant"></party>
+ <party firstName="Jamison" fullName="Jamison Nachez Robinson" lastName="Robinson" middleName="Nachez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>ORDER as to defendants Curtis Thomas Kearnes, Elvis Patrick Henry and Jamison Nachez Robinson. Initial Appearance/Arraignment set for 5/2/2005 at 10:30 AM before Magistrate Judge F. A. Gossett. Signed by Magistrate Judge F. A. Gossett on 4/27/2005. (MLF, )ORDER as to defendants Curtis Thomas Kearnes, Elvis Patrick Henry and Jamison Nachez Robinson. Initial Appearance/Arraignment set for 5/2/2005 at 10:30 AM before Magistrate Judge F. A. Gossett. Signed by Magistrate Judge F. A. Gossett on 4/27/2005. (MLF, )ORDER as to defendants Curtis Thomas Kearnes, Elvis Patrick Henry and Jamison Nachez Robinson. Initial Appearance/Arraignment set for 5/2/2005 at 10:30 AM before Magistrate Judge F. A. Gossett. Signed by Magistrate Judge F. A. Gossett on 4/27/2005. (MLF, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-04-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f48f5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-04-27</dateIssued>
+  <docketText>ORDER as to defendants Curtis Thomas Kearnes, Elvis Patrick Henry and Jamison Nachez Robinson. Initial Appearance/Arraignment set for 5/2/2005 at 10:30 AM before Magistrate Judge F. A. Gossett. Signed by Magistrate Judge F. A. Gossett on 4/27/2005. (MLF, )ORDER as to defendants Curtis Thomas Kearnes, Elvis Patrick Henry and Jamison Nachez Robinson. Initial Appearance/Arraignment set for 5/2/2005 at 10:30 AM before Magistrate Judge F. A. Gossett. Signed by Magistrate Judge F. A. Gossett on 4/27/2005. (MLF, )ORDER as to defendants Curtis Thomas Kearnes, Elvis Patrick Henry and Jamison Nachez Robinson. Initial Appearance/Arraignment set for 5/2/2005 at 10:30 AM before Magistrate Judge F. A. Gossett. Signed by Magistrate Judge F. A. Gossett on 4/27/2005. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Jamison Nachez Robinson. Signed Magistrate by Judge F. A. Gossett on 6/8/2005. (MKR, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f47e8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-06-08</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Jamison Nachez Robinson. Signed Magistrate by Judge F. A. Gossett on 6/8/2005. (MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>ORDER scheduling Change of Plea Hearing on 7/28/2005 01:30 PM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 6/27/2005 and 7/28/2005 is excluded in the interest of justiceas to defendant(s) Elvis Patrick Henry. Signed by Judge Joseph F. Bataillon on 6/20/2005. (SMS, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f48f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-06-20</dateIssued>
+  <docketText>ORDER scheduling Change of Plea Hearing on 7/28/2005 01:30 PM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 6/27/2005 and 7/28/2005 is excluded in the interest of justiceas to defendant(s) Elvis Patrick Henry. Signed by Judge Joseph F. Bataillon on 6/20/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>TRIAL ORDER - Jury Trial set for 9/12/2005 08:30 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 7/28/2005 and 9/12/2005 is excluded in the interest of justice as to defendant(s) Elvis Patrick Henry. Signed by Judge Joseph F. Bataillon on 7/28/2005. (SMS, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f48f0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-07-28</dateIssued>
+  <docketText>TRIAL ORDER - Jury Trial set for 9/12/2005 08:30 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 7/28/2005 and 9/12/2005 is excluded in the interest of justice as to defendant(s) Elvis Patrick Henry. Signed by Judge Joseph F. Bataillon on 7/28/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>TRIAL ORDER - rescheduling Jury Trial to 10/3/2005 08:30 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 9/12/2005 and 10/3/2005 is excluded in the interest of justiceas to defendant(s) Elvis Patrick Henry. Signed by Judge Joseph F. Bataillon on 9/7/2005. (SMS, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f47e6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-09-07</dateIssued>
+  <docketText>TRIAL ORDER - rescheduling Jury Trial to 10/3/2005 08:30 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 9/12/2005 and 10/3/2005 is excluded in the interest of justiceas to defendant(s) Elvis Patrick Henry. Signed by Judge Joseph F. Bataillon on 9/7/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>JUDGMENT as to Jamison Nachez Robinson (3), Defendant plead guilty to Count I of the Indictment and is committed to the custody of the Bureau of Prisons for 27 months; 3 years supervised release with special conditions; $100 special assessment; Count II of the Indictment is dismissed on the motion of the United States as to this defendant only as to defendant Jamison Nachez Robinson. Signed by Judge Joseph F. Bataillon on 9/16/2005. (4 certified copies to USM) (CJP)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f48f1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-5</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2005-09-16</dateIssued>
+  <docketText>JUDGMENT as to Jamison Nachez Robinson (3), Defendant plead guilty to Count I of the Indictment and is committed to the custody of the Bureau of Prisons for 27 months; 3 years supervised release with special conditions; $100 special assessment; Count II of the Indictment is dismissed on the motion of the United States as to this defendant only as to defendant Jamison Nachez Robinson. Signed by Judge Joseph F. Bataillon on 9/16/2005. (4 certified copies to USM) (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>JUDGMENT as to Curtis Thomas Kearnes. Defendant plead guilty to Count 1 of the Indictment and sentenced to the custody of the Bureau of Prisons for 77 months; 3 years Supervised Release with special conditions; $100.00 Special Assessment; Count 2 of the Indictment is dismissed on the motion of the government as to this defendant only as to defendant Curtis Thomas Kearnes. Signed by Judge Joseph F. Bataillon on 9/26/2005. (KBJ)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f48ee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-6</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2005-09-26</dateIssued>
+  <docketText>JUDGMENT as to Curtis Thomas Kearnes. Defendant plead guilty to Count 1 of the Indictment and sentenced to the custody of the Bureau of Prisons for 77 months; 3 years Supervised Release with special conditions; $100.00 Special Assessment; Count 2 of the Indictment is dismissed on the motion of the government as to this defendant only as to defendant Curtis Thomas Kearnes. Signed by Judge Joseph F. Bataillon on 9/26/2005. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>ORDER scheduling Change of Plea Hearing on 10/5/2005 11:00 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 10/3/2005 and 10/5/2005 is excluded in the interest of justiceas to defendant(s) Elvis Patrick Henry. Signed by Judge Joseph F. Bataillon on 9/30/2005. (SMS, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f48f6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-7</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2005-09-30</dateIssued>
+  <docketText>ORDER scheduling Change of Plea Hearing on 10/5/2005 11:00 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 10/3/2005 and 10/5/2005 is excluded in the interest of justiceas to defendant(s) Elvis Patrick Henry. Signed by Judge Joseph F. Bataillon on 9/30/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>JUDGMENT as to Elvis Patrick Henry (2): Defendant pleaded guilty as to Count I of the Information and is sentenced to probation for a term of 3 years commencing 11/22/05; $10.00 special assessment. The Indictment is dismissed on the motion of the United States as to this defendant only. Signed by Judge Joseph F. Bataillon on 12/7/2005. 4 certified copies USM (JAE, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f48f4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-8</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2005-12-07</dateIssued>
+  <docketText>JUDGMENT as to Elvis Patrick Henry (2): Defendant pleaded guilty as to Count I of the Information and is sentenced to probation for a term of 3 years commencing 11/22/05; $10.00 special assessment. The Indictment is dismissed on the motion of the United States as to this defendant only. Signed by Judge Joseph F. Bataillon on 12/7/2005. 4 certified copies USM (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>ORDER granting the request for Modifying the Conditions or Term of Supervision with Consent of the Offender as to defendant Elvis Patrick Henry. Signed by Judge Joseph F. Bataillon on 1/19/2006. (PCV, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f47e7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-9</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2006-01-19</dateIssued>
+  <docketText>ORDER granting the request for Modifying the Conditions or Term of Supervision with Consent of the Offender as to defendant Elvis Patrick Henry. Signed by Judge Joseph F. Bataillon on 1/19/2006. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>ORDER granting the request Modifying the Conditions or Term of Supervision as to defendant Elvis Patrick Henry. Signed by Judge Joseph F. Bataillon on 3/31/2006. (JSF)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f48f3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-10</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2006-03-31</dateIssued>
+  <docketText>ORDER granting the request Modifying the Conditions or Term of Supervision as to defendant Elvis Patrick Henry. Signed by Judge Joseph F. Bataillon on 3/31/2006. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Elvis Patrick Henry. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f47e9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-11</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2006-10-19</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Elvis Patrick Henry. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 81 as to defendant Elvis Patrick Henry. Final Violation of Supervised Release Hearing set for 11/9/2006 at 10:30 AM before Chief Judge Joseph F. Bataillon. The defendant is committed to the custody of the Attorney General or his designated representative for confinement in a correctional facility. Ordered by Magistrate Judge F. A. Gossett. Copy to US Marshal.(MLF, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f47e5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-12</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2006-10-23</dateIssued>
+  <docketText>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 81 as to defendant Elvis Patrick Henry. Final Violation of Supervised Release Hearing set for 11/9/2006 at 10:30 AM before Chief Judge Joseph F. Bataillon. The defendant is committed to the custody of the Attorney General or his designated representative for confinement in a correctional facility. Ordered by Magistrate Judge F. A. Gossett. Copy to US Marshal.(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>JUDGMENT (For Revocation of Probation or Supervised Release) as to Elvis Patrick Henry; the defendant admitted guilt to violation of standard conditions 6, 7 and 8 of the term of supervision and is sentenced to 3 months in the Bureau of Prisons followed by 1 year of Supervised Release; $10.00 special assessment; allegations 1, 2, 6 and 7 are withdrawn on the motion of the United States as to defendant(s) Elvis Patrick Henry Ordered by Judge Joseph F. Bataillon.(PCV, ) (4 Cert copies to US Marshal)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f47e4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-13</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2006-11-22</dateIssued>
+  <docketText>JUDGMENT (For Revocation of Probation or Supervised Release) as to Elvis Patrick Henry; the defendant admitted guilt to violation of standard conditions 6, 7 and 8 of the term of supervision and is sentenced to 3 months in the Bureau of Prisons followed by 1 year of Supervised Release; $10.00 special assessment; allegations 1, 2, 6 and 7 are withdrawn on the motion of the United States as to defendant(s) Elvis Patrick Henry Ordered by Judge Joseph F. Bataillon.(PCV, ) (4 Cert copies to US Marshal)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - James E. Reisinger appointed as counsel for the defendant Jamison Nachez Robinson. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f47e3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-14</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2009-09-16</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - James E. Reisinger appointed as counsel for the defendant Jamison Nachez Robinson. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 92 as to defendant Jamison Nachez Robinson. The defendant should be held to answer for a final dispositional hearing before Judge Bataillon. A final dispositional hearing will be held before Chief Judge Joseph F. Bataillon in Courtroom No.3, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on October 23, 2009 at 2:30 p.m. Defendant must be present in person. The defendant, Jamison Nachez Robinson, is committed to the custody of the Attorney General or his designated representative for confinement in a correctional facility. Ordered by Magistrate Judge F. A. Gossett. (1 Certified copy to USM)(MLF, )</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f48ef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-15</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2009-09-18</dateIssued>
+  <docketText>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 92 as to defendant Jamison Nachez Robinson. The defendant should be held to answer for a final dispositional hearing before Judge Bataillon. A final dispositional hearing will be held before Chief Judge Joseph F. Bataillon in Courtroom No.3, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on October 23, 2009 at 2:30 p.m. Defendant must be present in person. The defendant, Jamison Nachez Robinson, is committed to the custody of the Attorney General or his designated representative for confinement in a correctional facility. Ordered by Magistrate Judge F. A. Gossett. (1 Certified copy to USM)(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00144-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Kearnes et al</title>
+  <subTitle>AMENDED JUDGMENT for Clerical Mistake for Revocation of Supervised Release as to Jamison Nachez Robinson (3), Defendant admitted guilt to violation of themandatory condition which states the defendant shall not unlawfully possess a controlled substance, standard condition #2 and special condition #1 of the term of supervision and is committed to the custody of the Bureau of Prisons for 12 months and 1 day with no supervised release to follow; $100 special assessment (paid) as to defendant Jamison Nachez Robinson. Ordered by Judge Joseph F. Bataillon. (4 Certified copies to USM)(ADB, )</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00144-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f48f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-16</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00144_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00144/USCOURTS-ned-8_05-cr-00144-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00144/pdf/USCOURTS-ned-8_05-cr-00144-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00144; USA v. Kearnes et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00144-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>AMENDED JUDGMENT for Clerical Mistake for Revocation of Supervised Release as to Jamison Nachez Robinson (3), Defendant admitted guilt to violation of themandatory condition which states the defendant shall not unlawfully possess a controlled substance, standard condition #2 and special condition #1 of the term of supervision and is committed to the custody of the Bureau of Prisons for 12 months and 1 day with no supervised release to follow; $100 special assessment (paid) as to defendant Jamison Nachez Robinson. Ordered by Judge Joseph F. Bataillon. (4 Certified copies to USM)(ADB, )</docketText>
+</extension>
+</relatedItem>
+</mods>

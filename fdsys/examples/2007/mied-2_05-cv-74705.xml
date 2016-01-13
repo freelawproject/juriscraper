@@ -1,0 +1,186 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18192dc22">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74705</identifier>
+<identifier type="local">P0b002ee18192dc22</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_05-cv-74705</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-74705</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-74705</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>443</natureSuitCode>
+ <natureSuit>Civil Rights Accommodations</natureSuit>
+ <party firstName="Amy" fullName="Amy Brill" lastName="Brill" role="Defendant"></party>
+ <party fullName="Edward Rose Associates, Incorporated" lastName="Edward Rose Associates, Incorporated" role="Defendant"></party>
+ <party fullName="Legal Services of Eastern Michigan" lastName="Legal Services of Eastern Michigan" role="Plaintiff"></party>
+ <party firstName="Sandy" fullName="Sandy Regan" lastName="Regan" role="Defendant"></party>
+ <party firstName="Darlene" fullName="Darlene Vachon" lastName="Vachon" role="Defendant"></party>
+ <party fullName="dba Flint Building Company" lastName="dba Flint Building Company" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Legal Services of Eastern Michigan v. Edward Rose Associates, Incorporated et al</title>
+ <partNumber>2:05-cv-74705</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74705/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-74705;05-74705</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Amy Brill</displayForm>
+ <namePart type="family">Brill</namePart>
+ <namePart type="given">Amy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Edward Rose Associates, Incorporated</displayForm>
+ <namePart type="family">Edward Rose Associates, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Legal Services of Eastern Michigan</displayForm>
+ <namePart type="family">Legal Services of Eastern Michigan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sandy Regan</displayForm>
+ <namePart type="family">Regan</namePart>
+ <namePart type="given">Sandy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Darlene Vachon</displayForm>
+ <namePart type="family">Vachon</namePart>
+ <namePart type="given">Darlene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>dba Flint Building Company</displayForm>
+ <namePart type="family">dba Flint Building Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-74705</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-74705</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>443</natureSuitCode>
+ <natureSuit>Civil Rights Accommodations</natureSuit>
+ <party firstName="Amy" fullName="Amy Brill" lastName="Brill" role="Defendant"></party>
+ <party fullName="Edward Rose Associates, Incorporated" lastName="Edward Rose Associates, Incorporated" role="Defendant"></party>
+ <party fullName="Legal Services of Eastern Michigan" lastName="Legal Services of Eastern Michigan" role="Plaintiff"></party>
+ <party firstName="Sandy" fullName="Sandy Regan" lastName="Regan" role="Defendant"></party>
+ <party firstName="Darlene" fullName="Darlene Vachon" lastName="Vachon" role="Defendant"></party>
+ <party fullName="dba Flint Building Company" lastName="dba Flint Building Company" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_05-cv-74705-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74705/USCOURTS-mied-2_05-cv-74705-0/mods.xml">
+ <titleInfo>
+  <title>Legal Services of Eastern Michigan v. Edward Rose Associates, Incorporated et al</title>
+  <subTitle>OPINION AND ORDER granting in part and denying in part 13 Motion for Summary Judgment- Signed by Honorable Sean F Cox. (JHer, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_05-cv-74705-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819ce1c1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74705/USCOURTS-mied-2_05-cv-74705-0</identifier>
+ <identifier type="former granule identifier">mied-2_05-cv-74705_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74705/USCOURTS-mied-2_05-cv-74705-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74705/pdf/USCOURTS-mied-2_05-cv-74705-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-74705; Legal Services of Eastern Michigan v. Edward Rose Associates, Incorporated et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_05-cv-74705-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-31</dateIssued>
+  <docketText>OPINION AND ORDER granting in part and denying in part 13 Motion for Summary Judgment- Signed by Honorable Sean F Cox. (JHer, )</docketText>
+</extension>
+</relatedItem>
+</mods>

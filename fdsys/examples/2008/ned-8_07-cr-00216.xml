@@ -1,0 +1,258 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181768345">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00216</identifier>
+<identifier type="local">P0b002ee181768345</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cr-00216</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00216</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00216</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Omar" fullName="Omar Marin" lastName="Marin" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Marin</title>
+ <partNumber>8:07-cr-00216</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00216/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:07-cr-00216;07-216</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Omar Marin</displayForm>
+ <namePart type="family">Marin</namePart>
+ <namePart type="given">Omar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00216</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00216</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Omar" fullName="Omar Marin" lastName="Marin" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00216-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Marin</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Omar Marin - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)[8:07-mj-00084-TDT]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00216-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c40a4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-0</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00216_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00216/pdf/USCOURTS-ned-8_07-cr-00216-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00216; USA v. Marin; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00216-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-06-07</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Omar Marin - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)[8:07-mj-00084-TDT]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00216-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Marin</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Omar Marin. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)[8:07-mj-00084-TDT]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00216-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c40a3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-1</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00216_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00216/pdf/USCOURTS-ned-8_07-cr-00216-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00216; USA v. Marin; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00216-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-06-08</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Omar Marin. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)[8:07-mj-00084-TDT]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00216-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Marin</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion 17 for Issuance of Preliminary Order of Forfeiture is hereby sustained. The United States Immigration and Customs Enforcement for the District of Nebraska is hereby authorized to seize the Hi Point 9mm Semi-Automatic Handgun with Winchester 9mmammunition. Defendant&apos;s interest in said property is hereby forfeited to the United States of America for disposition in accordance with the law. The aforementioned forfeited properties are to be held by ICE in its securecustody and control. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed, as to defendant Omar Marin (1). Ordered by Judge Lyle E. Strom. Certified copy USM. (JAE, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00216-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c40a2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-2</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00216_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00216/pdf/USCOURTS-ned-8_07-cr-00216-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00216; USA v. Marin; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00216-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-09-11</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion 17 for Issuance of Preliminary Order of Forfeiture is hereby sustained. The United States Immigration and Customs Enforcement for the District of Nebraska is hereby authorized to seize the Hi Point 9mm Semi-Automatic Handgun with Winchester 9mmammunition. Defendant&apos;s interest in said property is hereby forfeited to the United States of America for disposition in accordance with the law. The aforementioned forfeited properties are to be held by ICE in its securecustody and control. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed, as to defendant Omar Marin (1). Ordered by Judge Lyle E. Strom. Certified copy USM. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00216-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Marin</title>
+  <subTitle>JUDGMENT as to Omar Marin (1), Defendant plead guilty to Counts II and III of the Indictment and is committed to the Bureau of Prisons for 15 months; 3 years supervised release with special conditions; $100 special assessment; final order of forfeiture as to Count II forthcoming, Criminal Case Terminated as to defendant Omar Marin. Ordered by Senior Judge Lyle E. Strom. (4 certified copies to USM)(CJP)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00216-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c40a0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-3</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00216_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00216/pdf/USCOURTS-ned-8_07-cr-00216-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00216; USA v. Marin; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00216-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-12-11</dateIssued>
+  <docketText>JUDGMENT as to Omar Marin (1), Defendant plead guilty to Counts II and III of the Indictment and is committed to the Bureau of Prisons for 15 months; 3 years supervised release with special conditions; $100 special assessment; final order of forfeiture as to Count II forthcoming, Criminal Case Terminated as to defendant Omar Marin. Ordered by Senior Judge Lyle E. Strom. (4 certified copies to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00216-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Marin</title>
+  <subTitle>FINAL ORDER OF FORFEITURE sustaining 26 Motion for Final Forfeiture as to Omar Marin (1). All right, title and interest in and to the Hi Point 9mm semi-automatic handgun, held by any person or entity, is hereby forever barred and foreclosed. The Hi Point 9mm semi-automatic handgun is forfeited to the U.S.A. The U.S. Marshals Service for the District of Nebraska is directed to dispose of said property in accordance with law. Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM) (JSF)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00216-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817c40a1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-4</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00216_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00216/USCOURTS-ned-8_07-cr-00216-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00216/pdf/USCOURTS-ned-8_07-cr-00216-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00216; USA v. Marin; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00216-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-01-02</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE sustaining 26 Motion for Final Forfeiture as to Omar Marin (1). All right, title and interest in and to the Hi Point 9mm semi-automatic handgun, held by any person or entity, is hereby forever barred and foreclosed. The Hi Point 9mm semi-automatic handgun is forfeited to the U.S.A. The U.S. Marshals Service for the District of Nebraska is directed to dispose of said property in accordance with law. Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM) (JSF)</docketText>
+</extension>
+</relatedItem>
+</mods>

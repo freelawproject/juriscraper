@@ -1,0 +1,260 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181949510">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-14911</identifier>
+<identifier type="local">P0b002ee181949510</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_10-cv-14911</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_10-cv-14911</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:10-cv-14911</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>28:1132 E.R.I.S.A.</cause>
+ <party fullName="K&amp;S Piling Companies Inc." lastName="K&amp;S Piling Companies Inc." role="Defendant"></party>
+ <party fullName="K&amp;S Piling Company" lastName="K&amp;S Piling Company" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Kobolak" lastName="Kobolak" role="Defendant"></party>
+ <party fullName="Operating Engineers Local 324 Apprenticeship Fund" lastName="Operating Engineers Local 324 Apprenticeship Fund" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Defined Contribution Pension Plan" lastName="Operating Engineers Local 324 Defined Contribution Pension Plan" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Health Care Plan" lastName="Operating Engineers Local 324 Health Care Plan" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Industry Advancement Fund" lastName="Operating Engineers Local 324 Industry Advancement Fund" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Labor Management Fund" lastName="Operating Engineers Local 324 Labor Management Fund" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Pension Plan" lastName="Operating Engineers Local 324 Pension Plan" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Retiree Benefit Fund" lastName="Operating Engineers Local 324 Retiree Benefit Fund" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Supplemental Vacation Fund" lastName="Operating Engineers Local 324 Supplemental Vacation Fund" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Vacation Fund" lastName="Operating Engineers Local 324 Vacation Fund" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Szypula" lastName="Szypula" role="Defendant"></party>
+ <party firstName="Rebekah" fullName="Rebekah Szypula" lastName="Szypula" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Operating Engineers Local 324 Health Care Plan et al v. K&amp;S Piling Company et al</title>
+ <partNumber>2:10-cv-14911</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-14911/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cv-14911;10-14911</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>K&amp;S Piling Companies Inc.</displayForm>
+ <namePart type="family">K&amp;S Piling Companies Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>K&amp;S Piling Company</displayForm>
+ <namePart type="family">K&amp;S Piling Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Kobolak</displayForm>
+ <namePart type="family">Kobolak</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Operating Engineers Local 324 Apprenticeship Fund</displayForm>
+ <namePart type="family">Operating Engineers Local 324 Apprenticeship Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Operating Engineers Local 324 Defined Contribution Pension Plan</displayForm>
+ <namePart type="family">Operating Engineers Local 324 Defined Contribution Pension Plan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Operating Engineers Local 324 Health Care Plan</displayForm>
+ <namePart type="family">Operating Engineers Local 324 Health Care Plan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Operating Engineers Local 324 Industry Advancement Fund</displayForm>
+ <namePart type="family">Operating Engineers Local 324 Industry Advancement Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Operating Engineers Local 324 Labor Management Fund</displayForm>
+ <namePart type="family">Operating Engineers Local 324 Labor Management Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Operating Engineers Local 324 Pension Plan</displayForm>
+ <namePart type="family">Operating Engineers Local 324 Pension Plan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Operating Engineers Local 324 Retiree Benefit Fund</displayForm>
+ <namePart type="family">Operating Engineers Local 324 Retiree Benefit Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Operating Engineers Local 324 Supplemental Vacation Fund</displayForm>
+ <namePart type="family">Operating Engineers Local 324 Supplemental Vacation Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Operating Engineers Local 324 Vacation Fund</displayForm>
+ <namePart type="family">Operating Engineers Local 324 Vacation Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Szypula</displayForm>
+ <namePart type="family">Szypula</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rebekah Szypula</displayForm>
+ <namePart type="family">Szypula</namePart>
+ <namePart type="given">Rebekah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_10-cv-14911</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:10-cv-14911</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>28:1132 E.R.I.S.A.</cause>
+ <party fullName="K&amp;S Piling Companies Inc." lastName="K&amp;S Piling Companies Inc." role="Defendant"></party>
+ <party fullName="K&amp;S Piling Company" lastName="K&amp;S Piling Company" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Kobolak" lastName="Kobolak" role="Defendant"></party>
+ <party fullName="Operating Engineers Local 324 Apprenticeship Fund" lastName="Operating Engineers Local 324 Apprenticeship Fund" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Defined Contribution Pension Plan" lastName="Operating Engineers Local 324 Defined Contribution Pension Plan" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Health Care Plan" lastName="Operating Engineers Local 324 Health Care Plan" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Industry Advancement Fund" lastName="Operating Engineers Local 324 Industry Advancement Fund" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Labor Management Fund" lastName="Operating Engineers Local 324 Labor Management Fund" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Pension Plan" lastName="Operating Engineers Local 324 Pension Plan" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Retiree Benefit Fund" lastName="Operating Engineers Local 324 Retiree Benefit Fund" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Supplemental Vacation Fund" lastName="Operating Engineers Local 324 Supplemental Vacation Fund" role="Plaintiff"></party>
+ <party fullName="Operating Engineers Local 324 Vacation Fund" lastName="Operating Engineers Local 324 Vacation Fund" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Szypula" lastName="Szypula" role="Defendant"></party>
+ <party firstName="Rebekah" fullName="Rebekah Szypula" lastName="Szypula" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_10-cv-14911-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-14911/USCOURTS-mied-2_10-cv-14911-0/mods.xml">
+ <titleInfo>
+  <title>Operating Engineers Local 324 Health Care Plan et al v. K&amp;S Piling Company et al</title>
+  <subTitle>ORDER denying 3 Plaintiffs&apos; Motion for Alternate Service. Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_10-cv-14911-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819dcf07</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-14911/USCOURTS-mied-2_10-cv-14911-0</identifier>
+ <identifier type="former granule identifier">mied-2_10-cv-14911_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-14911/USCOURTS-mied-2_10-cv-14911-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-14911/pdf/USCOURTS-mied-2_10-cv-14911-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-14911; Operating Engineers Local 324 Health Care Plan et al v. K&amp;S Piling Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_10-cv-14911-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-04</dateIssued>
+  <docketText>ORDER denying 3 Plaintiffs&apos; Motion for Alternate Service. Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+</mods>

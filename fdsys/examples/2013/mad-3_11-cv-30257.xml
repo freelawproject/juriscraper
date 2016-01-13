@@ -1,0 +1,217 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183d3c9b8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_11-cv-30257</identifier>
+<identifier type="local">P0b002ee183d3c9b8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-3_11-cv-30257</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-3_11-cv-30257</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>3:11-cv-30257</caseNumber>
+ <caseOffice>Springfield</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:405 Review of HHS Decision (SSID)</cause>
+ <party firstName="Michael" fullName="Michael J. Astrue" lastName="Astrue" middleName="J." role="Defendant"></party>
+ <party firstName="Nancy" fullName="Nancy Ballester Salgado" lastName="Salgado" middleName="Ballester" role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Salgado v. Astrue</title>
+ <partNumber>3:11-cv-30257</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_11-cv-30257/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:11-cv-30257;11-30257</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Springfield</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Michael J. Astrue</displayForm>
+ <namePart type="family">Astrue</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nancy Ballester Salgado</displayForm>
+ <namePart type="family">Salgado</namePart>
+ <namePart type="given">Nancy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security Administration</displayForm>
+ <namePart type="family">Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-3_11-cv-30257</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>3:11-cv-30257</caseNumber>
+ <caseOffice>Springfield</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:405 Review of HHS Decision (SSID)</cause>
+ <party firstName="Michael" fullName="Michael J. Astrue" lastName="Astrue" middleName="J." role="Defendant"></party>
+ <party firstName="Nancy" fullName="Nancy Ballester Salgado" lastName="Salgado" middleName="Ballester" role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Interested Party"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_11-cv-30257-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_11-cv-30257/USCOURTS-mad-3_11-cv-30257-0/mods.xml">
+ <titleInfo>
+  <title>Salgado v. Astrue</title>
+  <subTitle>Judge Michael A. Ponsor: MEMORANDUM AND ORDER entered. As follows; Plaintiffs Motion To Reverse the Commissioner (Dkt. No. 11) is hereby ALLOWED, and Defendants Motion for Order Affirming the Decision of the Commissioner (Dkt. No. 14) is hereby DENIED. The clerk will enter judgment for Plaintiff. Defendant is ordered to calculate an appropriate award of benefits, both retroactive (to the extent Plaintiff is entitled to them) and prospective. The case is remanded for further proceedings consistent with this decision.It is So Ordered. See the attached memo and order for complete details. (Lindsay, Maurice)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_11-cv-30257-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d40524</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_11-cv-30257/USCOURTS-mad-3_11-cv-30257-0</identifier>
+ <identifier type="former granule identifier">mad-3_11-cv-30257_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_11-cv-30257/USCOURTS-mad-3_11-cv-30257-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_11-cv-30257/pdf/USCOURTS-mad-3_11-cv-30257-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:11-cv-30257; Salgado v. Astrue; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_11-cv-30257-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-07</dateIssued>
+  <docketText>Judge Michael A. Ponsor: MEMORANDUM AND ORDER entered. As follows; Plaintiffs Motion To Reverse the Commissioner (Dkt. No. 11) is hereby ALLOWED, and Defendants Motion for Order Affirming the Decision of the Commissioner (Dkt. No. 14) is hereby DENIED. The clerk will enter judgment for Plaintiff. Defendant is ordered to calculate an appropriate award of benefits, both retroactive (to the extent Plaintiff is entitled to them) and prospective. The case is remanded for further proceedings consistent with this decision.It is So Ordered. See the attached memo and order for complete details. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_11-cv-30257-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_11-cv-30257/USCOURTS-mad-3_11-cv-30257-1/mods.xml">
+ <titleInfo>
+  <title>Salgado v. Astrue</title>
+  <subTitle>Judge Michael A. Ponsor: ORDER entered. JUDGMENT for plaintiff. (Lindsay, Maurice)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_11-cv-30257-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d40526</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_11-cv-30257/USCOURTS-mad-3_11-cv-30257-1</identifier>
+ <identifier type="former granule identifier">mad-3_11-cv-30257_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_11-cv-30257/USCOURTS-mad-3_11-cv-30257-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_11-cv-30257/pdf/USCOURTS-mad-3_11-cv-30257-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:11-cv-30257; Salgado v. Astrue; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_11-cv-30257-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-11-07</dateIssued>
+  <docketText>Judge Michael A. Ponsor: ORDER entered. JUDGMENT for plaintiff. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_11-cv-30257-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_11-cv-30257/USCOURTS-mad-3_11-cv-30257-2/mods.xml">
+ <titleInfo>
+  <title>Salgado v. Astrue</title>
+  <subTitle>Judge Michael A. Ponsor: MEMORANDUM AND ORDER entered. As follows: For the reasons stated in the attached memorandum and order. Defendants Motion for Reconsideration (Dkt. No. 18) is hereby ALLOWED. The courts earlier ruling is amended to remove the order requiring the Commissioner to make an immediate award of benefits. The case is hereby remanded to the Commissioner for further proceedings consistent with this decision. The Commissioner is ordered to report to the court, through counsel, no later than April 5, 2013, as to the status of proceedings on remand, and every ninety days thereafter until this matter is fully resolved. It is So Ordered. See the attached memo and order for complete details. (Lindsay, Maurice)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_11-cv-30257-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d40525</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_11-cv-30257/USCOURTS-mad-3_11-cv-30257-2</identifier>
+ <identifier type="former granule identifier">mad-3_11-cv-30257_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_11-cv-30257/USCOURTS-mad-3_11-cv-30257-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_11-cv-30257/pdf/USCOURTS-mad-3_11-cv-30257-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:11-cv-30257; Salgado v. Astrue; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_11-cv-30257-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>Judge Michael A. Ponsor: MEMORANDUM AND ORDER entered. As follows: For the reasons stated in the attached memorandum and order. Defendants Motion for Reconsideration (Dkt. No. 18) is hereby ALLOWED. The courts earlier ruling is amended to remove the order requiring the Commissioner to make an immediate award of benefits. The case is hereby remanded to the Commissioner for further proceedings consistent with this decision. The Commissioner is ordered to report to the court, through counsel, no later than April 5, 2013, as to the status of proceedings on remand, and every ninety days thereafter until this matter is fully resolved. It is So Ordered. See the attached memo and order for complete details. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,312 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1811386d5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_05-cv-00733</identifier>
+<identifier type="local">P0b002ee1811386d5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-6_05-cv-00733</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-6_05-cv-00733</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>6:05-cv-00733</caseNumber>
+ <caseOffice>Utica</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="Androme Leather Corporation" lastName="Androme Leather Corporation" role="Plaintiff"></party>
+ <party firstName="Deborah" fullName="Deborah Ashe" lastName="Ashe" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Capparello" lastName="Capparello" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony J. Caruso" lastName="Caruso" middleName="J." role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony P. Christiano" lastName="Christiano" middleName="P." role="Defendant"></party>
+ <party fullName="City of Gloversville" lastName="City of Gloversville" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank A. Clemente" lastName="Clemente" middleName="A." role="Defendant"></party>
+ <party fullName="Common Council of the City of Gloversville" lastName="Common Council of the City of Gloversville" role="Defendant"></party>
+ <party firstName="Marylouise" fullName="Marylouise R. Mele" lastName="Mele" middleName="R." role="Defendant"></party>
+ <party firstName="Frances" fullName="Frances Mosconni" lastName="Mosconni" role="Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly Octigan" lastName="Octigan" role="Defendant"></party>
+ <party firstName="Margaret" fullName="Margaret Ralbovsky" lastName="Ralbovsky" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul E. Reid" lastName="Reid" middleName="E." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Renda" lastName="Renda" role="Defendant"></party>
+ <party firstName="D." fullName="D. Robert Robbins Jr." generation="Jr." lastName="Robbins" middleName="Robert" role="Defendant"></party>
+ <party firstName="Marie" fullName="Marie A. Schutz" lastName="Schutz" middleName="A." role="Defendant"></party>
+ <party firstName="Garrison" fullName="Garrison Seelow" lastName="Seelow" role="Defendant"></party>
+ <party firstName="Abraham" fullName="Abraham Seroussi" lastName="Seroussi" role="Defendant"></party>
+ <party firstName="Karen" fullName="Karen Smith" lastName="Smith" role="Defendant"></party>
+ <party fullName="Zoning Board of Appeals of the City of Gloversville" lastName="Zoning Board of Appeals of the City of Gloversville" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Androme Leather Corporation v. City of Gloversville et al</title>
+ <partNumber>6:05-cv-00733</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_05-cv-00733/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:05-cv-00733;05-733</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Utica</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Androme Leather Corporation</displayForm>
+ <namePart type="family">Androme Leather Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Deborah Ashe</displayForm>
+ <namePart type="family">Ashe</namePart>
+ <namePart type="given">Deborah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Capparello</displayForm>
+ <namePart type="family">Capparello</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony J. Caruso</displayForm>
+ <namePart type="family">Caruso</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony P. Christiano</displayForm>
+ <namePart type="family">Christiano</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>City of Gloversville</displayForm>
+ <namePart type="family">City of Gloversville</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frank A. Clemente</displayForm>
+ <namePart type="family">Clemente</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Common Council of the City of Gloversville</displayForm>
+ <namePart type="family">Common Council of the City of Gloversville</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marylouise R. Mele</displayForm>
+ <namePart type="family">Mele</namePart>
+ <namePart type="given">Marylouise</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frances Mosconni</displayForm>
+ <namePart type="family">Mosconni</namePart>
+ <namePart type="given">Frances</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kelly Octigan</displayForm>
+ <namePart type="family">Octigan</namePart>
+ <namePart type="given">Kelly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Margaret Ralbovsky</displayForm>
+ <namePart type="family">Ralbovsky</namePart>
+ <namePart type="given">Margaret</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul E. Reid</displayForm>
+ <namePart type="family">Reid</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Renda</displayForm>
+ <namePart type="family">Renda</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Robert Robbins Jr.</displayForm>
+ <namePart type="family">Robbins</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marie A. Schutz</displayForm>
+ <namePart type="family">Schutz</namePart>
+ <namePart type="given">Marie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Garrison Seelow</displayForm>
+ <namePart type="family">Seelow</namePart>
+ <namePart type="given">Garrison</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Abraham Seroussi</displayForm>
+ <namePart type="family">Seroussi</namePart>
+ <namePart type="given">Abraham</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Karen Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Karen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Zoning Board of Appeals of the City of Gloversville</displayForm>
+ <namePart type="family">Zoning Board of Appeals of the City of Gloversville</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-6_05-cv-00733</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>6:05-cv-00733</caseNumber>
+ <caseOffice>Utica</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="Androme Leather Corporation" lastName="Androme Leather Corporation" role="Plaintiff"></party>
+ <party firstName="Deborah" fullName="Deborah Ashe" lastName="Ashe" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Capparello" lastName="Capparello" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony J. Caruso" lastName="Caruso" middleName="J." role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony P. Christiano" lastName="Christiano" middleName="P." role="Defendant"></party>
+ <party fullName="City of Gloversville" lastName="City of Gloversville" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank A. Clemente" lastName="Clemente" middleName="A." role="Defendant"></party>
+ <party fullName="Common Council of the City of Gloversville" lastName="Common Council of the City of Gloversville" role="Defendant"></party>
+ <party firstName="Marylouise" fullName="Marylouise R. Mele" lastName="Mele" middleName="R." role="Defendant"></party>
+ <party firstName="Frances" fullName="Frances Mosconni" lastName="Mosconni" role="Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly Octigan" lastName="Octigan" role="Defendant"></party>
+ <party firstName="Margaret" fullName="Margaret Ralbovsky" lastName="Ralbovsky" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul E. Reid" lastName="Reid" middleName="E." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Renda" lastName="Renda" role="Defendant"></party>
+ <party firstName="D." fullName="D. Robert Robbins Jr." generation="Jr." lastName="Robbins" middleName="Robert" role="Defendant"></party>
+ <party firstName="Marie" fullName="Marie A. Schutz" lastName="Schutz" middleName="A." role="Defendant"></party>
+ <party firstName="Garrison" fullName="Garrison Seelow" lastName="Seelow" role="Defendant"></party>
+ <party firstName="Abraham" fullName="Abraham Seroussi" lastName="Seroussi" role="Defendant"></party>
+ <party firstName="Karen" fullName="Karen Smith" lastName="Smith" role="Defendant"></party>
+ <party fullName="Zoning Board of Appeals of the City of Gloversville" lastName="Zoning Board of Appeals of the City of Gloversville" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-6_05-cv-00733-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_05-cv-00733/USCOURTS-nynd-6_05-cv-00733-0/mods.xml">
+ <titleInfo>
+  <title>Androme Leather Corporation v. City of Gloversville et al</title>
+  <subTitle>MEMORANDUM, DECISION AND ORDER - The defendant&apos;s 79 Motion for Summary Judgment is granted. The plaintiff&apos;s 1 Complaint is dismissed. Signed by Judge Glenn T. Suddaby on 1/14/2020. (mnm)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-6_05-cv-00733-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18141d3be</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_05-cv-00733/USCOURTS-nynd-6_05-cv-00733-0</identifier>
+ <identifier type="former granule identifier">nynd-6_05-cv-00733_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_05-cv-00733/USCOURTS-nynd-6_05-cv-00733-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_05-cv-00733/pdf/USCOURTS-nynd-6_05-cv-00733-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:05-cv-00733; Androme Leather Corporation v. City of Gloversville et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-6_05-cv-00733-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-14</dateIssued>
+  <docketText>MEMORANDUM, DECISION AND ORDER - The defendant&apos;s 79 Motion for Summary Judgment is granted. The plaintiff&apos;s 1 Complaint is dismissed. Signed by Judge Glenn T. Suddaby on 1/14/2020. (mnm)</docketText>
+</extension>
+</relatedItem>
+</mods>

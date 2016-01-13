@@ -1,0 +1,207 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18712dfb7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-02-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01257</identifier>
+<identifier type="local">P0b002ee18712dfb7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-01257</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01257</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01257</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Bruce" lastName="Bruce" role="Defendant"></party>
+ <party fullName="CDCR" lastName="CDCR" role="Defendant"></party>
+ <party firstName="Prenell" fullName="Prenell Goodwin" lastName="Goodwin" role="Plaintiff"></party>
+ <party firstName="R." fullName="R. Mays" lastName="Mays" role="Defendant"></party>
+ <party firstName="Bruce" fullName="Bruce Merle" lastName="Merle" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Goodwin v. Bruce, et al.</title>
+ <partNumber>2:13-cv-01257</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01257/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-01257;13-1257</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bruce</displayForm>
+ <namePart type="family">Bruce</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CDCR</displayForm>
+ <namePart type="family">CDCR</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Prenell Goodwin</displayForm>
+ <namePart type="family">Goodwin</namePart>
+ <namePart type="given">Prenell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>R. Mays</displayForm>
+ <namePart type="family">Mays</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bruce Merle</displayForm>
+ <namePart type="family">Merle</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01257</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01257</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Bruce" lastName="Bruce" role="Defendant"></party>
+ <party fullName="CDCR" lastName="CDCR" role="Defendant"></party>
+ <party firstName="Prenell" fullName="Prenell Goodwin" lastName="Goodwin" role="Plaintiff"></party>
+ <party firstName="R." fullName="R. Mays" lastName="Mays" role="Defendant"></party>
+ <party firstName="Bruce" fullName="Bruce Merle" lastName="Merle" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01257-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01257/USCOURTS-caed-2_13-cv-01257-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Goodwin v. Bruce, et al.</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 01/02/14 ordering that within 30 days of the date of this order, plaintiff shall file an opposition to the pending motion to dismiss or a statement of non-opposition. (Plummer, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01257/pdf/USCOURTS-caed-2_13-cv-01257-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18713aba1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01257/USCOURTS-caed-2_13-cv-01257-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01257_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01257/USCOURTS-caed-2_13-cv-01257-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01257/pdf/USCOURTS-caed-2_13-cv-01257-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01257; (PC) Goodwin v. Bruce, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01257-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 01/02/14 ordering that within 30 days of the date of this order, plaintiff shall file an opposition to the pending motion to dismiss or a statement of non-opposition. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01257-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01257/USCOURTS-caed-2_13-cv-01257-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Goodwin v. Bruce, et al.</title>
+  <subTitle>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 2/11/2014 ORDERING the Clerk to assign this case to a US District Judge; and RECOMMENDING that this action be dismissed pursuant to Fed.R.Civ.P. 41(b). Assigned and Referred to Judge Garland E. Burrell, Jr.; Objections due within 14 days. (Yin, K)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01257/pdf/USCOURTS-caed-2_13-cv-01257-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18713aba0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01257/USCOURTS-caed-2_13-cv-01257-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01257_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01257/USCOURTS-caed-2_13-cv-01257-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01257/pdf/USCOURTS-caed-2_13-cv-01257-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01257; (PC) Goodwin v. Bruce, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01257-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-02-11</dateIssued>
+  <docketText>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 2/11/2014 ORDERING the Clerk to assign this case to a US District Judge; and RECOMMENDING that this action be dismissed pursuant to Fed.R.Civ.P. 41(b). Assigned and Referred to Judge Garland E. Burrell, Jr.; Objections due within 14 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+</mods>

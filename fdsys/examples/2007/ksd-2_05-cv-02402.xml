@@ -1,0 +1,178 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180f3f6d5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02402</identifier>
+<identifier type="local">P0b002ee180f3f6d5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_05-cv-02402</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_05-cv-02402</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:05-cv-02402</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party firstName="Jo" fullName="Jo L. Lawson" lastName="Lawson" middleName="L." role="Plaintiff"></party>
+ <party firstName="John" fullName="John E. Potter" lastName="Potter" middleName="E." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Lawson v. Potter</title>
+ <partNumber>2:05-cv-02402</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02402/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-02402;05-2402</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jo L. Lawson</displayForm>
+ <namePart type="family">Lawson</namePart>
+ <namePart type="given">Jo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John E. Potter</displayForm>
+ <namePart type="family">Potter</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_05-cv-02402</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:05-cv-02402</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party firstName="Jo" fullName="Jo L. Lawson" lastName="Lawson" middleName="L." role="Plaintiff"></party>
+ <party firstName="John" fullName="John E. Potter" lastName="Potter" middleName="E." role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_05-cv-02402-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02402/USCOURTS-ksd-2_05-cv-02402-0/mods.xml">
+ <titleInfo>
+  <title>Lawson v. Potter</title>
+  <subTitle>MEMORANDUM AND ORDER sustaining 40 Motion for Summary Judgment. Signed by Judge Kathryn H. Vratil on 12/4/06. (ls)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_05-cv-02402-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f7899a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02402/USCOURTS-ksd-2_05-cv-02402-0</identifier>
+ <identifier type="former granule identifier">ksd-2_05-cv-02402_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02402/USCOURTS-ksd-2_05-cv-02402-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02402/pdf/USCOURTS-ksd-2_05-cv-02402-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-02402; Lawson v. Potter; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_05-cv-02402-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-12-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER sustaining 40 Motion for Summary Judgment. Signed by Judge Kathryn H. Vratil on 12/4/06. (ls)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_05-cv-02402-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02402/USCOURTS-ksd-2_05-cv-02402-1/mods.xml">
+ <titleInfo>
+  <title>Lawson v. Potter</title>
+  <subTitle>MEMORANDUM AND ORDER overruling 47 Motion for Reconsideration. Signed by Judge Kathryn H. Vratil on 1/22/07. (ls)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_05-cv-02402-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f78999</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02402/USCOURTS-ksd-2_05-cv-02402-1</identifier>
+ <identifier type="former granule identifier">ksd-2_05-cv-02402_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02402/USCOURTS-ksd-2_05-cv-02402-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02402/pdf/USCOURTS-ksd-2_05-cv-02402-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-02402; Lawson v. Potter; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_05-cv-02402-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-22</dateIssued>
+  <docketText>MEMORANDUM AND ORDER overruling 47 Motion for Reconsideration. Signed by Judge Kathryn H. Vratil on 1/22/07. (ls)</docketText>
+</extension>
+</relatedItem>
+</mods>

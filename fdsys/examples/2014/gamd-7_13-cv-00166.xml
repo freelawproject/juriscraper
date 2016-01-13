@@ -1,0 +1,179 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c687e9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00166</identifier>
+<identifier type="local">P0b002ee186c687e9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-7_13-cv-00166</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_13-cv-00166</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:13-cv-00166</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="MARTY" fullName="MARTY ALLEN" lastName="ALLEN" role="Defendant"></party>
+ <party fullName="DANIELS" lastName="DANIELS" role="Defendant"></party>
+ <party fullName="JEWELS" lastName="JEWELS" role="Defendant"></party>
+ <party firstName="PIERRE" fullName="PIERRE RAMON TRIPP" lastName="TRIPP" middleName="RAMON" role="Plaintiff"></party>
+ <party fullName="Terrell" lastName="Terrell" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>TRIPP v. ALLEN et al</title>
+ <partNumber>7:13-cv-00166</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00166/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">7:13-cv-00166;13-166</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Valdosta</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>MARTY ALLEN</displayForm>
+ <namePart type="family">ALLEN</namePart>
+ <namePart type="given">MARTY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DANIELS</displayForm>
+ <namePart type="family">DANIELS</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JEWELS</displayForm>
+ <namePart type="family">JEWELS</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PIERRE RAMON TRIPP</displayForm>
+ <namePart type="family">TRIPP</namePart>
+ <namePart type="given">PIERRE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Terrell</displayForm>
+ <namePart type="family">Terrell</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_13-cv-00166</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:13-cv-00166</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="MARTY" fullName="MARTY ALLEN" lastName="ALLEN" role="Defendant"></party>
+ <party fullName="DANIELS" lastName="DANIELS" role="Defendant"></party>
+ <party fullName="JEWELS" lastName="JEWELS" role="Defendant"></party>
+ <party firstName="PIERRE" fullName="PIERRE RAMON TRIPP" lastName="TRIPP" middleName="RAMON" role="Plaintiff"></party>
+ <party fullName="Terrell" lastName="Terrell" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_13-cv-00166-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00166/USCOURTS-gamd-7_13-cv-00166-0/mods.xml">
+ <titleInfo>
+  <title>TRIPP v. ALLEN et al</title>
+  <subTitle>ORDER denying 2 Motion for Leave to Proceed in forma pauperis; dismissing 3 Motion for TRO; dismissing action without prejudice. Ordered by U.S. District Judge Hugh Lawson on 1/6/2014. (nbp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_13-cv-00166-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c7567b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00166/USCOURTS-gamd-7_13-cv-00166-0</identifier>
+ <identifier type="former granule identifier">gamd-7_13-cv-00166_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00166/USCOURTS-gamd-7_13-cv-00166-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00166/pdf/USCOURTS-gamd-7_13-cv-00166-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:13-cv-00166; TRIPP v. ALLEN et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_13-cv-00166-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER denying 2 Motion for Leave to Proceed in forma pauperis; dismissing 3 Motion for TRO; dismissing action without prejudice. Ordered by U.S. District Judge Hugh Lawson on 1/6/2014. (nbp)</docketText>
+</extension>
+</relatedItem>
+</mods>

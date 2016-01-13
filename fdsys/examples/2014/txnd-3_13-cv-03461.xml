@@ -1,0 +1,297 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c2e340">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_13-cv-03461</identifier>
+<identifier type="local">P0b002ee186c2e340</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-3_13-cv-03461</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_13-cv-03461</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:13-cv-03461</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <cause>28:0158 Notice of Appeal re Bankruptcy Matter (BA</cause>
+ <party firstName="Jeffrey" fullName="Jeffrey Baron" lastName="Baron" role="Appellant"></party>
+ <party fullName="Case Admin Sup" lastName="Case Admin Sup" role="Notice Only"></party>
+ <party firstName="Dean" fullName="Dean Ferguson" lastName="Ferguson" role="Appellee"></party>
+ <party firstName="Robert" fullName="Robert Garrey" lastName="Garrey" role="Appellee"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Hall" lastName="Hall" role="Appellee"></party>
+ <party firstName="Stacey" fullName="Stacey G Jernigan" lastName="Jernigan" middleName="G" role="Bankruptcy Judge"></party>
+ <party firstName="John" fullName="John H. Litzler" lastName="Litzler" middleName="H." role="Intervenor"></party>
+ <party firstName="Gary" fullName="Gary Lyon" lastName="Lyon" role="Appellee"></party>
+ <party fullName="Novo Point LLC" lastName="Novo Point LLC" role="Intervenor Plaintiff"></party>
+ <party firstName="Gerrit" fullName="Gerrit Pronske" lastName="Pronske" role="Appellee"></party>
+ <party fullName="Proske&amp;Patel, PC" lastName="Proske&amp;Patel, PC" role="Appellee"></party>
+ <party fullName="Quantec LLC" lastName="Quantec LLC" role="Movant"></party>
+ <party firstName="Elizabeth" fullName="Elizabeth Schurig" lastName="Schurig" role="Appellee"></party>
+ <party firstName="Daniel" fullName="Daniel J. Sherman" lastName="Sherman" middleName="J." role="Interested Party"></party>
+ <party firstName="Mark" fullName="Mark Taylor" lastName="Taylor" role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>Baron et al v. Schurig et al</title>
+ <partNumber>3:13-cv-03461</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_13-cv-03461/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:13-cv-03461;13-3461</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Dallas</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Baron</displayForm>
+ <namePart type="family">Baron</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Case Admin Sup</displayForm>
+ <namePart type="family">Case Admin Sup</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only</description>
+</name>
+<name type="personal">
+ <displayForm>Dean Ferguson</displayForm>
+ <namePart type="family">Ferguson</namePart>
+ <namePart type="given">Dean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Garrey</displayForm>
+ <namePart type="family">Garrey</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Hall</displayForm>
+ <namePart type="family">Hall</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Stacey G Jernigan</displayForm>
+ <namePart type="family">Jernigan</namePart>
+ <namePart type="given">Stacey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Bankruptcy Judge</description>
+</name>
+<name type="personal">
+ <displayForm>John H. Litzler</displayForm>
+ <namePart type="family">Litzler</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Lyon</displayForm>
+ <namePart type="family">Lyon</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Novo Point LLC</displayForm>
+ <namePart type="family">Novo Point LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gerrit Pronske</displayForm>
+ <namePart type="family">Pronske</namePart>
+ <namePart type="given">Gerrit</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Proske&amp;Patel, PC</displayForm>
+ <namePart type="family">Proske&amp;Patel, PC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Quantec LLC</displayForm>
+ <namePart type="family">Quantec LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Elizabeth Schurig</displayForm>
+ <namePart type="family">Schurig</namePart>
+ <namePart type="given">Elizabeth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel J. Sherman</displayForm>
+ <namePart type="family">Sherman</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Taylor</displayForm>
+ <namePart type="family">Taylor</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_13-cv-03461</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:13-cv-03461</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <cause>28:0158 Notice of Appeal re Bankruptcy Matter (BA</cause>
+ <party firstName="Jeffrey" fullName="Jeffrey Baron" lastName="Baron" role="Appellant"></party>
+ <party fullName="Case Admin Sup" lastName="Case Admin Sup" role="Notice Only"></party>
+ <party firstName="Dean" fullName="Dean Ferguson" lastName="Ferguson" role="Appellee"></party>
+ <party firstName="Robert" fullName="Robert Garrey" lastName="Garrey" role="Appellee"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Hall" lastName="Hall" role="Appellee"></party>
+ <party firstName="Stacey" fullName="Stacey G Jernigan" lastName="Jernigan" middleName="G" role="Bankruptcy Judge"></party>
+ <party firstName="John" fullName="John H. Litzler" lastName="Litzler" middleName="H." role="Intervenor"></party>
+ <party firstName="Gary" fullName="Gary Lyon" lastName="Lyon" role="Appellee"></party>
+ <party fullName="Novo Point LLC" lastName="Novo Point LLC" role="Intervenor Plaintiff"></party>
+ <party firstName="Gerrit" fullName="Gerrit Pronske" lastName="Pronske" role="Appellee"></party>
+ <party fullName="Proske&amp;Patel, PC" lastName="Proske&amp;Patel, PC" role="Appellee"></party>
+ <party fullName="Quantec LLC" lastName="Quantec LLC" role="Movant"></party>
+ <party firstName="Elizabeth" fullName="Elizabeth Schurig" lastName="Schurig" role="Appellee"></party>
+ <party firstName="Daniel" fullName="Daniel J. Sherman" lastName="Sherman" middleName="J." role="Interested Party"></party>
+ <party firstName="Mark" fullName="Mark Taylor" lastName="Taylor" role="Appellee"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_13-cv-03461-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-03461/USCOURTS-txnd-3_13-cv-03461-0/mods.xml">
+ <titleInfo>
+  <title>Baron et al v. Schurig et al</title>
+  <subTitle>***VACATED PER 52 AMENDED MEMORANDUM OPINION AND ORDER***Memorandum Opinion and Order: The court reverses the bankruptcy court&apos;s June 26, 2013 Order for Relief and remands this case to the bankruptcy court for the limited purpose of dismissal of the involuntary bankruptcy case and consideration as to whether attorney&apos;s fees, costs, or damages should be awarded under 11 U.S.C. § 303(I). (Ordered by Judge Sam A Lindsay on 12/31/2013) (aaa)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_13-cv-03461-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c40528</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-03461/USCOURTS-txnd-3_13-cv-03461-0</identifier>
+ <identifier type="former granule identifier">txnd-3_13-cv-03461_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-03461/USCOURTS-txnd-3_13-cv-03461-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_13-cv-03461/pdf/USCOURTS-txnd-3_13-cv-03461-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:13-cv-03461; Baron et al v. Schurig et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_13-cv-03461-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-12-31</dateIssued>
+  <docketText>***VACATED PER 52 AMENDED MEMORANDUM OPINION AND ORDER***Memorandum Opinion and Order: The court reverses the bankruptcy court&apos;s June 26, 2013 Order for Relief and remands this case to the bankruptcy court for the limited purpose of dismissal of the involuntary bankruptcy case and consideration as to whether attorney&apos;s fees, costs, or damages should be awarded under 11 U.S.C. § 303(I). (Ordered by Judge Sam A Lindsay on 12/31/2013) (aaa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_13-cv-03461-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-03461/USCOURTS-txnd-3_13-cv-03461-1/mods.xml">
+ <titleInfo>
+  <title>Baron et al v. Schurig et al</title>
+  <subTitle>AMENDED MEMORANDUM OPINION AND ORDER: For the reasons herein explained, the court reverses the bankruptcy court&apos;s 6/26/2013 Order for Relief and remands this case to the bankruptcy court for the limited purpose of dismissal of the involuntary bankruptcy case and consideration as to whether attorney&apos;s fees, costs, or damages should be awarded under 11 U.S.C. § 303(i). Pursuant to Federal Rule of Bankruptcy Procedure 8014, all allowable and reasonable costs of this appeal are taxed against Appellees, and the clerk of the court is directed to &quot;prepare, sign, and enter&quot; the judgment in this case in accordance with Federal Rule of Bankruptcy Procedure 8016(a). (Ordered by Judge Sam A Lindsay on 1/2/2014) (tln)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_13-cv-03461-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c40529</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-03461/USCOURTS-txnd-3_13-cv-03461-1</identifier>
+ <identifier type="former granule identifier">txnd-3_13-cv-03461_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-03461/USCOURTS-txnd-3_13-cv-03461-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_13-cv-03461/pdf/USCOURTS-txnd-3_13-cv-03461-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:13-cv-03461; Baron et al v. Schurig et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_13-cv-03461-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>AMENDED MEMORANDUM OPINION AND ORDER: For the reasons herein explained, the court reverses the bankruptcy court&apos;s 6/26/2013 Order for Relief and remands this case to the bankruptcy court for the limited purpose of dismissal of the involuntary bankruptcy case and consideration as to whether attorney&apos;s fees, costs, or damages should be awarded under 11 U.S.C. § 303(i). Pursuant to Federal Rule of Bankruptcy Procedure 8014, all allowable and reasonable costs of this appeal are taxed against Appellees, and the clerk of the court is directed to &quot;prepare, sign, and enter&quot; the judgment in this case in accordance with Federal Rule of Bankruptcy Procedure 8016(a). (Ordered by Judge Sam A Lindsay on 1/2/2014) (tln)</docketText>
+</extension>
+</relatedItem>
+</mods>

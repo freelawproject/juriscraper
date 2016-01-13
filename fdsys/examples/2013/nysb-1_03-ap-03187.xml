@@ -1,0 +1,306 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a01af5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Southern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-1_03-ap-03187</identifier>
+<identifier type="local">P0b002ee183a01af5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nysb-1_03-ap-03187</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nysb-1_03-ap-03187</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nysb</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>3353</courtSortOrder>
+ <caseNumber>1:03-ap-03187</caseNumber>
+ <caseOffice>Manhattan</caseOffice>
+ <party fullName="Savage &amp; Associates, P.C. as the Unsecured Claim Estate Representative of Teligent, Inc., et.al., for and on behalf of Teligent, Inc., et.al." lastName="Savage &amp; Associates, P.C. as the Unsecured Claim Estate Representative of Teligent, Inc., et.al., for and on behalf of Teligent, Inc., et.al." role="Plaintiff"></party>
+ <party fullName="1201 Owner Corp." lastName="1201 Owner Corp." role="Defendant"></party>
+ <party fullName="1737 North First St. Corp." lastName="1737 North First St. Corp." role="Defendant"></party>
+ <party fullName="2040 Addison Investments, LLC" lastName="2040 Addison Investments, LLC" role="Defendant"></party>
+ <party fullName="211 W. Wacker-Insignia/ESG, Inc." lastName="211 W. Wacker-Insignia/ESG, Inc." role="Defendant"></party>
+ <party fullName="2201 Broadway Investments LLC" lastName="2201 Broadway Investments LLC" role="Defendant"></party>
+ <party fullName="Anemone Properties Assoc. LP" lastName="Anemone Properties Assoc. LP" role="Defendant"></party>
+ <party fullName="Broadway 101 Office Park Inc." lastName="Broadway 101 Office Park Inc." role="Defendant"></party>
+ <party fullName="Carnegie Hall Tower LLC" lastName="Carnegie Hall Tower LLC" role="Defendant"></party>
+ <party fullName="DC 17th Street Corporation" lastName="DC 17th Street Corporation" role="Defendant"></party>
+ <party fullName="Figueroa Plaza" lastName="Figueroa Plaza" role="Defendant"></party>
+ <party fullName="First Cherry Creek, LLC" lastName="First Cherry Creek, LLC" role="Defendant"></party>
+ <party fullName="Insignia/ESG, Inc." lastName="Insignia/ESG, Inc." role="Defendant"></party>
+ <party fullName="Leighton Business Center" lastName="Leighton Business Center" role="Defendant"></party>
+ <party fullName="Northsight Financial Office PK" lastName="Northsight Financial Office PK" role="Defendant"></party>
+ <party fullName="Pacific State Investors, LLC" lastName="Pacific State Investors, LLC" role="Defendant"></party>
+ <party fullName="PHL-OPCO LP" lastName="PHL-OPCO LP" role="Defendant"></party>
+ <party fullName="The Irvine Company" lastName="The Irvine Company" role="Defendant"></party>
+ <party fullName="W9/FIG Realty, LLC" lastName="W9/FIG Realty, LLC" role="Defendant"></party>
+ <party fullName="Clerk&apos;s Office of the U.S. Bankruptcy Court" lastName="Clerk&apos;s Office of the U.S. Bankruptcy Court" role="Unknown"></party>
+</extension>
+<titleInfo>
+ <title>Savage &amp; Associates, P.C. as the Unsecured Claim E v. 1201 Owner Corp. et al</title>
+ <partNumber>1:03-ap-03187</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-1_03-ap-03187/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">1:03-ap-03187;03-3187</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Southern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Manhattan</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Savage &amp; Associates, P.C. as the Unsecured Claim Estate Representative of Teligent, Inc., et.al., for and on behalf of Teligent, Inc., et.al.</displayForm>
+ <namePart type="family">Savage &amp; Associates, P.C. as the Unsecured Claim Estate Representative of Teligent, Inc., et.al., for and on behalf of Teligent, Inc., et.al.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>1201 Owner Corp.</displayForm>
+ <namePart type="family">1201 Owner Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>1737 North First St. Corp.</displayForm>
+ <namePart type="family">1737 North First St. Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>2040 Addison Investments, LLC</displayForm>
+ <namePart type="family">2040 Addison Investments, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>211 W. Wacker-Insignia/ESG, Inc.</displayForm>
+ <namePart type="family">211 W. Wacker-Insignia/ESG, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>2201 Broadway Investments LLC</displayForm>
+ <namePart type="family">2201 Broadway Investments LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Anemone Properties Assoc. LP</displayForm>
+ <namePart type="family">Anemone Properties Assoc. LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Broadway 101 Office Park Inc.</displayForm>
+ <namePart type="family">Broadway 101 Office Park Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carnegie Hall Tower LLC</displayForm>
+ <namePart type="family">Carnegie Hall Tower LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DC 17th Street Corporation</displayForm>
+ <namePart type="family">DC 17th Street Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Figueroa Plaza</displayForm>
+ <namePart type="family">Figueroa Plaza</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>First Cherry Creek, LLC</displayForm>
+ <namePart type="family">First Cherry Creek, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Insignia/ESG, Inc.</displayForm>
+ <namePart type="family">Insignia/ESG, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leighton Business Center</displayForm>
+ <namePart type="family">Leighton Business Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Northsight Financial Office PK</displayForm>
+ <namePart type="family">Northsight Financial Office PK</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pacific State Investors, LLC</displayForm>
+ <namePart type="family">Pacific State Investors, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PHL-OPCO LP</displayForm>
+ <namePart type="family">PHL-OPCO LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Irvine Company</displayForm>
+ <namePart type="family">The Irvine Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>W9/FIG Realty, LLC</displayForm>
+ <namePart type="family">W9/FIG Realty, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Clerk&apos;s Office of the U.S. Bankruptcy Court</displayForm>
+ <namePart type="family">Clerk&apos;s Office of the U.S. Bankruptcy Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Unknown</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nysb-1_03-ap-03187</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nysb</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>3353</courtSortOrder>
+ <caseNumber>1:03-ap-03187</caseNumber>
+ <caseOffice>Manhattan</caseOffice>
+ <party fullName="Savage &amp; Associates, P.C. as the Unsecured Claim Estate Representative of Teligent, Inc., et.al., for and on behalf of Teligent, Inc., et.al." lastName="Savage &amp; Associates, P.C. as the Unsecured Claim Estate Representative of Teligent, Inc., et.al., for and on behalf of Teligent, Inc., et.al." role="Plaintiff"></party>
+ <party fullName="1201 Owner Corp." lastName="1201 Owner Corp." role="Defendant"></party>
+ <party fullName="1737 North First St. Corp." lastName="1737 North First St. Corp." role="Defendant"></party>
+ <party fullName="2040 Addison Investments, LLC" lastName="2040 Addison Investments, LLC" role="Defendant"></party>
+ <party fullName="211 W. Wacker-Insignia/ESG, Inc." lastName="211 W. Wacker-Insignia/ESG, Inc." role="Defendant"></party>
+ <party fullName="2201 Broadway Investments LLC" lastName="2201 Broadway Investments LLC" role="Defendant"></party>
+ <party fullName="Anemone Properties Assoc. LP" lastName="Anemone Properties Assoc. LP" role="Defendant"></party>
+ <party fullName="Broadway 101 Office Park Inc." lastName="Broadway 101 Office Park Inc." role="Defendant"></party>
+ <party fullName="Carnegie Hall Tower LLC" lastName="Carnegie Hall Tower LLC" role="Defendant"></party>
+ <party fullName="DC 17th Street Corporation" lastName="DC 17th Street Corporation" role="Defendant"></party>
+ <party fullName="Figueroa Plaza" lastName="Figueroa Plaza" role="Defendant"></party>
+ <party fullName="First Cherry Creek, LLC" lastName="First Cherry Creek, LLC" role="Defendant"></party>
+ <party fullName="Insignia/ESG, Inc." lastName="Insignia/ESG, Inc." role="Defendant"></party>
+ <party fullName="Leighton Business Center" lastName="Leighton Business Center" role="Defendant"></party>
+ <party fullName="Northsight Financial Office PK" lastName="Northsight Financial Office PK" role="Defendant"></party>
+ <party fullName="Pacific State Investors, LLC" lastName="Pacific State Investors, LLC" role="Defendant"></party>
+ <party fullName="PHL-OPCO LP" lastName="PHL-OPCO LP" role="Defendant"></party>
+ <party fullName="The Irvine Company" lastName="The Irvine Company" role="Defendant"></party>
+ <party fullName="W9/FIG Realty, LLC" lastName="W9/FIG Realty, LLC" role="Defendant"></party>
+ <party fullName="Clerk&apos;s Office of the U.S. Bankruptcy Court" lastName="Clerk&apos;s Office of the U.S. Bankruptcy Court" role="Unknown"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nysb-1_03-ap-03187-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-1_03-ap-03187/USCOURTS-nysb-1_03-ap-03187-0/mods.xml">
+ <titleInfo>
+  <title>Savage &amp; Associates, P.C. as the Unsecured Claim E v. 1201 Owner Corp. et al</title>
+  <subTitle>Written Opinion Signed On 1/3/2013. Re: Memorandum Decision And Order Vacating Default Judgment And Dismissing Complaint. (related document(s)37) (Greene, Chantel)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nysb-1_03-ap-03187-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a069af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-1_03-ap-03187/USCOURTS-nysb-1_03-ap-03187-0</identifier>
+ <identifier type="former granule identifier">nysb-1_03-ap-03187_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-1_03-ap-03187/USCOURTS-nysb-1_03-ap-03187-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-1_03-ap-03187/pdf/USCOURTS-nysb-1_03-ap-03187-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:03-ap-03187; Savage &amp; Associates, P.C. as the Unsecured Claim E v. 1201 Owner Corp. et al; </searchTitle>
+  <courtName>United States Bankruptcy Court Southern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nysb-1_03-ap-03187-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>Written Opinion Signed On 1/3/2013. Re: Memorandum Decision And Order Vacating Default Judgment And Dismissing Complaint. (related document(s)37) (Greene, Chantel)</docketText>
+</extension>
+</relatedItem>
+</mods>

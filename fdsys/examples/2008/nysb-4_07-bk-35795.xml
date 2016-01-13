@@ -1,0 +1,270 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180eb4737">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Southern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-26</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-4_07-bk-35795</identifier>
+<identifier type="local">P0b002ee180eb4737</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-26</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nysb-4_07-bk-35795</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nysb-4_07-bk-35795</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nysb</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>3353</courtSortOrder>
+ <caseNumber>4:07-bk-35795</caseNumber>
+ <caseOffice>Poughkeepsie</caseOffice>
+ <party firstName="James" fullName="James F Lyons III" generation="III" lastName="Lyons" middleName="F" role="Debtor"></party>
+ <party fullName="United States Trustee" lastName="United States Trustee" role="U.S. Trustee"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey L. Sapir-13" lastName="Sapir-13" middleName="L." role="Trustee"></party>
+ <party fullName="Saxon Mortgage Services, Inc." lastName="Saxon Mortgage Services, Inc." role="Creditor"></party>
+ <party fullName="Clerk of Court" lastName="Clerk of Court" role="Clerk of Court"></party>
+ <party fullName="Saxon Mortgage" lastName="Saxon Mortgage" role="Creditor"></party>
+ <party firstName="William" fullName="William Boyar" lastName="Boyar" role="Creditor"></party>
+ <party fullName="Caraleasing Inc." lastName="Caraleasing Inc." role="Creditor"></party>
+ <party fullName="190 Realty Corp." lastName="190 Realty Corp." role="Creditor"></party>
+ <party fullName="Genova &amp; Malin" lastName="Genova &amp; Malin" role="Attorney"></party>
+ <party fullName="DaimlerChrysler Financial Services Americas LLC" lastName="DaimlerChrysler Financial Services Americas LLC" role="Creditor"></party>
+ <party fullName="Chase Bank USA, NA" lastName="Chase Bank USA, NA" role="Creditor"></party>
+ <party fullName="DCFS USA LLC successor in interest to DaimlerChrysler Financial Services Americas LLC" lastName="DCFS USA LLC successor in interest to DaimlerChrysler Financial Services Americas LLC" role="Creditor"></party>
+ <party firstName="Angela" fullName="Angela Lyons" lastName="Lyons" role="Unknown"></party>
+ <party fullName="Americredit Financial Services, Inc." lastName="Americredit Financial Services, Inc." role="Creditor"></party>
+ <party firstName="John" fullName="John E. Barchella Jr." generation="Jr." lastName="Barchella" middleName="E." role="Creditor"></party>
+</extension>
+<titleInfo>
+ <title>James F Lyons</title>
+ <partNumber>4:07-bk-35795</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-4_07-bk-35795/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">4:07-bk-35795;07-35795</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Southern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Poughkeepsie</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>James F Lyons III</displayForm>
+ <namePart type="family">Lyons</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>United States Trustee</displayForm>
+ <namePart type="family">United States Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>U.S. Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey L. Sapir-13</displayForm>
+ <namePart type="family">Sapir-13</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Saxon Mortgage Services, Inc.</displayForm>
+ <namePart type="family">Saxon Mortgage Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Clerk of Court</displayForm>
+ <namePart type="family">Clerk of Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Clerk of Court</description>
+</name>
+<name type="personal">
+ <displayForm>Saxon Mortgage</displayForm>
+ <namePart type="family">Saxon Mortgage</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>William Boyar</displayForm>
+ <namePart type="family">Boyar</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Caraleasing Inc.</displayForm>
+ <namePart type="family">Caraleasing Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>190 Realty Corp.</displayForm>
+ <namePart type="family">190 Realty Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Genova &amp; Malin</displayForm>
+ <namePart type="family">Genova &amp; Malin</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Attorney</description>
+</name>
+<name type="personal">
+ <displayForm>DaimlerChrysler Financial Services Americas LLC</displayForm>
+ <namePart type="family">DaimlerChrysler Financial Services Americas LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Chase Bank USA, NA</displayForm>
+ <namePart type="family">Chase Bank USA, NA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>DCFS USA LLC successor in interest to DaimlerChrysler Financial Services Americas LLC</displayForm>
+ <namePart type="family">DCFS USA LLC successor in interest to DaimlerChrysler Financial Services Americas LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Angela Lyons</displayForm>
+ <namePart type="family">Lyons</namePart>
+ <namePart type="given">Angela</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Unknown</description>
+</name>
+<name type="personal">
+ <displayForm>Americredit Financial Services, Inc.</displayForm>
+ <namePart type="family">Americredit Financial Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>John E. Barchella Jr.</displayForm>
+ <namePart type="family">Barchella</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Creditor</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nysb-4_07-bk-35795</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nysb</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>3353</courtSortOrder>
+ <caseNumber>4:07-bk-35795</caseNumber>
+ <caseOffice>Poughkeepsie</caseOffice>
+ <party firstName="James" fullName="James F Lyons III" generation="III" lastName="Lyons" middleName="F" role="Debtor"></party>
+ <party fullName="United States Trustee" lastName="United States Trustee" role="U.S. Trustee"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey L. Sapir-13" lastName="Sapir-13" middleName="L." role="Trustee"></party>
+ <party fullName="Saxon Mortgage Services, Inc." lastName="Saxon Mortgage Services, Inc." role="Creditor"></party>
+ <party fullName="Clerk of Court" lastName="Clerk of Court" role="Clerk of Court"></party>
+ <party fullName="Saxon Mortgage" lastName="Saxon Mortgage" role="Creditor"></party>
+ <party firstName="William" fullName="William Boyar" lastName="Boyar" role="Creditor"></party>
+ <party fullName="Caraleasing Inc." lastName="Caraleasing Inc." role="Creditor"></party>
+ <party fullName="190 Realty Corp." lastName="190 Realty Corp." role="Creditor"></party>
+ <party fullName="Genova &amp; Malin" lastName="Genova &amp; Malin" role="Attorney"></party>
+ <party fullName="DaimlerChrysler Financial Services Americas LLC" lastName="DaimlerChrysler Financial Services Americas LLC" role="Creditor"></party>
+ <party fullName="Chase Bank USA, NA" lastName="Chase Bank USA, NA" role="Creditor"></party>
+ <party fullName="DCFS USA LLC successor in interest to DaimlerChrysler Financial Services Americas LLC" lastName="DCFS USA LLC successor in interest to DaimlerChrysler Financial Services Americas LLC" role="Creditor"></party>
+ <party firstName="Angela" fullName="Angela Lyons" lastName="Lyons" role="Unknown"></party>
+ <party fullName="Americredit Financial Services, Inc." lastName="Americredit Financial Services, Inc." role="Creditor"></party>
+ <party firstName="John" fullName="John E. Barchella Jr." generation="Jr." lastName="Barchella" middleName="E." role="Creditor"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nysb-4_07-bk-35795-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-4_07-bk-35795/USCOURTS-nysb-4_07-bk-35795-0/mods.xml">
+ <titleInfo>
+  <title>James F Lyons</title>
+  <subTitle>Memorandum Decision signed on 1/30/2008 on Objection to Debtor&apos;s Claim of Exemption. (Colon, Gwen)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nysb-4_07-bk-35795-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813bed40</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-4_07-bk-35795/USCOURTS-nysb-4_07-bk-35795-0</identifier>
+ <identifier type="former granule identifier">nysb-4_07-bk-35795_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-4_07-bk-35795/USCOURTS-nysb-4_07-bk-35795-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-4_07-bk-35795/pdf/USCOURTS-nysb-4_07-bk-35795-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-bk-35795; James F Lyons; </searchTitle>
+  <courtName>United States Bankruptcy Court Southern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nysb-4_07-bk-35795-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-30</dateIssued>
+  <docketText>Memorandum Decision signed on 1/30/2008 on Objection to Debtor&apos;s Claim of Exemption. (Colon, Gwen)</docketText>
+</extension>
+</relatedItem>
+</mods>

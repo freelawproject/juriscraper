@@ -1,0 +1,187 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181183e57">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_08-cv-00827</identifier>
+<identifier type="local">P0b002ee181183e57</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_08-cv-00827</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_08-cv-00827</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:08-cv-00827</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Lora" fullName="Lora J. Rushford-Spink" lastName="Rushford-Spink" middleName="J." role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Rushford-Spink v. Commissioner of Social Security</title>
+ <partNumber>1:08-cv-00827</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_08-cv-00827/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-00827;08-827</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lora J. Rushford-Spink</displayForm>
+ <namePart type="family">Rushford-Spink</namePart>
+ <namePart type="given">Lora</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security Administration</displayForm>
+ <namePart type="family">Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_08-cv-00827</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:08-cv-00827</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Lora" fullName="Lora J. Rushford-Spink" lastName="Rushford-Spink" middleName="J." role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Interested Party"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_08-cv-00827-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_08-cv-00827/USCOURTS-nynd-1_08-cv-00827-0/mods.xml">
+ <titleInfo>
+  <title>Rushford-Spink v. Commissioner of Social Security</title>
+  <subTitle>REPORT AND RECOMMENDATIONS: Recommending that the Commissioner&apos;s Motion for Judgment on the Pleadings be GRANTED as the Court finds no reversible error and because substantial evidence supports the Commissioner&apos;s Decision and therefore recommending that the # 1 Complaint filed by Lora J. Rushford-Spink be DISMISSED. Objections to R&amp;R due by 10/15/2009. Signed by Magistrate Judge Victor E. Bianchini on 9/28/09. (jmb)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_08-cv-00827-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813e5585</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_08-cv-00827/USCOURTS-nynd-1_08-cv-00827-0</identifier>
+ <identifier type="former granule identifier">nynd-1_08-cv-00827_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_08-cv-00827/USCOURTS-nynd-1_08-cv-00827-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_08-cv-00827/pdf/USCOURTS-nynd-1_08-cv-00827-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00827; Rushford-Spink v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_08-cv-00827-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-09-30</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS: Recommending that the Commissioner&apos;s Motion for Judgment on the Pleadings be GRANTED as the Court finds no reversible error and because substantial evidence supports the Commissioner&apos;s Decision and therefore recommending that the # 1 Complaint filed by Lora J. Rushford-Spink be DISMISSED. Objections to R&amp;R due by 10/15/2009. Signed by Magistrate Judge Victor E. Bianchini on 9/28/09. (jmb)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_08-cv-00827-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_08-cv-00827/USCOURTS-nynd-1_08-cv-00827-1/mods.xml">
+ <titleInfo>
+  <title>Rushford-Spink v. Commissioner of Social Security</title>
+  <subTitle>MEMORANDUM-DECISION AND ORDER adopting 13 Report and Recommendations. Signed by Judge Gary L. Sharpe on 1/25/2010. (Attachments: # (1) Report and Recommendation signed by U.S. Magistrate Judge Victor E. Bianchini)(dpk)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_08-cv-00827-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813e5584</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_08-cv-00827/USCOURTS-nynd-1_08-cv-00827-1</identifier>
+ <identifier type="former granule identifier">nynd-1_08-cv-00827_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_08-cv-00827/USCOURTS-nynd-1_08-cv-00827-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_08-cv-00827/pdf/USCOURTS-nynd-1_08-cv-00827-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00827; Rushford-Spink v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_08-cv-00827-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-25</dateIssued>
+  <docketText>MEMORANDUM-DECISION AND ORDER adopting 13 Report and Recommendations. Signed by Judge Gary L. Sharpe on 1/25/2010. (Attachments: # (1) Report and Recommendation signed by U.S. Magistrate Judge Victor E. Bianchini)(dpk)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,152 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815a20f3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_05-cv-02977</identifier>
+<identifier type="local">P0b002ee1815a20f3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_05-cv-02977</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_05-cv-02977</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:05-cv-02977</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Ronald" fullName="Ronald G. Dierdorf Jr." generation="Jr." lastName="Dierdorf" middleName="G." role="Petitioner"></party>
+ <party firstName="Michele" fullName="Michele Eberlin" lastName="Eberlin" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Dierdorf, Jr. v. Eberlin</title>
+ <partNumber>3:05-cv-02977</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_05-cv-02977/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:05-cv-02977;05-2977</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ronald G. Dierdorf Jr.</displayForm>
+ <namePart type="family">Dierdorf</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Michele Eberlin</displayForm>
+ <namePart type="family">Eberlin</namePart>
+ <namePart type="given">Michele</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_05-cv-02977</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:05-cv-02977</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Ronald" fullName="Ronald G. Dierdorf Jr." generation="Jr." lastName="Dierdorf" middleName="G." role="Petitioner"></party>
+ <party firstName="Michele" fullName="Michele Eberlin" lastName="Eberlin" role="Respondent"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_05-cv-02977-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_05-cv-02977/USCOURTS-ohnd-3_05-cv-02977-0/mods.xml">
+ <titleInfo>
+  <title>Dierdorf, Jr. v. Eberlin</title>
+  <subTitle>Memorandum Opinion and Order: This action is dismissed and the court certifies that an appeal from this decision could not be taken in good faith and there is no basis to issue a certificate of appealability. Signed by Judge Peter C. Economus on 1/31/06. (B_R, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_05-cv-02977-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18167b48f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_05-cv-02977/USCOURTS-ohnd-3_05-cv-02977-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_05-cv-02977_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_05-cv-02977/USCOURTS-ohnd-3_05-cv-02977-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_05-cv-02977/pdf/USCOURTS-ohnd-3_05-cv-02977-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:05-cv-02977; Dierdorf, Jr. v. Eberlin; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_05-cv-02977-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-31</dateIssued>
+  <docketText>Memorandum Opinion and Order: This action is dismissed and the court certifies that an appeal from this decision could not be taken in good faith and there is no basis to issue a certificate of appealability. Signed by Judge Peter C. Economus on 1/31/06. (B_R, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

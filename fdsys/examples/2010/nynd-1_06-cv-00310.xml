@@ -1,0 +1,269 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18117e830">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-00310</identifier>
+<identifier type="local">P0b002ee18117e830</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_06-cv-00310</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_06-cv-00310</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:06-cv-00310</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>290</natureSuitCode>
+ <natureSuit>Other Real Property Actions</natureSuit>
+ <party fullName="CSX Transportation, Inc." lastName="CSX Transportation, Inc." role="Counter Claimant"></party>
+ <party fullName="CSX Transportation, Inc." lastName="CSX Transportation, Inc." role="Defendant"></party>
+ <party fullName="Consolidated Rail Corporation" lastName="Consolidated Rail Corporation" role="Counter Claimant"></party>
+ <party fullName="Consolidated Rail Corporation" lastName="Consolidated Rail Corporation" role="Defendant"></party>
+ <party firstName="Dennison" fullName="Dennison P. Cottrell" lastName="Cottrell" middleName="P." role="Defendant"></party>
+ <party fullName="Island Park, LLC" lastName="Island Park, LLC" role="Counter Defendant"></party>
+ <party fullName="Island Park, LLC" lastName="Island Park, LLC" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas J. Madison Jr." generation="Jr." lastName="Madison" middleName="J." role="Defendant"></party>
+ <party fullName="National Railroad PassengerService Corporation (&quot;Amtrak&quot;)" lastName="National Railroad PassengerService Corporation (&quot;Amtrak&quot;)" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Island Park, LLC v. CSX Transportation, Inc. et al</title>
+ <partNumber>1:06-cv-00310</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-00310/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:06-cv-00310;06-310</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CSX Transportation, Inc.</displayForm>
+ <namePart type="family">CSX Transportation, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>CSX Transportation, Inc.</displayForm>
+ <namePart type="family">CSX Transportation, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Consolidated Rail Corporation</displayForm>
+ <namePart type="family">Consolidated Rail Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Consolidated Rail Corporation</displayForm>
+ <namePart type="family">Consolidated Rail Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dennison P. Cottrell</displayForm>
+ <namePart type="family">Cottrell</namePart>
+ <namePart type="given">Dennison</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Island Park, LLC</displayForm>
+ <namePart type="family">Island Park, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Island Park, LLC</displayForm>
+ <namePart type="family">Island Park, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas J. Madison Jr.</displayForm>
+ <namePart type="family">Madison</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>National Railroad PassengerService Corporation (&quot;Amtrak&quot;)</displayForm>
+ <namePart type="family">National Railroad PassengerService Corporation (&quot;Amtrak&quot;)</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_06-cv-00310</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:06-cv-00310</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>290</natureSuitCode>
+ <natureSuit>Other Real Property Actions</natureSuit>
+ <party fullName="CSX Transportation, Inc." lastName="CSX Transportation, Inc." role="Counter Claimant"></party>
+ <party fullName="CSX Transportation, Inc." lastName="CSX Transportation, Inc." role="Defendant"></party>
+ <party fullName="Consolidated Rail Corporation" lastName="Consolidated Rail Corporation" role="Counter Claimant"></party>
+ <party fullName="Consolidated Rail Corporation" lastName="Consolidated Rail Corporation" role="Defendant"></party>
+ <party firstName="Dennison" fullName="Dennison P. Cottrell" lastName="Cottrell" middleName="P." role="Defendant"></party>
+ <party fullName="Island Park, LLC" lastName="Island Park, LLC" role="Counter Defendant"></party>
+ <party fullName="Island Park, LLC" lastName="Island Park, LLC" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas J. Madison Jr." generation="Jr." lastName="Madison" middleName="J." role="Defendant"></party>
+ <party fullName="National Railroad PassengerService Corporation (&quot;Amtrak&quot;)" lastName="National Railroad PassengerService Corporation (&quot;Amtrak&quot;)" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_06-cv-00310-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00310/USCOURTS-nynd-1_06-cv-00310-0/mods.xml">
+ <titleInfo>
+  <title>Island Park, LLC v. CSX Transportation, Inc. et al</title>
+  <subTitle>MEMORANDUM-DECISION AND ORDER granting in part and denying in part 38 Motion for Summary Judgment; granting in part and denying in part 39 Motion for Summary Judgment; granting in part and denying in part 40 Motion for Summary Judgment; denying 45 Motion for Partial Summary Judgment. Signed by Judge Lawrence E. Kahn on 6/26/07. (tab)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_06-cv-00310-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813e4515</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00310/USCOURTS-nynd-1_06-cv-00310-0</identifier>
+ <identifier type="former granule identifier">nynd-1_06-cv-00310_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00310/USCOURTS-nynd-1_06-cv-00310-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-00310/pdf/USCOURTS-nynd-1_06-cv-00310-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00310; Island Park, LLC v. CSX Transportation, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_06-cv-00310-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-06-26</dateIssued>
+  <docketText>MEMORANDUM-DECISION AND ORDER granting in part and denying in part 38 Motion for Summary Judgment; granting in part and denying in part 39 Motion for Summary Judgment; granting in part and denying in part 40 Motion for Summary Judgment; denying 45 Motion for Partial Summary Judgment. Signed by Judge Lawrence E. Kahn on 6/26/07. (tab)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_06-cv-00310-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00310/USCOURTS-nynd-1_06-cv-00310-1/mods.xml">
+ <titleInfo>
+  <title>Island Park, LLC v. CSX Transportation, Inc. et al</title>
+  <subTitle>JUDGMENT in favor of Island Park, LLC against CSX Transportation, Inc., Consolidated Rail Corporation, Island Park, LLC, National Railroad PassengerService Corporation (&quot;Amtrak&quot;), Dennison P. Cottrell, Thomas J. Madison, Jr. (tab)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_06-cv-00310-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813e4516</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00310/USCOURTS-nynd-1_06-cv-00310-1</identifier>
+ <identifier type="former granule identifier">nynd-1_06-cv-00310_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00310/USCOURTS-nynd-1_06-cv-00310-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-00310/pdf/USCOURTS-nynd-1_06-cv-00310-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00310; Island Park, LLC v. CSX Transportation, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_06-cv-00310-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-06-26</dateIssued>
+  <docketText>JUDGMENT in favor of Island Park, LLC against CSX Transportation, Inc., Consolidated Rail Corporation, Island Park, LLC, National Railroad PassengerService Corporation (&quot;Amtrak&quot;), Dennison P. Cottrell, Thomas J. Madison, Jr. (tab)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_06-cv-00310-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00310/USCOURTS-nynd-1_06-cv-00310-2/mods.xml">
+ <titleInfo>
+  <title>Island Park, LLC v. CSX Transportation, Inc. et al</title>
+  <subTitle>Decision&amp;ORDERED, that Defendants Motion for summary judgment (Dkt. No. 96 ) is GRANTED on Plaintiffs fourth claim; and it is further ORDERED, that summary judgment is GRANTED in favor of Defendants on Plaintiffs pre-emption claim; and it is further ORDERED that Defendants Motion for Declaratory Judgment (Dkt. No. 96) is GRANTED as to the following: that there is no conflict between the terms of the 1989 Order and the DOT Order, that the 1989 Order does not prohibit their compliance with the terms of the DOT Order, and that the 1989 Order is superseded by the DOT Order to the extent that the 1989 Order imposes any obligations inconsistent with the DOT Order; and it is further ORDERED, that Plaintiffs Complaint (Dkt. No. 1) is DISMISSED. Signed by Senior Judge Lawrence E. Kahn on January 22, 2010. (sas)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_06-cv-00310-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813e4514</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00310/USCOURTS-nynd-1_06-cv-00310-2</identifier>
+ <identifier type="former granule identifier">nynd-1_06-cv-00310_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00310/USCOURTS-nynd-1_06-cv-00310-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-00310/pdf/USCOURTS-nynd-1_06-cv-00310-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00310; Island Park, LLC v. CSX Transportation, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_06-cv-00310-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-01-22</dateIssued>
+  <docketText>Decision&amp;ORDERED, that Defendants Motion for summary judgment (Dkt. No. 96 ) is GRANTED on Plaintiffs fourth claim; and it is further ORDERED, that summary judgment is GRANTED in favor of Defendants on Plaintiffs pre-emption claim; and it is further ORDERED that Defendants Motion for Declaratory Judgment (Dkt. No. 96) is GRANTED as to the following: that there is no conflict between the terms of the 1989 Order and the DOT Order, that the 1989 Order does not prohibit their compliance with the terms of the DOT Order, and that the 1989 Order is superseded by the DOT Order to the extent that the 1989 Order imposes any obligations inconsistent with the DOT Order; and it is further ORDERED, that Plaintiffs Complaint (Dkt. No. 1) is DISMISSED. Signed by Senior Judge Lawrence E. Kahn on January 22, 2010. (sas)</docketText>
+</extension>
+</relatedItem>
+</mods>

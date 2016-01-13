@@ -1,0 +1,225 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d48f1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_08-cv-01351</identifier>
+<identifier type="local">P0b002ee1815d48f1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-4_08-cv-01351</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_08-cv-01351</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:08-cv-01351</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Albert" fullName="Albert Aiad Toss" lastName="Aiad Toss" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony Ciarla" lastName="Ciarla" role="Plaintiff"></party>
+ <party fullName="Corrections Corporation of America" lastName="Corrections Corporation of America" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Gunja" lastName="Gunja" role="Defendant"></party>
+ <party firstName="Danny" fullName="Danny Hall" lastName="Hall" role="Defendant"></party>
+ <party fullName="Northeast Ohio Correctional Center" lastName="Northeast Ohio Correctional Center" role="Defendant"></party>
+ <party firstName="Dana" fullName="Dana Orenic" lastName="Orenic" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Ciarla v. Corrections Corporation of America et al</title>
+ <partNumber>4:08-cv-01351</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_08-cv-01351/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:08-cv-01351;08-1351</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Youngstown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Albert Aiad Toss</displayForm>
+ <namePart type="family">Aiad Toss</namePart>
+ <namePart type="given">Albert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Ciarla</displayForm>
+ <namePart type="family">Ciarla</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Corrections Corporation of America</displayForm>
+ <namePart type="family">Corrections Corporation of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Gunja</displayForm>
+ <namePart type="family">Gunja</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Danny Hall</displayForm>
+ <namePart type="family">Hall</namePart>
+ <namePart type="given">Danny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Northeast Ohio Correctional Center</displayForm>
+ <namePart type="family">Northeast Ohio Correctional Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dana Orenic</displayForm>
+ <namePart type="family">Orenic</namePart>
+ <namePart type="given">Dana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_08-cv-01351</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:08-cv-01351</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Albert" fullName="Albert Aiad Toss" lastName="Aiad Toss" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony Ciarla" lastName="Ciarla" role="Plaintiff"></party>
+ <party fullName="Corrections Corporation of America" lastName="Corrections Corporation of America" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Gunja" lastName="Gunja" role="Defendant"></party>
+ <party firstName="Danny" fullName="Danny Hall" lastName="Hall" role="Defendant"></party>
+ <party fullName="Northeast Ohio Correctional Center" lastName="Northeast Ohio Correctional Center" role="Defendant"></party>
+ <party firstName="Dana" fullName="Dana Orenic" lastName="Orenic" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_08-cv-01351-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_08-cv-01351/USCOURTS-ohnd-4_08-cv-01351-0/mods.xml">
+ <titleInfo>
+  <title>Ciarla v. Corrections Corporation of America et al</title>
+  <subTitle>Report and Recommendation: It is recommended that the Court grant defendants Correction Corporation of America, Northeast Ohio Correctional Center, Joseph Gunja, Albert Toss, Danny Hall, and Dana Orenic&apos;s motion for summary judgment, and dismiss this case in its entirety with prejudice (Related document 23). Magistrate Judge George J. Limbert on 9/15/09. (S,AA) Modified on 11/23/2009 to create docket entry relationship (S,AA).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_08-cv-01351-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816ef0d2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_08-cv-01351/USCOURTS-ohnd-4_08-cv-01351-0</identifier>
+ <identifier type="former granule identifier">ohnd-4_08-cv-01351_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_08-cv-01351/USCOURTS-ohnd-4_08-cv-01351-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_08-cv-01351/pdf/USCOURTS-ohnd-4_08-cv-01351-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-01351; Ciarla v. Corrections Corporation of America et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_08-cv-01351-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-09-15</dateIssued>
+  <docketText>Report and Recommendation: It is recommended that the Court grant defendants Correction Corporation of America, Northeast Ohio Correctional Center, Joseph Gunja, Albert Toss, Danny Hall, and Dana Orenic&apos;s motion for summary judgment, and dismiss this case in its entirety with prejudice (Related document 23). Magistrate Judge George J. Limbert on 9/15/09. (S,AA) Modified on 11/23/2009 to create docket entry relationship (S,AA).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_08-cv-01351-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_08-cv-01351/USCOURTS-ohnd-4_08-cv-01351-1/mods.xml">
+ <titleInfo>
+  <title>Ciarla v. Corrections Corporation of America et al</title>
+  <subTitle>Order Adopting Magistrate Judge George J. Limbert&apos;s Report and Recommendation (Related document 29). Judge Peter C. Economus on 1/4/10. (BR,S)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_08-cv-01351-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816ef0d3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_08-cv-01351/USCOURTS-ohnd-4_08-cv-01351-1</identifier>
+ <identifier type="former granule identifier">ohnd-4_08-cv-01351_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_08-cv-01351/USCOURTS-ohnd-4_08-cv-01351-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_08-cv-01351/pdf/USCOURTS-ohnd-4_08-cv-01351-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-01351; Ciarla v. Corrections Corporation of America et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_08-cv-01351-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-04</dateIssued>
+  <docketText>Order Adopting Magistrate Judge George J. Limbert&apos;s Report and Recommendation (Related document 29). Judge Peter C. Economus on 1/4/10. (BR,S)</docketText>
+</extension>
+</relatedItem>
+</mods>

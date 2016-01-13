@@ -1,0 +1,320 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a75fe91">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-12-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-12-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075</identifier>
+<identifier type="local">P0b002ee18a75fe91</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-12-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-12-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-01075</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01075</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01075</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:416 Denial of Social Security Benefits</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Leticia" fullName="Leticia Garcia" lastName="Garcia" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(SS) Garcia v. CSS</title>
+ <partNumber>2:13-cv-01075</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-01075;13-1075</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leticia Garcia</displayForm>
+ <namePart type="family">Garcia</namePart>
+ <namePart type="given">Leticia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01075</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01075</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:416 Denial of Social Security Benefits</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Leticia" fullName="Leticia Garcia" lastName="Garcia" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01075-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-0/mods.xml">
+ <titleInfo>
+  <title>(SS) Garcia v. CSS</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 6/4/2013 ORDERING 2 Motion to Proceed IFP is GRANTED; Clerk is directed to serve the undersigned&apos;s scheduling order in social security cases; Clerk is further directed to serve a copy of this order on the US Marshal; within 14 days from the date of this order, plaintiff shall submit to the USM completed summons and copies of documents for service; USM shall serve all process without prepayment of costs not later than 60 days from the date of this order. (cc: USM via interoffice mail) (Waggoner, D)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a7705ce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01075_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01075; (SS) Garcia v. CSS; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01075-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-06-04</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 6/4/2013 ORDERING 2 Motion to Proceed IFP is GRANTED; Clerk is directed to serve the undersigned&apos;s scheduling order in social security cases; Clerk is further directed to serve a copy of this order on the US Marshal; within 14 days from the date of this order, plaintiff shall submit to the USM completed summons and copies of documents for service; USM shall serve all process without prepayment of costs not later than 60 days from the date of this order. (cc: USM via interoffice mail) (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01075-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-1/mods.xml">
+ <titleInfo>
+  <title>(SS) Garcia v. CSS</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 10/1/13 ORDERING that the Motion to Stay 10 is GRANTED; Case Management Deadline: 4/3/2014. (Mena-Sanchez, L)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a770667</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01075_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01075; (SS) Garcia v. CSS; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01075-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-10-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 10/1/13 ORDERING that the Motion to Stay 10 is GRANTED; Case Management Deadline: 4/3/2014. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01075-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-2/mods.xml">
+ <titleInfo>
+  <title>(SS) Garcia v. CSS</title>
+  <subTitle>STIPULATION AND ORDER signed by Magistrate Judge Allison Claire on 1/2/2014 GRANTING the defendant a 30-day extension to time to file her Motion for Summary Judgment; ORDERING the defendant to file her Motion for Summary Judgment by 1/22/2014. (Michel, G)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a77066b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01075_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01075; (SS) Garcia v. CSS; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01075-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Magistrate Judge Allison Claire on 1/2/2014 GRANTING the defendant a 30-day extension to time to file her Motion for Summary Judgment; ORDERING the defendant to file her Motion for Summary Judgment by 1/22/2014. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01075-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-3/mods.xml">
+ <titleInfo>
+  <title>(SS) Garcia v. CSS</title>
+  <subTitle>STIPULATION and ORDER 19 for Second Extension of Time signed by Magistrate Judge Allison Claire on 1/27/2014. The new date for defendant&apos;s Motion for Summary Judgment is 2/24/2014. (Marciel, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a77066c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-3</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01075_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01075; (SS) Garcia v. CSS; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01075-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-01-28</dateIssued>
+  <docketText>STIPULATION and ORDER 19 for Second Extension of Time signed by Magistrate Judge Allison Claire on 1/27/2014. The new date for defendant&apos;s Motion for Summary Judgment is 2/24/2014. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01075-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-4/mods.xml">
+ <titleInfo>
+  <title>(SS) Garcia v. CSS</title>
+  <subTitle>STIPULATION and ORDER 21 for extension of time signed by Magistrate Judge Allison Claire on 2/26/2014. Defendant shall have until 3/26/2014 to file Motion for Summary Judgment. As this si defendant&apos;s third request for extension of time, NO FURTHER EXTENSIONS shall be allowed. (Marciel, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a77066a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-4</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01075_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01075; (SS) Garcia v. CSS; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01075-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-02-26</dateIssued>
+  <docketText>STIPULATION and ORDER 21 for extension of time signed by Magistrate Judge Allison Claire on 2/26/2014. Defendant shall have until 3/26/2014 to file Motion for Summary Judgment. As this si defendant&apos;s third request for extension of time, NO FURTHER EXTENSIONS shall be allowed. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01075-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-5/mods.xml">
+ <titleInfo>
+  <title>(SS) Garcia v. CSS</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 9/12/14 ORDERING that Plaintiff&apos;s MOTION for SUMMARY JUDGMENT 16 is GRANTED in part; The Commissioner&apos;s CROSS-MOTION for SUMMARY JUDGMENT 23 is DENIED; and this matter is REMANDED for further proceedings consistent with this order. CASE CLOSED.(Mena-Sanchez, L)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a770669</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-5</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01075_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01075; (SS) Garcia v. CSS; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01075-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-09-15</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 9/12/14 ORDERING that Plaintiff&apos;s MOTION for SUMMARY JUDGMENT 16 is GRANTED in part; The Commissioner&apos;s CROSS-MOTION for SUMMARY JUDGMENT 23 is DENIED; and this matter is REMANDED for further proceedings consistent with this order. CASE CLOSED.(Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01075-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-6/mods.xml">
+ <titleInfo>
+  <title>(SS) Garcia v. CSS</title>
+  <subTitle>STIPULATION AND ORDER signed by Magistrate Judge Allison Claire on 12/11/14 ORDERING the court will approve the parties&apos; stipulation as to plaintiff&apos;s receipt of Equal Access to Justice Act (&quot;EAJA&quot;) fees under 28 U.S.C. § 2412(d). In light of the parties&apos; superseding stipulation the court will also vacate plaintiff&apos;s November 21, 2014, petition for attorney&apos;s fees.ECF No. 27.(Becknal, R)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a770668</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-6</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01075_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01075/USCOURTS-caed-2_13-cv-01075-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01075/pdf/USCOURTS-caed-2_13-cv-01075-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01075; (SS) Garcia v. CSS; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01075-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-12-12</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Magistrate Judge Allison Claire on 12/11/14 ORDERING the court will approve the parties&apos; stipulation as to plaintiff&apos;s receipt of Equal Access to Justice Act (&quot;EAJA&quot;) fees under 28 U.S.C. § 2412(d). In light of the parties&apos; superseding stipulation the court will also vacate plaintiff&apos;s November 21, 2014, petition for attorney&apos;s fees.ECF No. 27.(Becknal, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

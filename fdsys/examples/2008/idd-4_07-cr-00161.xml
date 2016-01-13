@@ -1,0 +1,146 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180fd61d4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-4_07-cr-00161</identifier>
+<identifier type="local">P0b002ee180fd61d4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-4_07-cr-00161</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-4_07-cr-00161</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>4:07-cr-00161</caseNumber>
+ <caseOffice>Pocatello - Eastern</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Ronald" fullName="Ronald Hevewah" lastName="Hevewah" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Hevewah</title>
+ <partNumber>4:07-cr-00161</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-4_07-cr-00161/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:07-cr-00161;07-161</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Pocatello - Eastern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ronald Hevewah</displayForm>
+ <namePart type="family">Hevewah</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-4_07-cr-00161</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>4:07-cr-00161</caseNumber>
+ <caseOffice>Pocatello - Eastern</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Ronald" fullName="Ronald Hevewah" lastName="Hevewah" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-4_07-cr-00161-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_07-cr-00161/USCOURTS-idd-4_07-cr-00161-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Hevewah</title>
+  <subTitle>JUDGMENT as to Ronald Hevewah (1), Count(s) 1, 1s, Superseding Filed; Count(s) 1ss, Forty-two months imprisonment. Restitution to be determined at a later date. Fine waived. $100 special assessment. Three years supervised release. (Notice sent to USP and USM). Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-4_07-cr-00161-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fdbc2e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_07-cr-00161/USCOURTS-idd-4_07-cr-00161-0</identifier>
+ <identifier type="former granule identifier">idd-4_07-cr-00161_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-4_07-cr-00161/USCOURTS-idd-4_07-cr-00161-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-4_07-cr-00161/pdf/USCOURTS-idd-4_07-cr-00161-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cr-00161; USA v. Hevewah; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-4_07-cr-00161-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-16</dateIssued>
+  <docketText>JUDGMENT as to Ronald Hevewah (1), Count(s) 1, 1s, Superseding Filed; Count(s) 1ss, Forty-two months imprisonment. Restitution to be determined at a later date. Fine waived. $100 special assessment. Three years supervised release. (Notice sent to USP and USM). Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,1499 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183b59b74">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621</identifier>
+<identifier type="local">P0b002ee183b59b74</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_08-cv-01621</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_08-cv-01621</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:08-cv-01621</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>470</natureSuitCode>
+ <natureSuit>Civil (Rico)</natureSuit>
+ <cause>18:1964 Racketeering (RICO) Act</cause>
+ <party firstName="Kathy" fullName="Kathy Allison" lastName="Allison" role="Defendant"></party>
+ <party firstName="Kimberli" fullName="Kimberli Boncore" lastName="Boncore" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Cate" lastName="Cate" role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Clark" lastName="Clark" role="Defendant"></party>
+ <party firstName="Ryan" fullName="Ryan Couch" lastName="Couch" role="Plaintiff"></party>
+ <party firstName="Ralph" fullName="Ralph Diaz" lastName="Diaz" role="Defendant"></party>
+ <party firstName="John" fullName="John Dovey" lastName="Dovey" role="Defendant"></party>
+ <party firstName="Roderick" fullName="Roderick Hickman" lastName="Hickman" role="Defendant"></party>
+ <party firstName="Martin" fullName="Martin Hoshino" lastName="Hoshino" role="Defendant"></party>
+ <party firstName="Jack" fullName="Jack Hutchins" lastName="Hutchins" role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Jimenez" lastName="Jimenez" role="Plaintiff"></party>
+ <party firstName="Scott" fullName="Scott Kernan" lastName="Kernan" role="Defendant"></party>
+ <party fullName="Office of Inspector General" lastName="Office of Inspector General" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Rieger" lastName="Rieger" role="Defendant"></party>
+ <party firstName="David" fullName="David Shaw" lastName="Shaw" role="Defendant"></party>
+ <party fullName="State of California" lastName="State of California" role="Defendant"></party>
+ <party fullName="State of California Department of Corrections and Rehabilitation" lastName="State of California Department of Corrections and Rehabilitation" role="Defendant"></party>
+ <party firstName="James" fullName="James E. Tilton" lastName="Tilton" middleName="E." role="Defendant"></party>
+ <party firstName="Barnabe" fullName="Barnabe Torres" lastName="Torres" role="Plaintiff"></party>
+ <party firstName="Tommy" fullName="Tommy Wan" lastName="Wan" role="Defendant"></party>
+ <party firstName="Jeanne" fullName="Jeanne Woodford" lastName="Woodford" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Couch v. State of California, et al</title>
+ <partNumber>1:08-cv-01621</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-01621;08-1621</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kathy Allison</displayForm>
+ <namePart type="family">Allison</namePart>
+ <namePart type="given">Kathy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kimberli Boncore</displayForm>
+ <namePart type="family">Boncore</namePart>
+ <namePart type="given">Kimberli</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Cate</displayForm>
+ <namePart type="family">Cate</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Clark</displayForm>
+ <namePart type="family">Clark</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ryan Couch</displayForm>
+ <namePart type="family">Couch</namePart>
+ <namePart type="given">Ryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ralph Diaz</displayForm>
+ <namePart type="family">Diaz</namePart>
+ <namePart type="given">Ralph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Dovey</displayForm>
+ <namePart type="family">Dovey</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roderick Hickman</displayForm>
+ <namePart type="family">Hickman</namePart>
+ <namePart type="given">Roderick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Martin Hoshino</displayForm>
+ <namePart type="family">Hoshino</namePart>
+ <namePart type="given">Martin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jack Hutchins</displayForm>
+ <namePart type="family">Hutchins</namePart>
+ <namePart type="given">Jack</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Jimenez</displayForm>
+ <namePart type="family">Jimenez</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Kernan</displayForm>
+ <namePart type="family">Kernan</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Office of Inspector General</displayForm>
+ <namePart type="family">Office of Inspector General</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tim Rieger</displayForm>
+ <namePart type="family">Rieger</namePart>
+ <namePart type="given">Tim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Shaw</displayForm>
+ <namePart type="family">Shaw</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State of California</displayForm>
+ <namePart type="family">State of California</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State of California Department of Corrections and Rehabilitation</displayForm>
+ <namePart type="family">State of California Department of Corrections and Rehabilitation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James E. Tilton</displayForm>
+ <namePart type="family">Tilton</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Barnabe Torres</displayForm>
+ <namePart type="family">Torres</namePart>
+ <namePart type="given">Barnabe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tommy Wan</displayForm>
+ <namePart type="family">Wan</namePart>
+ <namePart type="given">Tommy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeanne Woodford</displayForm>
+ <namePart type="family">Woodford</namePart>
+ <namePart type="given">Jeanne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_08-cv-01621</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:08-cv-01621</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>470</natureSuitCode>
+ <natureSuit>Civil (Rico)</natureSuit>
+ <cause>18:1964 Racketeering (RICO) Act</cause>
+ <party firstName="Kathy" fullName="Kathy Allison" lastName="Allison" role="Defendant"></party>
+ <party firstName="Kimberli" fullName="Kimberli Boncore" lastName="Boncore" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Cate" lastName="Cate" role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Clark" lastName="Clark" role="Defendant"></party>
+ <party firstName="Ryan" fullName="Ryan Couch" lastName="Couch" role="Plaintiff"></party>
+ <party firstName="Ralph" fullName="Ralph Diaz" lastName="Diaz" role="Defendant"></party>
+ <party firstName="John" fullName="John Dovey" lastName="Dovey" role="Defendant"></party>
+ <party firstName="Roderick" fullName="Roderick Hickman" lastName="Hickman" role="Defendant"></party>
+ <party firstName="Martin" fullName="Martin Hoshino" lastName="Hoshino" role="Defendant"></party>
+ <party firstName="Jack" fullName="Jack Hutchins" lastName="Hutchins" role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Jimenez" lastName="Jimenez" role="Plaintiff"></party>
+ <party firstName="Scott" fullName="Scott Kernan" lastName="Kernan" role="Defendant"></party>
+ <party fullName="Office of Inspector General" lastName="Office of Inspector General" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Rieger" lastName="Rieger" role="Defendant"></party>
+ <party firstName="David" fullName="David Shaw" lastName="Shaw" role="Defendant"></party>
+ <party fullName="State of California" lastName="State of California" role="Defendant"></party>
+ <party fullName="State of California Department of Corrections and Rehabilitation" lastName="State of California Department of Corrections and Rehabilitation" role="Defendant"></party>
+ <party firstName="James" fullName="James E. Tilton" lastName="Tilton" middleName="E." role="Defendant"></party>
+ <party firstName="Barnabe" fullName="Barnabe Torres" lastName="Torres" role="Plaintiff"></party>
+ <party firstName="Tommy" fullName="Tommy Wan" lastName="Wan" role="Defendant"></party>
+ <party firstName="Jeanne" fullName="Jeanne Woodford" lastName="Woodford" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-0/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>STIPULATION and ORDER 14 signed by Judge Ronald S.W. Lew on 12/14/2007 ORDERING Plaintiff will file an Amended Complaint due by 12/31/2007; Dfts withdraw 12, 13 their motions to dismiss, without prejudice to renewing such motions after reviewing Pltf&apos;s amended complaint; dfts will file a responsive pleading to the second amended complaint due by 1/22/2008; the deadline for the Rule 26(f) report required by the Court&apos;s 5 Ordering Requiring Joint Status Report shall be EXTENDED to 2/29/2008.(Reader, L)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f464</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-0</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-12-17</dateIssued>
+  <docketText>STIPULATION and ORDER 14 signed by Judge Ronald S.W. Lew on 12/14/2007 ORDERING Plaintiff will file an Amended Complaint due by 12/31/2007; Dfts withdraw 12, 13 their motions to dismiss, without prejudice to renewing such motions after reviewing Pltf&apos;s amended complaint; dfts will file a responsive pleading to the second amended complaint due by 1/22/2008; the deadline for the Rule 26(f) report required by the Court&apos;s 5 Ordering Requiring Joint Status Report shall be EXTENDED to 2/29/2008.(Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-1/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER denying 18 Motion to Dismiss signed by Senior Judge Ronald S.W. Lew on 3/13/08. (Kaminski, H)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f450</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-1</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-03-14</dateIssued>
+  <docketText>ORDER denying 18 Motion to Dismiss signed by Senior Judge Ronald S.W. Lew on 3/13/08. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-2/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER signed by Senior Judge Ronald S.W. Lew on 3/13/08: CDCR Defendants&apos; Motion to Dismiss Defendant Tilton is GRANTED. Defendant Tilton is dismissed from the action. Plaintiff hereby has 20 days leave to amend the complaint to properly include Tilton. CDCR Defendants&apos; Motion to Dismiss all other Defendants is DENIED. However, Plaintiff&apos;s claim of deprivation of property rights under § 1983 cannot proceed because CDCR Defendants have qualified immunity. (Kaminski, H)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f458</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-2</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-03-14</dateIssued>
+  <docketText>ORDER signed by Senior Judge Ronald S.W. Lew on 3/13/08: CDCR Defendants&apos; Motion to Dismiss Defendant Tilton is GRANTED. Defendant Tilton is dismissed from the action. Plaintiff hereby has 20 days leave to amend the complaint to properly include Tilton. CDCR Defendants&apos; Motion to Dismiss all other Defendants is DENIED. However, Plaintiff&apos;s claim of deprivation of property rights under § 1983 cannot proceed because CDCR Defendants have qualified immunity. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-3/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>STATUS (Pretrial Scheduling) ORDER signed by Judge John A. Mendez on 5/6/08 ORDERING that Dispositive motions Hearing ddl 8/26/09; Discovery ddl 6/26/2009; Designation of Expert Witnesses ddl 4/10/2009; Final Pretrial Conference set for 10/9/2009 at 02:00 PM in Courtroom 6 (JAM) before Judge John A. Mendez. Trial set for 11/16/2009 at 08:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. (Duong, D)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f43b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-3</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-05-07</dateIssued>
+  <docketText>STATUS (Pretrial Scheduling) ORDER signed by Judge John A. Mendez on 5/6/08 ORDERING that Dispositive motions Hearing ddl 8/26/09; Discovery ddl 6/26/2009; Designation of Expert Witnesses ddl 4/10/2009; Final Pretrial Conference set for 10/9/2009 at 02:00 PM in Courtroom 6 (JAM) before Judge John A. Mendez. Trial set for 11/16/2009 at 08:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. (Duong, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-4/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge John A. Mendez on 5/13/08 re 42 ORDERING the 41 Status ( Pretrial Scheduling) Order is AMENDED as follows: Prior to July 23, 2008, the parties may join additional parties and amend their pleadings without leave of Court. After July 23, 2008, no further joinder of parties or amendments to pleadings is permitted except with leave of court, good cause having been shown. (Duong, D)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f447</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-4</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-05-14</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge John A. Mendez on 5/13/08 re 42 ORDERING the 41 Status ( Pretrial Scheduling) Order is AMENDED as follows: Prior to July 23, 2008, the parties may join additional parties and amend their pleadings without leave of Court. After July 23, 2008, no further joinder of parties or amendments to pleadings is permitted except with leave of court, good cause having been shown. (Duong, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-5/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>PROTECTIVE ORDER signed by Judge John A. Mendez on 5/22/2008 GRANTING Joint Motion for Protective Order by Sam Bess. (Reader, L)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f43c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-5</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-05-23</dateIssued>
+  <docketText>PROTECTIVE ORDER signed by Judge John A. Mendez on 5/22/2008 GRANTING Joint Motion for Protective Order by Sam Bess. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-6/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>STIPULATION and ORDER 51 re Deposition of Sam Bess signed by Judge John A. Mendez on 9/15/08. The parties stipulate that plaintiff Bess&apos;s Deposition will take place over 3 consecutive 7-hour days from 12/17/08 - 12/19/08 (or mutually agreeable, alternative, and consecutive 3-day period) in Downtown Sacramento. (Marciel, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f44b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-6</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2008-09-16</dateIssued>
+  <docketText>STIPULATION and ORDER 51 re Deposition of Sam Bess signed by Judge John A. Mendez on 9/15/08. The parties stipulate that plaintiff Bess&apos;s Deposition will take place over 3 consecutive 7-hour days from 12/17/08 - 12/19/08 (or mutually agreeable, alternative, and consecutive 3-day period) in Downtown Sacramento. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-7/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER signed by Judge John A. Mendez on 10/27/08 ORDERING that dfts Wan, Boncore and Diaz&apos;s 49 Motions to Sever and Transfer is GRANTED. Accordingly, the action against SATF Defendants should be TRANSFERRED to the Fresno Division. (Benson, A) Modified on 10/27/2008 (Benson, A).</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f453</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-7</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-10-27</dateIssued>
+  <docketText>ORDER signed by Judge John A. Mendez on 10/27/08 ORDERING that dfts Wan, Boncore and Diaz&apos;s 49 Motions to Sever and Transfer is GRANTED. Accordingly, the action against SATF Defendants should be TRANSFERRED to the Fresno Division. (Benson, A) Modified on 10/27/2008 (Benson, A).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-8/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>STIPULATION and ORDER Allowing Plaintiffs to File Amended Complaint and Setting Briefing Schedule for Defendants&apos; Motion to Dismiss signed by Magistrate Judge Dennis L. Beck on 11/15/08. (Verduzco, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f45b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-8</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-11-17</dateIssued>
+  <docketText>STIPULATION and ORDER Allowing Plaintiffs to File Amended Complaint and Setting Briefing Schedule for Defendants&apos; Motion to Dismiss signed by Magistrate Judge Dennis L. Beck on 11/15/08. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-9/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>STIPULATION and ORDER re filing date for Defendant&apos;s Motion to Dismiss signed by District Judge Lawrence J. O&apos;Neill on 12/02/2008. (Flores, E)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f459</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-9</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2008-12-04</dateIssued>
+  <docketText>STIPULATION and ORDER re filing date for Defendant&apos;s Motion to Dismiss signed by District Judge Lawrence J. O&apos;Neill on 12/02/2008. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-10/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER on Defendant&apos;s F.R. Civ.P.12(b)(6) Motions to Dismiss; Kenneth Clark; Ralph Diaz; Jack Hutchins; Kathy Allison and Kimberli Boncore terminated from this action, signed by District Judge Lawrence J. O&apos;Neill on 2/6/2009. (Kusamura, W)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f44d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-10</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2009-02-06</dateIssued>
+  <docketText>ORDER on Defendant&apos;s F.R. Civ.P.12(b)(6) Motions to Dismiss; Kenneth Clark; Ralph Diaz; Jack Hutchins; Kathy Allison and Kimberli Boncore terminated from this action, signed by District Judge Lawrence J. O&apos;Neill on 2/6/2009. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-11/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER Postponing Mandatory Scheduling Conference signed by Magistrate Judge Dennis L. Beck on 2/13/2009. Scheduling Conference RESET for 3/11/2009 at 09:00 AM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck. Response to First Amended Complaint due within 30 days from the date of this order. (Esteves, C)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f454</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-11</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2009-02-13</dateIssued>
+  <docketText>ORDER Postponing Mandatory Scheduling Conference signed by Magistrate Judge Dennis L. Beck on 2/13/2009. Scheduling Conference RESET for 3/11/2009 at 09:00 AM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck. Response to First Amended Complaint due within 30 days from the date of this order. (Esteves, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-12/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER Directing Entry of Final Judgment as to Dismissed Claims, and Staying Remaining Claims, signed by District Judge Lawrence J. O&apos;Neill on 3/5/2009. (Jessen, A)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f44c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-12</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2009-03-05</dateIssued>
+  <docketText>ORDER Directing Entry of Final Judgment as to Dismissed Claims, and Staying Remaining Claims, signed by District Judge Lawrence J. O&apos;Neill on 3/5/2009. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-13/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER REGARDING FILING DATES AND SETTING a Scheduling Conference for 9/30/2010 at 09:00 AM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck. An amended complaint shall be filed by plaintiffs within 30 days of the date of service of this order. The amended complaint shall comply with the Ninth Circuit&apos;s May 14, 2010, order. Within 20 days of service of the amended complaint, defendants shall file a responsive pleading. Order signed by Magistrate Judge Dennis L. Beck on 6/7/2010. (Hernandez, M)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f45a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-13</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2010-06-08</dateIssued>
+  <docketText>ORDER REGARDING FILING DATES AND SETTING a Scheduling Conference for 9/30/2010 at 09:00 AM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck. An amended complaint shall be filed by plaintiffs within 30 days of the date of service of this order. The amended complaint shall comply with the Ninth Circuit&apos;s May 14, 2010, order. Within 20 days of service of the amended complaint, defendants shall file a responsive pleading. Order signed by Magistrate Judge Dennis L. Beck on 6/7/2010. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-14/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER ON DEFENDANTS&apos; MOTIONS TO DISMISS SAC (Doc. 115) signed by District Judge Lawrence J. O&apos;Neill on September 10, 2010. (Lira, I)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f455</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-14</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2010-09-10</dateIssued>
+  <docketText>ORDER ON DEFENDANTS&apos; MOTIONS TO DISMISS SAC (Doc. 115) signed by District Judge Lawrence J. O&apos;Neill on September 10, 2010. (Lira, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-15/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>AMENDED PROTECTIVE ORDER signed by Magistrate Judge Dennis L. Beck on 2/16/2011. (Hernandez, M)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f45d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-15</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2011-02-17</dateIssued>
+  <docketText>AMENDED PROTECTIVE ORDER signed by Magistrate Judge Dennis L. Beck on 2/16/2011. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-16/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER GRANTING Plaintiff&apos;s Request to Seal Documents to CDCR&apos;s Motion to Modify Portion of Plaintiff&apos;s Subpoenas and Supporting Documents, signed by Magistrate Judge Dennis L. Beck on 6/7/11. (Hellings, J)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f462</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-16</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2011-06-08</dateIssued>
+  <docketText>ORDER GRANTING Plaintiff&apos;s Request to Seal Documents to CDCR&apos;s Motion to Modify Portion of Plaintiff&apos;s Subpoenas and Supporting Documents, signed by Magistrate Judge Dennis L. Beck on 6/7/11. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-17/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER Regarding California Department of Corrections and Rehabilitation&apos;s Motion to Modify Portions of Plaintiffs&apos; Subpoenas; ORDER Regarding Request to Strike Declarations signed by Magistrate Judge Dennis L. Beck on 06/23/2011. Requests due by 7/1/2011; Responses due by 7/22/2011. (Flores, E)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f448</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-17</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2011-06-24</dateIssued>
+  <docketText>ORDER Regarding California Department of Corrections and Rehabilitation&apos;s Motion to Modify Portions of Plaintiffs&apos; Subpoenas; ORDER Regarding Request to Strike Declarations signed by Magistrate Judge Dennis L. Beck on 06/23/2011. Requests due by 7/1/2011; Responses due by 7/22/2011. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-18/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER On Reconsideration Of Discovery Cost Sharing (Doc. 154), signed by District Judge Lawrence J. O&apos;Neill on 7/19/2011. This Court DENIES Officers Couch and Jimenez reconsideration. (Fahrney, E)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f457</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-18</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2011-07-20</dateIssued>
+  <docketText>ORDER On Reconsideration Of Discovery Cost Sharing (Doc. 154), signed by District Judge Lawrence J. O&apos;Neill on 7/19/2011. This Court DENIES Officers Couch and Jimenez reconsideration. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-19/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER DENYING, without prejudice, plaintiffs&apos; Request to Seal Documents, document 162; order signed by Magistrate Judge Dennis L. Beck on 8/30/2011. (Rooney, M)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f43d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-19</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2011-08-30</dateIssued>
+  <docketText>ORDER DENYING, without prejudice, plaintiffs&apos; Request to Seal Documents, document 162; order signed by Magistrate Judge Dennis L. Beck on 8/30/2011. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-20/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER GRANTING plaintiffs&apos; request to file documents under seal, document 164; order signed by Magistrate Judge Dennis L. Beck on 9/1/2011. (Rooney, M)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f435</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-20</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2011-09-01</dateIssued>
+  <docketText>ORDER GRANTING plaintiffs&apos; request to file documents under seal, document 164; order signed by Magistrate Judge Dennis L. Beck on 9/1/2011. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-21/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER GRANTING 165 Plaintiffs&apos; Ex Parte Application to Shorten Time, signed by Magistrate Judge Dennis L. Beck on 09/08/2011. (Martin-Gill, S)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f44f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-21</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2011-09-09</dateIssued>
+  <docketText>ORDER GRANTING 165 Plaintiffs&apos; Ex Parte Application to Shorten Time, signed by Magistrate Judge Dennis L. Beck on 09/08/2011. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-22/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER GRANTING 168 Request to Seal Plaintiffs&apos; Opposition to California Department of Corrections and Rehabilitation&apos;s Motion to Quash Plaintiffs&apos; Subpoena; Declaration of Ryan Couch in Support of Plaintiffs Opposition to California Department of Corrections and Rehabilitations Motion to Quash Subpoena; Plaintiffs also shall file the Declaration of Daniel A. Zlatnik with redaction of Exhibits 1, 2 and 3. These exhibits shall be filed separately under SEAL by the Clerk of the Court, signed by Magistrate Judge Dennis L. Beck on 09/08/2011. (Martin-Gill, S)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-22.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f3b6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-22</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2011-09-09</dateIssued>
+  <docketText>ORDER GRANTING 168 Request to Seal Plaintiffs&apos; Opposition to California Department of Corrections and Rehabilitation&apos;s Motion to Quash Plaintiffs&apos; Subpoena; Declaration of Ryan Couch in Support of Plaintiffs Opposition to California Department of Corrections and Rehabilitations Motion to Quash Subpoena; Plaintiffs also shall file the Declaration of Daniel A. Zlatnik with redaction of Exhibits 1, 2 and 3. These exhibits shall be filed separately under SEAL by the Clerk of the Court, signed by Magistrate Judge Dennis L. Beck on 09/08/2011. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-23/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER DENYING Without Prejudice 177 California Department of Corrections&apos; Request to Seal Opposition to Motion to Compel, signed by Magistrate Judge Dennis L. Beck on 9/14/2011. (Jessen, A)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-23.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f452</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-23</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2011-09-14</dateIssued>
+  <docketText>ORDER DENYING Without Prejudice 177 California Department of Corrections&apos; Request to Seal Opposition to Motion to Compel, signed by Magistrate Judge Dennis L. Beck on 9/14/2011. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-24/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>JOINT STIPULATION and ORDER to Modify Scheduling Order signed by Magistrate Judge Dennis L. Beck on 9/14/2011. (Non-Expert Discovery Deadline: 3/9/2012; Non-Dispositive Motions (NOT relating to Expert Discovery) filed by 3/30/2012; Discovery Pertaining to Experts due by 6/15/2012; Non-Dispositive Motions (Relating to Expert Discovery) filed by 6/29/2012; Dispositive Motions filed by 7/20/2012) (Figueroa, O)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-24.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f3b7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-24</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2011-09-14</dateIssued>
+  <docketText>JOINT STIPULATION and ORDER to Modify Scheduling Order signed by Magistrate Judge Dennis L. Beck on 9/14/2011. (Non-Expert Discovery Deadline: 3/9/2012; Non-Dispositive Motions (NOT relating to Expert Discovery) filed by 3/30/2012; Discovery Pertaining to Experts due by 6/15/2012; Non-Dispositive Motions (Relating to Expert Discovery) filed by 6/29/2012; Dispositive Motions filed by 7/20/2012) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-25/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER GRANTING 186 California Department of Corrections&apos; Request to Seal Opposition to Motion to Compel signed by Magistrate Judge Dennis L. Beck on 9/15/2011. (Jessen, A)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-25.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f463</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-25</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2011-09-16</dateIssued>
+  <docketText>ORDER GRANTING 186 California Department of Corrections&apos; Request to Seal Opposition to Motion to Compel signed by Magistrate Judge Dennis L. Beck on 9/15/2011. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-26/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER GRANTING 194 Joint Request to Seal Portions of the Joint Statement Regarding Discovery Disagreement signed by Magistrate Judge Dennis L. Beck on 9/19/2011. (Jessen, A)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-26.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f43a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-26</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2011-09-19</dateIssued>
+  <docketText>ORDER GRANTING 194 Joint Request to Seal Portions of the Joint Statement Regarding Discovery Disagreement signed by Magistrate Judge Dennis L. Beck on 9/19/2011. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-27/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER GRANTING 193 Plaintiffs&apos; Request to Seal Exhibit 2, the Declaration of Daniel A. Zlatnik, signed by Magistrate Judge Dennis L. Beck on 9/19/2011. (Jessen, A)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-27.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f439</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-27</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2011-09-19</dateIssued>
+  <docketText>ORDER GRANTING 193 Plaintiffs&apos; Request to Seal Exhibit 2, the Declaration of Daniel A. Zlatnik, signed by Magistrate Judge Dennis L. Beck on 9/19/2011. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-28/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER Regarding California Department of Corrections and Rehabilitation&apos;s 158 Motion to Quash Plaintiffs&apos; Subpoena signed by Magistrate Judge Dennis L. Beck on 9/23/2011. (Figueroa, O)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-28.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f436</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-28</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2011-09-26</dateIssued>
+  <docketText>ORDER Regarding California Department of Corrections and Rehabilitation&apos;s 158 Motion to Quash Plaintiffs&apos; Subpoena signed by Magistrate Judge Dennis L. Beck on 9/23/2011. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-29/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER Regarding 161 Motion for Entry of Protective Order signed by Magistrate Judge Dennis L. Beck on 9/23/2011. (Figueroa, O)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-29.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f3b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-29</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2011-09-26</dateIssued>
+  <docketText>ORDER Regarding 161 Motion for Entry of Protective Order signed by Magistrate Judge Dennis L. Beck on 9/23/2011. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-30/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER GRANTING 157 Plaintiff&apos;s Motion for Leave to take additional depositions and depositions of prisoners. Order signed by Magistrate Judge Dennis L. Beck on 9/26/2011. (Hernandez, M)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-30.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f434</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-30</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2011-09-27</dateIssued>
+  <docketText>ORDER GRANTING 157 Plaintiff&apos;s Motion for Leave to take additional depositions and depositions of prisoners. Order signed by Magistrate Judge Dennis L. Beck on 9/26/2011. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-31/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>AMENDED PROTECTIVE ORDER signed by Magistrate Judge Dennis L. Beck on 10/4/2011. (Hernandez, M)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-31.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f45c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-31</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2011-10-05</dateIssued>
+  <docketText>AMENDED PROTECTIVE ORDER signed by Magistrate Judge Dennis L. Beck on 10/4/2011. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-32/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER regarding discovery dispute signed by Magistrate Judge Dennis L. Beck on 12/6/2011. (Figueroa, O)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-32.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f460</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-32</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2011-12-07</dateIssued>
+  <docketText>ORDER regarding discovery dispute signed by Magistrate Judge Dennis L. Beck on 12/6/2011. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-33/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>Joint STIPULATION and ORDER to modify Scheduling Order, signed by Magistrate Judge Dennis L. Beck on 3/5/2012. (Non Expert Discovery due by 7/13/2012; Non-Dispositive Motions filed by 7/31/2012; Non-Dispositive Motions heard by 9/7/2012; Expert Discovery due by 10/12/2012; Motions Related to Expert Discovery filed by 10/31/2012; Motions Related to Expert Discovery heard by 11/30/2012; Dispositive and Daubert Motions filed by: 11/16/2012; Dispositive and Daubert Motions heard by 1/16/2013; Pretrial Conference set for 4/9/2013 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill; Jury Trial set for 6/4/2013 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill) (Figueroa, O)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-33.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f44a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-33</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2012-03-07</dateIssued>
+  <docketText>Joint STIPULATION and ORDER to modify Scheduling Order, signed by Magistrate Judge Dennis L. Beck on 3/5/2012. (Non Expert Discovery due by 7/13/2012; Non-Dispositive Motions filed by 7/31/2012; Non-Dispositive Motions heard by 9/7/2012; Expert Discovery due by 10/12/2012; Motions Related to Expert Discovery filed by 10/31/2012; Motions Related to Expert Discovery heard by 11/30/2012; Dispositive and Daubert Motions filed by: 11/16/2012; Dispositive and Daubert Motions heard by 1/16/2013; Pretrial Conference set for 4/9/2013 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill; Jury Trial set for 6/4/2013 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-34/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>Third Amended Protective ORDER, signed by Magistrate Judge Dennis L. Beck on 3/27/2012. (Figueroa, O)</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-34.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f45f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-34</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2012-03-29</dateIssued>
+  <docketText>Third Amended Protective ORDER, signed by Magistrate Judge Dennis L. Beck on 3/27/2012. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-35" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-35/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>Joint STIPULATION and ORDER Regarding CDCR Production of Electronic Discovery, signed by Magistrate Judge Dennis L. Beck on 3/27/2012. (Figueroa, O)</subTitle>
+  <partNumber>35</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-35.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f449</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-35</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_35.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-35/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-35.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-35</accessId>
+  <sequenceNumber>35</sequenceNumber>
+  <dateIssued>2012-03-29</dateIssued>
+  <docketText>Joint STIPULATION and ORDER Regarding CDCR Production of Electronic Discovery, signed by Magistrate Judge Dennis L. Beck on 3/27/2012. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-36" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-36/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER on 229 Stipulation to Reset Dates, signed by District Judge Lawrence J. O&apos;Neill on 7/3/2012. (Initial expert witness disclosures by any party shall be served no later than 10/19/2012. Supplemental expert witness disclosures by any party shall be served no later than 10/26/2012. All nonexpert discovery and related discovery motions (including motions to compel) shall be completed or heard no later than 10/12/2012. All expert discovery and related discovery motions (including motions to compel) shall be completed or heard no later than 11/30/2012. All pretrial motions, both dispositive and nondispositive (except discovery motions addressed above), shall be served and filed no later than 12/7/2012. All pretrial dispositive and nondispositive motions (except discovery motions addressed above) shall be set before the appropriate judge for a hearing to be conducted no later than 1/7/2013. The pretrial conference shall remain on April 9, 2013 at 8:30 a.m. in Department 4 (LJO) of thisCourt. A ten-day trial is set for 6/4/2013 at 9 a.m. in Department 4 (LJO) of this Court.)(Gaumnitz, R)</subTitle>
+  <partNumber>36</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-36.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f456</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-36</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_36.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-36/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-36.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-36</accessId>
+  <sequenceNumber>36</sequenceNumber>
+  <dateIssued>2012-07-03</dateIssued>
+  <docketText>ORDER on 229 Stipulation to Reset Dates, signed by District Judge Lawrence J. O&apos;Neill on 7/3/2012. (Initial expert witness disclosures by any party shall be served no later than 10/19/2012. Supplemental expert witness disclosures by any party shall be served no later than 10/26/2012. All nonexpert discovery and related discovery motions (including motions to compel) shall be completed or heard no later than 10/12/2012. All expert discovery and related discovery motions (including motions to compel) shall be completed or heard no later than 11/30/2012. All pretrial motions, both dispositive and nondispositive (except discovery motions addressed above), shall be served and filed no later than 12/7/2012. All pretrial dispositive and nondispositive motions (except discovery motions addressed above) shall be set before the appropriate judge for a hearing to be conducted no later than 1/7/2013. The pretrial conference shall remain on April 9, 2013 at 8:30 a.m. in Department 4 (LJO) of thisCourt. A ten-day trial is set for 6/4/2013 at 9 a.m. in Department 4 (LJO) of this Court.)(Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-37" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-37/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER on 233 Reconsideration of Denial of Renewed Depositions, signed by District Judge Lawrence J. O&apos;Neill on 9/21/12. Denied. (Gonzalez, R)</subTitle>
+  <partNumber>37</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-37.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f451</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-37</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_37.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-37/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-37.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-37</accessId>
+  <sequenceNumber>37</sequenceNumber>
+  <dateIssued>2012-09-24</dateIssued>
+  <docketText>ORDER on 233 Reconsideration of Denial of Renewed Depositions, signed by District Judge Lawrence J. O&apos;Neill on 9/21/12. Denied. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-38" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-38/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>Joint STIPULATION and ORDER Regarding Authenticity, signed by Magistrate Judge Dennis L. Beck on 10/16/2012. (Gaumnitz, R)</subTitle>
+  <partNumber>38</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-38.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f461</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-38</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_38.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-38/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-38.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-38</accessId>
+  <sequenceNumber>38</sequenceNumber>
+  <dateIssued>2012-10-17</dateIssued>
+  <docketText>Joint STIPULATION and ORDER Regarding Authenticity, signed by Magistrate Judge Dennis L. Beck on 10/16/2012. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-39" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-39/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER GRANTING 247 Request to File Exhibits in Support of Motion for Summary Judgment/Adjudication Under Seal, Signed by District Judge Lawrence J. O&apos;Neill on 11/20/2012. (Arellano, S.)</subTitle>
+  <partNumber>39</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-39.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f438</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-39</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_39.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-39/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-39.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-39</accessId>
+  <sequenceNumber>39</sequenceNumber>
+  <dateIssued>2012-11-20</dateIssued>
+  <docketText>ORDER GRANTING 247 Request to File Exhibits in Support of Motion for Summary Judgment/Adjudication Under Seal, Signed by District Judge Lawrence J. O&apos;Neill on 11/20/2012. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-40" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-40/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>JOINT STIPULATION and ORDER RE: HEARING DATE signed by District Judge Lawrence J. O&apos;Neill on December 11, 2012. Motion Hearing currently set for 12/27/2012 is VACATED. (Munoz, I)</subTitle>
+  <partNumber>40</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-40.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f44e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-40</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_40.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-40/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-40.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-40</accessId>
+  <sequenceNumber>40</sequenceNumber>
+  <dateIssued>2012-12-11</dateIssued>
+  <docketText>JOINT STIPULATION and ORDER RE: HEARING DATE signed by District Judge Lawrence J. O&apos;Neill on December 11, 2012. Motion Hearing currently set for 12/27/2012 is VACATED. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-41" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-41/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER After 253 Settlement, signed by District Judge Lawrence J. O&apos;Neill on 1/3/2013. (This Court ORDERS the parties, no later than February 15, 2013, to file appropriate papers to dismiss or conclude this action in its entirety, or to show good cause why the action has not been dismissed. All pending matters and dates are VACATED.) (Gaumnitz, R)</subTitle>
+  <partNumber>41</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-41.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f437</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-41</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_41.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-41/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-41.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-41</accessId>
+  <sequenceNumber>41</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER After 253 Settlement, signed by District Judge Lawrence J. O&apos;Neill on 1/3/2013. (This Court ORDERS the parties, no later than February 15, 2013, to file appropriate papers to dismiss or conclude this action in its entirety, or to show good cause why the action has not been dismissed. All pending matters and dates are VACATED.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01621-42" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-42/mods.xml">
+ <titleInfo>
+  <title>Couch v. State of California, et al</title>
+  <subTitle>ORDER to DISMISS and to CLOSE ACTION, signed by District Judge Lawrence J. O&apos;Neill on 1/24/2013. CASE CLOSED. (Marrujo, C)</subTitle>
+  <partNumber>42</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_08-cv-01621-42.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5f45e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-42</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01621_42.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01621/USCOURTS-caed-1_08-cv-01621-42/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01621/pdf/USCOURTS-caed-1_08-cv-01621-42.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01621; Couch v. State of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01621-42</accessId>
+  <sequenceNumber>42</sequenceNumber>
+  <dateIssued>2013-01-24</dateIssued>
+  <docketText>ORDER to DISMISS and to CLOSE ACTION, signed by District Judge Lawrence J. O&apos;Neill on 1/24/2013. CASE CLOSED. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+</mods>

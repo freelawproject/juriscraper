@@ -1,0 +1,288 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18b693b33">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Eastern District of North Carolina</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-03-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_12-bk-01222</identifier>
+<identifier type="local">P0b002ee18b693b33</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-03-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-03-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nceb-8_12-bk-01222</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nceb-8_12-bk-01222</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nceb</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>North Carolina</courtState>
+ <courtSortOrder>3361</courtSortOrder>
+ <caseNumber>8:12-bk-01222</caseNumber>
+ <caseOffice>Wilson</caseOffice>
+ <party fullName="PNC Mortgage" lastName="PNC Mortgage" role="Creditor"></party>
+ <party firstName="Larry" fullName="Larry Lill Mead Jr." generation="Jr." lastName="Mead" middleName="Lill" role="Debtor"></party>
+ <party firstName="Helena" fullName="Helena Lynn Mead" lastName="Mead" middleName="Lynn" role="Joint Debtor"></party>
+ <party firstName="Robert" fullName="Robert R. ~Browning" lastName="~Browning" middleName="R." role="Trustee"></party>
+ <party fullName="TD Auto Finance LLC" lastName="TD Auto Finance LLC" role="Creditor"></party>
+ <party fullName="PNC Bank, N.A." lastName="PNC Bank, N.A." role="Creditor"></party>
+ <party fullName="HSBC Bank Nevada, N.A." lastName="HSBC Bank Nevada, N.A." role="Creditor"></party>
+ <party fullName="Keystone Recovery Partners LLC, Series A" lastName="Keystone Recovery Partners LLC, Series A" role="Creditor"></party>
+ <party fullName="Keystone Recovery Partners LLC, Series A" lastName="Keystone Recovery Partners LLC, Series A" role="Assignee"></party>
+ <party fullName="FIA Card Services, NA As Successor In Interest to Bank of America NA" lastName="FIA Card Services, NA As Successor In Interest to Bank of America NA" role="Assignor"></party>
+ <party fullName="Internal Revenue Service" lastName="Internal Revenue Service" role="Creditor"></party>
+ <party fullName="Midland Funding LLC by American InfoSource LP as agent" lastName="Midland Funding LLC by American InfoSource LP as agent" role="Creditor"></party>
+ <party fullName="Midland Funding LLC by American InfoSource LP as agent" lastName="Midland Funding LLC by American InfoSource LP as agent" role="Creditor"></party>
+ <party fullName="Verizon Wireless" lastName="Verizon Wireless" role="Creditor"></party>
+ <party firstName="Richard" fullName="Richard M Stearns" lastName="Stearns" middleName="M" role="Trustee"></party>
+ <party fullName="eCAST Settlement Corporation" lastName="eCAST Settlement Corporation" role="Creditor"></party>
+ <party fullName="eCAST Settlement Corporation" lastName="eCAST Settlement Corporation" role="Assignee"></party>
+ <party fullName="Capital One, N.A." lastName="Capital One, N.A." role="Assignor"></party>
+</extension>
+<titleInfo>
+ <title>Larry Lill Mead, Jr. and Helena Lynn Mead</title>
+ <partNumber>8:12-bk-01222</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_12-bk-01222/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">8:12-bk-01222;12-1222</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Eastern District of North Carolina</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Wilson</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>PNC Mortgage</displayForm>
+ <namePart type="family">PNC Mortgage</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Lill Mead Jr.</displayForm>
+ <namePart type="family">Mead</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Helena Lynn Mead</displayForm>
+ <namePart type="family">Mead</namePart>
+ <namePart type="given">Helena</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Joint Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Robert R. ~Browning</displayForm>
+ <namePart type="family">~Browning</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>TD Auto Finance LLC</displayForm>
+ <namePart type="family">TD Auto Finance LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>PNC Bank, N.A.</displayForm>
+ <namePart type="family">PNC Bank, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>HSBC Bank Nevada, N.A.</displayForm>
+ <namePart type="family">HSBC Bank Nevada, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Keystone Recovery Partners LLC, Series A</displayForm>
+ <namePart type="family">Keystone Recovery Partners LLC, Series A</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Keystone Recovery Partners LLC, Series A</displayForm>
+ <namePart type="family">Keystone Recovery Partners LLC, Series A</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Assignee</description>
+</name>
+<name type="personal">
+ <displayForm>FIA Card Services, NA As Successor In Interest to Bank of America NA</displayForm>
+ <namePart type="family">FIA Card Services, NA As Successor In Interest to Bank of America NA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Assignor</description>
+</name>
+<name type="personal">
+ <displayForm>Internal Revenue Service</displayForm>
+ <namePart type="family">Internal Revenue Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Midland Funding LLC by American InfoSource LP as agent</displayForm>
+ <namePart type="family">Midland Funding LLC by American InfoSource LP as agent</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Midland Funding LLC by American InfoSource LP as agent</displayForm>
+ <namePart type="family">Midland Funding LLC by American InfoSource LP as agent</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Verizon Wireless</displayForm>
+ <namePart type="family">Verizon Wireless</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Richard M Stearns</displayForm>
+ <namePart type="family">Stearns</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>eCAST Settlement Corporation</displayForm>
+ <namePart type="family">eCAST Settlement Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>eCAST Settlement Corporation</displayForm>
+ <namePart type="family">eCAST Settlement Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Assignee</description>
+</name>
+<name type="personal">
+ <displayForm>Capital One, N.A.</displayForm>
+ <namePart type="family">Capital One, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Assignor</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nceb-8_12-bk-01222</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nceb</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>North Carolina</courtState>
+ <courtSortOrder>3361</courtSortOrder>
+ <caseNumber>8:12-bk-01222</caseNumber>
+ <caseOffice>Wilson</caseOffice>
+ <party fullName="PNC Mortgage" lastName="PNC Mortgage" role="Creditor"></party>
+ <party firstName="Larry" fullName="Larry Lill Mead Jr." generation="Jr." lastName="Mead" middleName="Lill" role="Debtor"></party>
+ <party firstName="Helena" fullName="Helena Lynn Mead" lastName="Mead" middleName="Lynn" role="Joint Debtor"></party>
+ <party firstName="Robert" fullName="Robert R. ~Browning" lastName="~Browning" middleName="R." role="Trustee"></party>
+ <party fullName="TD Auto Finance LLC" lastName="TD Auto Finance LLC" role="Creditor"></party>
+ <party fullName="PNC Bank, N.A." lastName="PNC Bank, N.A." role="Creditor"></party>
+ <party fullName="HSBC Bank Nevada, N.A." lastName="HSBC Bank Nevada, N.A." role="Creditor"></party>
+ <party fullName="Keystone Recovery Partners LLC, Series A" lastName="Keystone Recovery Partners LLC, Series A" role="Creditor"></party>
+ <party fullName="Keystone Recovery Partners LLC, Series A" lastName="Keystone Recovery Partners LLC, Series A" role="Assignee"></party>
+ <party fullName="FIA Card Services, NA As Successor In Interest to Bank of America NA" lastName="FIA Card Services, NA As Successor In Interest to Bank of America NA" role="Assignor"></party>
+ <party fullName="Internal Revenue Service" lastName="Internal Revenue Service" role="Creditor"></party>
+ <party fullName="Midland Funding LLC by American InfoSource LP as agent" lastName="Midland Funding LLC by American InfoSource LP as agent" role="Creditor"></party>
+ <party fullName="Midland Funding LLC by American InfoSource LP as agent" lastName="Midland Funding LLC by American InfoSource LP as agent" role="Creditor"></party>
+ <party fullName="Verizon Wireless" lastName="Verizon Wireless" role="Creditor"></party>
+ <party firstName="Richard" fullName="Richard M Stearns" lastName="Stearns" middleName="M" role="Trustee"></party>
+ <party fullName="eCAST Settlement Corporation" lastName="eCAST Settlement Corporation" role="Creditor"></party>
+ <party fullName="eCAST Settlement Corporation" lastName="eCAST Settlement Corporation" role="Assignee"></party>
+ <party fullName="Capital One, N.A." lastName="Capital One, N.A." role="Assignor"></party>
+ <state>North Carolina</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nceb-8_12-bk-01222-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_12-bk-01222/USCOURTS-nceb-8_12-bk-01222-0/mods.xml">
+ <titleInfo>
+  <title>Larry Lill Mead, Jr. and Helena Lynn Mead</title>
+  <subTitle>Order Granting Objection to Claim. Judge Entering Opinion: JRL (RE: related document(s)20 Objection to Claim filed by Debtor Larry Lill Mead, Joint Debtor Helena Lynn Mead). Appeal time due 1/18/2013. (Gurgone, Christy) **Order Setting Aside With Provisions Docket Entry: 41.**Modified on 2/12/2013 (King, Donna).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_12-bk-01222/pdf/USCOURTS-nceb-8_12-bk-01222-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b69bbb3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_12-bk-01222/USCOURTS-nceb-8_12-bk-01222-0</identifier>
+ <identifier type="former granule identifier">nceb-8_12-bk-01222_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_12-bk-01222/USCOURTS-nceb-8_12-bk-01222-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_12-bk-01222/pdf/USCOURTS-nceb-8_12-bk-01222-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-bk-01222; Larry Lill Mead, Jr. and Helena Lynn Mead; </searchTitle>
+  <courtName>United States Bankruptcy Court Eastern District of North Carolina</courtName>
+  <state>North Carolina</state>
+  <accessId>USCOURTS-nceb-8_12-bk-01222-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>Order Granting Objection to Claim. Judge Entering Opinion: JRL (RE: related document(s)20 Objection to Claim filed by Debtor Larry Lill Mead, Joint Debtor Helena Lynn Mead). Appeal time due 1/18/2013. (Gurgone, Christy) **Order Setting Aside With Provisions Docket Entry: 41.**Modified on 2/12/2013 (King, Donna).</docketText>
+</extension>
+</relatedItem>
+</mods>

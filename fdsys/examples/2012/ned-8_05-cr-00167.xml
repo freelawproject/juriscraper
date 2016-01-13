@@ -1,0 +1,575 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18174002f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167</identifier>
+<identifier type="local">P0b002ee18174002f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cr-00167</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00167</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00167</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Juan" fullName="Juan Figueroa-Valdez" lastName="Figueroa-Valdez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Grady" fullName="Grady Vaughn" lastName="Vaughn" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Figueroa-Valdez et al</title>
+ <partNumber>8:05-cr-00167</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cr-00167;05-167</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Juan Figueroa-Valdez</displayForm>
+ <namePart type="family">Figueroa-Valdez</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Grady Vaughn</displayForm>
+ <namePart type="family">Vaughn</namePart>
+ <namePart type="given">Grady</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00167</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00167</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Juan" fullName="Juan Figueroa-Valdez" lastName="Figueroa-Valdez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Grady" fullName="Grady Vaughn" lastName="Vaughn" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>REASSIGNMENT ORDER - RELATED CASES - IT IS ORDERED that, in the interest of judicial economy, the above cases arereassigned to Magistrate Judge F.A. Gossett, III for judicial supervision and processing ofall pretrial matters as to defendant Juan Figueroa-Valdez, Grady Vaughn. Signed by Judge Joseph F. Bataillon on 4/26/2005. (TJS)REASSIGNMENT ORDER - RELATED CASES - IT IS ORDERED that, in the interest of judicial economy, the above cases arereassigned to Magistrate Judge F.A. Gossett, III for judicial supervision and processing ofall pretrial matters as to defendant Juan Figueroa-Valdez, Grady Vaughn. Signed by Judge Joseph F. Bataillon on 4/26/2005. (TJS)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178204b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-04-26</dateIssued>
+  <docketText>REASSIGNMENT ORDER - RELATED CASES - IT IS ORDERED that, in the interest of judicial economy, the above cases arereassigned to Magistrate Judge F.A. Gossett, III for judicial supervision and processing ofall pretrial matters as to defendant Juan Figueroa-Valdez, Grady Vaughn. Signed by Judge Joseph F. Bataillon on 4/26/2005. (TJS)REASSIGNMENT ORDER - RELATED CASES - IT IS ORDERED that, in the interest of judicial economy, the above cases arereassigned to Magistrate Judge F.A. Gossett, III for judicial supervision and processing ofall pretrial matters as to defendant Juan Figueroa-Valdez, Grady Vaughn. Signed by Judge Joseph F. Bataillon on 4/26/2005. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>ORDER granting 11 Motion for Enlargement of Time Within Which to File Pretrial Motions as to Grady Vaughn. Pretrial motions shall be filed on or before June 1, 2005. Defendant is ordered to file a waiver of speedy trial as soon as practicable. The time between May 16, 2005 and June 1, 2005, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Signed by Magistrate Judge F. A. Gossett on 5/17/2005. (MLF, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178204e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-05-17</dateIssued>
+  <docketText>ORDER granting 11 Motion for Enlargement of Time Within Which to File Pretrial Motions as to Grady Vaughn. Pretrial motions shall be filed on or before June 1, 2005. Defendant is ordered to file a waiver of speedy trial as soon as practicable. The time between May 16, 2005 and June 1, 2005, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Signed by Magistrate Judge F. A. Gossett on 5/17/2005. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>ORDER granting 17 Motion to Continue Trial, as to Grady Vaughn (2). Trial of this matter is re-scheduled for August 8, 2005, before Chief JudgeJoseph F. Bataillon and a jury. The time between June 22, 2005and August 8, 2005, shall be deemed excludable time in any computation of time under therequirement of the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 6/22/2005. (JAE, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181781e75</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-06-22</dateIssued>
+  <docketText>ORDER granting 17 Motion to Continue Trial, as to Grady Vaughn (2). Trial of this matter is re-scheduled for August 8, 2005, before Chief JudgeJoseph F. Bataillon and a jury. The time between June 22, 2005and August 8, 2005, shall be deemed excludable time in any computation of time under therequirement of the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 6/22/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Dana C. Bradford, III appointed as counsel for the defendant Juan Figueroa-Valdez. Signed by Magistrate Judge Thomas D. Thalken on 6/27/2005. (MLF, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181781e7b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-06-27</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Dana C. Bradford, III appointed as counsel for the defendant Juan Figueroa-Valdez. Signed by Magistrate Judge Thomas D. Thalken on 6/27/2005. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>ORDER scheduling Change of Plea Hearing on 9/2/2005 11:00 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon as to defendant(s) Grady Vaughn. Signed by Judge Joseph F. Bataillon on 8/5/2005. (SMS, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181781e78</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-08-05</dateIssued>
+  <docketText>ORDER scheduling Change of Plea Hearing on 9/2/2005 11:00 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon as to defendant(s) Grady Vaughn. Signed by Judge Joseph F. Bataillon on 8/5/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>ORDER granting 26 Motion to Continue as to Juan Figueroa-Valdez (1); trial of this matter is re-scheduled for October 3, 2005, before Chief JudgeJoseph F. Bataillon and a jury; the time between August 22, 2005and October 3, 2005, shall be deemed excludable time in any computation of time underthe requirement of the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 8/22/2005. (ADB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181782050</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-5</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2005-08-22</dateIssued>
+  <docketText>ORDER granting 26 Motion to Continue as to Juan Figueroa-Valdez (1); trial of this matter is re-scheduled for October 3, 2005, before Chief JudgeJoseph F. Bataillon and a jury; the time between August 22, 2005and October 3, 2005, shall be deemed excludable time in any computation of time underthe requirement of the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 8/22/2005. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>ORDER scheduling Change of Plea Hearing on 10/26/2005 03:00 PM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 10/3/2006 and 10/26/2005 is excluded in the interest of justiceas to defendant(s) Juan Figueroa-Valdez. Signed by Judge Joseph F. Bataillon on 9/27/2005. (SMS, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181781e76</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-6</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2005-09-27</dateIssued>
+  <docketText>ORDER scheduling Change of Plea Hearing on 10/26/2005 03:00 PM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 10/3/2006 and 10/26/2005 is excluded in the interest of justiceas to defendant(s) Juan Figueroa-Valdez. Signed by Judge Joseph F. Bataillon on 9/27/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>JUDGMENT as to Grady Vaughn (2), Count(s) 1, Defendant pleaded guilty to count I of the Indictment and is sentenced to 70 months in the Bureau of Prisons followed by 5 years of Supervised Release; $100.00 special assessment to be paid immediately; Count(s) 3,4&amp; 5 Dismissed on the motion of the government, defendant to self-surrender to the designated Bureau of Prisons institution on or after 1/4/06 as to defendant(s) Grady Vaughn. Signed by Judge Joseph F. Bataillon on 12/8/2005. (4 cert copies to US Marshal) (PCV, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181782052</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-7</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2005-12-08</dateIssued>
+  <docketText>JUDGMENT as to Grady Vaughn (2), Count(s) 1, Defendant pleaded guilty to count I of the Indictment and is sentenced to 70 months in the Bureau of Prisons followed by 5 years of Supervised Release; $100.00 special assessment to be paid immediately; Count(s) 3,4&amp; 5 Dismissed on the motion of the government, defendant to self-surrender to the designated Bureau of Prisons institution on or after 1/4/06 as to defendant(s) Grady Vaughn. Signed by Judge Joseph F. Bataillon on 12/8/2005. (4 cert copies to US Marshal) (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>JUDGMENT as to Juan Figueroa-Valdez (1): Defendant pleaded guilty to Count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 87 months; 5 years supervised release with special conditions; $100.00 special assessment. Count II of the Indictment is dismissed on the motion of the United States as to this defendant only, as to defendant Juan Figueroa-Valdez. Signed by Judge Joseph F. Bataillon on 3/2/2006. 4 certified copies USM (JAE, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181782051</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-8</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2006-03-02</dateIssued>
+  <docketText>JUDGMENT as to Juan Figueroa-Valdez (1): Defendant pleaded guilty to Count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 87 months; 5 years supervised release with special conditions; $100.00 special assessment. Count II of the Indictment is dismissed on the motion of the United States as to this defendant only, as to defendant Juan Figueroa-Valdez. Signed by Judge Joseph F. Bataillon on 3/2/2006. 4 certified copies USM (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>ORDER regarding MOTION for Hearing59 - Counsel for the government shall notify the court when the motion pursuant to Rule 35(b) is ripe for decision. The motion shall not be decided until counsel for the government certifies that the motion is ripe. Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35(b) motion. If retained, counsel for the defendant remains as counsel for the defendant until the Rule 35(b) motion is resolved or until given leave to withdraw. The Federal Public Defender shall provide CJA counsel with a new voucher as to defendant Grady Vaughn. Ordered by Judge Joseph F. Bataillon.(TJS)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181781e77</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-9</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2007-01-24</dateIssued>
+  <docketText>ORDER regarding MOTION for Hearing59 - Counsel for the government shall notify the court when the motion pursuant to Rule 35(b) is ripe for decision. The motion shall not be decided until counsel for the government certifies that the motion is ripe. Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35(b) motion. If retained, counsel for the defendant remains as counsel for the defendant until the Rule 35(b) motion is resolved or until given leave to withdraw. The Federal Public Defender shall provide CJA counsel with a new voucher as to defendant Grady Vaughn. Ordered by Judge Joseph F. Bataillon.(TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>ORDER - A hearing on the government&apos;s Rule 35 motion is scheduled for hearing before the undersigned on October 11, 2007, at 2:00 p.m. in Courtroom No. 3, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. At the request of the defendant through his counsel, and with the agreement of the government, the defendant may be absent from the hearing on the Rule 35 motion. The Marshal will not return the defendant to the district, and the defendant is held to have waived his right to be present. If the defendant wishes to participate telephonically in the hearing, his attorney must notify chambers at least 24 hours before the hearing of the telephone number and contact person at the institution which defendant is incarceratedas to defendant Grady Vaughn. Ordered by Judge Joseph F. Bataillon. (certified copy to USM)(TJS)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181781e79</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-10</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2007-09-05</dateIssued>
+  <docketText>ORDER - A hearing on the government&apos;s Rule 35 motion is scheduled for hearing before the undersigned on October 11, 2007, at 2:00 p.m. in Courtroom No. 3, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. At the request of the defendant through his counsel, and with the agreement of the government, the defendant may be absent from the hearing on the Rule 35 motion. The Marshal will not return the defendant to the district, and the defendant is held to have waived his right to be present. If the defendant wishes to participate telephonically in the hearing, his attorney must notify chambers at least 24 hours before the hearing of the telephone number and contact person at the institution which defendant is incarceratedas to defendant Grady Vaughn. Ordered by Judge Joseph F. Bataillon. (certified copy to USM)(TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>AMENDED JUDGMENT (Reduction of Sentence) as to Grady Vaughn (2), Defendant pleaded guilty to count I of the Indictment and is sentenced to 42 months in the Bureau of Prisons followed by 5 years of Supervised Release with special conditions; $100.00 special assessment (paid); Counts III, IV and V of the Indictment are dismissed on the motion of the government as to defendant Grady Vaughn Ordered by Judge Joseph F. Bataillon. (4 certified copies to USM)(CJP)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178204c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-11</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2007-10-17</dateIssued>
+  <docketText>AMENDED JUDGMENT (Reduction of Sentence) as to Grady Vaughn (2), Defendant pleaded guilty to count I of the Indictment and is sentenced to 42 months in the Bureau of Prisons followed by 5 years of Supervised Release with special conditions; $100.00 special assessment (paid); Counts III, IV and V of the Indictment are dismissed on the motion of the government as to defendant Grady Vaughn Ordered by Judge Joseph F. Bataillon. (4 certified copies to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Grady Vaughn. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181781e7a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-12</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2009-07-30</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Grady Vaughn. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 67 as to defendant Grady Vaughn. The defendant should be held to answer for a final dispositional hearing before Chief Judge Bataillon. A final dispositional hearing will be held before Chief Judge Joseph F. Bataillon in Courtroom No.3, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on September 3, 2009 at 2:30 p.m. Defendant must be present in person. The defendant is released on current conditions of supervision. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181782053</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-13</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2009-07-31</dateIssued>
+  <docketText>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 67 as to defendant Grady Vaughn. The defendant should be held to answer for a final dispositional hearing before Chief Judge Bataillon. A final dispositional hearing will be held before Chief Judge Joseph F. Bataillon in Courtroom No.3, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on September 3, 2009 at 2:30 p.m. Defendant must be present in person. The defendant is released on current conditions of supervision. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Grady Vaughn. Ordered by Magistrate Judge F.A. Gossett. (MLF, )</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178204f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-14</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Grady Vaughn. Ordered by Magistrate Judge F.A. Gossett. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00167-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Figueroa-Valdez et al</title>
+  <subTitle>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 84 as to defendant Grady Vaughn. The defendant should be held to answer for a final dispositional hearing before Judge Bataillon. A final dispositional hearing will be held before Judge Joseph F. Bataillon in Courtroom No.3, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on February 9, 2012 at 2:30 p.m. Defendant must be present in person. The defendant is released on current conditions of supervision. Ordered by Magistrate Judge F.A. Gossett. (MLF, )</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00167-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178204d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-15</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00167_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00167/USCOURTS-ned-8_05-cr-00167-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00167/pdf/USCOURTS-ned-8_05-cr-00167-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00167; USA v. Figueroa-Valdez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00167-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 84 as to defendant Grady Vaughn. The defendant should be held to answer for a final dispositional hearing before Judge Bataillon. A final dispositional hearing will be held before Judge Joseph F. Bataillon in Courtroom No.3, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on February 9, 2012 at 2:30 p.m. Defendant must be present in person. The defendant is released on current conditions of supervision. Ordered by Magistrate Judge F.A. Gossett. (MLF, )</docketText>
+</extension>
+</relatedItem>
+</mods>

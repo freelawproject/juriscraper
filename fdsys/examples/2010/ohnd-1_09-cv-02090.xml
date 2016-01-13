@@ -1,0 +1,242 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18155c16a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-02090</identifier>
+<identifier type="local">P0b002ee18155c16a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_09-cv-02090</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-cv-02090</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-cv-02090</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Cleveland Clinic" lastName="Cleveland Clinic" role="Defendant"></party>
+ <party firstName="S." fullName="S. Cole" lastName="Cole" role="Defendant"></party>
+ <party fullName="Cuyahoga County Dept. of Senior and Adult Services" lastName="Cuyahoga County Dept. of Senior and Adult Services" role="Defendant"></party>
+ <party firstName="Dan" fullName="Dan DiCello" lastName="DiCello" role="Defendant"></party>
+ <party firstName="Ronan" fullName="Ronan Factora" lastName="Factora" role="Defendant"></party>
+ <party firstName="Laura" fullName="Laura Gallagher" lastName="Gallagher" role="Defendant"></party>
+ <party firstName="Saurabh" fullName="Saurabh Kandapal" lastName="Kandapal" role="Defendant"></party>
+ <party firstName="Mel" fullName="Mel M. Marin" lastName="Marin" middleName="M." role="Plaintiff"></party>
+ <party firstName="Kelly" fullName="Kelly Perk" lastName="Perk" role="Defendant"></party>
+ <party firstName="Sylvia" fullName="Sylvia Plyrade" lastName="Plyrade" role="Defendant"></party>
+ <party firstName="Doe" fullName="Doe Sadaat" lastName="Sadaat" role="Defendant"></party>
+ <party firstName="Tom" fullName="Tom Watson" lastName="Watson" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Marin v. Cleveland Clinic et al</title>
+ <partNumber>1:09-cv-02090</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-02090/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cv-02090;09-2090</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Cleveland Clinic</displayForm>
+ <namePart type="family">Cleveland Clinic</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Cole</displayForm>
+ <namePart type="family">Cole</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cuyahoga County Dept. of Senior and Adult Services</displayForm>
+ <namePart type="family">Cuyahoga County Dept. of Senior and Adult Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dan DiCello</displayForm>
+ <namePart type="family">DiCello</namePart>
+ <namePart type="given">Dan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronan Factora</displayForm>
+ <namePart type="family">Factora</namePart>
+ <namePart type="given">Ronan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Laura Gallagher</displayForm>
+ <namePart type="family">Gallagher</namePart>
+ <namePart type="given">Laura</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Saurabh Kandapal</displayForm>
+ <namePart type="family">Kandapal</namePart>
+ <namePart type="given">Saurabh</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mel M. Marin</displayForm>
+ <namePart type="family">Marin</namePart>
+ <namePart type="given">Mel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kelly Perk</displayForm>
+ <namePart type="family">Perk</namePart>
+ <namePart type="given">Kelly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sylvia Plyrade</displayForm>
+ <namePart type="family">Plyrade</namePart>
+ <namePart type="given">Sylvia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Doe Sadaat</displayForm>
+ <namePart type="family">Sadaat</namePart>
+ <namePart type="given">Doe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tom Watson</displayForm>
+ <namePart type="family">Watson</namePart>
+ <namePart type="given">Tom</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-cv-02090</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-cv-02090</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Cleveland Clinic" lastName="Cleveland Clinic" role="Defendant"></party>
+ <party firstName="S." fullName="S. Cole" lastName="Cole" role="Defendant"></party>
+ <party fullName="Cuyahoga County Dept. of Senior and Adult Services" lastName="Cuyahoga County Dept. of Senior and Adult Services" role="Defendant"></party>
+ <party firstName="Dan" fullName="Dan DiCello" lastName="DiCello" role="Defendant"></party>
+ <party firstName="Ronan" fullName="Ronan Factora" lastName="Factora" role="Defendant"></party>
+ <party firstName="Laura" fullName="Laura Gallagher" lastName="Gallagher" role="Defendant"></party>
+ <party firstName="Saurabh" fullName="Saurabh Kandapal" lastName="Kandapal" role="Defendant"></party>
+ <party firstName="Mel" fullName="Mel M. Marin" lastName="Marin" middleName="M." role="Plaintiff"></party>
+ <party firstName="Kelly" fullName="Kelly Perk" lastName="Perk" role="Defendant"></party>
+ <party firstName="Sylvia" fullName="Sylvia Plyrade" lastName="Plyrade" role="Defendant"></party>
+ <party firstName="Doe" fullName="Doe Sadaat" lastName="Sadaat" role="Defendant"></party>
+ <party firstName="Tom" fullName="Tom Watson" lastName="Watson" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-cv-02090-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02090/USCOURTS-ohnd-1_09-cv-02090-0/mods.xml">
+ <titleInfo>
+  <title>Marin v. Cleveland Clinic et al</title>
+  <subTitle>Memorandum Opinion and Order Plaintiff&apos;s Motion to Proceed In Forma Pauperis is granted. This action is dismissed under 28 USC 1915(e). The Court certifies, pursuant to 28 USC 191(a)(3), that an appeal from this decision could not be taken in good faith. Related documents 1, 2. Signed by Judge Donald C. Nugent on 1/29/10. (K,K)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-cv-02090-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816017c8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02090/USCOURTS-ohnd-1_09-cv-02090-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-cv-02090_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-02090/USCOURTS-ohnd-1_09-cv-02090-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-02090/pdf/USCOURTS-ohnd-1_09-cv-02090-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-02090; Marin v. Cleveland Clinic et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-cv-02090-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-29</dateIssued>
+  <docketText>Memorandum Opinion and Order Plaintiff&apos;s Motion to Proceed In Forma Pauperis is granted. This action is dismissed under 28 USC 1915(e). The Court certifies, pursuant to 28 USC 191(a)(3), that an appeal from this decision could not be taken in good faith. Related documents 1, 2. Signed by Judge Donald C. Nugent on 1/29/10. (K,K)</docketText>
+</extension>
+</relatedItem>
+</mods>

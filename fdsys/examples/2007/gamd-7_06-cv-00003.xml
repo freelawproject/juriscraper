@@ -1,0 +1,292 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812d3cca">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_06-cv-00003</identifier>
+<identifier type="local">P0b002ee1812d3cca</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-7_06-cv-00003</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_06-cv-00003</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:06-cv-00003</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Kenny" fullName="Kenny Davis" lastName="Davis" role="Petitioner"></party>
+ <party firstName="Dwight" fullName="Dwight Hamerick" lastName="Hamerick" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Davis v. Hamerick</title>
+ <partNumber>7:06-cv-00003</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_06-cv-00003/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">7:06-cv-00003;06-003</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Valdosta</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kenny Davis</displayForm>
+ <namePart type="family">Davis</namePart>
+ <namePart type="given">Kenny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Dwight Hamerick</displayForm>
+ <namePart type="family">Hamerick</namePart>
+ <namePart type="given">Dwight</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_06-cv-00003</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:06-cv-00003</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Kenny" fullName="Kenny Davis" lastName="Davis" role="Petitioner"></party>
+ <party firstName="Dwight" fullName="Dwight Hamerick" lastName="Hamerick" role="Respondent"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_06-cv-00003-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-0/mods.xml">
+ <titleInfo>
+  <title>Davis v. Hamerick</title>
+  <subTitle>ORDER denying 2 Motion for Leave to Proceed in forma pauperis . Signed by Judge Richard L. Hodge on 01/11/2006. (Hodge, Richard)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_06-cv-00003-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812ec3d5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-0</identifier>
+ <identifier type="former granule identifier">gamd-7_06-cv-00003_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_06-cv-00003/pdf/USCOURTS-gamd-7_06-cv-00003-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:06-cv-00003; Davis v. Hamerick; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_06-cv-00003-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-11</dateIssued>
+  <docketText>ORDER denying 2 Motion for Leave to Proceed in forma pauperis . Signed by Judge Richard L. Hodge on 01/11/2006. (Hodge, Richard)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_06-cv-00003-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-1/mods.xml">
+ <titleInfo>
+  <title>Davis v. Hamerick</title>
+  <subTitle>ORDER that petitioner&apos;s habeas corpus petition be served and answered. Signed by Judge Richard L. Hodge on 02/01/2006. (Hodge, Richard)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-02-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_06-cv-00003-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812ec3d3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-1</identifier>
+ <identifier type="former granule identifier">gamd-7_06-cv-00003_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_06-cv-00003/pdf/USCOURTS-gamd-7_06-cv-00003-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:06-cv-00003; Davis v. Hamerick; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_06-cv-00003-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-02-01</dateIssued>
+  <docketText>ORDER that petitioner&apos;s habeas corpus petition be served and answered. Signed by Judge Richard L. Hodge on 02/01/2006. (Hodge, Richard)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_06-cv-00003-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-2/mods.xml">
+ <titleInfo>
+  <title>Davis v. Hamerick</title>
+  <subTitle>ORDER for Response to Motion re: 9 MOTION to Dismiss Petition as Untimely filed by Dwight Hamerick, Response to Motion due by 5/3/2006.. Signed by Judge Richard L. Hodge on 04/10/2006. (Hodge, Richard)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_06-cv-00003-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812ec3d6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-2</identifier>
+ <identifier type="former granule identifier">gamd-7_06-cv-00003_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_06-cv-00003/pdf/USCOURTS-gamd-7_06-cv-00003-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:06-cv-00003; Davis v. Hamerick; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_06-cv-00003-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-04-10</dateIssued>
+  <docketText>ORDER for Response to Motion re: 9 MOTION to Dismiss Petition as Untimely filed by Dwight Hamerick, Response to Motion due by 5/3/2006.. Signed by Judge Richard L. Hodge on 04/10/2006. (Hodge, Richard)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_06-cv-00003-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-3/mods.xml">
+ <titleInfo>
+  <title>Davis v. Hamerick</title>
+  <subTitle>ORDER denying 14 Motion to Appoint Counsel . Signed by Judge Richard L. Hodge on 05/08/2006. (Hodge, Richard)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_06-cv-00003-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812ec3d2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-3</identifier>
+ <identifier type="former granule identifier">gamd-7_06-cv-00003_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_06-cv-00003/pdf/USCOURTS-gamd-7_06-cv-00003-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:06-cv-00003; Davis v. Hamerick; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_06-cv-00003-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-05-08</dateIssued>
+  <docketText>ORDER denying 14 Motion to Appoint Counsel . Signed by Judge Richard L. Hodge on 05/08/2006. (Hodge, Richard)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_06-cv-00003-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-4/mods.xml">
+ <titleInfo>
+  <title>Davis v. Hamerick</title>
+  <subTitle>REPORT AND RECOMMENDATION to deny re 17 MOTION to Dismiss the petition filed by Kenny Davis,, to grant 9 MOTION to Dismiss Petition as Untimely filed by Dwight Hamerick, Objections to R&amp;R due by 1/25/2007.. Ordered by Judge Richard L. Hodge on 1/5/2007. (msd, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_06-cv-00003-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812ec3d4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-4</identifier>
+ <identifier type="former granule identifier">gamd-7_06-cv-00003_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_06-cv-00003/pdf/USCOURTS-gamd-7_06-cv-00003-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:06-cv-00003; Davis v. Hamerick; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_06-cv-00003-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-01-05</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION to deny re 17 MOTION to Dismiss the petition filed by Kenny Davis,, to grant 9 MOTION to Dismiss Petition as Untimely filed by Dwight Hamerick, Objections to R&amp;R due by 1/25/2007.. Ordered by Judge Richard L. Hodge on 1/5/2007. (msd, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_06-cv-00003-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-5/mods.xml">
+ <titleInfo>
+  <title>Davis v. Hamerick</title>
+  <subTitle>ORDER granting 9 Motion to Dismiss, denying 17 Motion to Dismiss, adopting 18 Report and Recommendations to deny re 17 MOTION to Dismiss the petition filed by Kenny Davis and to grant 9 MOTION to Dismiss Petition as Untimely filed by Dwight Hamerick. Ordered by Judge Hugh Lawson on 01/31/2007. (scs,HL)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_06-cv-00003-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812ec3d1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-5</identifier>
+ <identifier type="former granule identifier">gamd-7_06-cv-00003_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_06-cv-00003/USCOURTS-gamd-7_06-cv-00003-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_06-cv-00003/pdf/USCOURTS-gamd-7_06-cv-00003-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:06-cv-00003; Davis v. Hamerick; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_06-cv-00003-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-01-31</dateIssued>
+  <docketText>ORDER granting 9 Motion to Dismiss, denying 17 Motion to Dismiss, adopting 18 Report and Recommendations to deny re 17 MOTION to Dismiss the petition filed by Kenny Davis and to grant 9 MOTION to Dismiss Petition as Untimely filed by Dwight Hamerick. Ordered by Judge Hugh Lawson on 01/31/2007. (scs,HL)</docketText>
+</extension>
+</relatedItem>
+</mods>

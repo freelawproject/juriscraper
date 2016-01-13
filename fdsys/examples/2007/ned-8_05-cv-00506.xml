@@ -1,0 +1,292 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18175728d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00506</identifier>
+<identifier type="local">P0b002ee18175728d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cv-00506</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00506</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00506</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:0405 Review of HHS Decision</cause>
+ <party firstName="Raye" fullName="Raye Jones" lastName="Jones" role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Jones v. Social Security Administration</title>
+ <partNumber>8:05-cv-00506</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00506/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cv-00506;05-506</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Raye Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Raye</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security Administration</displayForm>
+ <namePart type="family">Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00506</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00506</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:0405 Review of HHS Decision</cause>
+ <party firstName="Raye" fullName="Raye Jones" lastName="Jones" role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00506-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-0/mods.xml">
+ <titleInfo>
+  <title>Jones v. Social Security Administration</title>
+  <subTitle>ORDER that this case is reassigned to District Judge Laurie Smith Camp fordisposition. Signed by Judge Joseph F. Bataillon on 12/8/2005. (JAE, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00506-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178cfe3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00506_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00506/pdf/USCOURTS-ned-8_05-cv-00506-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00506; Jones v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00506-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-12-08</dateIssued>
+  <docketText>ORDER that this case is reassigned to District Judge Laurie Smith Camp fordisposition. Signed by Judge Joseph F. Bataillon on 12/8/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00506-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-1/mods.xml">
+ <titleInfo>
+  <title>Jones v. Social Security Administration</title>
+  <subTitle>ORDER The Plaintiff shall file and serve a brief on or before January 30, 2006;The Defendant shall file and serve a brief on or before February 27, 2006;This case will be ripe for decision on February 28, 2006; Signed by Judge Laurie Smith Camp on 12/29/2005. (ETC)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00506-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178cf40</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00506_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00506/pdf/USCOURTS-ned-8_05-cv-00506-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00506; Jones v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00506-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-12-29</dateIssued>
+  <docketText>ORDER The Plaintiff shall file and serve a brief on or before January 30, 2006;The Defendant shall file and serve a brief on or before February 27, 2006;This case will be ripe for decision on February 28, 2006; Signed by Judge Laurie Smith Camp on 12/29/2005. (ETC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00506-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-2/mods.xml">
+ <titleInfo>
+  <title>Jones v. Social Security Administration</title>
+  <subTitle>h Camp on 1/30/2006. (MKR, )ORDER granting 14 Motion to Extend time to submit a brief 14; the Plaintiff&apos;s brief shall be filed and submitted to chambers via e-mail as described in the court&apos;s previous order on or before March 1, 2006. Signed by Judge Laurie Smit</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00506-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178cfe2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00506_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00506/pdf/USCOURTS-ned-8_05-cv-00506-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00506; Jones v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00506-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-01-30</dateIssued>
+  <docketText>h Camp on 1/30/2006. (MKR, )ORDER granting 14 Motion to Extend time to submit a brief 14; the Plaintiff&apos;s brief shall be filed and submitted to chambers via e-mail as described in the court&apos;s previous order on or before March 1, 2006. Signed by Judge Laurie Smit</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00506-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-3/mods.xml">
+ <titleInfo>
+  <title>Jones v. Social Security Administration</title>
+  <subTitle>ORDER granting 18 Motion to Extend Time to File a Brief. The defendant&apos;s brief shall be filed and submitted to chambers via e-mail as described in the Court&apos;s previous order on or before 4/28/06. Signed by Judge Laurie Smith Camp on 3/27/2006. (JSF)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00506-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178cf41</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00506_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00506/pdf/USCOURTS-ned-8_05-cv-00506-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00506; Jones v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00506-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-03-27</dateIssued>
+  <docketText>ORDER granting 18 Motion to Extend Time to File a Brief. The defendant&apos;s brief shall be filed and submitted to chambers via e-mail as described in the Court&apos;s previous order on or before 4/28/06. Signed by Judge Laurie Smith Camp on 3/27/2006. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00506-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-4/mods.xml">
+ <titleInfo>
+  <title>Jones v. Social Security Administration</title>
+  <subTitle>MEMORANDUM AND ORDER that the findings and conclusions of the Commissioner are reversed; and the matter is remanded back to the Social Security Administration for further proceedings consistent with this Memorandum and Order. Ordered by Judge Laurie Smith Camp. (MKR )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00506-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178cf3f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00506_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00506/pdf/USCOURTS-ned-8_05-cv-00506-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00506; Jones v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00506-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-11-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the findings and conclusions of the Commissioner are reversed; and the matter is remanded back to the Social Security Administration for further proceedings consistent with this Memorandum and Order. Ordered by Judge Laurie Smith Camp. (MKR )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00506-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-5/mods.xml">
+ <titleInfo>
+  <title>Jones v. Social Security Administration</title>
+  <subTitle>ORDER that the Plaintiff&apos;s Application for attorneys fees under the Equal Access to Justice Act 22 is granted; Attorneys fees in the amount of $4,841.88, which represents 30.5 hours of work, shall be awarded to attorney Timothy J. Cuddigan. Ordered by Judge Laurie Smith Camp. (MKR )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00506-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178cfe4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-5</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00506_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00506/USCOURTS-ned-8_05-cv-00506-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00506/pdf/USCOURTS-ned-8_05-cv-00506-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00506; Jones v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00506-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-01-19</dateIssued>
+  <docketText>ORDER that the Plaintiff&apos;s Application for attorneys fees under the Equal Access to Justice Act 22 is granted; Attorneys fees in the amount of $4,841.88, which represents 30.5 hours of work, shall be awarded to attorney Timothy J. Cuddigan. Ordered by Judge Laurie Smith Camp. (MKR )</docketText>
+</extension>
+</relatedItem>
+</mods>

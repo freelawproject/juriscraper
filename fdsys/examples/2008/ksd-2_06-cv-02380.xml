@@ -1,0 +1,287 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18761e740">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-24</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02380</identifier>
+<identifier type="local">P0b002ee18761e740</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-24</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-24</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_06-cv-02380</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_06-cv-02380</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:06-cv-02380</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>28:1332 Diversity-Fraud</cause>
+ <party firstName="Mark" fullName="Mark J. Allen" lastName="Allen" middleName="J." role="Defendant"></party>
+ <party firstName="Shawn" fullName="Shawn J. Allen" lastName="Allen" middleName="J." role="Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly Beaver" lastName="Beaver" role="Defendant"></party>
+ <party fullName="Does 1 - 20" lastName="Does 1 - 20" role="Defendant"></party>
+ <party fullName="First Magnus Capital, Inc." lastName="First Magnus Capital, Inc." role="Plaintiff"></party>
+ <party fullName="First Magnus Financial Corporation" lastName="First Magnus Financial Corporation" role="Plaintiff"></party>
+ <party firstName="Terrell" fullName="Terrell D. Ford" lastName="Ford" middleName="D." role="Defendant"></party>
+ <party fullName="Lighthouse Financial Corporation" lastName="Lighthouse Financial Corporation" role="Defendant"></party>
+ <party firstName="Bill" fullName="Bill Lima" lastName="Lima" role="Defendant"></party>
+ <party firstName="Tyler" fullName="Tyler Mackey" lastName="Mackey" role="Defendant"></party>
+ <party firstName="Dave" fullName="Dave Marshall" lastName="Marshall" role="Defendant"></party>
+ <party firstName="Maurice" fullName="Maurice Ragland" lastName="Ragland" role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin Riche" lastName="Riche" role="Defendant"></party>
+ <party firstName="Kyle" fullName="Kyle Roberson" lastName="Roberson" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Scott" lastName="Scott" role="Defendant"></party>
+ <party firstName="Elizabeth" fullName="Elizabeth Syakhasone" lastName="Syakhasone" role="Defendant"></party>
+ <party fullName="Term Investment Group" lastName="Term Investment Group" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>First Magnus Financial Corporation v. Lighthouse Financial Corporation et al</title>
+ <partNumber>2:06-cv-02380</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02380/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:06-cv-02380;06-2380</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mark J. Allen</displayForm>
+ <namePart type="family">Allen</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shawn J. Allen</displayForm>
+ <namePart type="family">Allen</namePart>
+ <namePart type="given">Shawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kelly Beaver</displayForm>
+ <namePart type="family">Beaver</namePart>
+ <namePart type="given">Kelly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Does 1 - 20</displayForm>
+ <namePart type="family">Does 1 - 20</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>First Magnus Capital, Inc.</displayForm>
+ <namePart type="family">First Magnus Capital, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>First Magnus Financial Corporation</displayForm>
+ <namePart type="family">First Magnus Financial Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Terrell D. Ford</displayForm>
+ <namePart type="family">Ford</namePart>
+ <namePart type="given">Terrell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lighthouse Financial Corporation</displayForm>
+ <namePart type="family">Lighthouse Financial Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bill Lima</displayForm>
+ <namePart type="family">Lima</namePart>
+ <namePart type="given">Bill</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tyler Mackey</displayForm>
+ <namePart type="family">Mackey</namePart>
+ <namePart type="given">Tyler</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dave Marshall</displayForm>
+ <namePart type="family">Marshall</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maurice Ragland</displayForm>
+ <namePart type="family">Ragland</namePart>
+ <namePart type="given">Maurice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kevin Riche</displayForm>
+ <namePart type="family">Riche</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kyle Roberson</displayForm>
+ <namePart type="family">Roberson</namePart>
+ <namePart type="given">Kyle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tim Scott</displayForm>
+ <namePart type="family">Scott</namePart>
+ <namePart type="given">Tim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Elizabeth Syakhasone</displayForm>
+ <namePart type="family">Syakhasone</namePart>
+ <namePart type="given">Elizabeth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Term Investment Group</displayForm>
+ <namePart type="family">Term Investment Group</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_06-cv-02380</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:06-cv-02380</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>28:1332 Diversity-Fraud</cause>
+ <party firstName="Mark" fullName="Mark J. Allen" lastName="Allen" middleName="J." role="Defendant"></party>
+ <party firstName="Shawn" fullName="Shawn J. Allen" lastName="Allen" middleName="J." role="Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly Beaver" lastName="Beaver" role="Defendant"></party>
+ <party fullName="Does 1 - 20" lastName="Does 1 - 20" role="Defendant"></party>
+ <party fullName="First Magnus Capital, Inc." lastName="First Magnus Capital, Inc." role="Plaintiff"></party>
+ <party fullName="First Magnus Financial Corporation" lastName="First Magnus Financial Corporation" role="Plaintiff"></party>
+ <party firstName="Terrell" fullName="Terrell D. Ford" lastName="Ford" middleName="D." role="Defendant"></party>
+ <party fullName="Lighthouse Financial Corporation" lastName="Lighthouse Financial Corporation" role="Defendant"></party>
+ <party firstName="Bill" fullName="Bill Lima" lastName="Lima" role="Defendant"></party>
+ <party firstName="Tyler" fullName="Tyler Mackey" lastName="Mackey" role="Defendant"></party>
+ <party firstName="Dave" fullName="Dave Marshall" lastName="Marshall" role="Defendant"></party>
+ <party firstName="Maurice" fullName="Maurice Ragland" lastName="Ragland" role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin Riche" lastName="Riche" role="Defendant"></party>
+ <party firstName="Kyle" fullName="Kyle Roberson" lastName="Roberson" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Scott" lastName="Scott" role="Defendant"></party>
+ <party firstName="Elizabeth" fullName="Elizabeth Syakhasone" lastName="Syakhasone" role="Defendant"></party>
+ <party fullName="Term Investment Group" lastName="Term Investment Group" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_06-cv-02380-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02380/USCOURTS-ksd-2_06-cv-02380-0/mods.xml">
+ <titleInfo>
+  <title>First Magnus Financial Corporation v. Lighthouse Financial Corporation et al</title>
+  <subTitle>ORDER granting 83 Motion to Dismiss Party Kyle Roberson with prejudice. Signed by Chief Judge Kathryn H. Vratil on 1/30/08. (ls)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02380/pdf/USCOURTS-ksd-2_06-cv-02380-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18764de45</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02380/USCOURTS-ksd-2_06-cv-02380-0</identifier>
+ <identifier type="former granule identifier">ksd-2_06-cv-02380_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02380/USCOURTS-ksd-2_06-cv-02380-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02380/pdf/USCOURTS-ksd-2_06-cv-02380-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-02380; First Magnus Financial Corporation v. Lighthouse Financial Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_06-cv-02380-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-30</dateIssued>
+  <docketText>ORDER granting 83 Motion to Dismiss Party Kyle Roberson with prejudice. Signed by Chief Judge Kathryn H. Vratil on 1/30/08. (ls)</docketText>
+</extension>
+</relatedItem>
+</mods>

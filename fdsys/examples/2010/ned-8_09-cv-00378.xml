@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b77c0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00378</identifier>
+<identifier type="local">P0b002ee1817b77c0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cv-00378</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00378</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00378</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Andrew" fullName="Andrew A. Herzog" lastName="Herzog" middleName="A." role="Plaintiff"></party>
+ <party fullName="Norfolk Regional Center" lastName="Norfolk Regional Center" role="Defendant"></party>
+ <party fullName="State of Nebraska" lastName="State of Nebraska" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Herzog v. State of Nebraska et al</title>
+ <partNumber>8:09-cv-00378</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00378/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cv-00378;09-378</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Andrew A. Herzog</displayForm>
+ <namePart type="family">Herzog</namePart>
+ <namePart type="given">Andrew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Norfolk Regional Center</displayForm>
+ <namePart type="family">Norfolk Regional Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State of Nebraska</displayForm>
+ <namePart type="family">State of Nebraska</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00378</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00378</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Andrew" fullName="Andrew A. Herzog" lastName="Herzog" middleName="A." role="Plaintiff"></party>
+ <party fullName="Norfolk Regional Center" lastName="Norfolk Regional Center" role="Defendant"></party>
+ <party fullName="State of Nebraska" lastName="State of Nebraska" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00378-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00378/USCOURTS-ned-8_09-cv-00378-0/mods.xml">
+ <titleInfo>
+  <title>Herzog v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER that the pending complaint 1 is deemed insufficient and the court will not act upon it. By 12/31/09, plaintiff shall submit a completely new amended complaint that is originally signed. The Clerk is directed to set a pro se case management deadline for 12/31/09: deadline for Plaintiff to submit amended complaint correcting signature deficiency. No further review of this case shall take place until Plaintiff complies with this order. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party) (JSF)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00378-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cf8dc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00378/USCOURTS-ned-8_09-cv-00378-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00378_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00378/USCOURTS-ned-8_09-cv-00378-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00378/pdf/USCOURTS-ned-8_09-cv-00378-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00378; Herzog v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00378-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-12-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the pending complaint 1 is deemed insufficient and the court will not act upon it. By 12/31/09, plaintiff shall submit a completely new amended complaint that is originally signed. The Clerk is directed to set a pro se case management deadline for 12/31/09: deadline for Plaintiff to submit amended complaint correcting signature deficiency. No further review of this case shall take place until Plaintiff complies with this order. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party) (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00378-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00378/USCOURTS-ned-8_09-cv-00378-1/mods.xml">
+ <titleInfo>
+  <title>Herzog v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff&apos;s Motion for Leave to Proceed IFP 2 is granted, and Plaintiff is relieved from payment of the filing fee in this matter. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00378-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cf8dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00378/USCOURTS-ned-8_09-cv-00378-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00378_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00378/USCOURTS-ned-8_09-cv-00378-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00378/pdf/USCOURTS-ned-8_09-cv-00378-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00378; Herzog v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00378-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-28</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff&apos;s Motion for Leave to Proceed IFP 2 is granted, and Plaintiff is relieved from payment of the filing fee in this matter. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

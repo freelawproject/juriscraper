@@ -1,0 +1,242 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118c4ab">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_07-cv-01310</identifier>
+<identifier type="local">P0b002ee18118c4ab</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-5_07-cv-01310</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_07-cv-01310</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:07-cv-01310</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <party firstName="Clinton" fullName="Clinton C. Barlow" lastName="Barlow" middleName="C." role="Plaintiff"></party>
+ <party fullName="Cortland County" lastName="Cortland County" role="Defendant"></party>
+ <party fullName="N.J.D.Y.F.S. Director" lastName="N.J.D.Y.F.S. Director" role="Defendant"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Defendant"></party>
+ <party fullName="U.S.H.H.S." lastName="U.S.H.H.S." role="Defendant"></party>
+ <party firstName="Nate" fullName="Nate Wright" lastName="Wright" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Barlow v. U.S.H.H.S. et al</title>
+ <partNumber>5:07-cv-01310</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_07-cv-01310/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:07-cv-01310;07-1310</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Syracuse</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Clinton C. Barlow</displayForm>
+ <namePart type="family">Barlow</namePart>
+ <namePart type="given">Clinton</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cortland County</displayForm>
+ <namePart type="family">Cortland County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>N.J.D.Y.F.S. Director</displayForm>
+ <namePart type="family">N.J.D.Y.F.S. Director</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security Administration</displayForm>
+ <namePart type="family">Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S.H.H.S.</displayForm>
+ <namePart type="family">U.S.H.H.S.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nate Wright</displayForm>
+ <namePart type="family">Wright</namePart>
+ <namePart type="given">Nate</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_07-cv-01310</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:07-cv-01310</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <party firstName="Clinton" fullName="Clinton C. Barlow" lastName="Barlow" middleName="C." role="Plaintiff"></party>
+ <party fullName="Cortland County" lastName="Cortland County" role="Defendant"></party>
+ <party fullName="N.J.D.Y.F.S. Director" lastName="N.J.D.Y.F.S. Director" role="Defendant"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Defendant"></party>
+ <party fullName="U.S.H.H.S." lastName="U.S.H.H.S." role="Defendant"></party>
+ <party firstName="Nate" fullName="Nate Wright" lastName="Wright" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_07-cv-01310-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_07-cv-01310/USCOURTS-nynd-5_07-cv-01310-0/mods.xml">
+ <titleInfo>
+  <title>Barlow v. U.S.H.H.S. et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS that 1 Complaint filed by Clinton C. Barlow be DISMISSED for lack of subject matter jurisdiction; and 2 MOTION for Leave to Proceed in forma pauperis filed by Clinton C. Barlow be DENIED AS MOOT. Objections to R&amp;R due by 1/4/2008, Case Review Deadline 1/8/2008. Signed by Judge George H. Lowe on 12/19/07. (copy mailed to Pltf.) (lmp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_07-cv-01310-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813fae25</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_07-cv-01310/USCOURTS-nynd-5_07-cv-01310-0</identifier>
+ <identifier type="former granule identifier">nynd-5_07-cv-01310_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_07-cv-01310/USCOURTS-nynd-5_07-cv-01310-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_07-cv-01310/pdf/USCOURTS-nynd-5_07-cv-01310-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-01310; Barlow v. U.S.H.H.S. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_07-cv-01310-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-12-19</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS that 1 Complaint filed by Clinton C. Barlow be DISMISSED for lack of subject matter jurisdiction; and 2 MOTION for Leave to Proceed in forma pauperis filed by Clinton C. Barlow be DENIED AS MOOT. Objections to R&amp;R due by 1/4/2008, Case Review Deadline 1/8/2008. Signed by Judge George H. Lowe on 12/19/07. (copy mailed to Pltf.) (lmp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_07-cv-01310-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_07-cv-01310/USCOURTS-nynd-5_07-cv-01310-1/mods.xml">
+ <titleInfo>
+  <title>Barlow v. U.S.H.H.S. et al</title>
+  <subTitle>DECISION AND ORDER adopting in its entirety 4 Report and Recommendations; dismissing case for lack of subject matter jurisdiction; and denying as moot 2 Motion for Leave to Proceed in forma pauperis. Signed by Judge Frederick J. Scullin Jr. on 1/9/08. (copy mailed to Pltf.) (lmp)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_07-cv-01310-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813fae24</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_07-cv-01310/USCOURTS-nynd-5_07-cv-01310-1</identifier>
+ <identifier type="former granule identifier">nynd-5_07-cv-01310_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_07-cv-01310/USCOURTS-nynd-5_07-cv-01310-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_07-cv-01310/pdf/USCOURTS-nynd-5_07-cv-01310-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-01310; Barlow v. U.S.H.H.S. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_07-cv-01310-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-09</dateIssued>
+  <docketText>DECISION AND ORDER adopting in its entirety 4 Report and Recommendations; dismissing case for lack of subject matter jurisdiction; and denying as moot 2 Motion for Leave to Proceed in forma pauperis. Signed by Judge Frederick J. Scullin Jr. on 1/9/08. (copy mailed to Pltf.) (lmp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_07-cv-01310-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_07-cv-01310/USCOURTS-nynd-5_07-cv-01310-2/mods.xml">
+ <titleInfo>
+  <title>Barlow v. U.S.H.H.S. et al</title>
+  <subTitle>JUDGMENT in favor of Cortland County, N.J.D.Y.F.S. Director, Social Security Administration, U.S.H.H.S., and Nate Wright against Clinton C. Barlow. (copy mailed to Pltf.) (lmp)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_07-cv-01310-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813fae26</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_07-cv-01310/USCOURTS-nynd-5_07-cv-01310-2</identifier>
+ <identifier type="former granule identifier">nynd-5_07-cv-01310_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_07-cv-01310/USCOURTS-nynd-5_07-cv-01310-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_07-cv-01310/pdf/USCOURTS-nynd-5_07-cv-01310-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-01310; Barlow v. U.S.H.H.S. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_07-cv-01310-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-01-09</dateIssued>
+  <docketText>JUDGMENT in favor of Cortland County, N.J.D.Y.F.S. Director, Social Security Administration, U.S.H.H.S., and Nate Wright against Clinton C. Barlow. (copy mailed to Pltf.) (lmp)</docketText>
+</extension>
+</relatedItem>
+</mods>

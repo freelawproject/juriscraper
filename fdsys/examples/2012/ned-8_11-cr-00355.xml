@@ -1,0 +1,230 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1825c910a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-04-24</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-04-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00355</identifier>
+<identifier type="local">P0b002ee1825c910a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-04-24</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-04-24</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cr-00355</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00355</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00355</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Briseyda" fullName="Briseyda Garcia-Villanueva" lastName="Garcia-Villanueva" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Garcia-Villanueva</title>
+ <partNumber>8:11-cr-00355</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00355/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cr-00355;11-355</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Briseyda Garcia-Villanueva</displayForm>
+ <namePart type="family">Garcia-Villanueva</namePart>
+ <namePart type="given">Briseyda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00355</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00355</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Briseyda" fullName="Briseyda Garcia-Villanueva" lastName="Garcia-Villanueva" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00355-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00355/USCOURTS-ned-8_11-cr-00355-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia-Villanueva</title>
+  <subTitle>ORDER granting in part 12 Motion to Extend Time to File Pretrial Motions as to Briseyda Garcia-Villanueva. Pretrial Motion Deadline set for 12/19/2011. The time between December 5, 2011 and December 19, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. (JAE) Modified on 12/7/2011 to add text regarding motion. (JAE).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00355-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825cc0ef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00355/USCOURTS-ned-8_11-cr-00355-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00355_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00355/USCOURTS-ned-8_11-cr-00355-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00355/pdf/USCOURTS-ned-8_11-cr-00355-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00355; USA v. Garcia-Villanueva; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00355-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-12-07</dateIssued>
+  <docketText>ORDER granting in part 12 Motion to Extend Time to File Pretrial Motions as to Briseyda Garcia-Villanueva. Pretrial Motion Deadline set for 12/19/2011. The time between December 5, 2011 and December 19, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. (JAE) Modified on 12/7/2011 to add text regarding motion. (JAE).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00355-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00355/USCOURTS-ned-8_11-cr-00355-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia-Villanueva</title>
+  <subTitle>ORDER granting in part and denying in part14 Motion to Extend Pretrial Motion Deadline as to Briseyda Garcia-Villanueva. Pretrial Motion Deadline set for 1/3/2012. This is the final extension, and no further continuances will be granted. The time between December 19, 2011 and January 3, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. (SLP) Modified on 12/20/2011 to add text(SLP).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00355-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825cc0f1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00355/USCOURTS-ned-8_11-cr-00355-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00355_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00355/USCOURTS-ned-8_11-cr-00355-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00355/pdf/USCOURTS-ned-8_11-cr-00355-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00355; USA v. Garcia-Villanueva; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00355-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-12-20</dateIssued>
+  <docketText>ORDER granting in part and denying in part14 Motion to Extend Pretrial Motion Deadline as to Briseyda Garcia-Villanueva. Pretrial Motion Deadline set for 1/3/2012. This is the final extension, and no further continuances will be granted. The time between December 19, 2011 and January 3, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. (SLP) Modified on 12/20/2011 to add text(SLP).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00355-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00355/USCOURTS-ned-8_11-cr-00355-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia-Villanueva</title>
+  <subTitle>ORDER granting in part 16 Motion to Extend as to Briseyda Garcia-Villanueva. Pretrial Motion Deadline set for 1/17/2012. The time between January 3, 2012 and January 17, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. (SLP)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00355-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825cc0f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00355/USCOURTS-ned-8_11-cr-00355-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00355_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00355/USCOURTS-ned-8_11-cr-00355-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00355/pdf/USCOURTS-ned-8_11-cr-00355-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00355; USA v. Garcia-Villanueva; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00355-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>ORDER granting in part 16 Motion to Extend as to Briseyda Garcia-Villanueva. Pretrial Motion Deadline set for 1/17/2012. The time between January 3, 2012 and January 17, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. (SLP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00355-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00355/USCOURTS-ned-8_11-cr-00355-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia-Villanueva</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant Briseyda Garcia-Villanueva. Ordered by Chief Judge Laurie Smith Camp. (MHB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00355-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825cc0f0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00355/USCOURTS-ned-8_11-cr-00355-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00355_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00355/USCOURTS-ned-8_11-cr-00355-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00355/pdf/USCOURTS-ned-8_11-cr-00355-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00355; USA v. Garcia-Villanueva; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00355-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-04-23</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant Briseyda Garcia-Villanueva. Ordered by Chief Judge Laurie Smith Camp. (MHB)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,514 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18e25cf6e">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Missouri</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-12-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-12-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043</identifier>
+<identifier type="local">P0b002ee18e25cf6e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-12-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-12-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-moed-4_13-cv-01043</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-moed-4_13-cv-01043</accessId>
+ <courtType>District</courtType>
+ <courtCode>moed</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Missouri</courtState>
+ <courtSortOrder>2281</courtSortOrder>
+ <caseNumber>4:13-cv-01043</caseNumber>
+ <caseOffice>St. Louis</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>35:271 Patent Infringement</cause>
+ <party fullName="Cleva Hong Kong Limited" lastName="Cleva Hong Kong Limited" role="Defendant"></party>
+ <party fullName="Cleva North America, Inc." lastName="Cleva North America, Inc." role="Counter Claimant"></party>
+ <party fullName="Cleva North America, Inc." lastName="Cleva North America, Inc." role="Defendant"></party>
+ <party fullName="Emerson Electric Co." lastName="Emerson Electric Co." role="Counter Defendant"></party>
+ <party fullName="Emerson Electric Co." lastName="Emerson Electric Co." role="Plaintiff"></party>
+ <party fullName="Sears Roebuck &amp; Co." lastName="Sears Roebuck &amp; Co." role="Counter Claimant"></party>
+ <party fullName="Sears Roebuck &amp; Co." lastName="Sears Roebuck &amp; Co." role="Defendant"></party>
+ <party fullName="Suzhou Cleva Electric Applicance Co., Ltd." lastName="Suzhou Cleva Electric Applicance Co., Ltd." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+ <partNumber>4:13-cv-01043</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:13-cv-01043;13-1043</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Missouri</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>St. Louis</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Cleva Hong Kong Limited</displayForm>
+ <namePart type="family">Cleva Hong Kong Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cleva North America, Inc.</displayForm>
+ <namePart type="family">Cleva North America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Cleva North America, Inc.</displayForm>
+ <namePart type="family">Cleva North America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Emerson Electric Co.</displayForm>
+ <namePart type="family">Emerson Electric Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Emerson Electric Co.</displayForm>
+ <namePart type="family">Emerson Electric Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sears Roebuck &amp; Co.</displayForm>
+ <namePart type="family">Sears Roebuck &amp; Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Sears Roebuck &amp; Co.</displayForm>
+ <namePart type="family">Sears Roebuck &amp; Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Suzhou Cleva Electric Applicance Co., Ltd.</displayForm>
+ <namePart type="family">Suzhou Cleva Electric Applicance Co., Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-moed-4_13-cv-01043</accessId>
+ <courtType>District</courtType>
+ <courtCode>moed</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Missouri</courtState>
+ <courtSortOrder>2281</courtSortOrder>
+ <caseNumber>4:13-cv-01043</caseNumber>
+ <caseOffice>St. Louis</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>35:271 Patent Infringement</cause>
+ <party fullName="Cleva Hong Kong Limited" lastName="Cleva Hong Kong Limited" role="Defendant"></party>
+ <party fullName="Cleva North America, Inc." lastName="Cleva North America, Inc." role="Counter Claimant"></party>
+ <party fullName="Cleva North America, Inc." lastName="Cleva North America, Inc." role="Defendant"></party>
+ <party fullName="Emerson Electric Co." lastName="Emerson Electric Co." role="Counter Defendant"></party>
+ <party fullName="Emerson Electric Co." lastName="Emerson Electric Co." role="Plaintiff"></party>
+ <party fullName="Sears Roebuck &amp; Co." lastName="Sears Roebuck &amp; Co." role="Counter Claimant"></party>
+ <party fullName="Sears Roebuck &amp; Co." lastName="Sears Roebuck &amp; Co." role="Defendant"></party>
+ <party fullName="Suzhou Cleva Electric Applicance Co., Ltd." lastName="Suzhou Cleva Electric Applicance Co., Ltd." role="Defendant"></party>
+ <state>Missouri</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01043-0" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-0/mods.xml">
+ <titleInfo>
+  <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+  <subTitle>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Defendants&apos; motion for partial judgment on the pleadings (Doc. 53) is GRANTED. IT IS FURTHER ORDERED that Plaintiff&apos;s induced infringement and contributory infringement claims are DISMISSED, with prejudice. Signed by Magistrate Judge Shirley P. Mensah on 6/3/14. (JWD)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e26acd9</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-0</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01043_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01043; Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01043-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-06-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Defendants&apos; motion for partial judgment on the pleadings (Doc. 53) is GRANTED. IT IS FURTHER ORDERED that Plaintiff&apos;s induced infringement and contributory infringement claims are DISMISSED, with prejudice. Signed by Magistrate Judge Shirley P. Mensah on 6/3/14. (JWD)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01043-1" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-1/mods.xml">
+ <titleInfo>
+  <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+  <subTitle>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Emerson&apos;s motion to strike the declarations of Hong Chen (Doc. 134) is GRANTED. IT IS FURTHER ORDERED that Suzhou Cleva Electric Appliance Co., Ltd. and Cleva Hong Kong Limited&apos;s renewed motion to dismiss for lack of personal jurisdiction (Doc. 131) is DENIED. IT IS FURTHER ORDERED that Emerson&apos;s motion to amend the case management order (Doc. 120) is GRANTED. IT IS FURTHER ORDERED that the parties shall meet and confer and then submit a joint proposed amended case management order within fourteen (14) days of the date of this Memorandum and Order. IT IS FURTHER ORDERED that a scheduling conference is set for July 21, 2014, at 12:30 p.m, in the chambers of the undersigned, 13-South. At the scheduling conference, counsel will be expected to discuss the deadlines and trial date set forth in the joint proposed case management order. After the scheduling conference, the court will issue an amended casemanagement order.. Signed by Magistrate Judge Shirley P. Mensah on 7/1/14. (LGK)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e26acd8</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-1</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01043_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01043; Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01043-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-07-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Emerson&apos;s motion to strike the declarations of Hong Chen (Doc. 134) is GRANTED. IT IS FURTHER ORDERED that Suzhou Cleva Electric Appliance Co., Ltd. and Cleva Hong Kong Limited&apos;s renewed motion to dismiss for lack of personal jurisdiction (Doc. 131) is DENIED. IT IS FURTHER ORDERED that Emerson&apos;s motion to amend the case management order (Doc. 120) is GRANTED. IT IS FURTHER ORDERED that the parties shall meet and confer and then submit a joint proposed amended case management order within fourteen (14) days of the date of this Memorandum and Order. IT IS FURTHER ORDERED that a scheduling conference is set for July 21, 2014, at 12:30 p.m, in the chambers of the undersigned, 13-South. At the scheduling conference, counsel will be expected to discuss the deadlines and trial date set forth in the joint proposed case management order. After the scheduling conference, the court will issue an amended casemanagement order.. Signed by Magistrate Judge Shirley P. Mensah on 7/1/14. (LGK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01043-2" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-2/mods.xml">
+ <titleInfo>
+  <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER: IT IS HEREBY ORDERED that Plaintiff Emerson Electric Co.s Motion to Dismiss Defendants Cleva North America, Inc.s and Sears, Roebuck &amp; Co.s (Defendants) Inequitable Conduct Counterclaims and to Strike Defendants Inequitable Conduct Affirmative Defenses (Doc. No. 123) is GRANTED. IT IS FURTHER ORDERED that Defendant Cleva North America, Inc.s and Defendant Sears, Roebuck &amp; Co.s Inequitable Conduct Counterclaims are DISMISSED. IT IS FURTHER ORDERED that Defendant Cleva North America, Inc.s and Defendant Sears, Roebuck &amp; Co.s Inequitable Conduct Affirmative Defenses are STRICKEN. Signed by Magistrate Judge Shirley P. Mensah on 7/22/14. (ARL)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e26acdc</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-2</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01043_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01043; Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01043-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-07-22</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER: IT IS HEREBY ORDERED that Plaintiff Emerson Electric Co.s Motion to Dismiss Defendants Cleva North America, Inc.s and Sears, Roebuck &amp; Co.s (Defendants) Inequitable Conduct Counterclaims and to Strike Defendants Inequitable Conduct Affirmative Defenses (Doc. No. 123) is GRANTED. IT IS FURTHER ORDERED that Defendant Cleva North America, Inc.s and Defendant Sears, Roebuck &amp; Co.s Inequitable Conduct Counterclaims are DISMISSED. IT IS FURTHER ORDERED that Defendant Cleva North America, Inc.s and Defendant Sears, Roebuck &amp; Co.s Inequitable Conduct Affirmative Defenses are STRICKEN. Signed by Magistrate Judge Shirley P. Mensah on 7/22/14. (ARL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01043-3" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-3/mods.xml">
+ <titleInfo>
+  <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+  <subTitle>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Emerson&apos;s Motion for Protective Order (Doc. 172) is GRANTED IN PART and DENIED IN PART. The motion is granted to the extent that it seeks to preclude Mr. Holsten from testifying about facts he learned or opinions he developed only as a result of his work as a consulting expert for Emerson in anticipation of litigation. As to all other matters, it is denied. IT IS FURTHER ORDERED that Defendants&apos; Motion to Compel Testimony of Stuart Holsten (Doc. 173) is GRANTED IN PART and DENIED IN PART. The motion is granted to the extent that it seeks to compel Mr. Holsten to testify about facts and opinions that were not developed only as a result of Mr. Holsten&apos;s work as a consulting expert for Emerson in anticipation of litigation. As to all other matters, it is denied.. Signed by Magistrate Judge Shirley P. Mensah on 11/3/14. (LGK)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e26b206</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-3</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01043_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01043; Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01043-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-11-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Emerson&apos;s Motion for Protective Order (Doc. 172) is GRANTED IN PART and DENIED IN PART. The motion is granted to the extent that it seeks to preclude Mr. Holsten from testifying about facts he learned or opinions he developed only as a result of his work as a consulting expert for Emerson in anticipation of litigation. As to all other matters, it is denied. IT IS FURTHER ORDERED that Defendants&apos; Motion to Compel Testimony of Stuart Holsten (Doc. 173) is GRANTED IN PART and DENIED IN PART. The motion is granted to the extent that it seeks to compel Mr. Holsten to testify about facts and opinions that were not developed only as a result of Mr. Holsten&apos;s work as a consulting expert for Emerson in anticipation of litigation. As to all other matters, it is denied.. Signed by Magistrate Judge Shirley P. Mensah on 11/3/14. (LGK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01043-4" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-4/mods.xml">
+ <titleInfo>
+  <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+  <subTitle>MEMORANDUM AND ORDER re:201 MOTION for Leave to Amend Infringement Contentions and Memorandum in Support filed by Plaintiff Emerson Electric Co. motion is GRANTED. Signed by Magistrate Judge Shirley P. Mensah on 12/16/14. (LGK)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e26b209</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-4</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01043_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01043; Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01043-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-12-16</dateIssued>
+  <docketText>MEMORANDUM AND ORDER re:201 MOTION for Leave to Amend Infringement Contentions and Memorandum in Support filed by Plaintiff Emerson Electric Co. motion is GRANTED. Signed by Magistrate Judge Shirley P. Mensah on 12/16/14. (LGK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01043-5" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-5/mods.xml">
+ <titleInfo>
+  <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+  <subTitle>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Defendants Motion to Strike the Deposition of Hong Chen and for Sanctions (Doc.198) is DENIED. IT IS FURTHER ORDERED that Plaintiffs request for an award of the fees associatedwith responding to the motion is DENIED. Signed by Magistrate Judge Shirley P. Mensah on 1/5/15. (ARL)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e26acda</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-5</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01043_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01043; Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01043-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Defendants Motion to Strike the Deposition of Hong Chen and for Sanctions (Doc.198) is DENIED. IT IS FURTHER ORDERED that Plaintiffs request for an award of the fees associatedwith responding to the motion is DENIED. Signed by Magistrate Judge Shirley P. Mensah on 1/5/15. (ARL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01043-6" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-6/mods.xml">
+ <titleInfo>
+  <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+  <subTitle>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Defendants&apos; Motion for Summary Judgment of Non- Infringement as to Suzhou Cleva and Cleva Hong Kong (Doc. 229) is GRANTED IN PART and DENIED IN PART. As to Suzhou Cleva Electric Appliance Co., Ltd., the motion is GRANTED. As to Cleva Hong Kong Limited, the motion is DENIED. Signed by Magistrate Judge Shirley P. Mensah on 5/8/15. (JWD)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e26b207</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-6</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01043_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01043; Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01043-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-05-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Defendants&apos; Motion for Summary Judgment of Non- Infringement as to Suzhou Cleva and Cleva Hong Kong (Doc. 229) is GRANTED IN PART and DENIED IN PART. As to Suzhou Cleva Electric Appliance Co., Ltd., the motion is GRANTED. As to Cleva Hong Kong Limited, the motion is DENIED. Signed by Magistrate Judge Shirley P. Mensah on 5/8/15. (JWD)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01043-7" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-7/mods.xml">
+ <titleInfo>
+  <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+  <subTitle>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Emerson&apos;s Motion to Strike the Declaration of Richard Ostroski (Doc. 259) is GRANTED IN PART and DENIED IN PART. The motion is GRANTED to the extent that Emerson seeks to strike paragraphs 105 through 118 of the Declaration and to exclude Mr. Ostroski from testifying at trial regarding the matters described in those paragraphs. In all other respects, the motion is DENIED. Signed by Magistrate Judge Shirley P. Mensah on 5/8/15. (JWD)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e26acdb</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-7</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01043_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01043; Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01043-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-05-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: IT IS HEREBY ORDERED that Emerson&apos;s Motion to Strike the Declaration of Richard Ostroski (Doc. 259) is GRANTED IN PART and DENIED IN PART. The motion is GRANTED to the extent that Emerson seeks to strike paragraphs 105 through 118 of the Declaration and to exclude Mr. Ostroski from testifying at trial regarding the matters described in those paragraphs. In all other respects, the motion is DENIED. Signed by Magistrate Judge Shirley P. Mensah on 5/8/15. (JWD)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01043-8" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-8/mods.xml">
+ <titleInfo>
+  <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+  <subTitle>MEMORANDUM AND ORDER re:287 MOTION to Exclude the Expert Testimony of Richard Ostroski filed by Plaintiff Emerson Electric Co. motion is DENIED. Signed by Magistrate Judge Shirley P. Mensah on 9/30/15. (LGK)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e26b20a</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-8</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01043_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01043; Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01043-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-09-30</dateIssued>
+  <docketText>MEMORANDUM AND ORDER re:287 MOTION to Exclude the Expert Testimony of Richard Ostroski filed by Plaintiff Emerson Electric Co. motion is DENIED. Signed by Magistrate Judge Shirley P. Mensah on 9/30/15. (LGK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01043-9" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-9/mods.xml">
+ <titleInfo>
+  <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+  <subTitle>MEMORANDUM AND ORDER re:279 MOTION to Exclude Testimony of Plaintiff&apos;s Proffered Expert Dr. Bryce Rutter filed by Defendant Suzhou Cleva Electric Applicance Co., Ltd., Defendant Cleva North America, Inc., Defendant Cleva Hong Kong Limited, Defendant Sears Roebuck &amp; Co., IS DENIED. 288 MOTION to Exclude Testimony of Plaintiff&apos;s Proffered Expert Mr. David Bowen filed by Defendant Suzhou Cleva Electric Applicance Co., Ltd., Defendant Cleva North America, Inc., Defendant Cleva Hong Kong Limited, Defendant Sears Roebuck &amp; Co. IS DENIED.. Signed by Magistrate Judge Shirley P. Mensah on 9/30/15. (LGK)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e26b205</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-9</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01043_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01043; Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01043-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2015-09-30</dateIssued>
+  <docketText>MEMORANDUM AND ORDER re:279 MOTION to Exclude Testimony of Plaintiff&apos;s Proffered Expert Dr. Bryce Rutter filed by Defendant Suzhou Cleva Electric Applicance Co., Ltd., Defendant Cleva North America, Inc., Defendant Cleva Hong Kong Limited, Defendant Sears Roebuck &amp; Co., IS DENIED. 288 MOTION to Exclude Testimony of Plaintiff&apos;s Proffered Expert Mr. David Bowen filed by Defendant Suzhou Cleva Electric Applicance Co., Ltd., Defendant Cleva North America, Inc., Defendant Cleva Hong Kong Limited, Defendant Sears Roebuck &amp; Co. IS DENIED.. Signed by Magistrate Judge Shirley P. Mensah on 9/30/15. (LGK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01043-10" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-10/mods.xml">
+ <titleInfo>
+  <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+  <subTitle>MEMORANDUM AND ORDER : IT IS HEREBY ORDERED that Plaintiffs Motion to Exclude Opinion Testimony from Stuart Holsten, Mark Tomasiak, and Joseph Gierer is GRANTED. IT IS FURTHER ORDERED that Defendants may submit an amended Rule 26(a)(2)(C) disclosure for Stuart Holsten, Mark Tomasiak, and Joseph Gierer by Tuesday, December 22, 2015. IT IS FURTHER ORDERED that if Defendants submit an amended disclosure, Plaintiff may submit a motion to exclude the testimony of Stuart Holsten, Mark Tomasiak, and Joseph Gierer by Tuesday, January 5, 2015.Signed by Magistrate Judge Shirley P. Mensah on 12/15/15. (ARL)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e26b204</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-10</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01043_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01043; Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01043-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2015-12-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER : IT IS HEREBY ORDERED that Plaintiffs Motion to Exclude Opinion Testimony from Stuart Holsten, Mark Tomasiak, and Joseph Gierer is GRANTED. IT IS FURTHER ORDERED that Defendants may submit an amended Rule 26(a)(2)(C) disclosure for Stuart Holsten, Mark Tomasiak, and Joseph Gierer by Tuesday, December 22, 2015. IT IS FURTHER ORDERED that if Defendants submit an amended disclosure, Plaintiff may submit a motion to exclude the testimony of Stuart Holsten, Mark Tomasiak, and Joseph Gierer by Tuesday, January 5, 2015.Signed by Magistrate Judge Shirley P. Mensah on 12/15/15. (ARL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_13-cv-01043-11" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-11/mods.xml">
+ <titleInfo>
+  <title>Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al</title>
+  <subTitle>MEMORANDUM AND ORDER : IT IS HEREBY ORDERED that Defendants&apos; Motion to Exclude Testimony of Plaintiff&apos;s Proffered Damages Expert, Ms. Donna Beck Smith (Doc. 280) is GRANTED IN PART and DENIED IN PART. The motion is granted with respect to Ms. Smith&apos;s opinions regarding damages for infringement of the 165 Patent. It is denied in all other respects. IT IS FURTHER ORDERED that Plaintiff has until Monday, December 28, 2015 to file an amended expert report from Ms. Smith that addresses damages for infringement of the 165 Patent. Defendants may depose Ms. Smith on the topic of her amended report by Monday, January 11, 2015. Defendants are also granted leave to file a supplemental expert report to respond to Ms. Smiths amended report by Monday, January 18, 2015. IT IS FURTHER ORDERED that Plaintiffs Motion to Exclude Testimony of Mark Gallagher (Doc. 284) is GRANTED IN PART and DENIED IN PART as described above. The motion is granted with respect to Mr. Gallaghers testimony that a patentee is required to show demand for the patented features to satisfy the first factor of the Panduit test. It is denied in all other respects. Signed by Magistrate Judge Shirley P. Mensah on 12/15/15. (ARL)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e26b208</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-11</identifier>
+ <identifier type="former granule identifier">moed-4_13-cv-01043_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_13-cv-01043/USCOURTS-moed-4_13-cv-01043-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_13-cv-01043/pdf/USCOURTS-moed-4_13-cv-01043-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:13-cv-01043; Emerson Electric Co. v. Suzhou Cleva Electric Applicance Co., Ltd. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_13-cv-01043-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2015-12-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER : IT IS HEREBY ORDERED that Defendants&apos; Motion to Exclude Testimony of Plaintiff&apos;s Proffered Damages Expert, Ms. Donna Beck Smith (Doc. 280) is GRANTED IN PART and DENIED IN PART. The motion is granted with respect to Ms. Smith&apos;s opinions regarding damages for infringement of the 165 Patent. It is denied in all other respects. IT IS FURTHER ORDERED that Plaintiff has until Monday, December 28, 2015 to file an amended expert report from Ms. Smith that addresses damages for infringement of the 165 Patent. Defendants may depose Ms. Smith on the topic of her amended report by Monday, January 11, 2015. Defendants are also granted leave to file a supplemental expert report to respond to Ms. Smiths amended report by Monday, January 18, 2015. IT IS FURTHER ORDERED that Plaintiffs Motion to Exclude Testimony of Mark Gallagher (Doc. 284) is GRANTED IN PART and DENIED IN PART as described above. The motion is granted with respect to Mr. Gallaghers testimony that a patentee is required to show demand for the patented features to satisfy the first factor of the Panduit test. It is denied in all other respects. Signed by Magistrate Judge Shirley P. Mensah on 12/15/15. (ARL)</docketText>
+</extension>
+</relatedItem>
+</mods>

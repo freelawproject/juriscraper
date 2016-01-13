@@ -1,0 +1,973 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183d3c3ad">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-02-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336</identifier>
+<identifier type="local">P0b002ee183d3c3ad</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_03-cv-05336</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_03-cv-05336</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:03-cv-05336</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>850</natureSuitCode>
+ <natureSuit>Securities, Commodities, Exchange</natureSuit>
+ <party fullName="AT HIGH YIELD FUND" lastName="AT HIGH YIELD FUND" role="Respondent"></party>
+ <party fullName="AT INCOME FUND" lastName="AT INCOME FUND" role="Respondent"></party>
+ <party firstName="STEPHEN" fullName="STEPHEN BENCE IV" generation="IV" lastName="BENCE" role="Movant"></party>
+ <party firstName="JOHN" fullName="JOHN P. BOYLE" lastName="BOYLE" middleName="P." role="Cross Defendant"></party>
+ <party firstName="JOHN" fullName="JOHN P. BOYLE" lastName="BOYLE" middleName="P." role="Defendant"></party>
+ <party firstName="DENNIS" fullName="DENNIS J. BUCKLEY" lastName="BUCKLEY" middleName="J." role="Respondent"></party>
+ <party firstName="TERRY" fullName="TERRY CADY" lastName="CADY" role="Defendant"></party>
+ <party fullName="CANADIAN IMPERIAL BANK OF COMMERCE TRUST COMPANY OF THE BAHAMAS" lastName="CANADIAN IMPERIAL BANK OF COMMERCE TRUST COMPANY OF THE BAHAMAS" role="Defendant"></party>
+ <party fullName="CEDAR STREET FUND" lastName="CEDAR STREET FUND" role="Plaintiff"></party>
+ <party fullName="CEDAR STREET OFFSHORE FUND" lastName="CEDAR STREET OFFSHORE FUND" role="Plaintiff"></party>
+ <party fullName="CLIFFORD CHANCE LLP" lastName="CLIFFORD CHANCE LLP" role="Defendant"></party>
+ <party fullName="CLIFFORD CHANCE US LLP" lastName="CLIFFORD CHANCE US LLP" role="Defendant"></party>
+ <party firstName="GERALD" fullName="GERALD COHN" lastName="COHN" role="Defendant"></party>
+ <party firstName="MATTHEW" fullName="MATTHEW COLASANTI" lastName="COLASANTI" role="Movant"></party>
+ <party firstName="LISA" fullName="LISA CRUIKSHANK" lastName="CRUIKSHANK" role="Movant"></party>
+ <party fullName="DELOITTE&amp;TOUCHE LLP" lastName="DELOITTE&amp;TOUCHE LLP" role="Cross Claimant"></party>
+ <party fullName="DELOITTE&amp;TOUCHE, LLP" lastName="DELOITTE&amp;TOUCHE, LLP" role="Cross Claimant"></party>
+ <party fullName="DELOITTE&amp;TOUCHE, LLP" lastName="DELOITTE&amp;TOUCHE, LLP" role="Defendant"></party>
+ <party fullName="DOLPHIN MEDICAL, INC." lastName="DOLPHIN MEDICAL, INC." role="Movant"></party>
+ <party firstName="RAYMOND" fullName="RAYMOND FEAR" lastName="FEAR" role="Movant"></party>
+ <party firstName="STEPHEN" fullName="STEPHEN R. GARFINKEL" lastName="GARFINKEL" middleName="R." role="Cross Defendant"></party>
+ <party firstName="STEVEN" fullName="STEVEN R. GARFINKEL" lastName="GARFINKEL" middleName="R." role="Cross Defendant"></party>
+ <party firstName="STEVEN" fullName="STEVEN R. GARFINKEL" lastName="GARFINKEL" middleName="R." role="Defendant"></party>
+ <party firstName="WILLIAM" fullName="WILLIAM S. GOLDBERG" lastName="GOLDBERG" middleName="S." role="Defendant"></party>
+ <party firstName="MATTHEW" fullName="MATTHEW GOLDENBERG" lastName="GOLDENBERG" role="Movant"></party>
+ <party fullName="GOTTLIEB FAMILY FOUNDATION TRUST" lastName="GOTTLIEB FAMILY FOUNDATION TRUST" role="Movant"></party>
+ <party firstName="KENNETH" fullName="KENNETH GROSSMAN" lastName="GROSSMAN" role="Plaintiff"></party>
+ <party firstName="PHILLIP" fullName="PHILLIP JACKSON" lastName="JACKSON" role="Movant"></party>
+ <party fullName="KAREL GROUP" lastName="KAREL GROUP" role="Movant"></party>
+ <party firstName="JOHN" fullName="JOHN E. MCHUGH" lastName="MCHUGH" middleName="E." role="Defendant"></party>
+ <party fullName="MERRILL LYNCH&amp;CO., INC." lastName="MERRILL LYNCH&amp;CO., INC." role="Defendant"></party>
+ <party firstName="RICHARD" fullName="RICHARD E. MILLER" lastName="MILLER" middleName="E." role="Cross Defendant"></party>
+ <party firstName="RICHARD" fullName="RICHARD E. MILLER" lastName="MILLER" middleName="E." role="Defendant"></party>
+ <party firstName="RICHARD" fullName="RICHARD MORRELL" lastName="MORRELL" role="Movant"></party>
+ <party firstName="MICHAEL" fullName="MICHAEL A. O&apos;HANLON" lastName="O&apos;HANLON" middleName="A." role="Cross Defendant"></party>
+ <party firstName="MICHAEL" fullName="MICHAEL A. O&apos;HANLON" lastName="O&apos;HANLON" middleName="A." role="Defendant"></party>
+ <party fullName="ON CURE TECHNOLOGIES" lastName="ON CURE TECHNOLOGIES" role="Movant"></party>
+ <party fullName="PRESGAR IMAGING, LLC" lastName="PRESGAR IMAGING, LLC" role="Defendant"></party>
+ <party firstName="THOMAS" fullName="THOMAS PRITZKER" lastName="PRITZKER" role="Defendant"></party>
+ <party fullName="RADNET MANAGEMENT, INC." lastName="RADNET MANAGEMENT, INC." role="Movant"></party>
+ <party fullName="RADNET, INC." lastName="RADNET, INC." role="Movant"></party>
+ <party firstName="HARRY" fullName="HARRY T.J. ROBERTS" lastName="ROBERTS" middleName="T.J." role="Defendant"></party>
+ <party firstName="THOMAS" fullName="THOMAS SCIBA" lastName="SCIBA" role="Movant"></party>
+ <party firstName="NATHAN" fullName="NATHAN SHAPIRO" lastName="SHAPIRO" role="Defendant"></party>
+ <party fullName="THE PRITZKER ORGANIZATION" lastName="THE PRITZKER ORGANIZATION" role="Defendant"></party>
+ <party firstName="ANTHONY" fullName="ANTHONY J. TUREK" lastName="TUREK" middleName="J." role="Cross Defendant"></party>
+ <party firstName="ANTHONY" fullName="ANTHONY J. TUREK" lastName="TUREK" middleName="J." role="Defendant"></party>
+ <party firstName="ANTHONY" fullName="ANTHONY J. TUREK" lastName="TUREK" middleName="J." role="Movant"></party>
+ <party fullName="UNITED STATES OF AMERICA" lastName="UNITED STATES OF AMERICA" role="Movant"></party>
+ <party fullName="WM HIGH YIELD FUND" lastName="WM HIGH YIELD FUND" role="Respondent"></party>
+ <party fullName="WM INCOME FUND" lastName="WM INCOME FUND" role="Respondent"></party>
+ <party fullName="WM VT INCOME FUND" lastName="WM VT INCOME FUND" role="Respondent"></party>
+ <party fullName="WOLSON GROUP" lastName="WOLSON GROUP" role="Movant"></party>
+</extension>
+<titleInfo>
+ <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+ <partNumber>2:03-cv-05336</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:03-cv-05336;03-5336</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>AT HIGH YIELD FUND</displayForm>
+ <namePart type="family">AT HIGH YIELD FUND</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>AT INCOME FUND</displayForm>
+ <namePart type="family">AT INCOME FUND</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>STEPHEN BENCE IV</displayForm>
+ <namePart type="family">BENCE</namePart>
+ <namePart type="given">STEPHEN</namePart>
+ <namePart type="termsOfAddress">IV</namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>JOHN P. BOYLE</displayForm>
+ <namePart type="family">BOYLE</namePart>
+ <namePart type="given">JOHN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOHN P. BOYLE</displayForm>
+ <namePart type="family">BOYLE</namePart>
+ <namePart type="given">JOHN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DENNIS J. BUCKLEY</displayForm>
+ <namePart type="family">BUCKLEY</namePart>
+ <namePart type="given">DENNIS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>TERRY CADY</displayForm>
+ <namePart type="family">CADY</namePart>
+ <namePart type="given">TERRY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CANADIAN IMPERIAL BANK OF COMMERCE TRUST COMPANY OF THE BAHAMAS</displayForm>
+ <namePart type="family">CANADIAN IMPERIAL BANK OF COMMERCE TRUST COMPANY OF THE BAHAMAS</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CEDAR STREET FUND</displayForm>
+ <namePart type="family">CEDAR STREET FUND</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CEDAR STREET OFFSHORE FUND</displayForm>
+ <namePart type="family">CEDAR STREET OFFSHORE FUND</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CLIFFORD CHANCE LLP</displayForm>
+ <namePart type="family">CLIFFORD CHANCE LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CLIFFORD CHANCE US LLP</displayForm>
+ <namePart type="family">CLIFFORD CHANCE US LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GERALD COHN</displayForm>
+ <namePart type="family">COHN</namePart>
+ <namePart type="given">GERALD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MATTHEW COLASANTI</displayForm>
+ <namePart type="family">COLASANTI</namePart>
+ <namePart type="given">MATTHEW</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>LISA CRUIKSHANK</displayForm>
+ <namePart type="family">CRUIKSHANK</namePart>
+ <namePart type="given">LISA</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>DELOITTE&amp;TOUCHE LLP</displayForm>
+ <namePart type="family">DELOITTE&amp;TOUCHE LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>DELOITTE&amp;TOUCHE, LLP</displayForm>
+ <namePart type="family">DELOITTE&amp;TOUCHE, LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>DELOITTE&amp;TOUCHE, LLP</displayForm>
+ <namePart type="family">DELOITTE&amp;TOUCHE, LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DOLPHIN MEDICAL, INC.</displayForm>
+ <namePart type="family">DOLPHIN MEDICAL, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>RAYMOND FEAR</displayForm>
+ <namePart type="family">FEAR</namePart>
+ <namePart type="given">RAYMOND</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>STEPHEN R. GARFINKEL</displayForm>
+ <namePart type="family">GARFINKEL</namePart>
+ <namePart type="given">STEPHEN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>STEVEN R. GARFINKEL</displayForm>
+ <namePart type="family">GARFINKEL</namePart>
+ <namePart type="given">STEVEN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>STEVEN R. GARFINKEL</displayForm>
+ <namePart type="family">GARFINKEL</namePart>
+ <namePart type="given">STEVEN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>WILLIAM S. GOLDBERG</displayForm>
+ <namePart type="family">GOLDBERG</namePart>
+ <namePart type="given">WILLIAM</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MATTHEW GOLDENBERG</displayForm>
+ <namePart type="family">GOLDENBERG</namePart>
+ <namePart type="given">MATTHEW</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>GOTTLIEB FAMILY FOUNDATION TRUST</displayForm>
+ <namePart type="family">GOTTLIEB FAMILY FOUNDATION TRUST</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>KENNETH GROSSMAN</displayForm>
+ <namePart type="family">GROSSMAN</namePart>
+ <namePart type="given">KENNETH</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>PHILLIP JACKSON</displayForm>
+ <namePart type="family">JACKSON</namePart>
+ <namePart type="given">PHILLIP</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>KAREL GROUP</displayForm>
+ <namePart type="family">KAREL GROUP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>JOHN E. MCHUGH</displayForm>
+ <namePart type="family">MCHUGH</namePart>
+ <namePart type="given">JOHN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MERRILL LYNCH&amp;CO., INC.</displayForm>
+ <namePart type="family">MERRILL LYNCH&amp;CO., INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RICHARD E. MILLER</displayForm>
+ <namePart type="family">MILLER</namePart>
+ <namePart type="given">RICHARD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RICHARD E. MILLER</displayForm>
+ <namePart type="family">MILLER</namePart>
+ <namePart type="given">RICHARD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RICHARD MORRELL</displayForm>
+ <namePart type="family">MORRELL</namePart>
+ <namePart type="given">RICHARD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>MICHAEL A. O&apos;HANLON</displayForm>
+ <namePart type="family">O&apos;HANLON</namePart>
+ <namePart type="given">MICHAEL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MICHAEL A. O&apos;HANLON</displayForm>
+ <namePart type="family">O&apos;HANLON</namePart>
+ <namePart type="given">MICHAEL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ON CURE TECHNOLOGIES</displayForm>
+ <namePart type="family">ON CURE TECHNOLOGIES</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>PRESGAR IMAGING, LLC</displayForm>
+ <namePart type="family">PRESGAR IMAGING, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>THOMAS PRITZKER</displayForm>
+ <namePart type="family">PRITZKER</namePart>
+ <namePart type="given">THOMAS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RADNET MANAGEMENT, INC.</displayForm>
+ <namePart type="family">RADNET MANAGEMENT, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>RADNET, INC.</displayForm>
+ <namePart type="family">RADNET, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>HARRY T.J. ROBERTS</displayForm>
+ <namePart type="family">ROBERTS</namePart>
+ <namePart type="given">HARRY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>THOMAS SCIBA</displayForm>
+ <namePart type="family">SCIBA</namePart>
+ <namePart type="given">THOMAS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>NATHAN SHAPIRO</displayForm>
+ <namePart type="family">SHAPIRO</namePart>
+ <namePart type="given">NATHAN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>THE PRITZKER ORGANIZATION</displayForm>
+ <namePart type="family">THE PRITZKER ORGANIZATION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ANTHONY J. TUREK</displayForm>
+ <namePart type="family">TUREK</namePart>
+ <namePart type="given">ANTHONY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ANTHONY J. TUREK</displayForm>
+ <namePart type="family">TUREK</namePart>
+ <namePart type="given">ANTHONY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ANTHONY J. TUREK</displayForm>
+ <namePart type="family">TUREK</namePart>
+ <namePart type="given">ANTHONY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>UNITED STATES OF AMERICA</displayForm>
+ <namePart type="family">UNITED STATES OF AMERICA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>WM HIGH YIELD FUND</displayForm>
+ <namePart type="family">WM HIGH YIELD FUND</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>WM INCOME FUND</displayForm>
+ <namePart type="family">WM INCOME FUND</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>WM VT INCOME FUND</displayForm>
+ <namePart type="family">WM VT INCOME FUND</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>WOLSON GROUP</displayForm>
+ <namePart type="family">WOLSON GROUP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_03-cv-05336</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:03-cv-05336</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>850</natureSuitCode>
+ <natureSuit>Securities, Commodities, Exchange</natureSuit>
+ <party fullName="AT HIGH YIELD FUND" lastName="AT HIGH YIELD FUND" role="Respondent"></party>
+ <party fullName="AT INCOME FUND" lastName="AT INCOME FUND" role="Respondent"></party>
+ <party firstName="STEPHEN" fullName="STEPHEN BENCE IV" generation="IV" lastName="BENCE" role="Movant"></party>
+ <party firstName="JOHN" fullName="JOHN P. BOYLE" lastName="BOYLE" middleName="P." role="Cross Defendant"></party>
+ <party firstName="JOHN" fullName="JOHN P. BOYLE" lastName="BOYLE" middleName="P." role="Defendant"></party>
+ <party firstName="DENNIS" fullName="DENNIS J. BUCKLEY" lastName="BUCKLEY" middleName="J." role="Respondent"></party>
+ <party firstName="TERRY" fullName="TERRY CADY" lastName="CADY" role="Defendant"></party>
+ <party fullName="CANADIAN IMPERIAL BANK OF COMMERCE TRUST COMPANY OF THE BAHAMAS" lastName="CANADIAN IMPERIAL BANK OF COMMERCE TRUST COMPANY OF THE BAHAMAS" role="Defendant"></party>
+ <party fullName="CEDAR STREET FUND" lastName="CEDAR STREET FUND" role="Plaintiff"></party>
+ <party fullName="CEDAR STREET OFFSHORE FUND" lastName="CEDAR STREET OFFSHORE FUND" role="Plaintiff"></party>
+ <party fullName="CLIFFORD CHANCE LLP" lastName="CLIFFORD CHANCE LLP" role="Defendant"></party>
+ <party fullName="CLIFFORD CHANCE US LLP" lastName="CLIFFORD CHANCE US LLP" role="Defendant"></party>
+ <party firstName="GERALD" fullName="GERALD COHN" lastName="COHN" role="Defendant"></party>
+ <party firstName="MATTHEW" fullName="MATTHEW COLASANTI" lastName="COLASANTI" role="Movant"></party>
+ <party firstName="LISA" fullName="LISA CRUIKSHANK" lastName="CRUIKSHANK" role="Movant"></party>
+ <party fullName="DELOITTE&amp;TOUCHE LLP" lastName="DELOITTE&amp;TOUCHE LLP" role="Cross Claimant"></party>
+ <party fullName="DELOITTE&amp;TOUCHE, LLP" lastName="DELOITTE&amp;TOUCHE, LLP" role="Cross Claimant"></party>
+ <party fullName="DELOITTE&amp;TOUCHE, LLP" lastName="DELOITTE&amp;TOUCHE, LLP" role="Defendant"></party>
+ <party fullName="DOLPHIN MEDICAL, INC." lastName="DOLPHIN MEDICAL, INC." role="Movant"></party>
+ <party firstName="RAYMOND" fullName="RAYMOND FEAR" lastName="FEAR" role="Movant"></party>
+ <party firstName="STEPHEN" fullName="STEPHEN R. GARFINKEL" lastName="GARFINKEL" middleName="R." role="Cross Defendant"></party>
+ <party firstName="STEVEN" fullName="STEVEN R. GARFINKEL" lastName="GARFINKEL" middleName="R." role="Cross Defendant"></party>
+ <party firstName="STEVEN" fullName="STEVEN R. GARFINKEL" lastName="GARFINKEL" middleName="R." role="Defendant"></party>
+ <party firstName="WILLIAM" fullName="WILLIAM S. GOLDBERG" lastName="GOLDBERG" middleName="S." role="Defendant"></party>
+ <party firstName="MATTHEW" fullName="MATTHEW GOLDENBERG" lastName="GOLDENBERG" role="Movant"></party>
+ <party fullName="GOTTLIEB FAMILY FOUNDATION TRUST" lastName="GOTTLIEB FAMILY FOUNDATION TRUST" role="Movant"></party>
+ <party firstName="KENNETH" fullName="KENNETH GROSSMAN" lastName="GROSSMAN" role="Plaintiff"></party>
+ <party firstName="PHILLIP" fullName="PHILLIP JACKSON" lastName="JACKSON" role="Movant"></party>
+ <party fullName="KAREL GROUP" lastName="KAREL GROUP" role="Movant"></party>
+ <party firstName="JOHN" fullName="JOHN E. MCHUGH" lastName="MCHUGH" middleName="E." role="Defendant"></party>
+ <party fullName="MERRILL LYNCH&amp;CO., INC." lastName="MERRILL LYNCH&amp;CO., INC." role="Defendant"></party>
+ <party firstName="RICHARD" fullName="RICHARD E. MILLER" lastName="MILLER" middleName="E." role="Cross Defendant"></party>
+ <party firstName="RICHARD" fullName="RICHARD E. MILLER" lastName="MILLER" middleName="E." role="Defendant"></party>
+ <party firstName="RICHARD" fullName="RICHARD MORRELL" lastName="MORRELL" role="Movant"></party>
+ <party firstName="MICHAEL" fullName="MICHAEL A. O&apos;HANLON" lastName="O&apos;HANLON" middleName="A." role="Cross Defendant"></party>
+ <party firstName="MICHAEL" fullName="MICHAEL A. O&apos;HANLON" lastName="O&apos;HANLON" middleName="A." role="Defendant"></party>
+ <party fullName="ON CURE TECHNOLOGIES" lastName="ON CURE TECHNOLOGIES" role="Movant"></party>
+ <party fullName="PRESGAR IMAGING, LLC" lastName="PRESGAR IMAGING, LLC" role="Defendant"></party>
+ <party firstName="THOMAS" fullName="THOMAS PRITZKER" lastName="PRITZKER" role="Defendant"></party>
+ <party fullName="RADNET MANAGEMENT, INC." lastName="RADNET MANAGEMENT, INC." role="Movant"></party>
+ <party fullName="RADNET, INC." lastName="RADNET, INC." role="Movant"></party>
+ <party firstName="HARRY" fullName="HARRY T.J. ROBERTS" lastName="ROBERTS" middleName="T.J." role="Defendant"></party>
+ <party firstName="THOMAS" fullName="THOMAS SCIBA" lastName="SCIBA" role="Movant"></party>
+ <party firstName="NATHAN" fullName="NATHAN SHAPIRO" lastName="SHAPIRO" role="Defendant"></party>
+ <party fullName="THE PRITZKER ORGANIZATION" lastName="THE PRITZKER ORGANIZATION" role="Defendant"></party>
+ <party firstName="ANTHONY" fullName="ANTHONY J. TUREK" lastName="TUREK" middleName="J." role="Cross Defendant"></party>
+ <party firstName="ANTHONY" fullName="ANTHONY J. TUREK" lastName="TUREK" middleName="J." role="Defendant"></party>
+ <party firstName="ANTHONY" fullName="ANTHONY J. TUREK" lastName="TUREK" middleName="J." role="Movant"></party>
+ <party fullName="UNITED STATES OF AMERICA" lastName="UNITED STATES OF AMERICA" role="Movant"></party>
+ <party fullName="WM HIGH YIELD FUND" lastName="WM HIGH YIELD FUND" role="Respondent"></party>
+ <party fullName="WM INCOME FUND" lastName="WM INCOME FUND" role="Respondent"></party>
+ <party fullName="WM VT INCOME FUND" lastName="WM VT INCOME FUND" role="Respondent"></party>
+ <party fullName="WOLSON GROUP" lastName="WOLSON GROUP" role="Movant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-0/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT DEFENDANTS&apos; MOTIONS TO DISMISS COUNT I OF THE COMPLAINT ARE DENIED; DEFENDANTS&apos; MOTIONS TO DISMISS COUNT II OF THE COMPLAINT ARE DENIED; DEFENDANTS&apos; MOTIONS TO DISMISS COUNT III OF THE COMPLAINT ARE DENIED AS THEY PERTAIN TO PURCHASES ON OR SUBSEQUENT TO 7/19/01, AND GRANTED AS THEY PERTAIN TO SECURITIES PURCHASED PRIOR TO 7/19/01; DEFENDANTS&apos; MOTIONS TO DISMISS COUNT IV OF THE COMPLAINT ARE DENIED; DEFENDANTS&apos; MOTIONS TO DISMISS COUNT V OF THE COMPLAINT ARE DENIED; AND DEFENDANTS&apos; MOTION TO DISMISS COUNTS VI IS GRANTED. THE CLERK OF COURT IS HEREBY DIRECTED TO TERMINATE THE PENDING MOTIONS TO DISMISS IN THIS MATTER.SIGNED BY JUDGE LEGROME D. DAVIS ON 5/31/05. 5/31/05 ENTERED AND COPIES MAILED AND E-MAILED.(cdd, ) Modified on 5/31/2005 (cdd, ).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3df23</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-0</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-31</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT DEFENDANTS&apos; MOTIONS TO DISMISS COUNT I OF THE COMPLAINT ARE DENIED; DEFENDANTS&apos; MOTIONS TO DISMISS COUNT II OF THE COMPLAINT ARE DENIED; DEFENDANTS&apos; MOTIONS TO DISMISS COUNT III OF THE COMPLAINT ARE DENIED AS THEY PERTAIN TO PURCHASES ON OR SUBSEQUENT TO 7/19/01, AND GRANTED AS THEY PERTAIN TO SECURITIES PURCHASED PRIOR TO 7/19/01; DEFENDANTS&apos; MOTIONS TO DISMISS COUNT IV OF THE COMPLAINT ARE DENIED; DEFENDANTS&apos; MOTIONS TO DISMISS COUNT V OF THE COMPLAINT ARE DENIED; AND DEFENDANTS&apos; MOTION TO DISMISS COUNTS VI IS GRANTED. THE CLERK OF COURT IS HEREBY DIRECTED TO TERMINATE THE PENDING MOTIONS TO DISMISS IN THIS MATTER.SIGNED BY JUDGE LEGROME D. DAVIS ON 5/31/05. 5/31/05 ENTERED AND COPIES MAILED AND E-MAILED.(cdd, ) Modified on 5/31/2005 (cdd, ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-1/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT LEAD PLAINTIFFS&apos; MOTION FOR CLASS CERTIFICATION IS GRANTED. THIS ACTION IS CERTIFIED AS A CLASS ACTION PURSUANT TO FRCP 23(A) AND 23(B)(3). PLAINTIFFS CEDAR STREET FUND, CEDAR STREET OFFSHORE FUND AND KENNETH GROSSMAN ARE APPOINTED AS CLASS REPRESENTATIVES. KRISLOV&amp;ASSOCIATES AND CHIMICLES&amp;TIKELLIS, LLP ARE APPOINTED AS CLASS COUNSEL AND LIAISON COUNSEL, RESPECTIVELY. SIGNED BY HONORABLE LEGROME D. DAVIS ON 4/29/08. 4/29/08 ENTERED AND COPIES MAILED, E-MAILED.(fdc, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3de97</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-1</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-04-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT LEAD PLAINTIFFS&apos; MOTION FOR CLASS CERTIFICATION IS GRANTED. THIS ACTION IS CERTIFIED AS A CLASS ACTION PURSUANT TO FRCP 23(A) AND 23(B)(3). PLAINTIFFS CEDAR STREET FUND, CEDAR STREET OFFSHORE FUND AND KENNETH GROSSMAN ARE APPOINTED AS CLASS REPRESENTATIVES. KRISLOV&amp;ASSOCIATES AND CHIMICLES&amp;TIKELLIS, LLP ARE APPOINTED AS CLASS COUNSEL AND LIAISON COUNSEL, RESPECTIVELY. SIGNED BY HONORABLE LEGROME D. DAVIS ON 4/29/08. 4/29/08 ENTERED AND COPIES MAILED, E-MAILED.(fdc, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-2/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE LEGROME D. DAVIS ON 9/3/10. 9/7/10 ENTERED AND COPIES MAILED AND E-MAILED.(mbh, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3de94</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-2</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-09-03</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE LEGROME D. DAVIS ON 9/3/10. 9/7/10 ENTERED AND COPIES MAILED AND E-MAILED.(mbh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-3/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>ORDER THAT DEFENDANT GERALD COHN&apos;S MOTION FOR SUMMARY JUDGMENT IS DENIED CONSISTENT WITH THIS COURT&apos;S MEMORANDUM OPINION ISSUED THIS SAME DAY. SIGNED BY HONORABLE LEGROME D. DAVIS ON 9/3/10. 9/7/10 ENTERED AND COPIES MAILED AND E-MAILED.(mbh, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3df22</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-3</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-09-03</dateIssued>
+  <docketText>ORDER THAT DEFENDANT GERALD COHN&apos;S MOTION FOR SUMMARY JUDGMENT IS DENIED CONSISTENT WITH THIS COURT&apos;S MEMORANDUM OPINION ISSUED THIS SAME DAY. SIGNED BY HONORABLE LEGROME D. DAVIS ON 9/3/10. 9/7/10 ENTERED AND COPIES MAILED AND E-MAILED.(mbh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-4/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE LEGROME D. DAVIS ON 9/3/10. 9/7/10 ENTERED AND COPIES MAILED AND E-MAILED.(mbh, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3df20</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-4</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-09-03</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE LEGROME D. DAVIS ON 9/3/10. 9/7/10 ENTERED AND COPIES MAILED AND E-MAILED.(mbh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-5/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>ORDER THAT DEFENDANT DELOITTE&amp;TOUCHE&apos;S MOTION TO EXCLUDE LEAD PLAINTIFFS&apos; ALLEGED LOSS CAUSATION EXPERT CHAD COFFMAN IS GRANTED IN PART AND DENIED IN PART. DEFENDANT DELOITTE&amp;TOUCHE&apos;S MOTION FOR SUMMARY JUDGMENT GRANTED IN PART AND DENIED IN PART. SIGNED BY HONORABLE LEGROME D. DAVIS ON 9/3/10. 9/7/10 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3de93</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-5</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-09-03</dateIssued>
+  <docketText>ORDER THAT DEFENDANT DELOITTE&amp;TOUCHE&apos;S MOTION TO EXCLUDE LEAD PLAINTIFFS&apos; ALLEGED LOSS CAUSATION EXPERT CHAD COFFMAN IS GRANTED IN PART AND DENIED IN PART. DEFENDANT DELOITTE&amp;TOUCHE&apos;S MOTION FOR SUMMARY JUDGMENT GRANTED IN PART AND DENIED IN PART. SIGNED BY HONORABLE LEGROME D. DAVIS ON 9/3/10. 9/7/10 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-6/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/4/13. 1/4/13 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3de90</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-6</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/4/13. 1/4/13 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-7/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>ORDER THAT DEFENDANTS CLIFFORD CHANCE LLP AND CLIFFORD CHANCE US LLP&apos;S MOTION FOR SUMMARY JUDGMENT IS GRANTED. JUDGMENT IS ENTERED IN FAVOR OF THESE DEFENDANTS AND AGAINST LEAD PLAINTIFFS AS TO ALL CLAIMS CONTAINED IN THE FIFTH AMENDED COMPLAINT. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/4/13. 1/4/13 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3de95</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-7</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER THAT DEFENDANTS CLIFFORD CHANCE LLP AND CLIFFORD CHANCE US LLP&apos;S MOTION FOR SUMMARY JUDGMENT IS GRANTED. JUDGMENT IS ENTERED IN FAVOR OF THESE DEFENDANTS AND AGAINST LEAD PLAINTIFFS AS TO ALL CLAIMS CONTAINED IN THE FIFTH AMENDED COMPLAINT. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/4/13. 1/4/13 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-8/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/4/13. 1/4/13 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3de92</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-8</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/4/13. 1/4/13 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-9/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>ORDER THAT LEAD PLAINTIFFS&apos; MOTION FOR PARTIAL RECONSIDERATION OF 9/3/10 MEMORANDUM AND ORDER IS DENIED. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/4/13. 1/4/13 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3de96</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-9</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER THAT LEAD PLAINTIFFS&apos; MOTION FOR PARTIAL RECONSIDERATION OF 9/3/10 MEMORANDUM AND ORDER IS DENIED. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/4/13. 1/4/13 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-10/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>ORDER THAT DEFENDANT DELOITTE&amp;TOUCHE&apos;S MOTION FOR LEAVE TO FILE REPLY IN SUPPORT OF ITS MOTION TO CERTIFY QUESTION FOR INTERLOCUTORY APPEAL IS GRANTED. DEFENDANT DELOITTE&amp;TOUCHE&apos;S MOTION TO CERTIFY QUESTION FOR INTERLOCUTORY APPEAL IS DENIED. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/4/13. 1/4/13 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3df1f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-10</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER THAT DEFENDANT DELOITTE&amp;TOUCHE&apos;S MOTION FOR LEAVE TO FILE REPLY IN SUPPORT OF ITS MOTION TO CERTIFY QUESTION FOR INTERLOCUTORY APPEAL IS GRANTED. DEFENDANT DELOITTE&amp;TOUCHE&apos;S MOTION TO CERTIFY QUESTION FOR INTERLOCUTORY APPEAL IS DENIED. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/4/13. 1/4/13 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-11/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/22/13. 1/23/13 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3df24</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-11</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-01-23</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/22/13. 1/23/13 ENTERED AND COPIES MAILED, E-MAILED.(mbh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-12/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>ORDER THAT DEFENDANT TERRY CADY&apos;S MOTION FOR SUMMARY JUDGMENT IS GRANTED. IT IS FURTHER ORDERED THAT JUDGMENT IS ENTERED IN FAVOR O DEFENDNAT TERRY CADY AND AGAINST LEAD PLAINTIFF AND AGAINST ALL MEMBERS OF THE PLAINTIFF CLASS OF INVESTORS IN DIAGNOSTIC VENTURES, INC. AS TO ALL CLAIMS CONTAINED IN THE FIFTH AMENDED COMPLAINT. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/22/13. 1/23/13 ENTERED AND COPIES MAILED AND E-MAILED.(mbh, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3df21</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-12</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2013-01-23</dateIssued>
+  <docketText>ORDER THAT DEFENDANT TERRY CADY&apos;S MOTION FOR SUMMARY JUDGMENT IS GRANTED. IT IS FURTHER ORDERED THAT JUDGMENT IS ENTERED IN FAVOR O DEFENDNAT TERRY CADY AND AGAINST LEAD PLAINTIFF AND AGAINST ALL MEMBERS OF THE PLAINTIFF CLASS OF INVESTORS IN DIAGNOSTIC VENTURES, INC. AS TO ALL CLAIMS CONTAINED IN THE FIFTH AMENDED COMPLAINT. SIGNED BY HONORABLE LEGROME D. DAVIS ON 1/22/13. 1/23/13 ENTERED AND COPIES MAILED AND E-MAILED.(mbh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_03-cv-05336-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-13/mods.xml">
+ <titleInfo>
+  <title>GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al</title>
+  <subTitle>ORDER MEMORANDUM THAT DEFENDANT DELOITTE&amp;TOUCHE, LLP MAY SUBSTITUTE AN EXPERT WITNESS TO REPLACE ITS FORMER EXPERT MR. TERRY MUSIKA. SIGNED BY HONORABLE LEGROME D. DAVIS ON 2/19/13. 2/20/13 ENTERED AND COPIES MAILED, E-MAILED AND FAXED.(mbh, ) Modified on 2/21/2013 (afm, ).</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_03-cv-05336-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d3de91</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-13</identifier>
+ <identifier type="former granule identifier">paed-2_03-cv-05336_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_03-cv-05336/USCOURTS-paed-2_03-cv-05336-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_03-cv-05336/pdf/USCOURTS-paed-2_03-cv-05336-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-05336; GROSSMAN et al v. MERRILL LYNCH&amp;CO., INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_03-cv-05336-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2013-02-20</dateIssued>
+  <docketText>ORDER MEMORANDUM THAT DEFENDANT DELOITTE&amp;TOUCHE, LLP MAY SUBSTITUTE AN EXPERT WITNESS TO REPLACE ITS FORMER EXPERT MR. TERRY MUSIKA. SIGNED BY HONORABLE LEGROME D. DAVIS ON 2/19/13. 2/20/13 ENTERED AND COPIES MAILED, E-MAILED AND FAXED.(mbh, ) Modified on 2/21/2013 (afm, ).</docketText>
+</extension>
+</relatedItem>
+</mods>

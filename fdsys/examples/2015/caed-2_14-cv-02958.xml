@@ -1,0 +1,290 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c46c34b">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-05-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-05-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02958</identifier>
+<identifier type="local">P0b002ee18c46c34b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-05-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-05-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_14-cv-02958</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-02958</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-02958</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Ron" fullName="Ron Barnes" lastName="Barnes" role="Defendant"></party>
+ <party firstName="Tony" fullName="Tony Blackman" lastName="Blackman" role="Plaintiff"></party>
+ <party firstName="L." fullName="L. Bolls" lastName="Bolls" role="Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly Harrington" lastName="Harrington" role="Defendant"></party>
+ <party firstName="K." fullName="K. Lavallure" lastName="Lavallure" role="Defendant"></party>
+ <party firstName="J.D." fullName="J.D. Lozano" lastName="Lozano" role="Defendant"></party>
+ <party fullName="Stainer" lastName="Stainer" role="Defendant"></party>
+ <party firstName="J.A." fullName="J.A. Zamora" lastName="Zamora" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Blackman v. Stainer et al</title>
+ <partNumber>2:14-cv-02958</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02958/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-02958;14-2958</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ron Barnes</displayForm>
+ <namePart type="family">Barnes</namePart>
+ <namePart type="given">Ron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tony Blackman</displayForm>
+ <namePart type="family">Blackman</namePart>
+ <namePart type="given">Tony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>L. Bolls</displayForm>
+ <namePart type="family">Bolls</namePart>
+ <namePart type="given">L.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kelly Harrington</displayForm>
+ <namePart type="family">Harrington</namePart>
+ <namePart type="given">Kelly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>K. Lavallure</displayForm>
+ <namePart type="family">Lavallure</namePart>
+ <namePart type="given">K.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J.D. Lozano</displayForm>
+ <namePart type="family">Lozano</namePart>
+ <namePart type="given">J.D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stainer</displayForm>
+ <namePart type="family">Stainer</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J.A. Zamora</displayForm>
+ <namePart type="family">Zamora</namePart>
+ <namePart type="given">J.A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-02958</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-02958</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Ron" fullName="Ron Barnes" lastName="Barnes" role="Defendant"></party>
+ <party firstName="Tony" fullName="Tony Blackman" lastName="Blackman" role="Plaintiff"></party>
+ <party firstName="L." fullName="L. Bolls" lastName="Bolls" role="Defendant"></party>
+ <party firstName="Kelly" fullName="Kelly Harrington" lastName="Harrington" role="Defendant"></party>
+ <party firstName="K." fullName="K. Lavallure" lastName="Lavallure" role="Defendant"></party>
+ <party firstName="J.D." fullName="J.D. Lozano" lastName="Lozano" role="Defendant"></party>
+ <party fullName="Stainer" lastName="Stainer" role="Defendant"></party>
+ <party firstName="J.A." fullName="J.A. Zamora" lastName="Zamora" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02958-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02958/USCOURTS-caed-2_14-cv-02958-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Blackman v. Stainer et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 1/6/15 ORDERING that Plaintiff shall submit, within 30 days from the date of this order, an affidavit in support of his request to proceed in forma pauperis on the form provided by the Clerk of Court, or the required fees in the amount of $400.00; plaintiffs failure to comply with this order will result in a recommendation that this action be dismissed; and the Clerk of the Court is directed to send plaintiff a new Application to Proceed In Forma Pauperis By a Prisoner.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02958/pdf/USCOURTS-caed-2_14-cv-02958-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c5e9382</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02958/USCOURTS-caed-2_14-cv-02958-0</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02958_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02958/USCOURTS-caed-2_14-cv-02958-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02958/pdf/USCOURTS-caed-2_14-cv-02958-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02958; (PC) Blackman v. Stainer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02958-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 1/6/15 ORDERING that Plaintiff shall submit, within 30 days from the date of this order, an affidavit in support of his request to proceed in forma pauperis on the form provided by the Clerk of Court, or the required fees in the amount of $400.00; plaintiffs failure to comply with this order will result in a recommendation that this action be dismissed; and the Clerk of the Court is directed to send plaintiff a new Application to Proceed In Forma Pauperis By a Prisoner.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02958-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02958/USCOURTS-caed-2_14-cv-02958-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Blackman v. Stainer et al</title>
+  <subTitle>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 2/24/2015 ORDERING the Clerk to assign a district judge to this action; AND RECOMMENDING that plaintiff&apos;s 8 application to proceed ifp be denied, and plaintiff be ordered to pay the filing fee within 30 days of the adoption of these findings and recommendations. Assigned and referred to Judge Kimberly J. Mueller; Objections due within 14 days. (Yin, K)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02958/pdf/USCOURTS-caed-2_14-cv-02958-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c5e93d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02958/USCOURTS-caed-2_14-cv-02958-1</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02958_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02958/USCOURTS-caed-2_14-cv-02958-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02958/pdf/USCOURTS-caed-2_14-cv-02958-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02958; (PC) Blackman v. Stainer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02958-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-02-24</dateIssued>
+  <docketText>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 2/24/2015 ORDERING the Clerk to assign a district judge to this action; AND RECOMMENDING that plaintiff&apos;s 8 application to proceed ifp be denied, and plaintiff be ordered to pay the filing fee within 30 days of the adoption of these findings and recommendations. Assigned and referred to Judge Kimberly J. Mueller; Objections due within 14 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02958-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02958/USCOURTS-caed-2_14-cv-02958-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Blackman v. Stainer et al</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 3/26/15 ORDERING that the findings and recommendations filed February 24, 2015, are adopted in full; Plaintiff&apos; application to proceed in forma pauperis 8 is denied; and Plaintiff is ordered to pay the filing fee within thirty days of the filed date of this order. (cc Financial)(Becknal, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02958/pdf/USCOURTS-caed-2_14-cv-02958-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c5e93d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02958/USCOURTS-caed-2_14-cv-02958-2</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02958_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02958/USCOURTS-caed-2_14-cv-02958-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02958/pdf/USCOURTS-caed-2_14-cv-02958-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02958; (PC) Blackman v. Stainer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02958-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-03-26</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 3/26/15 ORDERING that the findings and recommendations filed February 24, 2015, are adopted in full; Plaintiff&apos; application to proceed in forma pauperis 8 is denied; and Plaintiff is ordered to pay the filing fee within thirty days of the filed date of this order. (cc Financial)(Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02958-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02958/USCOURTS-caed-2_14-cv-02958-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Blackman v. Stainer et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 5/7/15 RECOMMENDING that this action be dismissed. Referred to Judge Kimberly J. Mueller; Objections to F&amp;R due within 14 days.(Dillon, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02958/pdf/USCOURTS-caed-2_14-cv-02958-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c5e9383</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02958/USCOURTS-caed-2_14-cv-02958-3</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02958_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02958/USCOURTS-caed-2_14-cv-02958-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02958/pdf/USCOURTS-caed-2_14-cv-02958-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02958; (PC) Blackman v. Stainer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02958-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-05-08</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 5/7/15 RECOMMENDING that this action be dismissed. Referred to Judge Kimberly J. Mueller; Objections to F&amp;R due within 14 days.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,170 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee187495064">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_13-cv-01703</identifier>
+<identifier type="local">P0b002ee187495064</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_13-cv-01703</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_13-cv-01703</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:13-cv-01703</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>15:1938 Fair Labor Standards Act</cause>
+ <party fullName="ClubCorp" lastName="ClubCorp" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Jones" lastName="Jones" role="Plaintiff"></party>
+ <party fullName="Quail Hollow Country Club" lastName="Quail Hollow Country Club" role="Defendant"></party>
+ <party fullName="Quail Hollow Management Inc" lastName="Quail Hollow Management Inc" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Jones v. Quail Hollow Management Inc et al</title>
+ <partNumber>1:13-cv-01703</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_13-cv-01703/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-01703;13-1703</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ClubCorp</displayForm>
+ <namePart type="family">ClubCorp</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Quail Hollow Country Club</displayForm>
+ <namePart type="family">Quail Hollow Country Club</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Quail Hollow Management Inc</displayForm>
+ <namePart type="family">Quail Hollow Management Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_13-cv-01703</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:13-cv-01703</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>15:1938 Fair Labor Standards Act</cause>
+ <party fullName="ClubCorp" lastName="ClubCorp" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Jones" lastName="Jones" role="Plaintiff"></party>
+ <party fullName="Quail Hollow Country Club" lastName="Quail Hollow Country Club" role="Defendant"></party>
+ <party fullName="Quail Hollow Management Inc" lastName="Quail Hollow Management Inc" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_13-cv-01703-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_13-cv-01703/USCOURTS-ohnd-1_13-cv-01703-0/mods.xml">
+ <titleInfo>
+  <title>Jones v. Quail Hollow Management Inc et al</title>
+  <subTitle>Memorandum Opinion and Order Adopting 15 Magistrate Judge&apos;s Report and Recommendation regarding 5 Plaintiff&apos;s Motion/Notice for partial dismissal without prejudice of Clubcorp, and 10 Joint Motion to Approve Settlement Under Continuous Seal. Plaintiff&apos;s motion/notice of dismissal of defendant Clubcorp without prejudice (ECF 5) is hereby Granted. The Court finds the proposed settlement and attorney fees to be reasonable and the parties&apos; joint motion for approval of the settlement agreement under seal (ECF 10) is Granted. The Clerk is requested to SEAL the document filed as ECF 10 and all attachments thereto. This case is Closed. Signed by Judge David D. Dowd, Jr. on 1/6/2014. (M,De)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_13-cv-01703/pdf/USCOURTS-ohnd-1_13-cv-01703-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1875eef8b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_13-cv-01703/USCOURTS-ohnd-1_13-cv-01703-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_13-cv-01703_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_13-cv-01703/USCOURTS-ohnd-1_13-cv-01703-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_13-cv-01703/pdf/USCOURTS-ohnd-1_13-cv-01703-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01703; Jones v. Quail Hollow Management Inc et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_13-cv-01703-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>Memorandum Opinion and Order Adopting 15 Magistrate Judge&apos;s Report and Recommendation regarding 5 Plaintiff&apos;s Motion/Notice for partial dismissal without prejudice of Clubcorp, and 10 Joint Motion to Approve Settlement Under Continuous Seal. Plaintiff&apos;s motion/notice of dismissal of defendant Clubcorp without prejudice (ECF 5) is hereby Granted. The Court finds the proposed settlement and attorney fees to be reasonable and the parties&apos; joint motion for approval of the settlement agreement under seal (ECF 10) is Granted. The Clerk is requested to SEAL the document filed as ECF 10 and all attachments thereto. This case is Closed. Signed by Judge David D. Dowd, Jr. on 1/6/2014. (M,De)</docketText>
+</extension>
+</relatedItem>
+</mods>

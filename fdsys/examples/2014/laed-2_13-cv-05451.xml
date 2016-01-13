@@ -1,0 +1,152 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186dd17b0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-05451</identifier>
+<identifier type="local">P0b002ee186dd17b0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-laed-2_13-cv-05451</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_13-cv-05451</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:13-cv-05451</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:2201 Declaratory Judgement</cause>
+ <party fullName="Hercules Offshore, Inc." lastName="Hercules Offshore, Inc." role="Plaintiff"></party>
+ <party firstName="Damon" fullName="Damon Howard" lastName="Howard" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Hercules Offshore, Inc. v. Howard</title>
+ <partNumber>2:13-cv-05451</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-05451/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-05451;13-5451</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>New Orleans</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Hercules Offshore, Inc.</displayForm>
+ <namePart type="family">Hercules Offshore, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Damon Howard</displayForm>
+ <namePart type="family">Howard</namePart>
+ <namePart type="given">Damon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_13-cv-05451</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:13-cv-05451</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:2201 Declaratory Judgement</cause>
+ <party fullName="Hercules Offshore, Inc." lastName="Hercules Offshore, Inc." role="Plaintiff"></party>
+ <party firstName="Damon" fullName="Damon Howard" lastName="Howard" role="Defendant"></party>
+ <state>Louisiana</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_13-cv-05451-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-05451/USCOURTS-laed-2_13-cv-05451-0/mods.xml">
+ <titleInfo>
+  <title>Hercules Offshore, Inc. v. Howard</title>
+  <subTitle>ORDER AND REASONS that this action be transferred to the United States District Court for the Southern District of Mississippi, where it can be consolidated with Civil Action No. 13-140. IT IS FURTHER ORDERED that the Motion to Dismiss 15 Complaint for Declaratory Judgment filed by Damon Howard and 22 MOTION for Summary Judgment filed by Hercules Offshore, Inc. are DENIED, reserving the parties right to re-urge the motions. Signed by Judge Eldon E. Fallon on 1/2/14. (Attachments: # (1) Transfer Letter)(dno, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-05451/pdf/USCOURTS-laed-2_13-cv-05451-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186dd4bfd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-05451/USCOURTS-laed-2_13-cv-05451-0</identifier>
+ <identifier type="former granule identifier">laed-2_13-cv-05451_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_13-cv-05451/USCOURTS-laed-2_13-cv-05451-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_13-cv-05451/pdf/USCOURTS-laed-2_13-cv-05451-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-05451; Hercules Offshore, Inc. v. Howard; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_13-cv-05451-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER AND REASONS that this action be transferred to the United States District Court for the Southern District of Mississippi, where it can be consolidated with Civil Action No. 13-140. IT IS FURTHER ORDERED that the Motion to Dismiss 15 Complaint for Declaratory Judgment filed by Damon Howard and 22 MOTION for Summary Judgment filed by Hercules Offshore, Inc. are DENIED, reserving the parties right to re-urge the motions. Signed by Judge Eldon E. Fallon on 1/2/14. (Attachments: # (1) Transfer Letter)(dno, )</docketText>
+</extension>
+</relatedItem>
+</mods>

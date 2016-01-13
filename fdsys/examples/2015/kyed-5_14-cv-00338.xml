@@ -1,0 +1,170 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8ab467">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Kentucky</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_14-cv-00338</identifier>
+<identifier type="local">P0b002ee18a8ab467</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-kyed-5_14-cv-00338</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-kyed-5_14-cv-00338</accessId>
+ <courtType>District</courtType>
+ <courtCode>kyed</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Kentucky</courtState>
+ <courtSortOrder>2201</courtSortOrder>
+ <caseNumber>5:14-cv-00338</caseNumber>
+ <caseOffice>Lexington</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>430</natureSuitCode>
+ <natureSuit>Banks and Banking</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party fullName="Central Bancshares, Inc." lastName="Central Bancshares, Inc." role="Defendant"></party>
+ <party fullName="Central Bank" lastName="Central Bank" role="Defendant"></party>
+ <party firstName="Miguel" fullName="Miguel Ventura" lastName="Ventura" role="Plaintiff"></party>
+ <party firstName="Susan" fullName="Susan Ventura" lastName="Ventura" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Ventura et al v. Central Bank</title>
+ <partNumber>5:14-cv-00338</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_14-cv-00338/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:14-cv-00338;14-338</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Kentucky</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Lexington</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Central Bancshares, Inc.</displayForm>
+ <namePart type="family">Central Bancshares, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Central Bank</displayForm>
+ <namePart type="family">Central Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Miguel Ventura</displayForm>
+ <namePart type="family">Ventura</namePart>
+ <namePart type="given">Miguel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Susan Ventura</displayForm>
+ <namePart type="family">Ventura</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-kyed-5_14-cv-00338</accessId>
+ <courtType>District</courtType>
+ <courtCode>kyed</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Kentucky</courtState>
+ <courtSortOrder>2201</courtSortOrder>
+ <caseNumber>5:14-cv-00338</caseNumber>
+ <caseOffice>Lexington</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>430</natureSuitCode>
+ <natureSuit>Banks and Banking</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party fullName="Central Bancshares, Inc." lastName="Central Bancshares, Inc." role="Defendant"></party>
+ <party fullName="Central Bank" lastName="Central Bank" role="Defendant"></party>
+ <party firstName="Miguel" fullName="Miguel Ventura" lastName="Ventura" role="Plaintiff"></party>
+ <party firstName="Susan" fullName="Susan Ventura" lastName="Ventura" role="Plaintiff"></party>
+ <state>Kentucky</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-5_14-cv-00338-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_14-cv-00338/USCOURTS-kyed-5_14-cv-00338-0/mods.xml">
+ <titleInfo>
+  <title>Ventura et al v. Central Bank</title>
+  <subTitle>OPINION AND ORDER: The Court ORDERS that Plas&apos; 5 Motion to Remand to State Court is GRANTED. Signed by Judge Karen K. Caldwell on January 5, 2015. (AWD) cc: COR,Powell Circuit Court</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_14-cv-00338/pdf/USCOURTS-kyed-5_14-cv-00338-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b685c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_14-cv-00338/USCOURTS-kyed-5_14-cv-00338-0</identifier>
+ <identifier type="former granule identifier">kyed-5_14-cv-00338_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_14-cv-00338/USCOURTS-kyed-5_14-cv-00338-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_14-cv-00338/pdf/USCOURTS-kyed-5_14-cv-00338-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:14-cv-00338; Ventura et al v. Central Bank; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-5_14-cv-00338-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>OPINION AND ORDER: The Court ORDERS that Plas&apos; 5 Motion to Remand to State Court is GRANTED. Signed by Judge Karen K. Caldwell on January 5, 2015. (AWD) cc: COR,Powell Circuit Court</docketText>
+</extension>
+</relatedItem>
+</mods>

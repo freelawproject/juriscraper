@@ -1,0 +1,169 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a898719">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Fifth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-12-60905</identifier>
+<identifier type="local">P0b002ee18a898719</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca5-12-60905</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca5-12-60905</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca5</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtSortOrder>1050</courtSortOrder>
+ <caseNumber>12-60905</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Anthony" fullName="Anthony Gibson" lastName="Gibson" role="Appellee Cross-Appellant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Kilpatrick" lastName="Kilpatrick" role="Appellant Cross-Appellee"></party>
+</extension>
+<titleInfo>
+ <title>Anthony Gibson v. Jeffrey Kilpatrick</title>
+ <partNumber>12-60905</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-12-60905/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">12-60905;12-60905</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Fifth Circuit</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Anthony Gibson</displayForm>
+ <namePart type="family">Gibson</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee Cross-Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Kilpatrick</displayForm>
+ <namePart type="family">Kilpatrick</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant Cross-Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca5-12-60905</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca5</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtSortOrder>1050</courtSortOrder>
+ <caseNumber>12-60905</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Anthony" fullName="Anthony Gibson" lastName="Gibson" role="Appellee Cross-Appellant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Kilpatrick" lastName="Kilpatrick" role="Appellant Cross-Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca5-12-60905-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-12-60905/USCOURTS-ca5-12-60905-0/mods.xml">
+ <titleInfo>
+  <title>Anthony Gibson v. Jeffrey Kilpatrick</title>
+  <subTitle>REVISED PUBLISHED OPINION FILED. [7492406-2] [12-60905]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-12-60905/pdf/USCOURTS-ca5-12-60905-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a89df38</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-12-60905/USCOURTS-ca5-12-60905-0</identifier>
+ <identifier type="former granule identifier">ca5-12-60905_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-12-60905/USCOURTS-ca5-12-60905-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-12-60905/pdf/USCOURTS-ca5-12-60905-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 12-60905; Anthony Gibson v. Jeffrey Kilpatrick; </searchTitle>
+  <courtName>United States Court of Appeals for the Fifth Circuit</courtName>
+  <accessId>USCOURTS-ca5-12-60905-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-11-19</dateIssued>
+  <docketText>REVISED PUBLISHED OPINION FILED. [7492406-2] [12-60905]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ca5-12-60905-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-12-60905/USCOURTS-ca5-12-60905-1/mods.xml">
+ <titleInfo>
+  <title>Anthony Gibson v. Jeffrey Kilpatrick</title>
+  <subTitle>REVISED PUBLISHED OPINION FILED. [7796855-2] [12-60905]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-12-60905/pdf/USCOURTS-ca5-12-60905-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a89df55</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-12-60905/USCOURTS-ca5-12-60905-1</identifier>
+ <identifier type="former granule identifier">ca5-12-60905_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-12-60905/USCOURTS-ca5-12-60905-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-12-60905/pdf/USCOURTS-ca5-12-60905-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 12-60905; Anthony Gibson v. Jeffrey Kilpatrick; </searchTitle>
+  <courtName>United States Court of Appeals for the Fifth Circuit</courtName>
+  <accessId>USCOURTS-ca5-12-60905-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-02</dateIssued>
+  <docketText>REVISED PUBLISHED OPINION FILED. [7796855-2] [12-60905]</docketText>
+</extension>
+</relatedItem>
+</mods>

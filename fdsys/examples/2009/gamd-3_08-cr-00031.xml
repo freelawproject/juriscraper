@@ -1,0 +1,146 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812dc506">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_08-cr-00031</identifier>
+<identifier type="local">P0b002ee1812dc506</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-3_08-cr-00031</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-3_08-cr-00031</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>3:08-cr-00031</caseNumber>
+ <caseOffice>Athens</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Lorenzo" fullName="Lorenzo Galarza-Aguilar" lastName="Galarza-Aguilar" role="Defendant"></party>
+ <party fullName="UNITED STATES OF AMERICA" lastName="UNITED STATES OF AMERICA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Galarza-Aguilar</title>
+ <partNumber>3:08-cr-00031</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_08-cr-00031/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:08-cr-00031;08-031</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Athens</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Lorenzo Galarza-Aguilar</displayForm>
+ <namePart type="family">Galarza-Aguilar</namePart>
+ <namePart type="given">Lorenzo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>UNITED STATES OF AMERICA</displayForm>
+ <namePart type="family">UNITED STATES OF AMERICA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-3_08-cr-00031</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>3:08-cr-00031</caseNumber>
+ <caseOffice>Athens</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Lorenzo" fullName="Lorenzo Galarza-Aguilar" lastName="Galarza-Aguilar" role="Defendant"></party>
+ <party fullName="UNITED STATES OF AMERICA" lastName="UNITED STATES OF AMERICA" role="Plaintiff"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-3_08-cr-00031-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_08-cr-00031/USCOURTS-gamd-3_08-cr-00031-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Galarza-Aguilar</title>
+  <subTitle>ORDER as to Lorenzo Galarza-Aguilar holding in abeyance consideration of pretrial release of defendant who is an illegal alien; ICE detainer filed. Defendant remanded to custody of the U. S. Marshal. Ordered by U.S. Mag Judge Claude W. Hicks, Jr. on 1/21/09. (CWH)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-3_08-cr-00031-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18132267c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_08-cr-00031/USCOURTS-gamd-3_08-cr-00031-0</identifier>
+ <identifier type="former granule identifier">gamd-3_08-cr-00031_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_08-cr-00031/USCOURTS-gamd-3_08-cr-00031-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_08-cr-00031/pdf/USCOURTS-gamd-3_08-cr-00031-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:08-cr-00031; United States of America v. Galarza-Aguilar; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-3_08-cr-00031-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-21</dateIssued>
+  <docketText>ORDER as to Lorenzo Galarza-Aguilar holding in abeyance consideration of pretrial release of defendant who is an illegal alien; ICE detainer filed. Defendant remanded to custody of the U. S. Marshal. Ordered by U.S. Mag Judge Claude W. Hicks, Jr. on 1/21/09. (CWH)</docketText>
+</extension>
+</relatedItem>
+</mods>

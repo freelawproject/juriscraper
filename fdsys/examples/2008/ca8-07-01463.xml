@@ -1,0 +1,205 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e5fae5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-07-01463</identifier>
+<identifier type="local">P0b002ee180e5fae5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-07-01463</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-07-01463</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>07-01463</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Barbara" fullName="Barbara Binnie" lastName="Binnie" role="Appellee"></party>
+ <party firstName="Richard" fullName="Richard S. Bordwell" lastName="Bordwell" middleName="S." role="Appellee"></party>
+ <party firstName="Chester" fullName="Chester J. Culver" lastName="Culver" middleName="J." role="Appellee"></party>
+ <party fullName="Iowa Board of Parole" lastName="Iowa Board of Parole" role="Appellee"></party>
+ <party firstName="Curtis" fullName="Curtis S. Jenkins" lastName="Jenkins" middleName="S." role="Appellee"></party>
+ <party firstName="Juliann" fullName="Juliann Lawrence" lastName="Lawrence" role="Appellant"></party>
+ <party firstName="Karen" fullName="Karen Muelhaupt" lastName="Muelhaupt" role="Appellee"></party>
+ <party firstName="Elizabeth" fullName="Elizabeth Robinson" lastName="Robinson" role="Appellee"></party>
+ <party firstName="Sherryl" fullName="Sherryl Ann Snodgrass" lastName="Snodgrass" middleName="Ann" role="Appellant"></party>
+</extension>
+<titleInfo>
+ <title>Sherryl Snodgrass, et al v. Elizabeth Robinson, et al</title>
+ <partNumber>07-01463</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-07-01463/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">07-01463;07-1463</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Barbara Binnie</displayForm>
+ <namePart type="family">Binnie</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Richard S. Bordwell</displayForm>
+ <namePart type="family">Bordwell</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Chester J. Culver</displayForm>
+ <namePart type="family">Culver</namePart>
+ <namePart type="given">Chester</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Iowa Board of Parole</displayForm>
+ <namePart type="family">Iowa Board of Parole</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Curtis S. Jenkins</displayForm>
+ <namePart type="family">Jenkins</namePart>
+ <namePart type="given">Curtis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Juliann Lawrence</displayForm>
+ <namePart type="family">Lawrence</namePart>
+ <namePart type="given">Juliann</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Karen Muelhaupt</displayForm>
+ <namePart type="family">Muelhaupt</namePart>
+ <namePart type="given">Karen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Elizabeth Robinson</displayForm>
+ <namePart type="family">Robinson</namePart>
+ <namePart type="given">Elizabeth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Sherryl Ann Snodgrass</displayForm>
+ <namePart type="family">Snodgrass</namePart>
+ <namePart type="given">Sherryl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-07-01463</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>07-01463</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Barbara" fullName="Barbara Binnie" lastName="Binnie" role="Appellee"></party>
+ <party firstName="Richard" fullName="Richard S. Bordwell" lastName="Bordwell" middleName="S." role="Appellee"></party>
+ <party firstName="Chester" fullName="Chester J. Culver" lastName="Culver" middleName="J." role="Appellee"></party>
+ <party fullName="Iowa Board of Parole" lastName="Iowa Board of Parole" role="Appellee"></party>
+ <party firstName="Curtis" fullName="Curtis S. Jenkins" lastName="Jenkins" middleName="S." role="Appellee"></party>
+ <party firstName="Juliann" fullName="Juliann Lawrence" lastName="Lawrence" role="Appellant"></party>
+ <party firstName="Karen" fullName="Karen Muelhaupt" lastName="Muelhaupt" role="Appellee"></party>
+ <party firstName="Elizabeth" fullName="Elizabeth Robinson" lastName="Robinson" role="Appellee"></party>
+ <party firstName="Sherryl" fullName="Sherryl Ann Snodgrass" lastName="Snodgrass" middleName="Ann" role="Appellant"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-07-01463-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-07-01463/USCOURTS-ca8-07-01463-0/mods.xml">
+ <titleInfo>
+  <title>Sherryl Snodgrass, et al v. Elizabeth Robinson, et al</title>
+  <subTitle>OPINION FILED - THE COURT: MICHAEL J. MELLOY, STEVEN M. COLLOTON and DUANE BENTON. Michael J. Melloy, Authoring Judge (PUBLISHED) [3390841] [07-1463]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-07-01463-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e6dfba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-07-01463/USCOURTS-ca8-07-01463-0</identifier>
+ <identifier type="former granule identifier">ca8-07-01463_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-07-01463/USCOURTS-ca8-07-01463-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-07-01463/pdf/USCOURTS-ca8-07-01463-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 07-01463; Sherryl Snodgrass, et al v. Elizabeth Robinson, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-07-01463-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-11</dateIssued>
+  <docketText>OPINION FILED - THE COURT: MICHAEL J. MELLOY, STEVEN M. COLLOTON and DUANE BENTON. Michael J. Melloy, Authoring Judge (PUBLISHED) [3390841] [07-1463]</docketText>
+</extension>
+</relatedItem>
+</mods>

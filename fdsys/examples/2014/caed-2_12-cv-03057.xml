@@ -1,0 +1,516 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18974eda2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-07-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-06-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057</identifier>
+<identifier type="local">P0b002ee18974eda2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-07-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-07-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-03057</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-03057</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-03057</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="California Attorney General" lastName="California Attorney General" role="Defendant"></party>
+ <party firstName="Gregory" fullName="Gregory Downs" lastName="Downs" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Downs v. California Attorney General</title>
+ <partNumber>2:12-cv-03057</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-03057;12-3057</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>California Attorney General</displayForm>
+ <namePart type="family">California Attorney General</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gregory Downs</displayForm>
+ <namePart type="family">Downs</namePart>
+ <namePart type="given">Gregory</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-03057</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-03057</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="California Attorney General" lastName="California Attorney General" role="Defendant"></party>
+ <party firstName="Gregory" fullName="Gregory Downs" lastName="Downs" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 12/26/12 ORDERING that Plaintiff shall submit, within 30 days from the date of this order, an affidavit in support of his request to proceed in forma pauperis on the form provided by the Clerk of Court, or the appropriate filing fee; Clerk of the Court is directed to send plaintiff a new Application to Proceed In Forma Pauperis By a Prisoner.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e652</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-12-26</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 12/26/12 ORDERING that Plaintiff shall submit, within 30 days from the date of this order, an affidavit in support of his request to proceed in forma pauperis on the form provided by the Clerk of Court, or the appropriate filing fee; Clerk of the Court is directed to send plaintiff a new Application to Proceed In Forma Pauperis By a Prisoner.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 2/6/13 ORDERING that the Clerk of the Court assign a district court judge to this case; and it is RECOMMENDED that this action be dismissed without prejudice. Referred to Judge Morrison C. England, Jr.; Objections to F&amp;R due within 14 days.(Dillon, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e658</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-02-06</dateIssued>
+  <docketText>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 2/6/13 ORDERING that the Clerk of the Court assign a district court judge to this case; and it is RECOMMENDED that this action be dismissed without prejudice. Referred to Judge Morrison C. England, Jr.; Objections to F&amp;R due within 14 days.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 3/1/2013 ORDERING plaintiff to submit, within 30 days, an affidavit to proceed ifp, or the appropriate filing fee; and the Clerk to send plaintiff a new ifp application; and plaintiff&apos;s failure to comply will result in the court&apos;s 2/6/13 findings and recommendations being submitted to the district court judge assigned to this case for consideration.(Yin, K)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e656</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-03-01</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 3/1/2013 ORDERING plaintiff to submit, within 30 days, an affidavit to proceed ifp, or the appropriate filing fee; and the Clerk to send plaintiff a new ifp application; and plaintiff&apos;s failure to comply will result in the court&apos;s 2/6/13 findings and recommendations being submitted to the district court judge assigned to this case for consideration.(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 04/01/13 vacating 9 FINDINGS AND RECOMMENDATIONS. Plaintiff&apos;s motion to proceed in forma pauperis 16 is denied without prejudice. Plaintiff shall submit within 30 days from the date of this order, a completed affidavit in support of his request to proceed in forma pauperis on the form provided by the clerk of the court. The clerk of the court is directed to send plaintiff a new application to proceed in forma pauperis by a prisoner. Plaintiff shall submit within 30 days from the date of this order, a certified copy of his prison trust account statement for the 6 month period immediately preceding the filing of the complaint. (Plummer, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e657</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-04-01</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 04/01/13 vacating 9 FINDINGS AND RECOMMENDATIONS. Plaintiff&apos;s motion to proceed in forma pauperis 16 is denied without prejudice. Plaintiff shall submit within 30 days from the date of this order, a completed affidavit in support of his request to proceed in forma pauperis on the form provided by the clerk of the court. The clerk of the court is directed to send plaintiff a new application to proceed in forma pauperis by a prisoner. Plaintiff shall submit within 30 days from the date of this order, a certified copy of his prison trust account statement for the 6 month period immediately preceding the filing of the complaint. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 6/4/2013 GRANTING plaintiff&apos;s 23 request to proceed IFP; plaintiff shall pay the $350.00 filing fee in accordance with the concurrent CDCR order; plaintiff&apos;s complaint is DISMISSED; plaintiff has 30 days to file an amended complaint; the Clerk shall send plaintiff a § 1983 complaint form; plaintiff&apos;s 2, 7, 14, 18, 22 requests for the appointment of counsel are DENIED; and all other outstanding motions are DENIED. (Yin, K)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e5a6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-06-04</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 6/4/2013 GRANTING plaintiff&apos;s 23 request to proceed IFP; plaintiff shall pay the $350.00 filing fee in accordance with the concurrent CDCR order; plaintiff&apos;s complaint is DISMISSED; plaintiff has 30 days to file an amended complaint; the Clerk shall send plaintiff a § 1983 complaint form; plaintiff&apos;s 2, 7, 14, 18, 22 requests for the appointment of counsel are DENIED; and all other outstanding motions are DENIED. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Gregory Downs signed by Magistrate Judge Carolyn K. Delaney on 6/4/2013. CDCR is to collect an initial partial filing fee and thereafter the balance in monthly payments and forward to the clerk until the $350 filing fee is paid in full. The Clerk is directed to serve this order and copy of plaintiff&apos;s IFP on the Director of CDCR. The Clerk to also serve Financial with a copy of this order. (cc: CDCR, Financial)(Yin, K)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e65b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-06-04</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Gregory Downs signed by Magistrate Judge Carolyn K. Delaney on 6/4/2013. CDCR is to collect an initial partial filing fee and thereafter the balance in monthly payments and forward to the clerk until the $350 filing fee is paid in full. The Clerk is directed to serve this order and copy of plaintiff&apos;s IFP on the Director of CDCR. The Clerk to also serve Financial with a copy of this order. (cc: CDCR, Financial)(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 09/24/13 ordering plaintiff is granted 30 days from the date of this order in which to file his amended complaint. All other requests made in plaintiff&apos;s 09/18/13 motion36 are denied. (Plummer, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e65a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-09-24</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 09/24/13 ordering plaintiff is granted 30 days from the date of this order in which to file his amended complaint. All other requests made in plaintiff&apos;s 09/18/13 motion36 are denied. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 10/31/13 denying 38 Motion to Appoint Counsel. (Plummer, M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e65c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-11-01</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 10/31/13 denying 38 Motion to Appoint Counsel. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 10/31/13 recommending that this action be dismissed without prejudice. Referred to Judge Morrison C. England Jr. Objections due within 14 days. (Plummer, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e659</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-11-01</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 10/31/13 recommending that this action be dismissed without prejudice. Referred to Judge Morrison C. England Jr. Objections due within 14 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>est for issuance of a writ of habeas corpus ad testificandum is DENIED. (Yin, K)ORDER signed by Magistrate Judge Carolyn K. Delaney on 12/3/2013 ORDERING that plaintiff&apos;s 42 motion for the appointment of counsel is DENIED; plantiff&apos;s 42 request for an extension of time is GRANTED; plaintiff has 30 days to file and serve objections to the 11/1/13 findings and recommendations; plaintiff&apos;s request to be transferred to the Sacramento County Jail is DENIED; plaintiff&apos;s request that the court hold a hearing is DENIED; and plaintiff&apos;s 43 requ</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e653</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-9</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-12-03</dateIssued>
+  <docketText>est for issuance of a writ of habeas corpus ad testificandum is DENIED. (Yin, K)ORDER signed by Magistrate Judge Carolyn K. Delaney on 12/3/2013 ORDERING that plaintiff&apos;s 42 motion for the appointment of counsel is DENIED; plantiff&apos;s 42 request for an extension of time is GRANTED; plaintiff has 30 days to file and serve objections to the 11/1/13 findings and recommendations; plaintiff&apos;s request to be transferred to the Sacramento County Jail is DENIED; plaintiff&apos;s request that the court hold a hearing is DENIED; and plaintiff&apos;s 43 requ</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 1/3/2014 DENYING plaintiff&apos;s 47 motion requesting recusal of the magistrate judge and plaintiff&apos;s 48 request for a stay.(Yin, K)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e655</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-10</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 1/3/2014 DENYING plaintiff&apos;s 47 motion requesting recusal of the magistrate judge and plaintiff&apos;s 48 request for a stay.(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>MEMORANDUM AND ORDER signed by Chief Judge Morrison C. England, Jr on 3/10/04 ORDERING that Plaintiff&apos;s REQUEST to AMEND this Court&apos;s Judgment 52 is DENIED. (Mena-Sanchez, L)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e5a7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-11</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2014-03-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER signed by Chief Judge Morrison C. England, Jr on 3/10/04 ORDERING that Plaintiff&apos;s REQUEST to AMEND this Court&apos;s Judgment 52 is DENIED. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr on 3/17/14 ORDERING that plaintiffs February 28, 2014 motion for reconsideration (ECF No. 52) is denied.(Dillon, M)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e654</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-12</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2014-03-17</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr on 3/17/14 ORDERING that plaintiffs February 28, 2014 motion for reconsideration (ECF No. 52) is denied.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03057-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Downs v. California Attorney General</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 06/10/14 ordering plaintiff&apos;s motion for the appointment of counsel 58 is denied. The court notes plaintiff is appealing the decision by this court to dismiss this case. Therefore, any further requests for the appointment of counsel should be directed to the Ninth Circuit. (Plummer, M)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976e651</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-13</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03057_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03057/USCOURTS-caed-2_12-cv-03057-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03057/pdf/USCOURTS-caed-2_12-cv-03057-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03057; (PC) Downs v. California Attorney General; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03057-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2014-06-10</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 06/10/14 ordering plaintiff&apos;s motion for the appointment of counsel 58 is denied. The court notes plaintiff is appealing the decision by this court to dismiss this case. Therefore, any further requests for the appointment of counsel should be directed to the Ninth Circuit. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,159 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181705cd2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_11-cv-03194</identifier>
+<identifier type="local">P0b002ee181705cd2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_11-cv-03194</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_11-cv-03194</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:11-cv-03194</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Glenn" fullName="Glenn A. Heath" lastName="Heath" middleName="A." role="Petitioner"></party>
+ <party fullName="Kansas Parole Board" lastName="Kansas Parole Board" role="Respondent"></party>
+ <party firstName="David" fullName="David R. McKune" lastName="McKune" middleName="R." role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Heath v. McKune et al</title>
+ <partNumber>5:11-cv-03194</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_11-cv-03194/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:11-cv-03194;11-3194</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Glenn A. Heath</displayForm>
+ <namePart type="family">Heath</namePart>
+ <namePart type="given">Glenn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Kansas Parole Board</displayForm>
+ <namePart type="family">Kansas Parole Board</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>David R. McKune</displayForm>
+ <namePart type="family">McKune</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_11-cv-03194</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:11-cv-03194</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Glenn" fullName="Glenn A. Heath" lastName="Heath" middleName="A." role="Petitioner"></party>
+ <party fullName="Kansas Parole Board" lastName="Kansas Parole Board" role="Respondent"></party>
+ <party firstName="David" fullName="David R. McKune" lastName="McKune" middleName="R." role="Respondent"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_11-cv-03194-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_11-cv-03194/USCOURTS-ksd-5_11-cv-03194-0/mods.xml">
+ <titleInfo>
+  <title>Heath v. McKune et al</title>
+  <subTitle>ORDER ENTERED: Petitioner&apos;s challenge to his conviction and sentence, which may only be brought under 28 U.S.C. 2254, is dismissed as improperly brought in this 2241 petition and for lack of jurisdiction. Petitioner is granted twenty (20) days in which to show that he has fully and properly exhausted all available administrative and state court remedies on his claims challenging the denial of his parole application and to show cause why these claims and this action should not be dismissed. Signed by Senior District Judge Sam A. Crow on 1/3/2012. (Mailed to pro se party Glenn A. Heath by regular mail.) (smnd)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_11-cv-03194-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181707a8f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_11-cv-03194/USCOURTS-ksd-5_11-cv-03194-0</identifier>
+ <identifier type="former granule identifier">ksd-5_11-cv-03194_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_11-cv-03194/USCOURTS-ksd-5_11-cv-03194-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_11-cv-03194/pdf/USCOURTS-ksd-5_11-cv-03194-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-03194; Heath v. McKune et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_11-cv-03194-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-03</dateIssued>
+  <docketText>ORDER ENTERED: Petitioner&apos;s challenge to his conviction and sentence, which may only be brought under 28 U.S.C. 2254, is dismissed as improperly brought in this 2241 petition and for lack of jurisdiction. Petitioner is granted twenty (20) days in which to show that he has fully and properly exhausted all available administrative and state court remedies on his claims challenging the denial of his parole application and to show cause why these claims and this action should not be dismissed. Signed by Senior District Judge Sam A. Crow on 1/3/2012. (Mailed to pro se party Glenn A. Heath by regular mail.) (smnd)</docketText>
+</extension>
+</relatedItem>
+</mods>

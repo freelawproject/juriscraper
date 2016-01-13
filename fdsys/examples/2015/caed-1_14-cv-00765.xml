@@ -1,0 +1,703 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8be55d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765</identifier>
+<identifier type="local">P0b002ee18a8be55d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cv-00765</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00765</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00765</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>899</natureSuitCode>
+ <natureSuit>Other Statutes - Administrative Procedure Act/Review or Appeal of Agency Decision</natureSuit>
+ <cause>05:551 Administrative Procedure Act</cause>
+ <party fullName="Arvin-Edison Water Storage District" lastName="Arvin-Edison Water Storage District" role="Plaintiff"></party>
+ <party fullName="Delano-Earlimart Irrigation District" lastName="Delano-Earlimart Irrigation District" role="Plaintiff"></party>
+ <party fullName="Friant Water Authority" lastName="Friant Water Authority" role="Plaintiff"></party>
+ <party fullName="Grassland Resource Conservation District" lastName="Grassland Resource Conservation District" role="Intervenor"></party>
+ <party fullName="Grassland Water District" lastName="Grassland Water District" role="Intervenor"></party>
+ <party firstName="Michael" fullName="Michael Jackson" lastName="Jackson" role="Defendant"></party>
+ <party firstName="Sally" fullName="Sally Jewell" lastName="Jewell" role="Defendant"></party>
+ <party fullName="Kaweah Delta Water Conservation District" lastName="Kaweah Delta Water Conservation District" role="Plaintiff"></party>
+ <party fullName="Lindmore Irrigation District" lastName="Lindmore Irrigation District" role="Plaintiff"></party>
+ <party fullName="Lindsay-Strathmore Irrigation District" lastName="Lindsay-Strathmore Irrigation District" role="Plaintiff"></party>
+ <party fullName="Lower Tule River Irrigation District" lastName="Lower Tule River Irrigation District" role="Plaintiff"></party>
+ <party fullName="Madera Irrigation District" lastName="Madera Irrigation District" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Murillo" lastName="Murillo" role="Defendant"></party>
+ <party fullName="Orange Cove Irrigation District" lastName="Orange Cove Irrigation District" role="Plaintiff"></party>
+ <party firstName="Lowell" fullName="Lowell Pimley" lastName="Pimley" role="Defendant"></party>
+ <party fullName="Pixley Irrigation District" lastName="Pixley Irrigation District" role="Plaintiff"></party>
+ <party fullName="Porterville Irrigation District" lastName="Porterville Irrigation District" role="Plaintiff"></party>
+ <party fullName="San Joaquin River Exchange Contractors Water Authority" lastName="San Joaquin River Exchange Contractors Water Authority" role="Intervenor"></party>
+ <party fullName="San Luis &amp; Delta-Mendota Water Authority" lastName="San Luis &amp; Delta-Mendota Water Authority" role="Intervenor Defendant"></party>
+ <party fullName="Saucelito Irrigation District" lastName="Saucelito Irrigation District" role="Plaintiff"></party>
+ <party fullName="Shafter-Wasco Irrigation District" lastName="Shafter-Wasco Irrigation District" role="Plaintiff"></party>
+ <party fullName="Stone Corral Irrigation District" lastName="Stone Corral Irrigation District" role="Plaintiff"></party>
+ <party fullName="Tea Pot Dome Water District" lastName="Tea Pot Dome Water District" role="Plaintiff"></party>
+ <party fullName="Terra Bella Irrigation District" lastName="Terra Bella Irrigation District" role="Plaintiff"></party>
+ <party fullName="Tulare Irrigation District" lastName="Tulare Irrigation District" role="Plaintiff"></party>
+ <party fullName="United States Bureau of Reclamation" lastName="United States Bureau of Reclamation" role="Defendant"></party>
+ <party fullName="United States Department of the Interior" lastName="United States Department of the Interior" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+ <party fullName="Westlands Water District" lastName="Westlands Water District" role="Intervenor Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Friant Water Authority et al v. Jewell et al</title>
+ <partNumber>1:14-cv-00765</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-00765;14-765</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Arvin-Edison Water Storage District</displayForm>
+ <namePart type="family">Arvin-Edison Water Storage District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Delano-Earlimart Irrigation District</displayForm>
+ <namePart type="family">Delano-Earlimart Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Friant Water Authority</displayForm>
+ <namePart type="family">Friant Water Authority</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Grassland Resource Conservation District</displayForm>
+ <namePart type="family">Grassland Resource Conservation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor</description>
+</name>
+<name type="personal">
+ <displayForm>Grassland Water District</displayForm>
+ <namePart type="family">Grassland Water District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Jackson</displayForm>
+ <namePart type="family">Jackson</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sally Jewell</displayForm>
+ <namePart type="family">Jewell</namePart>
+ <namePart type="given">Sally</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kaweah Delta Water Conservation District</displayForm>
+ <namePart type="family">Kaweah Delta Water Conservation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lindmore Irrigation District</displayForm>
+ <namePart type="family">Lindmore Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lindsay-Strathmore Irrigation District</displayForm>
+ <namePart type="family">Lindsay-Strathmore Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lower Tule River Irrigation District</displayForm>
+ <namePart type="family">Lower Tule River Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Madera Irrigation District</displayForm>
+ <namePart type="family">Madera Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>David Murillo</displayForm>
+ <namePart type="family">Murillo</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Orange Cove Irrigation District</displayForm>
+ <namePart type="family">Orange Cove Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lowell Pimley</displayForm>
+ <namePart type="family">Pimley</namePart>
+ <namePart type="given">Lowell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pixley Irrigation District</displayForm>
+ <namePart type="family">Pixley Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Porterville Irrigation District</displayForm>
+ <namePart type="family">Porterville Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>San Joaquin River Exchange Contractors Water Authority</displayForm>
+ <namePart type="family">San Joaquin River Exchange Contractors Water Authority</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor</description>
+</name>
+<name type="personal">
+ <displayForm>San Luis &amp; Delta-Mendota Water Authority</displayForm>
+ <namePart type="family">San Luis &amp; Delta-Mendota Water Authority</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Saucelito Irrigation District</displayForm>
+ <namePart type="family">Saucelito Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Shafter-Wasco Irrigation District</displayForm>
+ <namePart type="family">Shafter-Wasco Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Stone Corral Irrigation District</displayForm>
+ <namePart type="family">Stone Corral Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tea Pot Dome Water District</displayForm>
+ <namePart type="family">Tea Pot Dome Water District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Terra Bella Irrigation District</displayForm>
+ <namePart type="family">Terra Bella Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tulare Irrigation District</displayForm>
+ <namePart type="family">Tulare Irrigation District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>United States Bureau of Reclamation</displayForm>
+ <namePart type="family">United States Bureau of Reclamation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States Department of the Interior</displayForm>
+ <namePart type="family">United States Department of the Interior</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Westlands Water District</displayForm>
+ <namePart type="family">Westlands Water District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00765</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00765</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>899</natureSuitCode>
+ <natureSuit>Other Statutes - Administrative Procedure Act/Review or Appeal of Agency Decision</natureSuit>
+ <cause>05:551 Administrative Procedure Act</cause>
+ <party fullName="Arvin-Edison Water Storage District" lastName="Arvin-Edison Water Storage District" role="Plaintiff"></party>
+ <party fullName="Delano-Earlimart Irrigation District" lastName="Delano-Earlimart Irrigation District" role="Plaintiff"></party>
+ <party fullName="Friant Water Authority" lastName="Friant Water Authority" role="Plaintiff"></party>
+ <party fullName="Grassland Resource Conservation District" lastName="Grassland Resource Conservation District" role="Intervenor"></party>
+ <party fullName="Grassland Water District" lastName="Grassland Water District" role="Intervenor"></party>
+ <party firstName="Michael" fullName="Michael Jackson" lastName="Jackson" role="Defendant"></party>
+ <party firstName="Sally" fullName="Sally Jewell" lastName="Jewell" role="Defendant"></party>
+ <party fullName="Kaweah Delta Water Conservation District" lastName="Kaweah Delta Water Conservation District" role="Plaintiff"></party>
+ <party fullName="Lindmore Irrigation District" lastName="Lindmore Irrigation District" role="Plaintiff"></party>
+ <party fullName="Lindsay-Strathmore Irrigation District" lastName="Lindsay-Strathmore Irrigation District" role="Plaintiff"></party>
+ <party fullName="Lower Tule River Irrigation District" lastName="Lower Tule River Irrigation District" role="Plaintiff"></party>
+ <party fullName="Madera Irrigation District" lastName="Madera Irrigation District" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Murillo" lastName="Murillo" role="Defendant"></party>
+ <party fullName="Orange Cove Irrigation District" lastName="Orange Cove Irrigation District" role="Plaintiff"></party>
+ <party firstName="Lowell" fullName="Lowell Pimley" lastName="Pimley" role="Defendant"></party>
+ <party fullName="Pixley Irrigation District" lastName="Pixley Irrigation District" role="Plaintiff"></party>
+ <party fullName="Porterville Irrigation District" lastName="Porterville Irrigation District" role="Plaintiff"></party>
+ <party fullName="San Joaquin River Exchange Contractors Water Authority" lastName="San Joaquin River Exchange Contractors Water Authority" role="Intervenor"></party>
+ <party fullName="San Luis &amp; Delta-Mendota Water Authority" lastName="San Luis &amp; Delta-Mendota Water Authority" role="Intervenor Defendant"></party>
+ <party fullName="Saucelito Irrigation District" lastName="Saucelito Irrigation District" role="Plaintiff"></party>
+ <party fullName="Shafter-Wasco Irrigation District" lastName="Shafter-Wasco Irrigation District" role="Plaintiff"></party>
+ <party fullName="Stone Corral Irrigation District" lastName="Stone Corral Irrigation District" role="Plaintiff"></party>
+ <party fullName="Tea Pot Dome Water District" lastName="Tea Pot Dome Water District" role="Plaintiff"></party>
+ <party fullName="Terra Bella Irrigation District" lastName="Terra Bella Irrigation District" role="Plaintiff"></party>
+ <party fullName="Tulare Irrigation District" lastName="Tulare Irrigation District" role="Plaintiff"></party>
+ <party fullName="United States Bureau of Reclamation" lastName="United States Bureau of Reclamation" role="Defendant"></party>
+ <party fullName="United States Department of the Interior" lastName="United States Department of the Interior" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+ <party fullName="Westlands Water District" lastName="Westlands Water District" role="Intervenor Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00765-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-0/mods.xml">
+ <titleInfo>
+  <title>Friant Water Authority et al v. Jewell et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER RE: SAN LUIS &amp; DELTA MENDOTA WATER AUTHORITY&apos;S AND WESTLANDS&apos; MOTION TO INTERVENE 31 is GRANTED signed by District Judge Lawrence J. O&apos;Neill on May 27, 2014. (Munoz, I)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5c26</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00765_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00765; Friant Water Authority et al v. Jewell et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00765-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-05-27</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER RE: SAN LUIS &amp; DELTA MENDOTA WATER AUTHORITY&apos;S AND WESTLANDS&apos; MOTION TO INTERVENE 31 is GRANTED signed by District Judge Lawrence J. O&apos;Neill on May 27, 2014. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00765-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-1/mods.xml">
+ <titleInfo>
+  <title>Friant Water Authority et al v. Jewell et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER RE EXCHANGE CONTRACTORS&apos; MOTION TO INTERVENE 24 is GRANTED signed by District Judge Lawrence J. O&apos;Neill on May 27, 2014. (Munoz, I)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5b52</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00765_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00765; Friant Water Authority et al v. Jewell et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00765-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-05-27</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER RE EXCHANGE CONTRACTORS&apos; MOTION TO INTERVENE 24 is GRANTED signed by District Judge Lawrence J. O&apos;Neill on May 27, 2014. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00765-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-2/mods.xml">
+ <titleInfo>
+  <title>Friant Water Authority et al v. Jewell et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER DENYING MOTION FOR TEMPORARY RESTRAINING ORDER 3 signed by District Judge Lawrence J. O&apos;Neill on May 27, 2014. (Munoz, I)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5c1e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00765_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00765; Friant Water Authority et al v. Jewell et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00765-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-05-27</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER DENYING MOTION FOR TEMPORARY RESTRAINING ORDER 3 signed by District Judge Lawrence J. O&apos;Neill on May 27, 2014. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00765-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-3/mods.xml">
+ <titleInfo>
+  <title>Friant Water Authority et al v. Jewell et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 5/27/14 ORDERING that he DECLINES to relate the cases. (Kastilahn, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5c28</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-3</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00765_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00765; Friant Water Authority et al v. Jewell et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00765-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-05-28</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 5/27/14 ORDERING that he DECLINES to relate the cases. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00765-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-4/mods.xml">
+ <titleInfo>
+  <title>Friant Water Authority et al v. Jewell et al</title>
+  <subTitle>ORDER GRANTING Grassland Defendants&apos; Unopposed Motion for Extension of Time to Respond to Plaintiffs&apos; and Intervenors&apos; Complaints (Doc. 47), Signed by Magistrate Judge Barbara A. McAuliffe on 6/6/2014. (Arellano, S.)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5c24</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-4</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00765_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00765; Friant Water Authority et al v. Jewell et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00765-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-06-09</dateIssued>
+  <docketText>ORDER GRANTING Grassland Defendants&apos; Unopposed Motion for Extension of Time to Respond to Plaintiffs&apos; and Intervenors&apos; Complaints (Doc. 47), Signed by Magistrate Judge Barbara A. McAuliffe on 6/6/2014. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00765-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-5/mods.xml">
+ <titleInfo>
+  <title>Friant Water Authority et al v. Jewell et al</title>
+  <subTitle>STIPULATION Extending Time to Respond to Exchange Contractors&apos; Complaint in Intervention; ORDER - Plaintiffs, Federal Defendants, and SLDMWA/Westlands shall have until 9/8/2014 to respond. signed by Magistrate Judge Barbara A. McAuliffe on 7/1/2014. (Herman, H)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5c27</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-5</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00765_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00765; Friant Water Authority et al v. Jewell et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00765-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-07-02</dateIssued>
+  <docketText>STIPULATION Extending Time to Respond to Exchange Contractors&apos; Complaint in Intervention; ORDER - Plaintiffs, Federal Defendants, and SLDMWA/Westlands shall have until 9/8/2014 to respond. signed by Magistrate Judge Barbara A. McAuliffe on 7/1/2014. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00765-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-6/mods.xml">
+ <titleInfo>
+  <title>Friant Water Authority et al v. Jewell et al</title>
+  <subTitle>STIPULATION Extending Time for Plaintiffs to Amend Complaint as to SLDMWA/Westlands; ORDER - shall have until 7/21/2014. signed by Magistrate Judge Barbara A. McAuliffe on 7/1/2014. (Herman, H)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5c23</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-6</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00765_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00765; Friant Water Authority et al v. Jewell et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00765-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-07-02</dateIssued>
+  <docketText>STIPULATION Extending Time for Plaintiffs to Amend Complaint as to SLDMWA/Westlands; ORDER - shall have until 7/21/2014. signed by Magistrate Judge Barbara A. McAuliffe on 7/1/2014. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00765-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-7/mods.xml">
+ <titleInfo>
+  <title>Friant Water Authority et al v. Jewell et al</title>
+  <subTitle>STIPULATION Extending Time for (1) Plaintiffs to Amend Complaint as a Matter of Right, (2) Defendants to Respond to Plaintiffs&apos; Complaint, and (3) Plaintiffs and Defendants to Respond to Exchange Contractors&apos; Complaint in Intervention; ORDER Thereon: 1) Plaintiffs have until 7/28/2014 to amend their Complaint; 2) Defendants have until 9/19/2014 to respond; and 3) Plaintiffs and Defendants have until 9/19/2014 to respond to Exchange Contractors&apos; Complaint in Intervention. signed by Magistrate Judge Barbara A. McAuliffe on 7/21/2014. (Herman, H)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5c21</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-7</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00765_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00765; Friant Water Authority et al v. Jewell et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00765-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-07-22</dateIssued>
+  <docketText>STIPULATION Extending Time for (1) Plaintiffs to Amend Complaint as a Matter of Right, (2) Defendants to Respond to Plaintiffs&apos; Complaint, and (3) Plaintiffs and Defendants to Respond to Exchange Contractors&apos; Complaint in Intervention; ORDER Thereon: 1) Plaintiffs have until 7/28/2014 to amend their Complaint; 2) Defendants have until 9/19/2014 to respond; and 3) Plaintiffs and Defendants have until 9/19/2014 to respond to Exchange Contractors&apos; Complaint in Intervention. signed by Magistrate Judge Barbara A. McAuliffe on 7/21/2014. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00765-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-8/mods.xml">
+ <titleInfo>
+  <title>Friant Water Authority et al v. Jewell et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER GRANTING GRASSLANDS PARTIES MOTION TO INTERVENE FOR THE LIMITED PURPOSE OF OPPOSING MOTION TO TRANSFER (DOCS. 69 &amp; 73) signed by District Judge Lawrence J. O&apos;Neill on October 17, 2014. (Munoz, I)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5c22</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-8</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00765_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00765; Friant Water Authority et al v. Jewell et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00765-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-10-17</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER GRANTING GRASSLANDS PARTIES MOTION TO INTERVENE FOR THE LIMITED PURPOSE OF OPPOSING MOTION TO TRANSFER (DOCS. 69 &amp; 73) signed by District Judge Lawrence J. O&apos;Neill on October 17, 2014. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00765-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-9/mods.xml">
+ <titleInfo>
+  <title>Friant Water Authority et al v. Jewell et al</title>
+  <subTitle>MEMORANDUM DECISION and ORDER re 71 Plaintiffs&apos; Motion to Transfer to Court of Federal Claims, signed by District Judge Lawrence J. O&apos;Neill on 12/1/14. (Verduzco, M)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5c1f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-9</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00765_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00765; Friant Water Authority et al v. Jewell et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00765-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-12-01</dateIssued>
+  <docketText>MEMORANDUM DECISION and ORDER re 71 Plaintiffs&apos; Motion to Transfer to Court of Federal Claims, signed by District Judge Lawrence J. O&apos;Neill on 12/1/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00765-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-10/mods.xml">
+ <titleInfo>
+  <title>Friant Water Authority et al v. Jewell et al</title>
+  <subTitle>MEMORANDUM Decision and ORDER re Plaintiffs&apos; Motion to Transfer to Court of Federal Claims, signed by District Judge Lawrence J. O&apos;Neill on 1/5/2015. CASE CLOSED. (Marrujo, C)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5c25</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-10</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00765_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00765; Friant Water Authority et al v. Jewell et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00765-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM Decision and ORDER re Plaintiffs&apos; Motion to Transfer to Court of Federal Claims, signed by District Judge Lawrence J. O&apos;Neill on 1/5/2015. CASE CLOSED. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00765-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-11/mods.xml">
+ <titleInfo>
+  <title>Friant Water Authority et al v. Jewell et al</title>
+  <subTitle>*CORRECT* ORDER re Voluntary and Stipulated Dismissal of All Remaining Claims and to Close Case, signed by District Judge Lawrence J. O&apos;Neill on 1/6/2015. CASE CLOSED. (Marrujo, C)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5c20</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-11</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00765_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00765/USCOURTS-caed-1_14-cv-00765-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00765/pdf/USCOURTS-caed-1_14-cv-00765-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00765; Friant Water Authority et al v. Jewell et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00765-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>*CORRECT* ORDER re Voluntary and Stipulated Dismissal of All Remaining Claims and to Close Case, signed by District Judge Lawrence J. O&apos;Neill on 1/6/2015. CASE CLOSED. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+</mods>

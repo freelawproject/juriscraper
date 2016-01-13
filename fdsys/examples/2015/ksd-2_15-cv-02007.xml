@@ -1,0 +1,179 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8a9679">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_15-cv-02007</identifier>
+<identifier type="local">P0b002ee18a8a9679</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_15-cv-02007</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_15-cv-02007</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:15-cv-02007</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>380</natureSuitCode>
+ <natureSuit>Other Personal Property Damage</natureSuit>
+ <cause>28:1441 Petition for Removal- Property Damage</cause>
+ <party fullName="Crooked M Farms Partnership" lastName="Crooked M Farms Partnership" role="Plaintiff"></party>
+ <party firstName="Billy" fullName="Billy Miller II" generation="II" lastName="Miller" role="Plaintiff"></party>
+ <party firstName="Donna" fullName="Donna Miller" lastName="Miller" role="Plaintiff"></party>
+ <party fullName="Syngenta AG" lastName="Syngenta AG" role="Defendant"></party>
+ <party fullName="Syngenta Seeds, Inc." lastName="Syngenta Seeds, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Miller et al v. Syngenta Seeds Inc</title>
+ <partNumber>2:15-cv-02007</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_15-cv-02007/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:15-cv-02007;15-2007</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Crooked M Farms Partnership</displayForm>
+ <namePart type="family">Crooked M Farms Partnership</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Billy Miller II</displayForm>
+ <namePart type="family">Miller</namePart>
+ <namePart type="given">Billy</namePart>
+ <namePart type="termsOfAddress">II</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Donna Miller</displayForm>
+ <namePart type="family">Miller</namePart>
+ <namePart type="given">Donna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Syngenta AG</displayForm>
+ <namePart type="family">Syngenta AG</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Syngenta Seeds, Inc.</displayForm>
+ <namePart type="family">Syngenta Seeds, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_15-cv-02007</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:15-cv-02007</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>380</natureSuitCode>
+ <natureSuit>Other Personal Property Damage</natureSuit>
+ <cause>28:1441 Petition for Removal- Property Damage</cause>
+ <party fullName="Crooked M Farms Partnership" lastName="Crooked M Farms Partnership" role="Plaintiff"></party>
+ <party firstName="Billy" fullName="Billy Miller II" generation="II" lastName="Miller" role="Plaintiff"></party>
+ <party firstName="Donna" fullName="Donna Miller" lastName="Miller" role="Plaintiff"></party>
+ <party fullName="Syngenta AG" lastName="Syngenta AG" role="Defendant"></party>
+ <party fullName="Syngenta Seeds, Inc." lastName="Syngenta Seeds, Inc." role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_15-cv-02007-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_15-cv-02007/USCOURTS-ksd-2_15-cv-02007-0/mods.xml">
+ <titleInfo>
+  <title>Miller et al v. Syngenta Seeds Inc</title>
+  <subTitle>CONDITIONAL TRANSFER ORDER 1 (CTO-1) directing the transfer of this case to the District of Kansas MDL 2591. Signed by Jeffery N. Luthi, Clerk of the US Panel on Multidistrict Litigation on 12/29/2014. (rhm)[Transferred from Arkansas Eastern on 1/5/2015.]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_15-cv-02007/pdf/USCOURTS-ksd-2_15-cv-02007-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8abeb2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_15-cv-02007/USCOURTS-ksd-2_15-cv-02007-0</identifier>
+ <identifier type="former granule identifier">ksd-2_15-cv-02007_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_15-cv-02007/USCOURTS-ksd-2_15-cv-02007-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_15-cv-02007/pdf/USCOURTS-ksd-2_15-cv-02007-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:15-cv-02007; Miller et al v. Syngenta Seeds Inc; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_15-cv-02007-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>CONDITIONAL TRANSFER ORDER 1 (CTO-1) directing the transfer of this case to the District of Kansas MDL 2591. Signed by Jeffery N. Luthi, Clerk of the US Panel on Multidistrict Litigation on 12/29/2014. (rhm)[Transferred from Arkansas Eastern on 1/5/2015.]</docketText>
+</extension>
+</relatedItem>
+</mods>

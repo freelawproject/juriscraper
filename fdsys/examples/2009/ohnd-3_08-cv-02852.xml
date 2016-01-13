@@ -1,0 +1,170 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815a4490">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_08-cv-02852</identifier>
+<identifier type="local">P0b002ee1815a4490</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_08-cv-02852</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_08-cv-02852</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:08-cv-02852</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party firstName="Mary" fullName="Mary Campos" lastName="Campos" role="Plaintiff"></party>
+ <party firstName="Belen" fullName="Belen Cuellar" lastName="Cuellar" role="Defendant"></party>
+ <party firstName="Francisco" fullName="Francisco Cuellar" lastName="Cuellar" role="Plaintiff"></party>
+ <party fullName="General Motors Corporation" lastName="General Motors Corporation" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Campos v. Cuellar</title>
+ <partNumber>3:08-cv-02852</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_08-cv-02852/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:08-cv-02852;08-2852</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mary Campos</displayForm>
+ <namePart type="family">Campos</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Belen Cuellar</displayForm>
+ <namePart type="family">Cuellar</namePart>
+ <namePart type="given">Belen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Francisco Cuellar</displayForm>
+ <namePart type="family">Cuellar</namePart>
+ <namePart type="given">Francisco</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>General Motors Corporation</displayForm>
+ <namePart type="family">General Motors Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_08-cv-02852</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:08-cv-02852</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party firstName="Mary" fullName="Mary Campos" lastName="Campos" role="Plaintiff"></party>
+ <party firstName="Belen" fullName="Belen Cuellar" lastName="Cuellar" role="Defendant"></party>
+ <party firstName="Francisco" fullName="Francisco Cuellar" lastName="Cuellar" role="Plaintiff"></party>
+ <party fullName="General Motors Corporation" lastName="General Motors Corporation" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_08-cv-02852-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_08-cv-02852/USCOURTS-ohnd-3_08-cv-02852-0/mods.xml">
+ <titleInfo>
+  <title>Campos v. Cuellar</title>
+  <subTitle>MEMORANDUM OPINION&amp;ORDER deft GM&apos;s motion Motion for summary judgment is granted; (Related Doc # 7); granting GM&apos;s Motion to quash and it&apos;s motion for sanctions denied. (Related Doc # 9). Any further disagreement with this Court&apos;s rulings can be challenged by a direct appeal, not by repetitious filings in this Court. (Motion for leave to file sur-reply moot) (Related Doc # 16). Judge Jack Zouhary on 1/30/09 (B,CJ)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_08-cv-02852-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18167bee9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_08-cv-02852/USCOURTS-ohnd-3_08-cv-02852-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_08-cv-02852_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_08-cv-02852/USCOURTS-ohnd-3_08-cv-02852-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_08-cv-02852/pdf/USCOURTS-ohnd-3_08-cv-02852-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:08-cv-02852; Campos v. Cuellar; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_08-cv-02852-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-30</dateIssued>
+  <docketText>MEMORANDUM OPINION&amp;ORDER deft GM&apos;s motion Motion for summary judgment is granted; (Related Doc # 7); granting GM&apos;s Motion to quash and it&apos;s motion for sanctions denied. (Related Doc # 9). Any further disagreement with this Court&apos;s rulings can be challenged by a direct appeal, not by repetitious filings in this Court. (Motion for leave to file sur-reply moot) (Related Doc # 16). Judge Jack Zouhary on 1/30/09 (B,CJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,178 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e532eb">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-04-06064</identifier>
+<identifier type="local">P0b002ee180e532eb</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-04-06064</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-04-06064</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>04-06064</caseNumber>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party firstName="Robert" fullName="Robert Klesalek" lastName="Klesalek" role="Appellee"></party>
+ <party firstName="William" fullName="William A. Klesalek" lastName="Klesalek" middleName="A." role="Appellant"></party>
+ <party firstName="William" fullName="William A. Klesalek" lastName="Klesalek" middleName="A." role="Not Party"></party>
+ <party firstName="Richard" fullName="Richard Seeman" lastName="Seeman" role="Appellee"></party>
+ <party firstName="Darrell" fullName="Darrell Suchy" lastName="Suchy" role="Appellee"></party>
+ <party firstName="Connie" fullName="Connie Thompson" lastName="Thompson" role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>Robert Klesalek v. William A. Klesalek</title>
+ <partNumber>04-06064</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-04-06064/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">04-06064;04-6064</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Robert Klesalek</displayForm>
+ <namePart type="family">Klesalek</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>William A. Klesalek</displayForm>
+ <namePart type="family">Klesalek</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>William A. Klesalek</displayForm>
+ <namePart type="family">Klesalek</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Not Party</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Seeman</displayForm>
+ <namePart type="family">Seeman</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Darrell Suchy</displayForm>
+ <namePart type="family">Suchy</namePart>
+ <namePart type="given">Darrell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Connie Thompson</displayForm>
+ <namePart type="family">Thompson</namePart>
+ <namePart type="given">Connie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-04-06064</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>04-06064</caseNumber>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party firstName="Robert" fullName="Robert Klesalek" lastName="Klesalek" role="Appellee"></party>
+ <party firstName="William" fullName="William A. Klesalek" lastName="Klesalek" middleName="A." role="Appellant"></party>
+ <party firstName="William" fullName="William A. Klesalek" lastName="Klesalek" middleName="A." role="Not Party"></party>
+ <party firstName="Richard" fullName="Richard Seeman" lastName="Seeman" role="Appellee"></party>
+ <party firstName="Darrell" fullName="Darrell Suchy" lastName="Suchy" role="Appellee"></party>
+ <party firstName="Connie" fullName="Connie Thompson" lastName="Thompson" role="Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-04-06064-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-04-06064/USCOURTS-ca8-04-06064-0/mods.xml">
+ <titleInfo>
+  <title>Robert Klesalek v. William A. Klesalek</title>
+  <subTitle>THE COURT: Robert J. Kressel, Arthur B. Federman, Timothy J. Mahoney. OPINION FILED by Arthur B. Federman, Authoring Judge PUBLISHED. [04-6064] [1994030]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-04-06064-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e55c8c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-04-06064/USCOURTS-ca8-04-06064-0</identifier>
+ <identifier type="former granule identifier">ca8-04-06064_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-04-06064/USCOURTS-ca8-04-06064-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-04-06064/pdf/USCOURTS-ca8-04-06064-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 04-06064; Robert Klesalek v. William A. Klesalek; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-04-06064-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-06</dateIssued>
+  <docketText>THE COURT: Robert J. Kressel, Arthur B. Federman, Timothy J. Mahoney. OPINION FILED by Arthur B. Federman, Authoring Judge PUBLISHED. [04-6064] [1994030]</docketText>
+</extension>
+</relatedItem>
+</mods>

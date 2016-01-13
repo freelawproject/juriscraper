@@ -1,0 +1,510 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bd71e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104</identifier>
+<identifier type="local">P0b002ee18a8bd71e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_03-cr-00104</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_03-cr-00104</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:03-cr-00104</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Cy" fullName="Cy Irving Brown" lastName="Brown" middleName="Irving" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Brown</title>
+ <partNumber>2:03-cr-00104</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:03-cr-00104;03-104</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Cy Irving Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Cy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_03-cr-00104</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:03-cr-00104</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Cy" fullName="Cy Irving Brown" lastName="Brown" middleName="Irving" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Morrison C. England Jr. on 8/1/06 to revise briefing schedule. Opening Briefs due by 8/29/2006. Responses due by 9/12/2006. Replies due by 10/3/2006. Re-sentencing Hearing set for 10/10/2006 at 08:30 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. (Marcotte, D)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c284e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-0</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-08-02</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Morrison C. England Jr. on 8/1/06 to revise briefing schedule. Opening Briefs due by 8/29/2006. Responses due by 9/12/2006. Replies due by 10/3/2006. Re-sentencing Hearing set for 10/10/2006 at 08:30 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. (Marcotte, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>STIPULATION and ORDER 92 signed by Judge Morrison C. England Jr. on 8/14/06 ORDERING the 10/10/06 re-sentencing hearing VACATED. Defendant elects to stand on the sentence originally imposed by the Court. (Krueger, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c2e5c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-1</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-08-15</dateIssued>
+  <docketText>STIPULATION and ORDER 92 signed by Judge Morrison C. England Jr. on 8/14/06 ORDERING the 10/10/06 re-sentencing hearing VACATED. Defendant elects to stand on the sentence originally imposed by the Court. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER signed by Judge Gregory G. Hollows on 12/04/07 ORDERING that respondent USA is directed to file answer w/i 30 days to movant Brown&apos;s 96 MOTION to VACATE. Movant&apos;s traverse, if any, is due 30 days thereafter. Clerk to serve this order and movant&apos;s motion on the U.S. Attorney (cc: USA). (Benson, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c2850</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-2</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-12-04</dateIssued>
+  <docketText>ORDER signed by Judge Gregory G. Hollows on 12/04/07 ORDERING that respondent USA is directed to file answer w/i 30 days to movant Brown&apos;s 96 MOTION to VACATE. Movant&apos;s traverse, if any, is due 30 days thereafter. Clerk to serve this order and movant&apos;s motion on the U.S. Attorney (cc: USA). (Benson, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER as to Cy Irving Brown signed by Magistrate Judge Gregory G. Hollows on 3/10/08 ORDERING that respondent has set the 2/26/08, motion for a hearing on 3/19/08 on the court&apos;s calendar, any such hearing is VACATED. Movant has 30 days from the date of this order to file either an opposition or, within that same period, to stipulate to a waiver of attorney client privilege regarding specified areas and/or to the unsealing of certain sealed documents. If movant elects to oppose the motion, respondent will have 15 days to file a reply to any timely opposition, after which the motion will be deemed submitted. Respondent is GRANTED an additional extension of time of 60 days to file a response to the § 2255 motion. (Anderson, J)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c2851</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-3</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-03-10</dateIssued>
+  <docketText>ORDER as to Cy Irving Brown signed by Magistrate Judge Gregory G. Hollows on 3/10/08 ORDERING that respondent has set the 2/26/08, motion for a hearing on 3/19/08 on the court&apos;s calendar, any such hearing is VACATED. Movant has 30 days from the date of this order to file either an opposition or, within that same period, to stipulate to a waiver of attorney client privilege regarding specified areas and/or to the unsealing of certain sealed documents. If movant elects to oppose the motion, respondent will have 15 days to file a reply to any timely opposition, after which the motion will be deemed submitted. Respondent is GRANTED an additional extension of time of 60 days to file a response to the § 2255 motion. (Anderson, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 5/15/2008 ORDERING 103 The Clerk to unseal all portions of the transcripts of the 11/20/2003 and 12/9/2003 80 proceedings in this case; Attorneys Dawson and Balazs, within 20 days, to transmit to counsel for the US all documents related to their communications with Defendant Brown; Dawson and Balazs, within 20 days, to assist counsel for the US by submitting for interviews as reasonably requested by the US concerning their communications with Dft Brown and their work on this case. Respondent to be permitted a further extension of time of 45 days from the date of this order to file an answer. The Clerk of the Court to serve this order upon, in addition to the parties in this action, Attorneys Dawson and Balazs. (Reader, L)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c284d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-4</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-05-16</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 5/15/2008 ORDERING 103 The Clerk to unseal all portions of the transcripts of the 11/20/2003 and 12/9/2003 80 proceedings in this case; Attorneys Dawson and Balazs, within 20 days, to transmit to counsel for the US all documents related to their communications with Defendant Brown; Dawson and Balazs, within 20 days, to assist counsel for the US by submitting for interviews as reasonably requested by the US concerning their communications with Dft Brown and their work on this case. Respondent to be permitted a further extension of time of 45 days from the date of this order to file an answer. The Clerk of the Court to serve this order upon, in addition to the parties in this action, Attorneys Dawson and Balazs. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 8/6/08 ORDERING that within ten days from the date of this order respondent shall file and serve an answer to the § 2255 motion and shall show cause in writing why sanctions should not be imposed for the failure to file the answer. (Becknal, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c284b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-5</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-08-06</dateIssued>
+  <docketText>ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 8/6/08 ORDERING that within ten days from the date of this order respondent shall file and serve an answer to the § 2255 motion and shall show cause in writing why sanctions should not be imposed for the failure to file the answer. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 10/16/08 ORDERING that 117 the US&apos; Motion for Leave to File Response is GRANTED. (Kastilahn, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c2e59</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-6</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2008-10-16</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 10/16/08 ORDERING that 117 the US&apos; Motion for Leave to File Response is GRANTED. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER as to Cy Irving Brown signed by Magistrate Judge Gregory G. Hollows on 11/19/08: The hearing in this matter, evidently set for November 18, 2008, is VACATED from the court&apos;s calendar. (Kaminski, H)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c2e5a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-7</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-11-19</dateIssued>
+  <docketText>ORDER as to Cy Irving Brown signed by Magistrate Judge Gregory G. Hollows on 11/19/08: The hearing in this matter, evidently set for November 18, 2008, is VACATED from the court&apos;s calendar. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 04/05/10 ORDERING that no evidentiary hearing will be held. Also, RECOMMENDING that the motion 96 and the supplemeal motions 114, 115 be denied with the exception of Brown&apos;s ineffective assistance of Ameline remand counsel; due to the concession of the United States, Brown should be given a third sentencing hearing. Motions 96, 114, 115 referred to Judge Morrison C. England Jr. Objections due within 14 days. (Plummer, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c284f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-8</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2010-04-06</dateIssued>
+  <docketText>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 04/05/10 ORDERING that no evidentiary hearing will be held. Also, RECOMMENDING that the motion 96 and the supplemeal motions 114, 115 be denied with the exception of Brown&apos;s ineffective assistance of Ameline remand counsel; due to the concession of the United States, Brown should be given a third sentencing hearing. Motions 96, 114, 115 referred to Judge Morrison C. England Jr. Objections due within 14 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER ADOPTING 125 FINDINGS and RECOMMENDATIONS in full signed by Judge Morrison C. England, Jr. on 06/14/10 as to Cy Irving Brown and ORDERING that Brown&apos;s 96 Motion to Vacate - 2255 and supplemental 114, 115 Motions are DENIED with the exception of Brown&apos;s ineffective assistance of Ameline remand counsel; due to the concession of the U.S., Brown is to be given a third sentencing hearing. Clerk to close the companion civil case, No. CIV. S-07-2044. (Benson, A.)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c284a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-9</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2010-06-14</dateIssued>
+  <docketText>ORDER ADOPTING 125 FINDINGS and RECOMMENDATIONS in full signed by Judge Morrison C. England, Jr. on 06/14/10 as to Cy Irving Brown and ORDERING that Brown&apos;s 96 Motion to Vacate - 2255 and supplemental 114, 115 Motions are DENIED with the exception of Brown&apos;s ineffective assistance of Ameline remand counsel; due to the concession of the U.S., Brown is to be given a third sentencing hearing. Clerk to close the companion civil case, No. CIV. S-07-2044. (Benson, A.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER DENYING Motions 132 and 134, and GRANTING Motion 136. Signed by Chief Judge Morrison C. England, Jr. on 8/14/2013. (Deutsch, S)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c2e5b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-10</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-08-14</dateIssued>
+  <docketText>ORDER DENYING Motions 132 and 134, and GRANTING Motion 136. Signed by Chief Judge Morrison C. England, Jr. on 8/14/2013. (Deutsch, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr. on 11/7/2013. Defendant Cy Irving Brown (xref # 2021639) is GRANTED pro se status as of this date. He shall be afforded all rights and privileges to which pro se litigants are entitled pursuant to applicable law and prison rules and regulations. Clerk directed to change defendant Brown&apos;s address listed on 152 Ex Parte Motion. Finally, government order to serve this Order on appropriate authorities at Sacramento County Main Jail. (Marciel, M)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c2e5d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-11</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-11-08</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr. on 11/7/2013. Defendant Cy Irving Brown (xref # 2021639) is GRANTED pro se status as of this date. He shall be afforded all rights and privileges to which pro se litigants are entitled pursuant to applicable law and prison rules and regulations. Clerk directed to change defendant Brown&apos;s address listed on 152 Ex Parte Motion. Finally, government order to serve this Order on appropriate authorities at Sacramento County Main Jail. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>AMENDED JUDGMENT as to Cy Irving Brown signed by Chief Judge Morrison C. England, Jr on 8/27/2014. (Shaddox-Waldrop, A)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c2e5e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-12</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2014-08-27</dateIssued>
+  <docketText>AMENDED JUDGMENT as to Cy Irving Brown signed by Chief Judge Morrison C. England, Jr on 8/27/2014. (Shaddox-Waldrop, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_03-cr-00104-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr on 1/5/2015 as to Cy Irving Brown ORDERING the sealed portion of the transcript of the in camera review hearing held 11/20/2003 be SEALED unless and until appellant introduces the issue into the appeal. (Donati, J)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c284c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-13</identifier>
+ <identifier type="former granule identifier">caed-2_03-cr-00104_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_03-cr-00104/USCOURTS-caed-2_03-cr-00104-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_03-cr-00104/pdf/USCOURTS-caed-2_03-cr-00104-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-00104; USA v. Brown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_03-cr-00104-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr on 1/5/2015 as to Cy Irving Brown ORDERING the sealed portion of the transcript of the in camera review hearing held 11/20/2003 be SEALED unless and until appellant introduces the issue into the appeal. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+</mods>

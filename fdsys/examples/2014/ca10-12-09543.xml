@@ -1,0 +1,354 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a4ab6ec">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Tenth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-12-09543</identifier>
+<identifier type="local">P0b002ee18a4ab6ec</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca10-12-09543</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca10-12-09543</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca10</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtSortOrder>1100</courtSortOrder>
+ <caseNumber>12-09543</caseNumber>
+ <party fullName="Arizona Hispanic Newswire LLC" lastName="Arizona Hispanic Newswire LLC" role="Amicus Curiae"></party>
+ <party fullName="Asian American Justice Center" lastName="Asian American Justice Center" role="Amicus Curiae"></party>
+ <party fullName="Bethel Native Corporation" lastName="Bethel Native Corporation" role="Petitioner"></party>
+ <party firstName="Steven" fullName="Steven R. Bradley" lastName="Bradley" middleName="R." role="Amicus Curiae"></party>
+ <party fullName="Business Intelligence Solutions, LLC" lastName="Business Intelligence Solutions, LLC" role="Amicus Curiae"></party>
+ <party fullName="CTIA-The Wireless Association" lastName="CTIA-The Wireless Association" role="Amicus Curiae"></party>
+ <party fullName="Cellco Partnership" lastName="Cellco Partnership" role="Intervenor"></party>
+ <party fullName="Council Tree Investors, Inc." lastName="Council Tree Investors, Inc." role="Petitioner"></party>
+ <party fullName="Dempster Group, LLC" lastName="Dempster Group, LLC" role="Amicus Curiae"></party>
+ <party fullName="Federal Communications Commission" lastName="Federal Communications Commission" role="Respondent"></party>
+ <party fullName="Kinex Networking Solutions, Inc." lastName="Kinex Networking Solutions, Inc." role="Amicus Curiae"></party>
+ <party fullName="Media Alliance" lastName="Media Alliance" role="Amicus Curiae"></party>
+ <party fullName="Mobile Future" lastName="Mobile Future" role="Amicus Curiae"></party>
+ <party fullName="National Association for the Advancement of Colored People" lastName="National Association for the Advancement of Colored People" role="Amicus Curiae"></party>
+ <party fullName="National Association of Multicultural Digital Entrepreneurs" lastName="National Association of Multicultural Digital Entrepreneurs" role="Amicus Curiae"></party>
+ <party fullName="National Hispanic Media Coalition" lastName="National Hispanic Media Coalition" role="Amicus Curiae"></party>
+ <party fullName="National Indian Telecommunications Institute" lastName="National Indian Telecommunications Institute" role="Amicus Curiae"></party>
+ <party fullName="National Organization for Women Foundation" lastName="National Organization for Women Foundation" role="Amicus Curiae"></party>
+ <party firstName="Brian" fullName="Brian O&apos;Reilly" lastName="O&apos;Reilly" role="Amicus Curiae"></party>
+ <party fullName="Office of Communication of the United Church of Christ, Inc." lastName="Office of Communication of the United Church of Christ, Inc." role="Amicus Curiae"></party>
+ <party fullName="Public Knowledge" lastName="Public Knowledge" role="Amicus Curiae"></party>
+ <party fullName="Rainbow PUSH Coalition" lastName="Rainbow PUSH Coalition" role="Amicus Curiae"></party>
+ <party firstName="Gilbert" fullName="Gilbert H. Scott Sr." generation="Sr." lastName="Scott" middleName="H." role="Amicus Curiae"></party>
+ <party fullName="Telecommunications Industry" lastName="Telecommunications Industry" role="Amicus Curiae"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Respondent"></party>
+ <party fullName="Women&apos;s Institute for Freedom of the Press" lastName="Women&apos;s Institute for Freedom of the Press" role="Amicus Curiae"></party>
+</extension>
+<titleInfo>
+ <title>Council Tree Investors, Inc., et al v. FCC</title>
+ <partNumber>12-09543</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-12-09543/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">12-09543;12-9543</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Tenth Circuit</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Arizona Hispanic Newswire LLC</displayForm>
+ <namePart type="family">Arizona Hispanic Newswire LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Asian American Justice Center</displayForm>
+ <namePart type="family">Asian American Justice Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Bethel Native Corporation</displayForm>
+ <namePart type="family">Bethel Native Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Steven R. Bradley</displayForm>
+ <namePart type="family">Bradley</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Business Intelligence Solutions, LLC</displayForm>
+ <namePart type="family">Business Intelligence Solutions, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>CTIA-The Wireless Association</displayForm>
+ <namePart type="family">CTIA-The Wireless Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Cellco Partnership</displayForm>
+ <namePart type="family">Cellco Partnership</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor</description>
+</name>
+<name type="personal">
+ <displayForm>Council Tree Investors, Inc.</displayForm>
+ <namePart type="family">Council Tree Investors, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Dempster Group, LLC</displayForm>
+ <namePart type="family">Dempster Group, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Federal Communications Commission</displayForm>
+ <namePart type="family">Federal Communications Commission</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Kinex Networking Solutions, Inc.</displayForm>
+ <namePart type="family">Kinex Networking Solutions, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Media Alliance</displayForm>
+ <namePart type="family">Media Alliance</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Mobile Future</displayForm>
+ <namePart type="family">Mobile Future</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>National Association for the Advancement of Colored People</displayForm>
+ <namePart type="family">National Association for the Advancement of Colored People</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>National Association of Multicultural Digital Entrepreneurs</displayForm>
+ <namePart type="family">National Association of Multicultural Digital Entrepreneurs</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>National Hispanic Media Coalition</displayForm>
+ <namePart type="family">National Hispanic Media Coalition</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>National Indian Telecommunications Institute</displayForm>
+ <namePart type="family">National Indian Telecommunications Institute</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>National Organization for Women Foundation</displayForm>
+ <namePart type="family">National Organization for Women Foundation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Brian O&apos;Reilly</displayForm>
+ <namePart type="family">O&apos;Reilly</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Office of Communication of the United Church of Christ, Inc.</displayForm>
+ <namePart type="family">Office of Communication of the United Church of Christ, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Public Knowledge</displayForm>
+ <namePart type="family">Public Knowledge</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Rainbow PUSH Coalition</displayForm>
+ <namePart type="family">Rainbow PUSH Coalition</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Gilbert H. Scott Sr.</displayForm>
+ <namePart type="family">Scott</namePart>
+ <namePart type="given">Gilbert</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Telecommunications Industry</displayForm>
+ <namePart type="family">Telecommunications Industry</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Women&apos;s Institute for Freedom of the Press</displayForm>
+ <namePart type="family">Women&apos;s Institute for Freedom of the Press</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca10-12-09543</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca10</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtSortOrder>1100</courtSortOrder>
+ <caseNumber>12-09543</caseNumber>
+ <party fullName="Arizona Hispanic Newswire LLC" lastName="Arizona Hispanic Newswire LLC" role="Amicus Curiae"></party>
+ <party fullName="Asian American Justice Center" lastName="Asian American Justice Center" role="Amicus Curiae"></party>
+ <party fullName="Bethel Native Corporation" lastName="Bethel Native Corporation" role="Petitioner"></party>
+ <party firstName="Steven" fullName="Steven R. Bradley" lastName="Bradley" middleName="R." role="Amicus Curiae"></party>
+ <party fullName="Business Intelligence Solutions, LLC" lastName="Business Intelligence Solutions, LLC" role="Amicus Curiae"></party>
+ <party fullName="CTIA-The Wireless Association" lastName="CTIA-The Wireless Association" role="Amicus Curiae"></party>
+ <party fullName="Cellco Partnership" lastName="Cellco Partnership" role="Intervenor"></party>
+ <party fullName="Council Tree Investors, Inc." lastName="Council Tree Investors, Inc." role="Petitioner"></party>
+ <party fullName="Dempster Group, LLC" lastName="Dempster Group, LLC" role="Amicus Curiae"></party>
+ <party fullName="Federal Communications Commission" lastName="Federal Communications Commission" role="Respondent"></party>
+ <party fullName="Kinex Networking Solutions, Inc." lastName="Kinex Networking Solutions, Inc." role="Amicus Curiae"></party>
+ <party fullName="Media Alliance" lastName="Media Alliance" role="Amicus Curiae"></party>
+ <party fullName="Mobile Future" lastName="Mobile Future" role="Amicus Curiae"></party>
+ <party fullName="National Association for the Advancement of Colored People" lastName="National Association for the Advancement of Colored People" role="Amicus Curiae"></party>
+ <party fullName="National Association of Multicultural Digital Entrepreneurs" lastName="National Association of Multicultural Digital Entrepreneurs" role="Amicus Curiae"></party>
+ <party fullName="National Hispanic Media Coalition" lastName="National Hispanic Media Coalition" role="Amicus Curiae"></party>
+ <party fullName="National Indian Telecommunications Institute" lastName="National Indian Telecommunications Institute" role="Amicus Curiae"></party>
+ <party fullName="National Organization for Women Foundation" lastName="National Organization for Women Foundation" role="Amicus Curiae"></party>
+ <party firstName="Brian" fullName="Brian O&apos;Reilly" lastName="O&apos;Reilly" role="Amicus Curiae"></party>
+ <party fullName="Office of Communication of the United Church of Christ, Inc." lastName="Office of Communication of the United Church of Christ, Inc." role="Amicus Curiae"></party>
+ <party fullName="Public Knowledge" lastName="Public Knowledge" role="Amicus Curiae"></party>
+ <party fullName="Rainbow PUSH Coalition" lastName="Rainbow PUSH Coalition" role="Amicus Curiae"></party>
+ <party firstName="Gilbert" fullName="Gilbert H. Scott Sr." generation="Sr." lastName="Scott" middleName="H." role="Amicus Curiae"></party>
+ <party fullName="Telecommunications Industry" lastName="Telecommunications Industry" role="Amicus Curiae"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Respondent"></party>
+ <party fullName="Women&apos;s Institute for Freedom of the Press" lastName="Women&apos;s Institute for Freedom of the Press" role="Amicus Curiae"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca10-12-09543-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-12-09543/USCOURTS-ca10-12-09543-0/mods.xml">
+ <titleInfo>
+  <title>Council Tree Investors, Inc., et al v. FCC</title>
+  <subTitle>[10137839] Dismissed in Part and Denied in Part;Terminated on the merits after oral hearing;Written, signed, published; Judges Kelly, McKay and Holmes (authoring). Mandate to issue. [12-9543]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-12-09543/pdf/USCOURTS-ca10-12-09543-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a4bacae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-12-09543/USCOURTS-ca10-12-09543-0</identifier>
+ <identifier type="former granule identifier">ca10-12-09543_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-12-09543/USCOURTS-ca10-12-09543-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-12-09543/pdf/USCOURTS-ca10-12-09543-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 12-09543; Council Tree Investors, Inc., et al v. FCC; </searchTitle>
+  <courtName>United States Court of Appeals for the Tenth Circuit</courtName>
+  <accessId>USCOURTS-ca10-12-09543-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>[10137839] Dismissed in Part and Denied in Part;Terminated on the merits after oral hearing;Written, signed, published; Judges Kelly, McKay and Holmes (authoring). Mandate to issue. [12-9543]</docketText>
+</extension>
+</relatedItem>
+</mods>

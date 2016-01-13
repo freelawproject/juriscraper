@@ -1,0 +1,416 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812db328">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_07-cv-00262</identifier>
+<identifier type="local">P0b002ee1812db328</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-5_07-cv-00262</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_07-cv-00262</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:07-cv-00262</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Sally" fullName="Sally Allpass" lastName="Allpass" role="Defendant"></party>
+ <party firstName="Annette" fullName="Annette Anderson" lastName="Anderson" role="Defendant"></party>
+ <party firstName="David" fullName="David Butts" lastName="Butts" role="Defendant"></party>
+ <party firstName="Katherine" fullName="Katherine Cadena" lastName="Cadena" role="Defendant"></party>
+ <party firstName="David" fullName="David Cook" lastName="Cook" role="Defendant"></party>
+ <party firstName="JOHN AND OR JANE" fullName="JOHN AND OR JANE DOES" lastName="DOES" role="Defendant"></party>
+ <party firstName="Janice" fullName="Janice Danson" lastName="Danson" role="Defendant"></party>
+ <party firstName="James" fullName="James E. Donald" lastName="Donald" middleName="E." role="Defendant"></party>
+ <party firstName="Brad" fullName="Brad Douglas" lastName="Douglas" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Flinn" lastName="Flinn" role="Defendant"></party>
+ <party firstName="Gairy" fullName="Gairy Hall" lastName="Hall" role="Defendant"></party>
+ <party firstName="Joe" fullName="Joe Kim" lastName="Kim" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Miles" lastName="Miles" role="Defendant"></party>
+ <party firstName="Andrew" fullName="Andrew R.H. Newton" lastName="Newton" middleName="R.H." role="Defendant"></party>
+ <party firstName="Julius" fullName="Julius Bade Oderinde" lastName="Oderinde" middleName="Bade" role="Defendant"></party>
+ <party firstName="Garland" fullName="Garland Riener" lastName="Riener" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Sittnick" lastName="Sittnick" role="Defendant"></party>
+ <party firstName="Sherre" fullName="Sherre Southern" lastName="Southern" role="Defendant"></party>
+ <party firstName="David" fullName="David L Toney" lastName="Toney" middleName="L" role="Plaintiff"></party>
+ <party firstName="Allan" fullName="Allan Vigil" lastName="Vigil" role="Defendant"></party>
+ <party firstName="VICTOR" fullName="VICTOR L WALKER" lastName="WALKER" middleName="L" role="Defendant"></party>
+ <party firstName="B." fullName="B. J. Walker" lastName="Walker" middleName="J." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Toney v. Butts et al</title>
+ <partNumber>5:07-cv-00262</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_07-cv-00262/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:07-cv-00262;07-262</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Macon</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Sally Allpass</displayForm>
+ <namePart type="family">Allpass</namePart>
+ <namePart type="given">Sally</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Annette Anderson</displayForm>
+ <namePart type="family">Anderson</namePart>
+ <namePart type="given">Annette</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Butts</displayForm>
+ <namePart type="family">Butts</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Katherine Cadena</displayForm>
+ <namePart type="family">Cadena</namePart>
+ <namePart type="given">Katherine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Cook</displayForm>
+ <namePart type="family">Cook</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOHN AND OR JANE DOES</displayForm>
+ <namePart type="family">DOES</namePart>
+ <namePart type="given">JOHN AND OR JANE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Janice Danson</displayForm>
+ <namePart type="family">Danson</namePart>
+ <namePart type="given">Janice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James E. Donald</displayForm>
+ <namePart type="family">Donald</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brad Douglas</displayForm>
+ <namePart type="family">Douglas</namePart>
+ <namePart type="given">Brad</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Flinn</displayForm>
+ <namePart type="family">Flinn</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gairy Hall</displayForm>
+ <namePart type="family">Hall</namePart>
+ <namePart type="given">Gairy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joe Kim</displayForm>
+ <namePart type="family">Kim</namePart>
+ <namePart type="given">Joe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Miles</displayForm>
+ <namePart type="family">Miles</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Andrew R.H. Newton</displayForm>
+ <namePart type="family">Newton</namePart>
+ <namePart type="given">Andrew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Julius Bade Oderinde</displayForm>
+ <namePart type="family">Oderinde</namePart>
+ <namePart type="given">Julius</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Garland Riener</displayForm>
+ <namePart type="family">Riener</namePart>
+ <namePart type="given">Garland</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Sittnick</displayForm>
+ <namePart type="family">Sittnick</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sherre Southern</displayForm>
+ <namePart type="family">Southern</namePart>
+ <namePart type="given">Sherre</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David L Toney</displayForm>
+ <namePart type="family">Toney</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Allan Vigil</displayForm>
+ <namePart type="family">Vigil</namePart>
+ <namePart type="given">Allan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>VICTOR L WALKER</displayForm>
+ <namePart type="family">WALKER</namePart>
+ <namePart type="given">VICTOR</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>B. J. Walker</displayForm>
+ <namePart type="family">Walker</namePart>
+ <namePart type="given">B.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_07-cv-00262</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:07-cv-00262</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Sally" fullName="Sally Allpass" lastName="Allpass" role="Defendant"></party>
+ <party firstName="Annette" fullName="Annette Anderson" lastName="Anderson" role="Defendant"></party>
+ <party firstName="David" fullName="David Butts" lastName="Butts" role="Defendant"></party>
+ <party firstName="Katherine" fullName="Katherine Cadena" lastName="Cadena" role="Defendant"></party>
+ <party firstName="David" fullName="David Cook" lastName="Cook" role="Defendant"></party>
+ <party firstName="JOHN AND OR JANE" fullName="JOHN AND OR JANE DOES" lastName="DOES" role="Defendant"></party>
+ <party firstName="Janice" fullName="Janice Danson" lastName="Danson" role="Defendant"></party>
+ <party firstName="James" fullName="James E. Donald" lastName="Donald" middleName="E." role="Defendant"></party>
+ <party firstName="Brad" fullName="Brad Douglas" lastName="Douglas" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Flinn" lastName="Flinn" role="Defendant"></party>
+ <party firstName="Gairy" fullName="Gairy Hall" lastName="Hall" role="Defendant"></party>
+ <party firstName="Joe" fullName="Joe Kim" lastName="Kim" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Miles" lastName="Miles" role="Defendant"></party>
+ <party firstName="Andrew" fullName="Andrew R.H. Newton" lastName="Newton" middleName="R.H." role="Defendant"></party>
+ <party firstName="Julius" fullName="Julius Bade Oderinde" lastName="Oderinde" middleName="Bade" role="Defendant"></party>
+ <party firstName="Garland" fullName="Garland Riener" lastName="Riener" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Sittnick" lastName="Sittnick" role="Defendant"></party>
+ <party firstName="Sherre" fullName="Sherre Southern" lastName="Southern" role="Defendant"></party>
+ <party firstName="David" fullName="David L Toney" lastName="Toney" middleName="L" role="Plaintiff"></party>
+ <party firstName="Allan" fullName="Allan Vigil" lastName="Vigil" role="Defendant"></party>
+ <party firstName="VICTOR" fullName="VICTOR L WALKER" lastName="WALKER" middleName="L" role="Defendant"></party>
+ <party firstName="B." fullName="B. J. Walker" lastName="Walker" middleName="J." role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_07-cv-00262-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_07-cv-00262/USCOURTS-gamd-5_07-cv-00262-0/mods.xml">
+ <titleInfo>
+  <title>Toney v. Butts et al</title>
+  <subTitle>ORDER AND RECOMMENDATION re 1 Complaint and 16 Supplement to Complaint filed by David Ray Toney. Objections to R&amp;R due by 1/14/2008. Ordered by Judge Claude W. Hicks Jr. on 12/21/07. (CWH)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_07-cv-00262-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181317392</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_07-cv-00262/USCOURTS-gamd-5_07-cv-00262-0</identifier>
+ <identifier type="former granule identifier">gamd-5_07-cv-00262_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_07-cv-00262/USCOURTS-gamd-5_07-cv-00262-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_07-cv-00262/pdf/USCOURTS-gamd-5_07-cv-00262-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-00262; Toney v. Butts et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_07-cv-00262-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-12-21</dateIssued>
+  <docketText>ORDER AND RECOMMENDATION re 1 Complaint and 16 Supplement to Complaint filed by David Ray Toney. Objections to R&amp;R due by 1/14/2008. Ordered by Judge Claude W. Hicks Jr. on 12/21/07. (CWH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_07-cv-00262-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_07-cv-00262/USCOURTS-gamd-5_07-cv-00262-1/mods.xml">
+ <titleInfo>
+  <title>Toney v. Butts et al</title>
+  <subTitle>ORDER adopting Report and Recommendations re 17 Report and Recommendations and Dr. Hall is Dismissed as a Defendant.Ordered by Judge C. Ashley Royal on 4/24/08 (cma)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_07-cv-00262-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181317394</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_07-cv-00262/USCOURTS-gamd-5_07-cv-00262-1</identifier>
+ <identifier type="former granule identifier">gamd-5_07-cv-00262_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_07-cv-00262/USCOURTS-gamd-5_07-cv-00262-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_07-cv-00262/pdf/USCOURTS-gamd-5_07-cv-00262-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-00262; Toney v. Butts et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_07-cv-00262-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-04-24</dateIssued>
+  <docketText>ORDER adopting Report and Recommendations re 17 Report and Recommendations and Dr. Hall is Dismissed as a Defendant.Ordered by Judge C. Ashley Royal on 4/24/08 (cma)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_07-cv-00262-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_07-cv-00262/USCOURTS-gamd-5_07-cv-00262-2/mods.xml">
+ <titleInfo>
+  <title>Toney v. Butts et al</title>
+  <subTitle>RECOMMENDATION to grant 25 MOTION for Summary Judgment filed by David Butts and Garland Riner and to dismiss complaint as to all other defendants because of plaintiff&apos;s failure to prosecute: plaintiff failed to respond to 29 show cause order. Objections to R&amp;R due by 12/12/2008. Ordered by U.S. Mag Judge Claude W. Hicks, Jr. on 11/24/08. (CWH)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_07-cv-00262-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181317391</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_07-cv-00262/USCOURTS-gamd-5_07-cv-00262-2</identifier>
+ <identifier type="former granule identifier">gamd-5_07-cv-00262_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_07-cv-00262/USCOURTS-gamd-5_07-cv-00262-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_07-cv-00262/pdf/USCOURTS-gamd-5_07-cv-00262-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-00262; Toney v. Butts et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_07-cv-00262-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-11-24</dateIssued>
+  <docketText>RECOMMENDATION to grant 25 MOTION for Summary Judgment filed by David Butts and Garland Riner and to dismiss complaint as to all other defendants because of plaintiff&apos;s failure to prosecute: plaintiff failed to respond to 29 show cause order. Objections to R&amp;R due by 12/12/2008. Ordered by U.S. Mag Judge Claude W. Hicks, Jr. on 11/24/08. (CWH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_07-cv-00262-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_07-cv-00262/USCOURTS-gamd-5_07-cv-00262-3/mods.xml">
+ <titleInfo>
+  <title>Toney v. Butts et al</title>
+  <subTitle>ORDER granting 25 Defendants&apos;, Butts and Riner, Motion for Summary Judgment; adopting Report and Recommendations re 30 Report and Recommendations and dismissing all claims against the remaining Defendants.Ordered by Judge C. Ashley Royal on 01/16/09 (cma)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_07-cv-00262-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181317393</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_07-cv-00262/USCOURTS-gamd-5_07-cv-00262-3</identifier>
+ <identifier type="former granule identifier">gamd-5_07-cv-00262_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_07-cv-00262/USCOURTS-gamd-5_07-cv-00262-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_07-cv-00262/pdf/USCOURTS-gamd-5_07-cv-00262-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-00262; Toney v. Butts et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_07-cv-00262-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-20</dateIssued>
+  <docketText>ORDER granting 25 Defendants&apos;, Butts and Riner, Motion for Summary Judgment; adopting Report and Recommendations re 30 Report and Recommendations and dismissing all claims against the remaining Defendants.Ordered by Judge C. Ashley Royal on 01/16/09 (cma)</docketText>
+</extension>
+</relatedItem>
+</mods>

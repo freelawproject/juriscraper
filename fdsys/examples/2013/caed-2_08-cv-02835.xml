@@ -1,0 +1,469 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a21f64">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835</identifier>
+<identifier type="local">P0b002ee183a21f64</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_08-cv-02835</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_08-cv-02835</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:08-cv-02835</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1441 Petition for Removal - Employment Discrimination</cause>
+ <party firstName="Eduardo" fullName="Eduardo Blumwald" lastName="Blumwald" role="Defendant"></party>
+ <party firstName="Marina" fullName="Marina Large" lastName="Large" role="Plaintiff"></party>
+ <party fullName="Regents of the University of California" lastName="Regents of the University of California" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Large v. Regents of the University of California, et al</title>
+ <partNumber>2:08-cv-02835</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:08-cv-02835;08-2835</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Eduardo Blumwald</displayForm>
+ <namePart type="family">Blumwald</namePart>
+ <namePart type="given">Eduardo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marina Large</displayForm>
+ <namePart type="family">Large</namePart>
+ <namePart type="given">Marina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Regents of the University of California</displayForm>
+ <namePart type="family">Regents of the University of California</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_08-cv-02835</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:08-cv-02835</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1441 Petition for Removal - Employment Discrimination</cause>
+ <party firstName="Eduardo" fullName="Eduardo Blumwald" lastName="Blumwald" role="Defendant"></party>
+ <party firstName="Marina" fullName="Marina Large" lastName="Large" role="Plaintiff"></party>
+ <party fullName="Regents of the University of California" lastName="Regents of the University of California" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-02835-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-0/mods.xml">
+ <titleInfo>
+  <title>Large v. Regents of the University of California, et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Morrison C. England, Jr. on 2/9/2010 ORDERING 19 Expert Witnesses due by 5/6/2011; Supplemental expert witnesses by 5/27/2011; Discovery due by 3/4/2011; and Dispositive Motions filed by 7/8/2011. (Reader, L)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-02835-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a2576f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-0</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-02835_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/pdf/USCOURTS-caed-2_08-cv-02835-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02835; Large v. Regents of the University of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-02835-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-02-09</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Morrison C. England, Jr. on 2/9/2010 ORDERING 19 Expert Witnesses due by 5/6/2011; Supplemental expert witnesses by 5/27/2011; Discovery due by 3/4/2011; and Dispositive Motions filed by 7/8/2011. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-02835-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-1/mods.xml">
+ <titleInfo>
+  <title>Large v. Regents of the University of California, et al</title>
+  <subTitle>ORDER TO MODIFY THE PRETRIAL SCHEDULING ORDER signed by Judge Morrison C. England, Jr on 2/25/11. The New dates are as follows: Trial is SET for 8/6/2012. Final Pretrial Conference is SET for 6/7/2012. Last day to file replies to evidentiary or procedural Motions 4/20/12. Last day to file oppositions to evidentiary or procedural Motions 4/13/12. Last day to file evidentiary or procedural Motions 4/6/12. Last day to file Joint Final Pretrial Conference Statement; Last day to file Trial Briefs 4/6/12. Last day to hear dispositive Motions 2/3/12. Last day to designate supplemental expert witnesses 11/8/11. Last day to exchange and file expert witness information and reports 10/28/2011. Last day to complete Discovery, with the exception of expert discovery 8/31/2011.(Mena-Sanchez, L) Modified on 3/2/2011 (Zignago, K.).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-02835-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a2576a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-1</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-02835_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/pdf/USCOURTS-caed-2_08-cv-02835-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02835; Large v. Regents of the University of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-02835-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-02-25</dateIssued>
+  <docketText>ORDER TO MODIFY THE PRETRIAL SCHEDULING ORDER signed by Judge Morrison C. England, Jr on 2/25/11. The New dates are as follows: Trial is SET for 8/6/2012. Final Pretrial Conference is SET for 6/7/2012. Last day to file replies to evidentiary or procedural Motions 4/20/12. Last day to file oppositions to evidentiary or procedural Motions 4/13/12. Last day to file evidentiary or procedural Motions 4/6/12. Last day to file Joint Final Pretrial Conference Statement; Last day to file Trial Briefs 4/6/12. Last day to hear dispositive Motions 2/3/12. Last day to designate supplemental expert witnesses 11/8/11. Last day to exchange and file expert witness information and reports 10/28/2011. Last day to complete Discovery, with the exception of expert discovery 8/31/2011.(Mena-Sanchez, L) Modified on 3/2/2011 (Zignago, K.).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-02835-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-2/mods.xml">
+ <titleInfo>
+  <title>Large v. Regents of the University of California, et al</title>
+  <subTitle>STIPULATION and ORDER 39 to modify Pretrial Scheduling Order signed by Judge Morrison C. England, Jr. on 1/23/2012. Both Designation of Supplemental Expert Witnesses and Discovery shall be completed by 4/6/2012. All other dates in Scheduling Order shall remain the same. (Marciel, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-02835-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a2576c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-2</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-02835_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/pdf/USCOURTS-caed-2_08-cv-02835-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02835; Large v. Regents of the University of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-02835-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-24</dateIssued>
+  <docketText>STIPULATION and ORDER 39 to modify Pretrial Scheduling Order signed by Judge Morrison C. England, Jr. on 1/23/2012. Both Designation of Supplemental Expert Witnesses and Discovery shall be completed by 4/6/2012. All other dates in Scheduling Order shall remain the same. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-02835-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-3/mods.xml">
+ <titleInfo>
+  <title>Large v. Regents of the University of California, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 3/26/12; NOTICE IS HEREBY GIVEN that Defendants the REGENTS OF THE UNIVERSITY OF CALIFORNIA and EDUARDO BLUMWALD will, and hereby do, apply ex parte to this Court to compel the mental examination of Plaintiff MARINA LARGE currently set for hearing on April 13, 2012. However, the parties have agreed to request that the matter be heard on March 30, 2012 on the courts law and motion calendar with the parties joint statement to be filed by March 28, 2012. This motion will be based on this Ex Parte Application, the supporting Memorandum of Points and Authorities, the declaration of David P.E. Burkett required by Local Rule 144(e) and the exhibits attached thereto, the briefing on the motion to compel mental examination and any other evidence or argument that may be presented before or at the hearing.(Matson, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-02835-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25778</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-3</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-02835_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/pdf/USCOURTS-caed-2_08-cv-02835-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02835; Large v. Regents of the University of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-02835-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-03-27</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 3/26/12; NOTICE IS HEREBY GIVEN that Defendants the REGENTS OF THE UNIVERSITY OF CALIFORNIA and EDUARDO BLUMWALD will, and hereby do, apply ex parte to this Court to compel the mental examination of Plaintiff MARINA LARGE currently set for hearing on April 13, 2012. However, the parties have agreed to request that the matter be heard on March 30, 2012 on the courts law and motion calendar with the parties joint statement to be filed by March 28, 2012. This motion will be based on this Ex Parte Application, the supporting Memorandum of Points and Authorities, the declaration of David P.E. Burkett required by Local Rule 144(e) and the exhibits attached thereto, the briefing on the motion to compel mental examination and any other evidence or argument that may be presented before or at the hearing.(Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-02835-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-4/mods.xml">
+ <titleInfo>
+  <title>Large v. Regents of the University of California, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 3/30/2012 ORDERING [47] Defendants&apos; 3/26/2012 application to shorten time to hear the motion to compel mental examination is GRANTED; Defendants&apos; motion to compel mental examination #44 is DENIED as untimely. (Reader, L)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-02835-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25768</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-4</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-02835_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/pdf/USCOURTS-caed-2_08-cv-02835-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02835; Large v. Regents of the University of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-02835-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-04-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 3/30/2012 ORDERING [47] Defendants&apos; 3/26/2012 application to shorten time to hear the motion to compel mental examination is GRANTED; Defendants&apos; motion to compel mental examination #44 is DENIED as untimely. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-02835-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-5/mods.xml">
+ <titleInfo>
+  <title>Large v. Regents of the University of California, et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Morrison C. England, Jr on 4/27/12: Final Pretrial Conference reset for 11/1/2012 at 02:00 PM in Courtroom 7 (MCE) before Judge Morrison C. England Jr. (Manzer, C)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-02835-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25777</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-5</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-02835_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/pdf/USCOURTS-caed-2_08-cv-02835-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02835; Large v. Regents of the University of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-02835-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-04-27</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Morrison C. England, Jr on 4/27/12: Final Pretrial Conference reset for 11/1/2012 at 02:00 PM in Courtroom 7 (MCE) before Judge Morrison C. England Jr. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-02835-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-6/mods.xml">
+ <titleInfo>
+  <title>Large v. Regents of the University of California, et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Morrison C. England, Jr. on 8/6/2012 MODIFYING the 12 Scheduling Order. Joint Final Pretrial Conference Statements due by 9/28/2012; Evidentiary or Procedural Motions to be filed by 9/28/2012; Opposition to Evidentiary or Procedural Motions due by 10/5/2012, Trial Briefs due by 10/5/2012 at 4:00 PM; Reply Briefs in support of Evidentiary or Procedural Motions due by 10/12/2012. (Michel, G) Modified on 8/7/2012 (Michel, G).</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-02835-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25769</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-6</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-02835_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/pdf/USCOURTS-caed-2_08-cv-02835-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02835; Large v. Regents of the University of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-02835-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-08-06</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Morrison C. England, Jr. on 8/6/2012 MODIFYING the 12 Scheduling Order. Joint Final Pretrial Conference Statements due by 9/28/2012; Evidentiary or Procedural Motions to be filed by 9/28/2012; Opposition to Evidentiary or Procedural Motions due by 10/5/2012, Trial Briefs due by 10/5/2012 at 4:00 PM; Reply Briefs in support of Evidentiary or Procedural Motions due by 10/12/2012. (Michel, G) Modified on 8/7/2012 (Michel, G).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-02835-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-7/mods.xml">
+ <titleInfo>
+  <title>Large v. Regents of the University of California, et al</title>
+  <subTitle>MEMORANDUM AND ORDER signed by Judge Morrison C. England, Jr., on 8/21/12 ORDERING that 58 defendants&apos; Motion for Summary Judgment is GRANTED in part and DENIED in part. Judgment shall be entered in favor of Defendants on the following claims: the third cause of action to the extent it alleges sexual harassment in violation of Title IX against Blumwald, and the ninth cause of action for intentional interference with prospective economic advantage against Blumwald. Summary judgment is DENIED with respect to Plaintiff&apos;s remaining claims. (Kastilahn, A)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-02835-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25776</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-7</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-02835_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/pdf/USCOURTS-caed-2_08-cv-02835-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02835; Large v. Regents of the University of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-02835-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-08-22</dateIssued>
+  <docketText>MEMORANDUM AND ORDER signed by Judge Morrison C. England, Jr., on 8/21/12 ORDERING that 58 defendants&apos; Motion for Summary Judgment is GRANTED in part and DENIED in part. Judgment shall be entered in favor of Defendants on the following claims: the third cause of action to the extent it alleges sexual harassment in violation of Title IX against Blumwald, and the ninth cause of action for intentional interference with prospective economic advantage against Blumwald. Summary judgment is DENIED with respect to Plaintiff&apos;s remaining claims. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-02835-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-8/mods.xml">
+ <titleInfo>
+  <title>Large v. Regents of the University of California, et al</title>
+  <subTitle>MEMORANDUM AND ORDER signed by Judge Morrison C. England, Jr., on 8/21/12, ORDERING that the motion to compel mental examination is justied, so Defendants&apos; 49 Motions seeking said relief are GRANTED. Plaintiff shall make herself available for mental examination within 30 days of the date this Order is electronically filed. Defendants shall disclose results of the mental examination report within three weeks after the examination is completed. Dr. Woods shall be produced for deposition up to three weeks after the report is disclosed. Defendants shall also be given the opportunity to retain an expert witness to address Plaintiff&apos;s new claims regarding her career prospects. Should Plaintiff choose to retain an expert, that expert&apos;s identity must be disclosed within 30 days of the date this Order is electronically filed. Trial in this matter remains set for 12/3/2012. (Kastilahn, A)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-02835-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a2576e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-8</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-02835_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/pdf/USCOURTS-caed-2_08-cv-02835-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02835; Large v. Regents of the University of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-02835-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-08-22</dateIssued>
+  <docketText>MEMORANDUM AND ORDER signed by Judge Morrison C. England, Jr., on 8/21/12, ORDERING that the motion to compel mental examination is justied, so Defendants&apos; 49 Motions seeking said relief are GRANTED. Plaintiff shall make herself available for mental examination within 30 days of the date this Order is electronically filed. Defendants shall disclose results of the mental examination report within three weeks after the examination is completed. Dr. Woods shall be produced for deposition up to three weeks after the report is disclosed. Defendants shall also be given the opportunity to retain an expert witness to address Plaintiff&apos;s new claims regarding her career prospects. Should Plaintiff choose to retain an expert, that expert&apos;s identity must be disclosed within 30 days of the date this Order is electronically filed. Trial in this matter remains set for 12/3/2012. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-02835-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-9/mods.xml">
+ <titleInfo>
+  <title>Large v. Regents of the University of California, et al</title>
+  <subTitle>STIPULATION and ORDER signed by Chief Judge Morrison C. England, Jr on 11/30/12 EXTENDING time to file dispositional documents to 12/26/12. (Meuleman, A)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-02835-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a2576d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-9</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-02835_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/pdf/USCOURTS-caed-2_08-cv-02835-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02835; Large v. Regents of the University of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-02835-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-11-30</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Chief Judge Morrison C. England, Jr on 11/30/12 EXTENDING time to file dispositional documents to 12/26/12. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-02835-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-10/mods.xml">
+ <titleInfo>
+  <title>Large v. Regents of the University of California, et al</title>
+  <subTitle>STIPULATION AND ORDER signed by Chief Judge Morrison C. England, Jr. on 1/3/2013 DISMISSING CASE with prejudice, pursuant to FRCP 41(a)(1); each side to bear their own attorney&apos;s fees and costs. CASE CLOSED (Reader, L)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-02835-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a25779</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-10</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-02835_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/pdf/USCOURTS-caed-2_08-cv-02835-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02835; Large v. Regents of the University of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-02835-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Chief Judge Morrison C. England, Jr. on 1/3/2013 DISMISSING CASE with prejudice, pursuant to FRCP 41(a)(1); each side to bear their own attorney&apos;s fees and costs. CASE CLOSED (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_08-cv-02835-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-11/mods.xml">
+ <titleInfo>
+  <title>Large v. Regents of the University of California, et al</title>
+  <subTitle>STIPULATION AND ORDER signed by Chief Judge Morrison C. England, Jr. on 1/3/2013 DISMISSING Eduardo Blumwald with prejudice, pursuant to FRCP 41(a)(1); each side to bear their own attorney&apos;s fees and costs. (Reader, L)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_08-cv-02835-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a2576b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-11</identifier>
+ <identifier type="former granule identifier">caed-2_08-cv-02835_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_08-cv-02835/USCOURTS-caed-2_08-cv-02835-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_08-cv-02835/pdf/USCOURTS-caed-2_08-cv-02835-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02835; Large v. Regents of the University of California, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_08-cv-02835-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Chief Judge Morrison C. England, Jr. on 1/3/2013 DISMISSING Eduardo Blumwald with prejudice, pursuant to FRCP 41(a)(1); each side to bear their own attorney&apos;s fees and costs. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+</mods>

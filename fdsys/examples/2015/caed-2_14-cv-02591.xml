@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18aafafad">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02591</identifier>
+<identifier type="local">P0b002ee18aafafad</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_14-cv-02591</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-02591</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-02591</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>290</natureSuitCode>
+ <natureSuit>Other Real Property Actions</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Plaintiff"></party>
+ <party firstName="Eileen" fullName="Eileen Dolan" lastName="Dolan" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PS)Deutsche Bank National Trust Company v. Dolan</title>
+ <partNumber>2:14-cv-02591</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02591/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-02591;14-2591</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank National Trust Company</displayForm>
+ <namePart type="family">Deutsche Bank National Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Eileen Dolan</displayForm>
+ <namePart type="family">Dolan</namePart>
+ <namePart type="given">Eileen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-02591</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-02591</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>290</natureSuitCode>
+ <natureSuit>Other Real Property Actions</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Plaintiff"></party>
+ <party firstName="Eileen" fullName="Eileen Dolan" lastName="Dolan" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02591-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02591/USCOURTS-caed-2_14-cv-02591-0/mods.xml">
+ <titleInfo>
+  <title>(PS)Deutsche Bank National Trust Company v. Dolan</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 11/21/2014 RECOMMENDING that this action be remanded to Butte County Superior Court. Referred to Judge Troy L. Nunley. Objections due within 14 days after being served with these findings and recommendations. (Donati, J)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02591/pdf/USCOURTS-caed-2_14-cv-02591-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab15208</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02591/USCOURTS-caed-2_14-cv-02591-0</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02591_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02591/USCOURTS-caed-2_14-cv-02591-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02591/pdf/USCOURTS-caed-2_14-cv-02591-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02591; (PS)Deutsche Bank National Trust Company v. Dolan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02591-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-11-21</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 11/21/2014 RECOMMENDING that this action be remanded to Butte County Superior Court. Referred to Judge Troy L. Nunley. Objections due within 14 days after being served with these findings and recommendations. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02591-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02591/USCOURTS-caed-2_14-cv-02591-1/mods.xml">
+ <titleInfo>
+  <title>(PS)Deutsche Bank National Trust Company v. Dolan</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/5/15 ORDERING that Plaintiff&apos;s 8 motion to remand, filed 12/23/2014, is DENIED AS MOOT. (Kastilahn, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02591/pdf/USCOURTS-caed-2_14-cv-02591-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab15209</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02591/USCOURTS-caed-2_14-cv-02591-1</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02591_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02591/USCOURTS-caed-2_14-cv-02591-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02591/pdf/USCOURTS-caed-2_14-cv-02591-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02591; (PS)Deutsche Bank National Trust Company v. Dolan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02591-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/5/15 ORDERING that Plaintiff&apos;s 8 motion to remand, filed 12/23/2014, is DENIED AS MOOT. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02591-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02591/USCOURTS-caed-2_14-cv-02591-2/mods.xml">
+ <titleInfo>
+  <title>(PS)Deutsche Bank National Trust Company v. Dolan</title>
+  <subTitle>ORDER signed by District Judge Troy L. Nunley on 1/14/2015 ORDERING that the 6 Findings and Recommendations are ADOPTED. This action is REMANDED to Butte County Superior Court. The Clerk is directed to serve a certified copy of this order on the Clerk of the Butte County Superior Court. The Clerk is directed to close this case. Copy of remand order sent to other court. CASE CLOSED. (Zignago, K.)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02591/pdf/USCOURTS-caed-2_14-cv-02591-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab15206</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02591/USCOURTS-caed-2_14-cv-02591-2</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02591_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02591/USCOURTS-caed-2_14-cv-02591-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02591/pdf/USCOURTS-caed-2_14-cv-02591-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02591; (PS)Deutsche Bank National Trust Company v. Dolan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02591-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-15</dateIssued>
+  <docketText>ORDER signed by District Judge Troy L. Nunley on 1/14/2015 ORDERING that the 6 Findings and Recommendations are ADOPTED. This action is REMANDED to Butte County Superior Court. The Clerk is directed to serve a certified copy of this order on the Clerk of the Butte County Superior Court. The Clerk is directed to close this case. Copy of remand order sent to other court. CASE CLOSED. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+</mods>

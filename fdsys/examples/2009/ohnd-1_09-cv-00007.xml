@@ -1,0 +1,152 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d364a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-00007</identifier>
+<identifier type="local">P0b002ee1815d364a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_09-cv-00007</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-cv-00007</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-cv-00007</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2241 Petition for Writ of Habeas Corpus (federa</cause>
+ <party firstName="Anthony" fullName="Anthony L. Jerdine" lastName="Jerdine" middleName="L." role="Petitioner"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Jerdine v. United States of America</title>
+ <partNumber>1:09-cv-00007</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-00007/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cv-00007;09-007</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Anthony L. Jerdine</displayForm>
+ <namePart type="family">Jerdine</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-cv-00007</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-cv-00007</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2241 Petition for Writ of Habeas Corpus (federa</cause>
+ <party firstName="Anthony" fullName="Anthony L. Jerdine" lastName="Jerdine" middleName="L." role="Petitioner"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Respondent"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-cv-00007-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-00007/USCOURTS-ohnd-1_09-cv-00007-0/mods.xml">
+ <titleInfo>
+  <title>Jerdine v. United States of America</title>
+  <subTitle>Memorandum Opinion and Order that the petition is Denied and this action is dismissed pursuant to U.S.C. section 2243. The court certifies, pursuant to 28 U.S.C. section 1915(a)(3), that an appeal from this decision could not be taken in good faith. As this actionis dismissed, all of Mr. Jerdine&apos;s attendant filings are denied as moot including Official, Actual, Constructive, and Express Notice of Unclean Hands and Fraud, to any and all Agents, Officers, Employees and Attorneys of local, State or Federal Governments. (Doc. 2), Notice of Affidavit of Expatriation (Doc. 4), Petition to Expedite Petitioner&apos;s Dismissal of District Court Indictment in Case No. 1:08cr481 Affirmative Assertion of Speedy Trial Rights (Doc. 6), Supplemental Expedited Emergency Petition&apos;s First Amended Petition for Writ of Habeas Corpus Pursuant to 28 U.S.C. section 2241 (Doc. 7) re 8 Notice filed by Anthony L. Jerdine, 9 Motion for Issuance of Subpoenas filed by Anthony L. Jerdine, 7 Supplement filed by Anthony L. Jerdine, 1 Petition for Writ of Habeas Corpus (2241) filed by Anthony L. Jerdine, 5 Supplement filed by Anthony L. Jerdine. Judge Lesley Wells on 1/16/09. (E,P)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-cv-00007-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816e602f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-00007/USCOURTS-ohnd-1_09-cv-00007-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-cv-00007_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-00007/USCOURTS-ohnd-1_09-cv-00007-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-00007/pdf/USCOURTS-ohnd-1_09-cv-00007-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-00007; Jerdine v. United States of America; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-cv-00007-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-16</dateIssued>
+  <docketText>Memorandum Opinion and Order that the petition is Denied and this action is dismissed pursuant to U.S.C. section 2243. The court certifies, pursuant to 28 U.S.C. section 1915(a)(3), that an appeal from this decision could not be taken in good faith. As this actionis dismissed, all of Mr. Jerdine&apos;s attendant filings are denied as moot including Official, Actual, Constructive, and Express Notice of Unclean Hands and Fraud, to any and all Agents, Officers, Employees and Attorneys of local, State or Federal Governments. (Doc. 2), Notice of Affidavit of Expatriation (Doc. 4), Petition to Expedite Petitioner&apos;s Dismissal of District Court Indictment in Case No. 1:08cr481 Affirmative Assertion of Speedy Trial Rights (Doc. 6), Supplemental Expedited Emergency Petition&apos;s First Amended Petition for Writ of Habeas Corpus Pursuant to 28 U.S.C. section 2241 (Doc. 7) re 8 Notice filed by Anthony L. Jerdine, 9 Motion for Issuance of Subpoenas filed by Anthony L. Jerdine, 7 Supplement filed by Anthony L. Jerdine, 1 Petition for Writ of Habeas Corpus (2241) filed by Anthony L. Jerdine, 5 Supplement filed by Anthony L. Jerdine. Judge Lesley Wells on 1/16/09. (E,P)</docketText>
+</extension>
+</relatedItem>
+</mods>

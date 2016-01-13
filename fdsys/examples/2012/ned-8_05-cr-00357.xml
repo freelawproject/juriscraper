@@ -1,0 +1,687 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18179a999">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357</identifier>
+<identifier type="local">P0b002ee18179a999</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cr-00357</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00357</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00357</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Kevin" fullName="Kevin J. Cooper" lastName="Cooper" middleName="J." role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin J. Spellman" lastName="Spellman" middleName="J." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Spellman</title>
+ <partNumber>8:05-cr-00357</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cr-00357;05-357</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kevin J. Cooper</displayForm>
+ <namePart type="family">Cooper</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kevin J. Spellman</displayForm>
+ <namePart type="family">Spellman</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00357</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00357</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Kevin" fullName="Kevin J. Cooper" lastName="Cooper" middleName="J." role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin J. Spellman" lastName="Spellman" middleName="J." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Jerry M. Hug appointed as counsel to defendant Kevin J. Spellman. Signed by Magistrate Judge Thomas D. Thalken on 10/5/2005. (JAE, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803e65</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-10-05</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Jerry M. Hug appointed as counsel to defendant Kevin J. Spellman. Signed by Magistrate Judge Thomas D. Thalken on 10/5/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Kevin J. Spellmansigned by Magistrate Judge Thomas D. Thalken on 10/7/2005.(MBB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803df3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-10-07</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Kevin J. Spellmansigned by Magistrate Judge Thomas D. Thalken on 10/7/2005.(MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER as to defendant Kevin J. Spellman scheduling Rule 11 hearing for December 27, 2005, at 9 a.m. Additional time between December 13, 2005, and December 27, 2005, shall be deemed excludable in any computation under the requirement of the Speedy Trial Act.Signed by Judge Lyle E. Strom on 12/13/2005. (JDR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803e61</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-12-13</dateIssued>
+  <docketText>ORDER as to defendant Kevin J. Spellman scheduling Rule 11 hearing for December 27, 2005, at 9 a.m. Additional time between December 13, 2005, and December 27, 2005, shall be deemed excludable in any computation under the requirement of the Speedy Trial Act.Signed by Judge Lyle E. Strom on 12/13/2005. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER granting 18 motion to continue as to Kevin J. Spellman (1) - Change of Plea Hearing set for 1/4/2006 09:30 AM in Courtroom 5 (Omaha) before Senior Judge Lyle E. Strom. Signed by Judge Lyle E. Strom on 12/23/2005. (JDR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803df7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-12-23</dateIssued>
+  <docketText>ORDER granting 18 motion to continue as to Kevin J. Spellman (1) - Change of Plea Hearing set for 1/4/2006 09:30 AM in Courtroom 5 (Omaha) before Senior Judge Lyle E. Strom. Signed by Judge Lyle E. Strom on 12/23/2005. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER denying 25 motion for release as to Kevin J. Spellman (1).Signed by Judge Lyle E. Strom on 1/20/2006. (JDR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803e5e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-01-20</dateIssued>
+  <docketText>ORDER denying 25 motion for release as to Kevin J. Spellman (1).Signed by Judge Lyle E. Strom on 1/20/2006. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER scheduling hearing on motion to appoint new counsel 28 for January 27, 2006, at 9:30 a.m. as to defendant Kevin J. Spellman. Signed by Judge Lyle E. Strom on 1/24/2006. (JDR)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803df6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-5</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-01-24</dateIssued>
+  <docketText>ORDER scheduling hearing on motion to appoint new counsel 28 for January 27, 2006, at 9:30 a.m. as to defendant Kevin J. Spellman. Signed by Judge Lyle E. Strom on 1/24/2006. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER denying without prejudice 28 motion to appoint counsel as to Kevin J. Spellman (1). Signed by Judge Lyle E. Strom on 1/27/2006. (JDR)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803e60</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-6</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-01-27</dateIssued>
+  <docketText>ORDER denying without prejudice 28 motion to appoint counsel as to Kevin J. Spellman (1). Signed by Judge Lyle E. Strom on 1/27/2006. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>JUDGMENT as to Kevin J. Spellman (1), Defendant plead guilty to Count II of the Indictment and is committed to the custody of the Bureau of Prisons for 140 months; 5 years supervised release with special conditions; $100 special assessment; Count I of the Indictment is dismissed on the motion of the United States as to this defendant only; Criminal Case Terminated as to defendant Kevin J. Spellman. Signed by Judge Lyle E. Strom on 4/5/2006. (4 certified copies to USM) (CJP)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803e62</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-7</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2006-04-05</dateIssued>
+  <docketText>JUDGMENT as to Kevin J. Spellman (1), Defendant plead guilty to Count II of the Indictment and is committed to the custody of the Bureau of Prisons for 140 months; 5 years supervised release with special conditions; $100 special assessment; Count I of the Indictment is dismissed on the motion of the United States as to this defendant only; Criminal Case Terminated as to defendant Kevin J. Spellman. Signed by Judge Lyle E. Strom on 4/5/2006. (4 certified copies to USM) (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER that plaintiff&apos;s motion for a Rule 35 hearing 43 is granted. The hearing is scheduled for 10/6/06 at 8:45 a.m. as to Kevin J. Spellman (1). Ordered by Judge Lyle E. Strom.(JSF)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803df9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-8</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2006-09-11</dateIssued>
+  <docketText>ORDER that plaintiff&apos;s motion for a Rule 35 hearing 43 is granted. The hearing is scheduled for 10/6/06 at 8:45 a.m. as to Kevin J. Spellman (1). Ordered by Judge Lyle E. Strom.(JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER as to defendant Kevin J. Spellman rescheduling hearing on plaintiff&apos;s Rule 35 motion 43 to October 13, 2006, at 8:45 a.m. Ordered by Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803df1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-9</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2006-09-13</dateIssued>
+  <docketText>ORDER as to defendant Kevin J. Spellman rescheduling hearing on plaintiff&apos;s Rule 35 motion 43 to October 13, 2006, at 8:45 a.m. Ordered by Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER granting 46 motion to continue as to Kevin J. Spellman (1) - Hearing on Rule 35 motion set for 11/17/2006 11:30 AM in Courtroom 5 (Omaha) before Senior Judge Lyle E. Strom. Ordered by Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803df8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-10</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2006-10-11</dateIssued>
+  <docketText>ORDER granting 46 motion to continue as to Kevin J. Spellman (1) - Hearing on Rule 35 motion set for 11/17/2006 11:30 AM in Courtroom 5 (Omaha) before Senior Judge Lyle E. Strom. Ordered by Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER granting 49 motion to continue as to Kevin J. Spellman (1) - Hearing on Rule 35 motion 43 set for 12/4/2006 10:30 AM in Courtroom 5 (Omaha) before Senior Judge Lyle E. Strom. Ordered by Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803e5b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-11</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2006-11-16</dateIssued>
+  <docketText>ORDER granting 49 motion to continue as to Kevin J. Spellman (1) - Hearing on Rule 35 motion 43 set for 12/4/2006 10:30 AM in Courtroom 5 (Omaha) before Senior Judge Lyle E. Strom. Ordered by Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER as to Kevin J. Spellman (1). The government&apos;s motion for reduction of sentence 43 is granted. The defendant is committed to the custody of the Bureau of Prisons for a term of 48 months. The defendant is to be given credit for time previously served under the previous Judgment and Committal Order dated April 5, 2006, which was signed and filed on April 5, 2006 (Filing No. 39). All other terms and conditions of the Judgment and Committal Order dated April 5, 2006, remain in full force and effect. That the transcript of the Rule 35 hearing of December 4, 2006, be sealed, as to defendant Kevin J. Spellman. Ordered by Judge Lyle E. Strom. 4 certified copies USM(JAE, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803e64</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-12</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2006-12-04</dateIssued>
+  <docketText>ORDER as to Kevin J. Spellman (1). The government&apos;s motion for reduction of sentence 43 is granted. The defendant is committed to the custody of the Bureau of Prisons for a term of 48 months. The defendant is to be given credit for time previously served under the previous Judgment and Committal Order dated April 5, 2006, which was signed and filed on April 5, 2006 (Filing No. 39). All other terms and conditions of the Judgment and Committal Order dated April 5, 2006, remain in full force and effect. That the transcript of the Rule 35 hearing of December 4, 2006, be sealed, as to defendant Kevin J. Spellman. Ordered by Judge Lyle E. Strom. 4 certified copies USM(JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS SHOULD NOT BE DESTROYED as to defendant Kevin J. Spellman. Ordered by Judge Lyle E. Strom.(CJP)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803df4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-13</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2007-05-23</dateIssued>
+  <docketText>ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS SHOULD NOT BE DESTROYED as to defendant Kevin J. Spellman. Ordered by Judge Lyle E. Strom.(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER granting 55 motion to reduce sentence pursuant to crack cocaine Amendment 706; adopting 58 Stipulation; the sentence of the defendant is reduced to time served, and the defendant is entitled to be released. Execution of this order shall be stayed for ten (10) days from the date of this order. The conditions of supervised release entered in the original judgment and committal order remain in full force and effect as to Kevin J. Spellman (1). Ordered by Senior Judge Lyle E. Strom. (4 certified copies to USM)(CJP)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803e5f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-14</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2008-03-03</dateIssued>
+  <docketText>ORDER granting 55 motion to reduce sentence pursuant to crack cocaine Amendment 706; adopting 58 Stipulation; the sentence of the defendant is reduced to time served, and the defendant is entitled to be released. Execution of this order shall be stayed for ten (10) days from the date of this order. The conditions of supervised release entered in the original judgment and committal order remain in full force and effect as to Kevin J. Spellman (1). Ordered by Senior Judge Lyle E. Strom. (4 certified copies to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Kevin J. Spellman - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803df5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-15</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2009-04-29</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Kevin J. Spellman - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER as to defendant Kevin J. Spellman - the government&apos;s motion for detention 68 pursuant to the Bail Reform Act is held in abeyance pending the defendant&apos;s coming into federal custody. The U.S. Marshal for the District of Nebraska is directed to place a detainer with the correctional officer having custody of the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (1 cert. copy to USM)(MBB)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803e63</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-16</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2009-04-29</dateIssued>
+  <docketText>ORDER as to defendant Kevin J. Spellman - the government&apos;s motion for detention 68 pursuant to the Bail Reform Act is held in abeyance pending the defendant&apos;s coming into federal custody. The U.S. Marshal for the District of Nebraska is directed to place a detainer with the correctional officer having custody of the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (1 cert. copy to USM)(MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER granting 76 motion to continue. Unopposed MOTION to Continue Supervised Release Disposition Hearing 76, PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 62 is set for hearing as to Kevin J. Spellman (1) - Violation of Supervised Release Hearing set for 10/16/2009 at 08:30 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom.Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803e5c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-17</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2009-06-03</dateIssued>
+  <docketText>ORDER granting 76 motion to continue. Unopposed MOTION to Continue Supervised Release Disposition Hearing 76, PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 62 is set for hearing as to Kevin J. Spellman (1) - Violation of Supervised Release Hearing set for 10/16/2009 at 08:30 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom.Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Kevin J. Spellman - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803df2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-18</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2012-01-11</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Kevin J. Spellman - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00357-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Spellman</title>
+  <subTitle>ORDER - A final dispositional hearing will be held before Senior Judge Lyle E. Strom in Courtroom No. 5, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, at 10:00 a.m. on February 23, 2012. Defendant must be present in person as to defendant Kevin J. Spellman. Ordered by Magistrate Judge Thomas D. Thalken. (AOA)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00357-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181803e5d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-19</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00357_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00357/USCOURTS-ned-8_05-cr-00357-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00357/pdf/USCOURTS-ned-8_05-cr-00357-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00357; USA v. Spellman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00357-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2012-01-11</dateIssued>
+  <docketText>ORDER - A final dispositional hearing will be held before Senior Judge Lyle E. Strom in Courtroom No. 5, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, at 10:00 a.m. on February 23, 2012. Defendant must be present in person as to defendant Kevin J. Spellman. Ordered by Magistrate Judge Thomas D. Thalken. (AOA)</docketText>
+</extension>
+</relatedItem>
+</mods>

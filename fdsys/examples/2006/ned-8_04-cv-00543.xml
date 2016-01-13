@@ -1,0 +1,356 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b2997">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00543</identifier>
+<identifier type="local">P0b002ee1817b2997</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_04-cv-00543</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cv-00543</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cv-00543</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>362</natureSuitCode>
+ <natureSuit>Medical Malpractice</natureSuit>
+ <cause>28:1332 Diversity-Medical Malpractice</cause>
+ <party firstName="Kimberly" fullName="Kimberly S. Aflague" lastName="Aflague" middleName="S." role="Plaintiff"></party>
+ <party fullName="Central Nebraska Orthopaedics And Sports Medicine" lastName="Central Nebraska Orthopaedics And Sports Medicine" role="Defendant"></party>
+ <party fullName="Does I-X" lastName="Does I-X" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Franssen" lastName="Franssen" role="Defendant"></party>
+ <party fullName="Mary Lanning Memorial Hospital" lastName="Mary Lanning Memorial Hospital" role="Defendant"></party>
+ <party firstName="Raymond" fullName="Raymond Smith" lastName="Smith" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Aflague v. Franssen et al</title>
+ <partNumber>8:04-cv-00543</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00543/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:04-cv-00543;04-543</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kimberly S. Aflague</displayForm>
+ <namePart type="family">Aflague</namePart>
+ <namePart type="given">Kimberly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Central Nebraska Orthopaedics And Sports Medicine</displayForm>
+ <namePart type="family">Central Nebraska Orthopaedics And Sports Medicine</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Does I-X</displayForm>
+ <namePart type="family">Does I-X</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Franssen</displayForm>
+ <namePart type="family">Franssen</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Lanning Memorial Hospital</displayForm>
+ <namePart type="family">Mary Lanning Memorial Hospital</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Raymond Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Raymond</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cv-00543</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cv-00543</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>362</natureSuitCode>
+ <natureSuit>Medical Malpractice</natureSuit>
+ <cause>28:1332 Diversity-Medical Malpractice</cause>
+ <party firstName="Kimberly" fullName="Kimberly S. Aflague" lastName="Aflague" middleName="S." role="Plaintiff"></party>
+ <party fullName="Central Nebraska Orthopaedics And Sports Medicine" lastName="Central Nebraska Orthopaedics And Sports Medicine" role="Defendant"></party>
+ <party fullName="Does I-X" lastName="Does I-X" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Franssen" lastName="Franssen" role="Defendant"></party>
+ <party fullName="Mary Lanning Memorial Hospital" lastName="Mary Lanning Memorial Hospital" role="Defendant"></party>
+ <party firstName="Raymond" fullName="Raymond Smith" lastName="Smith" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00543-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-0/mods.xml">
+ <titleInfo>
+  <title>Aflague v. Franssen et al</title>
+  <subTitle>ORDER that Attorney Susan K. Alexander has not complied with the show cause order 17.IT IS ORDERED that, Susan K. Alexander is stricken as an attorney of record forthe plaintiff Kimberly Aflague and shall not be noticed of events in this case. Said attorneymay apply to be readmitted as an attorney of record only after registering for the systemand paying the annual assessment pursuant to NEGenR 1.7(h). Signed by Magistrate Judge Thomas D. Thalken on 4/26/2005. (ADB )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00543-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818aa6db</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-0</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00543_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00543/pdf/USCOURTS-ned-8_04-cv-00543-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00543; Aflague v. Franssen et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00543-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-04-26</dateIssued>
+  <docketText>ORDER that Attorney Susan K. Alexander has not complied with the show cause order 17.IT IS ORDERED that, Susan K. Alexander is stricken as an attorney of record forthe plaintiff Kimberly Aflague and shall not be noticed of events in this case. Said attorneymay apply to be readmitted as an attorney of record only after registering for the systemand paying the annual assessment pursuant to NEGenR 1.7(h). Signed by Magistrate Judge Thomas D. Thalken on 4/26/2005. (ADB )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00543-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-1/mods.xml">
+ <titleInfo>
+  <title>Aflague v. Franssen et al</title>
+  <subTitle>ORDER - The parties shall report to the court in accordance with Fed. R. Civ. P. 26(f) on orbefore June 6, 2005, or show cause why sanctions should not be imposed upon them inaccordance with Fed. R. Civ. P. 16(f) and 37(g). Rule 26 Meeting Report Deadline set for 6/6/2005. Signed by Magistrate Judge Thomas D. Thalken on 5/26/2005. (JAE, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00543-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818aa6d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-1</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00543_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00543/pdf/USCOURTS-ned-8_04-cv-00543-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00543; Aflague v. Franssen et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00543-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-05-26</dateIssued>
+  <docketText>ORDER - The parties shall report to the court in accordance with Fed. R. Civ. P. 26(f) on orbefore June 6, 2005, or show cause why sanctions should not be imposed upon them inaccordance with Fed. R. Civ. P. 16(f) and 37(g). Rule 26 Meeting Report Deadline set for 6/6/2005. Signed by Magistrate Judge Thomas D. Thalken on 5/26/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00543-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-2/mods.xml">
+ <titleInfo>
+  <title>Aflague v. Franssen et al</title>
+  <subTitle>ORDER - Mr. Robert P. Chaloupka&apos;s motion to withdraw as counsel for the plaintiff 25 is held in abeyance. The plaintiff, Kimberly S. Aflague, shall have to on or before September 9, 2005, to respond to the motion to withdraw by filing a brief with the Clerk of Court. If no response is received or if substitute counsel has entered an appearance by that date, the motion to withdraw will be granted. If the motion to withdraw is granted and substitute counsel has not entered an appearance, the plaintiff will be considered proceeding pro se and counsel for the defendants may communicate with the plaintiff directly. Robert P. Chaloupka shall serve the plaintiff with a copy of this order and the motion under consideration herein, and file proof of such service with the Clerk of Court. Signed by Magistrate Judge Thomas D. Thalken on 8/10/2005.(KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00543-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818aa6da</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-2</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00543_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00543/pdf/USCOURTS-ned-8_04-cv-00543-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00543; Aflague v. Franssen et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00543-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-08-10</dateIssued>
+  <docketText>ORDER - Mr. Robert P. Chaloupka&apos;s motion to withdraw as counsel for the plaintiff 25 is held in abeyance. The plaintiff, Kimberly S. Aflague, shall have to on or before September 9, 2005, to respond to the motion to withdraw by filing a brief with the Clerk of Court. If no response is received or if substitute counsel has entered an appearance by that date, the motion to withdraw will be granted. If the motion to withdraw is granted and substitute counsel has not entered an appearance, the plaintiff will be considered proceeding pro se and counsel for the defendants may communicate with the plaintiff directly. Robert P. Chaloupka shall serve the plaintiff with a copy of this order and the motion under consideration herein, and file proof of such service with the Clerk of Court. Signed by Magistrate Judge Thomas D. Thalken on 8/10/2005.(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00543-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-3/mods.xml">
+ <titleInfo>
+  <title>Aflague v. Franssen et al</title>
+  <subTitle>ORDER- The motion to withdraw as counsel for the plaintiff, Kimberly S. Aflague, by Robert P. Chaloupka Filing No. 25 is granted; The Clerk of Court shall stop all electronic notices to Robert P. Chaloupka. The plaintiff Kimberly S. Aflague is considered proceeding pro se and counselfor the defendants may communicate with the plaintiff directly.The Clerk of Court shall mail a copy of this order to the plaintiff, Kimberly S. Aflague, by regular mail at:Kimberly S. Aflague2270 E. Smoke Tree Rd.Gilbert, AZ 85296The plaintiff Kimberly S. Aflague shall keep the court informed of her currentaddress and telephone number at all times while this case is pending. The plaintiff shall notifythe court of her current telephone number as soon as possible, but in any even no later thanOctober 31, 2005, in writing; Litigants in this district usually serve copies of motions and other documents onadverse parties by first class mail, postage prepaid. The plaintiff shall include with eachoriginal document submitted to the court a &quot;Certificate of Service&quot; stating the date a trueand correct copy of such document was mailed to each other party or the attorney of arepresented party. It is a violation of the rules of court to send communications to the courtwithout serving a copy on the other parties to the case; The plaintiff Kimberly S. Aflague is advised that she is bound by the FederalRules of Civil Procedure and by the Local Rules of this court in the litigation of this case. Thefederal rules are available at any law library, and the local rules are available at the office ofthe Clerk of Court, and also on the court&apos;s web site at www.ned.uscourts.gov. Signed by Magistrate Judge Thomas D. Thalken on 10/18/2005. Mailed as directed. (TJS)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00543-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818aa6a8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-3</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00543_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00543/pdf/USCOURTS-ned-8_04-cv-00543-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00543; Aflague v. Franssen et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00543-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-10-18</dateIssued>
+  <docketText>ORDER- The motion to withdraw as counsel for the plaintiff, Kimberly S. Aflague, by Robert P. Chaloupka Filing No. 25 is granted; The Clerk of Court shall stop all electronic notices to Robert P. Chaloupka. The plaintiff Kimberly S. Aflague is considered proceeding pro se and counselfor the defendants may communicate with the plaintiff directly.The Clerk of Court shall mail a copy of this order to the plaintiff, Kimberly S. Aflague, by regular mail at:Kimberly S. Aflague2270 E. Smoke Tree Rd.Gilbert, AZ 85296The plaintiff Kimberly S. Aflague shall keep the court informed of her currentaddress and telephone number at all times while this case is pending. The plaintiff shall notifythe court of her current telephone number as soon as possible, but in any even no later thanOctober 31, 2005, in writing; Litigants in this district usually serve copies of motions and other documents onadverse parties by first class mail, postage prepaid. The plaintiff shall include with eachoriginal document submitted to the court a &quot;Certificate of Service&quot; stating the date a trueand correct copy of such document was mailed to each other party or the attorney of arepresented party. It is a violation of the rules of court to send communications to the courtwithout serving a copy on the other parties to the case; The plaintiff Kimberly S. Aflague is advised that she is bound by the FederalRules of Civil Procedure and by the Local Rules of this court in the litigation of this case. Thefederal rules are available at any law library, and the local rules are available at the office ofthe Clerk of Court, and also on the court&apos;s web site at www.ned.uscourts.gov. Signed by Magistrate Judge Thomas D. Thalken on 10/18/2005. Mailed as directed. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00543-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-4/mods.xml">
+ <titleInfo>
+  <title>Aflague v. Franssen et al</title>
+  <subTitle>ORDER that the plaintiff Kimberly S. Aflague shall show cause by filing a written explanation for her failure to comply with the October 18, 2005 court order with the Clerk of Court no later than November 21, 2005. The Clerk of Court shall mail a copy of this order to the plaintiff, Kimberly S. Aflague, by regular mail at: Kimberly S. Aflague, 2270 E. Smoke Tree Rd., Gilbert, AZ 85296. Show Cause Deadline set for 11/21/2005. Signed by Magistrate Judge Thomas D. Thalken on 11/8/2005. (JAE, ).</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00543-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818aa6d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-4</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00543_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00543/pdf/USCOURTS-ned-8_04-cv-00543-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00543; Aflague v. Franssen et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00543-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-11-08</dateIssued>
+  <docketText>ORDER that the plaintiff Kimberly S. Aflague shall show cause by filing a written explanation for her failure to comply with the October 18, 2005 court order with the Clerk of Court no later than November 21, 2005. The Clerk of Court shall mail a copy of this order to the plaintiff, Kimberly S. Aflague, by regular mail at: Kimberly S. Aflague, 2270 E. Smoke Tree Rd., Gilbert, AZ 85296. Show Cause Deadline set for 11/21/2005. Signed by Magistrate Judge Thomas D. Thalken on 11/8/2005. (JAE, ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00543-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-5/mods.xml">
+ <titleInfo>
+  <title>Aflague v. Franssen et al</title>
+  <subTitle>REPORT AND RECOMMENDATION that the Complaint 1 be stricken and the case dismissed as a sanction in accordance with FRCP 16(f) and 37(b)(2)(C). Signed by Magistrate Judge Thomas D. Thalken on 11/28/2005. COPY MAILED as directed to 2270 E. Smoke Tree Rd., Gilbert, AZ 85296.(ADB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00543-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818aa6d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-5</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00543_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00543/pdf/USCOURTS-ned-8_04-cv-00543-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00543; Aflague v. Franssen et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00543-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2005-11-28</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION that the Complaint 1 be stricken and the case dismissed as a sanction in accordance with FRCP 16(f) and 37(b)(2)(C). Signed by Magistrate Judge Thomas D. Thalken on 11/28/2005. COPY MAILED as directed to 2270 E. Smoke Tree Rd., Gilbert, AZ 85296.(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00543-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-6/mods.xml">
+ <titleInfo>
+  <title>Aflague v. Franssen et al</title>
+  <subTitle>ORDER adopting 36 Report and Recommendation ; the plaintiff&apos;s complaint 1 and this case is dismissed as a sanction inaccordance with Fed. R. Civ. P. 16(f) and 37(b)(2)(C); andthe Clerk&apos;s Office shall mail a copy of this order to the plaintiff at her lastknown address. Signed by Judge Joseph F. Bataillon on 1/20/2006. COPIES MAILED as directed. (ADB)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00543-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818aa6a9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-6</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00543_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00543/USCOURTS-ned-8_04-cv-00543-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00543/pdf/USCOURTS-ned-8_04-cv-00543-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00543; Aflague v. Franssen et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00543-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-01-20</dateIssued>
+  <docketText>ORDER adopting 36 Report and Recommendation ; the plaintiff&apos;s complaint 1 and this case is dismissed as a sanction inaccordance with Fed. R. Civ. P. 16(f) and 37(b)(2)(C); andthe Clerk&apos;s Office shall mail a copy of this order to the plaintiff at her lastknown address. Signed by Judge Joseph F. Bataillon on 1/20/2006. COPIES MAILED as directed. (ADB)</docketText>
+</extension>
+</relatedItem>
+</mods>

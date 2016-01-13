@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18155a337">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cr-00505</identifier>
+<identifier type="local">P0b002ee18155a337</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_09-cr-00505</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-cr-00505</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-cr-00505</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Dinesh" fullName="Dinesh Bafna" lastName="Bafna" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Bafna</title>
+ <partNumber>1:09-cr-00505</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cr-00505/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cr-00505;09-505</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dinesh Bafna</displayForm>
+ <namePart type="family">Bafna</namePart>
+ <namePart type="given">Dinesh</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-cr-00505</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-cr-00505</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Dinesh" fullName="Dinesh Bafna" lastName="Bafna" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-cr-00505-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cr-00505/USCOURTS-ohnd-1_09-cr-00505-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Bafna</title>
+  <subTitle>Order denying 38 Defendant&apos;s Motion to Amend/Correct as to Dinesh Bafna (1); denying 39 Defendant&apos;s Amended Motion to Amend/Correct as to Dinesh Bafna (1); denying 40 Defendant&apos;s Supplemental Motion to Amend/Correct as to Dinesh Bafna (1). Further, this order will serve as the Court&apos;s sentencing memorandum to further explain Defendant&apos;s oral sentencing. Judge John R. Adams on 12/30/10. (L, J)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-cr-00505-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815f2c35</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cr-00505/USCOURTS-ohnd-1_09-cr-00505-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-cr-00505_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cr-00505/USCOURTS-ohnd-1_09-cr-00505-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cr-00505/pdf/USCOURTS-ohnd-1_09-cr-00505-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cr-00505; United States of America v. Bafna; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-cr-00505-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-12-30</dateIssued>
+  <docketText>Order denying 38 Defendant&apos;s Motion to Amend/Correct as to Dinesh Bafna (1); denying 39 Defendant&apos;s Amended Motion to Amend/Correct as to Dinesh Bafna (1); denying 40 Defendant&apos;s Supplemental Motion to Amend/Correct as to Dinesh Bafna (1). Further, this order will serve as the Court&apos;s sentencing memorandum to further explain Defendant&apos;s oral sentencing. Judge John R. Adams on 12/30/10. (L, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-cr-00505-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cr-00505/USCOURTS-ohnd-1_09-cr-00505-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Bafna</title>
+  <subTitle>Order denying 48 Defendant&apos;s Motion for Release from Custody Pending Appeal as to Dinesh Bafna (1). Judge John R. Adams on 1/31/11. (L, J)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-cr-00505-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815f2c36</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cr-00505/USCOURTS-ohnd-1_09-cr-00505-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-cr-00505_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cr-00505/USCOURTS-ohnd-1_09-cr-00505-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cr-00505/pdf/USCOURTS-ohnd-1_09-cr-00505-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cr-00505; United States of America v. Bafna; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-cr-00505-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-31</dateIssued>
+  <docketText>Order denying 48 Defendant&apos;s Motion for Release from Custody Pending Appeal as to Dinesh Bafna (1). Judge John R. Adams on 1/31/11. (L, J)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,226 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8a9e5f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01347</identifier>
+<identifier type="local">P0b002ee18a8a9e5f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_14-cv-01347</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-01347</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-01347</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="CSP Sacramento" lastName="CSP Sacramento" role="Defendant"></party>
+ <party fullName="Deleon" lastName="Deleon" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Epps" lastName="Epps" role="Plaintiff"></party>
+ <party fullName="Sakyi" lastName="Sakyi" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Epps v. CSP Sacramento</title>
+ <partNumber>2:14-cv-01347</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01347/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-01347;14-1347</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CSP Sacramento</displayForm>
+ <namePart type="family">CSP Sacramento</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Deleon</displayForm>
+ <namePart type="family">Deleon</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Epps</displayForm>
+ <namePart type="family">Epps</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sakyi</displayForm>
+ <namePart type="family">Sakyi</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-01347</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-01347</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="CSP Sacramento" lastName="CSP Sacramento" role="Defendant"></party>
+ <party fullName="Deleon" lastName="Deleon" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Epps" lastName="Epps" role="Plaintiff"></party>
+ <party fullName="Sakyi" lastName="Sakyi" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-01347-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01347/USCOURTS-caed-2_14-cv-01347-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Epps v. CSP Sacramento</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Allison Claire on 10/23/14 ORDERING the Director of the CDC to collect and forward payment from the trust account of Robert Epps and forward payment to the court until the balance is paid in full. Clerk of the Court is directed to serve a copy of this order and a copy of plaintiff&apos;s signed in forma pauperis affidavit to the Director of the CDC; and the Clerk of the Court is further directed to serve a copy of this order on the Financial Department of the court. (cc CDC, Financial). (Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01347/pdf/USCOURTS-caed-2_14-cv-01347-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b31af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01347/USCOURTS-caed-2_14-cv-01347-0</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-01347_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01347/USCOURTS-caed-2_14-cv-01347-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01347/pdf/USCOURTS-caed-2_14-cv-01347-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-01347; (PC) Epps v. CSP Sacramento; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-01347-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-10-24</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Allison Claire on 10/23/14 ORDERING the Director of the CDC to collect and forward payment from the trust account of Robert Epps and forward payment to the court until the balance is paid in full. Clerk of the Court is directed to serve a copy of this order and a copy of plaintiff&apos;s signed in forma pauperis affidavit to the Director of the CDC; and the Clerk of the Court is further directed to serve a copy of this order on the Financial Department of the court. (cc CDC, Financial). (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-01347-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01347/USCOURTS-caed-2_14-cv-01347-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Epps v. CSP Sacramento</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 12/3/14 DENYING 15 Motion to Appoint Counsel; Within thirty days from the date of this order, plaintiff shall submit the documents specified in the courts October 24, 2014 order at page 5, 6. (Dillon, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01347/pdf/USCOURTS-caed-2_14-cv-01347-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b31b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01347/USCOURTS-caed-2_14-cv-01347-1</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-01347_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01347/USCOURTS-caed-2_14-cv-01347-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01347/pdf/USCOURTS-caed-2_14-cv-01347-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-01347; (PC) Epps v. CSP Sacramento; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-01347-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-12-03</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 12/3/14 DENYING 15 Motion to Appoint Counsel; Within thirty days from the date of this order, plaintiff shall submit the documents specified in the courts October 24, 2014 order at page 5, 6. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-01347-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01347/USCOURTS-caed-2_14-cv-01347-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Epps v. CSP Sacramento</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 12/31/14 ordering the clerk of the court is instructed to re-serve plaintiff with the order of 10/24/14, and the service documents referred to in that order 9 at 5 paragraph 5, if the clerk has not already done so to be completed and returned within 30 days. (Plummer, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01347/pdf/USCOURTS-caed-2_14-cv-01347-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b31b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01347/USCOURTS-caed-2_14-cv-01347-2</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-01347_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01347/USCOURTS-caed-2_14-cv-01347-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01347/pdf/USCOURTS-caed-2_14-cv-01347-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-01347; (PC) Epps v. CSP Sacramento; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-01347-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 12/31/14 ordering the clerk of the court is instructed to re-serve plaintiff with the order of 10/24/14, and the service documents referred to in that order 9 at 5 paragraph 5, if the clerk has not already done so to be completed and returned within 30 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

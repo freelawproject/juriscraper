@@ -1,0 +1,277 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181182dbe">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-00403</identifier>
+<identifier type="local">P0b002ee181182dbe</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_06-cv-00403</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_06-cv-00403</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:06-cv-00403</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="C.O." fullName="C.O. Barse" lastName="Barse" role="Defendant"></party>
+ <party fullName="Disciplinary Hearing Department" lastName="Disciplinary Hearing Department" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Fontanez" lastName="Fontanez" role="Plaintiff"></party>
+ <party fullName="Gil" lastName="Gil" role="Defendant"></party>
+ <party fullName="Grievance Department" lastName="Grievance Department" role="Defendant"></party>
+ <party firstName="T." fullName="T. Howard" lastName="Howard" role="Defendant"></party>
+ <party firstName="D." fullName="D. LaClair" lastName="LaClair" role="Defendant"></party>
+ <party fullName="Law Library Department" lastName="Law Library Department" role="Defendant"></party>
+ <party fullName="Medical Department" lastName="Medical Department" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan A. Rodriguez" lastName="Rodriguez" middleName="A." role="Plaintiff"></party>
+ <party fullName="Upstate Correctional Facility" lastName="Upstate Correctional Facility" role="Defendant"></party>
+ <party firstName="R." fullName="R. K. Woods" lastName="Woods" middleName="K." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Rodriguez v. Upstate Correctional Facility et al</title>
+ <partNumber>9:06-cv-00403</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-00403/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:06-cv-00403;06-403</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>C.O. Barse</displayForm>
+ <namePart type="family">Barse</namePart>
+ <namePart type="given">C.O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Disciplinary Hearing Department</displayForm>
+ <namePart type="family">Disciplinary Hearing Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eric Fontanez</displayForm>
+ <namePart type="family">Fontanez</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gil</displayForm>
+ <namePart type="family">Gil</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Grievance Department</displayForm>
+ <namePart type="family">Grievance Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. Howard</displayForm>
+ <namePart type="family">Howard</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. LaClair</displayForm>
+ <namePart type="family">LaClair</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Law Library Department</displayForm>
+ <namePart type="family">Law Library Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Medical Department</displayForm>
+ <namePart type="family">Medical Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Juan A. Rodriguez</displayForm>
+ <namePart type="family">Rodriguez</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Upstate Correctional Facility</displayForm>
+ <namePart type="family">Upstate Correctional Facility</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. K. Woods</displayForm>
+ <namePart type="family">Woods</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_06-cv-00403</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:06-cv-00403</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="C.O." fullName="C.O. Barse" lastName="Barse" role="Defendant"></party>
+ <party fullName="Disciplinary Hearing Department" lastName="Disciplinary Hearing Department" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Fontanez" lastName="Fontanez" role="Plaintiff"></party>
+ <party fullName="Gil" lastName="Gil" role="Defendant"></party>
+ <party fullName="Grievance Department" lastName="Grievance Department" role="Defendant"></party>
+ <party firstName="T." fullName="T. Howard" lastName="Howard" role="Defendant"></party>
+ <party firstName="D." fullName="D. LaClair" lastName="LaClair" role="Defendant"></party>
+ <party fullName="Law Library Department" lastName="Law Library Department" role="Defendant"></party>
+ <party fullName="Medical Department" lastName="Medical Department" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan A. Rodriguez" lastName="Rodriguez" middleName="A." role="Plaintiff"></party>
+ <party fullName="Upstate Correctional Facility" lastName="Upstate Correctional Facility" role="Defendant"></party>
+ <party firstName="R." fullName="R. K. Woods" lastName="Woods" middleName="K." role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_06-cv-00403-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00403/USCOURTS-nynd-9_06-cv-00403-0/mods.xml">
+ <titleInfo>
+  <title>Rodriguez v. Upstate Correctional Facility et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS. RECOMMENDED that 29 MOTION for Summary Judgment filed by Gil, Disciplinary Hearing Department, T. Howard be GRANTED. Objections to R&amp;R due by 12/8/2008 Case Review Deadline 12/11/2008. Signed by Magistrate Judge David R. Homer on 11/21/08. {order served via regular mail on plaintiff}(nas)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_06-cv-00403-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18142ec54</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00403/USCOURTS-nynd-9_06-cv-00403-0</identifier>
+ <identifier type="former granule identifier">nynd-9_06-cv-00403_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00403/USCOURTS-nynd-9_06-cv-00403-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-00403/pdf/USCOURTS-nynd-9_06-cv-00403-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:06-cv-00403; Rodriguez v. Upstate Correctional Facility et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_06-cv-00403-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS. RECOMMENDED that 29 MOTION for Summary Judgment filed by Gil, Disciplinary Hearing Department, T. Howard be GRANTED. Objections to R&amp;R due by 12/8/2008 Case Review Deadline 12/11/2008. Signed by Magistrate Judge David R. Homer on 11/21/08. {order served via regular mail on plaintiff}(nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_06-cv-00403-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00403/USCOURTS-nynd-9_06-cv-00403-1/mods.xml">
+ <titleInfo>
+  <title>Rodriguez v. Upstate Correctional Facility et al</title>
+  <subTitle>ORDER that 32 Report and Recommendations is APPROVED and ADOPTED in its entirety. ORDERED granting 29 Motion for Summary Judgment and plaintiff&apos;s amended complaint (dkt no. 7) is DISMISSED in its entirety. Signed by Senior Judge Lawrence E. Kahn on 1/23/09. {order served via regular mail on all non-ecf parties}(nas)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_06-cv-00403-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18142ec55</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00403/USCOURTS-nynd-9_06-cv-00403-1</identifier>
+ <identifier type="former granule identifier">nynd-9_06-cv-00403_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00403/USCOURTS-nynd-9_06-cv-00403-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-00403/pdf/USCOURTS-nynd-9_06-cv-00403-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:06-cv-00403; Rodriguez v. Upstate Correctional Facility et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_06-cv-00403-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-23</dateIssued>
+  <docketText>ORDER that 32 Report and Recommendations is APPROVED and ADOPTED in its entirety. ORDERED granting 29 Motion for Summary Judgment and plaintiff&apos;s amended complaint (dkt no. 7) is DISMISSED in its entirety. Signed by Senior Judge Lawrence E. Kahn on 1/23/09. {order served via regular mail on all non-ecf parties}(nas)</docketText>
+</extension>
+</relatedItem>
+</mods>

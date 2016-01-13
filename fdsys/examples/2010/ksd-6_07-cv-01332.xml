@@ -1,0 +1,347 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee187669cfd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332</identifier>
+<identifier type="local">P0b002ee187669cfd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-6_07-cv-01332</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_07-cv-01332</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:07-cv-01332</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>18:1962 Racketeering (RICO) Act</cause>
+ <party fullName="Bank of Commerce &amp; Trust Company" lastName="Bank of Commerce &amp; Trust Company" role="Counter Defendant"></party>
+ <party fullName="Bank of Commerce &amp; Trust Company" lastName="Bank of Commerce &amp; Trust Company" role="Plaintiff"></party>
+ <party firstName="Lance" fullName="Lance L. Dominique" lastName="Dominique" middleName="L." role="Counter Claimant"></party>
+ <party firstName="Lance" fullName="Lance L. Dominique" lastName="Dominique" middleName="L." role="Defendant"></party>
+ <party fullName="Dominique &amp; Associates" lastName="Dominique &amp; Associates" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Bank of Commerce &amp; Trust Company v. Dominique</title>
+ <partNumber>6:07-cv-01332</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:07-cv-01332;07-1332</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Wichita</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bank of Commerce &amp; Trust Company</displayForm>
+ <namePart type="family">Bank of Commerce &amp; Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bank of Commerce &amp; Trust Company</displayForm>
+ <namePart type="family">Bank of Commerce &amp; Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lance L. Dominique</displayForm>
+ <namePart type="family">Dominique</namePart>
+ <namePart type="given">Lance</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Lance L. Dominique</displayForm>
+ <namePart type="family">Dominique</namePart>
+ <namePart type="given">Lance</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dominique &amp; Associates</displayForm>
+ <namePart type="family">Dominique &amp; Associates</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_07-cv-01332</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:07-cv-01332</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>18:1962 Racketeering (RICO) Act</cause>
+ <party fullName="Bank of Commerce &amp; Trust Company" lastName="Bank of Commerce &amp; Trust Company" role="Counter Defendant"></party>
+ <party fullName="Bank of Commerce &amp; Trust Company" lastName="Bank of Commerce &amp; Trust Company" role="Plaintiff"></party>
+ <party firstName="Lance" fullName="Lance L. Dominique" lastName="Dominique" middleName="L." role="Counter Claimant"></party>
+ <party firstName="Lance" fullName="Lance L. Dominique" lastName="Dominique" middleName="L." role="Defendant"></party>
+ <party fullName="Dominique &amp; Associates" lastName="Dominique &amp; Associates" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_07-cv-01332-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-0/mods.xml">
+ <titleInfo>
+  <title>Bank of Commerce &amp; Trust Company v. Dominique</title>
+  <subTitle>MEMORANDUM AND ORDER denying 11 Motion to Dismiss for Lack of Jurisdiction. Signed by District Judge Monti L Belot on 5/1/08. (cl)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767ad10</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-0</identifier>
+ <identifier type="former granule identifier">ksd-6_07-cv-01332_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:07-cv-01332; Bank of Commerce &amp; Trust Company v. Dominique; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_07-cv-01332-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-05-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 11 Motion to Dismiss for Lack of Jurisdiction. Signed by District Judge Monti L Belot on 5/1/08. (cl)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_07-cv-01332-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-1/mods.xml">
+ <titleInfo>
+  <title>Bank of Commerce &amp; Trust Company v. Dominique</title>
+  <subTitle>ORDER granting 19 Motion to Withdraw as Attorney. Attorney Ross A. Hollander and Michelle K. Moe terminated. Note: While the motion and order also refer to the withdrawal of Christopher McHugh, Mr. McHugh never formally entered his appearance in this case. Signed by Magistrate Judge Donald W. Bostwick on 6/6/2008. (Bostwick, Donald)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767ad11</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-1</identifier>
+ <identifier type="former granule identifier">ksd-6_07-cv-01332_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:07-cv-01332; Bank of Commerce &amp; Trust Company v. Dominique; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_07-cv-01332-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-06-06</dateIssued>
+  <docketText>ORDER granting 19 Motion to Withdraw as Attorney. Attorney Ross A. Hollander and Michelle K. Moe terminated. Note: While the motion and order also refer to the withdrawal of Christopher McHugh, Mr. McHugh never formally entered his appearance in this case. Signed by Magistrate Judge Donald W. Bostwick on 6/6/2008. (Bostwick, Donald)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_07-cv-01332-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-2/mods.xml">
+ <titleInfo>
+  <title>Bank of Commerce &amp; Trust Company v. Dominique</title>
+  <subTitle>MEMORANDUM AND ORDER granting 26 plaintiff&apos;s motion to dismiss defendant&apos;s counterclaim, without prejudice. Signed by District Judge Monti L Belot on 8/22/08. (cl)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767ad0d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-2</identifier>
+ <identifier type="former granule identifier">ksd-6_07-cv-01332_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:07-cv-01332; Bank of Commerce &amp; Trust Company v. Dominique; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_07-cv-01332-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-08-22</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 26 plaintiff&apos;s motion to dismiss defendant&apos;s counterclaim, without prejudice. Signed by District Judge Monti L Belot on 8/22/08. (cl)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_07-cv-01332-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-3/mods.xml">
+ <titleInfo>
+  <title>Bank of Commerce &amp; Trust Company v. Dominique</title>
+  <subTitle>ORDER granting in part and denying in part 63 Counsel&apos;s Motion to Withdraw as Attorney for Defendant, Lance L. Dominique. Counsel Paul McCausland will be terminated as counsel after forwarding copies of this Order and a copy of the draft pretrial order to Defendant and filing a certificate of service as required by the Memorandum and Order. The request for an extension of time for Defendant to submit expert reports is DENIED. The Pretrial Conference previously set for 3/3/2009 at 9:00 a.m. is hereby CANCELED. The 3/17/2009 deadline for the filing of any dispositive motions remains as previously set. Responses to dispositive motions shall be filed by 4/13/2009 and a reply, if any, is to be filed by 5/6/2009. Defendant is to submit to counsel and the court by 4/13/2009 his proposed additions and objections to the pretrial order previously drafted by Plaintiff. The Court will thereafter set a new date for the pretrial conference. See Memorandum and Order for details. Signed by Magistrate Judge Donald W. Bostwick on 2/19/2009. (Bostwick, Donald)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767ad0e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-3</identifier>
+ <identifier type="former granule identifier">ksd-6_07-cv-01332_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:07-cv-01332; Bank of Commerce &amp; Trust Company v. Dominique; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_07-cv-01332-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-02-19</dateIssued>
+  <docketText>ORDER granting in part and denying in part 63 Counsel&apos;s Motion to Withdraw as Attorney for Defendant, Lance L. Dominique. Counsel Paul McCausland will be terminated as counsel after forwarding copies of this Order and a copy of the draft pretrial order to Defendant and filing a certificate of service as required by the Memorandum and Order. The request for an extension of time for Defendant to submit expert reports is DENIED. The Pretrial Conference previously set for 3/3/2009 at 9:00 a.m. is hereby CANCELED. The 3/17/2009 deadline for the filing of any dispositive motions remains as previously set. Responses to dispositive motions shall be filed by 4/13/2009 and a reply, if any, is to be filed by 5/6/2009. Defendant is to submit to counsel and the court by 4/13/2009 his proposed additions and objections to the pretrial order previously drafted by Plaintiff. The Court will thereafter set a new date for the pretrial conference. See Memorandum and Order for details. Signed by Magistrate Judge Donald W. Bostwick on 2/19/2009. (Bostwick, Donald)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_07-cv-01332-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-4/mods.xml">
+ <titleInfo>
+  <title>Bank of Commerce &amp; Trust Company v. Dominique</title>
+  <subTitle>MEMORANDUM AND ORDER denying 73 Defendant&apos;s Motion for Judgment on the Pleadings. See Order for details. Signed by District Judge Eric F. Melgren on 11/17/2009. (cm)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767ad12</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-4</identifier>
+ <identifier type="former granule identifier">ksd-6_07-cv-01332_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:07-cv-01332; Bank of Commerce &amp; Trust Company v. Dominique; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_07-cv-01332-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-11-17</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 73 Defendant&apos;s Motion for Judgment on the Pleadings. See Order for details. Signed by District Judge Eric F. Melgren on 11/17/2009. (cm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_07-cv-01332-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-5/mods.xml">
+ <titleInfo>
+  <title>Bank of Commerce &amp; Trust Company v. Dominique</title>
+  <subTitle>MEMORANDUM AND ORDER denying 70 Motion for Partial Summary Judgment. See Order for details. Signed by District Judge Eric F. Melgren on 11/23/2009. (cm)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767ad13</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-5</identifier>
+ <identifier type="former granule identifier">ksd-6_07-cv-01332_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:07-cv-01332; Bank of Commerce &amp; Trust Company v. Dominique; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_07-cv-01332-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-11-23</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 70 Motion for Partial Summary Judgment. See Order for details. Signed by District Judge Eric F. Melgren on 11/23/2009. (cm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_07-cv-01332-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-6/mods.xml">
+ <titleInfo>
+  <title>Bank of Commerce &amp; Trust Company v. Dominique</title>
+  <subTitle>MEMORANDUM AND ORDER denying 91 Motion to Alter or Amend Judgment. See Order for details. Signed by District Judge Eric F. Melgren on 1/25/2010. (cm)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767ad0f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-6</identifier>
+ <identifier type="former granule identifier">ksd-6_07-cv-01332_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_07-cv-01332/USCOURTS-ksd-6_07-cv-01332-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_07-cv-01332/pdf/USCOURTS-ksd-6_07-cv-01332-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:07-cv-01332; Bank of Commerce &amp; Trust Company v. Dominique; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_07-cv-01332-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-01-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 91 Motion to Alter or Amend Judgment. See Order for details. Signed by District Judge Eric F. Melgren on 1/25/2010. (cm)</docketText>
+</extension>
+</relatedItem>
+</mods>

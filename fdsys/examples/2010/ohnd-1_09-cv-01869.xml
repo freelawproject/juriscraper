@@ -1,0 +1,188 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d396d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-01869</identifier>
+<identifier type="local">P0b002ee1815d396d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_09-cv-01869</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-cv-01869</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-cv-01869</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>15:1126 Patent Infringement</cause>
+ <party fullName="ESAB AB" lastName="ESAB AB" role="Defendant"></party>
+ <party fullName="ESAB Asia/Pacific PTE, Ltd." lastName="ESAB Asia/Pacific PTE, Ltd." role="Defendant"></party>
+ <party fullName="Lincoln Electric Company" lastName="Lincoln Electric Company" role="Plaintiff"></party>
+ <party fullName="Lincoln Electric Holdings, Inc." lastName="Lincoln Electric Holdings, Inc." role="Plaintiff"></party>
+ <party fullName="Lincoln Global, Inc." lastName="Lincoln Global, Inc." role="Plaintiff"></party>
+ <party fullName="The ESAB Group, Inc." lastName="The ESAB Group, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Lincoln Electric Company et al v. The ESAB Group, Inc. et al</title>
+ <partNumber>1:09-cv-01869</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-01869/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cv-01869;09-1869</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ESAB AB</displayForm>
+ <namePart type="family">ESAB AB</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ESAB Asia/Pacific PTE, Ltd.</displayForm>
+ <namePart type="family">ESAB Asia/Pacific PTE, Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lincoln Electric Company</displayForm>
+ <namePart type="family">Lincoln Electric Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lincoln Electric Holdings, Inc.</displayForm>
+ <namePart type="family">Lincoln Electric Holdings, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lincoln Global, Inc.</displayForm>
+ <namePart type="family">Lincoln Global, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>The ESAB Group, Inc.</displayForm>
+ <namePart type="family">The ESAB Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_09-cv-01869</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:09-cv-01869</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>15:1126 Patent Infringement</cause>
+ <party fullName="ESAB AB" lastName="ESAB AB" role="Defendant"></party>
+ <party fullName="ESAB Asia/Pacific PTE, Ltd." lastName="ESAB Asia/Pacific PTE, Ltd." role="Defendant"></party>
+ <party fullName="Lincoln Electric Company" lastName="Lincoln Electric Company" role="Plaintiff"></party>
+ <party fullName="Lincoln Electric Holdings, Inc." lastName="Lincoln Electric Holdings, Inc." role="Plaintiff"></party>
+ <party fullName="Lincoln Global, Inc." lastName="Lincoln Global, Inc." role="Plaintiff"></party>
+ <party fullName="The ESAB Group, Inc." lastName="The ESAB Group, Inc." role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_09-cv-01869-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-01869/USCOURTS-ohnd-1_09-cv-01869-0/mods.xml">
+ <titleInfo>
+  <title>Lincoln Electric Company et al v. The ESAB Group, Inc. et al</title>
+  <subTitle>Memorandum Opinion and Order. Defendants&apos; Motion for a Mandatory Stay are GRANTED in Case Number 09CV1844, and Defendants&apos; Motion for Discretionary Stay in Case Number 09CV1858 and 09CV1969 are granted. All three cases. 09CV1844, 09CV1858 and 09CV1869 are DISMISSED WITHOUT PREJUDICE with leave for Plaintiffs to move to re-instate the actions if necessary within 60 days of the conclusion of the ITC investigation. Defendant National Standards Motion for Discretionary Stay (ECF #14) in Case Number 09CV1886 is Denied. Judge Donald C. Nugent on 1/4/10. (E,P)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_09-cv-01869-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816e7a1a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-01869/USCOURTS-ohnd-1_09-cv-01869-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_09-cv-01869_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_09-cv-01869/USCOURTS-ohnd-1_09-cv-01869-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_09-cv-01869/pdf/USCOURTS-ohnd-1_09-cv-01869-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01869; Lincoln Electric Company et al v. The ESAB Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_09-cv-01869-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-04</dateIssued>
+  <docketText>Memorandum Opinion and Order. Defendants&apos; Motion for a Mandatory Stay are GRANTED in Case Number 09CV1844, and Defendants&apos; Motion for Discretionary Stay in Case Number 09CV1858 and 09CV1969 are granted. All three cases. 09CV1844, 09CV1858 and 09CV1869 are DISMISSED WITHOUT PREJUDICE with leave for Plaintiffs to move to re-instate the actions if necessary within 60 days of the conclusion of the ITC investigation. Defendant National Standards Motion for Discretionary Stay (ECF #14) in Case Number 09CV1886 is Denied. Judge Donald C. Nugent on 1/4/10. (E,P)</docketText>
+</extension>
+</relatedItem>
+</mods>

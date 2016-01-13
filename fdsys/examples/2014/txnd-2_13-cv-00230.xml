@@ -1,0 +1,252 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c689ae">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-2_13-cv-00230</identifier>
+<identifier type="local">P0b002ee186c689ae</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-2_13-cv-00230</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-2_13-cv-00230</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>2:13-cv-00230</caseNumber>
+ <caseOffice>Amarillo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Greg" fullName="Greg Abbott" lastName="Abbott" role="Defendant"></party>
+ <party firstName="Brad" fullName="Brad Livingston" lastName="Livingston" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles McDuffie" lastName="McDuffie" role="Defendant"></party>
+ <party firstName="E" fullName="E A Nunnelley" lastName="Nunnelley" middleName="A" role="Plaintiff"></party>
+ <party firstName="Eddie" fullName="Eddie A Nunnelley Jr" generation="Jr" lastName="Nunnelley" middleName="A" role="Plaintiff"></party>
+ <party firstName="Eddie" fullName="Eddie Alan Nunnelley" lastName="Nunnelley" middleName="Alan" role="Plaintiff"></party>
+ <party firstName="Eddie" fullName="Eddie Alan Junior Nunnelley" lastName="Nunnelley" middleName="Alan Junior" role="Plaintiff"></party>
+ <party firstName="Rissi" fullName="Rissi Owens" lastName="Owens" role="Defendant"></party>
+ <party firstName="Penny" fullName="Penny Ponder" lastName="Ponder" role="Defendant"></party>
+ <party firstName="William" fullName="William Stephens" lastName="Stephens" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Nunnelley v. Livingston et al</title>
+ <partNumber>2:13-cv-00230</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-2_13-cv-00230/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-00230;13-230</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Amarillo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Greg Abbott</displayForm>
+ <namePart type="family">Abbott</namePart>
+ <namePart type="given">Greg</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brad Livingston</displayForm>
+ <namePart type="family">Livingston</namePart>
+ <namePart type="given">Brad</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles McDuffie</displayForm>
+ <namePart type="family">McDuffie</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>E A Nunnelley</displayForm>
+ <namePart type="family">Nunnelley</namePart>
+ <namePart type="given">E</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Eddie A Nunnelley Jr</displayForm>
+ <namePart type="family">Nunnelley</namePart>
+ <namePart type="given">Eddie</namePart>
+ <namePart type="termsOfAddress">Jr</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Eddie Alan Nunnelley</displayForm>
+ <namePart type="family">Nunnelley</namePart>
+ <namePart type="given">Eddie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Eddie Alan Junior Nunnelley</displayForm>
+ <namePart type="family">Nunnelley</namePart>
+ <namePart type="given">Eddie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rissi Owens</displayForm>
+ <namePart type="family">Owens</namePart>
+ <namePart type="given">Rissi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Penny Ponder</displayForm>
+ <namePart type="family">Ponder</namePart>
+ <namePart type="given">Penny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Stephens</displayForm>
+ <namePart type="family">Stephens</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-2_13-cv-00230</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>2:13-cv-00230</caseNumber>
+ <caseOffice>Amarillo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Greg" fullName="Greg Abbott" lastName="Abbott" role="Defendant"></party>
+ <party firstName="Brad" fullName="Brad Livingston" lastName="Livingston" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles McDuffie" lastName="McDuffie" role="Defendant"></party>
+ <party firstName="E" fullName="E A Nunnelley" lastName="Nunnelley" middleName="A" role="Plaintiff"></party>
+ <party firstName="Eddie" fullName="Eddie A Nunnelley Jr" generation="Jr" lastName="Nunnelley" middleName="A" role="Plaintiff"></party>
+ <party firstName="Eddie" fullName="Eddie Alan Nunnelley" lastName="Nunnelley" middleName="Alan" role="Plaintiff"></party>
+ <party firstName="Eddie" fullName="Eddie Alan Junior Nunnelley" lastName="Nunnelley" middleName="Alan Junior" role="Plaintiff"></party>
+ <party firstName="Rissi" fullName="Rissi Owens" lastName="Owens" role="Defendant"></party>
+ <party firstName="Penny" fullName="Penny Ponder" lastName="Ponder" role="Defendant"></party>
+ <party firstName="William" fullName="William Stephens" lastName="Stephens" role="Defendant"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-2_13-cv-00230-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-2_13-cv-00230/USCOURTS-txnd-2_13-cv-00230-0/mods.xml">
+ <titleInfo>
+  <title>Nunnelley v. Livingston et al</title>
+  <subTitle>REPORT AND RECOMMENDATION: re: 3 Complaint. See R&amp;R for specifics. (Ordered by Magistrate Judge Clinton E Averitte on 12/11/2013) (egb)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-2_13-cv-00230-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c72ae6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-2_13-cv-00230/USCOURTS-txnd-2_13-cv-00230-0</identifier>
+ <identifier type="former granule identifier">txnd-2_13-cv-00230_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-2_13-cv-00230/USCOURTS-txnd-2_13-cv-00230-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-2_13-cv-00230/pdf/USCOURTS-txnd-2_13-cv-00230-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00230; Nunnelley v. Livingston et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-2_13-cv-00230-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-12-11</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION: re: 3 Complaint. See R&amp;R for specifics. (Ordered by Magistrate Judge Clinton E Averitte on 12/11/2013) (egb)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-2_13-cv-00230-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-2_13-cv-00230/USCOURTS-txnd-2_13-cv-00230-1/mods.xml">
+ <titleInfo>
+  <title>Nunnelley v. Livingston et al</title>
+  <subTitle>ORDER OF DISMISSAL: re: adopting 6 Report and Recommendation. It is therefore ordered that the Civil Rights Complaint is dismissed with prejudice as frivolous. Let Judgment be entered accordingly. (Ordered by Judge Mary Lou Robinson on 1/6/2014) (egb)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-2_13-cv-00230-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c72ae7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-2_13-cv-00230/USCOURTS-txnd-2_13-cv-00230-1</identifier>
+ <identifier type="former granule identifier">txnd-2_13-cv-00230_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-2_13-cv-00230/USCOURTS-txnd-2_13-cv-00230-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-2_13-cv-00230/pdf/USCOURTS-txnd-2_13-cv-00230-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00230; Nunnelley v. Livingston et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-2_13-cv-00230-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER OF DISMISSAL: re: adopting 6 Report and Recommendation. It is therefore ordered that the Civil Rights Complaint is dismissed with prejudice as frivolous. Let Judgment be entered accordingly. (Ordered by Judge Mary Lou Robinson on 1/6/2014) (egb)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a2ec5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00428</identifier>
+<identifier type="local">P0b002ee1817a2ec5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cv-00428</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00428</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00428</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Richard" fullName="Richard Otto Hansen" lastName="Hansen" middleName="Otto" role="Plaintiff"></party>
+ <party firstName="Timothy" fullName="Timothy Schmidt" lastName="Schmidt" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Hansen v. Schmidt</title>
+ <partNumber>8:08-cv-00428</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00428/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cv-00428;08-428</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Richard Otto Hansen</displayForm>
+ <namePart type="family">Hansen</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy Schmidt</displayForm>
+ <namePart type="family">Schmidt</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00428</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00428</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Richard" fullName="Richard Otto Hansen" lastName="Hansen" middleName="Otto" role="Plaintiff"></party>
+ <party firstName="Timothy" fullName="Timothy Schmidt" lastName="Schmidt" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00428-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00428/USCOURTS-ned-8_08-cv-00428-0/mods.xml">
+ <titleInfo>
+  <title>Hansen v. Schmidt</title>
+  <subTitle>ORDER provisionally granting 3 Motion for Leave to Proceed in forma pauperis and the Complaint shall be filed without payment of fees. Ordered by Judge Laurie Smith Camp. (PCV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00428-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18183c9b3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00428/USCOURTS-ned-8_08-cv-00428-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00428_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00428/USCOURTS-ned-8_08-cv-00428-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00428/pdf/USCOURTS-ned-8_08-cv-00428-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00428; Hansen v. Schmidt; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00428-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-11-03</dateIssued>
+  <docketText>ORDER provisionally granting 3 Motion for Leave to Proceed in forma pauperis and the Complaint shall be filed without payment of fees. Ordered by Judge Laurie Smith Camp. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00428-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00428/USCOURTS-ned-8_08-cv-00428-1/mods.xml">
+ <titleInfo>
+  <title>Hansen v. Schmidt</title>
+  <subTitle>ORDER - Plaintiff&apos;s Complaint Filing No. 1 is dismissed with prejudice;Plaintiff&apos;s Motion to Appoint Counsel Filing No. 4 and Plaintiff&apos;s Motion forService of Process Filing No. 5 are denied as moot; andA separate judgment will be entered in accordance with this Memorandumand Order. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(TJS )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00428-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18183c9b2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00428/USCOURTS-ned-8_08-cv-00428-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00428_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00428/USCOURTS-ned-8_08-cv-00428-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00428/pdf/USCOURTS-ned-8_08-cv-00428-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00428; Hansen v. Schmidt; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00428-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-11-26</dateIssued>
+  <docketText>ORDER - Plaintiff&apos;s Complaint Filing No. 1 is dismissed with prejudice;Plaintiff&apos;s Motion to Appoint Counsel Filing No. 4 and Plaintiff&apos;s Motion forService of Process Filing No. 5 are denied as moot; andA separate judgment will be entered in accordance with this Memorandumand Order. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(TJS )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00428-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00428/USCOURTS-ned-8_08-cv-00428-2/mods.xml">
+ <titleInfo>
+  <title>Hansen v. Schmidt</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff&apos;s Motion for Leave to Appeal In Forma Pauperis 12 is granted. The Clerk of the court shall provide the Court of Appeals with a copy of this Memorandum and Order. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(JAE, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00428-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18183c9b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00428/USCOURTS-ned-8_08-cv-00428-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00428_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00428/USCOURTS-ned-8_08-cv-00428-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00428/pdf/USCOURTS-ned-8_08-cv-00428-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00428; Hansen v. Schmidt; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00428-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-01-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff&apos;s Motion for Leave to Appeal In Forma Pauperis 12 is granted. The Clerk of the court shall provide the Court of Appeals with a copy of this Memorandum and Order. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(JAE, )</docketText>
+</extension>
+</relatedItem>
+</mods>

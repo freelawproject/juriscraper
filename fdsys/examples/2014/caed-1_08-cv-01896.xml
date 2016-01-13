@@ -1,0 +1,1139 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18974eab2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-07-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-03-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896</identifier>
+<identifier type="local">P0b002ee18974eab2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-07-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-07-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_08-cv-01896</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_08-cv-01896</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:08-cv-01896</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="D.G." fullName="D.G. Adams" lastName="Adams" role="Defendant"></party>
+ <party firstName="Jamisi" fullName="Jamisi Jermaine Calloway" lastName="Calloway" middleName="Jermaine" role="Plaintiff"></party>
+ <party firstName="K" fullName="K Clark" lastName="Clark" role="Defendant"></party>
+ <party fullName="Hayward" lastName="Hayward" role="Defendant"></party>
+ <party firstName="Suzan" fullName="Suzan Hubbard" lastName="Hubbard" role="Defendant"></party>
+ <party fullName="Oaks" lastName="Oaks" role="Defendant"></party>
+ <party fullName="Queen of the Valley Hospital" lastName="Queen of the Valley Hospital" role="Defendant"></party>
+ <party firstName="M." fullName="M. Veal" lastName="Veal" role="Defendant"></party>
+ <party fullName="Wang" lastName="Wang" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Calloway v. Veal et al</title>
+ <partNumber>1:08-cv-01896</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-01896;08-1896</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>D.G. Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">D.G.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jamisi Jermaine Calloway</displayForm>
+ <namePart type="family">Calloway</namePart>
+ <namePart type="given">Jamisi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>K Clark</displayForm>
+ <namePart type="family">Clark</namePart>
+ <namePart type="given">K</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hayward</displayForm>
+ <namePart type="family">Hayward</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Suzan Hubbard</displayForm>
+ <namePart type="family">Hubbard</namePart>
+ <namePart type="given">Suzan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Oaks</displayForm>
+ <namePart type="family">Oaks</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Queen of the Valley Hospital</displayForm>
+ <namePart type="family">Queen of the Valley Hospital</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Veal</displayForm>
+ <namePart type="family">Veal</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wang</displayForm>
+ <namePart type="family">Wang</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_08-cv-01896</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:08-cv-01896</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="D.G." fullName="D.G. Adams" lastName="Adams" role="Defendant"></party>
+ <party firstName="Jamisi" fullName="Jamisi Jermaine Calloway" lastName="Calloway" middleName="Jermaine" role="Plaintiff"></party>
+ <party firstName="K" fullName="K Clark" lastName="Clark" role="Defendant"></party>
+ <party fullName="Hayward" lastName="Hayward" role="Defendant"></party>
+ <party firstName="Suzan" fullName="Suzan Hubbard" lastName="Hubbard" role="Defendant"></party>
+ <party fullName="Oaks" lastName="Oaks" role="Defendant"></party>
+ <party fullName="Queen of the Valley Hospital" lastName="Queen of the Valley Hospital" role="Defendant"></party>
+ <party firstName="M." fullName="M. Veal" lastName="Veal" role="Defendant"></party>
+ <party fullName="Wang" lastName="Wang" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER STRIKING 12 Second Amended Complaint for Failure to Comply with Screening Order; ORDER Requiring Plaintiff to File Third Amended Complaint within Thirty Days that Complies with Screening Order and Does Not Exceed Twenty-Five Pages in Length signed by Magistrate Judge Gary S. Austin on 9/4/2009. ( Amended Complaint due by 10/8/2009) (Attachments: # (1) Amended Complaint Form)(Figueroa, O)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed0a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-0</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-09-08</dateIssued>
+  <docketText>ORDER STRIKING 12 Second Amended Complaint for Failure to Comply with Screening Order; ORDER Requiring Plaintiff to File Third Amended Complaint within Thirty Days that Complies with Screening Order and Does Not Exceed Twenty-Five Pages in Length signed by Magistrate Judge Gary S. Austin on 9/4/2009. ( Amended Complaint due by 10/8/2009) (Attachments: # (1) Amended Complaint Form)(Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER DENYING 10 Motion Preliminary Injunction, without Prejudice signed by Magistrate Judge Gary S. Austin on 9/4/2009. (Figueroa, O)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed10</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-1</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-09-08</dateIssued>
+  <docketText>ORDER DENYING 10 Motion Preliminary Injunction, without Prejudice signed by Magistrate Judge Gary S. Austin on 9/4/2009. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER DENYING 35 Motion to Appoint Counsel signed by Magistrate Judge Gary S. Austin on 7/25/2011. (Sant Agata, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed13</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-2</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-07-25</dateIssued>
+  <docketText>ORDER DENYING 35 Motion to Appoint Counsel signed by Magistrate Judge Gary S. Austin on 7/25/2011. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER GRANTING IN PART Defendants&apos; 32 Motion for Leave to Conduct Depositions by Video Conference signed by Magistrate Judge Gary S. Austin on 8/10/2011. (Sant Agata, S)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed21</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-3</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-08-10</dateIssued>
+  <docketText>ORDER GRANTING IN PART Defendants&apos; 32 Motion for Leave to Conduct Depositions by Video Conference signed by Magistrate Judge Gary S. Austin on 8/10/2011. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gary S. Austin on 8/22/2011 denying 39 request to conduct depositions without prejudice and directing Clerk to send Plaintiff copy of Rules. (Lundstrom, T)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed16</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-4</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-08-22</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gary S. Austin on 8/22/2011 denying 39 request to conduct depositions without prejudice and directing Clerk to send Plaintiff copy of Rules. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER CONTINUING 38 Motion for Summary Judgment signed by Magistrate Judge Gary S. Austin on 3/20/2012. (Sant Agata, S)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed1a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-5</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-03-20</dateIssued>
+  <docketText>ORDER CONTINUING 38 Motion for Summary Judgment signed by Magistrate Judge Gary S. Austin on 3/20/2012. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER DENYING 48 Motion to Amend Complaint, signed by Magistrate Judge Gary S. Austin on 4/2/2012. (Marrujo, C)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ecc0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-6</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-04-02</dateIssued>
+  <docketText>ORDER DENYING 48 Motion to Amend Complaint, signed by Magistrate Judge Gary S. Austin on 4/2/2012. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>Requests signed by Magistrate Judge Gary S. Austin on 04/04/2012. Motion due by 5/7/2012.(Flores, E)ORDER Denying Plaintiff&apos;s 42 Motion to Compel; ORDER for Plaintiff to Either File a Motion to Withdraw Discovery Requests, Re-Open Discovery, and Serve New Discovery Requests; or File Written Notice that he Does not Wish to Serve New Discovery</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed0b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-7</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-04-04</dateIssued>
+  <docketText>Requests signed by Magistrate Judge Gary S. Austin on 04/04/2012. Motion due by 5/7/2012.(Flores, E)ORDER Denying Plaintiff&apos;s 42 Motion to Compel; ORDER for Plaintiff to Either File a Motion to Withdraw Discovery Requests, Re-Open Discovery, and Serve New Discovery Requests; or File Written Notice that he Does not Wish to Serve New Discovery</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 43 Requests for Depositions by Written Questions signed by Magistrate Judge Gary S. Austin on 04/04/2012. (Flores, E)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed1e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-8</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-04-04</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 43 Requests for Depositions by Written Questions signed by Magistrate Judge Gary S. Austin on 04/04/2012. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER Denying 69 Motion for Free Copies; ORDER Granting Plaintiff&apos;s leave to File Opposition without Proof of Service signed by Magistrate Judge Gary S. Austin on 05/21/2012. (Flores, E)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed1c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-9</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-05-21</dateIssued>
+  <docketText>ORDER Denying 69 Motion for Free Copies; ORDER Granting Plaintiff&apos;s leave to File Opposition without Proof of Service signed by Magistrate Judge Gary S. Austin on 05/21/2012. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER Directing Clerk To Re-Serve Second Informational Order With Rand Notice On Plaintiff, signed by Magistrate Judge Gary S. Austin on 7/10/2012. (Attachments: # (1) Second Informational Order April 7, 2011)(Fahrney, E)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed1f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-10</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-07-10</dateIssued>
+  <docketText>ORDER Directing Clerk To Re-Serve Second Informational Order With Rand Notice On Plaintiff, signed by Magistrate Judge Gary S. Austin on 7/10/2012. (Attachments: # (1) Second Informational Order April 7, 2011)(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER DENYING 62 Motion to Withdraw Discovery Requests, Re-Open Discovery, and Serve New Discovery Requests, without prejudice to Renewal within thirty days, as instructed by this order, signed by Magistrate Judge Gary S. Austin on 9/27/12. (30) Day Deadline (Copy of Rules 26, 33, 34 and 36 of the FRCP forwarded to Plaintiff as directed) (Martin-Gill, S)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed1d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-11</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-09-27</dateIssued>
+  <docketText>ORDER DENYING 62 Motion to Withdraw Discovery Requests, Re-Open Discovery, and Serve New Discovery Requests, without prejudice to Renewal within thirty days, as instructed by this order, signed by Magistrate Judge Gary S. Austin on 9/27/12. (30) Day Deadline (Copy of Rules 26, 33, 34 and 36 of the FRCP forwarded to Plaintiff as directed) (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER Closing All Discovery in this Action, signed by Magistrate Judge Gary S. Austin on 11/15/12. (Verduzco, M)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed11</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-12</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-11-15</dateIssued>
+  <docketText>ORDER Closing All Discovery in this Action, signed by Magistrate Judge Gary S. Austin on 11/15/12. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>FINDINGS And RECOMMENDATIONS Re Defedants&apos; Motion For Summary Judgment And Plaintiff&apos;s Motion For Summary Judgment (ECF No. 56, 57), Objections Due In Thirty Days, signed by Magistrate Judge Gary S. Austin on 2/14/2013. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 3/21/2013. (Fahrney, E)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ecc1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-13</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2013-02-15</dateIssued>
+  <docketText>FINDINGS And RECOMMENDATIONS Re Defedants&apos; Motion For Summary Judgment And Plaintiff&apos;s Motion For Summary Judgment (ECF No. 56, 57), Objections Due In Thirty Days, signed by Magistrate Judge Gary S. Austin on 2/14/2013. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 3/21/2013. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER GRANTING Plaintiff&apos;s 82 Motion to Withdraw Motion for Extension of Time; ORDER WITHDRAWING 80 Motion From Court&apos;s Calendar, signed by Magistrate Judge Gary S. Austin on 4/18/2013. (Marrujo, C)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed18</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-14</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2013-04-18</dateIssued>
+  <docketText>ORDER GRANTING Plaintiff&apos;s 82 Motion to Withdraw Motion for Extension of Time; ORDER WITHDRAWING 80 Motion From Court&apos;s Calendar, signed by Magistrate Judge Gary S. Austin on 4/18/2013. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER ADOPTING 78 FINDINGS AND RECOMMENDATIONS signed by District Judge Lawrence J. O&apos;Neill on 04/19/2013. (Flores, E)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed0c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-15</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2013-04-22</dateIssued>
+  <docketText>ORDER ADOPTING 78 FINDINGS AND RECOMMENDATIONS signed by District Judge Lawrence J. O&apos;Neill on 04/19/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>***VACATED PER ORDER 89***ORDER Denying as moot 86 Motion, signed by Magistrate Judge Gary S. Austin on 5/2/13. (Gonzalez, R)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed12</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-16</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2013-05-02</dateIssued>
+  <docketText>***VACATED PER ORDER 89***ORDER Denying as moot 86 Motion, signed by Magistrate Judge Gary S. Austin on 5/2/13. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER VACATING 87 Order on Motion to Appoint Counsel, signed by Magistrate Judge Gary S. Austin on 05/8/13. (Martin-Gill, S)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ecb9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-17</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2013-05-08</dateIssued>
+  <docketText>ORDER VACATING 87 Order on Motion to Appoint Counsel, signed by Magistrate Judge Gary S. Austin on 05/8/13. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-18/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gary S. Austin on 5/10/2013 denying 86 MOTION to APPOINT COUNSEL or EXPERT WITNESS filed by Jamisi Jermaine Calloway. (Lundstrom, T)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed0d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-18</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2013-05-10</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gary S. Austin on 5/10/2013 denying 86 MOTION to APPOINT COUNSEL or EXPERT WITNESS filed by Jamisi Jermaine Calloway. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-19/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER Denying 92 Motion for Reconsideration of Magistrate Judge&apos;s Order signed by District Judge Lawrence J. O&apos;Neill on 05/31/2013. (Flores, E)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ecbc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-19</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2013-06-03</dateIssued>
+  <docketText>ORDER Denying 92 Motion for Reconsideration of Magistrate Judge&apos;s Order signed by District Judge Lawrence J. O&apos;Neill on 05/31/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-20/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 94 Motion for Settlement Conference and Trial Schedule, without Prejudice signed by Magistrate Judge Gary S. Austin on 08/02/2013. (Flores, E)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed0e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-20</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2013-08-05</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 94 Motion for Settlement Conference and Trial Schedule, without Prejudice signed by Magistrate Judge Gary S. Austin on 08/02/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-21/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER GRANTING In Part and DENYING In Part Plaintiff&apos;s 100 Request for Extension of Time; ORDER DENYING Request for Extension of Time to File Notice of Appeal, Without Prejudice; ORDER DENYING as Moot 95 Request for Extension of Time to File Objections to Defendants&apos; Response; ORDER GRANTING 97 Request for Extension of Time to File Motion for Reconsideration of Court&apos;s Order of August 5, 2013, signed by Magistrate Judge Gary S. Austin on 8/20/2013. Thirty Day Deadline to File Motion for Reconsideration. (Marrujo, C)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed15</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-21</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2013-08-21</dateIssued>
+  <docketText>ORDER GRANTING In Part and DENYING In Part Plaintiff&apos;s 100 Request for Extension of Time; ORDER DENYING Request for Extension of Time to File Notice of Appeal, Without Prejudice; ORDER DENYING as Moot 95 Request for Extension of Time to File Objections to Defendants&apos; Response; ORDER GRANTING 97 Request for Extension of Time to File Motion for Reconsideration of Court&apos;s Order of August 5, 2013, signed by Magistrate Judge Gary S. Austin on 8/20/2013. Thirty Day Deadline to File Motion for Reconsideration. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-22/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>FINDINGS And RECOMMENDATIONS Re Defendants&apos; Motion For Summary Judgment (ECF No. 38), Objections Due In Twenty Days, signed by Magistrate Judge Gary S. Austin on 8/28/2013. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 9/20/2013.(Fahrney, E)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ecbd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-22</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2013-08-28</dateIssued>
+  <docketText>FINDINGS And RECOMMENDATIONS Re Defendants&apos; Motion For Summary Judgment (ECF No. 38), Objections Due In Twenty Days, signed by Magistrate Judge Gary S. Austin on 8/28/2013. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 9/20/2013.(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-23/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER Denying 109 Motion for Reconsideration and for Indigent Copy Services and Supplies signed by Magistrate Judge Gary S. Austin on 09/15/2013. (Flores, E)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ecbe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-23</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2013-09-16</dateIssued>
+  <docketText>ORDER Denying 109 Motion for Reconsideration and for Indigent Copy Services and Supplies signed by Magistrate Judge Gary S. Austin on 09/15/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-24/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER Denying 108 Motion for Reconsideration of Court&apos;s Order of August 5, 2013, signed by Magistrate Judge Gary S. Austin on 09/15/2013. (Flores, E)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed19</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-24</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2013-09-16</dateIssued>
+  <docketText>ORDER Denying 108 Motion for Reconsideration of Court&apos;s Order of August 5, 2013, signed by Magistrate Judge Gary S. Austin on 09/15/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-25/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>FINDINGS and RECOMMENDATION, Recommending that Plaintiff&apos;s Motion for Transfer be Denied 115, signed by Magistrate Judge Gary S. Austin on 10/17/13. Referred to Judge O&apos;Neill; 20-Day Deadline. (Verduzco, M)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed20</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-25</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2013-10-18</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATION, Recommending that Plaintiff&apos;s Motion for Transfer be Denied 115, signed by Magistrate Judge Gary S. Austin on 10/17/13. Referred to Judge O&apos;Neill; 20-Day Deadline. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-26/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER ADOPTING 116 FINDINGS AND RECOMMENDATIONS; ORDER Denying Plaintiff&apos;s 115 Motion for Transfer signed by District Judge Lawrence J. O&apos;Neill on 12/02/2013. (Flores, E)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed14</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-26</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2013-12-03</dateIssued>
+  <docketText>ORDER ADOPTING 116 FINDINGS AND RECOMMENDATIONS; ORDER Denying Plaintiff&apos;s 115 Motion for Transfer signed by District Judge Lawrence J. O&apos;Neill on 12/02/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-27/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER Requiring Parties to Notify Court Whether a Settlement Conference would be Beneficial signed by Magistrate Judge Gary S. Austin on 12/03/2013. Respone due by 01/6/2014. (Flores, E)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-27.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed17</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-27</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2013-12-03</dateIssued>
+  <docketText>ORDER Requiring Parties to Notify Court Whether a Settlement Conference would be Beneficial signed by Magistrate Judge Gary S. Austin on 12/03/2013. Respone due by 01/6/2014. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-28/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER Denying 129 Request for Free Copies signed by Magistrate Judge Gary S. Austin on 01/06/2014. (Flores, E)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-28.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed1b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-28</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER Denying 129 Request for Free Copies signed by Magistrate Judge Gary S. Austin on 01/06/2014. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-29/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>SECOND SCHEDULING ORDER; ORDER Requiring Defendants to Notify Court Whether they Consent to Magistrate Judge Jurisdiction within Thirty Days; ORDER Direcitng Clerk&apos;s to Send Local Rule 281 to Plaintiff signed by Magistrate Judge Gary S. Austin on 01/10/2014. Trial Confirmation Hearing set for 3/21/2014 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill. Jury Trial set for 4/22/2014 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill. (Attachments: # (1) Local Rule 281)(Flores, E)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-29.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed09</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-29</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2014-01-13</dateIssued>
+  <docketText>SECOND SCHEDULING ORDER; ORDER Requiring Defendants to Notify Court Whether they Consent to Magistrate Judge Jurisdiction within Thirty Days; ORDER Direcitng Clerk&apos;s to Send Local Rule 281 to Plaintiff signed by Magistrate Judge Gary S. Austin on 01/10/2014. Trial Confirmation Hearing set for 3/21/2014 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill. Jury Trial set for 4/22/2014 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill. (Attachments: # (1) Local Rule 281)(Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-30/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER DENYING 134 Motion for Appointment of Counsel or Expert Witness signed by Magistrate Judge Gary S. Austin on 2/6/14. (Marrujo, C)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-30.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ecbb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-30</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2014-02-06</dateIssued>
+  <docketText>ORDER DENYING 134 Motion for Appointment of Counsel or Expert Witness signed by Magistrate Judge Gary S. Austin on 2/6/14. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-31/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>NOTICE to Parties Regarding Impacted Trial Calendar and Availability of Consent to U.S. Magistrate Judge Jurisdiction, signed by District Judge Lawrence J. O&apos;Neill on 3/14/14. (Hellings, J)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-31.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ed0f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-31</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2014-03-14</dateIssued>
+  <docketText>NOTICE to Parties Regarding Impacted Trial Calendar and Availability of Consent to U.S. Magistrate Judge Jurisdiction, signed by District Judge Lawrence J. O&apos;Neill on 3/14/14. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-32/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 138 Motion for Attendance of Incarcerated Witnesses at Trial signed by District Judge Lawrence J. O&apos;Neill on 03/18/2014. (Flores, E)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-32.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ecbf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-32</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2014-03-18</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 138 Motion for Attendance of Incarcerated Witnesses at Trial signed by District Judge Lawrence J. O&apos;Neill on 03/18/2014. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cv-01896-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-33/mods.xml">
+ <titleInfo>
+  <title>(PC) Calloway v. Veal et al</title>
+  <subTitle>ORDER DISMISSING Case; ORDER Vacating March 18, 2014 143 Order and Writ of Habeas Corpus Ad Testificandum as to Jamisi Jermain Calloway, CDC #P-97743, ORDER for Clerk to Close Case, signed by District Judge Lawrence J. O&apos;Neill on 03/21/14. CASE CLOSED. (Gonzalez, R)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-33.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18976ecba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-33</identifier>
+ <identifier type="former granule identifier">caed-1_08-cv-01896_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cv-01896/USCOURTS-caed-1_08-cv-01896-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cv-01896/pdf/USCOURTS-caed-1_08-cv-01896-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01896; (PC) Calloway v. Veal et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cv-01896-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2014-03-24</dateIssued>
+  <docketText>ORDER DISMISSING Case; ORDER Vacating March 18, 2014 143 Order and Writ of Habeas Corpus Ad Testificandum as to Jamisi Jermain Calloway, CDC #P-97743, ORDER for Clerk to Close Case, signed by District Judge Lawrence J. O&apos;Neill on 03/21/14. CASE CLOSED. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

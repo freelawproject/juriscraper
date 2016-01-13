@@ -1,0 +1,150 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181104b2c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_05-cv-00838</identifier>
+<identifier type="local">P0b002ee181104b2c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-8_05-cv-00838</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-8_05-cv-00838</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>8:05-cv-00838</caseNumber>
+ <caseOffice>Greenbelt</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party fullName="Information Systems&amp;Networks Corporation" lastName="Information Systems&amp;Networks Corporation" role="Plaintiff"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Information Systems&amp;Networks Corporation v. United States of America</title>
+ <partNumber>8:05-cv-00838</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_05-cv-00838/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cv-00838;05-838</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Greenbelt</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Information Systems&amp;Networks Corporation</displayForm>
+ <namePart type="family">Information Systems&amp;Networks Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-8_05-cv-00838</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>8:05-cv-00838</caseNumber>
+ <caseOffice>Greenbelt</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party fullName="Information Systems&amp;Networks Corporation" lastName="Information Systems&amp;Networks Corporation" role="Plaintiff"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-8_05-cv-00838-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_05-cv-00838/USCOURTS-mdd-8_05-cv-00838-0/mods.xml">
+ <titleInfo>
+  <title>Information Systems&amp;Networks Corporation v. United States of America</title>
+  <subTitle>MEMORANDUM OPINION Signed by Judge Alexander Williams Jr. on 1/4/06 (c/m) (ajh, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-8_05-cv-00838-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181116e82</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_05-cv-00838/USCOURTS-mdd-8_05-cv-00838-0</identifier>
+ <identifier type="former granule identifier">mdd-8_05-cv-00838_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_05-cv-00838/USCOURTS-mdd-8_05-cv-00838-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_05-cv-00838/pdf/USCOURTS-mdd-8_05-cv-00838-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00838; Information Systems&amp;Networks Corporation v. United States of America; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-8_05-cv-00838-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-04</dateIssued>
+  <docketText>MEMORANDUM OPINION Signed by Judge Alexander Williams Jr. on 1/4/06 (c/m) (ajh, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

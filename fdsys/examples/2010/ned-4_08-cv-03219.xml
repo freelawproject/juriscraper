@@ -1,0 +1,301 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a0562">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03219</identifier>
+<identifier type="local">P0b002ee1817a0562</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_08-cv-03219</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cv-03219</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cv-03219</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Terrell" fullName="Terrell Henderson" lastName="Henderson" role="Petitioner"></party>
+ <party firstName="Robert" fullName="Robert Houston" lastName="Houston" role="Respondent"></party>
+ <party fullName="Nebraska Attorney General" lastName="Nebraska Attorney General" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Henderson v. Houston</title>
+ <partNumber>4:08-cv-03219</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03219/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:08-cv-03219;08-3219</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Terrell Henderson</displayForm>
+ <namePart type="family">Henderson</namePart>
+ <namePart type="given">Terrell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Houston</displayForm>
+ <namePart type="family">Houston</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Nebraska Attorney General</displayForm>
+ <namePart type="family">Nebraska Attorney General</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cv-03219</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cv-03219</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Terrell" fullName="Terrell Henderson" lastName="Henderson" role="Petitioner"></party>
+ <party firstName="Robert" fullName="Robert Houston" lastName="Houston" role="Respondent"></party>
+ <party fullName="Nebraska Attorney General" lastName="Nebraska Attorney General" role="Interested Party"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03219-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-0/mods.xml">
+ <titleInfo>
+  <title>Henderson v. Houston</title>
+  <subTitle>ORDER granting 2 Motion for Leave to Proceed in forma pauperis and Petitioner will not be required to pay the $5.00 fee at this time. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(LKL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03219-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18182abc5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-0</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03219_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03219/pdf/USCOURTS-ned-4_08-cv-03219-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03219; Henderson v. Houston; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03219-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-11-10</dateIssued>
+  <docketText>ORDER granting 2 Motion for Leave to Proceed in forma pauperis and Petitioner will not be required to pay the $5.00 fee at this time. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(LKL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03219-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-1/mods.xml">
+ <titleInfo>
+  <title>Henderson v. Houston</title>
+  <subTitle>MEMORANDUM AND ORDER-Upon initial review of the Petition for Writ of Habeas Corpus (filing 1) the court preliminarily determines that the following claims are potentially cognizable in federal court: Claims 1-7. By 12/25/2008 the respondent shall file a motion for summary judgement or an answer. ***Pro Se Case Management Deadlines: Deadline for Respondent to file answer or motion for summary judgment set for 12/25/2008. Ordered by Judge Richard G. Kopf. (Copies mailed as directed and copy to pro se party)(LKL)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03219-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18182abc8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-1</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03219_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03219/pdf/USCOURTS-ned-4_08-cv-03219-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03219; Henderson v. Houston; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03219-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-11-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER-Upon initial review of the Petition for Writ of Habeas Corpus (filing 1) the court preliminarily determines that the following claims are potentially cognizable in federal court: Claims 1-7. By 12/25/2008 the respondent shall file a motion for summary judgement or an answer. ***Pro Se Case Management Deadlines: Deadline for Respondent to file answer or motion for summary judgment set for 12/25/2008. Ordered by Judge Richard G. Kopf. (Copies mailed as directed and copy to pro se party)(LKL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03219-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-2/mods.xml">
+ <titleInfo>
+  <title>Henderson v. Houston</title>
+  <subTitle>MEMORANDUM AND ORDER-This matter is before the court on Respondent&apos;s Motion for Summary Judgment. IT IS THEREFORE ORDERED that: Respondent&apos;s Motion for Summary Judgment (filing no. 12) is denied without prejudice to reassertion. Respondent shall file an answer and separate brief no later than 30 days from the date of this Memorandum and Order. No later than 30 days following the filing of Respondent&apos;s brief, Petitioner shall file and serve a brief in response. No later than 30 days after the filing of Petitioner&apos;s brief, Respondent shall file and serve a reply brief. Petitioner&apos;s Motion for Additional State Court Records (filing no. 14) is denied without prejudice to reassertion after Respondents submission of state court records as set forth above. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(LKH)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03219-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18182abc6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-2</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03219_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03219/pdf/USCOURTS-ned-4_08-cv-03219-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03219; Henderson v. Houston; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03219-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-03-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER-This matter is before the court on Respondent&apos;s Motion for Summary Judgment. IT IS THEREFORE ORDERED that: Respondent&apos;s Motion for Summary Judgment (filing no. 12) is denied without prejudice to reassertion. Respondent shall file an answer and separate brief no later than 30 days from the date of this Memorandum and Order. No later than 30 days following the filing of Respondent&apos;s brief, Petitioner shall file and serve a brief in response. No later than 30 days after the filing of Petitioner&apos;s brief, Respondent shall file and serve a reply brief. Petitioner&apos;s Motion for Additional State Court Records (filing no. 14) is denied without prejudice to reassertion after Respondents submission of state court records as set forth above. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(LKH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03219-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-3/mods.xml">
+ <titleInfo>
+  <title>Henderson v. Houston</title>
+  <subTitle>MEMORANDUM AND ORDER regarding Petition for Writ of Habeas Corpus1 filed by Terrell Henderson. Petitioner Terrell Hendersons Petition for Writ of Habeas Corpus (filing no. 1) is denied in all respects and this action is dismissed with prejudice. A separate judgment will be entered in accordance with this Memorandum and Order. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(JAB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03219-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18182abc7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-3</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03219_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03219/pdf/USCOURTS-ned-4_08-cv-03219-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03219; Henderson v. Houston; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03219-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-10-28</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding Petition for Writ of Habeas Corpus1 filed by Terrell Henderson. Petitioner Terrell Hendersons Petition for Writ of Habeas Corpus (filing no. 1) is denied in all respects and this action is dismissed with prejudice. A separate judgment will be entered in accordance with this Memorandum and Order. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03219-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-4/mods.xml">
+ <titleInfo>
+  <title>Henderson v. Houston</title>
+  <subTitle>JUDGMENT regarding Memorandum and Order, 25. Pursuant to the Memorandum and Order entered this date, the Petition for Writ of Habeas Corpus filed by Petitioner Terrell Henderson is dismissed with prejudice. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03219-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18182acbf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-4</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03219_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03219/pdf/USCOURTS-ned-4_08-cv-03219-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03219; Henderson v. Houston; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03219-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-10-28</dateIssued>
+  <docketText>JUDGMENT regarding Memorandum and Order, 25. Pursuant to the Memorandum and Order entered this date, the Petition for Writ of Habeas Corpus filed by Petitioner Terrell Henderson is dismissed with prejudice. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03219-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-5/mods.xml">
+ <titleInfo>
+  <title>Henderson v. Houston</title>
+  <subTitle>MEMORANDUM AND ORDER - Petitioner&apos;s Motion for Leave to Proceed in Forma Pauperis (filing no. 28) is granted. Petitioner&apos;s Motion to Appoint Counsel (filing no. 32) is denied without prejudice to reassertion before the Eighth Circuit. Petitioner&apos;s Motion for Certificate of Appealability (filing no. 30) is denied without prejudice to reassertion before the Eighth Circuit. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(JAB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03219-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18182abc9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-5</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03219_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03219/USCOURTS-ned-4_08-cv-03219-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03219/pdf/USCOURTS-ned-4_08-cv-03219-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03219; Henderson v. Houston; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03219-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-01-14</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Petitioner&apos;s Motion for Leave to Proceed in Forma Pauperis (filing no. 28) is granted. Petitioner&apos;s Motion to Appoint Counsel (filing no. 32) is denied without prejudice to reassertion before the Eighth Circuit. Petitioner&apos;s Motion for Certificate of Appealability (filing no. 30) is denied without prejudice to reassertion before the Eighth Circuit. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(JAB)</docketText>
+</extension>
+</relatedItem>
+</mods>

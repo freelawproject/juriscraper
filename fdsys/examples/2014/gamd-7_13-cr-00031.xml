@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c54dee8">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-05-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-07-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cr-00031</identifier>
+<identifier type="local">P0b002ee18c54dee8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-05-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-05-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-7_13-cr-00031</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_13-cr-00031</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:13-cr-00031</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="ROBERT" fullName="ROBERT CEDRICK BAKER III" generation="III" lastName="BAKER" middleName="CEDRICK" role="Defendant"></party>
+ <party fullName="UNITED STATES OF AMERICA" lastName="UNITED STATES OF AMERICA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>UNITED STATES OF AMERICA v. BAKER</title>
+ <partNumber>7:13-cr-00031</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cr-00031/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">7:13-cr-00031;13-031</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Valdosta</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ROBERT CEDRICK BAKER III</displayForm>
+ <namePart type="family">BAKER</namePart>
+ <namePart type="given">ROBERT</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>UNITED STATES OF AMERICA</displayForm>
+ <namePart type="family">UNITED STATES OF AMERICA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_13-cr-00031</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:13-cr-00031</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="ROBERT" fullName="ROBERT CEDRICK BAKER III" generation="III" lastName="BAKER" middleName="CEDRICK" role="Defendant"></party>
+ <party fullName="UNITED STATES OF AMERICA" lastName="UNITED STATES OF AMERICA" role="Plaintiff"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_13-cr-00031-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cr-00031/USCOURTS-gamd-7_13-cr-00031-0/mods.xml">
+ <titleInfo>
+  <title>UNITED STATES OF AMERICA v. BAKER</title>
+  <subTitle>ORDER granting 23 Motion for Forfeiture of Property as to ROBERT CEDRICK BAKER III (1). Ordered by U.S. District Judge Hugh Lawson on 1/6/2014. (nbp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cr-00031/pdf/USCOURTS-gamd-7_13-cr-00031-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c604955</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cr-00031/USCOURTS-gamd-7_13-cr-00031-0</identifier>
+ <identifier type="former granule identifier">gamd-7_13-cr-00031_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cr-00031/USCOURTS-gamd-7_13-cr-00031-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cr-00031/pdf/USCOURTS-gamd-7_13-cr-00031-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:13-cr-00031; UNITED STATES OF AMERICA v. BAKER; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_13-cr-00031-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER granting 23 Motion for Forfeiture of Property as to ROBERT CEDRICK BAKER III (1). Ordered by U.S. District Judge Hugh Lawson on 1/6/2014. (nbp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_13-cr-00031-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cr-00031/USCOURTS-gamd-7_13-cr-00031-1/mods.xml">
+ <titleInfo>
+  <title>UNITED STATES OF AMERICA v. BAKER</title>
+  <subTitle>ORDER granting 35 Motion for Forfeiture of Property as to ROBERT CEDRICK BAKER III (1). Ordered by U.S. District Judge HUGH LAWSON on 7/2/2014. (nbp)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cr-00031/pdf/USCOURTS-gamd-7_13-cr-00031-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c604954</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cr-00031/USCOURTS-gamd-7_13-cr-00031-1</identifier>
+ <identifier type="former granule identifier">gamd-7_13-cr-00031_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cr-00031/USCOURTS-gamd-7_13-cr-00031-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cr-00031/pdf/USCOURTS-gamd-7_13-cr-00031-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:13-cr-00031; UNITED STATES OF AMERICA v. BAKER; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_13-cr-00031-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-07-02</dateIssued>
+  <docketText>ORDER granting 35 Motion for Forfeiture of Property as to ROBERT CEDRICK BAKER III (1). Ordered by U.S. District Judge HUGH LAWSON on 7/2/2014. (nbp)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,225 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1839f4490">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03868</identifier>
+<identifier type="local">P0b002ee1839f4490</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-3_12-cv-03868</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_12-cv-03868</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:12-cv-03868</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Avalon Transitional Correctional Facility" lastName="Avalon Transitional Correctional Facility" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Wayne Busby" lastName="Busby" middleName="Wayne" role="Plaintiff"></party>
+ <party firstName="NFN" fullName="NFN Kelly" lastName="Kelly" role="Defendant"></party>
+ <party firstName="Corrol" fullName="Corrol NLN" lastName="NLN" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark NLN" lastName="NLN" role="Defendant"></party>
+ <party firstName="Ralph" fullName="Ralph NLN" lastName="NLN" role="Defendant"></party>
+ <party firstName="NFN" fullName="NFN Stewart" lastName="Stewart" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Busby v. Avalon Transitional Correctional Facility et al</title>
+ <partNumber>3:12-cv-03868</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03868/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:12-cv-03868;12-3868</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Dallas</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Avalon Transitional Correctional Facility</displayForm>
+ <namePart type="family">Avalon Transitional Correctional Facility</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Wayne Busby</displayForm>
+ <namePart type="family">Busby</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>NFN Kelly</displayForm>
+ <namePart type="family">Kelly</namePart>
+ <namePart type="given">NFN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Corrol NLN</displayForm>
+ <namePart type="family">NLN</namePart>
+ <namePart type="given">Corrol</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark NLN</displayForm>
+ <namePart type="family">NLN</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ralph NLN</displayForm>
+ <namePart type="family">NLN</namePart>
+ <namePart type="given">Ralph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>NFN Stewart</displayForm>
+ <namePart type="family">Stewart</namePart>
+ <namePart type="given">NFN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_12-cv-03868</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:12-cv-03868</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Avalon Transitional Correctional Facility" lastName="Avalon Transitional Correctional Facility" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Wayne Busby" lastName="Busby" middleName="Wayne" role="Plaintiff"></party>
+ <party firstName="NFN" fullName="NFN Kelly" lastName="Kelly" role="Defendant"></party>
+ <party firstName="Corrol" fullName="Corrol NLN" lastName="NLN" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark NLN" lastName="NLN" role="Defendant"></party>
+ <party firstName="Ralph" fullName="Ralph NLN" lastName="NLN" role="Defendant"></party>
+ <party firstName="NFN" fullName="NFN Stewart" lastName="Stewart" role="Defendant"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cv-03868-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03868/USCOURTS-txnd-3_12-cv-03868-0/mods.xml">
+ <titleInfo>
+  <title>Busby v. Avalon Transitional Correctional Facility et al</title>
+  <subTitle>Findings and Recommendations on Case re: 3 Complaint filed by Donald Wayne Busby. The Court should summarily dismiss Plaintiff&apos;s complaint pursuant to 28 USC 1915(e)(2). (See order for specifics) (Ordered by Magistrate Judge David L Horan on 12/13/2012) (mcrd)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cv-03868-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f6171</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03868/USCOURTS-txnd-3_12-cv-03868-0</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cv-03868_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03868/USCOURTS-txnd-3_12-cv-03868-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03868/pdf/USCOURTS-txnd-3_12-cv-03868-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-03868; Busby v. Avalon Transitional Correctional Facility et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cv-03868-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-12-13</dateIssued>
+  <docketText>Findings and Recommendations on Case re: 3 Complaint filed by Donald Wayne Busby. The Court should summarily dismiss Plaintiff&apos;s complaint pursuant to 28 USC 1915(e)(2). (See order for specifics) (Ordered by Magistrate Judge David L Horan on 12/13/2012) (mcrd)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cv-03868-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03868/USCOURTS-txnd-3_12-cv-03868-1/mods.xml">
+ <titleInfo>
+  <title>Busby v. Avalon Transitional Correctional Facility et al</title>
+  <subTitle>Order Accepting 11 the Findings and Recommendations of the United States Magistrate Judge. (Ordered by Judge Jane J Boyle on 1/2/2013) (chmb)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_12-cv-03868-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f6172</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03868/USCOURTS-txnd-3_12-cv-03868-1</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cv-03868_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03868/USCOURTS-txnd-3_12-cv-03868-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03868/pdf/USCOURTS-txnd-3_12-cv-03868-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-03868; Busby v. Avalon Transitional Correctional Facility et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cv-03868-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>Order Accepting 11 the Findings and Recommendations of the United States Magistrate Judge. (Ordered by Judge Jane J Boyle on 1/2/2013) (chmb)</docketText>
+</extension>
+</relatedItem>
+</mods>

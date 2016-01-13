@@ -1,0 +1,204 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a18a1f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_11-cv-04097</identifier>
+<identifier type="local">P0b002ee183a18a1f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_11-cv-04097</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_11-cv-04097</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:11-cv-04097</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party fullName="Collective Brands, Inc." lastName="Collective Brands, Inc." role="Plaintiff"></party>
+ <party fullName="Discover Property&amp;Casualty Insurance Company" lastName="Discover Property&amp;Casualty Insurance Company" role="Defendant"></party>
+ <party fullName="National Union Fire Insurance Company of Pittsburgh, PA" lastName="National Union Fire Insurance Company of Pittsburgh, PA" role="Defendant"></party>
+ <party fullName="Northbrook Holdings, Inc." lastName="Northbrook Holdings, Inc." role="Defendant"></party>
+ <party fullName="PRIMECAP Management Company" lastName="PRIMECAP Management Company" role="Plaintiff"></party>
+ <party fullName="Payless Shoesource, Inc." lastName="Payless Shoesource, Inc." role="Plaintiff"></party>
+ <party fullName="St. Paul Fire&amp;Marine Insurance Company" lastName="St. Paul Fire&amp;Marine Insurance Company" role="Defendant"></party>
+ <party fullName="Travelers Companies, Inc., The" lastName="Travelers Companies, Inc., The" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Collective Brands, Inc. et al v. National Union Fire Insurance Company of Pittsburgh, PA et al</title>
+ <partNumber>5:11-cv-04097</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_11-cv-04097/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:11-cv-04097;11-4097</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Collective Brands, Inc.</displayForm>
+ <namePart type="family">Collective Brands, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Discover Property&amp;Casualty Insurance Company</displayForm>
+ <namePart type="family">Discover Property&amp;Casualty Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>National Union Fire Insurance Company of Pittsburgh, PA</displayForm>
+ <namePart type="family">National Union Fire Insurance Company of Pittsburgh, PA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Northbrook Holdings, Inc.</displayForm>
+ <namePart type="family">Northbrook Holdings, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PRIMECAP Management Company</displayForm>
+ <namePart type="family">PRIMECAP Management Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Payless Shoesource, Inc.</displayForm>
+ <namePart type="family">Payless Shoesource, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>St. Paul Fire&amp;Marine Insurance Company</displayForm>
+ <namePart type="family">St. Paul Fire&amp;Marine Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Travelers Companies, Inc., The</displayForm>
+ <namePart type="family">Travelers Companies, Inc., The</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_11-cv-04097</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:11-cv-04097</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party fullName="Collective Brands, Inc." lastName="Collective Brands, Inc." role="Plaintiff"></party>
+ <party fullName="Discover Property&amp;Casualty Insurance Company" lastName="Discover Property&amp;Casualty Insurance Company" role="Defendant"></party>
+ <party fullName="National Union Fire Insurance Company of Pittsburgh, PA" lastName="National Union Fire Insurance Company of Pittsburgh, PA" role="Defendant"></party>
+ <party fullName="Northbrook Holdings, Inc." lastName="Northbrook Holdings, Inc." role="Defendant"></party>
+ <party fullName="PRIMECAP Management Company" lastName="PRIMECAP Management Company" role="Plaintiff"></party>
+ <party fullName="Payless Shoesource, Inc." lastName="Payless Shoesource, Inc." role="Plaintiff"></party>
+ <party fullName="St. Paul Fire&amp;Marine Insurance Company" lastName="St. Paul Fire&amp;Marine Insurance Company" role="Defendant"></party>
+ <party fullName="Travelers Companies, Inc., The" lastName="Travelers Companies, Inc., The" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_11-cv-04097-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_11-cv-04097/USCOURTS-ksd-5_11-cv-04097-0/mods.xml">
+ <titleInfo>
+  <title>Collective Brands, Inc. et al v. National Union Fire Insurance Company of Pittsburgh, PA et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 40 defendant&apos;s Motion to Stay Case; denying 40 defendant&apos;s Motion to Dismiss; denying 40 defendant&apos;s Motion to Transfer Case; denying 42 plaintiffs&apos; Motion for Partial Summary Judgment; and granting 49 defendant&apos;s Motion for Summary Judgment. Signed by District Judge J. Thomas Marten on 1/4/2013. (mss)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_11-cv-04097-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1fa8b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_11-cv-04097/USCOURTS-ksd-5_11-cv-04097-0</identifier>
+ <identifier type="former granule identifier">ksd-5_11-cv-04097_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_11-cv-04097/USCOURTS-ksd-5_11-cv-04097-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_11-cv-04097/pdf/USCOURTS-ksd-5_11-cv-04097-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-04097; Collective Brands, Inc. et al v. National Union Fire Insurance Company of Pittsburgh, PA et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_11-cv-04097-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 40 defendant&apos;s Motion to Stay Case; denying 40 defendant&apos;s Motion to Dismiss; denying 40 defendant&apos;s Motion to Transfer Case; denying 42 plaintiffs&apos; Motion for Partial Summary Judgment; and granting 49 defendant&apos;s Motion for Summary Judgment. Signed by District Judge J. Thomas Marten on 1/4/2013. (mss)</docketText>
+</extension>
+</relatedItem>
+</mods>

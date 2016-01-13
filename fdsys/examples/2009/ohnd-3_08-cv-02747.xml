@@ -1,0 +1,161 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815ca334">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_08-cv-02747</identifier>
+<identifier type="local">P0b002ee1815ca334</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_08-cv-02747</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_08-cv-02747</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:08-cv-02747</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Kevin" fullName="Kevin Baxter" lastName="Baxter" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Eugene Taylor" lastName="Taylor" middleName="Eugene" role="Plaintiff"></party>
+ <party firstName="Tyge" fullName="Tyge M. Tone" lastName="Tone" middleName="M." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Taylor v. Baxter et al</title>
+ <partNumber>3:08-cv-02747</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_08-cv-02747/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:08-cv-02747;08-2747</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kevin Baxter</displayForm>
+ <namePart type="family">Baxter</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Eugene Taylor</displayForm>
+ <namePart type="family">Taylor</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tyge M. Tone</displayForm>
+ <namePart type="family">Tone</namePart>
+ <namePart type="given">Tyge</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_08-cv-02747</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:08-cv-02747</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Kevin" fullName="Kevin Baxter" lastName="Baxter" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Eugene Taylor" lastName="Taylor" middleName="Eugene" role="Plaintiff"></party>
+ <party firstName="Tyge" fullName="Tyge M. Tone" lastName="Tone" middleName="M." role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_08-cv-02747-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_08-cv-02747/USCOURTS-ohnd-3_08-cv-02747-0/mods.xml">
+ <titleInfo>
+  <title>Taylor v. Baxter et al</title>
+  <subTitle>Memorandum Opinion and Order. This action is dismissed pursuant to 28 U.S.C. §1915(e). The Court certifies, pursuant to 28 U.S.C. § 1915(a)(3), that an appeal from this decision could not be taken in good faith.. Judge Jack Zouhary on 1/30/09. (G,Di)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_08-cv-02747-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18169d8b6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_08-cv-02747/USCOURTS-ohnd-3_08-cv-02747-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_08-cv-02747_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_08-cv-02747/USCOURTS-ohnd-3_08-cv-02747-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_08-cv-02747/pdf/USCOURTS-ohnd-3_08-cv-02747-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:08-cv-02747; Taylor v. Baxter et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_08-cv-02747-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-30</dateIssued>
+  <docketText>Memorandum Opinion and Order. This action is dismissed pursuant to 28 U.S.C. §1915(e). The Court certifies, pursuant to 28 U.S.C. § 1915(a)(3), that an appeal from this decision could not be taken in good faith.. Judge Jack Zouhary on 1/30/09. (G,Di)</docketText>
+</extension>
+</relatedItem>
+</mods>

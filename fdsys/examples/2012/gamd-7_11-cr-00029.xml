@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817c0701">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_11-cr-00029</identifier>
+<identifier type="local">P0b002ee1817c0701</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-7_11-cr-00029</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_11-cr-00029</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:11-cr-00029</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="UNITED STATES OF AMERICA" lastName="UNITED STATES OF AMERICA" role="Plaintiff"></party>
+ <party firstName="Zeferino" fullName="Zeferino Villanueva-Vasquez" lastName="Villanueva-Vasquez" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>UNITED STATES OF AMERICA v. Villanueva-Vasquez</title>
+ <partNumber>7:11-cr-00029</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_11-cr-00029/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">7:11-cr-00029;11-029</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Valdosta</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>UNITED STATES OF AMERICA</displayForm>
+ <namePart type="family">UNITED STATES OF AMERICA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Zeferino Villanueva-Vasquez</displayForm>
+ <namePart type="family">Villanueva-Vasquez</namePart>
+ <namePart type="given">Zeferino</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_11-cr-00029</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:11-cr-00029</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="UNITED STATES OF AMERICA" lastName="UNITED STATES OF AMERICA" role="Plaintiff"></party>
+ <party firstName="Zeferino" fullName="Zeferino Villanueva-Vasquez" lastName="Villanueva-Vasquez" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_11-cr-00029-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_11-cr-00029/USCOURTS-gamd-7_11-cr-00029-0/mods.xml">
+ <titleInfo>
+  <title>UNITED STATES OF AMERICA v. Villanueva-Vasquez</title>
+  <subTitle>ORDER granting 31 Motion for Payment of Witness Fees as to Zeferino Villanueva-Vasquez (1). Ordered by Judge Hugh Lawson on 1/09/2012. (nbp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_11-cr-00029-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e4d54</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_11-cr-00029/USCOURTS-gamd-7_11-cr-00029-0</identifier>
+ <identifier type="former granule identifier">gamd-7_11-cr-00029_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_11-cr-00029/USCOURTS-gamd-7_11-cr-00029-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_11-cr-00029/pdf/USCOURTS-gamd-7_11-cr-00029-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:11-cr-00029; UNITED STATES OF AMERICA v. Villanueva-Vasquez; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_11-cr-00029-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>ORDER granting 31 Motion for Payment of Witness Fees as to Zeferino Villanueva-Vasquez (1). Ordered by Judge Hugh Lawson on 1/09/2012. (nbp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_11-cr-00029-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_11-cr-00029/USCOURTS-gamd-7_11-cr-00029-1/mods.xml">
+ <titleInfo>
+  <title>UNITED STATES OF AMERICA v. Villanueva-Vasquez</title>
+  <subTitle>ORDER overruling defendant&apos;s objection to sentencing as to Zeferino Villanueva-Vasquez. Ordered by Judge Hugh Lawson on 1/12/2012. (nbp)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_11-cr-00029-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e4d53</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_11-cr-00029/USCOURTS-gamd-7_11-cr-00029-1</identifier>
+ <identifier type="former granule identifier">gamd-7_11-cr-00029_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_11-cr-00029/USCOURTS-gamd-7_11-cr-00029-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_11-cr-00029/pdf/USCOURTS-gamd-7_11-cr-00029-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:11-cr-00029; UNITED STATES OF AMERICA v. Villanueva-Vasquez; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_11-cr-00029-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>ORDER overruling defendant&apos;s objection to sentencing as to Zeferino Villanueva-Vasquez. Ordered by Judge Hugh Lawson on 1/12/2012. (nbp)</docketText>
+</extension>
+</relatedItem>
+</mods>

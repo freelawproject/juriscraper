@@ -1,0 +1,150 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180ee9419">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02451</identifier>
+<identifier type="local">P0b002ee180ee9419</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_09-cv-02451</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_09-cv-02451</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:09-cv-02451</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <party fullName="B/E Aerospace, Inc." lastName="B/E Aerospace, Inc." role="Defendant"></party>
+ <party firstName="Dan" fullName="Dan Collins" lastName="Collins" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Collins v. B/E Aerospace, Inc.</title>
+ <partNumber>2:09-cv-02451</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02451/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-02451;09-2451</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>B/E Aerospace, Inc.</displayForm>
+ <namePart type="family">B/E Aerospace, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dan Collins</displayForm>
+ <namePart type="family">Collins</namePart>
+ <namePart type="given">Dan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_09-cv-02451</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:09-cv-02451</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <party fullName="B/E Aerospace, Inc." lastName="B/E Aerospace, Inc." role="Defendant"></party>
+ <party firstName="Dan" fullName="Dan Collins" lastName="Collins" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02451-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02451/USCOURTS-ksd-2_09-cv-02451-0/mods.xml">
+ <titleInfo>
+  <title>Collins v. B/E Aerospace, Inc.</title>
+  <subTitle>MEMORANDUM AND ORDER denying without prejudice 18 Motion to Dismiss; granting 22 Motion to Amend Complaint; granting 30 Motion for Extension of Time to File Response re 27 MOTION to Certify Class and for Collective Certification. Defendant&apos;s deadline to file response to plaintiff&apos;s Motion to Certify Class is 2/5/2010. Plaintiff must file his amended complaint on or before January 11, 2010. See Memorandum and Order for further details. Signed by District Judge Carlos Murguia on 1/5/2010. (jw)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02451-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f9463a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02451/USCOURTS-ksd-2_09-cv-02451-0</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02451_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02451/USCOURTS-ksd-2_09-cv-02451-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02451/pdf/USCOURTS-ksd-2_09-cv-02451-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02451; Collins v. B/E Aerospace, Inc.; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02451-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying without prejudice 18 Motion to Dismiss; granting 22 Motion to Amend Complaint; granting 30 Motion for Extension of Time to File Response re 27 MOTION to Certify Class and for Collective Certification. Defendant&apos;s deadline to file response to plaintiff&apos;s Motion to Certify Class is 2/5/2010. Plaintiff must file his amended complaint on or before January 11, 2010. See Memorandum and Order for further details. Signed by District Judge Carlos Murguia on 1/5/2010. (jw)</docketText>
+</extension>
+</relatedItem>
+</mods>

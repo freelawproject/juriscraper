@@ -1,0 +1,388 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a9029d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01181</identifier>
+<identifier type="local">P0b002ee183a9029d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-01181</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01181</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01181</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party fullName="AIU Insurance Company" lastName="AIU Insurance Company" role="Defendant"></party>
+ <party fullName="American Home Assurance Company" lastName="American Home Assurance Company" role="Defendant"></party>
+ <party fullName="American International Pacific Insurance Company" lastName="American International Pacific Insurance Company" role="Defendant"></party>
+ <party fullName="American International South Insurance Company" lastName="American International South Insurance Company" role="Defendant"></party>
+ <party fullName="Chartis Aerospace Insurance Services, Inc." lastName="Chartis Aerospace Insurance Services, Inc." role="Defendant"></party>
+ <party fullName="Chartis Casualty Company" lastName="Chartis Casualty Company" role="Defendant"></party>
+ <party fullName="Chartis Claims, Inc." lastName="Chartis Claims, Inc." role="Defendant"></party>
+ <party fullName="Chartis Global Claims Service, Inc." lastName="Chartis Global Claims Service, Inc." role="Defendant"></party>
+ <party fullName="Chartis Global Services, Inc." lastName="Chartis Global Services, Inc." role="Defendant"></party>
+ <party fullName="Chartis Insurance Agency, Inc." lastName="Chartis Insurance Agency, Inc." role="Defendant"></party>
+ <party fullName="Chartis Property Casualty Company" lastName="Chartis Property Casualty Company" role="Defendant"></party>
+ <party fullName="Chartis Warranty Guard, Inc." lastName="Chartis Warranty Guard, Inc." role="Defendant"></party>
+ <party fullName="Chartis, Inc." lastName="Chartis, Inc." role="Defendant"></party>
+ <party fullName="City of Visalia" lastName="City of Visalia" role="Plaintiff"></party>
+ <party fullName="Commerce and Industry Insurance Company" lastName="Commerce and Industry Insurance Company" role="Defendant"></party>
+ <party fullName="Granite State Insurance Company" lastName="Granite State Insurance Company" role="Defendant"></party>
+ <party fullName="Illinois National Company" lastName="Illinois National Company" role="Defendant"></party>
+ <party fullName="Landmark Insurance Company" lastName="Landmark Insurance Company" role="Defendant"></party>
+ <party fullName="National Union Fire Insurance Company of Louisiana" lastName="National Union Fire Insurance Company of Louisiana" role="Defendant"></party>
+ <party fullName="National Union Fire Insurance Company of Pittsburgh, PA." lastName="National Union Fire Insurance Company of Pittsburgh, PA." role="Defendant"></party>
+ <party fullName="New Hampshire Insurance Company" lastName="New Hampshire Insurance Company" role="Defendant"></party>
+ <party fullName="The Insurance Company of the State of Pennsylvania" lastName="The Insurance Company of the State of Pennsylvania" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>City of Visalia v. Chartis, Inc. et al</title>
+ <partNumber>1:12-cv-01181</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01181/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-01181;12-1181</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>AIU Insurance Company</displayForm>
+ <namePart type="family">AIU Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>American Home Assurance Company</displayForm>
+ <namePart type="family">American Home Assurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>American International Pacific Insurance Company</displayForm>
+ <namePart type="family">American International Pacific Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>American International South Insurance Company</displayForm>
+ <namePart type="family">American International South Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chartis Aerospace Insurance Services, Inc.</displayForm>
+ <namePart type="family">Chartis Aerospace Insurance Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chartis Casualty Company</displayForm>
+ <namePart type="family">Chartis Casualty Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chartis Claims, Inc.</displayForm>
+ <namePart type="family">Chartis Claims, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chartis Global Claims Service, Inc.</displayForm>
+ <namePart type="family">Chartis Global Claims Service, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chartis Global Services, Inc.</displayForm>
+ <namePart type="family">Chartis Global Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chartis Insurance Agency, Inc.</displayForm>
+ <namePart type="family">Chartis Insurance Agency, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chartis Property Casualty Company</displayForm>
+ <namePart type="family">Chartis Property Casualty Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chartis Warranty Guard, Inc.</displayForm>
+ <namePart type="family">Chartis Warranty Guard, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chartis, Inc.</displayForm>
+ <namePart type="family">Chartis, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>City of Visalia</displayForm>
+ <namePart type="family">City of Visalia</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Commerce and Industry Insurance Company</displayForm>
+ <namePart type="family">Commerce and Industry Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Granite State Insurance Company</displayForm>
+ <namePart type="family">Granite State Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Illinois National Company</displayForm>
+ <namePart type="family">Illinois National Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Landmark Insurance Company</displayForm>
+ <namePart type="family">Landmark Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>National Union Fire Insurance Company of Louisiana</displayForm>
+ <namePart type="family">National Union Fire Insurance Company of Louisiana</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>National Union Fire Insurance Company of Pittsburgh, PA.</displayForm>
+ <namePart type="family">National Union Fire Insurance Company of Pittsburgh, PA.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New Hampshire Insurance Company</displayForm>
+ <namePart type="family">New Hampshire Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Insurance Company of the State of Pennsylvania</displayForm>
+ <namePart type="family">The Insurance Company of the State of Pennsylvania</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01181</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01181</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party fullName="AIU Insurance Company" lastName="AIU Insurance Company" role="Defendant"></party>
+ <party fullName="American Home Assurance Company" lastName="American Home Assurance Company" role="Defendant"></party>
+ <party fullName="American International Pacific Insurance Company" lastName="American International Pacific Insurance Company" role="Defendant"></party>
+ <party fullName="American International South Insurance Company" lastName="American International South Insurance Company" role="Defendant"></party>
+ <party fullName="Chartis Aerospace Insurance Services, Inc." lastName="Chartis Aerospace Insurance Services, Inc." role="Defendant"></party>
+ <party fullName="Chartis Casualty Company" lastName="Chartis Casualty Company" role="Defendant"></party>
+ <party fullName="Chartis Claims, Inc." lastName="Chartis Claims, Inc." role="Defendant"></party>
+ <party fullName="Chartis Global Claims Service, Inc." lastName="Chartis Global Claims Service, Inc." role="Defendant"></party>
+ <party fullName="Chartis Global Services, Inc." lastName="Chartis Global Services, Inc." role="Defendant"></party>
+ <party fullName="Chartis Insurance Agency, Inc." lastName="Chartis Insurance Agency, Inc." role="Defendant"></party>
+ <party fullName="Chartis Property Casualty Company" lastName="Chartis Property Casualty Company" role="Defendant"></party>
+ <party fullName="Chartis Warranty Guard, Inc." lastName="Chartis Warranty Guard, Inc." role="Defendant"></party>
+ <party fullName="Chartis, Inc." lastName="Chartis, Inc." role="Defendant"></party>
+ <party fullName="City of Visalia" lastName="City of Visalia" role="Plaintiff"></party>
+ <party fullName="Commerce and Industry Insurance Company" lastName="Commerce and Industry Insurance Company" role="Defendant"></party>
+ <party fullName="Granite State Insurance Company" lastName="Granite State Insurance Company" role="Defendant"></party>
+ <party fullName="Illinois National Company" lastName="Illinois National Company" role="Defendant"></party>
+ <party fullName="Landmark Insurance Company" lastName="Landmark Insurance Company" role="Defendant"></party>
+ <party fullName="National Union Fire Insurance Company of Louisiana" lastName="National Union Fire Insurance Company of Louisiana" role="Defendant"></party>
+ <party fullName="National Union Fire Insurance Company of Pittsburgh, PA." lastName="National Union Fire Insurance Company of Pittsburgh, PA." role="Defendant"></party>
+ <party fullName="New Hampshire Insurance Company" lastName="New Hampshire Insurance Company" role="Defendant"></party>
+ <party fullName="The Insurance Company of the State of Pennsylvania" lastName="The Insurance Company of the State of Pennsylvania" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01181-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01181/USCOURTS-caed-1_12-cv-01181-0/mods.xml">
+ <titleInfo>
+  <title>City of Visalia v. Chartis, Inc. et al</title>
+  <subTitle>ORDER VACATING August 27, 2012 Hearing Date and Taking 6 Defendants&apos; Motion to Stay or Dismiss Under Submission, signed by Chief Judge Anthony W. Ishii on 8/22/2012. (IT IS HEREBY ORDERED that the previously set hearing date of August 27, 2012, is VACATED, and no party shall appear at that time. As of that date, the court will take the matter under submission and will thereafter issue its decision.)(Gaumnitz, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01181-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a91941</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01181/USCOURTS-caed-1_12-cv-01181-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01181_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01181/USCOURTS-caed-1_12-cv-01181-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01181/pdf/USCOURTS-caed-1_12-cv-01181-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01181; City of Visalia v. Chartis, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01181-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-08-22</dateIssued>
+  <docketText>ORDER VACATING August 27, 2012 Hearing Date and Taking 6 Defendants&apos; Motion to Stay or Dismiss Under Submission, signed by Chief Judge Anthony W. Ishii on 8/22/2012. (IT IS HEREBY ORDERED that the previously set hearing date of August 27, 2012, is VACATED, and no party shall appear at that time. As of that date, the court will take the matter under submission and will thereafter issue its decision.)(Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01181-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01181/USCOURTS-caed-1_12-cv-01181-1/mods.xml">
+ <titleInfo>
+  <title>City of Visalia v. Chartis, Inc. et al</title>
+  <subTitle>STIPULATION and ORDER GRANTING the parties&apos; request for a continuance of the Scheduling Conference currently set for 1/8/2013 and CONTINUING it to 2/19/2013 at 09:30 AM in Courtroom 1 (SMS) before Magistrate Judge Sandra M. Snyder. Telephonic appearances are GRANTED with the parties to initiate a one-line conference call. Order signed by Magistrate Judge Sandra M. Snyder on 1/4/2013. (Rooney, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01181-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a9193f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01181/USCOURTS-caed-1_12-cv-01181-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01181_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01181/USCOURTS-caed-1_12-cv-01181-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01181/pdf/USCOURTS-caed-1_12-cv-01181-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01181; City of Visalia v. Chartis, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01181-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>STIPULATION and ORDER GRANTING the parties&apos; request for a continuance of the Scheduling Conference currently set for 1/8/2013 and CONTINUING it to 2/19/2013 at 09:30 AM in Courtroom 1 (SMS) before Magistrate Judge Sandra M. Snyder. Telephonic appearances are GRANTED with the parties to initiate a one-line conference call. Order signed by Magistrate Judge Sandra M. Snyder on 1/4/2013. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01181-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01181/USCOURTS-caed-1_12-cv-01181-2/mods.xml">
+ <titleInfo>
+  <title>City of Visalia v. Chartis, Inc. et al</title>
+  <subTitle>ORDER GRANTING 6 Defendants&apos; Motion to Stay or Dismiss and ORDER DISMISSING Complaint With Prejudice, signed by District Judge Anthony W. Ishii on 1/11/2013. CASE CLOSED. (Jessen, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01181-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a91940</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01181/USCOURTS-caed-1_12-cv-01181-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01181_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01181/USCOURTS-caed-1_12-cv-01181-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01181/pdf/USCOURTS-caed-1_12-cv-01181-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01181; City of Visalia v. Chartis, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01181-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-11</dateIssued>
+  <docketText>ORDER GRANTING 6 Defendants&apos; Motion to Stay or Dismiss and ORDER DISMISSING Complaint With Prejudice, signed by District Judge Anthony W. Ishii on 1/11/2013. CASE CLOSED. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

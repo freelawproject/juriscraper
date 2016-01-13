@@ -1,0 +1,206 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c3c5bef">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-05-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_14-cv-13241</identifier>
+<identifier type="local">P0b002ee18c3c5bef</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-05-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-05-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_14-cv-13241</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_14-cv-13241</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:14-cv-13241</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1442 Notice of Removal</cause>
+ <party firstName="John" fullName="John Antonucci" lastName="Antonucci" role="Defendant"></party>
+ <party firstName="Sean" fullName="Sean Bevan" lastName="Bevan" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas R Davis" lastName="Davis" middleName="R" role="Plaintiff"></party>
+ <party firstName="Karl" fullName="Karl Fogel" lastName="Fogel" role="Defendant"></party>
+ <party firstName="Emily" fullName="Emily Parks" lastName="Parks" role="Defendant"></party>
+ <party fullName="Town of Westwood" lastName="Town of Westwood" role="Defendant"></party>
+ <party fullName="Westwood Public Schools" lastName="Westwood Public Schools" role="Defendant"></party>
+ <party fullName="Westwood School Committee" lastName="Westwood School Committee" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Davis v. Town of Westwood et al</title>
+ <partNumber>1:14-cv-13241</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_14-cv-13241/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-13241;14-13241</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John Antonucci</displayForm>
+ <namePart type="family">Antonucci</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sean Bevan</displayForm>
+ <namePart type="family">Bevan</namePart>
+ <namePart type="given">Sean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas R Davis</displayForm>
+ <namePart type="family">Davis</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Karl Fogel</displayForm>
+ <namePart type="family">Fogel</namePart>
+ <namePart type="given">Karl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Emily Parks</displayForm>
+ <namePart type="family">Parks</namePart>
+ <namePart type="given">Emily</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Town of Westwood</displayForm>
+ <namePart type="family">Town of Westwood</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Westwood Public Schools</displayForm>
+ <namePart type="family">Westwood Public Schools</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Westwood School Committee</displayForm>
+ <namePart type="family">Westwood School Committee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_14-cv-13241</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:14-cv-13241</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1442 Notice of Removal</cause>
+ <party firstName="John" fullName="John Antonucci" lastName="Antonucci" role="Defendant"></party>
+ <party firstName="Sean" fullName="Sean Bevan" lastName="Bevan" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas R Davis" lastName="Davis" middleName="R" role="Plaintiff"></party>
+ <party firstName="Karl" fullName="Karl Fogel" lastName="Fogel" role="Defendant"></party>
+ <party firstName="Emily" fullName="Emily Parks" lastName="Parks" role="Defendant"></party>
+ <party fullName="Town of Westwood" lastName="Town of Westwood" role="Defendant"></party>
+ <party fullName="Westwood Public Schools" lastName="Westwood Public Schools" role="Defendant"></party>
+ <party fullName="Westwood School Committee" lastName="Westwood School Committee" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_14-cv-13241-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_14-cv-13241/USCOURTS-mad-1_14-cv-13241-0/mods.xml">
+ <titleInfo>
+  <title>Davis v. Town of Westwood et al</title>
+  <subTitle>Judge Denise J. Casper: ORDER entered. MEMORANDUM AND ORDER - The Court ALLOWS Fogel&apos;s motion to dismiss, D. 11, as to Count I (due process), Count III (defamation) and Count VI (tortious interference) with prejudice and Count II (equal protection) without prejudice. If Davis chooses to amend the complaint as to Count II, the equal protection claim, he must do so by filing an amended complaint by no later than January 20, 2015. Fogel&apos;s motion to dismiss is DENIED as to Count IV (assault and battery) and Count VII (negligent infliction of emotional distress). (Hourihan, Lisa)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_14-cv-13241/pdf/USCOURTS-mad-1_14-cv-13241-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c5c3a20</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_14-cv-13241/USCOURTS-mad-1_14-cv-13241-0</identifier>
+ <identifier type="former granule identifier">mad-1_14-cv-13241_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_14-cv-13241/USCOURTS-mad-1_14-cv-13241-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_14-cv-13241/pdf/USCOURTS-mad-1_14-cv-13241-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-13241; Davis v. Town of Westwood et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_14-cv-13241-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>Judge Denise J. Casper: ORDER entered. MEMORANDUM AND ORDER - The Court ALLOWS Fogel&apos;s motion to dismiss, D. 11, as to Count I (due process), Count III (defamation) and Count VI (tortious interference) with prejudice and Count II (equal protection) without prejudice. If Davis chooses to amend the complaint as to Count II, the equal protection claim, he must do so by filing an amended complaint by no later than January 20, 2015. Fogel&apos;s motion to dismiss is DENIED as to Count IV (assault and battery) and Count VII (negligent infliction of emotional distress). (Hourihan, Lisa)</docketText>
+</extension>
+</relatedItem>
+</mods>

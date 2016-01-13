@@ -1,0 +1,505 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d245139">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-07-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-07-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730</identifier>
+<identifier type="local">P0b002ee18d245139</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-07-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-07-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-01730</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01730</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01730</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="R." fullName="R. Godinez" lastName="Godinez" role="Defendant"></party>
+ <party firstName="C." fullName="C. Herrera" lastName="Herrera" role="Defendant"></party>
+ <party firstName="A." fullName="A. Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="B." fullName="B. Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="D." fullName="D. Nelson" lastName="Nelson" role="Defendant"></party>
+ <party firstName="C." fullName="C. Solis" lastName="Solis" role="Defendant"></party>
+ <party firstName="Chester" fullName="Chester Ray Wiseman" lastName="Wiseman" middleName="Ray" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Wiseman v. Herrera et al</title>
+ <partNumber>1:12-cv-01730</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-01730;12-1730</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>R. Godinez</displayForm>
+ <namePart type="family">Godinez</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Herrera</displayForm>
+ <namePart type="family">Herrera</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>B. Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">B.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Nelson</displayForm>
+ <namePart type="family">Nelson</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Solis</displayForm>
+ <namePart type="family">Solis</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chester Ray Wiseman</displayForm>
+ <namePart type="family">Wiseman</namePart>
+ <namePart type="given">Chester</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01730</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01730</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="R." fullName="R. Godinez" lastName="Godinez" role="Defendant"></party>
+ <party firstName="C." fullName="C. Herrera" lastName="Herrera" role="Defendant"></party>
+ <party firstName="A." fullName="A. Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="B." fullName="B. Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="D." fullName="D. Nelson" lastName="Nelson" role="Defendant"></party>
+ <party firstName="C." fullName="C. Solis" lastName="Solis" role="Defendant"></party>
+ <party firstName="Chester" fullName="Chester Ray Wiseman" lastName="Wiseman" middleName="Ray" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01730-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Wiseman v. Herrera et al</title>
+  <subTitle>ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND (Doc.1), signed by Magistrate Judge Jennifer L. Thurston on 1/15/2013. Amended Complaint due by 2/8/2013. (Attachments: # (1) Amended Complaint Form)(Fahrney, E)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d253c1e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01730_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01730; (PC) Wiseman v. Herrera et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01730-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-16</dateIssued>
+  <docketText>ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND (Doc.1), signed by Magistrate Judge Jennifer L. Thurston on 1/15/2013. Amended Complaint due by 2/8/2013. (Attachments: # (1) Amended Complaint Form)(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01730-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Wiseman v. Herrera et al</title>
+  <subTitle>**DISCHARGED PER ORDER 10** ORDER to SHOW CAUSE Why Matter Should Not Be Dismissed For Failure To Comply With Court Orders, signed by Magistrate Judge Jennifer L. Thurston on 2/12/13. 14-Day Deadline. (Verduzco, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d253c21</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01730_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01730; (PC) Wiseman v. Herrera et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01730-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-02-13</dateIssued>
+  <docketText>**DISCHARGED PER ORDER 10** ORDER to SHOW CAUSE Why Matter Should Not Be Dismissed For Failure To Comply With Court Orders, signed by Magistrate Judge Jennifer L. Thurston on 2/12/13. 14-Day Deadline. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01730-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Wiseman v. Herrera et al</title>
+  <subTitle>ORDER DISCHARGING Order to Show Cause Dated February 13, 2013 8, signed by Magistrate Judge Jennifer L. Thurston on 2/26/13. (Hellings, J)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d253c22</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01730_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01730; (PC) Wiseman v. Herrera et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01730-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-02-27</dateIssued>
+  <docketText>ORDER DISCHARGING Order to Show Cause Dated February 13, 2013 8, signed by Magistrate Judge Jennifer L. Thurston on 2/26/13. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01730-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Wiseman v. Herrera et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Dismissing Case Without Leave to Amend re 9, signed by Magistrate Judge Jennifer L. Thurston on 5/1/13. Referred to Judge Ishii. Fourteen-Day Deadline. (Gonzalez, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d253bda</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01730_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01730; (PC) Wiseman v. Herrera et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01730-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-05-01</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Dismissing Case Without Leave to Amend re 9, signed by Magistrate Judge Jennifer L. Thurston on 5/1/13. Referred to Judge Ishii. Fourteen-Day Deadline. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01730-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Wiseman v. Herrera et al</title>
+  <subTitle>ORDER Adopting 12 Findings and Recommendations in Part, signed by District Judge Anthony W. Ishii on 1/7/14. (Verduzco, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d253c20</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01730_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01730; (PC) Wiseman v. Herrera et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01730-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-01-08</dateIssued>
+  <docketText>ORDER Adopting 12 Findings and Recommendations in Part, signed by District Judge Anthony W. Ishii on 1/7/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01730-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Wiseman v. Herrera et al</title>
+  <subTitle>ORDER DENYING 31 Motion to Appoint Counsel, signed by Magistrate Judge Jennifer L. Thurston on 11/5/2014. (Marrujo, C)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d253c24</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01730_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01730; (PC) Wiseman v. Herrera et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01730-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-11-05</dateIssued>
+  <docketText>ORDER DENYING 31 Motion to Appoint Counsel, signed by Magistrate Judge Jennifer L. Thurston on 11/5/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01730-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Wiseman v. Herrera et al</title>
+  <subTitle>AMENDED SECOND INFORMATIONAL ORDER - Notice and Warning of Requirements for Opposing Defendants&apos; Motion for Summary Judgment, signed by Magistrate Judge Jennifer L. Thurston on 12/29/14. (Gonzalez, R)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d253bd9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01730_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01730; (PC) Wiseman v. Herrera et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01730-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-12-30</dateIssued>
+  <docketText>AMENDED SECOND INFORMATIONAL ORDER - Notice and Warning of Requirements for Opposing Defendants&apos; Motion for Summary Judgment, signed by Magistrate Judge Jennifer L. Thurston on 12/29/14. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01730-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Wiseman v. Herrera et al</title>
+  <subTitle>ORDER Granting Defendants&apos; 34 Motion to Strike Plaintiff&apos;s 32 Motion for Partial Summary Judgment, signed by Magistrate Judge Jennifer L. Thurston on 12/31/14. Motion for Extension of Time 35 Disregarded as Moot. (Verduzco, M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d253c23</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01730_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01730; (PC) Wiseman v. Herrera et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01730-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER Granting Defendants&apos; 34 Motion to Strike Plaintiff&apos;s 32 Motion for Partial Summary Judgment, signed by Magistrate Judge Jennifer L. Thurston on 12/31/14. Motion for Extension of Time 35 Disregarded as Moot. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01730-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Wiseman v. Herrera et al</title>
+  <subTitle>ORDER Denying 44 Motion to Appoint Counsel, signed by Magistrate Judge Jennifer L. Thurston on 02/03/15. (Gonzalez, R)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d253c1f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-8</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01730_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01730; (PC) Wiseman v. Herrera et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01730-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-02-04</dateIssued>
+  <docketText>ORDER Denying 44 Motion to Appoint Counsel, signed by Magistrate Judge Jennifer L. Thurston on 02/03/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01730-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Wiseman v. Herrera et al</title>
+  <subTitle>ORDER DISMISSING DEFENDANTS C. HERRERA AND D. NELSON WITH PREJUDICE AND DEEMING THEIR MOTION FOR SUMMARY JUDGMENT WITHDRAWN re 37, 41, 42, 45 signed by District Judge Anthony W. Ishii on 2/10/2015. (Lundstrom, T)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d253bdb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-9</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01730_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01730; (PC) Wiseman v. Herrera et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01730-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2015-02-10</dateIssued>
+  <docketText>ORDER DISMISSING DEFENDANTS C. HERRERA AND D. NELSON WITH PREJUDICE AND DEEMING THEIR MOTION FOR SUMMARY JUDGMENT WITHDRAWN re 37, 41, 42, 45 signed by District Judge Anthony W. Ishii on 2/10/2015. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01730-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Wiseman v. Herrera et al</title>
+  <subTitle>SECOND INFORMATIONAL ORDER-NOTICE and Warning of Requirements for Opposing Defendants&apos; 58 Motion for Summary Judgment, signed by Magistrate Judge Jennifer L. Thurston on 04/28/2015. (Martin-Gill, S)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d253bd8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-10</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01730_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01730; (PC) Wiseman v. Herrera et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01730-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2015-04-28</dateIssued>
+  <docketText>SECOND INFORMATIONAL ORDER-NOTICE and Warning of Requirements for Opposing Defendants&apos; 58 Motion for Summary Judgment, signed by Magistrate Judge Jennifer L. Thurston on 04/28/2015. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01730-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Wiseman v. Herrera et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS To Deny Plaintiff&apos;s Motion For Partial Summary Judgment And To Grant Defendants&apos; Motion For Summary Judgement (Docs. 48, 58), Objections Due Within 30 Days, signed by Magistrate Judge Jennifer L. Thurston on 7/27/2015. F&amp;R&apos;s referred to Judge Anthony W. Ishii; Objections to F&amp;R due by 8/31/2015. (Fahrney, E)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d253c25</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-11</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01730_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01730/USCOURTS-caed-1_12-cv-01730-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01730/pdf/USCOURTS-caed-1_12-cv-01730-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01730; (PC) Wiseman v. Herrera et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01730-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2015-07-28</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS To Deny Plaintiff&apos;s Motion For Partial Summary Judgment And To Grant Defendants&apos; Motion For Summary Judgement (Docs. 48, 58), Objections Due Within 30 Days, signed by Magistrate Judge Jennifer L. Thurston on 7/27/2015. F&amp;R&apos;s referred to Judge Anthony W. Ishii; Objections to F&amp;R due by 8/31/2015. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

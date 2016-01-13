@@ -1,0 +1,429 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b9a6f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03018</identifier>
+<identifier type="local">P0b002ee1817b9a6f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_07-cv-03018</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03018</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03018</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1441 Petition for Removal- Account Receivable</cause>
+ <party fullName="Casey&apos;s General Stores, Inc." lastName="Casey&apos;s General Stores, Inc." role="Defendant"></party>
+ <party fullName="Casey&apos;s General Stores, Inc." lastName="Casey&apos;s General Stores, Inc." role="Third Party Defendant"></party>
+ <party fullName="Casey&apos;s Retail" lastName="Casey&apos;s Retail" role="Defendant"></party>
+ <party fullName="Casey&apos;s Retail" lastName="Casey&apos;s Retail" role="Third Party Defendant"></party>
+ <party firstName="Mark" fullName="Mark A. Christensen" lastName="Christensen" middleName="A." role="Mediator"></party>
+ <party fullName="ConocoPhillips" lastName="ConocoPhillips" role="Counter Claimant"></party>
+ <party fullName="ConocoPhillips" lastName="ConocoPhillips" role="Defendant"></party>
+ <party fullName="ConocoPhillips" lastName="ConocoPhillips" role="Third Party Plaintiff"></party>
+ <party fullName="Gas &apos;N Shop" lastName="Gas &apos;N Shop" role="Counter Defendant"></party>
+ <party fullName="Gas &apos;N Shop" lastName="Gas &apos;N Shop" role="Plaintiff"></party>
+ <party fullName="Gas &apos;N Shop" lastName="Gas &apos;N Shop" role="Third Party Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Gas N Shop v. ConocoPhillips Company</title>
+ <partNumber>4:07-cv-03018</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03018/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:07-cv-03018;07-3018</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Casey&apos;s General Stores, Inc.</displayForm>
+ <namePart type="family">Casey&apos;s General Stores, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Casey&apos;s General Stores, Inc.</displayForm>
+ <namePart type="family">Casey&apos;s General Stores, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Casey&apos;s Retail</displayForm>
+ <namePart type="family">Casey&apos;s Retail</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Casey&apos;s Retail</displayForm>
+ <namePart type="family">Casey&apos;s Retail</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark A. Christensen</displayForm>
+ <namePart type="family">Christensen</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<name type="personal">
+ <displayForm>ConocoPhillips</displayForm>
+ <namePart type="family">ConocoPhillips</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>ConocoPhillips</displayForm>
+ <namePart type="family">ConocoPhillips</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ConocoPhillips</displayForm>
+ <namePart type="family">ConocoPhillips</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gas &apos;N Shop</displayForm>
+ <namePart type="family">Gas &apos;N Shop</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gas &apos;N Shop</displayForm>
+ <namePart type="family">Gas &apos;N Shop</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gas &apos;N Shop</displayForm>
+ <namePart type="family">Gas &apos;N Shop</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03018</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03018</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1441 Petition for Removal- Account Receivable</cause>
+ <party fullName="Casey&apos;s General Stores, Inc." lastName="Casey&apos;s General Stores, Inc." role="Defendant"></party>
+ <party fullName="Casey&apos;s General Stores, Inc." lastName="Casey&apos;s General Stores, Inc." role="Third Party Defendant"></party>
+ <party fullName="Casey&apos;s Retail" lastName="Casey&apos;s Retail" role="Defendant"></party>
+ <party fullName="Casey&apos;s Retail" lastName="Casey&apos;s Retail" role="Third Party Defendant"></party>
+ <party firstName="Mark" fullName="Mark A. Christensen" lastName="Christensen" middleName="A." role="Mediator"></party>
+ <party fullName="ConocoPhillips" lastName="ConocoPhillips" role="Counter Claimant"></party>
+ <party fullName="ConocoPhillips" lastName="ConocoPhillips" role="Defendant"></party>
+ <party fullName="ConocoPhillips" lastName="ConocoPhillips" role="Third Party Plaintiff"></party>
+ <party fullName="Gas &apos;N Shop" lastName="Gas &apos;N Shop" role="Counter Defendant"></party>
+ <party fullName="Gas &apos;N Shop" lastName="Gas &apos;N Shop" role="Plaintiff"></party>
+ <party fullName="Gas &apos;N Shop" lastName="Gas &apos;N Shop" role="Third Party Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03018-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-0/mods.xml">
+ <titleInfo>
+  <title>Gas N Shop v. ConocoPhillips Company</title>
+  <subTitle>ORDER granting 13 Motion for Leave to file Third-Party Complaint. The Third-Party Complaint shall be filed forthwith. Ordered by Magistrate Judge David L. Piester.(CAR, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03018-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818deb18</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-0</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03018_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03018/pdf/USCOURTS-ned-4_07-cv-03018-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03018; Gas N Shop v. ConocoPhillips Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03018-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-04-26</dateIssued>
+  <docketText>ORDER granting 13 Motion for Leave to file Third-Party Complaint. The Third-Party Complaint shall be filed forthwith. Ordered by Magistrate Judge David L. Piester.(CAR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03018-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-1/mods.xml">
+ <titleInfo>
+  <title>Gas N Shop v. ConocoPhillips Company</title>
+  <subTitle>ORDER that the Rule 16 telephone planning is continued from today to July 27, 2007 at 3:00 p.m. for the reason that there has been no appearance by the third party defendant. Ordered by Magistrate Judge David L. Piester. (CAR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03018-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818deb17</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-1</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03018_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03018/pdf/USCOURTS-ned-4_07-cv-03018-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03018; Gas N Shop v. ConocoPhillips Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03018-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-06-11</dateIssued>
+  <docketText>ORDER that the Rule 16 telephone planning is continued from today to July 27, 2007 at 3:00 p.m. for the reason that there has been no appearance by the third party defendant. Ordered by Magistrate Judge David L. Piester. (CAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03018-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-2/mods.xml">
+ <titleInfo>
+  <title>Gas N Shop v. ConocoPhillips Company</title>
+  <subTitle>ORDER - Defendant ConocoPhillips Company&apos;s motion, filing 19 to file Amended Answer, Affirmative Defenses and Counterclaim is granted and the same shall be filed forthwith. Ordered by Magistrate Judge David L. Piester.(GJG, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03018-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818deab2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-2</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03018_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03018/pdf/USCOURTS-ned-4_07-cv-03018-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03018; Gas N Shop v. ConocoPhillips Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03018-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-06-25</dateIssued>
+  <docketText>ORDER - Defendant ConocoPhillips Company&apos;s motion, filing 19 to file Amended Answer, Affirmative Defenses and Counterclaim is granted and the same shall be filed forthwith. Ordered by Magistrate Judge David L. Piester.(GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03018-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-3/mods.xml">
+ <titleInfo>
+  <title>Gas N Shop v. ConocoPhillips Company</title>
+  <subTitle>ORDER - On the court&apos;s own motion. The time of the telephone planning conference on July 27, 2007 is changed from 3:00 p.m. to 9:00 a.m. Plaintiff&apos;s counsel shall initiate the call. Planning Conference set for 7/27/2006 at 09:00 AM by Telephone before Magistrate Judge David L. Piester.Ordered by Magistrate Judge David L. Piester. (GJG, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03018-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818deb16</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-3</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03018_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03018/pdf/USCOURTS-ned-4_07-cv-03018-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03018; Gas N Shop v. ConocoPhillips Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03018-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-07-26</dateIssued>
+  <docketText>ORDER - On the court&apos;s own motion. The time of the telephone planning conference on July 27, 2007 is changed from 3:00 p.m. to 9:00 a.m. Plaintiff&apos;s counsel shall initiate the call. Planning Conference set for 7/27/2006 at 09:00 AM by Telephone before Magistrate Judge David L. Piester.Ordered by Magistrate Judge David L. Piester. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03018-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-4/mods.xml">
+ <titleInfo>
+  <title>Gas N Shop v. ConocoPhillips Company</title>
+  <subTitle>ORDER - The parties&apos; agreed motion, filing 26 to amend the progression order is granted. ConocoPhillips filed its response to Casey&apos;s motion to dismiss the Third Party Complaint (filing 22) on August 14, 2007 and the response is deemed timely filed. Casey&apos;s is given to August 31, 2007 to file its reply in support of its motion to dismiss. Ordered by Magistrate Judge David L. Piester.(GJG, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03018-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818deab1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-4</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03018_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03018/pdf/USCOURTS-ned-4_07-cv-03018-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03018; Gas N Shop v. ConocoPhillips Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03018-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-08-15</dateIssued>
+  <docketText>ORDER - The parties&apos; agreed motion, filing 26 to amend the progression order is granted. ConocoPhillips filed its response to Casey&apos;s motion to dismiss the Third Party Complaint (filing 22) on August 14, 2007 and the response is deemed timely filed. Casey&apos;s is given to August 31, 2007 to file its reply in support of its motion to dismiss. Ordered by Magistrate Judge David L. Piester.(GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03018-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-5/mods.xml">
+ <titleInfo>
+  <title>Gas N Shop v. ConocoPhillips Company</title>
+  <subTitle>SETTLEMENT ORDER. It is ordered that: (1) Within thirty (30) calendar days of the date of this order, the parties shall file a joint stipulation for dismissal (or other dispositive stipulation) with the clerk of the court (and provide a copy to the magistrate judge and to United States District Judge Richard G. Kopf, the trial judge to whom this case is assigned), together with submitting to the trial judge a draft order which will fully dispose of the case; (2) Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without further notice; (3) This case is removed from the court&apos;s February 25, 2008 trial docket upon representation by the parties that the case has settled.***Dismissal Papers Deadline due by 11/16/2007.Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03018-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818deab0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-5</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03018_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03018/pdf/USCOURTS-ned-4_07-cv-03018-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03018; Gas N Shop v. ConocoPhillips Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03018-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-10-16</dateIssued>
+  <docketText>SETTLEMENT ORDER. It is ordered that: (1) Within thirty (30) calendar days of the date of this order, the parties shall file a joint stipulation for dismissal (or other dispositive stipulation) with the clerk of the court (and provide a copy to the magistrate judge and to United States District Judge Richard G. Kopf, the trial judge to whom this case is assigned), together with submitting to the trial judge a draft order which will fully dispose of the case; (2) Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without further notice; (3) This case is removed from the court&apos;s February 25, 2008 trial docket upon representation by the parties that the case has settled.***Dismissal Papers Deadline due by 11/16/2007.Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03018-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-6/mods.xml">
+ <titleInfo>
+  <title>Gas N Shop v. ConocoPhillips Company</title>
+  <subTitle>ORDER - Third-Party Defendants&apos; motion for enlargement of time (filing 36) is granted, as follows: 1. The parties shall have until November 30, 2007, to file a joint stipulation for dismissal (or other dispositive stipulation). 2. In all other respects, the courts previous order (filing 34) shall remain unchanged, and this case (including all counterclaims and the like) may be dismissed without further notice for noncompliance with the order. Ordered by Judge Richard G. Kopf. (CS, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03018-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818deb15</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-6</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03018_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03018/pdf/USCOURTS-ned-4_07-cv-03018-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03018; Gas N Shop v. ConocoPhillips Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03018-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-11-26</dateIssued>
+  <docketText>ORDER - Third-Party Defendants&apos; motion for enlargement of time (filing 36) is granted, as follows: 1. The parties shall have until November 30, 2007, to file a joint stipulation for dismissal (or other dispositive stipulation). 2. In all other respects, the courts previous order (filing 34) shall remain unchanged, and this case (including all counterclaims and the like) may be dismissed without further notice for noncompliance with the order. Ordered by Judge Richard G. Kopf. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03018-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-7/mods.xml">
+ <titleInfo>
+  <title>Gas N Shop v. ConocoPhillips Company</title>
+  <subTitle>MEMORANDUM AND ORDER - This action, including all claims, counterclaims, cross-claims, and third party claims, is dismissed without prejudice for noncompliance with the court&apos;s orders (filings 34 and 37). Judgment shall be entered by separate document.Ordered by Judge Richard G. Kopf. (GJG, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03018-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818deab3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-7</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03018_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03018/USCOURTS-ned-4_07-cv-03018-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03018/pdf/USCOURTS-ned-4_07-cv-03018-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03018; Gas N Shop v. ConocoPhillips Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03018-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-01-10</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - This action, including all claims, counterclaims, cross-claims, and third party claims, is dismissed without prejudice for noncompliance with the court&apos;s orders (filings 34 and 37). Judgment shall be entered by separate document.Ordered by Judge Richard G. Kopf. (GJG, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,320 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18974348e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-07-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-03-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845</identifier>
+<identifier type="local">P0b002ee18974348e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-07-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-07-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-00845</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00845</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00845</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Jon" fullName="Jon C. Bobier" lastName="Bobier" middleName="C." role="Plaintiff"></party>
+ <party fullName="Unknown" lastName="Unknown" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Bobier v. Unknown</title>
+ <partNumber>1:13-cv-00845</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-00845;13-845</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jon C. Bobier</displayForm>
+ <namePart type="family">Bobier</namePart>
+ <namePart type="given">Jon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown</displayForm>
+ <namePart type="family">Unknown</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00845</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00845</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Jon" fullName="Jon C. Bobier" lastName="Bobier" middleName="C." role="Plaintiff"></party>
+ <party fullName="Unknown" lastName="Unknown" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00845-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Bobier v. Unknown</title>
+  <subTitle>ORDER TRANSFERRING CASE TO U.S. DISTRICT COURT FOR THE EASTERN DISTRICT OF CALIFORNIA, FORTHWITH. Signed by Judge Yvonne Gonzalez Rogers on 5/31/13. (Attachments: # (1) Certificate/Proof of Service)(fs, COURT STAFF) (Filed on 5/31/2013) Modified on 6/3/2013 (jlm, COURT STAFF). [Transferred from cand on 6/3/2013.]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18975522f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00845_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00845; (PC) Bobier v. Unknown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00845-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-05-31</dateIssued>
+  <docketText>ORDER TRANSFERRING CASE TO U.S. DISTRICT COURT FOR THE EASTERN DISTRICT OF CALIFORNIA, FORTHWITH. Signed by Judge Yvonne Gonzalez Rogers on 5/31/13. (Attachments: # (1) Certificate/Proof of Service)(fs, COURT STAFF) (Filed on 5/31/2013) Modified on 6/3/2013 (jlm, COURT STAFF). [Transferred from cand on 6/3/2013.]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00845-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Bobier v. Unknown</title>
+  <subTitle>ORDER to File Consent or Decline Form OR Show Cause Why This Action Should Not be Dismissed for Failure to Prosecute, signed by Magistrate Judge Michael J. Seng on 9/18/2013. Thirty Day Deadline. (Marrujo, C)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1897551f1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00845_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00845; (PC) Bobier v. Unknown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00845-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-09-18</dateIssued>
+  <docketText>ORDER to File Consent or Decline Form OR Show Cause Why This Action Should Not be Dismissed for Failure to Prosecute, signed by Magistrate Judge Michael J. Seng on 9/18/2013. Thirty Day Deadline. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00845-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Bobier v. Unknown</title>
+  <subTitle>ORDER STRIKING Complaint and REQUIRING Plaintiff to File Captioned and Signed Amended Complaint Within Thirty Days 1, signed by Magistrate Judge Michael J. Seng on 10/28/13. (Hellings, J)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1897551f0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00845_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00845; (PC) Bobier v. Unknown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00845-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-10-29</dateIssued>
+  <docketText>ORDER STRIKING Complaint and REQUIRING Plaintiff to File Captioned and Signed Amended Complaint Within Thirty Days 1, signed by Magistrate Judge Michael J. Seng on 10/28/13. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00845-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Bobier v. Unknown</title>
+  <subTitle>***DISCHARGED PER 18 ORDER*** ORDER to SHOW CAUSE Why Case Should Not Be Dismissed For Faliure to Comply With Court Order, signed by Magistrate Judge Michael J. Seng on 12/12/2013. Show Cause Response Due Within Fourteen Days. (Marrujo, C)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1897551ef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00845_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00845; (PC) Bobier v. Unknown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00845-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-12-13</dateIssued>
+  <docketText>***DISCHARGED PER 18 ORDER*** ORDER to SHOW CAUSE Why Case Should Not Be Dismissed For Faliure to Comply With Court Order, signed by Magistrate Judge Michael J. Seng on 12/12/2013. Show Cause Response Due Within Fourteen Days. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00845-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Bobier v. Unknown</title>
+  <subTitle>ORDER DENYING 17 Motion for Appointment of Counsel, DISCHARGING 16 Order to Show Cause, and GRANTING Request for an Extension of Time to File an Amended Complaint; Amended Complaint Due within Thirty Days signed by Magistrate Judge Michael J. Seng on 1/3/2014. (Sant Agata, S)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1897551ee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00845_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00845; (PC) Bobier v. Unknown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00845-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER DENYING 17 Motion for Appointment of Counsel, DISCHARGING 16 Order to Show Cause, and GRANTING Request for an Extension of Time to File an Amended Complaint; Amended Complaint Due within Thirty Days signed by Magistrate Judge Michael J. Seng on 1/3/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00845-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Bobier v. Unknown</title>
+  <subTitle>ORDER to SHOW CAUSE Why Case should not be Dismissed for Failure to Comply with Court Order; Fourteen (14) Day Deadline signed by Magistrate Judge Michael J. Seng on 2/11/2014. (Sant Agata, S)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1897551f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-5</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00845_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00845; (PC) Bobier v. Unknown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00845-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-02-11</dateIssued>
+  <docketText>ORDER to SHOW CAUSE Why Case should not be Dismissed for Failure to Comply with Court Order; Fourteen (14) Day Deadline signed by Magistrate Judge Michael J. Seng on 2/11/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00845-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Bobier v. Unknown</title>
+  <subTitle>ORDER DIRECTING Clerk of the Court to CLOSE This Case Pursuant to Plaintiff&apos;s 20 Notice of Voluntary Dismissal, signed by Magistrate Judge Michael J. Seng on 3/4/2014. CASE CLOSED.(Marrujo, C)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1897551ed</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-6</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00845_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00845/USCOURTS-caed-1_13-cv-00845-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00845/pdf/USCOURTS-caed-1_13-cv-00845-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00845; (PC) Bobier v. Unknown; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00845-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-03-04</dateIssued>
+  <docketText>ORDER DIRECTING Clerk of the Court to CLOSE This Case Pursuant to Plaintiff&apos;s 20 Notice of Voluntary Dismissal, signed by Magistrate Judge Michael J. Seng on 3/4/2014. CASE CLOSED.(Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+</mods>

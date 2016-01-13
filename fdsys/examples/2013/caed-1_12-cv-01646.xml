@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183c1c0f1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-02-01</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01646</identifier>
+<identifier type="local">P0b002ee183c1c0f1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-01646</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01646</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01646</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>290</natureSuitCode>
+ <natureSuit>Other Real Property Actions</natureSuit>
+ <cause>28:1444 Petition for Removal- Foreclosure</cause>
+ <party fullName="Chicago Title Company" lastName="Chicago Title Company" role="Plaintiff"></party>
+ <party fullName="Internal Revenue Service" lastName="Internal Revenue Service" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Reyes" lastName="Reyes" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Chicago Title Company v. Reyes et al</title>
+ <partNumber>1:12-cv-01646</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01646/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-01646;12-1646</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Chicago Title Company</displayForm>
+ <namePart type="family">Chicago Title Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Internal Revenue Service</displayForm>
+ <namePart type="family">Internal Revenue Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Reyes</displayForm>
+ <namePart type="family">Reyes</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01646</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01646</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>290</natureSuitCode>
+ <natureSuit>Other Real Property Actions</natureSuit>
+ <cause>28:1444 Petition for Removal- Foreclosure</cause>
+ <party fullName="Chicago Title Company" lastName="Chicago Title Company" role="Plaintiff"></party>
+ <party fullName="Internal Revenue Service" lastName="Internal Revenue Service" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Reyes" lastName="Reyes" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01646-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01646/USCOURTS-caed-1_12-cv-01646-0/mods.xml">
+ <titleInfo>
+  <title>Chicago Title Company v. Reyes et al</title>
+  <subTitle>STIPULATION and ORDER to DISBURSE Interpleaded Funds and DISMISS with Prejudice signed by District Judge Anthony W. Ishii on 1/3/2013. CASE CLOSED. (Sant Agata, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01646-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183c1d4d3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01646/USCOURTS-caed-1_12-cv-01646-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01646_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01646/USCOURTS-caed-1_12-cv-01646-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01646/pdf/USCOURTS-caed-1_12-cv-01646-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01646; Chicago Title Company v. Reyes et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01646-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>STIPULATION and ORDER to DISBURSE Interpleaded Funds and DISMISS with Prejudice signed by District Judge Anthony W. Ishii on 1/3/2013. CASE CLOSED. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01646-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01646/USCOURTS-caed-1_12-cv-01646-1/mods.xml">
+ <titleInfo>
+  <title>Chicago Title Company v. Reyes et al</title>
+  <subTitle>Stipulation To Disburse Interpleaded Funds And Dismiss With Prejudice; AMENDED ORDER, signed by District Judge Anthony W. Ishii on 1/31/2013. The stipulation is approved. The Tulare County Superior Court Clerk shall pay from the interpleaded funds $1,525.10, plus any interest which may have accrued since deposit with the Court, to the United States at the following address: United States Treasury, c/o United States Attorney, 2500 Tulare, Ste. 4401, Fresno, California 93721.(Fahrney, E)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01646-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183c1d4d4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01646/USCOURTS-caed-1_12-cv-01646-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01646_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01646/USCOURTS-caed-1_12-cv-01646-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01646/pdf/USCOURTS-caed-1_12-cv-01646-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01646; Chicago Title Company v. Reyes et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01646-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-02-01</dateIssued>
+  <docketText>Stipulation To Disburse Interpleaded Funds And Dismiss With Prejudice; AMENDED ORDER, signed by District Judge Anthony W. Ishii on 1/31/2013. The stipulation is approved. The Tulare County Superior Court Clerk shall pay from the interpleaded funds $1,525.10, plus any interest which may have accrued since deposit with the Court, to the United States at the following address: United States Treasury, c/o United States Attorney, 2500 Tulare, Ste. 4401, Fresno, California 93721.(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

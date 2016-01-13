@@ -1,0 +1,216 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8a9727">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_13-cv-00108</identifier>
+<identifier type="local">P0b002ee18a8a9727</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_13-cv-00108</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_13-cv-00108</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:13-cv-00108</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>35:271 Patent Infringement</cause>
+ <party fullName="Albany Medical College" lastName="Albany Medical College" role="Counter Defendant"></party>
+ <party fullName="Albany Medical College" lastName="Albany Medical College" role="Plaintiff"></party>
+ <party fullName="Smiths Group, PLC" lastName="Smiths Group, PLC" role="Counter Claimant"></party>
+ <party fullName="Smiths Group, PLC" lastName="Smiths Group, PLC" role="Defendant"></party>
+ <party fullName="Smiths Medical ASD, Inc." lastName="Smiths Medical ASD, Inc." role="Counter Claimant"></party>
+ <party fullName="Smiths Medical ASD, Inc." lastName="Smiths Medical ASD, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Albany Medical College v. Smiths Medical ASD, Inc.</title>
+ <partNumber>1:13-cv-00108</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_13-cv-00108/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-00108;13-108</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Albany Medical College</displayForm>
+ <namePart type="family">Albany Medical College</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Albany Medical College</displayForm>
+ <namePart type="family">Albany Medical College</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Smiths Group, PLC</displayForm>
+ <namePart type="family">Smiths Group, PLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Smiths Group, PLC</displayForm>
+ <namePart type="family">Smiths Group, PLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Smiths Medical ASD, Inc.</displayForm>
+ <namePart type="family">Smiths Medical ASD, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Smiths Medical ASD, Inc.</displayForm>
+ <namePart type="family">Smiths Medical ASD, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_13-cv-00108</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:13-cv-00108</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>35:271 Patent Infringement</cause>
+ <party fullName="Albany Medical College" lastName="Albany Medical College" role="Counter Defendant"></party>
+ <party fullName="Albany Medical College" lastName="Albany Medical College" role="Plaintiff"></party>
+ <party fullName="Smiths Group, PLC" lastName="Smiths Group, PLC" role="Counter Claimant"></party>
+ <party fullName="Smiths Group, PLC" lastName="Smiths Group, PLC" role="Defendant"></party>
+ <party fullName="Smiths Medical ASD, Inc." lastName="Smiths Medical ASD, Inc." role="Counter Claimant"></party>
+ <party fullName="Smiths Medical ASD, Inc." lastName="Smiths Medical ASD, Inc." role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_13-cv-00108-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_13-cv-00108/USCOURTS-nynd-1_13-cv-00108-0/mods.xml">
+ <titleInfo>
+  <title>Albany Medical College v. Smiths Medical ASD, Inc.</title>
+  <subTitle>REPORT AND RECOMMENDATIONS re 27 Opening Claim Construction Brief by Smiths Medical ASD, Inc. filed by Smiths Medical ASD, Inc., 26 Opening Claim Construction Brief by Albany Medical College filed by Albany Medical College Objections to R&amp;R due by 7/28/2014 Case Review Deadline 7/30/2014. Signed by Magistrate Judge David E. Peebles on 7/9/14. (tab)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_13-cv-00108/pdf/USCOURTS-nynd-1_13-cv-00108-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b178a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_13-cv-00108/USCOURTS-nynd-1_13-cv-00108-0</identifier>
+ <identifier type="former granule identifier">nynd-1_13-cv-00108_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_13-cv-00108/USCOURTS-nynd-1_13-cv-00108-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_13-cv-00108/pdf/USCOURTS-nynd-1_13-cv-00108-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00108; Albany Medical College v. Smiths Medical ASD, Inc.; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_13-cv-00108-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-07-09</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS re 27 Opening Claim Construction Brief by Smiths Medical ASD, Inc. filed by Smiths Medical ASD, Inc., 26 Opening Claim Construction Brief by Albany Medical College filed by Albany Medical College Objections to R&amp;R due by 7/28/2014 Case Review Deadline 7/30/2014. Signed by Magistrate Judge David E. Peebles on 7/9/14. (tab)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_13-cv-00108-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_13-cv-00108/USCOURTS-nynd-1_13-cv-00108-1/mods.xml">
+ <titleInfo>
+  <title>Albany Medical College v. Smiths Medical ASD, Inc.</title>
+  <subTitle>MEMORANDUM-DECISION and ORDER - That Magistrate Judge David E. Peebles&apos; July 9, 2014 40 Report and Recommendation is ADOPTED in its entirety; and it is further ORDERED that the following meanings shall be affixed to the patent claim terms in dispute: Disputed Term: A continuous circumferential notch extending outwardly in the first axial bore of the catheter hub. Construction: a continuous circumferential indentation in an edge or across an inner surface of the catheter hub extending outwardly in the first axial bore of the catheter hub Disputed Term: An outward extending notch in a catheter hub. Construction: an outward extending indentation in an edge or across an inner surface of the catheter hub Disputed Term: Wherein the notch is a continuous circumferential notch Construction: a continuous circumferential indentation in an edge or across an inner surface of the catheter hub Disputed Term: A notch extending outwardly in the first axial bore of the catheter hub Construction:an indentation in an edge or across an inner surface of the catheter hub extending outwardly in the first axial bore of the catheter hub Disputed Term: An outward extending notch in a catheter hub Construction:an outward extending indentation in an edge or across an inner surface of the catheter hub Disputed Term: A notch extending outwardly in said axial bore Construction: an indentation in an edge or across an inner surface of the catheter hub extending outwardly in the first axial bore of the catheter hub Disputed Term: A notch extending outwardly in the axial bore Construction: an indentation in an edge or across an inner surface of the catheter hub extending outwardly in the first axial bore of the catheter hub Disputed Term: A notch therein (as used in both the 033 patent and the 206 patent) Construction: an indentation in an edge or across an inner surface of the catheter hub Disputed Term: A notch having a longitudinal length Construction: an indentation in an edge or across an inner surface of the catheter hub having a longitudinal length Disputed Term: Notch clip Construction: No further construction required Disputed Term: A notch clip joined with the needle cover Construction: No further construction required Disputed Term: The needle cover including a notch clip Construction: No further construction required Disputed Term: A needle cover having a notch clip (as used in both the 033 patent and the 206 patent) Construction: No further construction required Disputed Term: A notch clip disposed in a catheter hub Construction: No further construction required Disputed Term: A needle cover having a notch clip, said notch clip comprising a resilient material Construction: No further construction required Disputed Term: A needle cover having a notch clip and a first passageway extending therethrough for receiving said needle, said notch clip comprising a resilient material (as used in both the 033 patent and the 206 patent) Construction: No further construction required Disputed Term: A notch clip positionable to engage the notch of the catheter hub (as used in both the 206 patent and the 814 patent) Construction: No further construction required Disputed Term: Means for selectively maintaining a notch clip adjacent the needle Construction: Function: selectively maintaining a notch clip adjacent the needleStructures: notch, needle, needle cover, catheter hub Disputed Term: Resilient means cooperating with said needle for locking said needle cover to said catheter hub and for offering resistance from obstruction of said first passageway Construction: Function: cooperating with said needle for locking said needle cover to said catheter hub and offering resistance from obstruction of said first passagewayStructure: resilient notch clip. Signed by Chief Judge Gary L. Sharpe on 1/5/2015. (jel, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_13-cv-00108/pdf/USCOURTS-nynd-1_13-cv-00108-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b1789</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_13-cv-00108/USCOURTS-nynd-1_13-cv-00108-1</identifier>
+ <identifier type="former granule identifier">nynd-1_13-cv-00108_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_13-cv-00108/USCOURTS-nynd-1_13-cv-00108-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_13-cv-00108/pdf/USCOURTS-nynd-1_13-cv-00108-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00108; Albany Medical College v. Smiths Medical ASD, Inc.; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_13-cv-00108-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM-DECISION and ORDER - That Magistrate Judge David E. Peebles&apos; July 9, 2014 40 Report and Recommendation is ADOPTED in its entirety; and it is further ORDERED that the following meanings shall be affixed to the patent claim terms in dispute: Disputed Term: A continuous circumferential notch extending outwardly in the first axial bore of the catheter hub. Construction: a continuous circumferential indentation in an edge or across an inner surface of the catheter hub extending outwardly in the first axial bore of the catheter hub Disputed Term: An outward extending notch in a catheter hub. Construction: an outward extending indentation in an edge or across an inner surface of the catheter hub Disputed Term: Wherein the notch is a continuous circumferential notch Construction: a continuous circumferential indentation in an edge or across an inner surface of the catheter hub Disputed Term: A notch extending outwardly in the first axial bore of the catheter hub Construction:an indentation in an edge or across an inner surface of the catheter hub extending outwardly in the first axial bore of the catheter hub Disputed Term: An outward extending notch in a catheter hub Construction:an outward extending indentation in an edge or across an inner surface of the catheter hub Disputed Term: A notch extending outwardly in said axial bore Construction: an indentation in an edge or across an inner surface of the catheter hub extending outwardly in the first axial bore of the catheter hub Disputed Term: A notch extending outwardly in the axial bore Construction: an indentation in an edge or across an inner surface of the catheter hub extending outwardly in the first axial bore of the catheter hub Disputed Term: A notch therein (as used in both the 033 patent and the 206 patent) Construction: an indentation in an edge or across an inner surface of the catheter hub Disputed Term: A notch having a longitudinal length Construction: an indentation in an edge or across an inner surface of the catheter hub having a longitudinal length Disputed Term: Notch clip Construction: No further construction required Disputed Term: A notch clip joined with the needle cover Construction: No further construction required Disputed Term: The needle cover including a notch clip Construction: No further construction required Disputed Term: A needle cover having a notch clip (as used in both the 033 patent and the 206 patent) Construction: No further construction required Disputed Term: A notch clip disposed in a catheter hub Construction: No further construction required Disputed Term: A needle cover having a notch clip, said notch clip comprising a resilient material Construction: No further construction required Disputed Term: A needle cover having a notch clip and a first passageway extending therethrough for receiving said needle, said notch clip comprising a resilient material (as used in both the 033 patent and the 206 patent) Construction: No further construction required Disputed Term: A notch clip positionable to engage the notch of the catheter hub (as used in both the 206 patent and the 814 patent) Construction: No further construction required Disputed Term: Means for selectively maintaining a notch clip adjacent the needle Construction: Function: selectively maintaining a notch clip adjacent the needleStructures: notch, needle, needle cover, catheter hub Disputed Term: Resilient means cooperating with said needle for locking said needle cover to said catheter hub and for offering resistance from obstruction of said first passageway Construction: Function: cooperating with said needle for locking said needle cover to said catheter hub and offering resistance from obstruction of said first passagewayStructure: resilient notch clip. Signed by Chief Judge Gary L. Sharpe on 1/5/2015. (jel, )</docketText>
+</extension>
+</relatedItem>
+</mods>

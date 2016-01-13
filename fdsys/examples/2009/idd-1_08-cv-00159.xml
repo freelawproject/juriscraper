@@ -1,0 +1,315 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180fd575e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00159</identifier>
+<identifier type="local">P0b002ee180fd575e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-1_08-cv-00159</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_08-cv-00159</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:08-cv-00159</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="Does 1 thru 200" lastName="Does 1 thru 200" role="Defendant"></party>
+ <party fullName="Does 1-800" lastName="Does 1-800" role="Plaintiff"></party>
+ <party firstName="Deborah" fullName="Deborah J Dollar Douglas" lastName="Dollar Douglas" middleName="J" role="Plaintiff"></party>
+ <party firstName="Lisa" fullName="Lisa R Dollar Shinaver" lastName="Dollar Shinaver" middleName="R" role="Plaintiff"></party>
+ <party firstName="Elizabeth" fullName="Elizabeth G Dollar Wiley" lastName="Dollar Wiley" middleName="G" role="Plaintiff"></party>
+ <party fullName="Dry Creek Rancheria Band of Pomo Indians" lastName="Dry Creek Rancheria Band of Pomo Indians" role="Defendant"></party>
+ <party firstName="Harvey" fullName="Harvey Hopkins" lastName="Hopkins" role="Defendant"></party>
+ <party firstName="Gabriel" fullName="Gabriel Naverez" lastName="Naverez" role="Defendant"></party>
+ <party firstName="Betty" fullName="Betty Jean Parker Arterberry" lastName="Parker Arterberry" middleName="Jean" role="Defendant"></party>
+ <party firstName="Augusto" fullName="Augusto Pena" lastName="Pena" role="Defendant"></party>
+ <party firstName="Margie" fullName="Margie Rojes" lastName="Rojes" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Dollar Douglas et al v. Dry Creek Rancheria Band of Pomo Indians et al</title>
+ <partNumber>1:08-cv-00159</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00159/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-00159;08-159</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Boise - Southern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Does 1 thru 200</displayForm>
+ <namePart type="family">Does 1 thru 200</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Does 1-800</displayForm>
+ <namePart type="family">Does 1-800</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Deborah J Dollar Douglas</displayForm>
+ <namePart type="family">Dollar Douglas</namePart>
+ <namePart type="given">Deborah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lisa R Dollar Shinaver</displayForm>
+ <namePart type="family">Dollar Shinaver</namePart>
+ <namePart type="given">Lisa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Elizabeth G Dollar Wiley</displayForm>
+ <namePart type="family">Dollar Wiley</namePart>
+ <namePart type="given">Elizabeth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dry Creek Rancheria Band of Pomo Indians</displayForm>
+ <namePart type="family">Dry Creek Rancheria Band of Pomo Indians</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harvey Hopkins</displayForm>
+ <namePart type="family">Hopkins</namePart>
+ <namePart type="given">Harvey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gabriel Naverez</displayForm>
+ <namePart type="family">Naverez</namePart>
+ <namePart type="given">Gabriel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Betty Jean Parker Arterberry</displayForm>
+ <namePart type="family">Parker Arterberry</namePart>
+ <namePart type="given">Betty</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Augusto Pena</displayForm>
+ <namePart type="family">Pena</namePart>
+ <namePart type="given">Augusto</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Margie Rojes</displayForm>
+ <namePart type="family">Rojes</namePart>
+ <namePart type="given">Margie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_08-cv-00159</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:08-cv-00159</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="Does 1 thru 200" lastName="Does 1 thru 200" role="Defendant"></party>
+ <party fullName="Does 1-800" lastName="Does 1-800" role="Plaintiff"></party>
+ <party firstName="Deborah" fullName="Deborah J Dollar Douglas" lastName="Dollar Douglas" middleName="J" role="Plaintiff"></party>
+ <party firstName="Lisa" fullName="Lisa R Dollar Shinaver" lastName="Dollar Shinaver" middleName="R" role="Plaintiff"></party>
+ <party firstName="Elizabeth" fullName="Elizabeth G Dollar Wiley" lastName="Dollar Wiley" middleName="G" role="Plaintiff"></party>
+ <party fullName="Dry Creek Rancheria Band of Pomo Indians" lastName="Dry Creek Rancheria Band of Pomo Indians" role="Defendant"></party>
+ <party firstName="Harvey" fullName="Harvey Hopkins" lastName="Hopkins" role="Defendant"></party>
+ <party firstName="Gabriel" fullName="Gabriel Naverez" lastName="Naverez" role="Defendant"></party>
+ <party firstName="Betty" fullName="Betty Jean Parker Arterberry" lastName="Parker Arterberry" middleName="Jean" role="Defendant"></party>
+ <party firstName="Augusto" fullName="Augusto Pena" lastName="Pena" role="Defendant"></party>
+ <party firstName="Margie" fullName="Margie Rojes" lastName="Rojes" role="Defendant"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-cv-00159-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00159/USCOURTS-idd-1_08-cv-00159-0/mods.xml">
+ <titleInfo>
+  <title>Dollar Douglas et al v. Dry Creek Rancheria Band of Pomo Indians et al</title>
+  <subTitle>ORDER AND REPORT AND RECOMMENDATIONS That Plaintiff&apos;s 20 MOTION for Default Judgment as to filed by Deborah J Dollar Douglas should be denied as moot ( Objections to R&amp;R due by 10/23/2008). It is hereby ordered that Defendants&apos; 40 Unopposed MOTION for Protective Order and for Order Staying Discovery Pending Resolution of Defendants&apos; Motion to Dismiss is GRANTED. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-cv-00159-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fe0b97</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00159/USCOURTS-idd-1_08-cv-00159-0</identifier>
+ <identifier type="former granule identifier">idd-1_08-cv-00159_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00159/USCOURTS-idd-1_08-cv-00159-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00159/pdf/USCOURTS-idd-1_08-cv-00159-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00159; Dollar Douglas et al v. Dry Creek Rancheria Band of Pomo Indians et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-cv-00159-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-10-03</dateIssued>
+  <docketText>ORDER AND REPORT AND RECOMMENDATIONS That Plaintiff&apos;s 20 MOTION for Default Judgment as to filed by Deborah J Dollar Douglas should be denied as moot ( Objections to R&amp;R due by 10/23/2008). It is hereby ordered that Defendants&apos; 40 Unopposed MOTION for Protective Order and for Order Staying Discovery Pending Resolution of Defendants&apos; Motion to Dismiss is GRANTED. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-cv-00159-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00159/USCOURTS-idd-1_08-cv-00159-1/mods.xml">
+ <titleInfo>
+  <title>Dollar Douglas et al v. Dry Creek Rancheria Band of Pomo Indians et al</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATIONS- Adopting in its entirety 41 Report and Recommendations. Therefore 20 MOTION for Default Judgment is Moot and 35 MOTION for Default Judgment is Denied. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-cv-00159-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fe0b99</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00159/USCOURTS-idd-1_08-cv-00159-1</identifier>
+ <identifier type="former granule identifier">idd-1_08-cv-00159_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00159/USCOURTS-idd-1_08-cv-00159-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00159/pdf/USCOURTS-idd-1_08-cv-00159-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00159; Dollar Douglas et al v. Dry Creek Rancheria Band of Pomo Indians et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-cv-00159-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-10-31</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATIONS- Adopting in its entirety 41 Report and Recommendations. Therefore 20 MOTION for Default Judgment is Moot and 35 MOTION for Default Judgment is Denied. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-cv-00159-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00159/USCOURTS-idd-1_08-cv-00159-2/mods.xml">
+ <titleInfo>
+  <title>Dollar Douglas et al v. Dry Creek Rancheria Band of Pomo Indians et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS that the 30 MOTION to Dismiss Plaintiffs&apos; Amended Complaint be granted. Objections to R&amp;R due by 11/21/2008. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-cv-00159-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fe0b96</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00159/USCOURTS-idd-1_08-cv-00159-2</identifier>
+ <identifier type="former granule identifier">idd-1_08-cv-00159_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00159/USCOURTS-idd-1_08-cv-00159-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00159/pdf/USCOURTS-idd-1_08-cv-00159-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00159; Dollar Douglas et al v. Dry Creek Rancheria Band of Pomo Indians et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-cv-00159-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-11-03</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS that the 30 MOTION to Dismiss Plaintiffs&apos; Amended Complaint be granted. Objections to R&amp;R due by 11/21/2008. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-cv-00159-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00159/USCOURTS-idd-1_08-cv-00159-3/mods.xml">
+ <titleInfo>
+  <title>Dollar Douglas et al v. Dry Creek Rancheria Band of Pomo Indians et al</title>
+  <subTitle>MEMORANDUM ORDER Adopting 44 Report and Recommendations, Granting 30 MOTION to Dismiss, Finding as Moot 46 MOTION to Withdraw filed by Deborah J Dollar Douglas, Denying 48 Second MOTION to Amend filed by Deborah J Dollar Douglas, Denying 42 MOTION for Preliminary Injunction filed by Deborah J Dollar Douglas. This matter is dismissed in its entirety. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-cv-00159-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180fe0b98</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00159/USCOURTS-idd-1_08-cv-00159-3</identifier>
+ <identifier type="former granule identifier">idd-1_08-cv-00159_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00159/USCOURTS-idd-1_08-cv-00159-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00159/pdf/USCOURTS-idd-1_08-cv-00159-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00159; Dollar Douglas et al v. Dry Creek Rancheria Band of Pomo Indians et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-cv-00159-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-29</dateIssued>
+  <docketText>MEMORANDUM ORDER Adopting 44 Report and Recommendations, Granting 30 MOTION to Dismiss, Finding as Moot 46 MOTION to Withdraw filed by Deborah J Dollar Douglas, Denying 48 Second MOTION to Amend filed by Deborah J Dollar Douglas, Denying 42 MOTION for Preliminary Injunction filed by Deborah J Dollar Douglas. This matter is dismissed in its entirety. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm)</docketText>
+</extension>
+</relatedItem>
+</mods>

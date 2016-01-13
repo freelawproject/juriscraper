@@ -1,0 +1,370 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18176fc2d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00220</identifier>
+<identifier type="local">P0b002ee18176fc2d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cr-00220</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00220</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00220</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Kathleen" fullName="Kathleen Peters" lastName="Peters" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Peters</title>
+ <partNumber>8:07-cr-00220</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00220/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:07-cr-00220;07-220</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kathleen Peters</displayForm>
+ <namePart type="family">Peters</namePart>
+ <namePart type="given">Kathleen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00220</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00220</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Kathleen" fullName="Kathleen Peters" lastName="Peters" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00220-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Kathleen Peters - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00220-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817cbfbb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-0</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00220_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00220/pdf/USCOURTS-ned-8_07-cr-00220-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00220; USA v. Peters; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00220-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-07-17</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Kathleen Peters - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00220-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters</title>
+  <subTitle>ORDER granting 13 Motion to Extend as to Kathleen Peters (1). Pretrial Motion Deadline set for 8/15/2007. The time between August 7, 2007 and August 15, 2007, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act Ordered by Magistrate Judge Thomas D. Thalken.(ADB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00220-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817cbfbe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-1</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00220_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00220/pdf/USCOURTS-ned-8_07-cr-00220-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00220; USA v. Peters; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00220-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-08-07</dateIssued>
+  <docketText>ORDER granting 13 Motion to Extend as to Kathleen Peters (1). Pretrial Motion Deadline set for 8/15/2007. The time between August 7, 2007 and August 15, 2007, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act Ordered by Magistrate Judge Thomas D. Thalken.(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00220-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters</title>
+  <subTitle>ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendant Kathleen Peters. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00220-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817cbfc1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-2</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00220_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00220/pdf/USCOURTS-ned-8_07-cr-00220-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00220; USA v. Peters; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00220-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-09-04</dateIssued>
+  <docketText>ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendant Kathleen Peters. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00220-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters</title>
+  <subTitle>ORDER on the court&apos;s own motion. The U.S. Pretiral Services office for the district shall pay for one night&apos;s lodging for the dfendant for the night of September 27, 2007 at CH; the Clerk shall immediately deliver a copy of this Order to U.S. Pretrial Services as to defendant Kathleen Peters. Ordered by Judge Laurie Smith Camp.(MKR) Copy hand-delivered to Pretrial Services</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00220-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817cbfbc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-3</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00220_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00220/pdf/USCOURTS-ned-8_07-cr-00220-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00220; USA v. Peters; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00220-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-09-27</dateIssued>
+  <docketText>ORDER on the court&apos;s own motion. The U.S. Pretiral Services office for the district shall pay for one night&apos;s lodging for the dfendant for the night of September 27, 2007 at CH; the Clerk shall immediately deliver a copy of this Order to U.S. Pretrial Services as to defendant Kathleen Peters. Ordered by Judge Laurie Smith Camp.(MKR) Copy hand-delivered to Pretrial Services</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00220-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters</title>
+  <subTitle>ORDER FOR NONCUSTODIAL TRANSPORATION- The defendant&apos;s motion for mileage 26 is granted; The U.S. Marshal shall reimburse the Defendant pursuant to 18 U.S.C. 4286 for mileage from Omaha, Nebraska to Bayard, Nebraska on September 28, 2007; The Clerk shall provide a copy of this Order to the U.S. Marshal as to defendant Kathleen Peters. Ordered by Judge Laurie Smith Camp.(MKR)1 cert copy to USM</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00220-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817cbfba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-4</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00220_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00220/pdf/USCOURTS-ned-8_07-cr-00220-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00220; USA v. Peters; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00220-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-09-28</dateIssued>
+  <docketText>ORDER FOR NONCUSTODIAL TRANSPORATION- The defendant&apos;s motion for mileage 26 is granted; The U.S. Marshal shall reimburse the Defendant pursuant to 18 U.S.C. 4286 for mileage from Omaha, Nebraska to Bayard, Nebraska on September 28, 2007; The Clerk shall provide a copy of this Order to the U.S. Marshal as to defendant Kathleen Peters. Ordered by Judge Laurie Smith Camp.(MKR)1 cert copy to USM</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00220-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters</title>
+  <subTitle>ORDER granting 30 Motion to Extend as to Kathleen Peters (1). The defendant shall submit sentencing motions and supporting briefs by 12/14/07. Ordered by Judge Laurie Smith Camp. (JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00220-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817cbfc0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-5</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00220_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00220/pdf/USCOURTS-ned-8_07-cr-00220-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00220; USA v. Peters; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00220-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-11-26</dateIssued>
+  <docketText>ORDER granting 30 Motion to Extend as to Kathleen Peters (1). The defendant shall submit sentencing motions and supporting briefs by 12/14/07. Ordered by Judge Laurie Smith Camp. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00220-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Kathleen Peters. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00220-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817cbfbd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-6</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00220_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00220/pdf/USCOURTS-ned-8_07-cr-00220-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00220; USA v. Peters; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00220-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-12-10</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Kathleen Peters. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00220-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters</title>
+  <subTitle>ORDER granting the defendant&apos;s oral motion; that the U.S. Marshals shall provide reimbursement for her bus ticket from Omaha, Nebraska to Denver, Colorado and subsistence for Defendant for January 14, 2008 as to defendant Kathleen Peters. Ordered by Judge Laurie Smith Camp. (1 Certified copy to USM)(MKR)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00220-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817cbfc2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-7</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00220_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00220/pdf/USCOURTS-ned-8_07-cr-00220-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00220; USA v. Peters; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00220-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-01-14</dateIssued>
+  <docketText>ORDER granting the defendant&apos;s oral motion; that the U.S. Marshals shall provide reimbursement for her bus ticket from Omaha, Nebraska to Denver, Colorado and subsistence for Defendant for January 14, 2008 as to defendant Kathleen Peters. Ordered by Judge Laurie Smith Camp. (1 Certified copy to USM)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00220-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Peters</title>
+  <subTitle>JUDGMENT as to Kathleen Peters (1), Defendant plead guilty to Count I of the Indictment and is committed to the Bureau of Prisons for 6 months; 3 years supervised release with special conditions; $100 special assessment (remitted); $62,609.00 restitution; Count II of the Indictment is dismissed on the motion of the United States as to this defendant only; defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons no earlier than March 14, 2008 by 2:00 p.m.; Criminal Case Terminated as to defendant Kathleen Peters Ordered by Judge Laurie Smith Camp. (4 certified copies to USM)(CJP)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00220-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817cbfbf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-8</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00220_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00220/USCOURTS-ned-8_07-cr-00220-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00220/pdf/USCOURTS-ned-8_07-cr-00220-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00220; USA v. Peters; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00220-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-01-16</dateIssued>
+  <docketText>JUDGMENT as to Kathleen Peters (1), Defendant plead guilty to Count I of the Indictment and is committed to the Bureau of Prisons for 6 months; 3 years supervised release with special conditions; $100 special assessment (remitted); $62,609.00 restitution; Count II of the Indictment is dismissed on the motion of the United States as to this defendant only; defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons no earlier than March 14, 2008 by 2:00 p.m.; Criminal Case Terminated as to defendant Kathleen Peters Ordered by Judge Laurie Smith Camp. (4 certified copies to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,239 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181726e12">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00431</identifier>
+<identifier type="local">P0b002ee181726e12</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_02-cr-00431</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_02-cr-00431</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:02-cr-00431</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="Catman" lastName="Catman" role="Defendant"></party>
+ <party firstName="Carlos" fullName="Carlos Taylor" lastName="Taylor" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Taylor</title>
+ <partNumber>8:02-cr-00431</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00431/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:02-cr-00431;02-431</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Catman</displayForm>
+ <namePart type="family">Catman</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carlos Taylor</displayForm>
+ <namePart type="family">Taylor</namePart>
+ <namePart type="given">Carlos</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_02-cr-00431</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:02-cr-00431</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="Catman" lastName="Catman" role="Defendant"></party>
+ <party firstName="Carlos" fullName="Carlos Taylor" lastName="Taylor" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00431-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00431/USCOURTS-ned-8_02-cr-00431-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Taylor</title>
+  <subTitle>ORDER - The government&apos;s motion for reduction of sentence 41 is granted.Defendant shall be committed to the custody of the Bureau of Prisons for aterm of eighty (80) months. Defendant is to be given credit for time previously served under theprevious Judgment and Committal Order, which was filed on July 14, 2003 32. All other terms and conditions of the Judgment and Committal Order filed onJuly 14, 2003, remain in full force and effect, as to defendant Carlos Taylor. Signed by Judge Lyle E. Strom on 4/28/2005. 5 certified copies USM (JAE, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-04-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00431-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a74d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00431/USCOURTS-ned-8_02-cr-00431-0</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00431_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00431/USCOURTS-ned-8_02-cr-00431-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00431/pdf/USCOURTS-ned-8_02-cr-00431-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00431; USA v. Taylor; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00431-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-04-28</dateIssued>
+  <docketText>ORDER - The government&apos;s motion for reduction of sentence 41 is granted.Defendant shall be committed to the custody of the Bureau of Prisons for aterm of eighty (80) months. Defendant is to be given credit for time previously served under theprevious Judgment and Committal Order, which was filed on July 14, 2003 32. All other terms and conditions of the Judgment and Committal Order filed onJuly 14, 2003, remain in full force and effect, as to defendant Carlos Taylor. Signed by Judge Lyle E. Strom on 4/28/2005. 5 certified copies USM (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00431-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00431/USCOURTS-ned-8_02-cr-00431-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Taylor</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Carlos Taylor - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00431-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a74c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00431/USCOURTS-ned-8_02-cr-00431-1</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00431_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00431/USCOURTS-ned-8_02-cr-00431-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00431/pdf/USCOURTS-ned-8_02-cr-00431-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00431; USA v. Taylor; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00431-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-06-14</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Carlos Taylor - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00431-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00431/USCOURTS-ned-8_02-cr-00431-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Taylor</title>
+  <subTitle>ORDER granting 60 motion to continue - PETITION FOR OFFENDER UNDER SUPERVISION - Summons Issued 49, is set for hearing as to Carlos Taylor (1) - Violation of Supervised Release Hearing set for 10/14/2010 at 10:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00431-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a7a7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00431/USCOURTS-ned-8_02-cr-00431-2</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00431_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00431/USCOURTS-ned-8_02-cr-00431-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00431/pdf/USCOURTS-ned-8_02-cr-00431-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00431; USA v. Taylor; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00431-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-08-17</dateIssued>
+  <docketText>ORDER granting 60 motion to continue - PETITION FOR OFFENDER UNDER SUPERVISION - Summons Issued 49, is set for hearing as to Carlos Taylor (1) - Violation of Supervised Release Hearing set for 10/14/2010 at 10:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00431-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00431/USCOURTS-ned-8_02-cr-00431-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Taylor</title>
+  <subTitle>ORDER - Defendant shall complete his current treatment program; Upon completion of the defendants current treatment program, the Petition for Warrant for Offender Under Supervision will be dismissed and defendant will be placed back on supervised release under the same terms and conditions as previously released as to defendant Carlos Taylor. Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM)(MKR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00431-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a74e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00431/USCOURTS-ned-8_02-cr-00431-3</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00431_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00431/USCOURTS-ned-8_02-cr-00431-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00431/pdf/USCOURTS-ned-8_02-cr-00431-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00431; USA v. Taylor; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00431-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-01-04</dateIssued>
+  <docketText>ORDER - Defendant shall complete his current treatment program; Upon completion of the defendants current treatment program, the Petition for Warrant for Offender Under Supervision will be dismissed and defendant will be placed back on supervised release under the same terms and conditions as previously released as to defendant Carlos Taylor. Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM)(MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

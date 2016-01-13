@@ -1,0 +1,1159 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18455a23e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-04-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-04-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070</identifier>
+<identifier type="local">P0b002ee18455a23e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-04-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-04-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_12-cr-00070</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_12-cr-00070</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:12-cr-00070</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="A-Rod" lastName="A-Rod" role="Defendant"></party>
+ <party fullName="Baby Boy" lastName="Baby Boy" role="Defendant"></party>
+ <party firstName="Alex" fullName="Alex Brablec" lastName="Brablec" role="Defendant"></party>
+ <party firstName="Miguel" fullName="Miguel Adrian Diaz" lastName="Diaz" middleName="Adrian" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Drews" lastName="Drews" role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Rolando Flores" lastName="Flores" middleName="Rolando" role="Defendant"></party>
+ <party fullName="Memo" lastName="Memo" role="Defendant"></party>
+ <party firstName="Israel" fullName="Israel Mendoza" lastName="Mendoza" role="Defendant"></party>
+ <party fullName="Mike" lastName="Mike" role="Defendant"></party>
+ <party firstName="David" fullName="David Monarrez" lastName="Monarrez" role="Defendant"></party>
+ <party firstName="Guillermo" fullName="Guillermo Monarrez" lastName="Monarrez" role="Defendant"></party>
+ <party firstName="Yajaira" fullName="Yajaira Monarrez-Zendejas" lastName="Monarrez-Zendejas" role="Defendant"></party>
+ <party firstName="Alberto" fullName="Alberto Rodriguez-Ruiz" lastName="Rodriguez-Ruiz" role="Defendant"></party>
+ <party fullName="Spooky" lastName="Spooky" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Monarrez et al</title>
+ <partNumber>8:12-cr-00070</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:12-cr-00070;12-070</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>A-Rod</displayForm>
+ <namePart type="family">A-Rod</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Baby Boy</displayForm>
+ <namePart type="family">Baby Boy</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alex Brablec</displayForm>
+ <namePart type="family">Brablec</namePart>
+ <namePart type="given">Alex</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Miguel Adrian Diaz</displayForm>
+ <namePart type="family">Diaz</namePart>
+ <namePart type="given">Miguel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Drews</displayForm>
+ <namePart type="family">Drews</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jorge Rolando Flores</displayForm>
+ <namePart type="family">Flores</namePart>
+ <namePart type="given">Jorge</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Memo</displayForm>
+ <namePart type="family">Memo</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Israel Mendoza</displayForm>
+ <namePart type="family">Mendoza</namePart>
+ <namePart type="given">Israel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mike</displayForm>
+ <namePart type="family">Mike</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Monarrez</displayForm>
+ <namePart type="family">Monarrez</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Guillermo Monarrez</displayForm>
+ <namePart type="family">Monarrez</namePart>
+ <namePart type="given">Guillermo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Yajaira Monarrez-Zendejas</displayForm>
+ <namePart type="family">Monarrez-Zendejas</namePart>
+ <namePart type="given">Yajaira</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alberto Rodriguez-Ruiz</displayForm>
+ <namePart type="family">Rodriguez-Ruiz</namePart>
+ <namePart type="given">Alberto</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Spooky</displayForm>
+ <namePart type="family">Spooky</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_12-cr-00070</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:12-cr-00070</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="A-Rod" lastName="A-Rod" role="Defendant"></party>
+ <party fullName="Baby Boy" lastName="Baby Boy" role="Defendant"></party>
+ <party firstName="Alex" fullName="Alex Brablec" lastName="Brablec" role="Defendant"></party>
+ <party firstName="Miguel" fullName="Miguel Adrian Diaz" lastName="Diaz" middleName="Adrian" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Drews" lastName="Drews" role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Rolando Flores" lastName="Flores" middleName="Rolando" role="Defendant"></party>
+ <party fullName="Memo" lastName="Memo" role="Defendant"></party>
+ <party firstName="Israel" fullName="Israel Mendoza" lastName="Mendoza" role="Defendant"></party>
+ <party fullName="Mike" lastName="Mike" role="Defendant"></party>
+ <party firstName="David" fullName="David Monarrez" lastName="Monarrez" role="Defendant"></party>
+ <party firstName="Guillermo" fullName="Guillermo Monarrez" lastName="Monarrez" role="Defendant"></party>
+ <party firstName="Yajaira" fullName="Yajaira Monarrez-Zendejas" lastName="Monarrez-Zendejas" role="Defendant"></party>
+ <party firstName="Alberto" fullName="Alberto Rodriguez-Ruiz" lastName="Rodriguez-Ruiz" role="Defendant"></party>
+ <party fullName="Spooky" lastName="Spooky" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Guillermo Monarrez - Mark A. Weber is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184567317</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-0</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-03-26</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Guillermo Monarrez - Mark A. Weber is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Miguel Adrian Diaz - James J. Regan is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18456739a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-1</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-03-26</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Miguel Adrian Diaz - James J. Regan is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Yajaira Monarrez-Zendejas - Michael J. Tasset is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673a5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-2</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-03-26</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Yajaira Monarrez-Zendejas - Michael J. Tasset is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Daniel Drews - Kevin A. Ryan is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184567399</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-3</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-03-26</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Daniel Drews - Kevin A. Ryan is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Jorge Rolando Flores - David M. O&apos;Neill is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18456731b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-4</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-03-26</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Jorge Rolando Flores - David M. O&apos;Neill is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Alex Brablec - Michael D. Nelson is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673ae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-5</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-03-26</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Alex Brablec - Michael D. Nelson is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Daniel Drews. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184567318</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-6</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-03-26</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Daniel Drews. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Israel Mendoza. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673a9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-7</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-03-26</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Israel Mendoza. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Israel Mendoza - Julie A. Frank is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184567316</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-8</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-03-27</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Israel Mendoza - Julie A. Frank is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender for the District of Nebraska is appointed as counsel as to defendant David Monarrez. Ordered by Magistrate Judge F.A. Gossett. (SLP)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673a3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-9</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-04-02</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender for the District of Nebraska is appointed as counsel as to defendant David Monarrez. Ordered by Magistrate Judge F.A. Gossett. (SLP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER of ABEYANCE as to defendant David Monarrez. The U.S. Marshal for the District of Nebraska is directed to place a detainer with the correctional officer having custody of the defendant. Ordered by Magistrate Judge F.A. Gossett. (SLP)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18456739f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-10</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-04-02</dateIssued>
+  <docketText>ORDER of ABEYANCE as to defendant David Monarrez. The U.S. Marshal for the District of Nebraska is directed to place a detainer with the correctional officer having custody of the defendant. Ordered by Magistrate Judge F.A. Gossett. (SLP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER granting 99 Motion to Extend as to Yajaira Monarrez-Zendejas (4). Pretrial Motion Deadline set for 4/30/2012. The additional time arising as a result of the granting of the motion, i.e., the time between April 13, 2012, and April 30, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184567319</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-11</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-04-13</dateIssued>
+  <docketText>ORDER granting 99 Motion to Extend as to Yajaira Monarrez-Zendejas (4). Pretrial Motion Deadline set for 4/30/2012. The additional time arising as a result of the granting of the motion, i.e., the time between April 13, 2012, and April 30, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER as to Guillermo Monarrez, Jorge Rolando Flores, Alberto Rodriguez-Ruiz, and Miguel Adrian Diaz granting 101, 102, 103, and 104 Motion for an extension of time to file pretrial motions. The time between todays date and the anticipated hearing/trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Pretrial Motion Deadline set for 4/30/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)ORDER as to Guillermo Monarrez, Jorge Rolando Flores, Alberto Rodriguez-Ruiz, and Miguel Adrian Diaz granting 101, 102, 103, and 104 Motion for an extension of time to file pretrial motions. The time between todays date and the anticipated hearing/trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Pretrial Motion Deadline set for 4/30/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)ORDER as to Guillermo Monarrez, Jorge Rolando Flores, Alberto Rodriguez-Ruiz, and Miguel Adrian Diaz granting 101, 102, 103, and 104 Motion for an extension of time to file pretrial motions. The time between todays date and the anticipated hearing/trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Pretrial Motion Deadline set for 4/30/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)ORDER as to Guillermo Monarrez, Jorge Rolando Flores, Alberto Rodriguez-Ruiz, and Miguel Adrian Diaz granting 101, 102, 103, and 104 Motion for an extension of time to file pretrial motions. The time between todays date and the anticipated hearing/trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Pretrial Motion Deadline set for 4/30/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673ad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-12</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-04-16</dateIssued>
+  <docketText>ORDER as to Guillermo Monarrez, Jorge Rolando Flores, Alberto Rodriguez-Ruiz, and Miguel Adrian Diaz granting 101, 102, 103, and 104 Motion for an extension of time to file pretrial motions. The time between todays date and the anticipated hearing/trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Pretrial Motion Deadline set for 4/30/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)ORDER as to Guillermo Monarrez, Jorge Rolando Flores, Alberto Rodriguez-Ruiz, and Miguel Adrian Diaz granting 101, 102, 103, and 104 Motion for an extension of time to file pretrial motions. The time between todays date and the anticipated hearing/trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Pretrial Motion Deadline set for 4/30/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)ORDER as to Guillermo Monarrez, Jorge Rolando Flores, Alberto Rodriguez-Ruiz, and Miguel Adrian Diaz granting 101, 102, 103, and 104 Motion for an extension of time to file pretrial motions. The time between todays date and the anticipated hearing/trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Pretrial Motion Deadline set for 4/30/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)ORDER as to Guillermo Monarrez, Jorge Rolando Flores, Alberto Rodriguez-Ruiz, and Miguel Adrian Diaz granting 101, 102, 103, and 104 Motion for an extension of time to file pretrial motions. The time between todays date and the anticipated hearing/trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Pretrial Motion Deadline set for 4/30/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER granting 106 Motion to Extend as to Israel Mendoza (5). Pretrial Motion Deadline set for 4/30/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673a6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-13</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2012-04-17</dateIssued>
+  <docketText>ORDER granting 106 Motion to Extend as to Israel Mendoza (5). Pretrial Motion Deadline set for 4/30/2012. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER granting 109 Motion to Extend as to David Monarrez (1) - Pretrial Motion Deadline set for 6/22/2012. The additional time arising as a result of the granting of the motion, i.e., the time between April 24, 2012, and June 22, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18456739b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-14</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-04-24</dateIssued>
+  <docketText>ORDER granting 109 Motion to Extend as to David Monarrez (1) - Pretrial Motion Deadline set for 6/22/2012. The additional time arising as a result of the granting of the motion, i.e., the time between April 24, 2012, and June 22, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER granting 112 Motion to Extend as to Yajaira Monarrez-Zendejas (4) - Pretrial Motion Deadline set for 6/22/2012. The additional time arising as a result of the granting of the motion, i.e., the time between April 26, 2012, and June 22, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673ac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-15</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-04-26</dateIssued>
+  <docketText>ORDER granting 112 Motion to Extend as to Yajaira Monarrez-Zendejas (4) - Pretrial Motion Deadline set for 6/22/2012. The additional time arising as a result of the granting of the motion, i.e., the time between April 26, 2012, and June 22, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER - Defendant Monarrez&apos;s and Rodriguez-Ruiz&apos;s motions for an extension of time (Filing Nos. 115 and 119) are granted. Monarrez and Rodriguez-Ruiz are given until on or before June 22, 2012, in which to file pretrial motions pursuant to the progression order. The ends of justice have been served by granting such motions and outweigh the interests of the public and the defendants in a speedy trial. The additional time arising as a result of the granting of the motions, i.e., the time between April 27, 2012, and June 22, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Guillermo Monarrez and Alberto Rodriguez-Ruiz (8). Ordered by Magistrate Judge Thomas D. Thalken. (AOA)ORDER - Defendant Monarrez&apos;s and Rodriguez-Ruiz&apos;s motions for an extension of time (Filing Nos. 115 and 119) are granted. Monarrez and Rodriguez-Ruiz are given until on or before June 22, 2012, in which to file pretrial motions pursuant to the progression order. The ends of justice have been served by granting such motions and outweigh the interests of the public and the defendants in a speedy trial. The additional time arising as a result of the granting of the motions, i.e., the time between April 27, 2012, and June 22, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Guillermo Monarrez and Alberto Rodriguez-Ruiz (8). Ordered by Magistrate Judge Thomas D. Thalken. (AOA)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18456739e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-16</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2012-04-27</dateIssued>
+  <docketText>ORDER - Defendant Monarrez&apos;s and Rodriguez-Ruiz&apos;s motions for an extension of time (Filing Nos. 115 and 119) are granted. Monarrez and Rodriguez-Ruiz are given until on or before June 22, 2012, in which to file pretrial motions pursuant to the progression order. The ends of justice have been served by granting such motions and outweigh the interests of the public and the defendants in a speedy trial. The additional time arising as a result of the granting of the motions, i.e., the time between April 27, 2012, and June 22, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Guillermo Monarrez and Alberto Rodriguez-Ruiz (8). Ordered by Magistrate Judge Thomas D. Thalken. (AOA)ORDER - Defendant Monarrez&apos;s and Rodriguez-Ruiz&apos;s motions for an extension of time (Filing Nos. 115 and 119) are granted. Monarrez and Rodriguez-Ruiz are given until on or before June 22, 2012, in which to file pretrial motions pursuant to the progression order. The ends of justice have been served by granting such motions and outweigh the interests of the public and the defendants in a speedy trial. The additional time arising as a result of the granting of the motions, i.e., the time between April 27, 2012, and June 22, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Guillermo Monarrez and Alberto Rodriguez-Ruiz (8). Ordered by Magistrate Judge Thomas D. Thalken. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER granting 120 Motion to Extend as to Jorge Rolando Flores (7). Pretrial Motion Deadline set for 6/22/2012. The additional time arising as a result of the granting of the motion, i.e., the time between April 30, 2012, and June 22, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-17</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2012-04-30</dateIssued>
+  <docketText>ORDER granting 120 Motion to Extend as to Jorge Rolando Flores (7). Pretrial Motion Deadline set for 6/22/2012. The additional time arising as a result of the granting of the motion, i.e., the time between April 30, 2012, and June 22, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER regarding 140 Motion to Extend as to Guillermo Monarrez (2) - The motion (Filing No. 140) is held in abeyance pending compliance with NECrimR 12.1(a) and Paragraph 9 of the Progression Order. Absent compliance on or before July 2, 2012, the motion will be deemed withdrawn and termed on the docket. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673a1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-18</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2012-06-25</dateIssued>
+  <docketText>ORDER regarding 140 Motion to Extend as to Guillermo Monarrez (2) - The motion (Filing No. 140) is held in abeyance pending compliance with NECrimR 12.1(a) and Paragraph 9 of the Progression Order. Absent compliance on or before July 2, 2012, the motion will be deemed withdrawn and termed on the docket. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER regarding 141 Motion to Continue as to Jorge Rolando Flores (7) - The motion (Filing No. 141) is held in abeyance pending compliance with NECrimR 12.1(a) and Paragraph 9 of the Progression Order. Absent compliance on or before July 2, 2012, the motion will be deemed withdrawn and termed on the docket. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18456739d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-19</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2012-06-25</dateIssued>
+  <docketText>ORDER regarding 141 Motion to Continue as to Jorge Rolando Flores (7) - The motion (Filing No. 141) is held in abeyance pending compliance with NECrimR 12.1(a) and Paragraph 9 of the Progression Order. Absent compliance on or before July 2, 2012, the motion will be deemed withdrawn and termed on the docket. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER - Defendant Monarrez&apos;s motion for an extension of time (Filing No. 140) is granted. Monarrez is given until on or before July 23, 2012, in which to file pretrial motions pursuant to the progression order. The ends of justice have been served by granting such motion and outweigh the interests of the public and the defendant in a speedy trial. The additional time arising as a result of the granting of the motion, i.e., the time between June 29, 2012, and July 23, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Guillermo Monarrez (2). Ordered by Magistrate Judge Thomas D. Thalken. (AOA)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673aa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-20</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2012-06-29</dateIssued>
+  <docketText>ORDER - Defendant Monarrez&apos;s motion for an extension of time (Filing No. 140) is granted. Monarrez is given until on or before July 23, 2012, in which to file pretrial motions pursuant to the progression order. The ends of justice have been served by granting such motion and outweigh the interests of the public and the defendant in a speedy trial. The additional time arising as a result of the granting of the motion, i.e., the time between June 29, 2012, and July 23, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Guillermo Monarrez (2). Ordered by Magistrate Judge Thomas D. Thalken. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-21/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER - Defendant Flores&apos; motions for an extension of time (Filing Nos. 141 and 145) are granted. Flores is given until on or before July 23, 2012, in which to file pretrial motions pursuant to the progression order. The ends of justice have been served by granting such motions and outweigh the interests of the public and the defendant in a speedy trial. The additional time arising as a result of the granting of the motions, i.e., the time between June 29, 2012, and July 23, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Jorge Rolando Flores (7). Ordered by Magistrate Judge Thomas D. Thalken. (AOA)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673a8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-21</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2012-06-29</dateIssued>
+  <docketText>ORDER - Defendant Flores&apos; motions for an extension of time (Filing Nos. 141 and 145) are granted. Flores is given until on or before July 23, 2012, in which to file pretrial motions pursuant to the progression order. The ends of justice have been served by granting such motions and outweigh the interests of the public and the defendant in a speedy trial. The additional time arising as a result of the granting of the motions, i.e., the time between June 29, 2012, and July 23, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Jorge Rolando Flores (7). Ordered by Magistrate Judge Thomas D. Thalken. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-22/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER granting 228 Unopposed Motion to Continue Trial as to Israel Mendoza. Jury Trial for all defendants continued to 11/27/2012 at 9:00 AM in Courtroom 2, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Chief Judge Laurie Smith Camp. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. ( MLF, )ORDER granting 228 Unopposed Motion to Continue Trial as to Israel Mendoza. Jury Trial for all defendants continued to 11/27/2012 at 9:00 AM in Courtroom 2, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Chief Judge Laurie Smith Camp. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. ( MLF, )ORDER granting 228 Unopposed Motion to Continue Trial as to Israel Mendoza. Jury Trial for all defendants continued to 11/27/2012 at 9:00 AM in Courtroom 2, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Chief Judge Laurie Smith Camp. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. ( MLF, )ORDER granting 228 Unopposed Motion to Continue Trial as to Israel Mendoza. Jury Trial for all defendants continued to 11/27/2012 at 9:00 AM in Courtroom 2, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Chief Judge Laurie Smith Camp. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. ( MLF, )</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-22.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-22</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2012-09-18</dateIssued>
+  <docketText>ORDER granting 228 Unopposed Motion to Continue Trial as to Israel Mendoza. Jury Trial for all defendants continued to 11/27/2012 at 9:00 AM in Courtroom 2, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Chief Judge Laurie Smith Camp. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. ( MLF, )ORDER granting 228 Unopposed Motion to Continue Trial as to Israel Mendoza. Jury Trial for all defendants continued to 11/27/2012 at 9:00 AM in Courtroom 2, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Chief Judge Laurie Smith Camp. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. ( MLF, )ORDER granting 228 Unopposed Motion to Continue Trial as to Israel Mendoza. Jury Trial for all defendants continued to 11/27/2012 at 9:00 AM in Courtroom 2, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Chief Judge Laurie Smith Camp. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. ( MLF, )ORDER granting 228 Unopposed Motion to Continue Trial as to Israel Mendoza. Jury Trial for all defendants continued to 11/27/2012 at 9:00 AM in Courtroom 2, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Chief Judge Laurie Smith Camp. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. ( MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-23/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant Daniel Drews. Ordered by Chief Judge Laurie Smith Camp. (MHB)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-23.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673a2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-23</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2012-10-23</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant Daniel Drews. Ordered by Chief Judge Laurie Smith Camp. (MHB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-24/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant David Monarrez. Ordered by Chief Judge Laurie Smith Camp. (MHB)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-24.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-24</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2012-11-08</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant David Monarrez. Ordered by Chief Judge Laurie Smith Camp. (MHB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-25/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant Miguel Adrian Diaz. Ordered by Chief Judge Laurie Smith Camp. (MHB)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-25.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673a4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-25</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2012-11-08</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant Miguel Adrian Diaz. Ordered by Chief Judge Laurie Smith Camp. (MHB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-26/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>AMENDED TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant David Monarrez. Ordered by Chief Judge Laurie Smith Camp. (MHB)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-26.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673a7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-26</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2012-11-08</dateIssued>
+  <docketText>AMENDED TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant David Monarrez. Ordered by Chief Judge Laurie Smith Camp. (MHB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-27/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Revised Presentence Investigation Report as to Defendant Guillermo Monarrez. Ordered by Chief Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-27.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673a0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-27</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Revised Presentence Investigation Report as to Defendant Guillermo Monarrez. Ordered by Chief Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-28/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Revised Presentence Investigation Report as to Defendant Alex Brablec. Ordered by Chief Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-28.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184567315</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-28</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2013-01-07</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Revised Presentence Investigation Report as to Defendant Alex Brablec. Ordered by Chief Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-29/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Modified Presentence Investigation Report as to Defendant Israel Mendoza. Ordered by Chief Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-29.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18456731c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-29</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2013-02-15</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Modified Presentence Investigation Report as to Defendant Israel Mendoza. Ordered by Chief Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-30/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Revised Presentence Investigation Report as to Defendant Yajaira Monarrez-Zendejas. Ordered by Chief Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-30.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18456731a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-30</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2013-03-25</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Revised Presentence Investigation Report as to Defendant Yajaira Monarrez-Zendejas. Ordered by Chief Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-31/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>ORDER - The Petition for Action on Conditions of Pretrial Release (#375) is granted. The March 26, 2013 Order Setting Conditions of Release (#37), shall remain in full force as to defendant Yajaira Monarrez-Zendejas. Ordered by Magistrate Judge F.A. Gossett. (AOA)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-31.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18456739c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-31</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2013-04-03</dateIssued>
+  <docketText>ORDER - The Petition for Action on Conditions of Pretrial Release (#375) is granted. The March 26, 2013 Order Setting Conditions of Release (#37), shall remain in full force as to defendant Yajaira Monarrez-Zendejas. Ordered by Magistrate Judge F.A. Gossett. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00070-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-32/mods.xml">
+ <titleInfo>
+  <title>USA v. Monarrez et al</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Revised Presentence Investigation Report as to Defendant Alberto Rodriguez-Ruiz. Ordered by Chief Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00070-32.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1845673ab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-32</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00070_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00070/USCOURTS-ned-8_12-cr-00070-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00070/pdf/USCOURTS-ned-8_12-cr-00070-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00070; USA v. Monarrez et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00070-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2013-04-18</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Revised Presentence Investigation Report as to Defendant Alberto Rodriguez-Ruiz. Ordered by Chief Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+</mods>

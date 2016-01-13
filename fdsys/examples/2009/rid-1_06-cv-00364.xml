@@ -1,0 +1,297 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e89b27">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00364</identifier>
+<identifier type="local">P0b002ee180e89b27</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-rid-1_06-cv-00364</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_06-cv-00364</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:06-cv-00364</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <party firstName="Horace" fullName="Horace Castle" lastName="Castle" role="ThirdParty Defendant"></party>
+ <party fullName="International Longshoremen&apos;s Association, Local #1329" lastName="International Longshoremen&apos;s Association, Local #1329" role="ThirdParty Defendant"></party>
+ <party firstName="John" fullName="John Lopes" lastName="Lopes" role="ThirdParty Defendant"></party>
+ <party fullName="Manitowoc Cranes, Inc" lastName="Manitowoc Cranes, Inc" role="ThirdParty Defendant"></party>
+ <party fullName="Manitowoc Engineering Co. The Manitowac Company, Inc" lastName="Manitowoc Engineering Co. The Manitowac Company, Inc" role="Defendant"></party>
+ <party fullName="Metals Recycling, LLC" lastName="Metals Recycling, LLC" role="ThirdParty Defendant"></party>
+ <party firstName="William" fullName="William A. Rushworth, Sr" lastName="Rushworth, Sr" middleName="A." role="Plaintiff"></party>
+ <party fullName="Salah &amp; Pecci Leasing Company, Inc" lastName="Salah &amp; Pecci Leasing Company, Inc" role="Defendant"></party>
+ <party fullName="Salah &amp; Pecci Leasing Company, Inc" lastName="Salah &amp; Pecci Leasing Company, Inc" role="ThirdParty Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Rushworth, Sr. v. Manitowoc Engineering Co. The Manitowac Company, Inc.</title>
+ <partNumber>1:06-cv-00364</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00364/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:06-cv-00364;06-364</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Providence</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Horace Castle</displayForm>
+ <namePart type="family">Castle</namePart>
+ <namePart type="given">Horace</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>International Longshoremen&apos;s Association, Local #1329</displayForm>
+ <namePart type="family">International Longshoremen&apos;s Association, Local #1329</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Lopes</displayForm>
+ <namePart type="family">Lopes</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Manitowoc Cranes, Inc</displayForm>
+ <namePart type="family">Manitowoc Cranes, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Manitowoc Engineering Co. The Manitowac Company, Inc</displayForm>
+ <namePart type="family">Manitowoc Engineering Co. The Manitowac Company, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Metals Recycling, LLC</displayForm>
+ <namePart type="family">Metals Recycling, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William A. Rushworth, Sr</displayForm>
+ <namePart type="family">Rushworth, Sr</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Salah &amp; Pecci Leasing Company, Inc</displayForm>
+ <namePart type="family">Salah &amp; Pecci Leasing Company, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Salah &amp; Pecci Leasing Company, Inc</displayForm>
+ <namePart type="family">Salah &amp; Pecci Leasing Company, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_06-cv-00364</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:06-cv-00364</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <party firstName="Horace" fullName="Horace Castle" lastName="Castle" role="ThirdParty Defendant"></party>
+ <party fullName="International Longshoremen&apos;s Association, Local #1329" lastName="International Longshoremen&apos;s Association, Local #1329" role="ThirdParty Defendant"></party>
+ <party firstName="John" fullName="John Lopes" lastName="Lopes" role="ThirdParty Defendant"></party>
+ <party fullName="Manitowoc Cranes, Inc" lastName="Manitowoc Cranes, Inc" role="ThirdParty Defendant"></party>
+ <party fullName="Manitowoc Engineering Co. The Manitowac Company, Inc" lastName="Manitowoc Engineering Co. The Manitowac Company, Inc" role="Defendant"></party>
+ <party fullName="Metals Recycling, LLC" lastName="Metals Recycling, LLC" role="ThirdParty Defendant"></party>
+ <party firstName="William" fullName="William A. Rushworth, Sr" lastName="Rushworth, Sr" middleName="A." role="Plaintiff"></party>
+ <party fullName="Salah &amp; Pecci Leasing Company, Inc" lastName="Salah &amp; Pecci Leasing Company, Inc" role="Defendant"></party>
+ <party fullName="Salah &amp; Pecci Leasing Company, Inc" lastName="Salah &amp; Pecci Leasing Company, Inc" role="ThirdParty Plaintiff"></party>
+ <state>Rhode Island</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00364-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00364/USCOURTS-rid-1_06-cv-00364-0/mods.xml">
+ <titleInfo>
+  <title>Rushworth, Sr. v. Manitowoc Engineering Co. The Manitowac Company, Inc.</title>
+  <subTitle>CONSOLIDATION ORDER: By Order of the Court, CA06-364T and CA06-369T are hereby consolidated; Defendant&apos;s 12 Motion to Dismiss is hereby PASSED; and futher, counsel are directed to inform the Court of any progress in securing and scheduling a private mediation. So Ordered by Judge Ernest C. Torres on 3/22/07. (Jackson, Ryan)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00364-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e90469</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00364/USCOURTS-rid-1_06-cv-00364-0</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00364_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00364/USCOURTS-rid-1_06-cv-00364-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00364/pdf/USCOURTS-rid-1_06-cv-00364-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00364; Rushworth, Sr. v. Manitowoc Engineering Co. The Manitowac Company, Inc.; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00364-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-03-23</dateIssued>
+  <docketText>CONSOLIDATION ORDER: By Order of the Court, CA06-364T and CA06-369T are hereby consolidated; Defendant&apos;s 12 Motion to Dismiss is hereby PASSED; and futher, counsel are directed to inform the Court of any progress in securing and scheduling a private mediation. So Ordered by Judge Ernest C. Torres on 3/22/07. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00364-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00364/USCOURTS-rid-1_06-cv-00364-1/mods.xml">
+ <titleInfo>
+  <title>Rushworth, Sr. v. Manitowoc Engineering Co. The Manitowac Company, Inc.</title>
+  <subTitle>MEMORANDUM AND ORDER in case 1:06-cv-00364-T-DLM granting (57) Motion for Summary Judgment. So Ordered by Judge Ernest C. Torres on 11/24/08. Associated Cases: 1:06-cv-00364-T-DLM, 1:06-cv-00369-T-DLM(Jackson, Ryan)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00364-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e90466</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00364/USCOURTS-rid-1_06-cv-00364-1</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00364_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00364/USCOURTS-rid-1_06-cv-00364-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00364/pdf/USCOURTS-rid-1_06-cv-00364-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00364; Rushworth, Sr. v. Manitowoc Engineering Co. The Manitowac Company, Inc.; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00364-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-11-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER in case 1:06-cv-00364-T-DLM granting (57) Motion for Summary Judgment. So Ordered by Judge Ernest C. Torres on 11/24/08. Associated Cases: 1:06-cv-00364-T-DLM, 1:06-cv-00369-T-DLM(Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00364-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00364/USCOURTS-rid-1_06-cv-00364-2/mods.xml">
+ <titleInfo>
+  <title>Rushworth, Sr. v. Manitowoc Engineering Co. The Manitowac Company, Inc.</title>
+  <subTitle>CLARIFICATION OF MEMORANDUM AND ORDER GRANTING METALS RECYCLING, LLC&apos;S MOTION FOR SUMMARY JUDGMENT in case 1:06-cv-00364-T-DLM; granting (76) Motion to Clarify in case 1:06-cv-00369-T-DLM. So Ordered by Judge Ernest C. Torres on 1/27/09. Associated Cases: 1:06-cv-00364-T-DLM, 1:06-cv-00369-T-DLM(Jackson, Ryan)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00364-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e90468</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00364/USCOURTS-rid-1_06-cv-00364-2</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00364_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00364/USCOURTS-rid-1_06-cv-00364-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00364/pdf/USCOURTS-rid-1_06-cv-00364-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00364; Rushworth, Sr. v. Manitowoc Engineering Co. The Manitowac Company, Inc.; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00364-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-01-27</dateIssued>
+  <docketText>CLARIFICATION OF MEMORANDUM AND ORDER GRANTING METALS RECYCLING, LLC&apos;S MOTION FOR SUMMARY JUDGMENT in case 1:06-cv-00364-T-DLM; granting (76) Motion to Clarify in case 1:06-cv-00369-T-DLM. So Ordered by Judge Ernest C. Torres on 1/27/09. Associated Cases: 1:06-cv-00364-T-DLM, 1:06-cv-00369-T-DLM(Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_06-cv-00364-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00364/USCOURTS-rid-1_06-cv-00364-3/mods.xml">
+ <titleInfo>
+  <title>Rushworth, Sr. v. Manitowoc Engineering Co. The Manitowac Company, Inc.</title>
+  <subTitle>ORDER DENYING METALS RECYCLING, LLC&apos;S MOTION FOR ENTRY OF JUDGMENT: denying (81) Motion for Final Judgment in case 1:06-cv-00369-T-DLM. So Ordered by Judge Ernest C. Torres on 1/27/09. Associated Cases: 1:06-cv-00364-T-DLM, 1:06-cv-00369-T-DLM(Jackson, Ryan)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_06-cv-00364-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e90467</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00364/USCOURTS-rid-1_06-cv-00364-3</identifier>
+ <identifier type="former granule identifier">rid-1_06-cv-00364_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_06-cv-00364/USCOURTS-rid-1_06-cv-00364-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_06-cv-00364/pdf/USCOURTS-rid-1_06-cv-00364-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00364; Rushworth, Sr. v. Manitowoc Engineering Co. The Manitowac Company, Inc.; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_06-cv-00364-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-27</dateIssued>
+  <docketText>ORDER DENYING METALS RECYCLING, LLC&apos;S MOTION FOR ENTRY OF JUDGMENT: denying (81) Motion for Final Judgment in case 1:06-cv-00369-T-DLM. So Ordered by Judge Ernest C. Torres on 1/27/09. Associated Cases: 1:06-cv-00364-T-DLM, 1:06-cv-00369-T-DLM(Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+</mods>

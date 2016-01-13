@@ -1,0 +1,273 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a65ac">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03160</identifier>
+<identifier type="local">P0b002ee1817a65ac</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_08-cv-03160</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cv-03160</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cv-03160</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Chuoljock" fullName="Chuoljock Lia" lastName="Lia" role="Plaintiff"></party>
+ <party firstName="James" fullName="James Tap Lia" lastName="Lia" middleName="Tap" role="Plaintiff"></party>
+ <party fullName="Nebraska Department of Correctional Services" lastName="Nebraska Department of Correctional Services" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Lia et al v. Nebraska Department of Correctional Services</title>
+ <partNumber>4:08-cv-03160</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03160/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:08-cv-03160;08-3160</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Chuoljock Lia</displayForm>
+ <namePart type="family">Lia</namePart>
+ <namePart type="given">Chuoljock</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James Tap Lia</displayForm>
+ <namePart type="family">Lia</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Nebraska Department of Correctional Services</displayForm>
+ <namePart type="family">Nebraska Department of Correctional Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cv-03160</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cv-03160</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Chuoljock" fullName="Chuoljock Lia" lastName="Lia" role="Plaintiff"></party>
+ <party firstName="James" fullName="James Tap Lia" lastName="Lia" middleName="Tap" role="Plaintiff"></party>
+ <party fullName="Nebraska Department of Correctional Services" lastName="Nebraska Department of Correctional Services" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03160-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-0/mods.xml">
+ <titleInfo>
+  <title>Lia et al v. Nebraska Department of Correctional Services</title>
+  <subTitle>ORDER granting 2 Motion for Leave to Proceed in forma pauperis. Plaintiff shall pay an initial partial filing fee of $0.03 by September 15, 2008, unless an enlargement of time is granted in response to a written motion. If the initial partial filing fee is not received by the specified deadline, this caseis subject to dismissal. After payment of the initial partial filing fee, plaintiffs institution shall collect the additional monthly payments in the manner set forth in 28 U.S.C. § 1915(b)(2), quoted above, and shall forward those installments to the Court. The clerk of the court is directed to send a copy of this order to the appropriate official at plaintiffs institution. The clerk of the court is directed to set a pro se case management deadline in this case using the following text: September 15, 2008: initial partial filing fee payment due. Plaintiff shall keep the Court informed of his current address at all times, and all parties are bound by the Federal Rules of Civil Procedure and by the Courts Local Rules while this case is pending. Plaintiff shall review the Notice Regarding Summons Forms attached to this Order. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party and to plaintiff&apos;s institution as directed)(MKR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03160-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181855fbd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-0</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03160_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03160/pdf/USCOURTS-ned-4_08-cv-03160-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03160; Lia et al v. Nebraska Department of Correctional Services; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03160-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-08-15</dateIssued>
+  <docketText>ORDER granting 2 Motion for Leave to Proceed in forma pauperis. Plaintiff shall pay an initial partial filing fee of $0.03 by September 15, 2008, unless an enlargement of time is granted in response to a written motion. If the initial partial filing fee is not received by the specified deadline, this caseis subject to dismissal. After payment of the initial partial filing fee, plaintiffs institution shall collect the additional monthly payments in the manner set forth in 28 U.S.C. § 1915(b)(2), quoted above, and shall forward those installments to the Court. The clerk of the court is directed to send a copy of this order to the appropriate official at plaintiffs institution. The clerk of the court is directed to set a pro se case management deadline in this case using the following text: September 15, 2008: initial partial filing fee payment due. Plaintiff shall keep the Court informed of his current address at all times, and all parties are bound by the Federal Rules of Civil Procedure and by the Courts Local Rules while this case is pending. Plaintiff shall review the Notice Regarding Summons Forms attached to this Order. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party and to plaintiff&apos;s institution as directed)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03160-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-1/mods.xml">
+ <titleInfo>
+  <title>Lia et al v. Nebraska Department of Correctional Services</title>
+  <subTitle>MEMORANDUM AND ORDER - James Tap Lia is dismissed as a plaintiff from this action. Plaintiff Chuoljock Lia remains a plaintiff in this action and remains obligated to pay the full filing fee in accordance with the Court&apos;s memorandum and order granting his motion to proceed in forma pauperis. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03160-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181855f4a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-1</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03160_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03160/pdf/USCOURTS-ned-4_08-cv-03160-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03160; Lia et al v. Nebraska Department of Correctional Services; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03160-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-10-24</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - James Tap Lia is dismissed as a plaintiff from this action. Plaintiff Chuoljock Lia remains a plaintiff in this action and remains obligated to pay the full filing fee in accordance with the Court&apos;s memorandum and order granting his motion to proceed in forma pauperis. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03160-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-2/mods.xml">
+ <titleInfo>
+  <title>Lia et al v. Nebraska Department of Correctional Services</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff shall have until 11/20/08, to amend his complaint to clearly state a claim upon which relief can be granted against defendant, in accordance with this Memorandum and Order. If plaintiff fails to file an amended complaint, plaintiff&apos;s claims against defendant will be dismissed without further notice for failure to state a claim upon which relief may be granted. The clerk of the court is directed to set a pro se case management deadline in this case using the following text: Check for amended complaint on November 20, 2008. Plaintiff shall keep the Court informed of his current address at all times while this case is pending. Failure to do so may result in dismissal without further notice. Ordered by Senior Judge Lyle E. Strom.(Copy mailed to pro se party) (KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03160-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181855f48</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-2</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03160_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03160/pdf/USCOURTS-ned-4_08-cv-03160-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03160; Lia et al v. Nebraska Department of Correctional Services; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03160-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-10-24</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff shall have until 11/20/08, to amend his complaint to clearly state a claim upon which relief can be granted against defendant, in accordance with this Memorandum and Order. If plaintiff fails to file an amended complaint, plaintiff&apos;s claims against defendant will be dismissed without further notice for failure to state a claim upon which relief may be granted. The clerk of the court is directed to set a pro se case management deadline in this case using the following text: Check for amended complaint on November 20, 2008. Plaintiff shall keep the Court informed of his current address at all times while this case is pending. Failure to do so may result in dismissal without further notice. Ordered by Senior Judge Lyle E. Strom.(Copy mailed to pro se party) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03160-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-3/mods.xml">
+ <titleInfo>
+  <title>Lia et al v. Nebraska Department of Correctional Services</title>
+  <subTitle>MEMORANDUM AND OPINION - Plaintiff has not filed an amended complaint or any other response to the Court&apos;s October 24, 2008, memorandum and order 10. A separate judgment dismissing plaintiff&apos;s complaint will be entered in accordance with this memorandum opinion. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party) (KBJ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03160-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181855f49</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-3</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03160_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03160/pdf/USCOURTS-ned-4_08-cv-03160-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03160; Lia et al v. Nebraska Department of Correctional Services; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03160-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-21</dateIssued>
+  <docketText>MEMORANDUM AND OPINION - Plaintiff has not filed an amended complaint or any other response to the Court&apos;s October 24, 2008, memorandum and order 10. A separate judgment dismissing plaintiff&apos;s complaint will be entered in accordance with this memorandum opinion. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03160-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-4/mods.xml">
+ <titleInfo>
+  <title>Lia et al v. Nebraska Department of Correctional Services</title>
+  <subTitle>ORDER AND JUDGMENT - Pusuant to the Memorandum and Opinion 11; This case is dismissed without prejudice. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party) (KBJ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03160-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181855f47</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-4</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03160_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03160/USCOURTS-ned-4_08-cv-03160-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03160/pdf/USCOURTS-ned-4_08-cv-03160-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03160; Lia et al v. Nebraska Department of Correctional Services; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03160-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-01-21</dateIssued>
+  <docketText>ORDER AND JUDGMENT - Pusuant to the Memorandum and Opinion 11; This case is dismissed without prejudice. Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party) (KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

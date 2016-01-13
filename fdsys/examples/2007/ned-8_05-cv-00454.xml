@@ -1,0 +1,347 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18173ae0d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00454</identifier>
+<identifier type="local">P0b002ee18173ae0d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cv-00454</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00454</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00454</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party firstName="Dana" fullName="Dana Bradford III" generation="III" lastName="Bradford" role="Defendant"></party>
+ <party fullName="City of Omaha" lastName="City of Omaha" role="Defendant"></party>
+ <party firstName="Justin" fullName="Justin Eichman" lastName="Eichman" role="Defendant"></party>
+ <party firstName="Theardise" fullName="Theardise K. Lowman Sr." generation="Sr." lastName="Lowman" middleName="K." role="Plaintiff"></party>
+ <party firstName="Michelle" fullName="Michelle A. Peters" lastName="Peters" middleName="A." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Lowman v. Peters et al</title>
+ <partNumber>8:05-cv-00454</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00454/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cv-00454;05-454</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dana Bradford III</displayForm>
+ <namePart type="family">Bradford</namePart>
+ <namePart type="given">Dana</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>City of Omaha</displayForm>
+ <namePart type="family">City of Omaha</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Justin Eichman</displayForm>
+ <namePart type="family">Eichman</namePart>
+ <namePart type="given">Justin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Theardise K. Lowman Sr.</displayForm>
+ <namePart type="family">Lowman</namePart>
+ <namePart type="given">Theardise</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michelle A. Peters</displayForm>
+ <namePart type="family">Peters</namePart>
+ <namePart type="given">Michelle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00454</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00454</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party firstName="Dana" fullName="Dana Bradford III" generation="III" lastName="Bradford" role="Defendant"></party>
+ <party fullName="City of Omaha" lastName="City of Omaha" role="Defendant"></party>
+ <party firstName="Justin" fullName="Justin Eichman" lastName="Eichman" role="Defendant"></party>
+ <party firstName="Theardise" fullName="Theardise K. Lowman Sr." generation="Sr." lastName="Lowman" middleName="K." role="Plaintiff"></party>
+ <party firstName="Michelle" fullName="Michelle A. Peters" lastName="Peters" middleName="A." role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00454-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-0/mods.xml">
+ <titleInfo>
+  <title>Lowman v. Peters et al</title>
+  <subTitle>ORDER granting 2 Motion for Leave to Proceed in forma pauperis. Signed by Magistrate Judge F. A. Gossett on 10/4/2005. (JSF)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00454-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817657c9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00454_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00454/pdf/USCOURTS-ned-8_05-cv-00454-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00454; Lowman v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00454-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-10-04</dateIssued>
+  <docketText>ORDER granting 2 Motion for Leave to Proceed in forma pauperis. Signed by Magistrate Judge F. A. Gossett on 10/4/2005. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00454-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-1/mods.xml">
+ <titleInfo>
+  <title>Lowman v. Peters et al</title>
+  <subTitle>ORDER ON INITIAL REVIEW that the Clerk of Court shall provide theplaintiff with summons and 285 forms (four of each) and a copy of this order. The plaintiffshall, as soon as possible, send the completed summons and 285 forms back to the Clerkof Court who will signeach summons, to be forwarded, together with a copy of the complaint, to the U.S. Marshalfor service on the defendants. Fed. R. Civ. P. 4(m) requires service of the complaint on a defendant within120 days of opening the case. The plaintiff filed the complaint to open this case onSeptember 26, 2005. Therefore, the plaintiff is hereby notified that failure to obtain serviceof process on a defendant within 120 days of that date may result in dismissal of suchdefendant without further notice. Service of Summons due by 1/24/2006. Signed by Magistrate Judge F. A. Gossett on 10/28/2005. (COPY MAILED with four summonses and four 285 forms)(ADB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00454-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817657c7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00454_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00454/pdf/USCOURTS-ned-8_05-cv-00454-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00454; Lowman v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00454-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-10-28</dateIssued>
+  <docketText>ORDER ON INITIAL REVIEW that the Clerk of Court shall provide theplaintiff with summons and 285 forms (four of each) and a copy of this order. The plaintiffshall, as soon as possible, send the completed summons and 285 forms back to the Clerkof Court who will signeach summons, to be forwarded, together with a copy of the complaint, to the U.S. Marshalfor service on the defendants. Fed. R. Civ. P. 4(m) requires service of the complaint on a defendant within120 days of opening the case. The plaintiff filed the complaint to open this case onSeptember 26, 2005. Therefore, the plaintiff is hereby notified that failure to obtain serviceof process on a defendant within 120 days of that date may result in dismissal of suchdefendant without further notice. Service of Summons due by 1/24/2006. Signed by Magistrate Judge F. A. Gossett on 10/28/2005. (COPY MAILED with four summonses and four 285 forms)(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00454-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-2/mods.xml">
+ <titleInfo>
+  <title>Lowman v. Peters et al</title>
+  <subTitle>MEMORANDUM AND ORDER that filing 7, the motion to dismiss filed by defendants-D.C. Bradford III and Justin Eichman, is denied; that filing No. 13, the Motion to Dismiss filed by defendants- Michelle Peters and City of Omaha is denied; That filing 15, the plaintiff&apos;s Motion to Stay, is denied as moot; that filing 16, the plaintiff&apos;s Motion to Extend Time, is denied as moot; that Filing No. 18, the response to plaintiff&apos;s motions to stay and extend time filed by defendants-Michelle Peters and City of Omaha, is granted in part; as additional delays are to be avoided if possible. Signed by Judge Laurie Smith Camp on 4/10/2006. (MKR, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00454-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817657c8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00454_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00454/pdf/USCOURTS-ned-8_05-cv-00454-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00454; Lowman v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00454-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-04-10</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that filing 7, the motion to dismiss filed by defendants-D.C. Bradford III and Justin Eichman, is denied; that filing No. 13, the Motion to Dismiss filed by defendants- Michelle Peters and City of Omaha is denied; That filing 15, the plaintiff&apos;s Motion to Stay, is denied as moot; that filing 16, the plaintiff&apos;s Motion to Extend Time, is denied as moot; that Filing No. 18, the response to plaintiff&apos;s motions to stay and extend time filed by defendants-Michelle Peters and City of Omaha, is granted in part; as additional delays are to be avoided if possible. Signed by Judge Laurie Smith Camp on 4/10/2006. (MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00454-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-3/mods.xml">
+ <titleInfo>
+  <title>Lowman v. Peters et al</title>
+  <subTitle>MEMORANDUM AND ORDER that the motion for voluntary dismissal is granted 26, and the above-entitled case is dismissed without prejudice, at the plaintiff&apos;s request; that all other pending motions are denied as moot; and that judgment will be entered accordingly. Signed by Judge Laurie Smith Camp on 5/9/2006. (MKR, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00454-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181765835</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00454_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00454/pdf/USCOURTS-ned-8_05-cv-00454-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00454; Lowman v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00454-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-05-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the motion for voluntary dismissal is granted 26, and the above-entitled case is dismissed without prejudice, at the plaintiff&apos;s request; that all other pending motions are denied as moot; and that judgment will be entered accordingly. Signed by Judge Laurie Smith Camp on 5/9/2006. (MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00454-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-4/mods.xml">
+ <titleInfo>
+  <title>Lowman v. Peters et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 34 Motion for Leave to File an Amended Complaint. Signed by Judge Laurie Smith Camp on 7/17/2006. (JSF)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00454-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181765834</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00454_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00454/pdf/USCOURTS-ned-8_05-cv-00454-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00454; Lowman v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00454-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-07-17</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 34 Motion for Leave to File an Amended Complaint. Signed by Judge Laurie Smith Camp on 7/17/2006. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00454-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-5/mods.xml">
+ <titleInfo>
+  <title>Lowman v. Peters et al</title>
+  <subTitle>ORDER denying 37 Motion to Reopen Case. Ordered by Judge Laurie Smith Camp.(JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00454-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817657cb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-5</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00454_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00454/pdf/USCOURTS-ned-8_05-cv-00454-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00454; Lowman v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00454-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-11-06</dateIssued>
+  <docketText>ORDER denying 37 Motion to Reopen Case. Ordered by Judge Laurie Smith Camp.(JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00454-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-6/mods.xml">
+ <titleInfo>
+  <title>Lowman v. Peters et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 41 the plaintiff&apos;s Motion to Reopen Case. The plaintiff is requested to stop filing motions to reopen this case. Ordered by Judge Laurie Smith Camp.(MKR )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00454-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817657ca</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-6</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00454_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00454/USCOURTS-ned-8_05-cv-00454-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00454/pdf/USCOURTS-ned-8_05-cv-00454-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00454; Lowman v. Peters et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00454-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-01-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 41 the plaintiff&apos;s Motion to Reopen Case. The plaintiff is requested to stop filing motions to reopen this case. Ordered by Judge Laurie Smith Camp.(MKR )</docketText>
+</extension>
+</relatedItem>
+</mods>

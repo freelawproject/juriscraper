@@ -1,0 +1,314 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184f824c0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-06-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-06-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00248</identifier>
+<identifier type="local">P0b002ee184f824c0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-06-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-06-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_12-cr-00248</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_12-cr-00248</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:12-cr-00248</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Dale" fullName="Dale Felix" lastName="Felix" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Felix</title>
+ <partNumber>8:12-cr-00248</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00248/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:12-cr-00248;12-248</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dale Felix</displayForm>
+ <namePart type="family">Felix</namePart>
+ <namePart type="given">Dale</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_12-cr-00248</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:12-cr-00248</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Dale" fullName="Dale Felix" lastName="Felix" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00248-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Felix</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Dale Felix. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00248-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f8783b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-0</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00248_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00248/pdf/USCOURTS-ned-8_12-cr-00248-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00248; USA v. Felix; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00248-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-08-27</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Dale Felix. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00248-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Felix</title>
+  <subTitle>ORDER granting 13 Motion to Extend Time to File Pretrial Motions as to Dale Felix. Pretrial Motion Deadline set for 10/17/2012. The time between September 17, 2012 and October 17, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. See 18 U.S.C. § 3161(h)(8)(A) &amp; (B). Ordered by Magistrate Judge F.A. Gossett. (SLP)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00248-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f87706</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-1</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00248_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00248/pdf/USCOURTS-ned-8_12-cr-00248-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00248; USA v. Felix; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00248-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-09-14</dateIssued>
+  <docketText>ORDER granting 13 Motion to Extend Time to File Pretrial Motions as to Dale Felix. Pretrial Motion Deadline set for 10/17/2012. The time between September 17, 2012 and October 17, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. See 18 U.S.C. § 3161(h)(8)(A) &amp; (B). Ordered by Magistrate Judge F.A. Gossett. (SLP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00248-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Felix</title>
+  <subTitle>FINDINGS AND RECOMMENDATION that MOTION to Suppress Physical Evidence19 be denied in all respects as to defendant Dale Felix. Ordered by Magistrate Judge F.A. Gossett. (ADB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00248-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f87708</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-2</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00248_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00248/pdf/USCOURTS-ned-8_12-cr-00248-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00248; USA v. Felix; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00248-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-12-04</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATION that MOTION to Suppress Physical Evidence19 be denied in all respects as to defendant Dale Felix. Ordered by Magistrate Judge F.A. Gossett. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00248-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Felix</title>
+  <subTitle>MEMORANDUM AND ORDER that the 26 Findings and Recommendations are adopted in their entirety; and the 19 Motion to Suppress is denied as to Dale Felix (1). Ordered by Chief Judge Laurie Smith Camp. (ADB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00248-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f87709</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-3</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00248_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00248/pdf/USCOURTS-ned-8_12-cr-00248-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00248; USA v. Felix; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00248-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the 26 Findings and Recommendations are adopted in their entirety; and the 19 Motion to Suppress is denied as to Dale Felix (1). Ordered by Chief Judge Laurie Smith Camp. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00248-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Felix</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITUREgranting the United States&apos; 36 Motion for Issuance of Preliminary Forfeiture as to Dale Felix (1). Based upon the Forfeiture Allegation of the Indictment and the Defendant=s plea of guilty, the United States is hereby authorized to seize the $2,969.00 in United States currency. The Defendant=s interest in the $2,969.00 in United States currency is hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. &apos; 853(n)(1). Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. &apos; 853(n), in which all interests will be addressed. Ordered by Chief Judge Laurie Smith Camp. (1 Certified copy to USM)( MKR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00248-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f87705</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-4</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00248_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00248/pdf/USCOURTS-ned-8_12-cr-00248-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00248; USA v. Felix; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00248-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-03-29</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITUREgranting the United States&apos; 36 Motion for Issuance of Preliminary Forfeiture as to Dale Felix (1). Based upon the Forfeiture Allegation of the Indictment and the Defendant=s plea of guilty, the United States is hereby authorized to seize the $2,969.00 in United States currency. The Defendant=s interest in the $2,969.00 in United States currency is hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. &apos; 853(n)(1). Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. &apos; 853(n), in which all interests will be addressed. Ordered by Chief Judge Laurie Smith Camp. (1 Certified copy to USM)( MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00248-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Felix</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Dale Felix. Ordered by Chief Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00248-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f87704</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-5</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00248_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00248/pdf/USCOURTS-ned-8_12-cr-00248-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00248; USA v. Felix; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00248-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-05-28</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Dale Felix. Ordered by Chief Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_12-cr-00248-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Felix</title>
+  <subTitle>FINAL ORDER OF FORFEITURE granting 42 Motion for Final Forfeiture as to Dale Felix (1); The $2,969.00 in United States currency be, and the same hereby is, forfeited to the United States of America; and The United States is directed to dispose of said property in accordance with law. Ordered by Chief Judge Laurie Smith Camp. (1 Certified copy to USM) ( ADB )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_12-cr-00248-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f87707</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-6</identifier>
+ <identifier type="former granule identifier">ned-8_12-cr-00248_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_12-cr-00248/USCOURTS-ned-8_12-cr-00248-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_12-cr-00248/pdf/USCOURTS-ned-8_12-cr-00248-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-cr-00248; USA v. Felix; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_12-cr-00248-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-06-05</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE granting 42 Motion for Final Forfeiture as to Dale Felix (1); The $2,969.00 in United States currency be, and the same hereby is, forfeited to the United States of America; and The United States is directed to dispose of said property in accordance with law. Ordered by Chief Judge Laurie Smith Camp. (1 Certified copy to USM) ( ADB )</docketText>
+</extension>
+</relatedItem>
+</mods>

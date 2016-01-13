@@ -1,0 +1,309 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b546f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00196</identifier>
+<identifier type="local">P0b002ee1817b546f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cv-00196</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00196</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00196</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>15:1126 Patent Infringement</cause>
+ <party fullName="Blackstone Group, The (NYSE:BX)" lastName="Blackstone Group, The (NYSE:BX)" role="Plaintiff"></party>
+ <party fullName="Ebay" lastName="Ebay" role="Defendant"></party>
+ <party fullName="Equity Office" lastName="Equity Office" role="Plaintiff"></party>
+ <party fullName="PayPal" lastName="PayPal" role="Counter Claimant"></party>
+ <party fullName="PayPal" lastName="PayPal" role="Defendant"></party>
+ <party fullName="Prism Technologies" lastName="Prism Technologies" role="Counter Defendant"></party>
+ <party fullName="Prism Technologies" lastName="Prism Technologies" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Prism Technologies v. PayPal</title>
+ <partNumber>8:08-cv-00196</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00196/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cv-00196;08-196</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Blackstone Group, The (NYSE:BX)</displayForm>
+ <namePart type="family">Blackstone Group, The (NYSE:BX)</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ebay</displayForm>
+ <namePart type="family">Ebay</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Equity Office</displayForm>
+ <namePart type="family">Equity Office</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>PayPal</displayForm>
+ <namePart type="family">PayPal</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>PayPal</displayForm>
+ <namePart type="family">PayPal</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Prism Technologies</displayForm>
+ <namePart type="family">Prism Technologies</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Prism Technologies</displayForm>
+ <namePart type="family">Prism Technologies</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00196</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00196</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>15:1126 Patent Infringement</cause>
+ <party fullName="Blackstone Group, The (NYSE:BX)" lastName="Blackstone Group, The (NYSE:BX)" role="Plaintiff"></party>
+ <party fullName="Ebay" lastName="Ebay" role="Defendant"></party>
+ <party fullName="Equity Office" lastName="Equity Office" role="Plaintiff"></party>
+ <party fullName="PayPal" lastName="PayPal" role="Counter Claimant"></party>
+ <party fullName="PayPal" lastName="PayPal" role="Defendant"></party>
+ <party fullName="Prism Technologies" lastName="Prism Technologies" role="Counter Defendant"></party>
+ <party fullName="Prism Technologies" lastName="Prism Technologies" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00196-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-0/mods.xml">
+ <titleInfo>
+  <title>Prism Technologies v. PayPal</title>
+  <subTitle>ORDER granting 31 Stipulation. Defendant&apos;s response to the Complaint is due 7/17/2008. The Rule 26(f) reporting deadline is extended to 8/6/2008. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00196-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c3163</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00196_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00196/pdf/USCOURTS-ned-8_08-cv-00196-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00196; Prism Technologies v. PayPal; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00196-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-06-30</dateIssued>
+  <docketText>ORDER granting 31 Stipulation. Defendant&apos;s response to the Complaint is due 7/17/2008. The Rule 26(f) reporting deadline is extended to 8/6/2008. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00196-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-1/mods.xml">
+ <titleInfo>
+  <title>Prism Technologies v. PayPal</title>
+  <subTitle>REPORT AND RECOMMENDATION that Cases Nos. 8:08CV195 and 8:08CV196 be deemed related cases pursuant to NEGenR 1.4; that PayPal&apos;s Motion to Transfer pursuant to 28 U.S.C. § 1404(a) 39 be granted, and that Cases Nos. 8:08CV195 and 8:08CV196 be transferred to the Northern District of California for all further proceedings pursuant to 28 U.S.C. § 1404(a). Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00196-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c3162</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00196_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00196/pdf/USCOURTS-ned-8_08-cv-00196-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00196; Prism Technologies v. PayPal; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00196-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-11-07</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION that Cases Nos. 8:08CV195 and 8:08CV196 be deemed related cases pursuant to NEGenR 1.4; that PayPal&apos;s Motion to Transfer pursuant to 28 U.S.C. § 1404(a) 39 be granted, and that Cases Nos. 8:08CV195 and 8:08CV196 be transferred to the Northern District of California for all further proceedings pursuant to 28 U.S.C. § 1404(a). Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00196-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-2/mods.xml">
+ <titleInfo>
+  <title>Prism Technologies v. PayPal</title>
+  <subTitle>ORDER - The Report and Recommendation 51 is adopted in its entirety; Cases Nos. 8:08CV195 and 8:08CV196 are deemed related cases pursuantto NEGenR 1.4; VeriSign&apos;s Motion to Transfer pursuant to 28 U.S.C. § 1404(a) (Filing No. 29 in Case No. 8:08CV195) is granted; PayPal&apos;s Motion to Transfer pursuant to 28 U.S.C. § 1404(a) 39 in Case No. 8:08CV196) is granted, andCases Nos. 8:08CV195 and 8:08CV196 are transferred to the Northern District of California for all further proceedings pursuant to 28 U.S.C. §1404(a). Ordered by Judge Laurie Smith Camp. (MKR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00196-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c3164</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00196_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00196/pdf/USCOURTS-ned-8_08-cv-00196-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00196; Prism Technologies v. PayPal; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00196-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-12-02</dateIssued>
+  <docketText>ORDER - The Report and Recommendation 51 is adopted in its entirety; Cases Nos. 8:08CV195 and 8:08CV196 are deemed related cases pursuantto NEGenR 1.4; VeriSign&apos;s Motion to Transfer pursuant to 28 U.S.C. § 1404(a) (Filing No. 29 in Case No. 8:08CV195) is granted; PayPal&apos;s Motion to Transfer pursuant to 28 U.S.C. § 1404(a) 39 in Case No. 8:08CV196) is granted, andCases Nos. 8:08CV195 and 8:08CV196 are transferred to the Northern District of California for all further proceedings pursuant to 28 U.S.C. §1404(a). Ordered by Judge Laurie Smith Camp. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00196-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-3/mods.xml">
+ <titleInfo>
+  <title>Prism Technologies v. PayPal</title>
+  <subTitle>ORDER - The Court&apos;s Order of December 2, 2008, is vacated; The Clerk of the Court is directed to reopen the cases; On or before January 30, 2009, the parties shall file electronically joint stipulations for dismissal (or other dispositive stipulations) and shall submit to District Judge Laurie Smith Camp, at smithcamp@ned.uscourts.gov, a draft order that will fully dispose of the cases. If the cases are being dismissed, then the stipulations shall comply with Fed. R. Civ. P. 41(a)(1), and shall state whether the dismissal is with or without prejudice; and Absent compliance with this order, these cases (including all counterclaims and the like) may be dismissed without further notice in accordance with NECivR 68.1.Ordered by Judge Laurie Smith Camp. (TCL)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00196-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c3165</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-3</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00196_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00196/pdf/USCOURTS-ned-8_08-cv-00196-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00196; Prism Technologies v. PayPal; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00196-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-12-31</dateIssued>
+  <docketText>ORDER - The Court&apos;s Order of December 2, 2008, is vacated; The Clerk of the Court is directed to reopen the cases; On or before January 30, 2009, the parties shall file electronically joint stipulations for dismissal (or other dispositive stipulations) and shall submit to District Judge Laurie Smith Camp, at smithcamp@ned.uscourts.gov, a draft order that will fully dispose of the cases. If the cases are being dismissed, then the stipulations shall comply with Fed. R. Civ. P. 41(a)(1), and shall state whether the dismissal is with or without prejudice; and Absent compliance with this order, these cases (including all counterclaims and the like) may be dismissed without further notice in accordance with NECivR 68.1.Ordered by Judge Laurie Smith Camp. (TCL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00196-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-4/mods.xml">
+ <titleInfo>
+  <title>Prism Technologies v. PayPal</title>
+  <subTitle>ORDER OF DISMISSAL - The parties&apos; Stipulation of Dismissal without Prejudice (Filing No. 56) is approved, and the relief requested therein is granted; The Complaint, as well as all claims and counterclaims in this action are dismissed without prejudice; Any pending motions in the above captioned case are terminated; The parties shall pay their own costs and attorneys fees; and Any future claims brought against PayPal involving either United States Patent No. 5,745,574 or No. 5,850,442 must be filed in the Northern District of California, or will be subject to transfer to that court. Ordered by Judge Laurie Smith Camp. (TCL, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00196-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c3166</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-4</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00196_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00196/USCOURTS-ned-8_08-cv-00196-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00196/pdf/USCOURTS-ned-8_08-cv-00196-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00196; Prism Technologies v. PayPal; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00196-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-01-05</dateIssued>
+  <docketText>ORDER OF DISMISSAL - The parties&apos; Stipulation of Dismissal without Prejudice (Filing No. 56) is approved, and the relief requested therein is granted; The Complaint, as well as all claims and counterclaims in this action are dismissed without prejudice; Any pending motions in the above captioned case are terminated; The parties shall pay their own costs and attorneys fees; and Any future claims brought against PayPal involving either United States Patent No. 5,745,574 or No. 5,850,442 must be filed in the Northern District of California, or will be subject to transfer to that court. Ordered by Judge Laurie Smith Camp. (TCL, )</docketText>
+</extension>
+</relatedItem>
+</mods>

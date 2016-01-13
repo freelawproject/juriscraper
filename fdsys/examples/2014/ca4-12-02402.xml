@@ -1,0 +1,147 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c31157">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Fourth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-12-02402</identifier>
+<identifier type="local">P0b002ee186c31157</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca4-12-02402</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca4-12-02402</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca4</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtSortOrder>1040</courtSortOrder>
+ <caseNumber>12-02402</caseNumber>
+ <party fullName="Director, Office of Workers&apos; Compensation Programs, United States Department of Labor" lastName="Director, Office of Workers&apos; Compensation Programs, United States Department of Labor" role="Respondent"></party>
+ <party fullName="Elk Run Coal Company, Incorporated" lastName="Elk Run Coal Company, Incorporated" role="Petitioner"></party>
+ <party firstName="Mary" fullName="Mary L. Fox" lastName="Fox" middleName="L." role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Elk Run Coal Company, Inc. v. Mary Fox</title>
+ <partNumber>12-02402</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-12-02402/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">12-02402;12-2402</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Fourth Circuit</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Director, Office of Workers&apos; Compensation Programs, United States Department of Labor</displayForm>
+ <namePart type="family">Director, Office of Workers&apos; Compensation Programs, United States Department of Labor</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Elk Run Coal Company, Incorporated</displayForm>
+ <namePart type="family">Elk Run Coal Company, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Mary L. Fox</displayForm>
+ <namePart type="family">Fox</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca4-12-02402</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca4</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtSortOrder>1040</courtSortOrder>
+ <caseNumber>12-02402</caseNumber>
+ <party fullName="Director, Office of Workers&apos; Compensation Programs, United States Department of Labor" lastName="Director, Office of Workers&apos; Compensation Programs, United States Department of Labor" role="Respondent"></party>
+ <party fullName="Elk Run Coal Company, Incorporated" lastName="Elk Run Coal Company, Incorporated" role="Petitioner"></party>
+ <party firstName="Mary" fullName="Mary L. Fox" lastName="Fox" middleName="L." role="Respondent"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca4-12-02402-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca4-12-02402/USCOURTS-ca4-12-02402-0/mods.xml">
+ <titleInfo>
+  <title>Elk Run Coal Company, Inc. v. Mary Fox</title>
+  <subTitle>PUBLISHED AUTHORED OPINION filed. Originating case number: 11-0793-BLA. [999270243]. [12-2387, 12-2402]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca4-12-02402-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3eb60</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca4-12-02402/USCOURTS-ca4-12-02402-0</identifier>
+ <identifier type="former granule identifier">ca4-12-02402_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca4-12-02402/USCOURTS-ca4-12-02402-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-12-02402/pdf/USCOURTS-ca4-12-02402-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 12-02402; Elk Run Coal Company, Inc. v. Mary Fox; </searchTitle>
+  <courtName>United States Court of Appeals for the Fourth Circuit</courtName>
+  <accessId>USCOURTS-ca4-12-02402-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>PUBLISHED AUTHORED OPINION filed. Originating case number: 11-0793-BLA. [999270243]. [12-2387, 12-2402]</docketText>
+</extension>
+</relatedItem>
+</mods>

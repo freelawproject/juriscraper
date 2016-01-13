@@ -1,0 +1,288 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118cd93">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-00513</identifier>
+<identifier type="local">P0b002ee18118cd93</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_06-cv-00513</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_06-cv-00513</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:06-cv-00513</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Bradley" fullName="Bradley R. Cink" lastName="Cink" middleName="R." role="Defendant"></party>
+ <party firstName="T.R." fullName="T.R. Craig" lastName="Craig" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph A. Crum" lastName="Crum" middleName="A." role="Plaintiff"></party>
+ <party firstName="Scott" fullName="Scott Dodrill" lastName="Dodrill" role="Defendant"></party>
+ <party firstName="Dawn" fullName="Dawn Marini" lastName="Marini" role="Defendant"></party>
+ <party fullName="Miller" lastName="Miller" role="Defendant"></party>
+ <party firstName="Henry" fullName="Henry J. Sadowski" lastName="Sadowski" middleName="J." role="Defendant"></party>
+ <party fullName="United States" lastName="United States" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Crum v. Marini et al</title>
+ <partNumber>9:06-cv-00513</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-00513/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:06-cv-00513;06-513</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bradley R. Cink</displayForm>
+ <namePart type="family">Cink</namePart>
+ <namePart type="given">Bradley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T.R. Craig</displayForm>
+ <namePart type="family">Craig</namePart>
+ <namePart type="given">T.R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph A. Crum</displayForm>
+ <namePart type="family">Crum</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Dodrill</displayForm>
+ <namePart type="family">Dodrill</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dawn Marini</displayForm>
+ <namePart type="family">Marini</namePart>
+ <namePart type="given">Dawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Miller</displayForm>
+ <namePart type="family">Miller</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Henry J. Sadowski</displayForm>
+ <namePart type="family">Sadowski</namePart>
+ <namePart type="given">Henry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States</displayForm>
+ <namePart type="family">United States</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_06-cv-00513</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:06-cv-00513</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Bradley" fullName="Bradley R. Cink" lastName="Cink" middleName="R." role="Defendant"></party>
+ <party firstName="T.R." fullName="T.R. Craig" lastName="Craig" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph A. Crum" lastName="Crum" middleName="A." role="Plaintiff"></party>
+ <party firstName="Scott" fullName="Scott Dodrill" lastName="Dodrill" role="Defendant"></party>
+ <party firstName="Dawn" fullName="Dawn Marini" lastName="Marini" role="Defendant"></party>
+ <party fullName="Miller" lastName="Miller" role="Defendant"></party>
+ <party firstName="Henry" fullName="Henry J. Sadowski" lastName="Sadowski" middleName="J." role="Defendant"></party>
+ <party fullName="United States" lastName="United States" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_06-cv-00513-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00513/USCOURTS-nynd-9_06-cv-00513-0/mods.xml">
+ <titleInfo>
+  <title>Crum v. Marini et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS. RECOMMENDED that 18 MOTION for Summary Judgment filed by Bradley R. Cink, Scott Dodrill, Henry J. Sadowski, T.R. Craig, Miller, Dawn Marini be GRANTED as to all claims and all defendants.Objections to R&amp;R due by 8/21/2007, Case Review Deadline 8/27/2007. Signed by Judge David R. Homer on 8/7/07. (nas)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_06-cv-00513-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143bca5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00513/USCOURTS-nynd-9_06-cv-00513-0</identifier>
+ <identifier type="former granule identifier">nynd-9_06-cv-00513_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00513/USCOURTS-nynd-9_06-cv-00513-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-00513/pdf/USCOURTS-nynd-9_06-cv-00513-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:06-cv-00513; Crum v. Marini et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_06-cv-00513-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-08-07</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS. RECOMMENDED that 18 MOTION for Summary Judgment filed by Bradley R. Cink, Scott Dodrill, Henry J. Sadowski, T.R. Craig, Miller, Dawn Marini be GRANTED as to all claims and all defendants.Objections to R&amp;R due by 8/21/2007, Case Review Deadline 8/27/2007. Signed by Judge David R. Homer on 8/7/07. (nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_06-cv-00513-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00513/USCOURTS-nynd-9_06-cv-00513-1/mods.xml">
+ <titleInfo>
+  <title>Crum v. Marini et al</title>
+  <subTitle>MEMORANDUM-DECISION and ORDER, that Judge Homer&apos;s 23 Report-Recommendation and Order is accepted and adopted in part, and rejected in part, and Crum&apos;s Fifth and Eighth Amendment claims are dismissed; that should the defendants wish to move to dismiss Crum&apos;s FTCA claim, they must direct their motion to Judge Homer within thirty (30) days of the date of this Order. Signed by Judge Gary L. Sharpe on 10/22/2007. (Attachments: # (1) Judge Homer&apos;s Report-Recommendation) (jel, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_06-cv-00513-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143bca6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00513/USCOURTS-nynd-9_06-cv-00513-1</identifier>
+ <identifier type="former granule identifier">nynd-9_06-cv-00513_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00513/USCOURTS-nynd-9_06-cv-00513-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-00513/pdf/USCOURTS-nynd-9_06-cv-00513-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:06-cv-00513; Crum v. Marini et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_06-cv-00513-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-10-22</dateIssued>
+  <docketText>MEMORANDUM-DECISION and ORDER, that Judge Homer&apos;s 23 Report-Recommendation and Order is accepted and adopted in part, and rejected in part, and Crum&apos;s Fifth and Eighth Amendment claims are dismissed; that should the defendants wish to move to dismiss Crum&apos;s FTCA claim, they must direct their motion to Judge Homer within thirty (30) days of the date of this Order. Signed by Judge Gary L. Sharpe on 10/22/2007. (Attachments: # (1) Judge Homer&apos;s Report-Recommendation) (jel, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_06-cv-00513-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00513/USCOURTS-nynd-9_06-cv-00513-2/mods.xml">
+ <titleInfo>
+  <title>Crum v. Marini et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS. RECOMMENDED that 28 MOTION to Dismiss or alternatively, for summary judgment filed by United States be GRANTED. Objections to R&amp;R due by 9/11/2008 Case Review Deadline 9/16/2008. Signed by Magistrate Judge David R. Homer on 8/27/08. (nas )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_06-cv-00513-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143bca8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00513/USCOURTS-nynd-9_06-cv-00513-2</identifier>
+ <identifier type="former granule identifier">nynd-9_06-cv-00513_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00513/USCOURTS-nynd-9_06-cv-00513-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-00513/pdf/USCOURTS-nynd-9_06-cv-00513-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:06-cv-00513; Crum v. Marini et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_06-cv-00513-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-08-27</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS. RECOMMENDED that 28 MOTION to Dismiss or alternatively, for summary judgment filed by United States be GRANTED. Objections to R&amp;R due by 9/11/2008 Case Review Deadline 9/16/2008. Signed by Magistrate Judge David R. Homer on 8/27/08. (nas )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_06-cv-00513-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00513/USCOURTS-nynd-9_06-cv-00513-3/mods.xml">
+ <titleInfo>
+  <title>Crum v. Marini et al</title>
+  <subTitle>DECISION and ORDER, that Magistrate Judge Homer&apos;s August 27, 2008 30 Report-Recommendation is adopted in its entirety and the objections thereto are overruled. That the defendants&apos; 28 Motion to Dismiss or, in the alternative, for summary judgment is GRANTED in all respects. Signed by Judge Gary L. Sharpe on 1/26/2009. (Attachments: # (1) Judge Homer&apos;s Report-Recommendation) (jel, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_06-cv-00513-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143bca7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00513/USCOURTS-nynd-9_06-cv-00513-3</identifier>
+ <identifier type="former granule identifier">nynd-9_06-cv-00513_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-00513/USCOURTS-nynd-9_06-cv-00513-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-00513/pdf/USCOURTS-nynd-9_06-cv-00513-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:06-cv-00513; Crum v. Marini et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_06-cv-00513-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-26</dateIssued>
+  <docketText>DECISION and ORDER, that Magistrate Judge Homer&apos;s August 27, 2008 30 Report-Recommendation is adopted in its entirety and the objections thereto are overruled. That the defendants&apos; 28 Motion to Dismiss or, in the alternative, for summary judgment is GRANTED in all respects. Signed by Judge Gary L. Sharpe on 1/26/2009. (Attachments: # (1) Judge Homer&apos;s Report-Recommendation) (jel, )</docketText>
+</extension>
+</relatedItem>
+</mods>

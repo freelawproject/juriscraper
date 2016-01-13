@@ -1,0 +1,161 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d2577">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_04-cv-01857</identifier>
+<identifier type="local">P0b002ee1815d2577</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_04-cv-01857</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_04-cv-01857</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:04-cv-01857</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1446 Petition for Removal</cause>
+ <party fullName="Advance Stores Company Incorporated" lastName="Advance Stores Company Incorporated" role="Defendant"></party>
+ <party firstName="J." fullName="J. Dean Carro" lastName="Carro" middleName="Dean" role="Mediator"></party>
+ <party firstName="Cherolyn" fullName="Cherolyn McIntyre" lastName="McIntyre" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>McIntyre v. Advance Stores Company Incorporated</title>
+ <partNumber>1:04-cv-01857</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_04-cv-01857/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:04-cv-01857;04-1857</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Advance Stores Company Incorporated</displayForm>
+ <namePart type="family">Advance Stores Company Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Dean Carro</displayForm>
+ <namePart type="family">Carro</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<name type="personal">
+ <displayForm>Cherolyn McIntyre</displayForm>
+ <namePart type="family">McIntyre</namePart>
+ <namePart type="given">Cherolyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_04-cv-01857</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:04-cv-01857</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1446 Petition for Removal</cause>
+ <party fullName="Advance Stores Company Incorporated" lastName="Advance Stores Company Incorporated" role="Defendant"></party>
+ <party firstName="J." fullName="J. Dean Carro" lastName="Carro" middleName="Dean" role="Mediator"></party>
+ <party firstName="Cherolyn" fullName="Cherolyn McIntyre" lastName="McIntyre" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_04-cv-01857-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cv-01857/USCOURTS-ohnd-1_04-cv-01857-0/mods.xml">
+ <titleInfo>
+  <title>McIntyre v. Advance Stores Company Incorporated</title>
+  <subTitle>Order denying Plaintiff&apos;s Motion for Partial Summary Judgment (Related Doc # 76), and granting in part and denying in part Defendant&apos;s Motion for Summary Judgment (Related Doc # 87) as follows: Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s interference in violation of the Family and Medical Leave Act is denied. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s claim for FMLA-related actual damages is denied. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s claim for liquidated damages relating to her FMLA claim is denied. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s hostile environment claim is denied. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s quid pro quo claim is granted. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s retaliation claim is granted. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s negligent supervision/negligent retention claim is denied. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s discharge in violation of Ohio public policy is granted. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s claim for an award of punitive damages and attorney&apos;s fees on her state law claims is granted. Signed by Judge Solomon Oliver Jr. on 1/10/2007.(D, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_04-cv-01857-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816de238</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cv-01857/USCOURTS-ohnd-1_04-cv-01857-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_04-cv-01857_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cv-01857/USCOURTS-ohnd-1_04-cv-01857-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_04-cv-01857/pdf/USCOURTS-ohnd-1_04-cv-01857-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cv-01857; McIntyre v. Advance Stores Company Incorporated; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_04-cv-01857-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-10</dateIssued>
+  <docketText>Order denying Plaintiff&apos;s Motion for Partial Summary Judgment (Related Doc # 76), and granting in part and denying in part Defendant&apos;s Motion for Summary Judgment (Related Doc # 87) as follows: Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s interference in violation of the Family and Medical Leave Act is denied. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s claim for FMLA-related actual damages is denied. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s claim for liquidated damages relating to her FMLA claim is denied. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s hostile environment claim is denied. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s quid pro quo claim is granted. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s retaliation claim is granted. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s negligent supervision/negligent retention claim is denied. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s discharge in violation of Ohio public policy is granted. Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s claim for an award of punitive damages and attorney&apos;s fees on her state law claims is granted. Signed by Judge Solomon Oliver Jr. on 1/10/2007.(D, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

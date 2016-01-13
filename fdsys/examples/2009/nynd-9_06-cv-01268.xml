@@ -1,0 +1,196 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18111ef08">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-01268</identifier>
+<identifier type="local">P0b002ee18111ef08</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_06-cv-01268</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_06-cv-01268</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:06-cv-01268</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="John" fullName="John Does" lastName="Does" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Parker" lastName="Parker" role="Plaintiff"></party>
+ <party fullName="Peek-co" lastName="Peek-co" role="Defendant"></party>
+ <party firstName="Israel" fullName="Israel Rivera" lastName="Rivera" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Parker v. Peek-co et al</title>
+ <partNumber>9:06-cv-01268</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-01268/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:06-cv-01268;06-1268</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John Does</displayForm>
+ <namePart type="family">Does</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Parker</displayForm>
+ <namePart type="family">Parker</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Peek-co</displayForm>
+ <namePart type="family">Peek-co</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Israel Rivera</displayForm>
+ <namePart type="family">Rivera</namePart>
+ <namePart type="given">Israel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_06-cv-01268</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:06-cv-01268</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="John" fullName="John Does" lastName="Does" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Parker" lastName="Parker" role="Plaintiff"></party>
+ <party fullName="Peek-co" lastName="Peek-co" role="Defendant"></party>
+ <party firstName="Israel" fullName="Israel Rivera" lastName="Rivera" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_06-cv-01268-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-01268/USCOURTS-nynd-9_06-cv-01268-0/mods.xml">
+ <titleInfo>
+  <title>Parker v. Peek-co et al</title>
+  <subTitle>REPORT AND RECOMMENDATION: RECOMMENDED, that defendant&apos;s motion for summary judgment 35 be GRANTED, and that plaintiff&apos;s complaint be DISMISSED in all respects. Objections to R&amp;R due by 1/13/2009 Case Review Deadline 1/20/2009. Signed by Magistrate Judge David E. Peebles on 12/29/2008. {Report&amp;Recommendation served on plaintiff via regular mail.}(mgh)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_06-cv-01268-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181433eed</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-01268/USCOURTS-nynd-9_06-cv-01268-0</identifier>
+ <identifier type="former granule identifier">nynd-9_06-cv-01268_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-01268/USCOURTS-nynd-9_06-cv-01268-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-01268/pdf/USCOURTS-nynd-9_06-cv-01268-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:06-cv-01268; Parker v. Peek-co et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_06-cv-01268-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-12-29</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION: RECOMMENDED, that defendant&apos;s motion for summary judgment 35 be GRANTED, and that plaintiff&apos;s complaint be DISMISSED in all respects. Objections to R&amp;R due by 1/13/2009 Case Review Deadline 1/20/2009. Signed by Magistrate Judge David E. Peebles on 12/29/2008. {Report&amp;Recommendation served on plaintiff via regular mail.}(mgh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_06-cv-01268-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-01268/USCOURTS-nynd-9_06-cv-01268-1/mods.xml">
+ <titleInfo>
+  <title>Parker v. Peek-co et al</title>
+  <subTitle>ORDER, that the 36 Report-Recommendation of Magistrate Judge David E. Peebles filed December 29, 2008 is ACCEPTED in its entirety. That the defendant&apos;s 35 Motion for Summary Judgment is GRANTED, and that the plaintiff&apos;s complaint is DISMISSED in all respects. Signed by Judge Gary L. Sharpe on 1/27/2009. (Attachments: # (1) Judge Peebles&apos; Report-Recommendation) (jel, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_06-cv-01268-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181433eec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-01268/USCOURTS-nynd-9_06-cv-01268-1</identifier>
+ <identifier type="former granule identifier">nynd-9_06-cv-01268_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_06-cv-01268/USCOURTS-nynd-9_06-cv-01268-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_06-cv-01268/pdf/USCOURTS-nynd-9_06-cv-01268-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:06-cv-01268; Parker v. Peek-co et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_06-cv-01268-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-27</dateIssued>
+  <docketText>ORDER, that the 36 Report-Recommendation of Magistrate Judge David E. Peebles filed December 29, 2008 is ACCEPTED in its entirety. That the defendant&apos;s 35 Motion for Summary Judgment is GRANTED, and that the plaintiff&apos;s complaint is DISMISSED in all respects. Signed by Judge Gary L. Sharpe on 1/27/2009. (Attachments: # (1) Judge Peebles&apos; Report-Recommendation) (jel, )</docketText>
+</extension>
+</relatedItem>
+</mods>

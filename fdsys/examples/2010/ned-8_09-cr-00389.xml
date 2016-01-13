@@ -1,0 +1,202 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817836f1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00389</identifier>
+<identifier type="local">P0b002ee1817836f1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cr-00389</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cr-00389</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cr-00389</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="John" fullName="John Hulit" lastName="Hulit" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Hulit</title>
+ <partNumber>8:09-cr-00389</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00389/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cr-00389;09-389</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John Hulit</displayForm>
+ <namePart type="family">Hulit</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cr-00389</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cr-00389</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="John" fullName="John Hulit" lastName="Hulit" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00389-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00389/USCOURTS-ned-8_09-cr-00389-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Hulit</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant John Hulit. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00389-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e3892</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00389/USCOURTS-ned-8_09-cr-00389-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00389_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00389/USCOURTS-ned-8_09-cr-00389-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00389/pdf/USCOURTS-ned-8_09-cr-00389-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00389; USA v. Hulit; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00389-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-10-29</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant John Hulit. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00389-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00389/USCOURTS-ned-8_09-cr-00389-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Hulit</title>
+  <subTitle>FINDINGS AND RECOMMENDATION AND ORDER - IT IS RECOMMENDED to the Honorable Joseph F. Bataillon, Chief Judge, United States District Court of Nebraska, that the Motion to Suppress 14 be denied in all respects. And ORDER The clerk shall cause a transcript of the hearing to be prepared and filed. Any objection to the magistrate&apos;s Findings and Recommendation shall be filed with the Clerk of the Court within fourteen (14) days after the unredacted transcript is available to counsel. Failure to timely object may constitute a waiver of any such objection. The brief in support of any objection shall be filed at the time of filing such objection. Failure to file a brief in support of any objection may be deemed an abandonment of the objection as to defendant John Hulit. Ordered by Magistrate Judge F. A. Gossett. (KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00389-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e3891</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00389/USCOURTS-ned-8_09-cr-00389-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00389_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00389/USCOURTS-ned-8_09-cr-00389-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00389/pdf/USCOURTS-ned-8_09-cr-00389-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00389; USA v. Hulit; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00389-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-12-21</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATION AND ORDER - IT IS RECOMMENDED to the Honorable Joseph F. Bataillon, Chief Judge, United States District Court of Nebraska, that the Motion to Suppress 14 be denied in all respects. And ORDER The clerk shall cause a transcript of the hearing to be prepared and filed. Any objection to the magistrate&apos;s Findings and Recommendation shall be filed with the Clerk of the Court within fourteen (14) days after the unredacted transcript is available to counsel. Failure to timely object may constitute a waiver of any such objection. The brief in support of any objection shall be filed at the time of filing such objection. Failure to file a brief in support of any objection may be deemed an abandonment of the objection as to defendant John Hulit. Ordered by Magistrate Judge F. A. Gossett. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00389-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00389/USCOURTS-ned-8_09-cr-00389-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Hulit</title>
+  <subTitle>ORDER - The report and recommendation 22 is adopted in its entirety; The defendant&apos;s motion to suppress 14 is denied in all respects as to defendant John Hulit. Ordered by Chief Judge Joseph F. Bataillon. (KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00389-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e3890</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00389/USCOURTS-ned-8_09-cr-00389-2</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00389_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00389/USCOURTS-ned-8_09-cr-00389-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00389/pdf/USCOURTS-ned-8_09-cr-00389-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00389; USA v. Hulit; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00389-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-01-21</dateIssued>
+  <docketText>ORDER - The report and recommendation 22 is adopted in its entirety; The defendant&apos;s motion to suppress 14 is denied in all respects as to defendant John Hulit. Ordered by Chief Judge Joseph F. Bataillon. (KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

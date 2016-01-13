@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813da941">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_06-cv-00333</identifier>
+<identifier type="local">P0b002ee1813da941</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_06-cv-00333</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_06-cv-00333</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:06-cv-00333</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="COMMONWEALTH OF PENNSYLVANIA" lastName="COMMONWEALTH OF PENNSYLVANIA" role="Defendant"></party>
+ <party fullName="COMMONWEALTH OF PENNSYLVANIA" lastName="COMMONWEALTH OF PENNSYLVANIA" role="ThirdParty Plaintiff"></party>
+ <party firstName="E." fullName="E. G." lastName="G." role="Plaintiff"></party>
+ <party firstName="L." fullName="L. G." lastName="G." role="Plaintiff"></party>
+ <party fullName="LANCASTER-LEBANON INTERMEDIATE UNIT #13" lastName="LANCASTER-LEBANON INTERMEDIATE UNIT #13" role="ThirdParty Defendant"></party>
+ <party fullName="LANCASTER-LEBANON INTERMEDIATE UNIT 13" lastName="LANCASTER-LEBANON INTERMEDIATE UNIT 13" role="Defendant"></party>
+ <party fullName="OFFICE FOR DISPUTE RESOLUTION" lastName="OFFICE FOR DISPUTE RESOLUTION" role="Defendant"></party>
+ <party fullName="PENNSYLVANIA DEPARTMENT OF EDUCATION" lastName="PENNSYLVANIA DEPARTMENT OF EDUCATION" role="Defendant"></party>
+ <party fullName="PENNSYLVANIA DEPARTMENT OF EDUCATION" lastName="PENNSYLVANIA DEPARTMENT OF EDUCATION" role="ThirdParty Plaintiff"></party>
+ <party fullName="STATE OF PENNSYLVANIA" lastName="STATE OF PENNSYLVANIA" role="Defendant"></party>
+ <party fullName="THE OFFICE OF DISPUTE RESOLUTION ODR" lastName="THE OFFICE OF DISPUTE RESOLUTION ODR" role="Defendant"></party>
+ <party firstName="KERRY" fullName="KERRY VOSS SMITH" lastName="VOSS SMITH" role="Defendant"></party>
+ <party fullName="WISSAHICKON SCHOOL DISTRICT" lastName="WISSAHICKON SCHOOL DISTRICT" role="Defendant"></party>
+ <party firstName="GERALD" fullName="GERALD L. ZAHORCHAK" lastName="ZAHORCHAK" middleName="L." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>G. et al v. WISSAHICKON SCHOOL DISTRICT et al</title>
+ <partNumber>2:06-cv-00333</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_06-cv-00333/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:06-cv-00333;06-333</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>COMMONWEALTH OF PENNSYLVANIA</displayForm>
+ <namePart type="family">COMMONWEALTH OF PENNSYLVANIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>COMMONWEALTH OF PENNSYLVANIA</displayForm>
+ <namePart type="family">COMMONWEALTH OF PENNSYLVANIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>E. G.</displayForm>
+ <namePart type="family">G.</namePart>
+ <namePart type="given">E.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>L. G.</displayForm>
+ <namePart type="family">G.</namePart>
+ <namePart type="given">L.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>LANCASTER-LEBANON INTERMEDIATE UNIT #13</displayForm>
+ <namePart type="family">LANCASTER-LEBANON INTERMEDIATE UNIT #13</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LANCASTER-LEBANON INTERMEDIATE UNIT 13</displayForm>
+ <namePart type="family">LANCASTER-LEBANON INTERMEDIATE UNIT 13</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>OFFICE FOR DISPUTE RESOLUTION</displayForm>
+ <namePart type="family">OFFICE FOR DISPUTE RESOLUTION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PENNSYLVANIA DEPARTMENT OF EDUCATION</displayForm>
+ <namePart type="family">PENNSYLVANIA DEPARTMENT OF EDUCATION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PENNSYLVANIA DEPARTMENT OF EDUCATION</displayForm>
+ <namePart type="family">PENNSYLVANIA DEPARTMENT OF EDUCATION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>STATE OF PENNSYLVANIA</displayForm>
+ <namePart type="family">STATE OF PENNSYLVANIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>THE OFFICE OF DISPUTE RESOLUTION ODR</displayForm>
+ <namePart type="family">THE OFFICE OF DISPUTE RESOLUTION ODR</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>KERRY VOSS SMITH</displayForm>
+ <namePart type="family">VOSS SMITH</namePart>
+ <namePart type="given">KERRY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>WISSAHICKON SCHOOL DISTRICT</displayForm>
+ <namePart type="family">WISSAHICKON SCHOOL DISTRICT</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GERALD L. ZAHORCHAK</displayForm>
+ <namePart type="family">ZAHORCHAK</namePart>
+ <namePart type="given">GERALD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_06-cv-00333</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:06-cv-00333</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="COMMONWEALTH OF PENNSYLVANIA" lastName="COMMONWEALTH OF PENNSYLVANIA" role="Defendant"></party>
+ <party fullName="COMMONWEALTH OF PENNSYLVANIA" lastName="COMMONWEALTH OF PENNSYLVANIA" role="ThirdParty Plaintiff"></party>
+ <party firstName="E." fullName="E. G." lastName="G." role="Plaintiff"></party>
+ <party firstName="L." fullName="L. G." lastName="G." role="Plaintiff"></party>
+ <party fullName="LANCASTER-LEBANON INTERMEDIATE UNIT #13" lastName="LANCASTER-LEBANON INTERMEDIATE UNIT #13" role="ThirdParty Defendant"></party>
+ <party fullName="LANCASTER-LEBANON INTERMEDIATE UNIT 13" lastName="LANCASTER-LEBANON INTERMEDIATE UNIT 13" role="Defendant"></party>
+ <party fullName="OFFICE FOR DISPUTE RESOLUTION" lastName="OFFICE FOR DISPUTE RESOLUTION" role="Defendant"></party>
+ <party fullName="PENNSYLVANIA DEPARTMENT OF EDUCATION" lastName="PENNSYLVANIA DEPARTMENT OF EDUCATION" role="Defendant"></party>
+ <party fullName="PENNSYLVANIA DEPARTMENT OF EDUCATION" lastName="PENNSYLVANIA DEPARTMENT OF EDUCATION" role="ThirdParty Plaintiff"></party>
+ <party fullName="STATE OF PENNSYLVANIA" lastName="STATE OF PENNSYLVANIA" role="Defendant"></party>
+ <party fullName="THE OFFICE OF DISPUTE RESOLUTION ODR" lastName="THE OFFICE OF DISPUTE RESOLUTION ODR" role="Defendant"></party>
+ <party firstName="KERRY" fullName="KERRY VOSS SMITH" lastName="VOSS SMITH" role="Defendant"></party>
+ <party fullName="WISSAHICKON SCHOOL DISTRICT" lastName="WISSAHICKON SCHOOL DISTRICT" role="Defendant"></party>
+ <party firstName="GERALD" fullName="GERALD L. ZAHORCHAK" lastName="ZAHORCHAK" middleName="L." role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_06-cv-00333-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-00333/USCOURTS-paed-2_06-cv-00333-0/mods.xml">
+ <titleInfo>
+  <title>G. et al v. WISSAHICKON SCHOOL DISTRICT et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION RE: MOTION FOR JUDGMENT ON THE ADMINISTRATIVE RECORD (DOC. #63 AND #67). SIGNED BY HONORABLE NORMA L. SHAPIRO ON 1/4/2011. 1/4/2011 ENTERED AND COPIES E-MAILED.(tomg, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_06-cv-00333-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181519f39</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-00333/USCOURTS-paed-2_06-cv-00333-0</identifier>
+ <identifier type="former granule identifier">paed-2_06-cv-00333_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-00333/USCOURTS-paed-2_06-cv-00333-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_06-cv-00333/pdf/USCOURTS-paed-2_06-cv-00333-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-00333; G. et al v. WISSAHICKON SCHOOL DISTRICT et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_06-cv-00333-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-04</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION RE: MOTION FOR JUDGMENT ON THE ADMINISTRATIVE RECORD (DOC. #63 AND #67). SIGNED BY HONORABLE NORMA L. SHAPIRO ON 1/4/2011. 1/4/2011 ENTERED AND COPIES E-MAILED.(tomg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_06-cv-00333-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-00333/USCOURTS-paed-2_06-cv-00333-1/mods.xml">
+ <titleInfo>
+  <title>G. et al v. WISSAHICKON SCHOOL DISTRICT et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION ORDER THAT DEFENDANT&apos;S MOTION FOR JUDGMENT AND DECISION ON THE ADMINISTRATIVE RECORD (DOC. #63) IS GRANTED. PLAINTIFFS&apos; OPPOSITION TO DEFENDANT&apos;S MOTION AND REQUEST FOR JUDGMENT IN THEIR FAVOR BASED ON MODIFIED DE NOVO REVIEW (DOC. #67) IS DENIED. JUDGMENT IS ENTERED IN FAVOR OF DEFENDANT AND AGAINST PLAINTIFFS. THE CLERK OF COURT SHALL MARK THIS CASE CLOSED.. SIGNED BY HONORABLE NORMA L. SHAPIRO ON 1/4/2011. 1/4/2011 ENTERED AND COPIES E-MAILED.(tomg, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_06-cv-00333-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181519f3a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-00333/USCOURTS-paed-2_06-cv-00333-1</identifier>
+ <identifier type="former granule identifier">paed-2_06-cv-00333_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-00333/USCOURTS-paed-2_06-cv-00333-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_06-cv-00333/pdf/USCOURTS-paed-2_06-cv-00333-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-00333; G. et al v. WISSAHICKON SCHOOL DISTRICT et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_06-cv-00333-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-04</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION ORDER THAT DEFENDANT&apos;S MOTION FOR JUDGMENT AND DECISION ON THE ADMINISTRATIVE RECORD (DOC. #63) IS GRANTED. PLAINTIFFS&apos; OPPOSITION TO DEFENDANT&apos;S MOTION AND REQUEST FOR JUDGMENT IN THEIR FAVOR BASED ON MODIFIED DE NOVO REVIEW (DOC. #67) IS DENIED. JUDGMENT IS ENTERED IN FAVOR OF DEFENDANT AND AGAINST PLAINTIFFS. THE CLERK OF COURT SHALL MARK THIS CASE CLOSED.. SIGNED BY HONORABLE NORMA L. SHAPIRO ON 1/4/2011. 1/4/2011 ENTERED AND COPIES E-MAILED.(tomg, )</docketText>
+</extension>
+</relatedItem>
+</mods>

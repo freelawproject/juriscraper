@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181798ea4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00510</identifier>
+<identifier type="local">P0b002ee181798ea4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cv-00510</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00510</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00510</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>Civil Miscellaneous Case</cause>
+ <party fullName="Internal Revenue Service" lastName="Internal Revenue Service" role="Defendant"></party>
+ <party firstName="Dean" fullName="Dean R. Loppnow" lastName="Loppnow" middleName="R." role="Plaintiff"></party>
+ <party firstName="Jeff" fullName="Jeff Stotko" lastName="Stotko" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Loppnow v. United States of America et al</title>
+ <partNumber>8:08-cv-00510</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00510/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cv-00510;08-510</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Internal Revenue Service</displayForm>
+ <namePart type="family">Internal Revenue Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dean R. Loppnow</displayForm>
+ <namePart type="family">Loppnow</namePart>
+ <namePart type="given">Dean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jeff Stotko</displayForm>
+ <namePart type="family">Stotko</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00510</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00510</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>Civil Miscellaneous Case</cause>
+ <party fullName="Internal Revenue Service" lastName="Internal Revenue Service" role="Defendant"></party>
+ <party firstName="Dean" fullName="Dean R. Loppnow" lastName="Loppnow" middleName="R." role="Plaintiff"></party>
+ <party firstName="Jeff" fullName="Jeff Stotko" lastName="Stotko" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00510-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00510/USCOURTS-ned-8_08-cv-00510-0/mods.xml">
+ <titleInfo>
+  <title>Loppnow v. United States of America et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff shall have until December 29, 2008 in which to pay the balance of the court&apos;s $350.00 filing fee in this matter. Alternatively, Plaintiff may submit a motion for leave to proceed in forma pauperis and affidavit in support. In the event that Plaintiff fails to either pay the remainder of the filing fee or to submit a motion to proceed in forma pauperis, this matter will be dismissed without further notice and without prejudice. The Clerk of the court is directed to set a pro se case management deadline in this case with the following text: December 29, 2008: deadline for Plaintiff to pay balance of fee or file IFP motion. The Clerk of the court is directed not to issue summons in this matter pending further order of the court. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (KBJ)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00510-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817ffb57</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00510/USCOURTS-ned-8_08-cv-00510-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00510_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00510/USCOURTS-ned-8_08-cv-00510-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00510/pdf/USCOURTS-ned-8_08-cv-00510-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00510; Loppnow v. United States of America et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00510-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-11-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff shall have until December 29, 2008 in which to pay the balance of the court&apos;s $350.00 filing fee in this matter. Alternatively, Plaintiff may submit a motion for leave to proceed in forma pauperis and affidavit in support. In the event that Plaintiff fails to either pay the remainder of the filing fee or to submit a motion to proceed in forma pauperis, this matter will be dismissed without further notice and without prejudice. The Clerk of the court is directed to set a pro se case management deadline in this case with the following text: December 29, 2008: deadline for Plaintiff to pay balance of fee or file IFP motion. The Clerk of the court is directed not to issue summons in this matter pending further order of the court. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00510-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00510/USCOURTS-ned-8_08-cv-00510-1/mods.xml">
+ <titleInfo>
+  <title>Loppnow v. United States of America et al</title>
+  <subTitle>MEMORANDUM AND ORDER - This matter is dismissed without prejudice because Plaintiff failed to prosecute this matter diligently and failed to comply with this court&apos;s orders. A separate judgment will be entered in accordance with this Memorandum and Order.Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(JAE, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00510-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817ffb58</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00510/USCOURTS-ned-8_08-cv-00510-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00510_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00510/USCOURTS-ned-8_08-cv-00510-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00510/pdf/USCOURTS-ned-8_08-cv-00510-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00510; Loppnow v. United States of America et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00510-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-13</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - This matter is dismissed without prejudice because Plaintiff failed to prosecute this matter diligently and failed to comply with this court&apos;s orders. A separate judgment will be entered in accordance with this Memorandum and Order.Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(JAE, )</docketText>
+</extension>
+</relatedItem>
+</mods>

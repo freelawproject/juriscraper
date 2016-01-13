@@ -1,0 +1,307 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181917520">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-14932</identifier>
+<identifier type="local">P0b002ee181917520</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_07-cv-14932</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-cv-14932</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-cv-14932</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Brenda" fullName="Brenda Brewington" lastName="Brewington" role="Defendant"></party>
+ <party firstName="Douglas" fullName="Douglas Gaston" lastName="Gaston" role="Defendant"></party>
+ <party firstName="David" fullName="David Kral" lastName="Kral" role="Plaintiff"></party>
+ <party firstName="Jeffery" fullName="Jeffery Paulsen" lastName="Paulsen" role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven Swensen" lastName="Swensen" role="Defendant"></party>
+ <party firstName="James" fullName="James Tabeling" lastName="Tabeling" role="Defendant"></party>
+ <party fullName="Tanel" lastName="Tanel" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Kral v. Tabeling et al</title>
+ <partNumber>2:07-cv-14932</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-14932/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-14932;07-14932</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Brenda Brewington</displayForm>
+ <namePart type="family">Brewington</namePart>
+ <namePart type="given">Brenda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Douglas Gaston</displayForm>
+ <namePart type="family">Gaston</namePart>
+ <namePart type="given">Douglas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Kral</displayForm>
+ <namePart type="family">Kral</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffery Paulsen</displayForm>
+ <namePart type="family">Paulsen</namePart>
+ <namePart type="given">Jeffery</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Steven Swensen</displayForm>
+ <namePart type="family">Swensen</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Tabeling</displayForm>
+ <namePart type="family">Tabeling</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tanel</displayForm>
+ <namePart type="family">Tanel</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-cv-14932</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-cv-14932</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Brenda" fullName="Brenda Brewington" lastName="Brewington" role="Defendant"></party>
+ <party firstName="Douglas" fullName="Douglas Gaston" lastName="Gaston" role="Defendant"></party>
+ <party firstName="David" fullName="David Kral" lastName="Kral" role="Plaintiff"></party>
+ <party firstName="Jeffery" fullName="Jeffery Paulsen" lastName="Paulsen" role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven Swensen" lastName="Swensen" role="Defendant"></party>
+ <party firstName="James" fullName="James Tabeling" lastName="Tabeling" role="Defendant"></party>
+ <party fullName="Tanel" lastName="Tanel" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-14932-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-0/mods.xml">
+ <titleInfo>
+  <title>Kral v. Tabeling et al</title>
+  <subTitle>REPORT AND RECOMMENDATION re 19 MOTION for Default Judgment as to James Tabeling, Douglas Gaston, Jeffery Paulsen, Steven Swensen, Brenda Brewington, Tanel filed by David Kral, 21 MOTION for Judgment filed by David Kral Signed by Magistrate Judge R. Steven Whalen. (GWil, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-14932-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819a0e3f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-0</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-14932_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-14932/pdf/USCOURTS-mied-2_07-cv-14932-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-14932; Kral v. Tabeling et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-14932-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-05-27</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 19 MOTION for Default Judgment as to James Tabeling, Douglas Gaston, Jeffery Paulsen, Steven Swensen, Brenda Brewington, Tanel filed by David Kral, 21 MOTION for Judgment filed by David Kral Signed by Magistrate Judge R. Steven Whalen. (GWil, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-14932-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-1/mods.xml">
+ <titleInfo>
+  <title>Kral v. Tabeling et al</title>
+  <subTitle>ORDER denying 21 Motion for Judgment; denying 23 Report and Recommendation. Signed by District Judge Denise Page Hood. (BLew) [FILING ERROR: DOCUMENT IS ORDER ADOPTING 23 REPORT AN RECOMMENDATION] Modified on 9/26/2008 (DEld).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-14932-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819a0e40</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-1</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-14932_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-14932/pdf/USCOURTS-mied-2_07-cv-14932-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-14932; Kral v. Tabeling et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-14932-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-07-29</dateIssued>
+  <docketText>ORDER denying 21 Motion for Judgment; denying 23 Report and Recommendation. Signed by District Judge Denise Page Hood. (BLew) [FILING ERROR: DOCUMENT IS ORDER ADOPTING 23 REPORT AN RECOMMENDATION] Modified on 9/26/2008 (DEld).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-14932-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-2/mods.xml">
+ <titleInfo>
+  <title>Kral v. Tabeling et al</title>
+  <subTitle>REPORT AND RECOMMENDATION re 20 MOTION to Dismiss filed by Steven Swensen, Douglas Gaston, James Tabeling, Tanel, Jeffery Paulsen, Brenda Brewington. Signed by Magistrate Judge R. Steven Whalen. (GWil)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-14932-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819a0f80</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-2</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-14932_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-14932/pdf/USCOURTS-mied-2_07-cv-14932-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-14932; Kral v. Tabeling et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-14932-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-12-18</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 20 MOTION to Dismiss filed by Steven Swensen, Douglas Gaston, James Tabeling, Tanel, Jeffery Paulsen, Brenda Brewington. Signed by Magistrate Judge R. Steven Whalen. (GWil)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-14932-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-3/mods.xml">
+ <titleInfo>
+  <title>Kral v. Tabeling et al</title>
+  <subTitle>ORDER denying 13 Motion to Amend/Correct; denying 14 Motion to Amend/Correct. Signed by Magistrate Judge R. Steven Whalen. (GWil)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-14932-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819a0f7f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-3</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-14932_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-14932/pdf/USCOURTS-mied-2_07-cv-14932-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-14932; Kral v. Tabeling et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-14932-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-12-18</dateIssued>
+  <docketText>ORDER denying 13 Motion to Amend/Correct; denying 14 Motion to Amend/Correct. Signed by Magistrate Judge R. Steven Whalen. (GWil)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-14932-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-4/mods.xml">
+ <titleInfo>
+  <title>Kral v. Tabeling et al</title>
+  <subTitle>Order Accepting Report and Recommendation and Dismissing Complaint with Prejudice Signed by District Judge Denise Page Hood. (JCre)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-14932-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819a0e41</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-4</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-14932_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-14932/USCOURTS-mied-2_07-cv-14932-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-14932/pdf/USCOURTS-mied-2_07-cv-14932-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-14932; Kral v. Tabeling et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-14932-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-01-29</dateIssued>
+  <docketText>Order Accepting Report and Recommendation and Dismissing Complaint with Prejudice Signed by District Judge Denise Page Hood. (JCre)</docketText>
+</extension>
+</relatedItem>
+</mods>

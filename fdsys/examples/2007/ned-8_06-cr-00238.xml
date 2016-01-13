@@ -1,0 +1,230 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a06d5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00238</identifier>
+<identifier type="local">P0b002ee1817a06d5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cr-00238</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00238</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00238</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Fabian" fullName="Fabian Arturo Jimenez-Ortiz" lastName="Jimenez-Ortiz" middleName="Arturo" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Jimenez-Ortiz</title>
+ <partNumber>8:06-cr-00238</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00238/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cr-00238;06-238</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Fabian Arturo Jimenez-Ortiz</displayForm>
+ <namePart type="family">Jimenez-Ortiz</namePart>
+ <namePart type="given">Fabian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00238</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00238</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Fabian" fullName="Fabian Arturo Jimenez-Ortiz" lastName="Jimenez-Ortiz" middleName="Arturo" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00238-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00238/USCOURTS-ned-8_06-cr-00238-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Jimenez-Ortiz</title>
+  <subTitle>ORDER granting 5 Oral Motion to Appoint Counsel. The Federal Public Defender is appointed to represent Fabian Arturo Jimenez-Ortiz (1). Signed by Magistrate Judge F. A. Gossett on 7/27/2006. (MKR, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00238-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18182b537</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00238/USCOURTS-ned-8_06-cr-00238-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00238_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00238/USCOURTS-ned-8_06-cr-00238-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00238/pdf/USCOURTS-ned-8_06-cr-00238-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00238; USA v. Jimenez-Ortiz; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00238-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-07-27</dateIssued>
+  <docketText>ORDER granting 5 Oral Motion to Appoint Counsel. The Federal Public Defender is appointed to represent Fabian Arturo Jimenez-Ortiz (1). Signed by Magistrate Judge F. A. Gossett on 7/27/2006. (MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00238-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00238/USCOURTS-ned-8_06-cr-00238-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Jimenez-Ortiz</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Fabian Arturo Jimenez-Ortiz. Signed by Magistrate Judge F. A. Gossett on 7/27/2006. (MKR, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00238-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18182b592</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00238/USCOURTS-ned-8_06-cr-00238-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00238_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00238/USCOURTS-ned-8_06-cr-00238-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00238/pdf/USCOURTS-ned-8_06-cr-00238-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00238; USA v. Jimenez-Ortiz; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00238-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-07-27</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Fabian Arturo Jimenez-Ortiz. Signed by Magistrate Judge F. A. Gossett on 7/27/2006. (MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00238-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00238/USCOURTS-ned-8_06-cr-00238-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Jimenez-Ortiz</title>
+  <subTitle>ORDER granting 13 Motion to Withdraw as Attorney as to Fabian Arturo Jimenez-Ortiz. David M. O&apos;Neill shall be deemed withdrawn as attorney of record and shall forthwith provide James E. Mitchell with the discovery materials provided the defendant by the government and such other materials obtained by Mr. O&apos;Neill which are material to the defendant&apos;s defense. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00238-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18182b536</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00238/USCOURTS-ned-8_06-cr-00238-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00238_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00238/USCOURTS-ned-8_06-cr-00238-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00238/pdf/USCOURTS-ned-8_06-cr-00238-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00238; USA v. Jimenez-Ortiz; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00238-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-09-21</dateIssued>
+  <docketText>ORDER granting 13 Motion to Withdraw as Attorney as to Fabian Arturo Jimenez-Ortiz. David M. O&apos;Neill shall be deemed withdrawn as attorney of record and shall forthwith provide James E. Mitchell with the discovery materials provided the defendant by the government and such other materials obtained by Mr. O&apos;Neill which are material to the defendant&apos;s defense. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00238-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00238/USCOURTS-ned-8_06-cr-00238-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Jimenez-Ortiz</title>
+  <subTitle>JUDGMENT as to Fabian Arturo Jimenez-Ortiz, Defendant pleaded guilty to Count I of the Indictment and is sentenced to 24 months in the Bureau of Prisons followed by 3 years of Supervised Release; the $100.00 Special Assessment is remitted on motion of the government; the defendant is remanded to the custody of the Bureau of Prisons as to defendant(s) Fabian Arturo Jimenez-Ortiz Ordered by Judge Joseph F. Bataillon.(PCV, ) (4 cert copies to US Marshal)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00238-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18182b591</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00238/USCOURTS-ned-8_06-cr-00238-3</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00238_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00238/USCOURTS-ned-8_06-cr-00238-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00238/pdf/USCOURTS-ned-8_06-cr-00238-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00238; USA v. Jimenez-Ortiz; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00238-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-01-11</dateIssued>
+  <docketText>JUDGMENT as to Fabian Arturo Jimenez-Ortiz, Defendant pleaded guilty to Count I of the Indictment and is sentenced to 24 months in the Bureau of Prisons followed by 3 years of Supervised Release; the $100.00 Special Assessment is remitted on motion of the government; the defendant is remanded to the custody of the Bureau of Prisons as to defendant(s) Fabian Arturo Jimenez-Ortiz Ordered by Judge Joseph F. Bataillon.(PCV, ) (4 cert copies to US Marshal)</docketText>
+</extension>
+</relatedItem>
+</mods>

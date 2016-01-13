@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1825b4e22">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-04-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-04-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-cv-02334</identifier>
+<identifier type="local">P0b002ee1825b4e22</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-04-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-04-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_11-cv-02334</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_11-cv-02334</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:11-cv-02334</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>140</natureSuitCode>
+ <natureSuit>Negotiable Instruments</natureSuit>
+ <cause>28:1332 Diversity-Negotiable Instrument</cause>
+ <party fullName="Household Realty Corporation" lastName="Household Realty Corporation" role="Defendant"></party>
+ <party firstName="Ronnie" fullName="Ronnie Moore" lastName="Moore" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Ronnie Moore v. Household Realty Corporation</title>
+ <partNumber>1:11-cv-02334</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-cv-02334/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-02334;11-2334</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Household Realty Corporation</displayForm>
+ <namePart type="family">Household Realty Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronnie Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">Ronnie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_11-cv-02334</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:11-cv-02334</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>140</natureSuitCode>
+ <natureSuit>Negotiable Instruments</natureSuit>
+ <cause>28:1332 Diversity-Negotiable Instrument</cause>
+ <party fullName="Household Realty Corporation" lastName="Household Realty Corporation" role="Defendant"></party>
+ <party firstName="Ronnie" fullName="Ronnie Moore" lastName="Moore" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_11-cv-02334-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-cv-02334/USCOURTS-ohnd-1_11-cv-02334-0/mods.xml">
+ <titleInfo>
+  <title>Ronnie Moore v. Household Realty Corporation</title>
+  <subTitle>Opinion and Order. Accordingly, Plaintiff&apos;s Application to Proceed In Forma Pauperis is granted, Defendant&apos;s Motion to Dismiss is granted and this action is dismissed. The Court certifies pursuant to 28 USC 1915(a)(3), that an appeal from this decision could not be taken in good faith, re 1 Complaint filed by Ronnie Moore. Judge Christopher A. Boyko on 1/9/2012. (M,M) (Main Document 5 replaced on 1/9/2012) (M,M).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_11-cv-02334-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825b88bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-cv-02334/USCOURTS-ohnd-1_11-cv-02334-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_11-cv-02334_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-cv-02334/USCOURTS-ohnd-1_11-cv-02334-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-cv-02334/pdf/USCOURTS-ohnd-1_11-cv-02334-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-02334; Ronnie Moore v. Household Realty Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_11-cv-02334-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>Opinion and Order. Accordingly, Plaintiff&apos;s Application to Proceed In Forma Pauperis is granted, Defendant&apos;s Motion to Dismiss is granted and this action is dismissed. The Court certifies pursuant to 28 USC 1915(a)(3), that an appeal from this decision could not be taken in good faith, re 1 Complaint filed by Ronnie Moore. Judge Christopher A. Boyko on 1/9/2012. (M,M) (Main Document 5 replaced on 1/9/2012) (M,M).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_11-cv-02334-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-cv-02334/USCOURTS-ohnd-1_11-cv-02334-1/mods.xml">
+ <titleInfo>
+  <title>Ronnie Moore v. Household Realty Corporation</title>
+  <subTitle>Order denying Defendant&apos;s Motion to Strike...(more) (Related Doc # 8). Judge Christopher A. Boyko on 4/19/2012.(M,M)(Added document and regenerated on 4/20/2012) (P,G).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_11-cv-02334-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825b88bb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-cv-02334/USCOURTS-ohnd-1_11-cv-02334-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_11-cv-02334_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-cv-02334/USCOURTS-ohnd-1_11-cv-02334-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-cv-02334/pdf/USCOURTS-ohnd-1_11-cv-02334-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-02334; Ronnie Moore v. Household Realty Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_11-cv-02334-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-04-19</dateIssued>
+  <docketText>Order denying Defendant&apos;s Motion to Strike...(more) (Related Doc # 8). Judge Christopher A. Boyko on 4/19/2012.(M,M)(Added document and regenerated on 4/20/2012) (P,G).</docketText>
+</extension>
+</relatedItem>
+</mods>

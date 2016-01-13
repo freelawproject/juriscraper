@@ -1,0 +1,416 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18195cbb7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10259</identifier>
+<identifier type="local">P0b002ee18195cbb7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_07-cv-10259</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-cv-10259</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-cv-10259</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>400</natureSuitCode>
+ <natureSuit>State Reapportionment</natureSuit>
+ <party firstName="Eileen" fullName="Eileen Adams" lastName="Adams" role="Plaintiff"></party>
+ <party firstName="Harold" fullName="Harold Adams" lastName="Adams" role="Plaintiff"></party>
+ <party firstName="Joshua" fullName="Joshua Adams" lastName="Adams" role="Plaintiff"></party>
+ <party firstName="Pamela" fullName="Pamela Armisted" lastName="Armisted" role="Plaintiff"></party>
+ <party firstName="Bob" fullName="Bob Butler" lastName="Butler" role="Movant"></party>
+ <party firstName="Estill" fullName="Estill Gerald Caudill" lastName="Caudill" middleName="Gerald" role="Movant"></party>
+ <party firstName="Joseph" fullName="Joseph Chauvin" lastName="Chauvin" role="Plaintiff"></party>
+ <party firstName="Kathleen" fullName="Kathleen Chauvin" lastName="Chauvin" role="Plaintiff"></party>
+ <party firstName="Darren" fullName="Darren Findling" lastName="Findling" role="Movant"></party>
+ <party fullName="J. B." lastName="J. B." role="Plaintiff"></party>
+ <party firstName="Gary" fullName="Gary Parks" lastName="Parks" role="Plaintiff"></party>
+ <party firstName="Towanda" fullName="Towanda Parks" lastName="Parks" role="Plaintiff"></party>
+ <party firstName="Aaron" fullName="Aaron J. Scheinfield" lastName="Scheinfield" middleName="J." role="Interested Party"></party>
+ <party fullName="State Farm Mutual Automobile Insurance Company" lastName="State Farm Mutual Automobile Insurance Company" role="Defendant"></party>
+ <party firstName="Leslie" fullName="Leslie Stewart" lastName="Stewart" role="Plaintiff"></party>
+ <party firstName="Jerry" fullName="Jerry Wagner" lastName="Wagner" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Armisted et al v. State Farm Mutual Automobile Insurance Company</title>
+ <partNumber>2:07-cv-10259</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10259/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-10259;07-10259</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Eileen Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Eileen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Harold Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Harold</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joshua Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Joshua</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Pamela Armisted</displayForm>
+ <namePart type="family">Armisted</namePart>
+ <namePart type="given">Pamela</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Bob Butler</displayForm>
+ <namePart type="family">Butler</namePart>
+ <namePart type="given">Bob</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Estill Gerald Caudill</displayForm>
+ <namePart type="family">Caudill</namePart>
+ <namePart type="given">Estill</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Chauvin</displayForm>
+ <namePart type="family">Chauvin</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kathleen Chauvin</displayForm>
+ <namePart type="family">Chauvin</namePart>
+ <namePart type="given">Kathleen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Darren Findling</displayForm>
+ <namePart type="family">Findling</namePart>
+ <namePart type="given">Darren</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>J. B.</displayForm>
+ <namePart type="family">J. B.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Parks</displayForm>
+ <namePart type="family">Parks</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Towanda Parks</displayForm>
+ <namePart type="family">Parks</namePart>
+ <namePart type="given">Towanda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Aaron J. Scheinfield</displayForm>
+ <namePart type="family">Scheinfield</namePart>
+ <namePart type="given">Aaron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>State Farm Mutual Automobile Insurance Company</displayForm>
+ <namePart type="family">State Farm Mutual Automobile Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leslie Stewart</displayForm>
+ <namePart type="family">Stewart</namePart>
+ <namePart type="given">Leslie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jerry Wagner</displayForm>
+ <namePart type="family">Wagner</namePart>
+ <namePart type="given">Jerry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-cv-10259</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-cv-10259</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>400</natureSuitCode>
+ <natureSuit>State Reapportionment</natureSuit>
+ <party firstName="Eileen" fullName="Eileen Adams" lastName="Adams" role="Plaintiff"></party>
+ <party firstName="Harold" fullName="Harold Adams" lastName="Adams" role="Plaintiff"></party>
+ <party firstName="Joshua" fullName="Joshua Adams" lastName="Adams" role="Plaintiff"></party>
+ <party firstName="Pamela" fullName="Pamela Armisted" lastName="Armisted" role="Plaintiff"></party>
+ <party firstName="Bob" fullName="Bob Butler" lastName="Butler" role="Movant"></party>
+ <party firstName="Estill" fullName="Estill Gerald Caudill" lastName="Caudill" middleName="Gerald" role="Movant"></party>
+ <party firstName="Joseph" fullName="Joseph Chauvin" lastName="Chauvin" role="Plaintiff"></party>
+ <party firstName="Kathleen" fullName="Kathleen Chauvin" lastName="Chauvin" role="Plaintiff"></party>
+ <party firstName="Darren" fullName="Darren Findling" lastName="Findling" role="Movant"></party>
+ <party fullName="J. B." lastName="J. B." role="Plaintiff"></party>
+ <party firstName="Gary" fullName="Gary Parks" lastName="Parks" role="Plaintiff"></party>
+ <party firstName="Towanda" fullName="Towanda Parks" lastName="Parks" role="Plaintiff"></party>
+ <party firstName="Aaron" fullName="Aaron J. Scheinfield" lastName="Scheinfield" middleName="J." role="Interested Party"></party>
+ <party fullName="State Farm Mutual Automobile Insurance Company" lastName="State Farm Mutual Automobile Insurance Company" role="Defendant"></party>
+ <party firstName="Leslie" fullName="Leslie Stewart" lastName="Stewart" role="Plaintiff"></party>
+ <party firstName="Jerry" fullName="Jerry Wagner" lastName="Wagner" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10259-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-0/mods.xml">
+ <titleInfo>
+  <title>Armisted et al v. State Farm Mutual Automobile Insurance Company</title>
+  <subTitle>ORDER denying 25 Motion to Alter/Expand Rule 33 and Rule 30 Limitations on Discovery. Signed by Honorable Donald A Scheer. (MLan)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10259-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a6cd8b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-0</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10259_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10259/pdf/USCOURTS-mied-2_07-cv-10259-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10259; Armisted et al v. State Farm Mutual Automobile Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10259-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-11-19</dateIssued>
+  <docketText>ORDER denying 25 Motion to Alter/Expand Rule 33 and Rule 30 Limitations on Discovery. Signed by Honorable Donald A Scheer. (MLan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10259-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-1/mods.xml">
+ <titleInfo>
+  <title>Armisted et al v. State Farm Mutual Automobile Insurance Company</title>
+  <subTitle>ORDER DENYING PLAINTIFFS&apos; OBJECTIONS [DE 56] AND AFFIRMING MAGISTRATAE JUDGE&apos;S RULING [DE 55] Signed by Honorable Arthur J Tarnow. (TTay)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10259-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a6cd8e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-1</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10259_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10259/pdf/USCOURTS-mied-2_07-cv-10259-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10259; Armisted et al v. State Farm Mutual Automobile Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10259-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-02-19</dateIssued>
+  <docketText>ORDER DENYING PLAINTIFFS&apos; OBJECTIONS [DE 56] AND AFFIRMING MAGISTRATAE JUDGE&apos;S RULING [DE 55] Signed by Honorable Arthur J Tarnow. (TTay)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10259-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-2/mods.xml">
+ <titleInfo>
+  <title>Armisted et al v. State Farm Mutual Automobile Insurance Company</title>
+  <subTitle>ORDER denying 77 Motion to Disqualify Counsel. Signed by Magistrate Judge Donald A Scheer. (MLan)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10259-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a6ce4a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-2</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10259_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10259/pdf/USCOURTS-mied-2_07-cv-10259-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10259; Armisted et al v. State Farm Mutual Automobile Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10259-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-04-03</dateIssued>
+  <docketText>ORDER denying 77 Motion to Disqualify Counsel. Signed by Magistrate Judge Donald A Scheer. (MLan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10259-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-3/mods.xml">
+ <titleInfo>
+  <title>Armisted et al v. State Farm Mutual Automobile Insurance Company</title>
+  <subTitle>ORDER denying 165 Motion to Modify Protective Order. Signed by Magistrate Judge Donald A Scheer. (MLan)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10259-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a6cd8d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-3</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10259_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10259/pdf/USCOURTS-mied-2_07-cv-10259-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10259; Armisted et al v. State Farm Mutual Automobile Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10259-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-09-25</dateIssued>
+  <docketText>ORDER denying 165 Motion to Modify Protective Order. Signed by Magistrate Judge Donald A Scheer. (MLan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10259-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-4/mods.xml">
+ <titleInfo>
+  <title>Armisted et al v. State Farm Mutual Automobile Insurance Company</title>
+  <subTitle>REPORT AND RECOMMENDATION re 155 MOTION for Default Judgment as to State Farm Mutual Automobile Insurance Company for Continued and Repeated Intentional Discovery Abuses filed by Pamela Armisted, 162 SEALED MOTION for Default Judgment for Failure to Produce Documents in Violation of Court Order filed by Pamela Armisted. Signed by Magistrate Judge Donald A Scheer. (MLan)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10259-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a6cd8c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-4</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10259_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10259/pdf/USCOURTS-mied-2_07-cv-10259-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10259; Armisted et al v. State Farm Mutual Automobile Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10259-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-10-23</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 155 MOTION for Default Judgment as to State Farm Mutual Automobile Insurance Company for Continued and Repeated Intentional Discovery Abuses filed by Pamela Armisted, 162 SEALED MOTION for Default Judgment for Failure to Produce Documents in Violation of Court Order filed by Pamela Armisted. Signed by Magistrate Judge Donald A Scheer. (MLan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10259-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-5/mods.xml">
+ <titleInfo>
+  <title>Armisted et al v. State Farm Mutual Automobile Insurance Company</title>
+  <subTitle>ORDER denying 155 Motion for Default Judgment; denying 162 Sealed Motion and reserving Ruling as to the Appropriate Sanctions; accepting 219 Report and Recommendation ; denying 227 and 234 Plaintiffs&apos; and Defendant&apos;s Objections; affirming 216 Magistrate&apos;s order; denying 222 Plaintiffs&apos; Objection and denying 202 Plaintiff&apos;s Motion to Strike Defendant&apos;s Expert Witnesses; finding as moot 224 Motion ; granting 236 Motion to Strike; finding as moot 264 Motion for Leave to File; finding as moot 265 Motion. Signed by District Judge Arthur J Tarnow. (Ware, L.)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10259-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a6cd8a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-5</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10259_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10259/USCOURTS-mied-2_07-cv-10259-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10259/pdf/USCOURTS-mied-2_07-cv-10259-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10259; Armisted et al v. State Farm Mutual Automobile Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10259-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-01-09</dateIssued>
+  <docketText>ORDER denying 155 Motion for Default Judgment; denying 162 Sealed Motion and reserving Ruling as to the Appropriate Sanctions; accepting 219 Report and Recommendation ; denying 227 and 234 Plaintiffs&apos; and Defendant&apos;s Objections; affirming 216 Magistrate&apos;s order; denying 222 Plaintiffs&apos; Objection and denying 202 Plaintiff&apos;s Motion to Strike Defendant&apos;s Expert Witnesses; finding as moot 224 Motion ; granting 236 Motion to Strike; finding as moot 264 Motion for Leave to File; finding as moot 265 Motion. Signed by District Judge Arthur J Tarnow. (Ware, L.)</docketText>
+</extension>
+</relatedItem>
+</mods>

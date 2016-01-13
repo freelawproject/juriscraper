@@ -1,0 +1,295 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a18b28">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_96-cr-00053</identifier>
+<identifier type="local">P0b002ee183a18b28</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_96-cr-00053</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_96-cr-00053</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:96-cr-00053</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Anthony" fullName="Anthony J. Andretti" lastName="Andretti" middleName="J." role="Defendant"></party>
+ <party firstName="Domenic" fullName="Domenic E. Taulli" lastName="Taulli" middleName="E." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Andretti</title>
+ <partNumber>8:96-cr-00053</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_96-cr-00053/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:96-cr-00053;96-053</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Anthony J. Andretti</displayForm>
+ <namePart type="family">Andretti</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Domenic E. Taulli</displayForm>
+ <namePart type="family">Taulli</namePart>
+ <namePart type="given">Domenic</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_96-cr-00053</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:96-cr-00053</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Anthony" fullName="Anthony J. Andretti" lastName="Andretti" middleName="J." role="Defendant"></party>
+ <party firstName="Domenic" fullName="Domenic E. Taulli" lastName="Taulli" middleName="E." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_96-cr-00053-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Andretti</title>
+  <subTitle>ORDERED that, in the interest of judicial economy, this case is reassigned to District Judge Laurie Smith Camp and Magistrate Judge Thomas D. Thalken for judicial supervision and processing of all pretrial matters. Judge William G. Cambridge no longer assigned to the case. as to defendant(s) Anthony J. Andretti Ordered by Judge Joseph F. Bataillon.(PCV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_96-cr-00053-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a20ccc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-0</identifier>
+ <identifier type="former granule identifier">ned-8_96-cr-00053_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_96-cr-00053/pdf/USCOURTS-ned-8_96-cr-00053-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:96-cr-00053; USA v. Andretti; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_96-cr-00053-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-10-13</dateIssued>
+  <docketText>ORDERED that, in the interest of judicial economy, this case is reassigned to District Judge Laurie Smith Camp and Magistrate Judge Thomas D. Thalken for judicial supervision and processing of all pretrial matters. Judge William G. Cambridge no longer assigned to the case. as to defendant(s) Anthony J. Andretti Ordered by Judge Joseph F. Bataillon.(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_96-cr-00053-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Andretti</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Anthony J. Andretti - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_96-cr-00053-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a20ccd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-1</identifier>
+ <identifier type="former granule identifier">ned-8_96-cr-00053_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_96-cr-00053/pdf/USCOURTS-ned-8_96-cr-00053-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:96-cr-00053; USA v. Andretti; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_96-cr-00053-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-08-20</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Anthony J. Andretti - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_96-cr-00053-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Andretti</title>
+  <subTitle>ORDER as to defendant Anthony J. Andretti - The government&apos;s motion for detention 24 pursuant to the Bail Reform Act is held in abeyance pending the defendant&apos;s coming into federal custody. The U.S. Marshal for the District of Nebraska is directed to place a detainer with the correctional officer having custody of the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (1 cert. copy to USM)(MBB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_96-cr-00053-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a20cc8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-2</identifier>
+ <identifier type="former granule identifier">ned-8_96-cr-00053_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_96-cr-00053/pdf/USCOURTS-ned-8_96-cr-00053-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:96-cr-00053; USA v. Andretti; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_96-cr-00053-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-08-21</dateIssued>
+  <docketText>ORDER as to defendant Anthony J. Andretti - The government&apos;s motion for detention 24 pursuant to the Bail Reform Act is held in abeyance pending the defendant&apos;s coming into federal custody. The U.S. Marshal for the District of Nebraska is directed to place a detainer with the correctional officer having custody of the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (1 cert. copy to USM)(MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_96-cr-00053-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Andretti</title>
+  <subTitle>JUDGMENT for Revocation of Supervised Release as to Anthony J. Andretti (1). Defendant admitted guilt to violation of the Mandatory Condition of the term of supervision and is committed to the custody of the Bureau of Prisons for a term of 15 months, to be served consecutively to the time imposed in state court; 45 months supervised release with special conditions; $50 special assessment has been paid; $14,954.92 restitution remains due and payable, as to defendant Anthony J. Andretti. Ordered by Judge Laurie Smith Camp. (4 Certified copies to USM)(JAE, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_96-cr-00053-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a20ccb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-3</identifier>
+ <identifier type="former granule identifier">ned-8_96-cr-00053_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_96-cr-00053/pdf/USCOURTS-ned-8_96-cr-00053-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:96-cr-00053; USA v. Andretti; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_96-cr-00053-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-11-21</dateIssued>
+  <docketText>JUDGMENT for Revocation of Supervised Release as to Anthony J. Andretti (1). Defendant admitted guilt to violation of the Mandatory Condition of the term of supervision and is committed to the custody of the Bureau of Prisons for a term of 15 months, to be served consecutively to the time imposed in state court; 45 months supervised release with special conditions; $50 special assessment has been paid; $14,954.92 restitution remains due and payable, as to defendant Anthony J. Andretti. Ordered by Judge Laurie Smith Camp. (4 Certified copies to USM)(JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_96-cr-00053-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Andretti</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant as to defendant Anthony J. Andretti. Ordered by Magistrate Judge Thomas D. Thalken. (ADB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_96-cr-00053-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a20cc9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-4</identifier>
+ <identifier type="former granule identifier">ned-8_96-cr-00053_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_96-cr-00053/pdf/USCOURTS-ned-8_96-cr-00053-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:96-cr-00053; USA v. Andretti; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_96-cr-00053-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant as to defendant Anthony J. Andretti. Ordered by Magistrate Judge Thomas D. Thalken. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_96-cr-00053-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Andretti</title>
+  <subTitle>ORDER as to defendant Anthony J. Andretti. A final dispositional hearing will be held before Chief Judge Laurie Smith Camp in Courtroom No. 2, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, at 10:30 a.m. on February 14, 2013. Defendant must be present in person. Defendant Anthony Andretti is committed to the custody of the Attorney General or his designated representative for confinement in a correctional facility. Defendant shall be afforded a reasonable opportunity for private consultation with defense counsel. Upon order of a United States court or upon request of an attorney for the government, the person in charge of the corrections facility shall deliver defendant to the United States Marshal for the purpose of an appearance in connection with a court proceeding. Ordered by Magistrate Judge Thomas D. Thalken. (GJG)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_96-cr-00053-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a20cca</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-5</identifier>
+ <identifier type="former granule identifier">ned-8_96-cr-00053_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_96-cr-00053/USCOURTS-ned-8_96-cr-00053-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_96-cr-00053/pdf/USCOURTS-ned-8_96-cr-00053-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:96-cr-00053; USA v. Andretti; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_96-cr-00053-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER as to defendant Anthony J. Andretti. A final dispositional hearing will be held before Chief Judge Laurie Smith Camp in Courtroom No. 2, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, at 10:30 a.m. on February 14, 2013. Defendant must be present in person. Defendant Anthony Andretti is committed to the custody of the Attorney General or his designated representative for confinement in a correctional facility. Defendant shall be afforded a reasonable opportunity for private consultation with defense counsel. Upon order of a United States court or upon request of an attorney for the government, the person in charge of the corrections facility shall deliver defendant to the United States Marshal for the purpose of an appearance in connection with a court proceeding. Ordered by Magistrate Judge Thomas D. Thalken. (GJG)</docketText>
+</extension>
+</relatedItem>
+</mods>

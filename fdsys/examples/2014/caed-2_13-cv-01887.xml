@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1895cf2f6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-06-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-06-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01887</identifier>
+<identifier type="local">P0b002ee1895cf2f6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-06-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-06-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-01887</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01887</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01887</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>20:1400 Civil Rights of Handicapped Child</cause>
+ <party firstName="Robin" fullName="Robin Evans" lastName="Evans" role="Plaintiff"></party>
+ <party firstName="D." fullName="D. F." lastName="F." role="Plaintiff"></party>
+ <party fullName="Sacramento City Unified School District" lastName="Sacramento City Unified School District" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>D.F. et al v. Sacramento City Unified School District</title>
+ <partNumber>2:13-cv-01887</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01887/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-01887;13-1887</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Robin Evans</displayForm>
+ <namePart type="family">Evans</namePart>
+ <namePart type="given">Robin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>D. F.</displayForm>
+ <namePart type="family">F.</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sacramento City Unified School District</displayForm>
+ <namePart type="family">Sacramento City Unified School District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01887</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01887</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>20:1400 Civil Rights of Handicapped Child</cause>
+ <party firstName="Robin" fullName="Robin Evans" lastName="Evans" role="Plaintiff"></party>
+ <party firstName="D." fullName="D. F." lastName="F." role="Plaintiff"></party>
+ <party fullName="Sacramento City Unified School District" lastName="Sacramento City Unified School District" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01887-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01887/USCOURTS-caed-2_13-cv-01887-0/mods.xml">
+ <titleInfo>
+  <title>D.F. et al v. Sacramento City Unified School District</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 9/13/13 granting 3 plaintiff Robin Evan&apos;s Motion for Appointment as Guardian ad Litem of plantiff D.F. (Kastilahn, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01887/pdf/USCOURTS-caed-2_13-cv-01887-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895deb02</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01887/USCOURTS-caed-2_13-cv-01887-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01887_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01887/USCOURTS-caed-2_13-cv-01887-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01887/pdf/USCOURTS-caed-2_13-cv-01887-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01887; D.F. et al v. Sacramento City Unified School District; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01887-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-09-13</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 9/13/13 granting 3 plaintiff Robin Evan&apos;s Motion for Appointment as Guardian ad Litem of plantiff D.F. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01887-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01887/USCOURTS-caed-2_13-cv-01887-1/mods.xml">
+ <titleInfo>
+  <title>D.F. et al v. Sacramento City Unified School District</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 12/18/2013 ORDERING this matter REFERRED to the VDRP Administrator. The VDRP process shall take place in February 2014. The Neutral shall file a confirmation of completion no later than 2/28/2014. (CC VDRP Administrator) (Donati, J)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01887/pdf/USCOURTS-caed-2_13-cv-01887-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895de536</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01887/USCOURTS-caed-2_13-cv-01887-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01887_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01887/USCOURTS-caed-2_13-cv-01887-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01887/pdf/USCOURTS-caed-2_13-cv-01887-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01887; D.F. et al v. Sacramento City Unified School District; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01887-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-12-18</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 12/18/2013 ORDERING this matter REFERRED to the VDRP Administrator. The VDRP process shall take place in February 2014. The Neutral shall file a confirmation of completion no later than 2/28/2014. (CC VDRP Administrator) (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01887-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01887/USCOURTS-caed-2_13-cv-01887-2/mods.xml">
+ <titleInfo>
+  <title>D.F. et al v. Sacramento City Unified School District</title>
+  <subTitle>5/23/2014. (Kastilahn, A)STATUS (PRETRIAL SCHEDULING) ORDER signed by Senior Judge William B. Shubb on 1/2/14 ORDERING that the Status (Pretrial Scheduling) Conference scheduled for 1/6/2014 is hereby VACATED. The VDRP process shall take place in February 2014, and the Neutral shall file a confirmation of completion of the VDRP process no later than 2/28/2014. The parties shall disclose any experts and produce any reports by no later than 4/7/2014. Any discovery, including depositions for preservation of testimony, is left open, save and except that it shall be so conducted as to be completed by 5/1/2014. All motions to compel discovery shall be heard not later than 5/1/2014. Motion for attorney&apos;s fees by plaintiff and any other motions shall be filed on or before 4/21/2014. The motion for attorneys&apos; fees shall be set for hearing on June 2, 2014, at 2:00 p.m. Defendant&apos;s opposition to that motion shall be filed no later than 5/12/2014, and plaintiffs reply shall be filed no later than</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01887/pdf/USCOURTS-caed-2_13-cv-01887-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895de535</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01887/USCOURTS-caed-2_13-cv-01887-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01887_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01887/USCOURTS-caed-2_13-cv-01887-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01887/pdf/USCOURTS-caed-2_13-cv-01887-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01887; D.F. et al v. Sacramento City Unified School District; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01887-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>5/23/2014. (Kastilahn, A)STATUS (PRETRIAL SCHEDULING) ORDER signed by Senior Judge William B. Shubb on 1/2/14 ORDERING that the Status (Pretrial Scheduling) Conference scheduled for 1/6/2014 is hereby VACATED. The VDRP process shall take place in February 2014, and the Neutral shall file a confirmation of completion of the VDRP process no later than 2/28/2014. The parties shall disclose any experts and produce any reports by no later than 4/7/2014. Any discovery, including depositions for preservation of testimony, is left open, save and except that it shall be so conducted as to be completed by 5/1/2014. All motions to compel discovery shall be heard not later than 5/1/2014. Motion for attorney&apos;s fees by plaintiff and any other motions shall be filed on or before 4/21/2014. The motion for attorneys&apos; fees shall be set for hearing on June 2, 2014, at 2:00 p.m. Defendant&apos;s opposition to that motion shall be filed no later than 5/12/2014, and plaintiffs reply shall be filed no later than</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01887-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01887/USCOURTS-caed-2_13-cv-01887-3/mods.xml">
+ <titleInfo>
+  <title>D.F. et al v. Sacramento City Unified School District</title>
+  <subTitle>MEMORANDUM and ORDER signed by Senior Judge William B. Shubb on 6/3/14 ORDERING that Plaintiff&apos;s MOTION for Attorneys&apos; Fees and Costs 25 is DENIED; The Clerk is istructed to close this file. CASE CLOSED. (Mena-Sanchez, L)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01887/pdf/USCOURTS-caed-2_13-cv-01887-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1895de537</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01887/USCOURTS-caed-2_13-cv-01887-3</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01887_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01887/USCOURTS-caed-2_13-cv-01887-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01887/pdf/USCOURTS-caed-2_13-cv-01887-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01887; D.F. et al v. Sacramento City Unified School District; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01887-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-06-04</dateIssued>
+  <docketText>MEMORANDUM and ORDER signed by Senior Judge William B. Shubb on 6/3/14 ORDERING that Plaintiff&apos;s MOTION for Attorneys&apos; Fees and Costs 25 is DENIED; The Clerk is istructed to close this file. CASE CLOSED. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+</mods>

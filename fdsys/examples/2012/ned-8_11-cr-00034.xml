@@ -1,0 +1,490 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183430ab3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-08-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-08-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034</identifier>
+<identifier type="local">P0b002ee183430ab3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-08-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-08-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cr-00034</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00034</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00034</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="AVitalsigns Unlimited" lastName="AVitalsigns Unlimited" role="Interested Party"></party>
+ <party firstName="Kathryn" fullName="Kathryn J. Derr" lastName="Derr" middleName="J." role="Interested Party"></party>
+ <party firstName="Calvin" fullName="Calvin Jacobs" lastName="Jacobs" role="Defendant"></party>
+ <party fullName="Parsonage Vandernack Williams" lastName="Parsonage Vandernack Williams" role="Interested Party"></party>
+ <party firstName="Robert" fullName="Robert True Jr." generation="Jr." lastName="True" role="Interested Party"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Jacobs</title>
+ <partNumber>8:11-cr-00034</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cr-00034;11-034</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>AVitalsigns Unlimited</displayForm>
+ <namePart type="family">AVitalsigns Unlimited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Kathryn J. Derr</displayForm>
+ <namePart type="family">Derr</namePart>
+ <namePart type="given">Kathryn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Calvin Jacobs</displayForm>
+ <namePart type="family">Jacobs</namePart>
+ <namePart type="given">Calvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Parsonage Vandernack Williams</displayForm>
+ <namePart type="family">Parsonage Vandernack Williams</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Robert True Jr.</displayForm>
+ <namePart type="family">True</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00034</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00034</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="AVitalsigns Unlimited" lastName="AVitalsigns Unlimited" role="Interested Party"></party>
+ <party firstName="Kathryn" fullName="Kathryn J. Derr" lastName="Derr" middleName="J." role="Interested Party"></party>
+ <party firstName="Calvin" fullName="Calvin Jacobs" lastName="Jacobs" role="Defendant"></party>
+ <party fullName="Parsonage Vandernack Williams" lastName="Parsonage Vandernack Williams" role="Interested Party"></party>
+ <party firstName="Robert" fullName="Robert True Jr." generation="Jr." lastName="True" role="Interested Party"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00034-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Jacobs</title>
+  <subTitle>ORDER that Jacobs&apos; oral motion for an extension of time to file pretrial motions is granted. Jacobs shall have to on or before April 29, 2011, in which to file pretrial motions in accordance with the progression order. The additional time arising as a result of the granting of the motion, i.e., from March 24, 2011, and April 29, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to defendant Calvin Jacobs. Ordered by Magistrate Judge Thomas D. Thalken. (ADB, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00034-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834327e1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00034_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/pdf/USCOURTS-ned-8_11-cr-00034-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00034; USA v. Jacobs; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00034-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-03-24</dateIssued>
+  <docketText>ORDER that Jacobs&apos; oral motion for an extension of time to file pretrial motions is granted. Jacobs shall have to on or before April 29, 2011, in which to file pretrial motions in accordance with the progression order. The additional time arising as a result of the granting of the motion, i.e., from March 24, 2011, and April 29, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to defendant Calvin Jacobs. Ordered by Magistrate Judge Thomas D. Thalken. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00034-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Jacobs</title>
+  <subTitle>ORDER and FINDINGS AND RECOMMENDATION regarding MOTION FOR DEPOSITION OR IN THE ALTERNATIVE TO DECLARE NEBRASKA CRIMINAL RULE 15.1 UNCONSTITUTIONAL, filing 14 as to defendant Calvin Jacobs. Jacobs&apos; motion for deposition (Filing No. 14) is denied. Jacobs&apos; Motion to Extend Time to File a Request for Pretrial Subpoenas (Filing No. 29) is granted. Jacobs shall have until on or before July 11, 2011, to file any request for pretrial subpoenas. IT IS RECOMMENDED TO CHIEF JUDGE JOSEPH F. BATAILLON that: Jacobs&apos; motion to declare Nebraska Criminal Rule 15.1 unconstitutional (Filing No. 14 ) be denied. Pursuant to NECrimR 59.2 any objection to this Findings and Recommendation and Order shall be filed with the Clerk of the Court within fourteen (14) days after being served with a copy of this Findings and Recommendation and Order. Ordered by Magistrate Judge Thomas D. Thalken. (GJG)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00034-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834327dc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00034_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/pdf/USCOURTS-ned-8_11-cr-00034-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00034; USA v. Jacobs; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00034-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-06-30</dateIssued>
+  <docketText>ORDER and FINDINGS AND RECOMMENDATION regarding MOTION FOR DEPOSITION OR IN THE ALTERNATIVE TO DECLARE NEBRASKA CRIMINAL RULE 15.1 UNCONSTITUTIONAL, filing 14 as to defendant Calvin Jacobs. Jacobs&apos; motion for deposition (Filing No. 14) is denied. Jacobs&apos; Motion to Extend Time to File a Request for Pretrial Subpoenas (Filing No. 29) is granted. Jacobs shall have until on or before July 11, 2011, to file any request for pretrial subpoenas. IT IS RECOMMENDED TO CHIEF JUDGE JOSEPH F. BATAILLON that: Jacobs&apos; motion to declare Nebraska Criminal Rule 15.1 unconstitutional (Filing No. 14 ) be denied. Pursuant to NECrimR 59.2 any objection to this Findings and Recommendation and Order shall be filed with the Clerk of the Court within fourteen (14) days after being served with a copy of this Findings and Recommendation and Order. Ordered by Magistrate Judge Thomas D. Thalken. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00034-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Jacobs</title>
+  <subTitle>ORDER - Jacobs&apos; motion for an extension of time to file pretrial motions (Filing No. 33) is granted. Jacobs shall have to on or before August 26, 2011, in which to file pretrial motions in accordance with the progression order. The additional time arising as a result of the granting of the motion, i.e., from July 12, 2011, to August 26, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Calvin Jacobs. Ordered by Magistrate Judge Thomas D. Thalken. ( TCL )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00034-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834327de</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00034_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/pdf/USCOURTS-ned-8_11-cr-00034-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00034; USA v. Jacobs; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00034-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-07-12</dateIssued>
+  <docketText>ORDER - Jacobs&apos; motion for an extension of time to file pretrial motions (Filing No. 33) is granted. Jacobs shall have to on or before August 26, 2011, in which to file pretrial motions in accordance with the progression order. The additional time arising as a result of the granting of the motion, i.e., from July 12, 2011, to August 26, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Calvin Jacobs. Ordered by Magistrate Judge Thomas D. Thalken. ( TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00034-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Jacobs</title>
+  <subTitle>ORDER granting 38 Motion to Extend as to Calvin Jacobs (1). Jacobs shall have to on or before September 15, 2011, in which to file pretrial motions in accordance with the progression order. The additional time arising as a result of the granting of the motion, i.e., from August 25, 2011, to September 15, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (ADB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00034-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834327da</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00034_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/pdf/USCOURTS-ned-8_11-cr-00034-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00034; USA v. Jacobs; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00034-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-08-25</dateIssued>
+  <docketText>ORDER granting 38 Motion to Extend as to Calvin Jacobs (1). Jacobs shall have to on or before September 15, 2011, in which to file pretrial motions in accordance with the progression order. The additional time arising as a result of the granting of the motion, i.e., from August 25, 2011, to September 15, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00034-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Jacobs</title>
+  <subTitle>ORDER granting 41 Motion to Extend as to Calvin Jacobs (1). Jacobs is given until on or before November 15, 2011, in which to file pretrial motions pursuant to the progression order. The time between September 15, 2011, and November 15, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (ADB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00034-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834327df</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-4</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00034_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/pdf/USCOURTS-ned-8_11-cr-00034-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00034; USA v. Jacobs; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00034-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-09-15</dateIssued>
+  <docketText>ORDER granting 41 Motion to Extend as to Calvin Jacobs (1). Jacobs is given until on or before November 15, 2011, in which to file pretrial motions pursuant to the progression order. The time between September 15, 2011, and November 15, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00034-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Jacobs</title>
+  <subTitle>ORDER denying without prejudice 43 Motion for the issurance of subpoenas and denying without prejudice 49 Motion to reconsider a subpoena as to Calvin Jacobs (1). Ordered by Magistrate Judge Thomas D. Thalken. (JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00034-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834327db</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-5</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00034_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/pdf/USCOURTS-ned-8_11-cr-00034-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00034; USA v. Jacobs; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00034-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-12-27</dateIssued>
+  <docketText>ORDER denying without prejudice 43 Motion for the issurance of subpoenas and denying without prejudice 49 Motion to reconsider a subpoena as to Calvin Jacobs (1). Ordered by Magistrate Judge Thomas D. Thalken. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00034-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Jacobs</title>
+  <subTitle>ORDER granting 52 Motion to Continue as to Calvin Jacobs (1). Jury Trial re-scheduled for 4/2/2012 before Judge Joseph F. Bataillon and a jury. The time between January 4, 2012, and April 2, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. ( ADB, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00034-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834327e2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-6</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00034_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/pdf/USCOURTS-ned-8_11-cr-00034-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00034; USA v. Jacobs; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00034-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>ORDER granting 52 Motion to Continue as to Calvin Jacobs (1). Jury Trial re-scheduled for 4/2/2012 before Judge Joseph F. Bataillon and a jury. The time between January 4, 2012, and April 2, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. ( ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00034-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Jacobs</title>
+  <subTitle>ORDER - The subpoena for True to testify as a witness in this criminal proceedings shall remain in effect. The request to quash the production of documents as set forth above will be granted. IT IS SO ORDERED. Pursuant to NECrimR 59.2 any objection to this Order shall be filed with the Clerk of the Court within five (5) days after being served with a copy of this Order. Failure to timely object may constitute a waiver of any such objection. The brief in support of any objection shall be filed at the time of filing such objection. Failure to file a brief in support of any objection may be deemed an abandonment of the objection as to Calvin Jacobs. Ordered by Magistrate Judge Thomas D. Thalken. ( TCL )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00034-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834326f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-7</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00034_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/pdf/USCOURTS-ned-8_11-cr-00034-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00034; USA v. Jacobs; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00034-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-03-28</dateIssued>
+  <docketText>ORDER - The subpoena for True to testify as a witness in this criminal proceedings shall remain in effect. The request to quash the production of documents as set forth above will be granted. IT IS SO ORDERED. Pursuant to NECrimR 59.2 any objection to this Order shall be filed with the Clerk of the Court within five (5) days after being served with a copy of this Order. Failure to timely object may constitute a waiver of any such objection. The brief in support of any objection shall be filed at the time of filing such objection. Failure to file a brief in support of any objection may be deemed an abandonment of the objection as to Calvin Jacobs. Ordered by Magistrate Judge Thomas D. Thalken. ( TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00034-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Jacobs</title>
+  <subTitle>ORDER regarding oral motion of Kathryn J. Derr to exclude certain documents Ms. Derr was ordered to provide pursuant to the trial subpoena issued by Defendant and as ordered on March 27, 2012, as attorney-client privileged and/or as attorney work product subject to privilegeas to defendant Calvin Jacobs. Ordered by Judge Joseph F. Bataillon. (ADB)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00034-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834327d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-8</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00034_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/pdf/USCOURTS-ned-8_11-cr-00034-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00034; USA v. Jacobs; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00034-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-04-12</dateIssued>
+  <docketText>ORDER regarding oral motion of Kathryn J. Derr to exclude certain documents Ms. Derr was ordered to provide pursuant to the trial subpoena issued by Defendant and as ordered on March 27, 2012, as attorney-client privileged and/or as attorney work product subject to privilegeas to defendant Calvin Jacobs. Ordered by Judge Joseph F. Bataillon. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00034-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Jacobs</title>
+  <subTitle>JUDGMENT as to Calvin Jacobs (1), Counts 1-6: Defendant was found not guilty and is discharged as to counts I-VI as to defendant Calvin Jacobs. Ordered by Judge Joseph F. Bataillon. (1 Certified copy to USM)(ADB)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00034-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834327e0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-9</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00034_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/pdf/USCOURTS-ned-8_11-cr-00034-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00034; USA v. Jacobs; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00034-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-04-13</dateIssued>
+  <docketText>JUDGMENT as to Calvin Jacobs (1), Counts 1-6: Defendant was found not guilty and is discharged as to counts I-VI as to defendant Calvin Jacobs. Ordered by Judge Joseph F. Bataillon. (1 Certified copy to USM)(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00034-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Jacobs</title>
+  <subTitle>ORDER as to defendant Calvin Jacobs to withdraw Plaintiff and Defendant jury trial exhibits within 14 calendar days or show cause why exhibits should not be destroyed. Ordered by District Judge Joseph F. Bataillon. (KMG)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00034-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834327dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-10</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00034_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/pdf/USCOURTS-ned-8_11-cr-00034-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00034; USA v. Jacobs; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00034-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-04-16</dateIssued>
+  <docketText>ORDER as to defendant Calvin Jacobs to withdraw Plaintiff and Defendant jury trial exhibits within 14 calendar days or show cause why exhibits should not be destroyed. Ordered by District Judge Joseph F. Bataillon. (KMG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00034-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Jacobs</title>
+  <subTitle>ORDER as to defendant Calvin Jacobs that counsel for defendant shall withdraw Exhibit No. 102 from hearing held 5/24/2011 within 14 calendar days of the date of this order or show cause why the exhibits should not be destroyed. Ordered by District Judge Joseph F. Bataillon. (KMG)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00034-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834327e3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-11</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00034_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00034/USCOURTS-ned-8_11-cr-00034-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00034/pdf/USCOURTS-ned-8_11-cr-00034-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00034; USA v. Jacobs; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00034-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-08-20</dateIssued>
+  <docketText>ORDER as to defendant Calvin Jacobs that counsel for defendant shall withdraw Exhibit No. 102 from hearing held 5/24/2011 within 14 calendar days of the date of this order or show cause why the exhibits should not be destroyed. Ordered by District Judge Joseph F. Bataillon. (KMG)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,348 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a2135e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01554</identifier>
+<identifier type="local">P0b002ee183a2135e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-01554</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-01554</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-01554</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Other Contract</cause>
+ <party fullName="American Zurich Insurance Company" lastName="American Zurich Insurance Company" role="Defendant"></party>
+ <party fullName="Burgett, Inc." lastName="Burgett, Inc." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Burgett, Inc. v. American Zurich Insurance Company</title>
+ <partNumber>2:11-cv-01554</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01554/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-01554;11-1554</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>American Zurich Insurance Company</displayForm>
+ <namePart type="family">American Zurich Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Burgett, Inc.</displayForm>
+ <namePart type="family">Burgett, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-01554</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-01554</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Other Contract</cause>
+ <party fullName="American Zurich Insurance Company" lastName="American Zurich Insurance Company" role="Defendant"></party>
+ <party fullName="Burgett, Inc." lastName="Burgett, Inc." role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01554-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-0/mods.xml">
+ <titleInfo>
+  <title>Burgett, Inc. v. American Zurich Insurance Company</title>
+  <subTitle>ORDER signed by Judge Morrison C. England, Jr on 8/5/2011 re 12 Stipulation and Proposed Order filed by Burgett, Inc. ORDERING Motion Hearing RESET for 8/25/2011 at 02:00 PM in Courtroom 7 (MCE) before Judge Morrison C. England Jr. Plaintiff&apos;s reply deadline shall be extended for a period of two weeks and shall now be due on or before 8/18/2011. (Waggoner, D)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01554-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a23b99</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01554_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01554/pdf/USCOURTS-caed-2_11-cv-01554-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01554; Burgett, Inc. v. American Zurich Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01554-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-08-08</dateIssued>
+  <docketText>ORDER signed by Judge Morrison C. England, Jr on 8/5/2011 re 12 Stipulation and Proposed Order filed by Burgett, Inc. ORDERING Motion Hearing RESET for 8/25/2011 at 02:00 PM in Courtroom 7 (MCE) before Judge Morrison C. England Jr. Plaintiff&apos;s reply deadline shall be extended for a period of two weeks and shall now be due on or before 8/18/2011. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01554-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-1/mods.xml">
+ <titleInfo>
+  <title>Burgett, Inc. v. American Zurich Insurance Company</title>
+  <subTitle>ORDER signed by Judge Morrison C. England, Jr on 8/31/11: The parties&apos; current request to take Status Conference off calendar is DENIED as moot 18. (Kaminski, H)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01554-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a23b97</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01554_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01554/pdf/USCOURTS-caed-2_11-cv-01554-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01554; Burgett, Inc. v. American Zurich Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01554-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-09-01</dateIssued>
+  <docketText>ORDER signed by Judge Morrison C. England, Jr on 8/31/11: The parties&apos; current request to take Status Conference off calendar is DENIED as moot 18. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01554-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-2/mods.xml">
+ <titleInfo>
+  <title>Burgett, Inc. v. American Zurich Insurance Company</title>
+  <subTitle>MEMORANDUM AND ORDER signed by Judge Morrison C. England, Jr on 11/22/11: Plaintiff&apos;s motion for summary judgment as to Defendant&apos;s duty to defend the underlying Persis action is GRANTED 8. Plaintiff is awarded reasonable attorneys&apos; fees for breach of its duty to defend the underlying Persis action. However, the Court requires additional briefing as to the amount of attorneys&apos; fees to which Plaintiff is claiming. Such additional briefing from Plaintiff is to be filed not later than forty-five (45) days after this electronic order is filed. The Court orders that Plaintiff is not entitled to prejudgment interest. (Kaminski, H)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01554-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a23b9b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01554_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01554/pdf/USCOURTS-caed-2_11-cv-01554-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01554; Burgett, Inc. v. American Zurich Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01554-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-11-23</dateIssued>
+  <docketText>MEMORANDUM AND ORDER signed by Judge Morrison C. England, Jr on 11/22/11: Plaintiff&apos;s motion for summary judgment as to Defendant&apos;s duty to defend the underlying Persis action is GRANTED 8. Plaintiff is awarded reasonable attorneys&apos; fees for breach of its duty to defend the underlying Persis action. However, the Court requires additional briefing as to the amount of attorneys&apos; fees to which Plaintiff is claiming. Such additional briefing from Plaintiff is to be filed not later than forty-five (45) days after this electronic order is filed. The Court orders that Plaintiff is not entitled to prejudgment interest. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01554-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-3/mods.xml">
+ <titleInfo>
+  <title>Burgett, Inc. v. American Zurich Insurance Company</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Morrison C. England, Jr. on 1/6/2012 ORDERING that the hearing of Plaintiff Burgett&apos;s 23 Motion for Summary Judgment re Quantification of Damages, previously set to be heard on January 12, 2012 at 2:00 p.m. in Courtroom 7, is CONTINUED and instead is to be heard on January 26, 2012 at 2:00 p.m. in Courtroom 7. (Zignago, K.)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01554-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a23b9a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01554_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01554/pdf/USCOURTS-caed-2_11-cv-01554-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01554; Burgett, Inc. v. American Zurich Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01554-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Morrison C. England, Jr. on 1/6/2012 ORDERING that the hearing of Plaintiff Burgett&apos;s 23 Motion for Summary Judgment re Quantification of Damages, previously set to be heard on January 12, 2012 at 2:00 p.m. in Courtroom 7, is CONTINUED and instead is to be heard on January 26, 2012 at 2:00 p.m. in Courtroom 7. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01554-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-4/mods.xml">
+ <titleInfo>
+  <title>Burgett, Inc. v. American Zurich Insurance Company</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Morrison C. England, Jr. on 1/18/2012 ORDERING that the hearing of Burgett&apos;s 23 Motion for Summary Judgment re Quantification of Damages, presently set for hearing on 1/26/2012 at 2:00 p.m. in Courtroom 7, is taken off calendar. (Zignago, K.)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01554-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a23b96</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-4</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01554_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01554/pdf/USCOURTS-caed-2_11-cv-01554-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01554; Burgett, Inc. v. American Zurich Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01554-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-01-19</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Morrison C. England, Jr. on 1/18/2012 ORDERING that the hearing of Burgett&apos;s 23 Motion for Summary Judgment re Quantification of Damages, presently set for hearing on 1/26/2012 at 2:00 p.m. in Courtroom 7, is taken off calendar. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01554-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-5/mods.xml">
+ <titleInfo>
+  <title>Burgett, Inc. v. American Zurich Insurance Company</title>
+  <subTitle>ORDER signed by Judge Morrison C. England, Jr on 8/6/12 ORDERING that the plaintiff&apos;s motion is DENIED in its entirety. (Becknal, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01554-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a23b98</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-5</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01554_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01554/pdf/USCOURTS-caed-2_11-cv-01554-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01554; Burgett, Inc. v. American Zurich Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01554-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-08-06</dateIssued>
+  <docketText>ORDER signed by Judge Morrison C. England, Jr on 8/6/12 ORDERING that the plaintiff&apos;s motion is DENIED in its entirety. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01554-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-6/mods.xml">
+ <titleInfo>
+  <title>Burgett, Inc. v. American Zurich Insurance Company</title>
+  <subTitle>ORDER signed by Judge Morrison C. England, Jr on 8/24/12 GRANTING request for correction of the Court&apos;s 7/31/12 Order; the Order is hereby amended nunc pro tunc as follows: The phrase &quot;Defendant has paid Zurich&quot; as it is used on page 2, line 12, is corrected to read &quot;Defendant has paid Plaintiff&quot;; the phrase &quot;the duty to Defendant&quot; as it is used on page 5, footnote 4, line 4, is corrected to read &quot;the duty to defend.&quot; (Manzer, C)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01554-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a23b9d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-6</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01554_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01554/pdf/USCOURTS-caed-2_11-cv-01554-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01554; Burgett, Inc. v. American Zurich Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01554-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-08-24</dateIssued>
+  <docketText>ORDER signed by Judge Morrison C. England, Jr on 8/24/12 GRANTING request for correction of the Court&apos;s 7/31/12 Order; the Order is hereby amended nunc pro tunc as follows: The phrase &quot;Defendant has paid Zurich&quot; as it is used on page 2, line 12, is corrected to read &quot;Defendant has paid Plaintiff&quot;; the phrase &quot;the duty to Defendant&quot; as it is used on page 5, footnote 4, line 4, is corrected to read &quot;the duty to defend.&quot; (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01554-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-7/mods.xml">
+ <titleInfo>
+  <title>Burgett, Inc. v. American Zurich Insurance Company</title>
+  <subTitle>STIPULATION and ORDER signed by Chief Judge Morrison C. England, Jr. on 1/3/2013 ORDERING that this action is DISMISSED pursuant to Fed. R. Civ. P. 41(a)(1)(A)(ii). Each side shall bear its own respective fees and costs incurred in this coverage lawsuit. CASE CLOSED. (Zignago, K.)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01554-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a23b9c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-7</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01554_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01554/USCOURTS-caed-2_11-cv-01554-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01554/pdf/USCOURTS-caed-2_11-cv-01554-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01554; Burgett, Inc. v. American Zurich Insurance Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01554-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Chief Judge Morrison C. England, Jr. on 1/3/2013 ORDERING that this action is DISMISSED pursuant to Fed. R. Civ. P. 41(a)(1)(A)(ii). Each side shall bear its own respective fees and costs incurred in this coverage lawsuit. CASE CLOSED. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+</mods>

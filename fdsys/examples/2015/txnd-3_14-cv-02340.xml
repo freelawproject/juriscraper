@@ -1,0 +1,225 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18ba84caa">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-03-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-03-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_14-cv-02340</identifier>
+<identifier type="local">P0b002ee18ba84caa</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-03-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-03-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-3_14-cv-02340</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_14-cv-02340</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:14-cv-02340</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1332 Diversity-Notice of Removal</cause>
+ <party fullName="CitiMortgage Inc" lastName="CitiMortgage Inc" role="Defendant"></party>
+ <party firstName="Janet" fullName="Janet Velez Contreras" lastName="Contreras" middleName="Velez" role="Plaintiff"></party>
+ <party fullName="John Does 1-1000" lastName="John Does 1-1000" role="Defendant"></party>
+ <party fullName="Mortgage Electronic Registration Systems" lastName="Mortgage Electronic Registration Systems" role="Defendant"></party>
+ <party fullName="SFMC Inc" lastName="SFMC Inc" role="Defendant"></party>
+ <party fullName="Service First Mortgage" lastName="Service First Mortgage" role="Defendant"></party>
+ <party fullName="Shapiro Schwarz LLP" lastName="Shapiro Schwarz LLP" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Contreras v. SFMC Inc et al</title>
+ <partNumber>3:14-cv-02340</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_14-cv-02340/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:14-cv-02340;14-2340</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Dallas</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CitiMortgage Inc</displayForm>
+ <namePart type="family">CitiMortgage Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Janet Velez Contreras</displayForm>
+ <namePart type="family">Contreras</namePart>
+ <namePart type="given">Janet</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Does 1-1000</displayForm>
+ <namePart type="family">John Does 1-1000</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mortgage Electronic Registration Systems</displayForm>
+ <namePart type="family">Mortgage Electronic Registration Systems</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SFMC Inc</displayForm>
+ <namePart type="family">SFMC Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Service First Mortgage</displayForm>
+ <namePart type="family">Service First Mortgage</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shapiro Schwarz LLP</displayForm>
+ <namePart type="family">Shapiro Schwarz LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_14-cv-02340</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:14-cv-02340</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1332 Diversity-Notice of Removal</cause>
+ <party fullName="CitiMortgage Inc" lastName="CitiMortgage Inc" role="Defendant"></party>
+ <party firstName="Janet" fullName="Janet Velez Contreras" lastName="Contreras" middleName="Velez" role="Plaintiff"></party>
+ <party fullName="John Does 1-1000" lastName="John Does 1-1000" role="Defendant"></party>
+ <party fullName="Mortgage Electronic Registration Systems" lastName="Mortgage Electronic Registration Systems" role="Defendant"></party>
+ <party fullName="SFMC Inc" lastName="SFMC Inc" role="Defendant"></party>
+ <party fullName="Service First Mortgage" lastName="Service First Mortgage" role="Defendant"></party>
+ <party fullName="Shapiro Schwarz LLP" lastName="Shapiro Schwarz LLP" role="Defendant"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_14-cv-02340-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_14-cv-02340/USCOURTS-txnd-3_14-cv-02340-0/mods.xml">
+ <titleInfo>
+  <title>Contreras v. SFMC Inc et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER: The parties Shapiro Schwarz, LLP and SFMC were improperly joined, and the remaining parties satisfy the requirements for diversity jurisdiction. Therefore, Plaintiff&apos;s Motion to Remand (doc. 8) is DENIED. It is thus ORDERED that Shapiro Schwarz, LLP and SFMC be DISMISSED from this lawsuit, as no viable claims remain against them. Accordingly, the Motion to Dismiss (doc. 11) filed by Shapiro Schwarz, LLP is declared MOOT. (Ordered by Judge Jane J Boyle on 1/6/2015) (ctf)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_14-cv-02340/pdf/USCOURTS-txnd-3_14-cv-02340-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ba8bbec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_14-cv-02340/USCOURTS-txnd-3_14-cv-02340-0</identifier>
+ <identifier type="former granule identifier">txnd-3_14-cv-02340_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_14-cv-02340/USCOURTS-txnd-3_14-cv-02340-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_14-cv-02340/pdf/USCOURTS-txnd-3_14-cv-02340-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:14-cv-02340; Contreras v. SFMC Inc et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_14-cv-02340-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER: The parties Shapiro Schwarz, LLP and SFMC were improperly joined, and the remaining parties satisfy the requirements for diversity jurisdiction. Therefore, Plaintiff&apos;s Motion to Remand (doc. 8) is DENIED. It is thus ORDERED that Shapiro Schwarz, LLP and SFMC be DISMISSED from this lawsuit, as no viable claims remain against them. Accordingly, the Motion to Dismiss (doc. 11) filed by Shapiro Schwarz, LLP is declared MOOT. (Ordered by Judge Jane J Boyle on 1/6/2015) (ctf)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_14-cv-02340-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_14-cv-02340/USCOURTS-txnd-3_14-cv-02340-1/mods.xml">
+ <titleInfo>
+  <title>Contreras v. SFMC Inc et al</title>
+  <subTitle>Memorandum Opinion and Order: The Motion to Dismiss (doc. 5) filed by Defendants CMI and MERS is GRANTED. Accordingly, Plaintiff Janet Velez Contreras&apos; claims against Defendants CMI and MERS are DISMISSED WITH PREJUDICE. (Ordered by Judge Jane J Boyle on 3/5/2015) (tlm)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_14-cv-02340/pdf/USCOURTS-txnd-3_14-cv-02340-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ba8bbeb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_14-cv-02340/USCOURTS-txnd-3_14-cv-02340-1</identifier>
+ <identifier type="former granule identifier">txnd-3_14-cv-02340_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_14-cv-02340/USCOURTS-txnd-3_14-cv-02340-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_14-cv-02340/pdf/USCOURTS-txnd-3_14-cv-02340-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:14-cv-02340; Contreras v. SFMC Inc et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_14-cv-02340-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-03-09</dateIssued>
+  <docketText>Memorandum Opinion and Order: The Motion to Dismiss (doc. 5) filed by Defendants CMI and MERS is GRANTED. Accordingly, Plaintiff Janet Velez Contreras&apos; claims against Defendants CMI and MERS are DISMISSED WITH PREJUDICE. (Ordered by Judge Jane J Boyle on 3/5/2015) (tlm)</docketText>
+</extension>
+</relatedItem>
+</mods>

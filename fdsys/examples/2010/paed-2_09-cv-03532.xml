@@ -1,0 +1,288 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813d0bf4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-03532</identifier>
+<identifier type="local">P0b002ee1813d0bf4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_09-cv-03532</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_09-cv-03532</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:09-cv-03532</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party firstName="JOHN" fullName="JOHN BENNETT" lastName="BENNETT" role="Defendant"></party>
+ <party fullName="CLARET CAPITAL BLADE LTD." lastName="CLARET CAPITAL BLADE LTD." role="Plaintiff"></party>
+ <party fullName="CLARET CAPITAL NOMINEES, LTD." lastName="CLARET CAPITAL NOMINEES, LTD." role="Plaintiff"></party>
+ <party fullName="CLARET CAPITAL, LTD." lastName="CLARET CAPITAL, LTD." role="Plaintiff"></party>
+ <party fullName="DEVON AD TECH, INC." lastName="DEVON AD TECH, INC." role="Defendant"></party>
+ <party fullName="DEVON IT (EUROPE) LTD." lastName="DEVON IT (EUROPE) LTD." role="Defendant"></party>
+ <party fullName="DEVON IT, INC." lastName="DEVON IT, INC." role="Defendant"></party>
+ <party fullName="SHIRAZ LIMITED" lastName="SHIRAZ LIMITED" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>CLARET CAPITAL NOMINEES, LTD. et al v. BENNETT et al</title>
+ <partNumber>2:09-cv-03532</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-03532/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-03532;09-3532</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>JOHN BENNETT</displayForm>
+ <namePart type="family">BENNETT</namePart>
+ <namePart type="given">JOHN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CLARET CAPITAL BLADE LTD.</displayForm>
+ <namePart type="family">CLARET CAPITAL BLADE LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CLARET CAPITAL NOMINEES, LTD.</displayForm>
+ <namePart type="family">CLARET CAPITAL NOMINEES, LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CLARET CAPITAL, LTD.</displayForm>
+ <namePart type="family">CLARET CAPITAL, LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>DEVON AD TECH, INC.</displayForm>
+ <namePart type="family">DEVON AD TECH, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DEVON IT (EUROPE) LTD.</displayForm>
+ <namePart type="family">DEVON IT (EUROPE) LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DEVON IT, INC.</displayForm>
+ <namePart type="family">DEVON IT, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SHIRAZ LIMITED</displayForm>
+ <namePart type="family">SHIRAZ LIMITED</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_09-cv-03532</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:09-cv-03532</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party firstName="JOHN" fullName="JOHN BENNETT" lastName="BENNETT" role="Defendant"></party>
+ <party fullName="CLARET CAPITAL BLADE LTD." lastName="CLARET CAPITAL BLADE LTD." role="Plaintiff"></party>
+ <party fullName="CLARET CAPITAL NOMINEES, LTD." lastName="CLARET CAPITAL NOMINEES, LTD." role="Plaintiff"></party>
+ <party fullName="CLARET CAPITAL, LTD." lastName="CLARET CAPITAL, LTD." role="Plaintiff"></party>
+ <party fullName="DEVON AD TECH, INC." lastName="DEVON AD TECH, INC." role="Defendant"></party>
+ <party fullName="DEVON IT (EUROPE) LTD." lastName="DEVON IT (EUROPE) LTD." role="Defendant"></party>
+ <party fullName="DEVON IT, INC." lastName="DEVON IT, INC." role="Defendant"></party>
+ <party fullName="SHIRAZ LIMITED" lastName="SHIRAZ LIMITED" role="Plaintiff"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cv-03532-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-03532/USCOURTS-paed-2_09-cv-03532-0/mods.xml">
+ <titleInfo>
+  <title>CLARET CAPITAL NOMINEES, LTD. et al v. BENNETT et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE J. CURTIS JOYNER ON 11/30/2009. 12/2/2009 ENTERED AND COPIES MAILED, E-MAILED.(ap, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cv-03532-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814c2090</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-03532/USCOURTS-paed-2_09-cv-03532-0</identifier>
+ <identifier type="former granule identifier">paed-2_09-cv-03532_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-03532/USCOURTS-paed-2_09-cv-03532-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-03532/pdf/USCOURTS-paed-2_09-cv-03532-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-03532; CLARET CAPITAL NOMINEES, LTD. et al v. BENNETT et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cv-03532-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-12-01</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE J. CURTIS JOYNER ON 11/30/2009. 12/2/2009 ENTERED AND COPIES MAILED, E-MAILED.(ap, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cv-03532-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-03532/USCOURTS-paed-2_09-cv-03532-1/mods.xml">
+ <titleInfo>
+  <title>CLARET CAPITAL NOMINEES, LTD. et al v. BENNETT et al</title>
+  <subTitle>ORDER THAT THE MOTION TO DISMISS IS DENIED. IT IS FURTHER ORDERED THAT DEFENDANTS SHALL HAVE 14 DAYS FROM THE ENTRY OF THIS ORDER TO RESPOND TO PLAINTIFF&apos;S MOTION FOR SUMMARY JUDGMENT.. SIGNED BY HONORABLE J. CURTIS JOYNER ON 11/30/2009. 12/2/2009 ENTERED AND COPIES MAILED, E-MAILED.(ap, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cv-03532-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814c208f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-03532/USCOURTS-paed-2_09-cv-03532-1</identifier>
+ <identifier type="former granule identifier">paed-2_09-cv-03532_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-03532/USCOURTS-paed-2_09-cv-03532-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-03532/pdf/USCOURTS-paed-2_09-cv-03532-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-03532; CLARET CAPITAL NOMINEES, LTD. et al v. BENNETT et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cv-03532-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-12-01</dateIssued>
+  <docketText>ORDER THAT THE MOTION TO DISMISS IS DENIED. IT IS FURTHER ORDERED THAT DEFENDANTS SHALL HAVE 14 DAYS FROM THE ENTRY OF THIS ORDER TO RESPOND TO PLAINTIFF&apos;S MOTION FOR SUMMARY JUDGMENT.. SIGNED BY HONORABLE J. CURTIS JOYNER ON 11/30/2009. 12/2/2009 ENTERED AND COPIES MAILED, E-MAILED.(ap, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cv-03532-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-03532/USCOURTS-paed-2_09-cv-03532-2/mods.xml">
+ <titleInfo>
+  <title>CLARET CAPITAL NOMINEES, LTD. et al v. BENNETT et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE J. CURTIS JOYNER ON 1/25/2010. 1/26/2010 ENTERED AND COPIES MAILED, E-MAILED.(ap, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cv-03532-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814c2091</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-03532/USCOURTS-paed-2_09-cv-03532-2</identifier>
+ <identifier type="former granule identifier">paed-2_09-cv-03532_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-03532/USCOURTS-paed-2_09-cv-03532-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-03532/pdf/USCOURTS-paed-2_09-cv-03532-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-03532; CLARET CAPITAL NOMINEES, LTD. et al v. BENNETT et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cv-03532-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-01-26</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE J. CURTIS JOYNER ON 1/25/2010. 1/26/2010 ENTERED AND COPIES MAILED, E-MAILED.(ap, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cv-03532-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-03532/USCOURTS-paed-2_09-cv-03532-3/mods.xml">
+ <titleInfo>
+  <title>CLARET CAPITAL NOMINEES, LTD. et al v. BENNETT et al</title>
+  <subTitle>ORDER THAT SUMMARY JUDGMENT IS GRANTED IN FAVOR OF PLAINTIFFS PURSUANT TO FEDERAL RULE OF CIVIL PROCEDURE 56(c). IT IS FURTHER ORDERED THAT PLAINTIFFS ARE AWARDED $3,449,000 IN DAMAGES. SIGNED BY HONORABLE J. CURTIS JOYNER ON 1/25/2010. 1/26/2010 ENTERED AND COPIES MAILED, E-MAILED.(ap, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cv-03532-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814c208e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-03532/USCOURTS-paed-2_09-cv-03532-3</identifier>
+ <identifier type="former granule identifier">paed-2_09-cv-03532_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-03532/USCOURTS-paed-2_09-cv-03532-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-03532/pdf/USCOURTS-paed-2_09-cv-03532-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-03532; CLARET CAPITAL NOMINEES, LTD. et al v. BENNETT et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cv-03532-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-01-26</dateIssued>
+  <docketText>ORDER THAT SUMMARY JUDGMENT IS GRANTED IN FAVOR OF PLAINTIFFS PURSUANT TO FEDERAL RULE OF CIVIL PROCEDURE 56(c). IT IS FURTHER ORDERED THAT PLAINTIFFS ARE AWARDED $3,449,000 IN DAMAGES. SIGNED BY HONORABLE J. CURTIS JOYNER ON 1/25/2010. 1/26/2010 ENTERED AND COPIES MAILED, E-MAILED.(ap, )</docketText>
+</extension>
+</relatedItem>
+</mods>

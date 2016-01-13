@@ -1,0 +1,204 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c329ac">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-3_12-cv-00632</identifier>
+<identifier type="local">P0b002ee186c329ac</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-3_12-cv-00632</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-3_12-cv-00632</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>3:12-cv-00632</caseNumber>
+ <caseOffice>Moscow - Central</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Ron" fullName="Ron Banks" lastName="Banks" role="Defendant"></party>
+ <party firstName="Ted" fullName="Ted Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="Keith" fullName="Keith Reiferd Burch" lastName="Burch" middleName="Reiferd" role="Plaintiff"></party>
+ <party firstName="Mike" fullName="Mike Deitrick" lastName="Deitrick" role="Defendant"></party>
+ <party firstName="Avery" fullName="Avery Dunaway" lastName="Dunaway" role="Defendant"></party>
+ <party firstName="Don" fullName="Don Gardner" lastName="Gardner" role="Defendant"></party>
+ <party firstName="Marguerite" fullName="Marguerite McLaughlin" lastName="McLaughlin" role="Defendant"></party>
+ <party firstName="Ryan" fullName="Ryan Smathers" lastName="Smathers" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Burch v. Smathers et al</title>
+ <partNumber>3:12-cv-00632</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-3_12-cv-00632/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:12-cv-00632;12-632</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Moscow - Central</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ron Banks</displayForm>
+ <namePart type="family">Banks</namePart>
+ <namePart type="given">Ron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ted Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Ted</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Keith Reiferd Burch</displayForm>
+ <namePart type="family">Burch</namePart>
+ <namePart type="given">Keith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mike Deitrick</displayForm>
+ <namePart type="family">Deitrick</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Avery Dunaway</displayForm>
+ <namePart type="family">Dunaway</namePart>
+ <namePart type="given">Avery</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Don Gardner</displayForm>
+ <namePart type="family">Gardner</namePart>
+ <namePart type="given">Don</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marguerite McLaughlin</displayForm>
+ <namePart type="family">McLaughlin</namePart>
+ <namePart type="given">Marguerite</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ryan Smathers</displayForm>
+ <namePart type="family">Smathers</namePart>
+ <namePart type="given">Ryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-3_12-cv-00632</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>3:12-cv-00632</caseNumber>
+ <caseOffice>Moscow - Central</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Ron" fullName="Ron Banks" lastName="Banks" role="Defendant"></party>
+ <party firstName="Ted" fullName="Ted Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="Keith" fullName="Keith Reiferd Burch" lastName="Burch" middleName="Reiferd" role="Plaintiff"></party>
+ <party firstName="Mike" fullName="Mike Deitrick" lastName="Deitrick" role="Defendant"></party>
+ <party firstName="Avery" fullName="Avery Dunaway" lastName="Dunaway" role="Defendant"></party>
+ <party firstName="Don" fullName="Don Gardner" lastName="Gardner" role="Defendant"></party>
+ <party firstName="Marguerite" fullName="Marguerite McLaughlin" lastName="McLaughlin" role="Defendant"></party>
+ <party firstName="Ryan" fullName="Ryan Smathers" lastName="Smathers" role="Defendant"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-3_12-cv-00632-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-3_12-cv-00632/USCOURTS-idd-3_12-cv-00632-0/mods.xml">
+ <titleInfo>
+  <title>Burch v. Smathers et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER granting 22 Defendant&apos;s Motion for Summary Judgment; denying 36 Plaintiff&apos;s Motion to Amend Complaint; denying as moot 58 Plaintiff&apos;s Motion to Extend Discovery; denying 65 Plaintiff&apos;s Motion to Supplement Plaintiff&apos;s Response to Defendant&apos;s Motion for Summary Judgment. Signed by Judge Candy W. Dale. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (cjm)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-3_12-cv-00632-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4f06d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-3_12-cv-00632/USCOURTS-idd-3_12-cv-00632-0</identifier>
+ <identifier type="former granule identifier">idd-3_12-cv-00632_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-3_12-cv-00632/USCOURTS-idd-3_12-cv-00632-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-3_12-cv-00632/pdf/USCOURTS-idd-3_12-cv-00632-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-00632; Burch v. Smathers et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-3_12-cv-00632-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER granting 22 Defendant&apos;s Motion for Summary Judgment; denying 36 Plaintiff&apos;s Motion to Amend Complaint; denying as moot 58 Plaintiff&apos;s Motion to Extend Discovery; denying 65 Plaintiff&apos;s Motion to Supplement Plaintiff&apos;s Response to Defendant&apos;s Motion for Summary Judgment. Signed by Judge Candy W. Dale. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (cjm)</docketText>
+</extension>
+</relatedItem>
+</mods>

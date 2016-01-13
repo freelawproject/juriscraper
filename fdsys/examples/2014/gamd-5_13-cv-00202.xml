@@ -1,0 +1,262 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c32a08">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_13-cv-00202</identifier>
+<identifier type="local">P0b002ee186c32a08</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-5_13-cv-00202</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_13-cv-00202</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:13-cv-00202</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="GEORGE" fullName="GEORGE IVEY" lastName="IVEY" role="Defendant"></party>
+ <party fullName="JOHNSON" lastName="JOHNSON" role="Defendant"></party>
+ <party fullName="JORDAN" lastName="JORDAN" role="Defendant"></party>
+ <party firstName="PRENTICE" fullName="PRENTICE BERNARD MORGAN" lastName="MORGAN" middleName="BERNARD" role="Plaintiff"></party>
+ <party fullName="PACE" lastName="PACE" role="Defendant"></party>
+ <party fullName="PLEX" lastName="PLEX" role="Defendant"></party>
+ <party fullName="WOODSON" lastName="WOODSON" role="Defendant"></party>
+ <party fullName="WYATTS" lastName="WYATTS" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Morgan v. Ivey et al</title>
+ <partNumber>5:13-cv-00202</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_13-cv-00202/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:13-cv-00202;13-202</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Macon</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>GEORGE IVEY</displayForm>
+ <namePart type="family">IVEY</namePart>
+ <namePart type="given">GEORGE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOHNSON</displayForm>
+ <namePart type="family">JOHNSON</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JORDAN</displayForm>
+ <namePart type="family">JORDAN</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PRENTICE BERNARD MORGAN</displayForm>
+ <namePart type="family">MORGAN</namePart>
+ <namePart type="given">PRENTICE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>PACE</displayForm>
+ <namePart type="family">PACE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PLEX</displayForm>
+ <namePart type="family">PLEX</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>WOODSON</displayForm>
+ <namePart type="family">WOODSON</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>WYATTS</displayForm>
+ <namePart type="family">WYATTS</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_13-cv-00202</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:13-cv-00202</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="GEORGE" fullName="GEORGE IVEY" lastName="IVEY" role="Defendant"></party>
+ <party fullName="JOHNSON" lastName="JOHNSON" role="Defendant"></party>
+ <party fullName="JORDAN" lastName="JORDAN" role="Defendant"></party>
+ <party firstName="PRENTICE" fullName="PRENTICE BERNARD MORGAN" lastName="MORGAN" middleName="BERNARD" role="Plaintiff"></party>
+ <party fullName="PACE" lastName="PACE" role="Defendant"></party>
+ <party fullName="PLEX" lastName="PLEX" role="Defendant"></party>
+ <party fullName="WOODSON" lastName="WOODSON" role="Defendant"></party>
+ <party fullName="WYATTS" lastName="WYATTS" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_13-cv-00202-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00202/USCOURTS-gamd-5_13-cv-00202-0/mods.xml">
+ <titleInfo>
+  <title>Morgan v. Ivey et al</title>
+  <subTitle>ORDER DISMISSING without prejudice 1 Plaintiff&apos;s Complaint. It is ORDERED that Plaintiff be required to make monthly payments of 20% of the deposits made to his prisoner account during the preceding month toward the full filing fee. The Clerk of Court is DIRECTED to send a copy of this Order to the warden and/or business manager of the institution in which Plaintiff is presently confined. Ordered by Judge Marc Thomas Treadwell on 10/1/2013. (tlh)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_13-cv-00202-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4e442</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00202/USCOURTS-gamd-5_13-cv-00202-0</identifier>
+ <identifier type="former granule identifier">gamd-5_13-cv-00202_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00202/USCOURTS-gamd-5_13-cv-00202-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_13-cv-00202/pdf/USCOURTS-gamd-5_13-cv-00202-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cv-00202; Morgan v. Ivey et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_13-cv-00202-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-10-01</dateIssued>
+  <docketText>ORDER DISMISSING without prejudice 1 Plaintiff&apos;s Complaint. It is ORDERED that Plaintiff be required to make monthly payments of 20% of the deposits made to his prisoner account during the preceding month toward the full filing fee. The Clerk of Court is DIRECTED to send a copy of this Order to the warden and/or business manager of the institution in which Plaintiff is presently confined. Ordered by Judge Marc Thomas Treadwell on 10/1/2013. (tlh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_13-cv-00202-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00202/USCOURTS-gamd-5_13-cv-00202-1/mods.xml">
+ <titleInfo>
+  <title>Morgan v. Ivey et al</title>
+  <subTitle>ORDER DENYING 13 Letter/Motion to Reconsider. Ordered by U.S. District Judge Marc Thomas Treadwell on 11/1/2013. (tlh)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_13-cv-00202-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4e444</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00202/USCOURTS-gamd-5_13-cv-00202-1</identifier>
+ <identifier type="former granule identifier">gamd-5_13-cv-00202_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00202/USCOURTS-gamd-5_13-cv-00202-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_13-cv-00202/pdf/USCOURTS-gamd-5_13-cv-00202-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cv-00202; Morgan v. Ivey et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_13-cv-00202-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-11-01</dateIssued>
+  <docketText>ORDER DENYING 13 Letter/Motion to Reconsider. Ordered by U.S. District Judge Marc Thomas Treadwell on 11/1/2013. (tlh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_13-cv-00202-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00202/USCOURTS-gamd-5_13-cv-00202-2/mods.xml">
+ <titleInfo>
+  <title>Morgan v. Ivey et al</title>
+  <subTitle>ORDER DENYING 19 Motion for Leave to Appeal in forma pauperis. Ordered by U.S. District Judge Marc Thomas Treadwell on 1/3/2014. (tlh)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_13-cv-00202-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4e443</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00202/USCOURTS-gamd-5_13-cv-00202-2</identifier>
+ <identifier type="former granule identifier">gamd-5_13-cv-00202_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_13-cv-00202/USCOURTS-gamd-5_13-cv-00202-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_13-cv-00202/pdf/USCOURTS-gamd-5_13-cv-00202-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cv-00202; Morgan v. Ivey et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_13-cv-00202-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER DENYING 19 Motion for Leave to Appeal in forma pauperis. Ordered by U.S. District Judge Marc Thomas Treadwell on 1/3/2014. (tlh)</docketText>
+</extension>
+</relatedItem>
+</mods>

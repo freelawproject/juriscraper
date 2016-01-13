@@ -1,0 +1,303 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18104848f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_08-cv-03391</identifier>
+<identifier type="local">P0b002ee18104848f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-1_08-cv-03391</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_08-cv-03391</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:08-cv-03391</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>430</natureSuitCode>
+ <natureSuit>Banks and Banking</natureSuit>
+ <party firstName="Cathy" fullName="Cathy D. Brinsfield" lastName="Brinsfield" middleName="D." role="Defendant"></party>
+ <party firstName="Dean" fullName="Dean E. French" lastName="French" middleName="E." role="Defendant"></party>
+ <party firstName="Joyce" fullName="Joyce Green" lastName="Green" role="Plaintiff"></party>
+ <party fullName="Hebron Savings Bank" lastName="Hebron Savings Bank" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert E. Holloway" lastName="Holloway" middleName="E." role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark S. Holloway" lastName="Holloway" middleName="S." role="Defendant"></party>
+ <party firstName="Randal" fullName="Randal G. Jackson" lastName="Jackson" middleName="G." role="Defendant"></party>
+ <party firstName="Gregory" fullName="Gregory W. Johnson" lastName="Johnson" middleName="W." role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles W. Kelly" lastName="Kelly" middleName="W." role="Defendant"></party>
+ <party firstName="Victor" fullName="Victor H. Laws III" generation="III" lastName="Laws" middleName="H." role="Defendant"></party>
+ <party firstName="Sean" fullName="Sean C. Logan" lastName="Logan" middleName="C." role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas P. Monahan" lastName="Monahan" middleName="P." role="Defendant"></party>
+ <party fullName="R.J. Investments" lastName="R.J. Investments" role="Defendant"></party>
+ <party firstName="James" fullName="James R. Schraf" lastName="Schraf" middleName="R." role="Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark D. Sewell" lastName="Sewell" middleName="D." role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles R. Smith III" generation="III" lastName="Smith" middleName="R." role="Defendant"></party>
+ <party firstName="E." fullName="E. Scott Tawes" lastName="Tawes" middleName="Scott" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas C. Thompson" lastName="Thompson" middleName="C." role="Defendant"></party>
+ <party firstName="Edward" fullName="Edward Wilgus" lastName="Wilgus" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Green et al v. Hebron Savings Bank et al</title>
+ <partNumber>1:08-cv-03391</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_08-cv-03391/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-03391;08-3391</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Baltimore</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Cathy D. Brinsfield</displayForm>
+ <namePart type="family">Brinsfield</namePart>
+ <namePart type="given">Cathy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dean E. French</displayForm>
+ <namePart type="family">French</namePart>
+ <namePart type="given">Dean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joyce Green</displayForm>
+ <namePart type="family">Green</namePart>
+ <namePart type="given">Joyce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Hebron Savings Bank</displayForm>
+ <namePart type="family">Hebron Savings Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert E. Holloway</displayForm>
+ <namePart type="family">Holloway</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark S. Holloway</displayForm>
+ <namePart type="family">Holloway</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Randal G. Jackson</displayForm>
+ <namePart type="family">Jackson</namePart>
+ <namePart type="given">Randal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gregory W. Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Gregory</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles W. Kelly</displayForm>
+ <namePart type="family">Kelly</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Victor H. Laws III</displayForm>
+ <namePart type="family">Laws</namePart>
+ <namePart type="given">Victor</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sean C. Logan</displayForm>
+ <namePart type="family">Logan</namePart>
+ <namePart type="given">Sean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas P. Monahan</displayForm>
+ <namePart type="family">Monahan</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R.J. Investments</displayForm>
+ <namePart type="family">R.J. Investments</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James R. Schraf</displayForm>
+ <namePart type="family">Schraf</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mark D. Sewell</displayForm>
+ <namePart type="family">Sewell</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles R. Smith III</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>E. Scott Tawes</displayForm>
+ <namePart type="family">Tawes</namePart>
+ <namePart type="given">E.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas C. Thompson</displayForm>
+ <namePart type="family">Thompson</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Edward Wilgus</displayForm>
+ <namePart type="family">Wilgus</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_08-cv-03391</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:08-cv-03391</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>430</natureSuitCode>
+ <natureSuit>Banks and Banking</natureSuit>
+ <party firstName="Cathy" fullName="Cathy D. Brinsfield" lastName="Brinsfield" middleName="D." role="Defendant"></party>
+ <party firstName="Dean" fullName="Dean E. French" lastName="French" middleName="E." role="Defendant"></party>
+ <party firstName="Joyce" fullName="Joyce Green" lastName="Green" role="Plaintiff"></party>
+ <party fullName="Hebron Savings Bank" lastName="Hebron Savings Bank" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert E. Holloway" lastName="Holloway" middleName="E." role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark S. Holloway" lastName="Holloway" middleName="S." role="Defendant"></party>
+ <party firstName="Randal" fullName="Randal G. Jackson" lastName="Jackson" middleName="G." role="Defendant"></party>
+ <party firstName="Gregory" fullName="Gregory W. Johnson" lastName="Johnson" middleName="W." role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles W. Kelly" lastName="Kelly" middleName="W." role="Defendant"></party>
+ <party firstName="Victor" fullName="Victor H. Laws III" generation="III" lastName="Laws" middleName="H." role="Defendant"></party>
+ <party firstName="Sean" fullName="Sean C. Logan" lastName="Logan" middleName="C." role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas P. Monahan" lastName="Monahan" middleName="P." role="Defendant"></party>
+ <party fullName="R.J. Investments" lastName="R.J. Investments" role="Defendant"></party>
+ <party firstName="James" fullName="James R. Schraf" lastName="Schraf" middleName="R." role="Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark D. Sewell" lastName="Sewell" middleName="D." role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles R. Smith III" generation="III" lastName="Smith" middleName="R." role="Defendant"></party>
+ <party firstName="E." fullName="E. Scott Tawes" lastName="Tawes" middleName="Scott" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas C. Thompson" lastName="Thompson" middleName="C." role="Defendant"></party>
+ <party firstName="Edward" fullName="Edward Wilgus" lastName="Wilgus" role="Defendant"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-1_08-cv-03391-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_08-cv-03391/USCOURTS-mdd-1_08-cv-03391-0/mods.xml">
+ <titleInfo>
+  <title>Green et al v. Hebron Savings Bank et al</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge Richard D Bennett on 1/7/10. (das, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-1_08-cv-03391-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18108add9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_08-cv-03391/USCOURTS-mdd-1_08-cv-03391-0</identifier>
+ <identifier type="former granule identifier">mdd-1_08-cv-03391_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_08-cv-03391/USCOURTS-mdd-1_08-cv-03391-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_08-cv-03391/pdf/USCOURTS-mdd-1_08-cv-03391-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-03391; Green et al v. Hebron Savings Bank et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-1_08-cv-03391-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-07</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge Richard D Bennett on 1/7/10. (das, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

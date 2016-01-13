@@ -1,0 +1,637 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18117d94b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_09-cv-01122</identifier>
+<identifier type="local">P0b002ee18117d94b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-5_09-cv-01122</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_09-cv-01122</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:09-cv-01122</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="Attorneys Olinsky and Shurtliff" lastName="Attorneys Olinsky and Shurtliff" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard N. Bach" lastName="Bach" middleName="N." role="Defendant"></party>
+ <party fullName="Bernabei&amp;Wachtel, PLLC" lastName="Bernabei&amp;Wachtel, PLLC" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia Branch" lastName="Branch" role="Defendant"></party>
+ <party firstName="Doug" fullName="Doug Campbell" lastName="Campbell" role="Defendant"></party>
+ <party fullName="Carroll and Carroll Attys" lastName="Carroll and Carroll Attys" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher S. Ciaccio, Atty" lastName="Ciaccio, Atty" middleName="S." role="Defendant"></party>
+ <party firstName="Kati" fullName="Kati Daffan" lastName="Daffan" role="Defendant"></party>
+ <party firstName="Heather" fullName="Heather Djeck" lastName="Djeck" role="Defendant"></party>
+ <party fullName="Dr. Krishnappa" lastName="Dr. Krishnappa" role="Defendant"></party>
+ <party fullName="Dr. Mallick" lastName="Dr. Mallick" role="Defendant"></party>
+ <party fullName="Dr. Mendolez" lastName="Dr. Mendolez" role="Defendant"></party>
+ <party fullName="Dr. Smith" lastName="Dr. Smith" role="Defendant"></party>
+ <party fullName="Dr. Thesee" lastName="Dr. Thesee" role="Defendant"></party>
+ <party firstName="Grant" fullName="Grant Garramone" lastName="Garramone" role="Defendant"></party>
+ <party firstName="Samuel" fullName="Samuel Giacona" lastName="Giacona" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel W. Gilmore" lastName="Gilmore" middleName="W." role="Defendant"></party>
+ <party firstName="Desiree" fullName="Desiree Golden" lastName="Golden" role="Defendant"></party>
+ <party fullName="Green and Foushee, Attys" lastName="Green and Foushee, Attys" role="Defendant"></party>
+ <party fullName="Judge Escziac" lastName="Judge Escziac" role="Defendant"></party>
+ <party fullName="Judge Hester" lastName="Judge Hester" role="Defendant"></party>
+ <party fullName="Kehoe and Nesbuth" lastName="Kehoe and Nesbuth" role="Defendant"></party>
+ <party fullName="Kenny and Kenny, Attys" lastName="Kenny and Kenny, Attys" role="Defendant"></party>
+ <party fullName="M.H.L.S. Michael McCormick, Atty" lastName="M.H.L.S. Michael McCormick, Atty" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott McNamara" lastName="McNamara" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Miga" lastName="Miga" role="Defendant"></party>
+ <party fullName="Mr. Mills" lastName="Mr. Mills" role="Defendant"></party>
+ <party fullName="Mr. Smith" lastName="Mr. Smith" role="Defendant"></party>
+ <party fullName="Ms. Paschke" lastName="Ms. Paschke" role="Defendant"></party>
+ <party fullName="N.Y.S. Police" lastName="N.Y.S. Police" role="Defendant"></party>
+ <party fullName="Neighborhood Center" lastName="Neighborhood Center" role="Defendant"></party>
+ <party fullName="New York State Attorney General" lastName="New York State Attorney General" role="Defendant"></party>
+ <party fullName="New York State Court System" lastName="New York State Court System" role="Defendant"></party>
+ <party fullName="New York State Governor&apos;s Office" lastName="New York State Governor&apos;s Office" role="Defendant"></party>
+ <party fullName="New York State Health Department" lastName="New York State Health Department" role="Defendant"></party>
+ <party fullName="Nurse Practitioner Cathy Totaro" lastName="Nurse Practitioner Cathy Totaro" role="Defendant"></party>
+ <party fullName="Oneida Co. Health Dept." lastName="Oneida Co. Health Dept." role="Defendant"></party>
+ <party fullName="Oneida Co. Sheriffs Dept." lastName="Oneida Co. Sheriffs Dept." role="Defendant"></party>
+ <party fullName="Oneida County Psychiatric Center" lastName="Oneida County Psychiatric Center" role="Defendant"></party>
+ <party firstName="Kathy" fullName="Kathy Schmelzle" lastName="Schmelzle" role="Defendant"></party>
+ <party firstName="Maureen" fullName="Maureen E. Scott" lastName="Scott" middleName="E." role="Plaintiff"></party>
+ <party fullName="Sheriff" lastName="Sheriff" role="Defendant"></party>
+ <party fullName="Silberstein, Awad and Miklos, Attorneys" lastName="Silberstein, Awad and Miklos, Attorneys" role="Defendant"></party>
+ <party fullName="Smith, Sovik, Kendrick and Sugnet, Attys" lastName="Smith, Sovik, Kendrick and Sugnet, Attys" role="Defendant"></party>
+ <party fullName="Social Worker Ms. Lemon" lastName="Social Worker Ms. Lemon" role="Defendant"></party>
+ <party firstName="William" fullName="William Stevens" lastName="Stevens" role="Defendant"></party>
+ <party firstName="James" fullName="James Tormey" lastName="Tormey" role="Defendant"></party>
+ <party fullName="Town of Forestport Court Clerk" lastName="Town of Forestport Court Clerk" role="Defendant"></party>
+ <party fullName="Town of Forestport Judge Mark Ritter" lastName="Town of Forestport Judge Mark Ritter" role="Defendant"></party>
+ <party fullName="Trace" lastName="Trace" role="Defendant"></party>
+ <party fullName="U.S. Commission of Civil Rights" lastName="U.S. Commission of Civil Rights" role="Defendant"></party>
+ <party fullName="United States Court System" lastName="United States Court System" role="Defendant"></party>
+ <party fullName="York St. Clinic" lastName="York St. Clinic" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Scott v. Djeck et al</title>
+ <partNumber>5:09-cv-01122</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_09-cv-01122/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:09-cv-01122;09-1122</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Syracuse</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Attorneys Olinsky and Shurtliff</displayForm>
+ <namePart type="family">Attorneys Olinsky and Shurtliff</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard N. Bach</displayForm>
+ <namePart type="family">Bach</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bernabei&amp;Wachtel, PLLC</displayForm>
+ <namePart type="family">Bernabei&amp;Wachtel, PLLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patricia Branch</displayForm>
+ <namePart type="family">Branch</namePart>
+ <namePart type="given">Patricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Doug Campbell</displayForm>
+ <namePart type="family">Campbell</namePart>
+ <namePart type="given">Doug</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carroll and Carroll Attys</displayForm>
+ <namePart type="family">Carroll and Carroll Attys</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher S. Ciaccio, Atty</displayForm>
+ <namePart type="family">Ciaccio, Atty</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kati Daffan</displayForm>
+ <namePart type="family">Daffan</namePart>
+ <namePart type="given">Kati</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Heather Djeck</displayForm>
+ <namePart type="family">Djeck</namePart>
+ <namePart type="given">Heather</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. Krishnappa</displayForm>
+ <namePart type="family">Dr. Krishnappa</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. Mallick</displayForm>
+ <namePart type="family">Dr. Mallick</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. Mendolez</displayForm>
+ <namePart type="family">Dr. Mendolez</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. Smith</displayForm>
+ <namePart type="family">Dr. Smith</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dr. Thesee</displayForm>
+ <namePart type="family">Dr. Thesee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Grant Garramone</displayForm>
+ <namePart type="family">Garramone</namePart>
+ <namePart type="given">Grant</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Samuel Giacona</displayForm>
+ <namePart type="family">Giacona</namePart>
+ <namePart type="given">Samuel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel W. Gilmore</displayForm>
+ <namePart type="family">Gilmore</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Desiree Golden</displayForm>
+ <namePart type="family">Golden</namePart>
+ <namePart type="given">Desiree</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Green and Foushee, Attys</displayForm>
+ <namePart type="family">Green and Foushee, Attys</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Judge Escziac</displayForm>
+ <namePart type="family">Judge Escziac</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Judge Hester</displayForm>
+ <namePart type="family">Judge Hester</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kehoe and Nesbuth</displayForm>
+ <namePart type="family">Kehoe and Nesbuth</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kenny and Kenny, Attys</displayForm>
+ <namePart type="family">Kenny and Kenny, Attys</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M.H.L.S. Michael McCormick, Atty</displayForm>
+ <namePart type="family">M.H.L.S. Michael McCormick, Atty</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott McNamara</displayForm>
+ <namePart type="family">McNamara</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian Miga</displayForm>
+ <namePart type="family">Miga</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mr. Mills</displayForm>
+ <namePart type="family">Mr. Mills</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mr. Smith</displayForm>
+ <namePart type="family">Mr. Smith</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ms. Paschke</displayForm>
+ <namePart type="family">Ms. Paschke</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>N.Y.S. Police</displayForm>
+ <namePart type="family">N.Y.S. Police</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Neighborhood Center</displayForm>
+ <namePart type="family">Neighborhood Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New York State Attorney General</displayForm>
+ <namePart type="family">New York State Attorney General</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New York State Court System</displayForm>
+ <namePart type="family">New York State Court System</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New York State Governor&apos;s Office</displayForm>
+ <namePart type="family">New York State Governor&apos;s Office</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New York State Health Department</displayForm>
+ <namePart type="family">New York State Health Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nurse Practitioner Cathy Totaro</displayForm>
+ <namePart type="family">Nurse Practitioner Cathy Totaro</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Oneida Co. Health Dept.</displayForm>
+ <namePart type="family">Oneida Co. Health Dept.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Oneida Co. Sheriffs Dept.</displayForm>
+ <namePart type="family">Oneida Co. Sheriffs Dept.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Oneida County Psychiatric Center</displayForm>
+ <namePart type="family">Oneida County Psychiatric Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kathy Schmelzle</displayForm>
+ <namePart type="family">Schmelzle</namePart>
+ <namePart type="given">Kathy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maureen E. Scott</displayForm>
+ <namePart type="family">Scott</namePart>
+ <namePart type="given">Maureen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sheriff</displayForm>
+ <namePart type="family">Sheriff</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Silberstein, Awad and Miklos, Attorneys</displayForm>
+ <namePart type="family">Silberstein, Awad and Miklos, Attorneys</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Smith, Sovik, Kendrick and Sugnet, Attys</displayForm>
+ <namePart type="family">Smith, Sovik, Kendrick and Sugnet, Attys</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Social Worker Ms. Lemon</displayForm>
+ <namePart type="family">Social Worker Ms. Lemon</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Stevens</displayForm>
+ <namePart type="family">Stevens</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Tormey</displayForm>
+ <namePart type="family">Tormey</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Town of Forestport Court Clerk</displayForm>
+ <namePart type="family">Town of Forestport Court Clerk</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Town of Forestport Judge Mark Ritter</displayForm>
+ <namePart type="family">Town of Forestport Judge Mark Ritter</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Trace</displayForm>
+ <namePart type="family">Trace</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Commission of Civil Rights</displayForm>
+ <namePart type="family">U.S. Commission of Civil Rights</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States Court System</displayForm>
+ <namePart type="family">United States Court System</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>York St. Clinic</displayForm>
+ <namePart type="family">York St. Clinic</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_09-cv-01122</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:09-cv-01122</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="Attorneys Olinsky and Shurtliff" lastName="Attorneys Olinsky and Shurtliff" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard N. Bach" lastName="Bach" middleName="N." role="Defendant"></party>
+ <party fullName="Bernabei&amp;Wachtel, PLLC" lastName="Bernabei&amp;Wachtel, PLLC" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia Branch" lastName="Branch" role="Defendant"></party>
+ <party firstName="Doug" fullName="Doug Campbell" lastName="Campbell" role="Defendant"></party>
+ <party fullName="Carroll and Carroll Attys" lastName="Carroll and Carroll Attys" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher S. Ciaccio, Atty" lastName="Ciaccio, Atty" middleName="S." role="Defendant"></party>
+ <party firstName="Kati" fullName="Kati Daffan" lastName="Daffan" role="Defendant"></party>
+ <party firstName="Heather" fullName="Heather Djeck" lastName="Djeck" role="Defendant"></party>
+ <party fullName="Dr. Krishnappa" lastName="Dr. Krishnappa" role="Defendant"></party>
+ <party fullName="Dr. Mallick" lastName="Dr. Mallick" role="Defendant"></party>
+ <party fullName="Dr. Mendolez" lastName="Dr. Mendolez" role="Defendant"></party>
+ <party fullName="Dr. Smith" lastName="Dr. Smith" role="Defendant"></party>
+ <party fullName="Dr. Thesee" lastName="Dr. Thesee" role="Defendant"></party>
+ <party firstName="Grant" fullName="Grant Garramone" lastName="Garramone" role="Defendant"></party>
+ <party firstName="Samuel" fullName="Samuel Giacona" lastName="Giacona" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel W. Gilmore" lastName="Gilmore" middleName="W." role="Defendant"></party>
+ <party firstName="Desiree" fullName="Desiree Golden" lastName="Golden" role="Defendant"></party>
+ <party fullName="Green and Foushee, Attys" lastName="Green and Foushee, Attys" role="Defendant"></party>
+ <party fullName="Judge Escziac" lastName="Judge Escziac" role="Defendant"></party>
+ <party fullName="Judge Hester" lastName="Judge Hester" role="Defendant"></party>
+ <party fullName="Kehoe and Nesbuth" lastName="Kehoe and Nesbuth" role="Defendant"></party>
+ <party fullName="Kenny and Kenny, Attys" lastName="Kenny and Kenny, Attys" role="Defendant"></party>
+ <party fullName="M.H.L.S. Michael McCormick, Atty" lastName="M.H.L.S. Michael McCormick, Atty" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott McNamara" lastName="McNamara" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Miga" lastName="Miga" role="Defendant"></party>
+ <party fullName="Mr. Mills" lastName="Mr. Mills" role="Defendant"></party>
+ <party fullName="Mr. Smith" lastName="Mr. Smith" role="Defendant"></party>
+ <party fullName="Ms. Paschke" lastName="Ms. Paschke" role="Defendant"></party>
+ <party fullName="N.Y.S. Police" lastName="N.Y.S. Police" role="Defendant"></party>
+ <party fullName="Neighborhood Center" lastName="Neighborhood Center" role="Defendant"></party>
+ <party fullName="New York State Attorney General" lastName="New York State Attorney General" role="Defendant"></party>
+ <party fullName="New York State Court System" lastName="New York State Court System" role="Defendant"></party>
+ <party fullName="New York State Governor&apos;s Office" lastName="New York State Governor&apos;s Office" role="Defendant"></party>
+ <party fullName="New York State Health Department" lastName="New York State Health Department" role="Defendant"></party>
+ <party fullName="Nurse Practitioner Cathy Totaro" lastName="Nurse Practitioner Cathy Totaro" role="Defendant"></party>
+ <party fullName="Oneida Co. Health Dept." lastName="Oneida Co. Health Dept." role="Defendant"></party>
+ <party fullName="Oneida Co. Sheriffs Dept." lastName="Oneida Co. Sheriffs Dept." role="Defendant"></party>
+ <party fullName="Oneida County Psychiatric Center" lastName="Oneida County Psychiatric Center" role="Defendant"></party>
+ <party firstName="Kathy" fullName="Kathy Schmelzle" lastName="Schmelzle" role="Defendant"></party>
+ <party firstName="Maureen" fullName="Maureen E. Scott" lastName="Scott" middleName="E." role="Plaintiff"></party>
+ <party fullName="Sheriff" lastName="Sheriff" role="Defendant"></party>
+ <party fullName="Silberstein, Awad and Miklos, Attorneys" lastName="Silberstein, Awad and Miklos, Attorneys" role="Defendant"></party>
+ <party fullName="Smith, Sovik, Kendrick and Sugnet, Attys" lastName="Smith, Sovik, Kendrick and Sugnet, Attys" role="Defendant"></party>
+ <party fullName="Social Worker Ms. Lemon" lastName="Social Worker Ms. Lemon" role="Defendant"></party>
+ <party firstName="William" fullName="William Stevens" lastName="Stevens" role="Defendant"></party>
+ <party firstName="James" fullName="James Tormey" lastName="Tormey" role="Defendant"></party>
+ <party fullName="Town of Forestport Court Clerk" lastName="Town of Forestport Court Clerk" role="Defendant"></party>
+ <party fullName="Town of Forestport Judge Mark Ritter" lastName="Town of Forestport Judge Mark Ritter" role="Defendant"></party>
+ <party fullName="Trace" lastName="Trace" role="Defendant"></party>
+ <party fullName="U.S. Commission of Civil Rights" lastName="U.S. Commission of Civil Rights" role="Defendant"></party>
+ <party fullName="United States Court System" lastName="United States Court System" role="Defendant"></party>
+ <party fullName="York St. Clinic" lastName="York St. Clinic" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_09-cv-01122-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_09-cv-01122/USCOURTS-nynd-5_09-cv-01122-0/mods.xml">
+ <titleInfo>
+  <title>Scott v. Djeck et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS; Recommending the Pltf be allowed to file an Amended complaint w/in 30 days of the filing date of an Order adopting this Report and Recommendation; granting Plaintiff&apos;s 2 Motion for Leave to Proceed in forma pauperis; Objections to R&amp;R due by 11/20/2009; Case Review Deadline 11/25/2009. Signed by Magistrate Judge George H. Lowe on 11/5/2009. (amt) [Pltf served via reg. mail]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_09-cv-01122-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181415af4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_09-cv-01122/USCOURTS-nynd-5_09-cv-01122-0</identifier>
+ <identifier type="former granule identifier">nynd-5_09-cv-01122_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_09-cv-01122/USCOURTS-nynd-5_09-cv-01122-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_09-cv-01122/pdf/USCOURTS-nynd-5_09-cv-01122-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-01122; Scott v. Djeck et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_09-cv-01122-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-11-05</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS; Recommending the Pltf be allowed to file an Amended complaint w/in 30 days of the filing date of an Order adopting this Report and Recommendation; granting Plaintiff&apos;s 2 Motion for Leave to Proceed in forma pauperis; Objections to R&amp;R due by 11/20/2009; Case Review Deadline 11/25/2009. Signed by Magistrate Judge George H. Lowe on 11/5/2009. (amt) [Pltf served via reg. mail]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_09-cv-01122-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_09-cv-01122/USCOURTS-nynd-5_09-cv-01122-1/mods.xml">
+ <titleInfo>
+  <title>Scott v. Djeck et al</title>
+  <subTitle>DECISIION AND ORDER adopting Magistrate Judge Lowe&apos;s 5 Report and Recommendations; directing the clerk to add certain Defendants to the docket as stated; dismissing the Plaintiff&apos;s claims against 44 named defendants as stated; directing Plaintiff to file an amended complaint w/in 30 days of the filing date of this Decision and Order or the complaint will be dismissed w/out further order of the Court. Signed by Judge Glenn T. Suddaby on 1/11/2010. (amt) [Pltf served via reg. mail]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_09-cv-01122-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181415af3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_09-cv-01122/USCOURTS-nynd-5_09-cv-01122-1</identifier>
+ <identifier type="former granule identifier">nynd-5_09-cv-01122_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_09-cv-01122/USCOURTS-nynd-5_09-cv-01122-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_09-cv-01122/pdf/USCOURTS-nynd-5_09-cv-01122-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-01122; Scott v. Djeck et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_09-cv-01122-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-11</dateIssued>
+  <docketText>DECISIION AND ORDER adopting Magistrate Judge Lowe&apos;s 5 Report and Recommendations; directing the clerk to add certain Defendants to the docket as stated; dismissing the Plaintiff&apos;s claims against 44 named defendants as stated; directing Plaintiff to file an amended complaint w/in 30 days of the filing date of this Decision and Order or the complaint will be dismissed w/out further order of the Court. Signed by Judge Glenn T. Suddaby on 1/11/2010. (amt) [Pltf served via reg. mail]</docketText>
+</extension>
+</relatedItem>
+</mods>

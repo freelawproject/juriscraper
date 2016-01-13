@@ -1,0 +1,360 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181757b68">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00176</identifier>
+<identifier type="local">P0b002ee181757b68</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_02-cr-00176</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_02-cr-00176</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:02-cr-00176</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jeffery" fullName="Jeffery Allen Hettinger" lastName="Hettinger" middleName="Allen" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Allen Hettinger" lastName="Hettinger" middleName="Allen" role="Defendant"></party>
+ <party firstName="Raymond" fullName="Raymond John Otero" lastName="Otero" middleName="John" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Otero et al</title>
+ <partNumber>8:02-cr-00176</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00176/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:02-cr-00176;02-176</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jeffery Allen Hettinger</displayForm>
+ <namePart type="family">Hettinger</namePart>
+ <namePart type="given">Jeffery</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Allen Hettinger</displayForm>
+ <namePart type="family">Hettinger</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Raymond John Otero</displayForm>
+ <namePart type="family">Otero</namePart>
+ <namePart type="given">Raymond</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_02-cr-00176</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:02-cr-00176</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jeffery" fullName="Jeffery Allen Hettinger" lastName="Hettinger" middleName="Allen" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Allen Hettinger" lastName="Hettinger" middleName="Allen" role="Defendant"></party>
+ <party firstName="Raymond" fullName="Raymond John Otero" lastName="Otero" middleName="John" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00176-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Otero et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Raymond John Otero - Glenn A. Shapiro is appointed to represent the defendant. Signed by Magistrate Judge Thomas D. Thalken on 8/8/2006. (MBB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00176-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18179a841</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-0</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00176_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00176/pdf/USCOURTS-ned-8_02-cr-00176-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00176; USA v. Otero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00176-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-08-08</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Raymond John Otero - Glenn A. Shapiro is appointed to represent the defendant. Signed by Magistrate Judge Thomas D. Thalken on 8/8/2006. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00176-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Otero et al</title>
+  <subTitle>ORDER granting 102 motion to continue as to Raymond John Otero (1) - Violation of Supervised Release Hearing set for 10/20/2006 11:00 AM in Courtroom 5 (Omaha) before Senior Judge Lyle E. Strom. Ordered by Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00176-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18179a842</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-1</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00176_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00176/pdf/USCOURTS-ned-8_02-cr-00176-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00176; USA v. Otero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00176-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-09-08</dateIssued>
+  <docketText>ORDER granting 102 motion to continue as to Raymond John Otero (1) - Violation of Supervised Release Hearing set for 10/20/2006 11:00 AM in Courtroom 5 (Omaha) before Senior Judge Lyle E. Strom. Ordered by Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00176-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Otero et al</title>
+  <subTitle>ORDER regarding SEALED PETITION FOR OFFENDER UNDER SUPERVISION - warrant issued 95 as to defendant Raymond John Otero, now known as Raymond Mendoza - defendant admitted the three allegations contained in the petition. Sentencing on the violations is scheduled for January 12, 2007, at 9:30 a.m. Ordered by Judge Lyle E. Strom.(JDR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00176-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18179a8c0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-2</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00176_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00176/pdf/USCOURTS-ned-8_02-cr-00176-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00176; USA v. Otero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00176-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-10-20</dateIssued>
+  <docketText>ORDER regarding SEALED PETITION FOR OFFENDER UNDER SUPERVISION - warrant issued 95 as to defendant Raymond John Otero, now known as Raymond Mendoza - defendant admitted the three allegations contained in the petition. Sentencing on the violations is scheduled for January 12, 2007, at 9:30 a.m. Ordered by Judge Lyle E. Strom.(JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00176-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Otero et al</title>
+  <subTitle>ORDER regarding the Petition for Offender Under Supervision 95, as to Raymond John Otero (1). Based upon defendant&apos;s admission, the Court finds defendant has violated the terms and conditions of his probation. Defendant is committed to the custody of the Bureau of Prisons for a term of twenty-four (24) months, said term to run consecutively to the term of imprisonment imposed in 8:06CR209. At the conclusion of said term of imprisonment, no supervised release will follow, as to defendant Raymond John Otero. Ordered by Judge Lyle E. Strom. 4 certified copies USM. (JAE, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-02-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00176-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18179a8c2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-3</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00176_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00176/pdf/USCOURTS-ned-8_02-cr-00176-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00176; USA v. Otero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00176-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-02-06</dateIssued>
+  <docketText>ORDER regarding the Petition for Offender Under Supervision 95, as to Raymond John Otero (1). Based upon defendant&apos;s admission, the Court finds defendant has violated the terms and conditions of his probation. Defendant is committed to the custody of the Bureau of Prisons for a term of twenty-four (24) months, said term to run consecutively to the term of imprisonment imposed in 8:06CR209. At the conclusion of said term of imprisonment, no supervised release will follow, as to defendant Raymond John Otero. Ordered by Judge Lyle E. Strom. 4 certified copies USM. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00176-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Otero et al</title>
+  <subTitle>STRICKEN-ORDER that the defendant is committed to the custody of the Bureau of Prisons for a term of twenty-four (24) months, said term to run consecutively to the term of imprisonment imposed in 8:06cr209; At the conclusion of said term of imprisonment, no supervised release will follow as to defendant Raymond John Otero. Ordered by Judge Lyle E. Strom.(MKR )4 cert to USM. Modified on 2/6/2007 to strike per Order 109 (MKR ).</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-02-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00176-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18179a844</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-4</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00176_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00176/pdf/USCOURTS-ned-8_02-cr-00176-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00176; USA v. Otero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00176-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-02-06</dateIssued>
+  <docketText>STRICKEN-ORDER that the defendant is committed to the custody of the Bureau of Prisons for a term of twenty-four (24) months, said term to run consecutively to the term of imprisonment imposed in 8:06cr209; At the conclusion of said term of imprisonment, no supervised release will follow as to defendant Raymond John Otero. Ordered by Judge Lyle E. Strom.(MKR )4 cert to USM. Modified on 2/6/2007 to strike per Order 109 (MKR ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00176-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Otero et al</title>
+  <subTitle>ORDER - The motion to seal122 is granted as to Jeffery Allen Hettinger. Hearing on the petition for warrant or summons for offender under supervision (Filing No. 113) is rescheduled for: Friday, December 18, 2009, at 10:30 a.m. Courtroom No. 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska. Ordered by Senior Judge Lyle E. Strom. ( TCL )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00176-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18179a8c1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-5</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00176_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00176/pdf/USCOURTS-ned-8_02-cr-00176-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00176; USA v. Otero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00176-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-10-16</dateIssued>
+  <docketText>ORDER - The motion to seal122 is granted as to Jeffery Allen Hettinger. Hearing on the petition for warrant or summons for offender under supervision (Filing No. 113) is rescheduled for: Friday, December 18, 2009, at 10:30 a.m. Courtroom No. 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska. Ordered by Senior Judge Lyle E. Strom. ( TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00176-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Otero et al</title>
+  <subTitle>ORDER granting 125 motion to continue. As to Jeffery Allen Hettinger (2)- Violation of Supervised Release Hearing set for 2/19/2010 at 10:30 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00176-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18179a843</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-6</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00176_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00176/pdf/USCOURTS-ned-8_02-cr-00176-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00176; USA v. Otero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00176-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-12-18</dateIssued>
+  <docketText>ORDER granting 125 motion to continue. As to Jeffery Allen Hettinger (2)- Violation of Supervised Release Hearing set for 2/19/2010 at 10:30 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00176-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Otero et al</title>
+  <subTitle>ORDER - IT IS ORDERED that the motion127 is granted. The petition for offender under supervision is dismissed113 as to defendant Jeffery Allen Hettinger. Ordered by Senior Judge Lyle E. Strom. ( TCL )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00176-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18179a8bf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-7</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00176_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00176/USCOURTS-ned-8_02-cr-00176-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00176/pdf/USCOURTS-ned-8_02-cr-00176-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00176; USA v. Otero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00176-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-01-06</dateIssued>
+  <docketText>ORDER - IT IS ORDERED that the motion127 is granted. The petition for offender under supervision is dismissed113 as to defendant Jeffery Allen Hettinger. Ordered by Senior Judge Lyle E. Strom. ( TCL )</docketText>
+</extension>
+</relatedItem>
+</mods>

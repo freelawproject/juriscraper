@@ -1,0 +1,327 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815b9575">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-01792</identifier>
+<identifier type="local">P0b002ee1815b9575</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-5_06-cv-01792</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_06-cv-01792</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:06-cv-01792</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>443</natureSuitCode>
+ <natureSuit>Civil Rights Accommodations</natureSuit>
+ <cause>42:1981 Civil Rights</cause>
+ <party firstName="Carl" fullName="Carl Brezina" lastName="Brezina" role="Defendant"></party>
+ <party firstName="Edward" fullName="Edward L Gilbert" lastName="Gilbert" middleName="L" role="Attorney"></party>
+ <party firstName="Ashley" fullName="Ashley Glor" lastName="Glor" role="Defendant"></party>
+ <party firstName="Todd" fullName="Todd Gray" lastName="Gray" role="Defendant"></party>
+ <party fullName="Marc Glassman, Inc." lastName="Marc Glassman, Inc." role="Defendant"></party>
+ <party fullName="Marcs" lastName="Marcs" role="Defendant"></party>
+ <party firstName="Kassandra" fullName="Kassandra Robinson" lastName="Robinson" role="Plaintiff"></party>
+ <party firstName="Burns" fullName="Burns Stringer" lastName="Stringer" role="Defendant"></party>
+ <party firstName="Vicki" fullName="Vicki Whann" lastName="Whann" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Robinson v. Glassman Marc, Inc. et al</title>
+ <partNumber>5:06-cv-01792</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-01792/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:06-cv-01792;06-1792</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Akron</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Carl Brezina</displayForm>
+ <namePart type="family">Brezina</namePart>
+ <namePart type="given">Carl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Edward L Gilbert</displayForm>
+ <namePart type="family">Gilbert</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Attorney</description>
+</name>
+<name type="personal">
+ <displayForm>Ashley Glor</displayForm>
+ <namePart type="family">Glor</namePart>
+ <namePart type="given">Ashley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Todd Gray</displayForm>
+ <namePart type="family">Gray</namePart>
+ <namePart type="given">Todd</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marc Glassman, Inc.</displayForm>
+ <namePart type="family">Marc Glassman, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marcs</displayForm>
+ <namePart type="family">Marcs</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kassandra Robinson</displayForm>
+ <namePart type="family">Robinson</namePart>
+ <namePart type="given">Kassandra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Burns Stringer</displayForm>
+ <namePart type="family">Stringer</namePart>
+ <namePart type="given">Burns</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vicki Whann</displayForm>
+ <namePart type="family">Whann</namePart>
+ <namePart type="given">Vicki</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_06-cv-01792</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:06-cv-01792</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>443</natureSuitCode>
+ <natureSuit>Civil Rights Accommodations</natureSuit>
+ <cause>42:1981 Civil Rights</cause>
+ <party firstName="Carl" fullName="Carl Brezina" lastName="Brezina" role="Defendant"></party>
+ <party firstName="Edward" fullName="Edward L Gilbert" lastName="Gilbert" middleName="L" role="Attorney"></party>
+ <party firstName="Ashley" fullName="Ashley Glor" lastName="Glor" role="Defendant"></party>
+ <party firstName="Todd" fullName="Todd Gray" lastName="Gray" role="Defendant"></party>
+ <party fullName="Marc Glassman, Inc." lastName="Marc Glassman, Inc." role="Defendant"></party>
+ <party fullName="Marcs" lastName="Marcs" role="Defendant"></party>
+ <party firstName="Kassandra" fullName="Kassandra Robinson" lastName="Robinson" role="Plaintiff"></party>
+ <party firstName="Burns" fullName="Burns Stringer" lastName="Stringer" role="Defendant"></party>
+ <party firstName="Vicki" fullName="Vicki Whann" lastName="Whann" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_06-cv-01792-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-0/mods.xml">
+ <titleInfo>
+  <title>Robinson v. Glassman Marc, Inc. et al</title>
+  <subTitle>Report and Recommendation that defendants&apos; motion for summary judgment be granted in its entirety. Objections to R&amp;R due by 10/2/2007. Signed by Magistrate Judge Patricia A. Hemann on 9/18/2007.(W,G)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_06-cv-01792-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181681045</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-0</identifier>
+ <identifier type="former granule identifier">ohnd-5_06-cv-01792_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-01792/pdf/USCOURTS-ohnd-5_06-cv-01792-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-01792; Robinson v. Glassman Marc, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_06-cv-01792-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-09-18</dateIssued>
+  <docketText>Report and Recommendation that defendants&apos; motion for summary judgment be granted in its entirety. Objections to R&amp;R due by 10/2/2007. Signed by Magistrate Judge Patricia A. Hemann on 9/18/2007.(W,G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_06-cv-01792-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-1/mods.xml">
+ <titleInfo>
+  <title>Robinson v. Glassman Marc, Inc. et al</title>
+  <subTitle>Memorandum, Opinion, and Order Adopting Report and Recommendation (re 98) of the Magistrate Judge and grants defendants&apos; 66 motion for summary judgment. Defendants&apos; motion to dismiss is denied as moot. Signed by Judge John R. Adams on 11/1/07.(K,C)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_06-cv-01792-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181681044</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-1</identifier>
+ <identifier type="former granule identifier">ohnd-5_06-cv-01792_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-01792/pdf/USCOURTS-ohnd-5_06-cv-01792-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-01792; Robinson v. Glassman Marc, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_06-cv-01792-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-10-31</dateIssued>
+  <docketText>Memorandum, Opinion, and Order Adopting Report and Recommendation (re 98) of the Magistrate Judge and grants defendants&apos; 66 motion for summary judgment. Defendants&apos; motion to dismiss is denied as moot. Signed by Judge John R. Adams on 11/1/07.(K,C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_06-cv-01792-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-2/mods.xml">
+ <titleInfo>
+  <title>Robinson v. Glassman Marc, Inc. et al</title>
+  <subTitle>Order denying Motion to appeal in forma pauperis (Related Doc # 113). Plaintiff has thirty days from date of this order to pay the entire $455 filing fee or the appeal may be dismissed for want of prosecution. Signed by Judge John R. Adams on 1/14/08.(E,S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_06-cv-01792-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181681046</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-2</identifier>
+ <identifier type="former granule identifier">ohnd-5_06-cv-01792_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-01792/pdf/USCOURTS-ohnd-5_06-cv-01792-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-01792; Robinson v. Glassman Marc, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_06-cv-01792-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-01-14</dateIssued>
+  <docketText>Order denying Motion to appeal in forma pauperis (Related Doc # 113). Plaintiff has thirty days from date of this order to pay the entire $455 filing fee or the appeal may be dismissed for want of prosecution. Signed by Judge John R. Adams on 1/14/08.(E,S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_06-cv-01792-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-3/mods.xml">
+ <titleInfo>
+  <title>Robinson v. Glassman Marc, Inc. et al</title>
+  <subTitle>Report and Recommendation that the court award defendants $1773.65 in costs and deny defendants&apos; request for attorneys&apos; fees. Objections to R&amp;R due by 3/10/2008. Signed by Magistrate Judge Patricia A. Hemann on 2/25/2008. (W,G)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_06-cv-01792-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181681042</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-3</identifier>
+ <identifier type="former granule identifier">ohnd-5_06-cv-01792_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-01792/pdf/USCOURTS-ohnd-5_06-cv-01792-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-01792; Robinson v. Glassman Marc, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_06-cv-01792-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-02-25</dateIssued>
+  <docketText>Report and Recommendation that the court award defendants $1773.65 in costs and deny defendants&apos; request for attorneys&apos; fees. Objections to R&amp;R due by 3/10/2008. Signed by Magistrate Judge Patricia A. Hemann on 2/25/2008. (W,G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_06-cv-01792-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-4/mods.xml">
+ <titleInfo>
+  <title>Robinson v. Glassman Marc, Inc. et al</title>
+  <subTitle>Memorandum of Opinion and Order Adopting Report and Recommendation 133 of the Magistrate Judge denying defendants&apos; 108 Motion for attorney fees as to Vicki Whann, Carl Brezina, Todd Gray, and Ashley Glor. Further, Defendants shall recover from Plaintiff $1,773.65 in costs. Related documents 108,109 and 134 Judge John R. Adams on 1/7/10. (K,C) Modified text on 1/8/2010 (R,Sh).</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_06-cv-01792-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181681043</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-4</identifier>
+ <identifier type="former granule identifier">ohnd-5_06-cv-01792_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01792/USCOURTS-ohnd-5_06-cv-01792-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-01792/pdf/USCOURTS-ohnd-5_06-cv-01792-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-01792; Robinson v. Glassman Marc, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_06-cv-01792-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-01-07</dateIssued>
+  <docketText>Memorandum of Opinion and Order Adopting Report and Recommendation 133 of the Magistrate Judge denying defendants&apos; 108 Motion for attorney fees as to Vicki Whann, Carl Brezina, Todd Gray, and Ashley Glor. Further, Defendants shall recover from Plaintiff $1,773.65 in costs. Related documents 108,109 and 134 Judge John R. Adams on 1/7/10. (K,C) Modified text on 1/8/2010 (R,Sh).</docketText>
+</extension>
+</relatedItem>
+</mods>

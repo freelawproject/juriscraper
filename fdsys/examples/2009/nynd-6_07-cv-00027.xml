@@ -1,0 +1,232 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118e9e6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_07-cv-00027</identifier>
+<identifier type="local">P0b002ee18118e9e6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-6_07-cv-00027</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-6_07-cv-00027</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>6:07-cv-00027</caseNumber>
+ <caseOffice>Utica</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party fullName="CFCU Community Credit Union" lastName="CFCU Community Credit Union" role="Appellant"></party>
+ <party firstName="Walter" fullName="Walter Elliot Jones" lastName="Jones" middleName="Elliot" role="Appellee"></party>
+ <party firstName="Walter" fullName="Walter Elliot Jones" lastName="Jones" middleName="Elliot" role="Debtor"></party>
+ <party firstName="Barbara" fullName="Barbara Jeanne Jones" lastName="Jones" middleName="Jeanne" role="Appellee"></party>
+ <party firstName="Barbara" fullName="Barbara Jeanne Jones" lastName="Jones" middleName="Jeanne" role="Debtor"></party>
+ <party firstName="Mark" fullName="Mark W. Swimelar" lastName="Swimelar" middleName="W." role="Appellee"></party>
+ <party fullName="U.S. Trustee" lastName="U.S. Trustee" role="Notice Only Party"></party>
+ <party firstName="Lynn" fullName="Lynn Harper Wilson" lastName="Wilson" middleName="Harper" role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>CFCU Community Credit Union v. Jones et al</title>
+ <partNumber>6:07-cv-00027</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_07-cv-00027/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:07-cv-00027;07-027</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Utica</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CFCU Community Credit Union</displayForm>
+ <namePart type="family">CFCU Community Credit Union</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Walter Elliot Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Walter</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Walter Elliot Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Walter</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Barbara Jeanne Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Barbara Jeanne Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Mark W. Swimelar</displayForm>
+ <namePart type="family">Swimelar</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Trustee</displayForm>
+ <namePart type="family">U.S. Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>Lynn Harper Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">Lynn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-6_07-cv-00027</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>6:07-cv-00027</caseNumber>
+ <caseOffice>Utica</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party fullName="CFCU Community Credit Union" lastName="CFCU Community Credit Union" role="Appellant"></party>
+ <party firstName="Walter" fullName="Walter Elliot Jones" lastName="Jones" middleName="Elliot" role="Appellee"></party>
+ <party firstName="Walter" fullName="Walter Elliot Jones" lastName="Jones" middleName="Elliot" role="Debtor"></party>
+ <party firstName="Barbara" fullName="Barbara Jeanne Jones" lastName="Jones" middleName="Jeanne" role="Appellee"></party>
+ <party firstName="Barbara" fullName="Barbara Jeanne Jones" lastName="Jones" middleName="Jeanne" role="Debtor"></party>
+ <party firstName="Mark" fullName="Mark W. Swimelar" lastName="Swimelar" middleName="W." role="Appellee"></party>
+ <party fullName="U.S. Trustee" lastName="U.S. Trustee" role="Notice Only Party"></party>
+ <party firstName="Lynn" fullName="Lynn Harper Wilson" lastName="Wilson" middleName="Harper" role="Appellee"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-6_07-cv-00027-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_07-cv-00027/USCOURTS-nynd-6_07-cv-00027-0/mods.xml">
+ <titleInfo>
+  <title>CFCU Community Credit Union v. Jones et al</title>
+  <subTitle>MEMORANDUM-DECISION AND ORDER: AFFIRMING 12/1/06 Order of Bankruptcy Court and DISMISSING Appeal/case. Signed by Judge Lawrence E. Kahn on 9/4/07. (tab)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-6_07-cv-00027-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813feaa6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_07-cv-00027/USCOURTS-nynd-6_07-cv-00027-0</identifier>
+ <identifier type="former granule identifier">nynd-6_07-cv-00027_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_07-cv-00027/USCOURTS-nynd-6_07-cv-00027-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_07-cv-00027/pdf/USCOURTS-nynd-6_07-cv-00027-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:07-cv-00027; CFCU Community Credit Union v. Jones et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-6_07-cv-00027-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-09-04</dateIssued>
+  <docketText>MEMORANDUM-DECISION AND ORDER: AFFIRMING 12/1/06 Order of Bankruptcy Court and DISMISSING Appeal/case. Signed by Judge Lawrence E. Kahn on 9/4/07. (tab)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-6_07-cv-00027-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_07-cv-00027/USCOURTS-nynd-6_07-cv-00027-1/mods.xml">
+ <titleInfo>
+  <title>CFCU Community Credit Union v. Jones et al</title>
+  <subTitle>DECISION AND ORDER. ORDERED, that CFCU Community Credit Union&apos;s appeal from the 12/1/2006 Order of the Bankruptcy Court is DISMISSED as moot. Signed by Senior Judge Lawrence E. Kahn on 1/5/2009. (dpk)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-6_07-cv-00027-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813feaa5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_07-cv-00027/USCOURTS-nynd-6_07-cv-00027-1</identifier>
+ <identifier type="former granule identifier">nynd-6_07-cv-00027_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_07-cv-00027/USCOURTS-nynd-6_07-cv-00027-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_07-cv-00027/pdf/USCOURTS-nynd-6_07-cv-00027-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:07-cv-00027; CFCU Community Credit Union v. Jones et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-6_07-cv-00027-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-05</dateIssued>
+  <docketText>DECISION AND ORDER. ORDERED, that CFCU Community Credit Union&apos;s appeal from the 12/1/2006 Order of the Bankruptcy Court is DISMISSED as moot. Signed by Senior Judge Lawrence E. Kahn on 1/5/2009. (dpk)</docketText>
+</extension>
+</relatedItem>
+</mods>

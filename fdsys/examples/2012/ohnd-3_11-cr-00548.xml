@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818ea096">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_11-cr-00548</identifier>
+<identifier type="local">P0b002ee1818ea096</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_11-cr-00548</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_11-cr-00548</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:11-cr-00548</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Mari" fullName="Mari Rachel Cramer" lastName="Cramer" middleName="Rachel" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Cramer</title>
+ <partNumber>3:11-cr-00548</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_11-cr-00548/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:11-cr-00548;11-548</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mari Rachel Cramer</displayForm>
+ <namePart type="family">Cramer</namePart>
+ <namePart type="given">Mari</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_11-cr-00548</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:11-cr-00548</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Mari" fullName="Mari Rachel Cramer" lastName="Cramer" middleName="Rachel" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_11-cr-00548-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_11-cr-00548/USCOURTS-ohnd-3_11-cr-00548-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Cramer</title>
+  <subTitle>Report and Recommendation on Plea of Guilty as to Mari Rachel Cramer. Objections to R&amp;R due by 12/29/2011. Magistrate Judge James R. Knepp, II on 12/15/11. (A,P)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_11-cr-00548-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818fb0ee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_11-cr-00548/USCOURTS-ohnd-3_11-cr-00548-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_11-cr-00548_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_11-cr-00548/USCOURTS-ohnd-3_11-cr-00548-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_11-cr-00548/pdf/USCOURTS-ohnd-3_11-cr-00548-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:11-cr-00548; United States of America v. Cramer; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_11-cr-00548-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-12-15</dateIssued>
+  <docketText>Report and Recommendation on Plea of Guilty as to Mari Rachel Cramer. Objections to R&amp;R due by 12/29/2011. Magistrate Judge James R. Knepp, II on 12/15/11. (A,P)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_11-cr-00548-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_11-cr-00548/USCOURTS-ohnd-3_11-cr-00548-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Cramer</title>
+  <subTitle>Order Adopting Report and Recommendation. Defendant&apos;s guilty plea is accepted, and a finding of guilty is entered as to Mari Rachel Cramer (re 7). Judge Jack Zouhary on 1/13/12. (C,D)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_11-cr-00548-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818faf95</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_11-cr-00548/USCOURTS-ohnd-3_11-cr-00548-1</identifier>
+ <identifier type="former granule identifier">ohnd-3_11-cr-00548_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_11-cr-00548/USCOURTS-ohnd-3_11-cr-00548-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_11-cr-00548/pdf/USCOURTS-ohnd-3_11-cr-00548-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:11-cr-00548; United States of America v. Cramer; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_11-cr-00548-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-13</dateIssued>
+  <docketText>Order Adopting Report and Recommendation. Defendant&apos;s guilty plea is accepted, and a finding of guilty is entered as to Mari Rachel Cramer (re 7). Judge Jack Zouhary on 1/13/12. (C,D)</docketText>
+</extension>
+</relatedItem>
+</mods>

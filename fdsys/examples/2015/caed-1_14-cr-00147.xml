@@ -1,0 +1,621 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18e216a22">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-12-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-12-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147</identifier>
+<identifier type="local">P0b002ee18e216a22</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-12-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-12-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cr-00147</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cr-00147</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cr-00147</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Lilliana" fullName="Lilliana Gonzales" lastName="Gonzales" role="Defendant"></party>
+ <party firstName="Viririana" fullName="Viririana Hernandez" lastName="Hernandez" role="Defendant"></party>
+ <party firstName="Roberto" fullName="Roberto Martinez Jr" generation="Jr" lastName="Martinez" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Miranda Jr" generation="Jr" lastName="Miranda" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Miranda et al</title>
+ <partNumber>1:14-cr-00147</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cr-00147;14-147</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Lilliana Gonzales</displayForm>
+ <namePart type="family">Gonzales</namePart>
+ <namePart type="given">Lilliana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Viririana Hernandez</displayForm>
+ <namePart type="family">Hernandez</namePart>
+ <namePart type="given">Viririana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roberto Martinez Jr</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">Roberto</namePart>
+ <namePart type="termsOfAddress">Jr</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Miranda Jr</displayForm>
+ <namePart type="family">Miranda</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress">Jr</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cr-00147</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cr-00147</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Lilliana" fullName="Lilliana Gonzales" lastName="Gonzales" role="Defendant"></party>
+ <party firstName="Viririana" fullName="Viririana Hernandez" lastName="Hernandez" role="Defendant"></party>
+ <party firstName="Roberto" fullName="Roberto Martinez Jr" generation="Jr" lastName="Martinez" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Miranda Jr" generation="Jr" lastName="Miranda" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-0" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>ORDER and WRIT OF HABEAS CORPUS AD PROSEQUENDUM as to Daniel Miranda Jr (1), signed by Magistrate Judge Stanley A. Boone on 07/18/14. Application 2 Granted. (Gonzalez, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229a4b</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-07-21</dateIssued>
+  <docketText>ORDER and WRIT OF HABEAS CORPUS AD PROSEQUENDUM as to Daniel Miranda Jr (1), signed by Magistrate Judge Stanley A. Boone on 07/18/14. Application 2 Granted. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-1" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>ORDER SETTING CONDITIONS of RELEASE as to Roberto Martinez, Jr. (3), signed by Magistrate Judge Sandra M. Snyder on 07/22/14. (Gonzalez, R)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b90</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-07-22</dateIssued>
+  <docketText>ORDER SETTING CONDITIONS of RELEASE as to Roberto Martinez, Jr. (3), signed by Magistrate Judge Sandra M. Snyder on 07/22/14. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-2" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>Stipulation and Protective ORDER Between the United States and Defendant Viririana Hernandez (2), signed by District Judge Anthony W. Ishii on 07/23/14. (Gonzalez, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b92</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-07-24</dateIssued>
+  <docketText>Stipulation and Protective ORDER Between the United States and Defendant Viririana Hernandez (2), signed by District Judge Anthony W. Ishii on 07/23/14. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-3" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>PROTECTIVE ORDER as to Lilliana Gonzales signed by District Judge Anthony W. Ishii on 7/24/14. (Nazaroff, H)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b7f</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-3</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-07-24</dateIssued>
+  <docketText>PROTECTIVE ORDER as to Lilliana Gonzales signed by District Judge Anthony W. Ishii on 7/24/14. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-4" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>PROTECTIVE ORDER as to Roberto Martinez, Jr signed by District Judge Anthony W. Ishii on 7/24/14. (Nazaroff, H)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b7d</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-4</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-07-24</dateIssued>
+  <docketText>PROTECTIVE ORDER as to Roberto Martinez, Jr signed by District Judge Anthony W. Ishii on 7/24/14. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-5" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>ORDER SETTING CONDITIONS of RELEASE as to Lilliana Gonzalez (4), signed by Magistrate Judge Sandra M. Snyder on 07/24/14. (Gonzalez, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b7b</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-5</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-07-25</dateIssued>
+  <docketText>ORDER SETTING CONDITIONS of RELEASE as to Lilliana Gonzalez (4), signed by Magistrate Judge Sandra M. Snyder on 07/24/14. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-6" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>DETENTION ORDER as to Daniel Miranda, Jr (1), signed by Magistrate Judge Barbara A. McAuliffe on 7/28/2014. (Herman, H)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b7c</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-6</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-07-29</dateIssued>
+  <docketText>DETENTION ORDER as to Daniel Miranda, Jr (1), signed by Magistrate Judge Barbara A. McAuliffe on 7/28/2014. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-7" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>DETENTION ORDER as to Viririana Hernandez (2), signed by Magistrate Judge Barbara A. McAuliffe on 7/28/2014. (Herman, H)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b7e</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-7</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-07-29</dateIssued>
+  <docketText>DETENTION ORDER as to Viririana Hernandez (2), signed by Magistrate Judge Barbara A. McAuliffe on 7/28/2014. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-8" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>PROTECTIVE ORDER as to Daniel Miranda, Jr signed by District Judge Anthony W. Ishii on 7/30/14. (Nazaroff, H)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b94</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-8</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-07-30</dateIssued>
+  <docketText>PROTECTIVE ORDER as to Daniel Miranda, Jr signed by District Judge Anthony W. Ishii on 7/30/14. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-9" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>ORDER on Motion to Withdraw the Federal Defender as Counsel, Appoint Ad Hoc CJA Counsel, and Defendant&apos;s Consent as to Daniel Miranda Jr. (1), signed by Magistrate Judge Barbara A. McAuliffe on 1/5/15: Effective January 12, 2015. (Hellings, J)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b93</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-9</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER on Motion to Withdraw the Federal Defender as Counsel, Appoint Ad Hoc CJA Counsel, and Defendant&apos;s Consent as to Daniel Miranda Jr. (1), signed by Magistrate Judge Barbara A. McAuliffe on 1/5/15: Effective January 12, 2015. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-10" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>STIPULATION and ORDER to Vacate Status Conference and Set Change of Plea to August 17, 2015, signed by District Judge Anthony W. Ishii on 8/11/2015. (Status Conference as to Viririana Hernandez (2) currently set 8/24/2015, beore Magistrate Judge Barbara A. McAuliffe is VACATED and a Change of Plea Hearing set for 8/17/2015, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b81</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-10</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2015-08-11</dateIssued>
+  <docketText>STIPULATION and ORDER to Vacate Status Conference and Set Change of Plea to August 17, 2015, signed by District Judge Anthony W. Ishii on 8/11/2015. (Status Conference as to Viririana Hernandez (2) currently set 8/24/2015, beore Magistrate Judge Barbara A. McAuliffe is VACATED and a Change of Plea Hearing set for 8/17/2015, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-11" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>STIPULATION and ORDER on Modification of Conditions of Release as to Roberto Martinez, Jr (3), that conditions of pretrial release are hereby modified to reflect Pre-Trial GPS monitoring is hereby modified to curfew to be administered by the Eastern District Pre-Trial Officers. signed by Magistrate Judge Barbara A. McAuliffe on 9/8/2015. (Herman, H)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b80</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-11</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2015-09-09</dateIssued>
+  <docketText>STIPULATION and ORDER on Modification of Conditions of Release as to Roberto Martinez, Jr (3), that conditions of pretrial release are hereby modified to reflect Pre-Trial GPS monitoring is hereby modified to curfew to be administered by the Eastern District Pre-Trial Officers. signed by Magistrate Judge Barbara A. McAuliffe on 9/8/2015. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-12" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Viririana Hernandez (2), signed by District Judge Anthony W. Ishii on 11/4/2015. (Gaumnitz, R)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b83</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-12</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2015-11-04</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Viririana Hernandez (2), signed by District Judge Anthony W. Ishii on 11/4/2015. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-13" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>STIPULATION and ORDER to Continue Sentencing, signed by District Judge Anthony W. Ishii on 11/24/2015. (Sentencing as to Daniel Miranda Jr. previously set for 11/30/2015, has been CONTINUED to 12/7/2015, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b7a</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-13</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2015-11-24</dateIssued>
+  <docketText>STIPULATION and ORDER to Continue Sentencing, signed by District Judge Anthony W. Ishii on 11/24/2015. (Sentencing as to Daniel Miranda Jr. previously set for 11/30/2015, has been CONTINUED to 12/7/2015, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-14" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>STIPULATION and ORDER to Continue Sentencing Hearing, signed by District Judge Anthony W. Ishii on 11/25/2015. (Sentencing as to Lilliana Gonzales (4) previously set for 11/30/2015, has been CONTINUED to 1/11/2016, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b82</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-14</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2015-11-25</dateIssued>
+  <docketText>STIPULATION and ORDER to Continue Sentencing Hearing, signed by District Judge Anthony W. Ishii on 11/25/2015. (Sentencing as to Lilliana Gonzales (4) previously set for 11/30/2015, has been CONTINUED to 1/11/2016, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-15" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Daniel Miranda, Jr, signed by District Judge Anthony W. Ishii on 12/11/2015. (Kusamura, W)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b8f</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-15</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2015-12-11</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Daniel Miranda, Jr, signed by District Judge Anthony W. Ishii on 12/11/2015. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cr-00147-16" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Miranda et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Roberto Martinez, Jr, signed by District Judge Anthony W. Ishii on 12/11/2015. (Kusamura, W)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e229b91</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-16</identifier>
+ <identifier type="former granule identifier">caed-1_14-cr-00147_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cr-00147/USCOURTS-caed-1_14-cr-00147-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cr-00147/pdf/USCOURTS-caed-1_14-cr-00147-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cr-00147; USA v. Miranda et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cr-00147-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2015-12-11</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Roberto Martinez, Jr, signed by District Judge Anthony W. Ishii on 12/11/2015. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+</mods>

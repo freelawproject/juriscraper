@@ -1,0 +1,460 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a3173f1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-09-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026</identifier>
+<identifier type="local">P0b002ee18a3173f1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-03026</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-03026</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-03026</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:1983 Civil Rights (Employment Discrimination)</cause>
+ <party firstName="Lal" fullName="Lal Dev" lastName="Dev" role="Plaintiff"></party>
+ <party firstName="Patrick" fullName="Patrick R. Donahoe" lastName="Donahoe" middleName="R." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PS) Dev v. Donahoe</title>
+ <partNumber>2:12-cv-03026</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-03026;12-3026</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Lal Dev</displayForm>
+ <namePart type="family">Dev</namePart>
+ <namePart type="given">Lal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Patrick R. Donahoe</displayForm>
+ <namePart type="family">Donahoe</namePart>
+ <namePart type="given">Patrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-03026</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-03026</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:1983 Civil Rights (Employment Discrimination)</cause>
+ <party firstName="Lal" fullName="Lal Dev" lastName="Dev" role="Plaintiff"></party>
+ <party firstName="Patrick" fullName="Patrick R. Donahoe" lastName="Donahoe" middleName="R." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03026-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-0/mods.xml">
+ <titleInfo>
+  <title>(PS) Dev v. Donahoe</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 9/4/2013 ORDERING 11 Motion to Compel Attendance is GRANTED; Plaintiff is to appear on 9/6/2013 at 10:00 a.m. at the United States Attorney&apos;s Office, 501 I Street, Sacramento, CA 95814. (Waggoner, D)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36a935</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03026_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03026; (PS) Dev v. Donahoe; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03026-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-09-04</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 9/4/2013 ORDERING 11 Motion to Compel Attendance is GRANTED; Plaintiff is to appear on 9/6/2013 at 10:00 a.m. at the United States Attorney&apos;s Office, 501 I Street, Sacramento, CA 95814. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03026-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-1/mods.xml">
+ <titleInfo>
+  <title>(PS) Dev v. Donahoe</title>
+  <subTitle>RELATED CASE ORDER signed by Judge John A. Mendez on 9/18/2013 ORDERING that cases 2:12-CV-03026 TLN-EFB-PS and 2:11-CV-02950 JAM-EFB-PS are RELATED. The action denominated 2:12-CV-03026 TLN-EFB-PS is REASSIGNED to Judge John A. Mendez for all further proceedings, and any dates currently set in this reassigned case only are hereby VACATED. Henceforth, the caption on documents filed in the reassigned cases shall be shown as 2:12-CV-03026 JAM-EFB-PS.(Zignago, K.)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36a939</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03026_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03026; (PS) Dev v. Donahoe; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03026-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-09-19</dateIssued>
+  <docketText>RELATED CASE ORDER signed by Judge John A. Mendez on 9/18/2013 ORDERING that cases 2:12-CV-03026 TLN-EFB-PS and 2:11-CV-02950 JAM-EFB-PS are RELATED. The action denominated 2:12-CV-03026 TLN-EFB-PS is REASSIGNED to Judge John A. Mendez for all further proceedings, and any dates currently set in this reassigned case only are hereby VACATED. Henceforth, the caption on documents filed in the reassigned cases shall be shown as 2:12-CV-03026 JAM-EFB-PS.(Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03026-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-2/mods.xml">
+ <titleInfo>
+  <title>(PS) Dev v. Donahoe</title>
+  <subTitle>ORDER signed by Judge John A. Mendez on 10/15/13 ORDERING that Plaintiff&apos;s MOTION for RECONSIDERATION 18 is DENIED. (Mena-Sanchez, L)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36a93a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03026_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03026; (PS) Dev v. Donahoe; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03026-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-10-16</dateIssued>
+  <docketText>ORDER signed by Judge John A. Mendez on 10/15/13 ORDERING that Plaintiff&apos;s MOTION for RECONSIDERATION 18 is DENIED. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03026-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-3/mods.xml">
+ <titleInfo>
+  <title>(PS) Dev v. Donahoe</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/16/2013 DENYING 23 Motion to Disqualify. (Donati, J)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36a93b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03026_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03026; (PS) Dev v. Donahoe; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03026-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-10-16</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/16/2013 DENYING 23 Motion to Disqualify. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03026-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-4/mods.xml">
+ <titleInfo>
+  <title>(PS) Dev v. Donahoe</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/21/2013 ORDERING 21 Motion to Compel is GRANTED; within 7 days of the date of this order, plaintiff shall provide full and complete responses to defendant&apos;s Interrogatories Nos. 10 and 11; and the 10/23/2013 hearing on defendant&apos;s motion to compel is VACATED. (Waggoner, D)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36a937</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03026_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03026; (PS) Dev v. Donahoe; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03026-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-10-21</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/21/2013 ORDERING 21 Motion to Compel is GRANTED; within 7 days of the date of this order, plaintiff shall provide full and complete responses to defendant&apos;s Interrogatories Nos. 10 and 11; and the 10/23/2013 hearing on defendant&apos;s motion to compel is VACATED. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03026-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-5/mods.xml">
+ <titleInfo>
+  <title>(PS) Dev v. Donahoe</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/2/2014 DENYING 29 Motion to Stay. (Michel, G)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36a909</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03026_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03026; (PS) Dev v. Donahoe; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03026-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/2/2014 DENYING 29 Motion to Stay. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03026-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-6/mods.xml">
+ <titleInfo>
+  <title>(PS) Dev v. Donahoe</title>
+  <subTitle>ORDER to SHOW CAUSE signed by Magistrate Judge Edmund F. Brennan on 1/6/2014 ORDERING hearing on defendant&apos;s 27 Motion for Summary Judgment is CONTINUED to 2/5/2014; plaintiff shall SHOW CAUSE, in writing, no later than 1/22/2014, why sanctions should not be imposed for failure to timely file an opposition or a statement of non-opposition to the pending motion; plaintiff shall file an opposition to the motion, or a statement of non-opposition thereto, no later than 1/22/2014; failure of plaintiff to file an opposition to the motion will be deemed a statement of non-opposition thereto, and may result in a recommendation that this action be dismissed for lack of prosecution and/or failure to comply with court orders and this court&apos;s Local Rules; defendant may file a reply to plaintiff&apos;s opposition, if any, on or before 1/29/2014. (Waggoner, D)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36a908</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03026_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03026; (PS) Dev v. Donahoe; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03026-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER to SHOW CAUSE signed by Magistrate Judge Edmund F. Brennan on 1/6/2014 ORDERING hearing on defendant&apos;s 27 Motion for Summary Judgment is CONTINUED to 2/5/2014; plaintiff shall SHOW CAUSE, in writing, no later than 1/22/2014, why sanctions should not be imposed for failure to timely file an opposition or a statement of non-opposition to the pending motion; plaintiff shall file an opposition to the motion, or a statement of non-opposition thereto, no later than 1/22/2014; failure of plaintiff to file an opposition to the motion will be deemed a statement of non-opposition thereto, and may result in a recommendation that this action be dismissed for lack of prosecution and/or failure to comply with court orders and this court&apos;s Local Rules; defendant may file a reply to plaintiff&apos;s opposition, if any, on or before 1/29/2014. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03026-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-7/mods.xml">
+ <titleInfo>
+  <title>(PS) Dev v. Donahoe</title>
+  <subTitle>ORDER signed by Judge John A. Mendez on 2/7/14 DENYING 32 Motion for Reconsideration. (Meuleman, A)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36a934</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03026_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03026; (PS) Dev v. Donahoe; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03026-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-02-10</dateIssued>
+  <docketText>ORDER signed by Judge John A. Mendez on 2/7/14 DENYING 32 Motion for Reconsideration. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03026-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-8/mods.xml">
+ <titleInfo>
+  <title>(PS) Dev v. Donahoe</title>
+  <subTitle>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 4/22/2014 ORDERING hearing re: 45 MOTION to AMEND by Lal Dev is VACATED; RECOMMENDING that Motion to Amend be denied. Matter referred to Judge John A. Mendez. Within 14 days after being served with these findings and recommendations, any party may file written objections. Failure to file objections within the specified time may waive the right to appeal the District Court&apos;s order. (Waggoner, D)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36a907</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03026_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03026; (PS) Dev v. Donahoe; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03026-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-04-22</dateIssued>
+  <docketText>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 4/22/2014 ORDERING hearing re: 45 MOTION to AMEND by Lal Dev is VACATED; RECOMMENDING that Motion to Amend be denied. Matter referred to Judge John A. Mendez. Within 14 days after being served with these findings and recommendations, any party may file written objections. Failure to file objections within the specified time may waive the right to appeal the District Court&apos;s order. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03026-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-9/mods.xml">
+ <titleInfo>
+  <title>(PS) Dev v. Donahoe</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/8/14 DENYING 51 Motion to File Documents Electronically. (Meuleman, A)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36a938</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-9</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03026_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03026; (PS) Dev v. Donahoe; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03026-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-05-09</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/8/14 DENYING 51 Motion to File Documents Electronically. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03026-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-10/mods.xml">
+ <titleInfo>
+  <title>(PS) Dev v. Donahoe</title>
+  <subTitle>ORDER signed by Judge John A. Mendez on 6/27/2014 FINDINGS AND RECOMMENDATIONS 50 are ADOPTED; and Plaintiff&apos;s 45 Motion to Amend the Complaint is DENIED. (Reader, L)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36a936</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-10</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03026_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03026; (PS) Dev v. Donahoe; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03026-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-06-30</dateIssued>
+  <docketText>ORDER signed by Judge John A. Mendez on 6/27/2014 FINDINGS AND RECOMMENDATIONS 50 are ADOPTED; and Plaintiff&apos;s 45 Motion to Amend the Complaint is DENIED. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-03026-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-11/mods.xml">
+ <titleInfo>
+  <title>(PS) Dev v. Donahoe</title>
+  <subTitle>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 9/25/2014 DENYING plaintiff&apos;s motion to strike the declaration of Sandra Schmidt. The Clerk is ORDERED to file the 9/6/2013 deposition of plaintiff in this case. It is hereby RECOMMENDED that the 27 Motion for Summary Judgment be granted, judgment be entered in defendant&apos;s favor and the clerk be directed to close the case. Objections due within 14 days after being served with these findings and recommendations. Referred to Judge John A. Mendez. (Donati, J)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a36a906</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-11</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-03026_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-03026/USCOURTS-caed-2_12-cv-03026-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-03026/pdf/USCOURTS-caed-2_12-cv-03026-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-03026; (PS) Dev v. Donahoe; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-03026-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2014-09-25</dateIssued>
+  <docketText>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 9/25/2014 DENYING plaintiff&apos;s motion to strike the declaration of Sandra Schmidt. The Clerk is ORDERED to file the 9/6/2013 deposition of plaintiff in this case. It is hereby RECOMMENDED that the 27 Motion for Summary Judgment be granted, judgment be entered in defendant&apos;s favor and the clerk be directed to close the case. Objections due within 14 days after being served with these findings and recommendations. Referred to Judge John A. Mendez. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+</mods>

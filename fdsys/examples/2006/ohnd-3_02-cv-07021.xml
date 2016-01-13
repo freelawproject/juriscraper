@@ -1,0 +1,152 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d1ac4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_02-cv-07021</identifier>
+<identifier type="local">P0b002ee1815d1ac4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_02-cv-07021</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_02-cv-07021</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:02-cv-07021</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>720</natureSuitCode>
+ <natureSuit>Labor Management Relations Act</natureSuit>
+ <cause>29:185 Labor/Mgt. Relations (Contracts)</cause>
+ <party fullName="L.G. Philips Display Components Company" lastName="L.G. Philips Display Components Company" role="Defendant"></party>
+ <party fullName="Local No. 1654, International Brotherhood of Electrical Workers, AFL-CIO" lastName="Local No. 1654, International Brotherhood of Electrical Workers, AFL-CIO" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Local No. 1654, International Brotherhood of Elect v. L.G. Philips Display Components Company</title>
+ <partNumber>3:02-cv-07021</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_02-cv-07021/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:02-cv-07021;02-7021</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>L.G. Philips Display Components Company</displayForm>
+ <namePart type="family">L.G. Philips Display Components Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Local No. 1654, International Brotherhood of Electrical Workers, AFL-CIO</displayForm>
+ <namePart type="family">Local No. 1654, International Brotherhood of Electrical Workers, AFL-CIO</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_02-cv-07021</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:02-cv-07021</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>720</natureSuitCode>
+ <natureSuit>Labor Management Relations Act</natureSuit>
+ <cause>29:185 Labor/Mgt. Relations (Contracts)</cause>
+ <party fullName="L.G. Philips Display Components Company" lastName="L.G. Philips Display Components Company" role="Defendant"></party>
+ <party fullName="Local No. 1654, International Brotherhood of Electrical Workers, AFL-CIO" lastName="Local No. 1654, International Brotherhood of Electrical Workers, AFL-CIO" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_02-cv-07021-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_02-cv-07021/USCOURTS-ohnd-3_02-cv-07021-0/mods.xml">
+ <titleInfo>
+  <title>Local No. 1654, International Brotherhood of Elect v. L.G. Philips Display Components Company</title>
+  <subTitle>ORDER: defendant&apos;s motion for summary judgment is granted. Signed by Judge James G. Carr on January 30, 2006.(F, L) Modified on 2/2/2006 (R, Ci).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_02-cv-07021-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816d991f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_02-cv-07021/USCOURTS-ohnd-3_02-cv-07021-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_02-cv-07021_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_02-cv-07021/USCOURTS-ohnd-3_02-cv-07021-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_02-cv-07021/pdf/USCOURTS-ohnd-3_02-cv-07021-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:02-cv-07021; Local No. 1654, International Brotherhood of Elect v. L.G. Philips Display Components Company; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_02-cv-07021-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-30</dateIssued>
+  <docketText>ORDER: defendant&apos;s motion for summary judgment is granted. Signed by Judge James G. Carr on January 30, 2006.(F, L) Modified on 2/2/2006 (R, Ci).</docketText>
+</extension>
+</relatedItem>
+</mods>

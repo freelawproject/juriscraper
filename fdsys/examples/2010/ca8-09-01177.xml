@@ -1,0 +1,169 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e70c08">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-09-01177</identifier>
+<identifier type="local">P0b002ee180e70c08</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-09-01177</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-09-01177</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>09-01177</caseNumber>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Alan" fullName="Alan E. Gurski" lastName="Gurski" middleName="E." role="Appellant"></party>
+ <party firstName="T." fullName="T. C. Outlaw" lastName="Outlaw" middleName="C." role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>Alan Gurski v. T. Outlaw</title>
+ <partNumber>09-01177</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-09-01177/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">09-01177;09-1177</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Alan E. Gurski</displayForm>
+ <namePart type="family">Gurski</namePart>
+ <namePart type="given">Alan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>T. C. Outlaw</displayForm>
+ <namePart type="family">Outlaw</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-09-01177</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>09-01177</caseNumber>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Alan" fullName="Alan E. Gurski" lastName="Gurski" middleName="E." role="Appellant"></party>
+ <party firstName="T." fullName="T. C. Outlaw" lastName="Outlaw" middleName="C." role="Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-09-01177-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01177/USCOURTS-ca8-09-01177-0/mods.xml">
+ <titleInfo>
+  <title>Alan Gurski v. T. Outlaw</title>
+  <subTitle>PER CURIAM OPINION FILED - THE COURT: KERMIT E. BYE, PASCO M. BOWMAN and DUANE BENTON (UNPUBLISHED) [3620416] [09-1177] THIS OPINION WAS CORRECTED - SEE JANUARY 14, 2010--[Edited 01/14/2010 by SRD]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-09-01177-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e74905</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01177/USCOURTS-ca8-09-01177-0</identifier>
+ <identifier type="former granule identifier">ca8-09-01177_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01177/USCOURTS-ca8-09-01177-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-09-01177/pdf/USCOURTS-ca8-09-01177-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 09-01177; Alan Gurski v. T. Outlaw; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-09-01177-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-04</dateIssued>
+  <docketText>PER CURIAM OPINION FILED - THE COURT: KERMIT E. BYE, PASCO M. BOWMAN and DUANE BENTON (UNPUBLISHED) [3620416] [09-1177] THIS OPINION WAS CORRECTED - SEE JANUARY 14, 2010--[Edited 01/14/2010 by SRD]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-09-01177-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01177/USCOURTS-ca8-09-01177-1/mods.xml">
+ <titleInfo>
+  <title>Alan Gurski v. T. Outlaw</title>
+  <subTitle>CORRECTED OPINION FILED 01/14/2010: The parenthetical on page 2 in the 9th line has been deleted. Original opinion filed on 01/04/2010. [3624307] [09-1177]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-09-01177-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e74906</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01177/USCOURTS-ca8-09-01177-1</identifier>
+ <identifier type="former granule identifier">ca8-09-01177_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-09-01177/USCOURTS-ca8-09-01177-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-09-01177/pdf/USCOURTS-ca8-09-01177-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 09-01177; Alan Gurski v. T. Outlaw; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-09-01177-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-14</dateIssued>
+  <docketText>CORRECTED OPINION FILED 01/14/2010: The parenthetical on page 2 in the 9th line has been deleted. Original opinion filed on 01/04/2010. [3624307] [09-1177]</docketText>
+</extension>
+</relatedItem>
+</mods>

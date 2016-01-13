@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814dcc1e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-12212</identifier>
+<identifier type="local">P0b002ee1814dcc1e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_10-cv-12212</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_10-cv-12212</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:10-cv-12212</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>445</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Employment</natureSuit>
+ <cause>28:1331 Fed. Question: Employment Discrimination</cause>
+ <party firstName="John" fullName="John B. Dempsey" lastName="Dempsey" middleName="B." role="Plaintiff"></party>
+ <party firstName="Brian" fullName="Brian Gnandt" lastName="Gnandt" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Dempsey v. Gnandt</title>
+ <partNumber>1:10-cv-12212</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-12212/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-12212;10-12212</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John B. Dempsey</displayForm>
+ <namePart type="family">Dempsey</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Brian Gnandt</displayForm>
+ <namePart type="family">Gnandt</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_10-cv-12212</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:10-cv-12212</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>445</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Employment</natureSuit>
+ <cause>28:1331 Fed. Question: Employment Discrimination</cause>
+ <party firstName="John" fullName="John B. Dempsey" lastName="Dempsey" middleName="B." role="Plaintiff"></party>
+ <party firstName="Brian" fullName="Brian Gnandt" lastName="Gnandt" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_10-cv-12212-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12212/USCOURTS-mad-1_10-cv-12212-0/mods.xml">
+ <titleInfo>
+  <title>Dempsey v. Gnandt</title>
+  <subTitle>Judge George A. OToole, Jr: MEMORANDUM AND ORDER entered: Plaintiff&apos;s Motion for Leave to Proceed in forma pauperis (Docket Nos. 2 and 3) are ALLOWED; Plaintiff&apos;s Motion for a Referral to the Attorney General (Docket No. 4) is DENIED; Plaintiff&apos;s Motion for Free Service of Process by the U.S. Marshal (Docket No. 6) is DENIED without prejudice; Plaintiff&apos;s Motion for Inquiry Obstruction of Justice Inquiry Regarding Mount Auburn Hospital President Janette Clough (Docket No. 7) is DENIED; Plaintiff&apos;s Motion for Summary Judgment (Docket No. 8) is DENIED; Within 35 days of the date of this Memorandum and Order, Plaintiff shall demonstrate good cause why this action should not be dismissed or he shall file a coherent Amended Complaint curing the pleading deficiencies; and Plaintiff is PROHIBITED from filing any further requests for preliminary relief until after a responsive pleading is filed by the Defendant if this action is permitted to proceed further. (PSSA, 1)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_10-cv-12212-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18154da94</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12212/USCOURTS-mad-1_10-cv-12212-0</identifier>
+ <identifier type="former granule identifier">mad-1_10-cv-12212_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12212/USCOURTS-mad-1_10-cv-12212-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-12212/pdf/USCOURTS-mad-1_10-cv-12212-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-12212; Dempsey v. Gnandt; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_10-cv-12212-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-13</dateIssued>
+  <docketText>Judge George A. OToole, Jr: MEMORANDUM AND ORDER entered: Plaintiff&apos;s Motion for Leave to Proceed in forma pauperis (Docket Nos. 2 and 3) are ALLOWED; Plaintiff&apos;s Motion for a Referral to the Attorney General (Docket No. 4) is DENIED; Plaintiff&apos;s Motion for Free Service of Process by the U.S. Marshal (Docket No. 6) is DENIED without prejudice; Plaintiff&apos;s Motion for Inquiry Obstruction of Justice Inquiry Regarding Mount Auburn Hospital President Janette Clough (Docket No. 7) is DENIED; Plaintiff&apos;s Motion for Summary Judgment (Docket No. 8) is DENIED; Within 35 days of the date of this Memorandum and Order, Plaintiff shall demonstrate good cause why this action should not be dismissed or he shall file a coherent Amended Complaint curing the pleading deficiencies; and Plaintiff is PROHIBITED from filing any further requests for preliminary relief until after a responsive pleading is filed by the Defendant if this action is permitted to proceed further. (PSSA, 1)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_10-cv-12212-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12212/USCOURTS-mad-1_10-cv-12212-1/mods.xml">
+ <titleInfo>
+  <title>Dempsey v. Gnandt</title>
+  <subTitle>Judge George A. OToole, Jr: MEMORANDUM AND ORDER entered: Plaintiff&apos;s Motion for Immediate Suspension of Proceeding Enemy Alien Status (Docket No. 10) is DENIED; Plaintiff is CAUTIONED against the continued filing of abusive, malicious, or vexatious pleadings and advised that such filings may result in the imposition of sanctions; Plaintiffs &quot;Motion for 18 U.S.C.A. 521(A) Criminal Street Gang Be Declared Domestic Terrorist Group Title 18 U.S.C.A. 2331(5)(A) in Regards Late Graf of Myanmar (1979) Burned and Crippled Son 18 U.S.C.A. 1116(b)(1)&quot; (Docket No. 13) is DENIED; Plaintiff&apos;s Motion for Reconsideration (Docket No. 11) is DENIED; andThis action is DISMISSED in its entirety. (PSSA, 1)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_10-cv-12212-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18154da95</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12212/USCOURTS-mad-1_10-cv-12212-1</identifier>
+ <identifier type="former granule identifier">mad-1_10-cv-12212_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12212/USCOURTS-mad-1_10-cv-12212-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-12212/pdf/USCOURTS-mad-1_10-cv-12212-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-12212; Dempsey v. Gnandt; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_10-cv-12212-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-28</dateIssued>
+  <docketText>Judge George A. OToole, Jr: MEMORANDUM AND ORDER entered: Plaintiff&apos;s Motion for Immediate Suspension of Proceeding Enemy Alien Status (Docket No. 10) is DENIED; Plaintiff is CAUTIONED against the continued filing of abusive, malicious, or vexatious pleadings and advised that such filings may result in the imposition of sanctions; Plaintiffs &quot;Motion for 18 U.S.C.A. 521(A) Criminal Street Gang Be Declared Domestic Terrorist Group Title 18 U.S.C.A. 2331(5)(A) in Regards Late Graf of Myanmar (1979) Burned and Crippled Son 18 U.S.C.A. 1116(b)(1)&quot; (Docket No. 13) is DENIED; Plaintiff&apos;s Motion for Reconsideration (Docket No. 11) is DENIED; andThis action is DISMISSED in its entirety. (PSSA, 1)</docketText>
+</extension>
+</relatedItem>
+</mods>

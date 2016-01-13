@@ -1,0 +1,170 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18155f10d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_10-cv-01301</identifier>
+<identifier type="local">P0b002ee18155f10d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-5_10-cv-01301</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_10-cv-01301</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:10-cv-01301</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>15:2(a) Fair Labor Standards Act</cause>
+ <party firstName="Sean" fullName="Sean Bowen" lastName="Bowen" role="Plaintiff"></party>
+ <party fullName="Time Warner Cable Inc." lastName="Time Warner Cable Inc." role="Defendant"></party>
+ <party fullName="Time Warner Cable LLC" lastName="Time Warner Cable LLC" role="Defendant"></party>
+ <party fullName="Time Warner Entertainment Company, L.P." lastName="Time Warner Entertainment Company, L.P." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Bowen v. Time Warner Entertainment Company, L.P.</title>
+ <partNumber>5:10-cv-01301</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_10-cv-01301/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:10-cv-01301;10-1301</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Akron</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Sean Bowen</displayForm>
+ <namePart type="family">Bowen</namePart>
+ <namePart type="given">Sean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Time Warner Cable Inc.</displayForm>
+ <namePart type="family">Time Warner Cable Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Time Warner Cable LLC</displayForm>
+ <namePart type="family">Time Warner Cable LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Time Warner Entertainment Company, L.P.</displayForm>
+ <namePart type="family">Time Warner Entertainment Company, L.P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_10-cv-01301</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:10-cv-01301</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>15:2(a) Fair Labor Standards Act</cause>
+ <party firstName="Sean" fullName="Sean Bowen" lastName="Bowen" role="Plaintiff"></party>
+ <party fullName="Time Warner Cable Inc." lastName="Time Warner Cable Inc." role="Defendant"></party>
+ <party fullName="Time Warner Cable LLC" lastName="Time Warner Cable LLC" role="Defendant"></party>
+ <party fullName="Time Warner Entertainment Company, L.P." lastName="Time Warner Entertainment Company, L.P." role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_10-cv-01301-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_10-cv-01301/USCOURTS-ohnd-5_10-cv-01301-0/mods.xml">
+ <titleInfo>
+  <title>Bowen v. Time Warner Entertainment Company, L.P.</title>
+  <subTitle>Memorandum Opinion denying plaintiff&apos;s Motion for leave to file a second amended complaint (Related Doc # 31). Signed by Judge David D. Dowd, Jr. on 1/15/2011. (M,De)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_10-cv-01301-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816194e2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_10-cv-01301/USCOURTS-ohnd-5_10-cv-01301-0</identifier>
+ <identifier type="former granule identifier">ohnd-5_10-cv-01301_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_10-cv-01301/USCOURTS-ohnd-5_10-cv-01301-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_10-cv-01301/pdf/USCOURTS-ohnd-5_10-cv-01301-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cv-01301; Bowen v. Time Warner Entertainment Company, L.P.; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_10-cv-01301-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-25</dateIssued>
+  <docketText>Memorandum Opinion denying plaintiff&apos;s Motion for leave to file a second amended complaint (Related Doc # 31). Signed by Judge David D. Dowd, Jr. on 1/15/2011. (M,De)</docketText>
+</extension>
+</relatedItem>
+</mods>

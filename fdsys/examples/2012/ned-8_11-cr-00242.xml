@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181e6006f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-02-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-02-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00242</identifier>
+<identifier type="local">P0b002ee181e6006f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-02-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-02-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cr-00242</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00242</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00242</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Whitney" fullName="Whitney Holbrook" lastName="Holbrook" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Holbrook</title>
+ <partNumber>8:11-cr-00242</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00242/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cr-00242;11-242</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Whitney Holbrook</displayForm>
+ <namePart type="family">Holbrook</namePart>
+ <namePart type="given">Whitney</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00242</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00242</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Whitney" fullName="Whitney Holbrook" lastName="Holbrook" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00242-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Holbrook</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender for the District of Nebraska is appointed to represent the above-named defendant in this matteras to defendant Whitney Holbrook. Ordered by Magistrate Judge F.A. Gossett. (JAE)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00242-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e6043b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00242_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00242/pdf/USCOURTS-ned-8_11-cr-00242-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00242; USA v. Holbrook; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00242-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-07-28</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender for the District of Nebraska is appointed to represent the above-named defendant in this matteras to defendant Whitney Holbrook. Ordered by Magistrate Judge F.A. Gossett. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00242-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Holbrook</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Whitney Holbrook. Ordered by Magistrate Judge F.A. Gossett. (JAE)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00242-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e6043e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00242_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00242/pdf/USCOURTS-ned-8_11-cr-00242-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00242; USA v. Holbrook; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00242-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-07-28</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Whitney Holbrook. Ordered by Magistrate Judge F.A. Gossett. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00242-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Holbrook</title>
+  <subTitle>ORDER as to Whitney Holbrook (1). The Defendant&apos;s Motion for Disclosure of Confidential Informants (15) is granted. The government is ordered to reveal the identity of the confidential informants to the defendant fourteen (14) days prior to defendant&apos;s trial date. A party may object to a magistrate judge&apos;s order by filing an &quot;Objection to Magistrate Judge&apos;s Order&quot; within 14 days after being served with the order. The objecting party must comply with all requirements of NECrimR 59.2. Ordered by Magistrate Judge F.A. Gossett. ( GJG)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00242-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e6043a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00242_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00242/pdf/USCOURTS-ned-8_11-cr-00242-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00242; USA v. Holbrook; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00242-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-08-18</dateIssued>
+  <docketText>ORDER as to Whitney Holbrook (1). The Defendant&apos;s Motion for Disclosure of Confidential Informants (15) is granted. The government is ordered to reveal the identity of the confidential informants to the defendant fourteen (14) days prior to defendant&apos;s trial date. A party may object to a magistrate judge&apos;s order by filing an &quot;Objection to Magistrate Judge&apos;s Order&quot; within 14 days after being served with the order. The objecting party must comply with all requirements of NECrimR 59.2. Ordered by Magistrate Judge F.A. Gossett. ( GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00242-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Holbrook</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture (Filing No. 42) is hereby sustained as to Whitney Holbrook (1). Based upon the Forfeiture Allegation of the Indictment and the Defendant&apos;s plea of guilty, the United States is hereby authorized to seize the $669.00 in United States Currency. The Defendant&apos;s interest in the $669.00 in United States Currency is hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. § 853(n)(1). The aforementioned property is to be held by the United States in its secure custody and control. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed. Ordered by Judge Laurie Smith Camp. (1 Certified copy to USM) (AOA)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00242-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e6043c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00242_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00242/pdf/USCOURTS-ned-8_11-cr-00242-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00242; USA v. Holbrook; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00242-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-11-21</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture (Filing No. 42) is hereby sustained as to Whitney Holbrook (1). Based upon the Forfeiture Allegation of the Indictment and the Defendant&apos;s plea of guilty, the United States is hereby authorized to seize the $669.00 in United States Currency. The Defendant&apos;s interest in the $669.00 in United States Currency is hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. § 853(n)(1). The aforementioned property is to be held by the United States in its secure custody and control. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed. Ordered by Judge Laurie Smith Camp. (1 Certified copy to USM) (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00242-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Holbrook</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to Defendant Whitney Holbrook. Ordered by Chief Judge Laurie Smith Camp. (MHB )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00242-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e6096b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-4</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00242_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00242/pdf/USCOURTS-ned-8_11-cr-00242-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00242; USA v. Holbrook; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00242-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to Defendant Whitney Holbrook. Ordered by Chief Judge Laurie Smith Camp. (MHB )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00242-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Holbrook</title>
+  <subTitle>FINAL ORDER OF FORFEITURE as to Whitney Holbrook (1) - The Plaintiff&apos;s Motion for Final Order of Forfeiture (Filing No. 54) is hereby sustained. All right, title and interest in and to the $669.00 in United States currency held by any person or entity are hereby forever barred and foreclosed. The $669.00 in United States currency be, and the same hereby is, forfeited to the United States of America. The United States is directed to dispose of said property in accordance with law. Ordered by Chief Judge Laurie Smith Camp. (TEL)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00242-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e6043d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-5</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00242_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00242/USCOURTS-ned-8_11-cr-00242-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00242/pdf/USCOURTS-ned-8_11-cr-00242-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00242; USA v. Holbrook; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00242-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-02-14</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE as to Whitney Holbrook (1) - The Plaintiff&apos;s Motion for Final Order of Forfeiture (Filing No. 54) is hereby sustained. All right, title and interest in and to the $669.00 in United States currency held by any person or entity are hereby forever barred and foreclosed. The $669.00 in United States currency be, and the same hereby is, forfeited to the United States of America. The United States is directed to dispose of said property in accordance with law. Ordered by Chief Judge Laurie Smith Camp. (TEL)</docketText>
+</extension>
+</relatedItem>
+</mods>

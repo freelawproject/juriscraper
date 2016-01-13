@@ -1,0 +1,243 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181128b80">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_09-cv-00759</identifier>
+<identifier type="local">P0b002ee181128b80</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-6_09-cv-00759</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-6_09-cv-00759</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>6:09-cv-00759</caseNumber>
+ <caseOffice>Utica</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <party firstName="Michael" fullName="Michael J. Astrue" lastName="Astrue" middleName="J." role="Defendant"></party>
+ <party firstName="June" fullName="June L. Hofmann" lastName="Hofmann" middleName="L." role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Hofmann v. Astrue</title>
+ <partNumber>6:09-cv-00759</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_09-cv-00759/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:09-cv-00759;09-759</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Utica</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Michael J. Astrue</displayForm>
+ <namePart type="family">Astrue</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>June L. Hofmann</displayForm>
+ <namePart type="family">Hofmann</namePart>
+ <namePart type="given">June</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security Administration</displayForm>
+ <namePart type="family">Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-6_09-cv-00759</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>6:09-cv-00759</caseNumber>
+ <caseOffice>Utica</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <party firstName="Michael" fullName="Michael J. Astrue" lastName="Astrue" middleName="J." role="Defendant"></party>
+ <party firstName="June" fullName="June L. Hofmann" lastName="Hofmann" middleName="L." role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Interested Party"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-6_09-cv-00759-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00759/USCOURTS-nynd-6_09-cv-00759-0/mods.xml">
+ <titleInfo>
+  <title>Hofmann v. Astrue</title>
+  <subTitle>CONSENT ORDER: Approving the # 11 Stipulation. It is Ordered that Re: # 1 Complaint filed by June L. Hofmann, the final decision by the Commissioner is hereby REVERSED and the matter is REMANDED for further administrative action. This matter is therefore DISMISSED. Signed by Magistrate Judge George H. Lowe on 12/1/09. (jmb)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-6_09-cv-00759-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181411dad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00759/USCOURTS-nynd-6_09-cv-00759-0</identifier>
+ <identifier type="former granule identifier">nynd-6_09-cv-00759_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00759/USCOURTS-nynd-6_09-cv-00759-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_09-cv-00759/pdf/USCOURTS-nynd-6_09-cv-00759-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:09-cv-00759; Hofmann v. Astrue; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-6_09-cv-00759-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-12-01</dateIssued>
+  <docketText>CONSENT ORDER: Approving the # 11 Stipulation. It is Ordered that Re: # 1 Complaint filed by June L. Hofmann, the final decision by the Commissioner is hereby REVERSED and the matter is REMANDED for further administrative action. This matter is therefore DISMISSED. Signed by Magistrate Judge George H. Lowe on 12/1/09. (jmb)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-6_09-cv-00759-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00759/USCOURTS-nynd-6_09-cv-00759-1/mods.xml">
+ <titleInfo>
+  <title>Hofmann v. Astrue</title>
+  <subTitle>JUDGMENT: Reversing the final decision of the Commissioner and Remanding the action to the Commissioner for further administrative action. (jmb)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-6_09-cv-00759-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181411db0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00759/USCOURTS-nynd-6_09-cv-00759-1</identifier>
+ <identifier type="former granule identifier">nynd-6_09-cv-00759_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00759/USCOURTS-nynd-6_09-cv-00759-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_09-cv-00759/pdf/USCOURTS-nynd-6_09-cv-00759-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:09-cv-00759; Hofmann v. Astrue; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-6_09-cv-00759-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-12-02</dateIssued>
+  <docketText>JUDGMENT: Reversing the final decision of the Commissioner and Remanding the action to the Commissioner for further administrative action. (jmb)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-6_09-cv-00759-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00759/USCOURTS-nynd-6_09-cv-00759-2/mods.xml">
+ <titleInfo>
+  <title>Hofmann v. Astrue</title>
+  <subTitle>CONSENT ORDER for Payment of Fees Pursuant to the Equal Access to Justice Act: It is ORDERED that Plaintiff be allowed a fee award under the EAJA inthe amount of $3,592.11, and $47.00 in expenses to be paid directly to the Law Office of Peter W. Antonowicz per a duly executed assignment of fees. Signed by Judge Glenn T. Suddaby on 1/26/2010. (mae)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-6_09-cv-00759-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181411daf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00759/USCOURTS-nynd-6_09-cv-00759-2</identifier>
+ <identifier type="former granule identifier">nynd-6_09-cv-00759_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00759/USCOURTS-nynd-6_09-cv-00759-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_09-cv-00759/pdf/USCOURTS-nynd-6_09-cv-00759-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:09-cv-00759; Hofmann v. Astrue; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-6_09-cv-00759-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-01-26</dateIssued>
+  <docketText>CONSENT ORDER for Payment of Fees Pursuant to the Equal Access to Justice Act: It is ORDERED that Plaintiff be allowed a fee award under the EAJA inthe amount of $3,592.11, and $47.00 in expenses to be paid directly to the Law Office of Peter W. Antonowicz per a duly executed assignment of fees. Signed by Judge Glenn T. Suddaby on 1/26/2010. (mae)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-6_09-cv-00759-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00759/USCOURTS-nynd-6_09-cv-00759-3/mods.xml">
+ <titleInfo>
+  <title>Hofmann v. Astrue</title>
+  <subTitle>AMENDED JUDGMENT: Reversing the final decision of the Commissioner and Remanding the action to the Commissioner for further administrative action and granting Plaintiff a fee award under the EAJA in the amount of $3,592.11 and $47.00 in expenses. (mae)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-6_09-cv-00759-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181411dae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00759/USCOURTS-nynd-6_09-cv-00759-3</identifier>
+ <identifier type="former granule identifier">nynd-6_09-cv-00759_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00759/USCOURTS-nynd-6_09-cv-00759-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_09-cv-00759/pdf/USCOURTS-nynd-6_09-cv-00759-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:09-cv-00759; Hofmann v. Astrue; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-6_09-cv-00759-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-01-26</dateIssued>
+  <docketText>AMENDED JUDGMENT: Reversing the final decision of the Commissioner and Remanding the action to the Commissioner for further administrative action and granting Plaintiff a fee award under the EAJA in the amount of $3,592.11 and $47.00 in expenses. (mae)</docketText>
+</extension>
+</relatedItem>
+</mods>

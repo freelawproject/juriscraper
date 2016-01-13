@@ -1,0 +1,342 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18e23d365">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-12-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-12-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226</identifier>
+<identifier type="local">P0b002ee18e23d365</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-12-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-12-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_14-cr-00226</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cr-00226</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cr-00226</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="George" fullName="George Hristovski" lastName="Hristovski" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Hristovski</title>
+ <partNumber>2:14-cr-00226</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cr-00226;14-226</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>George Hristovski</displayForm>
+ <namePart type="family">Hristovski</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cr-00226</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cr-00226</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="George" fullName="George Hristovski" lastName="Hristovski" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00226-0" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Hristovski</title>
+  <subTitle>DETENTION ORDER as to George Hristovski signed by Magistrate Judge Dale A. Drozd on 8/5/2014. (Zignago, K.)[2:14-mj-00166-DAD]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e24ae81</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-0</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00226_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00226; USA v. Hristovski; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00226-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-08-05</dateIssued>
+  <docketText>DETENTION ORDER as to George Hristovski signed by Magistrate Judge Dale A. Drozd on 8/5/2014. (Zignago, K.)[2:14-mj-00166-DAD]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00226-1" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Hristovski</title>
+  <subTitle>STIPULATION and ORDER signed by Judge John A. Mendez on 10/2/14 ORDERING the Status Conference RESET to 11/18/14 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to George Hristovski: T4 Start: 10/2/14 Stop: 11/18/14. (Becknal, R)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e24ae7f</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-1</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00226_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00226; USA v. Hristovski; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00226-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-10-02</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge John A. Mendez on 10/2/14 ORDERING the Status Conference RESET to 11/18/14 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to George Hristovski: T4 Start: 10/2/14 Stop: 11/18/14. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00226-2" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Hristovski</title>
+  <subTitle>ORDER signed by Judge John A. Mendez on November 17, 2014 as to defendant George Hristovski re 13. The Status Conference set for 11/18/2014 is CONTINUED TO 1/6/2015 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. **Excludable started as to George Hristovski: Excludable T4 Start: 11/17/2014 Stop: 01/06/2015. (Rivas, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e24ae7b</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-2</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00226_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00226; USA v. Hristovski; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00226-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-11-17</dateIssued>
+  <docketText>ORDER signed by Judge John A. Mendez on November 17, 2014 as to defendant George Hristovski re 13. The Status Conference set for 11/18/2014 is CONTINUED TO 1/6/2015 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. **Excludable started as to George Hristovski: Excludable T4 Start: 11/17/2014 Stop: 01/06/2015. (Rivas, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00226-3" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Hristovski</title>
+  <subTitle>ORDER APPONTING COUNSEL signed by Magistrate Judge Carolyn K. Delaney on 12/4/2014 ORDERING attorney Michael L. Chastaine is appointed effective 12/3/2014 for George Hristovski. (Zignago, K.)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e24ae80</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-3</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00226_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00226; USA v. Hristovski; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00226-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-12-04</dateIssued>
+  <docketText>ORDER APPONTING COUNSEL signed by Magistrate Judge Carolyn K. Delaney on 12/4/2014 ORDERING attorney Michael L. Chastaine is appointed effective 12/3/2014 for George Hristovski. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00226-4" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Hristovski</title>
+  <subTitle>STIPULATION and ORDER signed by Judge John A. Mendez on 1/2/15 as to George Hristovski: Status Conference RESET for 3/10/2015 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started: T-4 Start: 1/6/15 Stop: 3/10/15. (Kaminski, H)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e24ae7c</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-4</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00226_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00226; USA v. Hristovski; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00226-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge John A. Mendez on 1/2/15 as to George Hristovski: Status Conference RESET for 3/10/2015 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started: T-4 Start: 1/6/15 Stop: 3/10/15. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00226-5" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Hristovski</title>
+  <subTitle>STIPULATION and ORDER as to George Hristovski signed by Judge John A. Mendez on 5/4/2015 ORDERING that the Status Conference is CONTINUED to 6/16/2015 at 09:15 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to George Hristovski: T4 Start: 5/5/2015 Stop: 6/16/2015. (Zignago, K.)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e24ae7e</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-5</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00226_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00226; USA v. Hristovski; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00226-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-05-04</dateIssued>
+  <docketText>STIPULATION and ORDER as to George Hristovski signed by Judge John A. Mendez on 5/4/2015 ORDERING that the Status Conference is CONTINUED to 6/16/2015 at 09:15 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to George Hristovski: T4 Start: 5/5/2015 Stop: 6/16/2015. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00226-6" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Hristovski</title>
+  <subTitle>STIPULATION and ORDER as to George Hristovski signed by Judge John A. Mendez on 11/12/2015 ORDERING that the Status Conference is CONTINUED to 12/15/2015 at 09:15 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to George Hristovski: T4 Start: 11/17/2015 Stop: 12/15/2015. (Zignago, K.)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-11-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e24ae7a</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-6</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00226_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00226; USA v. Hristovski; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00226-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-11-13</dateIssued>
+  <docketText>STIPULATION and ORDER as to George Hristovski signed by Judge John A. Mendez on 11/12/2015 ORDERING that the Status Conference is CONTINUED to 12/15/2015 at 09:15 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to George Hristovski: T4 Start: 11/17/2015 Stop: 12/15/2015. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cr-00226-7" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Hristovski</title>
+  <subTitle>STIPULATION and ORDER as to George Hristovski signed by Judge John A. Mendez on 12/11/2015 ORDERING that the Status Conference is CONTINUED to 1/12/2016 at 09:15 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to George Hristovski: T4 Start: 12/15/2015 Stop: 1/12/2016. (Zignago, K.)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e24ae7d</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-7</identifier>
+ <identifier type="former granule identifier">caed-2_14-cr-00226_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cr-00226/USCOURTS-caed-2_14-cr-00226-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cr-00226/pdf/USCOURTS-caed-2_14-cr-00226-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00226; USA v. Hristovski; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cr-00226-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-12-14</dateIssued>
+  <docketText>STIPULATION and ORDER as to George Hristovski signed by Judge John A. Mendez on 12/11/2015 ORDERING that the Status Conference is CONTINUED to 1/12/2016 at 09:15 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to George Hristovski: T4 Start: 12/15/2015 Stop: 1/12/2016. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+</mods>

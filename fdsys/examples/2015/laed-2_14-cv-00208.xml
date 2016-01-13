@@ -1,0 +1,188 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18ab04cb7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_14-cv-00208</identifier>
+<identifier type="local">P0b002ee18ab04cb7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-laed-2_14-cv-00208</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_14-cv-00208</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:14-cv-00208</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>42:4072 Payment of Flood Insurance Claim</cause>
+ <party fullName="Allstate Corporation" lastName="Allstate Corporation" role="Defendant"></party>
+ <party fullName="Allstate Insurance Company" lastName="Allstate Insurance Company" role="Defendant"></party>
+ <party fullName="Allstate Insurance Holdings, LLC" lastName="Allstate Insurance Holdings, LLC" role="Defendant"></party>
+ <party firstName="Ray" fullName="Ray Breaux Sr." generation="Sr." lastName="Breaux" role="Plaintiff"></party>
+ <party firstName="Tracey" fullName="Tracey Breaux" lastName="Breaux" role="Plaintiff"></party>
+ <party fullName="Louisiana Citizens Property Insurance Corporation" lastName="Louisiana Citizens Property Insurance Corporation" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Breaux, Sr. et al v. Louisiana Citizens Property Insurance Corporation et al</title>
+ <partNumber>2:14-cv-00208</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_14-cv-00208/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-00208;14-208</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Louisiana</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>New Orleans</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Allstate Corporation</displayForm>
+ <namePart type="family">Allstate Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Allstate Insurance Company</displayForm>
+ <namePart type="family">Allstate Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Allstate Insurance Holdings, LLC</displayForm>
+ <namePart type="family">Allstate Insurance Holdings, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ray Breaux Sr.</displayForm>
+ <namePart type="family">Breaux</namePart>
+ <namePart type="given">Ray</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tracey Breaux</displayForm>
+ <namePart type="family">Breaux</namePart>
+ <namePart type="given">Tracey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Louisiana Citizens Property Insurance Corporation</displayForm>
+ <namePart type="family">Louisiana Citizens Property Insurance Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-laed-2_14-cv-00208</accessId>
+ <courtType>District</courtType>
+ <courtCode>laed</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Louisiana</courtState>
+ <courtSortOrder>2211</courtSortOrder>
+ <caseNumber>2:14-cv-00208</caseNumber>
+ <caseOffice>New Orleans</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>42:4072 Payment of Flood Insurance Claim</cause>
+ <party fullName="Allstate Corporation" lastName="Allstate Corporation" role="Defendant"></party>
+ <party fullName="Allstate Insurance Company" lastName="Allstate Insurance Company" role="Defendant"></party>
+ <party fullName="Allstate Insurance Holdings, LLC" lastName="Allstate Insurance Holdings, LLC" role="Defendant"></party>
+ <party firstName="Ray" fullName="Ray Breaux Sr." generation="Sr." lastName="Breaux" role="Plaintiff"></party>
+ <party firstName="Tracey" fullName="Tracey Breaux" lastName="Breaux" role="Plaintiff"></party>
+ <party fullName="Louisiana Citizens Property Insurance Corporation" lastName="Louisiana Citizens Property Insurance Corporation" role="Defendant"></party>
+ <state>Louisiana</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-laed-2_14-cv-00208-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_14-cv-00208/USCOURTS-laed-2_14-cv-00208-0/mods.xml">
+ <titleInfo>
+  <title>Breaux, Sr. et al v. Louisiana Citizens Property Insurance Corporation et al</title>
+  <subTitle>ORDER AND REASONS denying 24 Motion for Summary Judgment. Signed by Chief Judge Sarah S. Vance on 1/5/15. (jjs)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_14-cv-00208/pdf/USCOURTS-laed-2_14-cv-00208-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab20497</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_14-cv-00208/USCOURTS-laed-2_14-cv-00208-0</identifier>
+ <identifier type="former granule identifier">laed-2_14-cv-00208_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-laed-2_14-cv-00208/USCOURTS-laed-2_14-cv-00208-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-laed-2_14-cv-00208/pdf/USCOURTS-laed-2_14-cv-00208-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00208; Breaux, Sr. et al v. Louisiana Citizens Property Insurance Corporation et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Louisiana</courtName>
+  <state>Louisiana</state>
+  <accessId>USCOURTS-laed-2_14-cv-00208-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER AND REASONS denying 24 Motion for Summary Judgment. Signed by Chief Judge Sarah S. Vance on 1/5/15. (jjs)</docketText>
+</extension>
+</relatedItem>
+</mods>

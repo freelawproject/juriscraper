@@ -1,0 +1,385 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee188447d3b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-04-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-04-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259</identifier>
+<identifier type="local">P0b002ee188447d3b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-04-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-04-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-01259</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01259</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01259</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Advance Newhouse Partnership, LLC" lastName="Advance Newhouse Partnership, LLC" role="Defendant"></party>
+ <party fullName="Brighthouse Networks" lastName="Brighthouse Networks" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia Werner" lastName="Werner" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Werner v. Advance Newhouse Partnership, LLC et al</title>
+ <partNumber>1:13-cv-01259</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-01259;13-1259</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Advance Newhouse Partnership, LLC</displayForm>
+ <namePart type="family">Advance Newhouse Partnership, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brighthouse Networks</displayForm>
+ <namePart type="family">Brighthouse Networks</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patricia Werner</displayForm>
+ <namePart type="family">Werner</namePart>
+ <namePart type="given">Patricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01259</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01259</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Advance Newhouse Partnership, LLC" lastName="Advance Newhouse Partnership, LLC" role="Defendant"></party>
+ <party fullName="Brighthouse Networks" lastName="Brighthouse Networks" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia Werner" lastName="Werner" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01259-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-0/mods.xml">
+ <titleInfo>
+  <title>Werner v. Advance Newhouse Partnership, LLC et al</title>
+  <subTitle>ORDER DISMISSING PLAINTIFF&apos;S COMPLAINT WITH LEAVE TO AMEND. signed by Magistrate Judge Jennifer L. Thurston on 8/19/2013. Amended Complaint due in 30 days. (Hall, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18844f127</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01259_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01259; Werner v. Advance Newhouse Partnership, LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01259-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-08-19</dateIssued>
+  <docketText>ORDER DISMISSING PLAINTIFF&apos;S COMPLAINT WITH LEAVE TO AMEND. signed by Magistrate Judge Jennifer L. Thurston on 8/19/2013. Amended Complaint due in 30 days. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01259-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-1/mods.xml">
+ <titleInfo>
+  <title>Werner v. Advance Newhouse Partnership, LLC et al</title>
+  <subTitle>ays. (Hall, S)ORDER to Plaintiff to SHOW CAUSE Why the Action Should Not Be Dismissed for Failure to Prosecute and Failure to Comply with the Court&apos;s Order, signed by Magistrate Judge Jennifer L. Thurston on 9/24/2013. Show Cause Response due within 14 d</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18844f229</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01259_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01259; Werner v. Advance Newhouse Partnership, LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01259-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-09-24</dateIssued>
+  <docketText>ays. (Hall, S)ORDER to Plaintiff to SHOW CAUSE Why the Action Should Not Be Dismissed for Failure to Prosecute and Failure to Comply with the Court&apos;s Order, signed by Magistrate Judge Jennifer L. Thurston on 9/24/2013. Show Cause Response due within 14 d</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01259-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-2/mods.xml">
+ <titleInfo>
+  <title>Werner v. Advance Newhouse Partnership, LLC et al</title>
+  <subTitle>ORDER DISCHARGING THE ORDER TO SHOW CAUSE, signed by Magistrate Judge Jennifer L. Thurston on 9/26/2013. (Hall, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18844f228</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01259_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01259; Werner v. Advance Newhouse Partnership, LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01259-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-09-26</dateIssued>
+  <docketText>ORDER DISCHARGING THE ORDER TO SHOW CAUSE, signed by Magistrate Judge Jennifer L. Thurston on 9/26/2013. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01259-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-3/mods.xml">
+ <titleInfo>
+  <title>Werner v. Advance Newhouse Partnership, LLC et al</title>
+  <subTitle>ORDER Directing plaintiff to file a second amended complaint or notify the court of her willingness to proceed only on claims found to be cognizable, signed by Magistrate Judge Jennifer L. Thurston on 10/7/2013. (Kusamura, W)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18844f22b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01259_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01259; Werner v. Advance Newhouse Partnership, LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01259-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-10-07</dateIssued>
+  <docketText>ORDER Directing plaintiff to file a second amended complaint or notify the court of her willingness to proceed only on claims found to be cognizable, signed by Magistrate Judge Jennifer L. Thurston on 10/7/2013. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01259-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-4/mods.xml">
+ <titleInfo>
+  <title>Werner v. Advance Newhouse Partnership, LLC et al</title>
+  <subTitle>ORDER ; DENYING as moot 8 Motion for Reconsideration, signed by Magistrate Judge Jennifer L. Thurston on 10/9/2013. (Kusamura, W)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18844f225</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01259_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01259; Werner v. Advance Newhouse Partnership, LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01259-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-10-10</dateIssued>
+  <docketText>ORDER ; DENYING as moot 8 Motion for Reconsideration, signed by Magistrate Judge Jennifer L. Thurston on 10/9/2013. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01259-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-5/mods.xml">
+ <titleInfo>
+  <title>Werner v. Advance Newhouse Partnership, LLC et al</title>
+  <subTitle>ORDER to the Clerk to FILE the 11 Lodged Third Amended Complaint; FINDINGS and RECOMMENDATIONS Dismissing Plaintiff&apos;s Claim for Retaliation in Violation of Title VII; ORDER DIRECTING Clerk to Issue Summons signed by Magistrate Judge Jennifer L. Thurston on 12/16/2013. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due within Fourteen Days. (Sant Agata, S)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18844f226</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-5</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01259_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01259; Werner v. Advance Newhouse Partnership, LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01259-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-12-17</dateIssued>
+  <docketText>ORDER to the Clerk to FILE the 11 Lodged Third Amended Complaint; FINDINGS and RECOMMENDATIONS Dismissing Plaintiff&apos;s Claim for Retaliation in Violation of Title VII; ORDER DIRECTING Clerk to Issue Summons signed by Magistrate Judge Jennifer L. Thurston on 12/16/2013. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due within Fourteen Days. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01259-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-6/mods.xml">
+ <titleInfo>
+  <title>Werner v. Advance Newhouse Partnership, LLC et al</title>
+  <subTitle>ORDER Adopting 12 Findings and Recommendation Dismissing Plaintiff&apos;s Claim for Retaliation in Violation of Title VII, signed by District Judge Lawrence J. O&apos;Neill on 1/6/14. (Verduzco, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18844f227</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-6</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01259_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01259; Werner v. Advance Newhouse Partnership, LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01259-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER Adopting 12 Findings and Recommendation Dismissing Plaintiff&apos;s Claim for Retaliation in Violation of Title VII, signed by District Judge Lawrence J. O&apos;Neill on 1/6/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01259-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-7/mods.xml">
+ <titleInfo>
+  <title>Werner v. Advance Newhouse Partnership, LLC et al</title>
+  <subTitle>ORDER AFTER NOTICE OF SETTLEMENT re 19, signed by Magistrate Judge Jennifer L. Thurston on 3/27/2014. (Hall, S)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18844f22a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-7</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01259_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01259; Werner v. Advance Newhouse Partnership, LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01259-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-03-27</dateIssued>
+  <docketText>ORDER AFTER NOTICE OF SETTLEMENT re 19, signed by Magistrate Judge Jennifer L. Thurston on 3/27/2014. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01259-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-8/mods.xml">
+ <titleInfo>
+  <title>Werner v. Advance Newhouse Partnership, LLC et al</title>
+  <subTitle>ORDER DISMISSING the ACTION, signed by District Judge Lawrence J. O&apos;Neill on 4/28/2014. CASE CLOSED. (Marrujo, C)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18844f128</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-8</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01259_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01259/USCOURTS-caed-1_13-cv-01259-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01259/pdf/USCOURTS-caed-1_13-cv-01259-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01259; Werner v. Advance Newhouse Partnership, LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01259-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-04-28</dateIssued>
+  <docketText>ORDER DISMISSING the ACTION, signed by District Judge Lawrence J. O&apos;Neill on 4/28/2014. CASE CLOSED. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+</mods>
