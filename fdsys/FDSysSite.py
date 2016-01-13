@@ -115,7 +115,7 @@ class FDSysModsContent(object):
             'download_url': ''.join(xpath(document_node, './m:relatedItem/@xlink:href')).strip(),
             'description': desription,
             'date_filed': ''.join(xpath(document_node, './m:originInfo/m:dateIssued/text()')),
-            'type': self._get_document_type(desription),
+            # 'type': self._get_document_type(desription),
             'number': ''.join(xpath(document_node, './/m:partNumber/text()')),
         }
 
@@ -124,10 +124,9 @@ class FDSysModsContent(object):
         """replaces content-detail.html with mods.xml"""
         return url.replace('content-detail.html', 'mods.xml')
 
-    def _get_document_type(self, description):
-        # todo, build it after the samples are downloaded
-        # get the first 5 words
-        return ''
+    # def _get_document_type(self, description):
+    #     # get the first 5 words
+    #     return ''
 
 
 class FDSysSite(AbstractSite):
