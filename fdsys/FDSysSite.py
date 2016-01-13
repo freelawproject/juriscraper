@@ -214,6 +214,7 @@ def get_court_locations_list():
 
 def get_the_first_5_words():
     l = defaultdict(list)
+    p = defaultdict(list)
     word_counter = defaultdict(int)
     for f in glob.glob('./examples/*/*.xml'):
         fm = FDSysModsContent(f)
@@ -234,6 +235,10 @@ def get_the_first_5_words():
                     word_counter[w] += 1
                 ws.append(w)
             l[f.__repr__()].append(ws)
+            p[f.__repr__()].append(" ".join(words_to_use))
+
+    with open('first_8_words_string.json', 'w') as pc:
+        json.dump(p, pc)
 
     with open('first_five_words.json', 'w') as j:
         json.dump(l, j)
