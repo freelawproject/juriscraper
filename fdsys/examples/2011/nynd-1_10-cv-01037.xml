@@ -1,0 +1,168 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18115a2ac">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_10-cv-01037</identifier>
+<identifier type="local">P0b002ee18115a2ac</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_10-cv-01037</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_10-cv-01037</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:10-cv-01037</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Steven" fullName="Steven DeVarnne" lastName="DeVarnne" role="Plaintiff"></party>
+ <party firstName="Ryan" fullName="Ryan Kent" lastName="Kent" role="Defendant"></party>
+ <party firstName="C." fullName="C. Semione" lastName="Semione" role="Defendant"></party>
+ <party fullName="The City of Schenectady" lastName="The City of Schenectady" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>DeVarnne v. The City of Schenectady et al</title>
+ <partNumber>1:10-cv-01037</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_10-cv-01037/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-01037;10-1037</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Steven DeVarnne</displayForm>
+ <namePart type="family">DeVarnne</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ryan Kent</displayForm>
+ <namePart type="family">Kent</namePart>
+ <namePart type="given">Ryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Semione</displayForm>
+ <namePart type="family">Semione</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The City of Schenectady</displayForm>
+ <namePart type="family">The City of Schenectady</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_10-cv-01037</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:10-cv-01037</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Steven" fullName="Steven DeVarnne" lastName="DeVarnne" role="Plaintiff"></party>
+ <party firstName="Ryan" fullName="Ryan Kent" lastName="Kent" role="Defendant"></party>
+ <party firstName="C." fullName="C. Semione" lastName="Semione" role="Defendant"></party>
+ <party fullName="The City of Schenectady" lastName="The City of Schenectady" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_10-cv-01037-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_10-cv-01037/USCOURTS-nynd-1_10-cv-01037-0/mods.xml">
+ <titleInfo>
+  <title>DeVarnne v. The City of Schenectady et al</title>
+  <subTitle>DECISION AND ORDER granting in part and denying in part Defendants&apos; 5 Motion to Dismiss; Granting in part and denying in part Plaintiff&apos;s 9 Motion to Amend. Plaintiff is directed to file the proposed amended complaint w/in 14 days of the date of this Order. Signed by Senior Judge Thomas J. McAvoy on 1/21/2011. (amt)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_10-cv-01037-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813ec34d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_10-cv-01037/USCOURTS-nynd-1_10-cv-01037-0</identifier>
+ <identifier type="former granule identifier">nynd-1_10-cv-01037_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_10-cv-01037/USCOURTS-nynd-1_10-cv-01037-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_10-cv-01037/pdf/USCOURTS-nynd-1_10-cv-01037-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01037; DeVarnne v. The City of Schenectady et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_10-cv-01037-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-21</dateIssued>
+  <docketText>DECISION AND ORDER granting in part and denying in part Defendants&apos; 5 Motion to Dismiss; Granting in part and denying in part Plaintiff&apos;s 9 Motion to Amend. Plaintiff is directed to file the proposed amended complaint w/in 14 days of the date of this Order. Signed by Senior Judge Thomas J. McAvoy on 1/21/2011. (amt)</docketText>
+</extension>
+</relatedItem>
+</mods>

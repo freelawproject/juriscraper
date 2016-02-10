@@ -1,0 +1,178 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e89728">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-04-03503</identifier>
+<identifier type="local">P0b002ee180e89728</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-04-03503</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-04-03503</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>04-03503</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="Association of American Law Schools" lastName="Association of American Law Schools" role="Amicus on Behalf of Appellee"></party>
+ <party fullName="Clinical Legal Education Association" lastName="Clinical Legal Education Association" role="Amicus on Behalf of Appellee"></party>
+ <party fullName="Georgetown University Law Center Clinical Program" lastName="Georgetown University Law Center Clinical Program" role="Amicus on Behalf of Appellee"></party>
+ <party firstName="Laura" fullName="Laura Rovner" lastName="Rovner" role="Appellee"></party>
+ <party fullName="Society of American Law Teachers" lastName="Society of American Law Teachers" role="Amicus on Behalf of Appellee"></party>
+ <party firstName="Martin" fullName="Martin Wishnatsky" lastName="Wishnatsky" role="Appellant"></party>
+</extension>
+<titleInfo>
+ <title>Martin Wishnatsky v. Laura Rovner</title>
+ <partNumber>04-03503</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-04-03503/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">04-03503;04-3503</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Association of American Law Schools</displayForm>
+ <namePart type="family">Association of American Law Schools</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus on Behalf of Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Clinical Legal Education Association</displayForm>
+ <namePart type="family">Clinical Legal Education Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus on Behalf of Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Georgetown University Law Center Clinical Program</displayForm>
+ <namePart type="family">Georgetown University Law Center Clinical Program</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus on Behalf of Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Laura Rovner</displayForm>
+ <namePart type="family">Rovner</namePart>
+ <namePart type="given">Laura</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Society of American Law Teachers</displayForm>
+ <namePart type="family">Society of American Law Teachers</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus on Behalf of Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Martin Wishnatsky</displayForm>
+ <namePart type="family">Wishnatsky</namePart>
+ <namePart type="given">Martin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-04-03503</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>04-03503</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="Association of American Law Schools" lastName="Association of American Law Schools" role="Amicus on Behalf of Appellee"></party>
+ <party fullName="Clinical Legal Education Association" lastName="Clinical Legal Education Association" role="Amicus on Behalf of Appellee"></party>
+ <party fullName="Georgetown University Law Center Clinical Program" lastName="Georgetown University Law Center Clinical Program" role="Amicus on Behalf of Appellee"></party>
+ <party firstName="Laura" fullName="Laura Rovner" lastName="Rovner" role="Appellee"></party>
+ <party fullName="Society of American Law Teachers" lastName="Society of American Law Teachers" role="Amicus on Behalf of Appellee"></party>
+ <party firstName="Martin" fullName="Martin Wishnatsky" lastName="Wishnatsky" role="Appellant"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-04-03503-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-04-03503/USCOURTS-ca8-04-03503-0/mods.xml">
+ <titleInfo>
+  <title>Martin Wishnatsky v. Laura Rovner</title>
+  <subTitle>THE COURT: Steven M. Colloton, Theodore McMillian, Duane Benton. OPINION FILED by Steven M. Colloton, Authoring Judge PUBLISHED . [04-3503] [1993461]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-04-03503-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e92ab1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-04-03503/USCOURTS-ca8-04-03503-0</identifier>
+ <identifier type="former granule identifier">ca8-04-03503_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-04-03503/USCOURTS-ca8-04-03503-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-04-03503/pdf/USCOURTS-ca8-04-03503-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 04-03503; Martin Wishnatsky v. Laura Rovner; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-04-03503-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-05</dateIssued>
+  <docketText>THE COURT: Steven M. Colloton, Theodore McMillian, Duane Benton. OPINION FILED by Steven M. Colloton, Authoring Judge PUBLISHED . [04-3503] [1993461]</docketText>
+</extension>
+</relatedItem>
+</mods>

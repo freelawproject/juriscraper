@@ -1,0 +1,435 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b108b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114</identifier>
+<identifier type="local">P0b002ee1817b108b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cr-00114</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00114</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00114</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Creighton" fullName="Creighton Barner" lastName="Barner" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Barner" lastName="Barner" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Barner et al</title>
+ <partNumber>8:06-cr-00114</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cr-00114;06-114</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Creighton Barner</displayForm>
+ <namePart type="family">Barner</namePart>
+ <namePart type="given">Creighton</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Barner</displayForm>
+ <namePart type="family">Barner</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00114</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00114</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Creighton" fullName="Creighton Barner" lastName="Barner" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Barner" lastName="Barner" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00114-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Barner et al</title>
+  <subTitle>ORDER granting 11 Motion to Extend Time in Which to File Pretrial Motions as to Creighton Barner. Pretrial Motion Deadline set for 7/21/2006. The time between June 12, 2006 and July 21, 2006, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Signed by Magistrate Judge F. A. Gossett on 6/12/2006. (MLF, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00114-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18189fb1b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00114_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114/pdf/USCOURTS-ned-8_06-cr-00114-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00114; USA v. Barner et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00114-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-06-12</dateIssued>
+  <docketText>ORDER granting 11 Motion to Extend Time in Which to File Pretrial Motions as to Creighton Barner. Pretrial Motion Deadline set for 7/21/2006. The time between June 12, 2006 and July 21, 2006, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Signed by Magistrate Judge F. A. Gossett on 6/12/2006. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00114-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Barner et al</title>
+  <subTitle>ORDER granting 13 Motion to Extend Time in Which to File Pretrial Motions as to Mary Barner. Pretrial Motion Deadline set for 7/3/2006. The time between June 12, 2006 and July 3, 2006, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Signed by Magistrate Judge F. A. Gossett on 6/13/2006. (MLF, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00114-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18189fb24</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00114_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114/pdf/USCOURTS-ned-8_06-cr-00114-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00114; USA v. Barner et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00114-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-06-13</dateIssued>
+  <docketText>ORDER granting 13 Motion to Extend Time in Which to File Pretrial Motions as to Mary Barner. Pretrial Motion Deadline set for 7/3/2006. The time between June 12, 2006 and July 3, 2006, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Signed by Magistrate Judge F. A. Gossett on 6/13/2006. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00114-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Barner et al</title>
+  <subTitle>ORDER regarding 17 Motion to Sever as to Creighton Barner. The motion is set for hearing on August 10, 2006 at 9:00 a.m. before Magistrate Judge F.A. Gossett. Signed by Magistrate Judge F. A. Gossett on 7/24/2006. (MLF, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00114-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18189fb1e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00114_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114/pdf/USCOURTS-ned-8_06-cr-00114-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00114; USA v. Barner et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00114-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-07-24</dateIssued>
+  <docketText>ORDER regarding 17 Motion to Sever as to Creighton Barner. The motion is set for hearing on August 10, 2006 at 9:00 a.m. before Magistrate Judge F.A. Gossett. Signed by Magistrate Judge F. A. Gossett on 7/24/2006. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00114-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Barner et al</title>
+  <subTitle>ORDER granting 20 Motion to Continue as to Creighton Barner. The hearing on the Motion to Sever 17 filed by the defendant Creighton Barner is continued to September 26, 2006 at 10:00 a.m. before Magistrate Judge F.A. Gossett. Signed by Magistrate Judge F. A. Gossett on 8/8/2006. (MLF, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00114-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18189fb1d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-3</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00114_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114/pdf/USCOURTS-ned-8_06-cr-00114-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00114; USA v. Barner et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00114-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-08-08</dateIssued>
+  <docketText>ORDER granting 20 Motion to Continue as to Creighton Barner. The hearing on the Motion to Sever 17 filed by the defendant Creighton Barner is continued to September 26, 2006 at 10:00 a.m. before Magistrate Judge F.A. Gossett. Signed by Magistrate Judge F. A. Gossett on 8/8/2006. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00114-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Barner et al</title>
+  <subTitle>ORDER regarding 17 Motion to Sever as to Creighton Barner. The motion is continued to October 25, 2006 at 3:00 p.m. before Magistrate Judge. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00114-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18189fb23</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-4</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00114_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114/pdf/USCOURTS-ned-8_06-cr-00114-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00114; USA v. Barner et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00114-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-10-10</dateIssued>
+  <docketText>ORDER regarding 17 Motion to Sever as to Creighton Barner. The motion is continued to October 25, 2006 at 3:00 p.m. before Magistrate Judge. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00114-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Barner et al</title>
+  <subTitle>ORDER granting defendant Creighton Barner&apos;s Motion to Sever 17 and defendant Mary Barner&apos;s oral Motion to Sever. Separate trials are ordered for each. Ordered by Magistrate Judge F. A. Gossett.(JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00114-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18189fb20</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-5</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00114_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114/pdf/USCOURTS-ned-8_06-cr-00114-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00114; USA v. Barner et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00114-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-10-31</dateIssued>
+  <docketText>ORDER granting defendant Creighton Barner&apos;s Motion to Sever 17 and defendant Mary Barner&apos;s oral Motion to Sever. Separate trials are ordered for each. Ordered by Magistrate Judge F. A. Gossett.(JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00114-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Barner et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 36 Government&apos;s Appeal from Magistrate Judge Order 35 as to Creighton Barner (1), Mary Barner (2). Ordered by Judge Joseph F. Bataillon.(SMS, )MEMORANDUM AND ORDER denying 36 Government&apos;s Appeal from Magistrate Judge Order 35 as to Creighton Barner (1), Mary Barner (2). Ordered by Judge Joseph F. Bataillon.(SMS, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00114-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18189fb1a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-6</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00114_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114/pdf/USCOURTS-ned-8_06-cr-00114-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00114; USA v. Barner et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00114-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-12-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 36 Government&apos;s Appeal from Magistrate Judge Order 35 as to Creighton Barner (1), Mary Barner (2). Ordered by Judge Joseph F. Bataillon.(SMS, )MEMORANDUM AND ORDER denying 36 Government&apos;s Appeal from Magistrate Judge Order 35 as to Creighton Barner (1), Mary Barner (2). Ordered by Judge Joseph F. Bataillon.(SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00114-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Barner et al</title>
+  <subTitle>ORDER that Defendant&apos;s motion to Provide Transportation and Subsistence is granted and; that the US Marshal shall provide noncustodial transportation for Defendant between Belleville, Kansas and Omaha, Nebraska in the form of round-trip mileage, and any authorized subsistence, not to exceed the authorized per diemas to defendant(s) Creighton Barner Ordered by Judge Joseph F. Bataillon.(PCV, ) (cc to US Marshal)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00114-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18189fb21</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-7</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00114_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114/pdf/USCOURTS-ned-8_06-cr-00114-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00114; USA v. Barner et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00114-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2007-03-15</dateIssued>
+  <docketText>ORDER that Defendant&apos;s motion to Provide Transportation and Subsistence is granted and; that the US Marshal shall provide noncustodial transportation for Defendant between Belleville, Kansas and Omaha, Nebraska in the form of round-trip mileage, and any authorized subsistence, not to exceed the authorized per diemas to defendant(s) Creighton Barner Ordered by Judge Joseph F. Bataillon.(PCV, ) (cc to US Marshal)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00114-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Barner et al</title>
+  <subTitle>JUDGMENT as to Creighton Barner. The Defendant plead guilty to Count I of the Indictment and is sentenced to the custody of the Bureau of Prisons for 12 months and 1 day; and shall be given credit for time served. 3 years Supervised Release with special conditions; $100.00 Special Assessment; and $42,649.00 in Restitution to paid jointly and severally with co-defendant, Mary Barner. Counts II and IV of the Indictment are dismissed on the motion of the government as to this defendant only. The defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons on or before 9/11/07 as to defendant Creighton Barner. Ordered by Judge Joseph F. Bataillon. - (4 certified copies to the USM) (KBJ)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00114-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18189fb1c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-8</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00114_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114/pdf/USCOURTS-ned-8_06-cr-00114-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00114; USA v. Barner et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00114-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2007-08-10</dateIssued>
+  <docketText>JUDGMENT as to Creighton Barner. The Defendant plead guilty to Count I of the Indictment and is sentenced to the custody of the Bureau of Prisons for 12 months and 1 day; and shall be given credit for time served. 3 years Supervised Release with special conditions; $100.00 Special Assessment; and $42,649.00 in Restitution to paid jointly and severally with co-defendant, Mary Barner. Counts II and IV of the Indictment are dismissed on the motion of the government as to this defendant only. The defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons on or before 9/11/07 as to defendant Creighton Barner. Ordered by Judge Joseph F. Bataillon. - (4 certified copies to the USM) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00114-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Barner et al</title>
+  <subTitle>JUDGMENT as to Mary Barner. The defendant plead guilty to Count III of the Indictment and is sentenced to the custody of the Bureau of Prisons for 12 months and 1 day; and shall be given credit for time served. 3 years Supervised Release with special conditions; $100.00 Special Assessment; and Restitution in the amount of $42,649.00 to be paid jointly and severally with co-defendant Creighton Barner. Counts I and II of the Indictment are dismissed on the motion of the government. The defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons on or after 9/11/07 as to this defendant only as to defendant Mary Barner. Ordered by Judge Joseph F. Bataillon. - (4 certified copies to the USM) (KBJ)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00114-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18189fb22</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-9</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00114_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114/pdf/USCOURTS-ned-8_06-cr-00114-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00114; USA v. Barner et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00114-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2007-08-10</dateIssued>
+  <docketText>JUDGMENT as to Mary Barner. The defendant plead guilty to Count III of the Indictment and is sentenced to the custody of the Bureau of Prisons for 12 months and 1 day; and shall be given credit for time served. 3 years Supervised Release with special conditions; $100.00 Special Assessment; and Restitution in the amount of $42,649.00 to be paid jointly and severally with co-defendant Creighton Barner. Counts I and II of the Indictment are dismissed on the motion of the government. The defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons on or after 9/11/07 as to this defendant only as to defendant Mary Barner. Ordered by Judge Joseph F. Bataillon. - (4 certified copies to the USM) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00114-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Barner et al</title>
+  <subTitle>ORDER - Pursuant to NECivR 79.1(f) or NECrimR 55.1(g), counsel for the government shall either 1) withdraw the following exhibits previously submitted in this matter within 15 calendar days of the date of this order, or 2) show cause why the exhibits should not be destroyed. If counsel fails to withdraw these exhibits as directed or to show cause why the exhibits should not be destroyed, the clerk&apos;s office is directed to destroy the listed exhibits without further notice to the parties or order from the court as to defendants Creighton Barner, Mary Barner. Ordered by Chief Judge Joseph F. Bataillon. (TJS)ORDER - Pursuant to NECivR 79.1(f) or NECrimR 55.1(g), counsel for the government shall either 1) withdraw the following exhibits previously submitted in this matter within 15 calendar days of the date of this order, or 2) show cause why the exhibits should not be destroyed. If counsel fails to withdraw these exhibits as directed or to show cause why the exhibits should not be destroyed, the clerk&apos;s office is directed to destroy the listed exhibits without further notice to the parties or order from the court as to defendants Creighton Barner, Mary Barner. Ordered by Chief Judge Joseph F. Bataillon. (TJS)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00114-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18189fb1f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-10</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00114_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00114/USCOURTS-ned-8_06-cr-00114-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00114/pdf/USCOURTS-ned-8_06-cr-00114-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00114; USA v. Barner et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00114-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2008-01-08</dateIssued>
+  <docketText>ORDER - Pursuant to NECivR 79.1(f) or NECrimR 55.1(g), counsel for the government shall either 1) withdraw the following exhibits previously submitted in this matter within 15 calendar days of the date of this order, or 2) show cause why the exhibits should not be destroyed. If counsel fails to withdraw these exhibits as directed or to show cause why the exhibits should not be destroyed, the clerk&apos;s office is directed to destroy the listed exhibits without further notice to the parties or order from the court as to defendants Creighton Barner, Mary Barner. Ordered by Chief Judge Joseph F. Bataillon. (TJS)ORDER - Pursuant to NECivR 79.1(f) or NECrimR 55.1(g), counsel for the government shall either 1) withdraw the following exhibits previously submitted in this matter within 15 calendar days of the date of this order, or 2) show cause why the exhibits should not be destroyed. If counsel fails to withdraw these exhibits as directed or to show cause why the exhibits should not be destroyed, the clerk&apos;s office is directed to destroy the listed exhibits without further notice to the parties or order from the court as to defendants Creighton Barner, Mary Barner. Ordered by Chief Judge Joseph F. Bataillon. (TJS)</docketText>
+</extension>
+</relatedItem>
+</mods>

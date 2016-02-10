@@ -1,0 +1,326 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18155eeb6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_04-cr-00231</identifier>
+<identifier type="local">P0b002ee18155eeb6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_04-cr-00231</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_04-cr-00231</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:04-cr-00231</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="James" fullName="James Harris Bey" lastName="Bey" middleName="Harris" role="Defendant"></party>
+ <party firstName="Lacresia" fullName="Lacresia Mershon Carr" lastName="Carr" middleName="Mershon" role="Defendant"></party>
+ <party firstName="Jacquetta" fullName="Jacquetta Y. Davenport" lastName="Davenport" middleName="Y." role="Defendant"></party>
+ <party firstName="Samuel" fullName="Samuel D. Gulledge" lastName="Gulledge" middleName="D." role="Defendant"></party>
+ <party firstName="Danielle" fullName="Danielle A. Hampton" lastName="Hampton" middleName="A." role="Defendant"></party>
+ <party firstName="Jazzminique" fullName="Jazzminique D. Johnson" lastName="Johnson" middleName="D." role="Defendant"></party>
+ <party firstName="Tracy" fullName="Tracy Lashawn Johnson" lastName="Johnson" middleName="Lashawn" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael S. Johnson" lastName="Johnson" middleName="S." role="Defendant"></party>
+ <party firstName="Fred" fullName="Fred Lee Kendrick" lastName="Kendrick" middleName="Lee" role="Defendant"></party>
+ <party firstName="Shannon" fullName="Shannon A. Kleckley" lastName="Kleckley" middleName="A." role="Defendant"></party>
+ <party firstName="William" fullName="William C. Krisel" lastName="Krisel" middleName="C." role="Defendant"></party>
+ <party firstName="Clifford" fullName="Clifford E. Krisel" lastName="Krisel" middleName="E." role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy Lewis" lastName="Lewis" role="Defendant"></party>
+ <party firstName="Kristina" fullName="Kristina Randle" lastName="Randle" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher A. Ratliff" lastName="Ratliff" middleName="A." role="Defendant"></party>
+ <party firstName="Ralph" fullName="Ralph Starr Jr." generation="Jr." lastName="Starr" role="Defendant"></party>
+ <party firstName="Arthur" fullName="Arthur Terrell" lastName="Terrell" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Tyrone" fullName="Tyrone Walters" lastName="Walters" role="Defendant"></party>
+ <party firstName="Emon" fullName="Emon Everett Weatherspoon" lastName="Weatherspoon" middleName="Everett" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric T. Williams" lastName="Williams" middleName="T." role="Defendant"></party>
+ <party firstName="Joya" fullName="Joya T. Wright" lastName="Wright" middleName="T." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Bey et al</title>
+ <partNumber>1:04-cr-00231</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_04-cr-00231/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:04-cr-00231;04-231</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>James Harris Bey</displayForm>
+ <namePart type="family">Bey</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lacresia Mershon Carr</displayForm>
+ <namePart type="family">Carr</namePart>
+ <namePart type="given">Lacresia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jacquetta Y. Davenport</displayForm>
+ <namePart type="family">Davenport</namePart>
+ <namePart type="given">Jacquetta</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Samuel D. Gulledge</displayForm>
+ <namePart type="family">Gulledge</namePart>
+ <namePart type="given">Samuel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Danielle A. Hampton</displayForm>
+ <namePart type="family">Hampton</namePart>
+ <namePart type="given">Danielle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jazzminique D. Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Jazzminique</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tracy Lashawn Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Tracy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael S. Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fred Lee Kendrick</displayForm>
+ <namePart type="family">Kendrick</namePart>
+ <namePart type="given">Fred</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shannon A. Kleckley</displayForm>
+ <namePart type="family">Kleckley</namePart>
+ <namePart type="given">Shannon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William C. Krisel</displayForm>
+ <namePart type="family">Krisel</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Clifford E. Krisel</displayForm>
+ <namePart type="family">Krisel</namePart>
+ <namePart type="given">Clifford</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy Lewis</displayForm>
+ <namePart type="family">Lewis</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kristina Randle</displayForm>
+ <namePart type="family">Randle</namePart>
+ <namePart type="given">Kristina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher A. Ratliff</displayForm>
+ <namePart type="family">Ratliff</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ralph Starr Jr.</displayForm>
+ <namePart type="family">Starr</namePart>
+ <namePart type="given">Ralph</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Arthur Terrell</displayForm>
+ <namePart type="family">Terrell</namePart>
+ <namePart type="given">Arthur</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tyrone Walters</displayForm>
+ <namePart type="family">Walters</namePart>
+ <namePart type="given">Tyrone</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Emon Everett Weatherspoon</displayForm>
+ <namePart type="family">Weatherspoon</namePart>
+ <namePart type="given">Emon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eric T. Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joya T. Wright</displayForm>
+ <namePart type="family">Wright</namePart>
+ <namePart type="given">Joya</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_04-cr-00231</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:04-cr-00231</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="James" fullName="James Harris Bey" lastName="Bey" middleName="Harris" role="Defendant"></party>
+ <party firstName="Lacresia" fullName="Lacresia Mershon Carr" lastName="Carr" middleName="Mershon" role="Defendant"></party>
+ <party firstName="Jacquetta" fullName="Jacquetta Y. Davenport" lastName="Davenport" middleName="Y." role="Defendant"></party>
+ <party firstName="Samuel" fullName="Samuel D. Gulledge" lastName="Gulledge" middleName="D." role="Defendant"></party>
+ <party firstName="Danielle" fullName="Danielle A. Hampton" lastName="Hampton" middleName="A." role="Defendant"></party>
+ <party firstName="Jazzminique" fullName="Jazzminique D. Johnson" lastName="Johnson" middleName="D." role="Defendant"></party>
+ <party firstName="Tracy" fullName="Tracy Lashawn Johnson" lastName="Johnson" middleName="Lashawn" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael S. Johnson" lastName="Johnson" middleName="S." role="Defendant"></party>
+ <party firstName="Fred" fullName="Fred Lee Kendrick" lastName="Kendrick" middleName="Lee" role="Defendant"></party>
+ <party firstName="Shannon" fullName="Shannon A. Kleckley" lastName="Kleckley" middleName="A." role="Defendant"></party>
+ <party firstName="William" fullName="William C. Krisel" lastName="Krisel" middleName="C." role="Defendant"></party>
+ <party firstName="Clifford" fullName="Clifford E. Krisel" lastName="Krisel" middleName="E." role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy Lewis" lastName="Lewis" role="Defendant"></party>
+ <party firstName="Kristina" fullName="Kristina Randle" lastName="Randle" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher A. Ratliff" lastName="Ratliff" middleName="A." role="Defendant"></party>
+ <party firstName="Ralph" fullName="Ralph Starr Jr." generation="Jr." lastName="Starr" role="Defendant"></party>
+ <party firstName="Arthur" fullName="Arthur Terrell" lastName="Terrell" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Tyrone" fullName="Tyrone Walters" lastName="Walters" role="Defendant"></party>
+ <party firstName="Emon" fullName="Emon Everett Weatherspoon" lastName="Weatherspoon" middleName="Everett" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric T. Williams" lastName="Williams" middleName="T." role="Defendant"></party>
+ <party firstName="Joya" fullName="Joya T. Wright" lastName="Wright" middleName="T." role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_04-cr-00231-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cr-00231/USCOURTS-ohnd-1_04-cr-00231-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Bey et al</title>
+  <subTitle>Opinion and Order signed by Judge James S. Gwin on 1/31/11 as to James Harris Bey (1) denying defendant&apos;s motion for clarification or reconsideration. (Related Doc. 460) (M,G)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_04-cr-00231-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816181f5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cr-00231/USCOURTS-ohnd-1_04-cr-00231-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_04-cr-00231_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_04-cr-00231/USCOURTS-ohnd-1_04-cr-00231-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_04-cr-00231/pdf/USCOURTS-ohnd-1_04-cr-00231-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-cr-00231; United States of America v. Bey et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_04-cr-00231-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-31</dateIssued>
+  <docketText>Opinion and Order signed by Judge James S. Gwin on 1/31/11 as to James Harris Bey (1) denying defendant&apos;s motion for clarification or reconsideration. (Related Doc. 460) (M,G)</docketText>
+</extension>
+</relatedItem>
+</mods>

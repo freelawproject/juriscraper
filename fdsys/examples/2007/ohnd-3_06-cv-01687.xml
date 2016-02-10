@@ -1,0 +1,233 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181561bda">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_06-cv-01687</identifier>
+<identifier type="local">P0b002ee181561bda</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_06-cv-01687</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_06-cv-01687</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:06-cv-01687</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Contract Dispute</cause>
+ <party fullName="DaimlerChrysler AG" lastName="DaimlerChrysler AG" role="Defendant"></party>
+ <party fullName="DaimlerChrysler Corporation" lastName="DaimlerChrysler Corporation" role="3rd Pty Defendant"></party>
+ <party fullName="DaimlerChrysler Corporation" lastName="DaimlerChrysler Corporation" role="Counter-Defendant"></party>
+ <party fullName="DaimlerChrysler Corporation" lastName="DaimlerChrysler Corporation" role="Defendant"></party>
+ <party fullName="DaimlerChrysler Motors Company, LLC" lastName="DaimlerChrysler Motors Company, LLC" role="Defendant"></party>
+ <party fullName="DaimlerChrysler North America Holding Corporation" lastName="DaimlerChrysler North America Holding Corporation" role="Defendant"></party>
+ <party firstName="John" fullName="John Does 1-10" lastName="Does 1-10" role="Defendant"></party>
+ <party fullName="Vin Devers Dodge" lastName="Vin Devers Dodge" role="Plaintiff"></party>
+ <party fullName="Vin Devers, Inc." lastName="Vin Devers, Inc." role="3rd Party Plaintiff"></party>
+ <party fullName="Vin Devers, Inc." lastName="Vin Devers, Inc." role="Counter-Claimant"></party>
+ <party fullName="Vin Devers, Inc." lastName="Vin Devers, Inc." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Vin Devers, Inc. v. DaimlerChrysler Motors Company, LLC et al</title>
+ <partNumber>3:06-cv-01687</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_06-cv-01687/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:06-cv-01687;06-1687</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>DaimlerChrysler AG</displayForm>
+ <namePart type="family">DaimlerChrysler AG</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DaimlerChrysler Corporation</displayForm>
+ <namePart type="family">DaimlerChrysler Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Pty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DaimlerChrysler Corporation</displayForm>
+ <namePart type="family">DaimlerChrysler Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DaimlerChrysler Corporation</displayForm>
+ <namePart type="family">DaimlerChrysler Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DaimlerChrysler Motors Company, LLC</displayForm>
+ <namePart type="family">DaimlerChrysler Motors Company, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DaimlerChrysler North America Holding Corporation</displayForm>
+ <namePart type="family">DaimlerChrysler North America Holding Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Does 1-10</displayForm>
+ <namePart type="family">Does 1-10</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vin Devers Dodge</displayForm>
+ <namePart type="family">Vin Devers Dodge</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Vin Devers, Inc.</displayForm>
+ <namePart type="family">Vin Devers, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>3rd Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Vin Devers, Inc.</displayForm>
+ <namePart type="family">Vin Devers, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Vin Devers, Inc.</displayForm>
+ <namePart type="family">Vin Devers, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_06-cv-01687</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:06-cv-01687</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Contract Dispute</cause>
+ <party fullName="DaimlerChrysler AG" lastName="DaimlerChrysler AG" role="Defendant"></party>
+ <party fullName="DaimlerChrysler Corporation" lastName="DaimlerChrysler Corporation" role="3rd Pty Defendant"></party>
+ <party fullName="DaimlerChrysler Corporation" lastName="DaimlerChrysler Corporation" role="Counter-Defendant"></party>
+ <party fullName="DaimlerChrysler Corporation" lastName="DaimlerChrysler Corporation" role="Defendant"></party>
+ <party fullName="DaimlerChrysler Motors Company, LLC" lastName="DaimlerChrysler Motors Company, LLC" role="Defendant"></party>
+ <party fullName="DaimlerChrysler North America Holding Corporation" lastName="DaimlerChrysler North America Holding Corporation" role="Defendant"></party>
+ <party firstName="John" fullName="John Does 1-10" lastName="Does 1-10" role="Defendant"></party>
+ <party fullName="Vin Devers Dodge" lastName="Vin Devers Dodge" role="Plaintiff"></party>
+ <party fullName="Vin Devers, Inc." lastName="Vin Devers, Inc." role="3rd Party Plaintiff"></party>
+ <party fullName="Vin Devers, Inc." lastName="Vin Devers, Inc." role="Counter-Claimant"></party>
+ <party fullName="Vin Devers, Inc." lastName="Vin Devers, Inc." role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_06-cv-01687-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_06-cv-01687/USCOURTS-ohnd-3_06-cv-01687-0/mods.xml">
+ <titleInfo>
+  <title>Vin Devers, Inc. v. DaimlerChrysler Motors Company, LLC et al</title>
+  <subTitle>ORDER denying motion to dismiss or transfer as stated herein (Related Doc # 9). Signed by Judge David A. Katz on 1/31/07.(G,C)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_06-cv-01687-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18162709e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_06-cv-01687/USCOURTS-ohnd-3_06-cv-01687-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_06-cv-01687_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_06-cv-01687/USCOURTS-ohnd-3_06-cv-01687-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_06-cv-01687/pdf/USCOURTS-ohnd-3_06-cv-01687-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:06-cv-01687; Vin Devers, Inc. v. DaimlerChrysler Motors Company, LLC et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_06-cv-01687-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-31</dateIssued>
+  <docketText>ORDER denying motion to dismiss or transfer as stated herein (Related Doc # 9). Signed by Judge David A. Katz on 1/31/07.(G,C)</docketText>
+</extension>
+</relatedItem>
+</mods>

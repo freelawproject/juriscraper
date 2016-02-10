@@ -1,0 +1,342 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18174ea64">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00203</identifier>
+<identifier type="local">P0b002ee18174ea64</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cr-00203</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00203</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00203</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard Wirth" lastName="Wirth" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Wirth</title>
+ <partNumber>8:07-cr-00203</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00203/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:07-cr-00203;07-203</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Wirth</displayForm>
+ <namePart type="family">Wirth</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00203</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00203</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard Wirth" lastName="Wirth" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00203-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Wirth</title>
+  <subTitle>ORDER APPOINTING COUNSEL - IT IS ORDERED that Joseph L. Howard is appointed as attorney of record for the above-named defendant in this matter and shall forthwith file an appearance in this matter. IT IS FURTHER ORDERED that the Federal Public Defenders Office shall forthwith provide counsel with a draft appointment order (CJA Form 20) bearing the name and other identifying information of the CJA Panel attorney identified in accordance with the Criminal Justice Act Plan for this district. IT IS FURTHER ORDERED that counsels appointment herein is made pursuant to 18 U.S.C. § 3006A(f). At the time of the entry of judgment herein, defendant shall file a current and complete financial statement to aid the court in determining whether any portion of counsels fees and expenses should be reimbursed by defendant. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender for the District of Nebraska and Joseph L. Howard.Joseph L. Howard for Richard Wirth appointed as counsel as to defendant(s) Richard Wirth Ordered by Magistrate Judge Thomas D. Thalken.(PCV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00203-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817809eb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-0</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00203_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00203/pdf/USCOURTS-ned-8_07-cr-00203-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00203; USA v. Wirth; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00203-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-06-06</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - IT IS ORDERED that Joseph L. Howard is appointed as attorney of record for the above-named defendant in this matter and shall forthwith file an appearance in this matter. IT IS FURTHER ORDERED that the Federal Public Defenders Office shall forthwith provide counsel with a draft appointment order (CJA Form 20) bearing the name and other identifying information of the CJA Panel attorney identified in accordance with the Criminal Justice Act Plan for this district. IT IS FURTHER ORDERED that counsels appointment herein is made pursuant to 18 U.S.C. § 3006A(f). At the time of the entry of judgment herein, defendant shall file a current and complete financial statement to aid the court in determining whether any portion of counsels fees and expenses should be reimbursed by defendant. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender for the District of Nebraska and Joseph L. Howard.Joseph L. Howard for Richard Wirth appointed as counsel as to defendant(s) Richard Wirth Ordered by Magistrate Judge Thomas D. Thalken.(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00203-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Wirth</title>
+  <subTitle>ORDER - IT IS ORDERED: The government&apos;s motion for detention of Richard Wirth pursuant to the Bail Reform Act is held in abeyance pending the defendant&apos;s coming into federal custody. IT IS FURTHER ORDERED: The defendant, Richard Wirth, having received notice of his return to the custody of Nebraska state authorities pending the disposition of this matter and having waived an opportunity for hearing in this matter pursuant to the Interstate Agreement on Detainers, 18 U.S.C. app § 9(2), the U.S. Marshal is authorized to return the defendant, Richard Wirth, to the custody of Nebraska state authorities pending the final disposition of this matter and the U.S. Marshal for the District of Nebraska is directed to place a detainer with the correctional officerhaving custody of the defendant as to defendant Richard Wirth. Ordered by Magistrate Judge Thomas D. Thalken.(PCV, )(cc to US Marshal)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00203-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817809ec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-1</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00203_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00203/pdf/USCOURTS-ned-8_07-cr-00203-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00203; USA v. Wirth; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00203-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-06-06</dateIssued>
+  <docketText>ORDER - IT IS ORDERED: The government&apos;s motion for detention of Richard Wirth pursuant to the Bail Reform Act is held in abeyance pending the defendant&apos;s coming into federal custody. IT IS FURTHER ORDERED: The defendant, Richard Wirth, having received notice of his return to the custody of Nebraska state authorities pending the disposition of this matter and having waived an opportunity for hearing in this matter pursuant to the Interstate Agreement on Detainers, 18 U.S.C. app § 9(2), the U.S. Marshal is authorized to return the defendant, Richard Wirth, to the custody of Nebraska state authorities pending the final disposition of this matter and the U.S. Marshal for the District of Nebraska is directed to place a detainer with the correctional officerhaving custody of the defendant as to defendant Richard Wirth. Ordered by Magistrate Judge Thomas D. Thalken.(PCV, )(cc to US Marshal)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00203-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Wirth</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Richard Wirth. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00203-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817809ea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-2</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00203_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00203/pdf/USCOURTS-ned-8_07-cr-00203-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00203; USA v. Wirth; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00203-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-08-16</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Richard Wirth. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00203-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Wirth</title>
+  <subTitle>JUDGMENT as to Richard Wirth (1). The defendant plead guilty to count I of the Information and is committed to the custody of the Bureau of Prisons for a total term of 60 months to be served consecutive to any other sentence the defendant is currently serving; 3 years Supervised Release with special conditions; $100 Special Assessment; $66,278.27 Restitution to be paid jointly and severally with Raymond D. Hartz, Welsa Potts, Joshua Putman, Stacy Cook, Jean Long-Wirth and Joseph Young as to defendant Richard Wirth. Ordered by Judge Laurie Smith Camp.(MKR)4 cert to USM</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00203-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817808f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-3</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00203_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00203/pdf/USCOURTS-ned-8_07-cr-00203-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00203; USA v. Wirth; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00203-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-09-06</dateIssued>
+  <docketText>JUDGMENT as to Richard Wirth (1). The defendant plead guilty to count I of the Information and is committed to the custody of the Bureau of Prisons for a total term of 60 months to be served consecutive to any other sentence the defendant is currently serving; 3 years Supervised Release with special conditions; $100 Special Assessment; $66,278.27 Restitution to be paid jointly and severally with Raymond D. Hartz, Welsa Potts, Joshua Putman, Stacy Cook, Jean Long-Wirth and Joseph Young as to defendant Richard Wirth. Ordered by Judge Laurie Smith Camp.(MKR)4 cert to USM</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00203-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Wirth</title>
+  <subTitle>ORDER that the defendant is permitted to proceed on appeal in forma pauperis regarding Notice of Appeal to USCA 23 as to defendant Richard Wirth. Ordered by Judge Laurie Smith Camp.(JAE, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00203-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817808f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-4</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00203_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00203/pdf/USCOURTS-ned-8_07-cr-00203-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00203; USA v. Wirth; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00203-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-09-07</dateIssued>
+  <docketText>ORDER that the defendant is permitted to proceed on appeal in forma pauperis regarding Notice of Appeal to USCA 23 as to defendant Richard Wirth. Ordered by Judge Laurie Smith Camp.(JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00203-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Wirth</title>
+  <subTitle>ORDER denying 30 Motion to Withdraw as Attorney as to Richard Wirth (1). Ordered by Judge Laurie Smith Camp. (JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00203-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817808f6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-5</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00203_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00203/pdf/USCOURTS-ned-8_07-cr-00203-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00203; USA v. Wirth; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00203-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-09-17</dateIssued>
+  <docketText>ORDER denying 30 Motion to Withdraw as Attorney as to Richard Wirth (1). Ordered by Judge Laurie Smith Camp. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00203-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Wirth</title>
+  <subTitle>AMENDED JUDGMENT (Correction of Sentence on Remand) as to Richard Wirth (1). The defendant plead guilty to count I of the Information and is committed to the custody of the Bureau of Prisons for 24 months; 3 years Supervised Release with special conditions; $100 Special Assessment (paid); and $66,278.27 Restitution (balance due of $62,670.63) to be paid jointly and severally with Raymond D. Hartz, Welsa Potts, Joshua Putman, Stacy Cook, Jean Long-Wirth and Joseph Young as to defendant Richard Wirth. Ordered by Judge Laurie Smith Camp. (1 Certified copy to USM) (JSF)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00203-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817809ed</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-6</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00203_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00203/pdf/USCOURTS-ned-8_07-cr-00203-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00203; USA v. Wirth; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00203-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-07-15</dateIssued>
+  <docketText>AMENDED JUDGMENT (Correction of Sentence on Remand) as to Richard Wirth (1). The defendant plead guilty to count I of the Information and is committed to the custody of the Bureau of Prisons for 24 months; 3 years Supervised Release with special conditions; $100 Special Assessment (paid); and $66,278.27 Restitution (balance due of $62,670.63) to be paid jointly and severally with Raymond D. Hartz, Welsa Potts, Joshua Putman, Stacy Cook, Jean Long-Wirth and Joseph Young as to defendant Richard Wirth. Ordered by Judge Laurie Smith Camp. (1 Certified copy to USM) (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00203-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Wirth</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Richard Wirth - Joseph L. Howard is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00203-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817809e9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-7</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00203_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00203/USCOURTS-ned-8_07-cr-00203-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00203/pdf/USCOURTS-ned-8_07-cr-00203-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00203; USA v. Wirth; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00203-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-01-14</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Richard Wirth - Joseph L. Howard is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+</mods>

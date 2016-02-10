@@ -1,0 +1,359 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8ab4fd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Illinois</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ilnd-1_11-cv-04620</identifier>
+<identifier type="local">P0b002ee18a8ab4fd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ilnd-1_11-cv-04620</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ilnd-1_11-cv-04620</accessId>
+ <courtType>District</courtType>
+ <courtCode>ilnd</courtCode>
+ <courtCircuit>7th</courtCircuit>
+ <courtState>Illinois</courtState>
+ <courtSortOrder>2162</courtSortOrder>
+ <caseNumber>1:11-cv-04620</caseNumber>
+ <caseOffice>Chicago</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>28:1331 Federal Question</cause>
+ <party fullName="Ace Mechanical Co." lastName="Ace Mechanical Co." role="Defendant"></party>
+ <party fullName="C &amp; C Dairy, Inc" lastName="C &amp; C Dairy, Inc" role="Defendant"></party>
+ <party fullName="C&amp;M JVI Company, Ltd" lastName="C&amp;M JVI Company, Ltd" role="Defendant"></party>
+ <party fullName="Frank McMahon" lastName="Frank McMahon" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Frawley" lastName="Frawley" role="Plaintiff"></party>
+ <party firstName="Maureen" fullName="Maureen Frawley" lastName="Frawley" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Hebert" lastName="Hebert" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Catherine Hrascinski" lastName="Hrascinski" middleName="Catherine" role="Defendant"></party>
+ <party fullName="Krystal Dairy Services, Inc" lastName="Krystal Dairy Services, Inc" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony McMahon" lastName="McMahon" role="Defendant"></party>
+ <party firstName="Bridget" fullName="Bridget McMahon" lastName="McMahon" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank McMahon" lastName="McMahon" role="Defendant"></party>
+ <party firstName="John" fullName="John McMahon" lastName="McMahon" role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen McMahon" lastName="McMahon" role="Defendant"></party>
+ <party firstName="Nancy" fullName="Nancy McMahon" lastName="McMahon" role="Defendant"></party>
+ <party fullName="McMahon Dairy Products, Inc" lastName="McMahon Dairy Products, Inc" role="Defendant"></party>
+ <party fullName="McMahon Food Corporation" lastName="McMahon Food Corporation" role="Defendant"></party>
+ <party fullName="Plumbing Systems, Inc" lastName="Plumbing Systems, Inc" role="Defendant"></party>
+ <party firstName="Brett" fullName="Brett Siebert" lastName="Siebert" role="Defendant"></party>
+ <party firstName="Christine" fullName="Christine Stajsczak" lastName="Stajsczak" role="Defendant"></party>
+ <party fullName="State of Illinois" lastName="State of Illinois" role="Plaintiff"></party>
+ <party firstName="Susan" fullName="Susan Theis" lastName="Theis" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party fullName="Windy City Electric Aviation Corporation" lastName="Windy City Electric Aviation Corporation" role="Defendant"></party>
+ <party fullName="Windy City Electric Co." lastName="Windy City Electric Co." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Frawley et al v. McMahon et al</title>
+ <partNumber>1:11-cv-04620</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ilnd-1_11-cv-04620/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-04620;11-4620</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Illinois</namePart>
+ <namePart>7th Circuit</namePart>
+ <namePart>Chicago</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ace Mechanical Co.</displayForm>
+ <namePart type="family">Ace Mechanical Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C &amp; C Dairy, Inc</displayForm>
+ <namePart type="family">C &amp; C Dairy, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C&amp;M JVI Company, Ltd</displayForm>
+ <namePart type="family">C&amp;M JVI Company, Ltd</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frank McMahon</displayForm>
+ <namePart type="family">Frank McMahon</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Frawley</displayForm>
+ <namePart type="family">Frawley</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Maureen Frawley</displayForm>
+ <namePart type="family">Frawley</namePart>
+ <namePart type="given">Maureen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Hebert</displayForm>
+ <namePart type="family">Hebert</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Catherine Hrascinski</displayForm>
+ <namePart type="family">Hrascinski</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Krystal Dairy Services, Inc</displayForm>
+ <namePart type="family">Krystal Dairy Services, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony McMahon</displayForm>
+ <namePart type="family">McMahon</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bridget McMahon</displayForm>
+ <namePart type="family">McMahon</namePart>
+ <namePart type="given">Bridget</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frank McMahon</displayForm>
+ <namePart type="family">McMahon</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John McMahon</displayForm>
+ <namePart type="family">McMahon</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kathleen McMahon</displayForm>
+ <namePart type="family">McMahon</namePart>
+ <namePart type="given">Kathleen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nancy McMahon</displayForm>
+ <namePart type="family">McMahon</namePart>
+ <namePart type="given">Nancy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>McMahon Dairy Products, Inc</displayForm>
+ <namePart type="family">McMahon Dairy Products, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>McMahon Food Corporation</displayForm>
+ <namePart type="family">McMahon Food Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Plumbing Systems, Inc</displayForm>
+ <namePart type="family">Plumbing Systems, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brett Siebert</displayForm>
+ <namePart type="family">Siebert</namePart>
+ <namePart type="given">Brett</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christine Stajsczak</displayForm>
+ <namePart type="family">Stajsczak</namePart>
+ <namePart type="given">Christine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State of Illinois</displayForm>
+ <namePart type="family">State of Illinois</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Susan Theis</displayForm>
+ <namePart type="family">Theis</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Windy City Electric Aviation Corporation</displayForm>
+ <namePart type="family">Windy City Electric Aviation Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Windy City Electric Co.</displayForm>
+ <namePart type="family">Windy City Electric Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ilnd-1_11-cv-04620</accessId>
+ <courtType>District</courtType>
+ <courtCode>ilnd</courtCode>
+ <courtCircuit>7th</courtCircuit>
+ <courtState>Illinois</courtState>
+ <courtSortOrder>2162</courtSortOrder>
+ <caseNumber>1:11-cv-04620</caseNumber>
+ <caseOffice>Chicago</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>28:1331 Federal Question</cause>
+ <party fullName="Ace Mechanical Co." lastName="Ace Mechanical Co." role="Defendant"></party>
+ <party fullName="C &amp; C Dairy, Inc" lastName="C &amp; C Dairy, Inc" role="Defendant"></party>
+ <party fullName="C&amp;M JVI Company, Ltd" lastName="C&amp;M JVI Company, Ltd" role="Defendant"></party>
+ <party fullName="Frank McMahon" lastName="Frank McMahon" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Frawley" lastName="Frawley" role="Plaintiff"></party>
+ <party firstName="Maureen" fullName="Maureen Frawley" lastName="Frawley" role="Plaintiff"></party>
+ <party firstName="Daniel" fullName="Daniel Hebert" lastName="Hebert" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Catherine Hrascinski" lastName="Hrascinski" middleName="Catherine" role="Defendant"></party>
+ <party fullName="Krystal Dairy Services, Inc" lastName="Krystal Dairy Services, Inc" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony McMahon" lastName="McMahon" role="Defendant"></party>
+ <party firstName="Bridget" fullName="Bridget McMahon" lastName="McMahon" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank McMahon" lastName="McMahon" role="Defendant"></party>
+ <party firstName="John" fullName="John McMahon" lastName="McMahon" role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen McMahon" lastName="McMahon" role="Defendant"></party>
+ <party firstName="Nancy" fullName="Nancy McMahon" lastName="McMahon" role="Defendant"></party>
+ <party fullName="McMahon Dairy Products, Inc" lastName="McMahon Dairy Products, Inc" role="Defendant"></party>
+ <party fullName="McMahon Food Corporation" lastName="McMahon Food Corporation" role="Defendant"></party>
+ <party fullName="Plumbing Systems, Inc" lastName="Plumbing Systems, Inc" role="Defendant"></party>
+ <party firstName="Brett" fullName="Brett Siebert" lastName="Siebert" role="Defendant"></party>
+ <party firstName="Christine" fullName="Christine Stajsczak" lastName="Stajsczak" role="Defendant"></party>
+ <party fullName="State of Illinois" lastName="State of Illinois" role="Plaintiff"></party>
+ <party firstName="Susan" fullName="Susan Theis" lastName="Theis" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party fullName="Windy City Electric Aviation Corporation" lastName="Windy City Electric Aviation Corporation" role="Defendant"></party>
+ <party fullName="Windy City Electric Co." lastName="Windy City Electric Co." role="Defendant"></party>
+ <state>Illinois</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ilnd-1_11-cv-04620-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ilnd-1_11-cv-04620/USCOURTS-ilnd-1_11-cv-04620-0/mods.xml">
+ <titleInfo>
+  <title>Frawley et al v. McMahon et al</title>
+  <subTitle>MEMORANDUM Opinion and Order Signed by the Honorable Robert M. Dow, Jr on 1/5/2015. Mailed notice(cdh, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ilnd-1_11-cv-04620/pdf/USCOURTS-ilnd-1_11-cv-04620-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b6ac8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ilnd-1_11-cv-04620/USCOURTS-ilnd-1_11-cv-04620-0</identifier>
+ <identifier type="former granule identifier">ilnd-1_11-cv-04620_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ilnd-1_11-cv-04620/USCOURTS-ilnd-1_11-cv-04620-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ilnd-1_11-cv-04620/pdf/USCOURTS-ilnd-1_11-cv-04620-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-04620; Frawley et al v. McMahon et al; </searchTitle>
+  <courtName>United States District Court Northern District of Illinois</courtName>
+  <state>Illinois</state>
+  <accessId>USCOURTS-ilnd-1_11-cv-04620-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM Opinion and Order Signed by the Honorable Robert M. Dow, Jr on 1/5/2015. Mailed notice(cdh, )</docketText>
+</extension>
+</relatedItem>
+</mods>

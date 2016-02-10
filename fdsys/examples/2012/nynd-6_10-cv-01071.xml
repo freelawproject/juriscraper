@@ -1,0 +1,223 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18171914e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_10-cv-01071</identifier>
+<identifier type="local">P0b002ee18171914e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-6_10-cv-01071</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-6_10-cv-01071</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>6:10-cv-01071</caseNumber>
+ <caseOffice>Utica</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>950</natureSuitCode>
+ <natureSuit>Contitutionality of State Statutes</natureSuit>
+ <party fullName="American Cancer Society" lastName="American Cancer Society" role="Amicus"></party>
+ <party firstName="William" fullName="William J. Comiskey" lastName="Comiskey" middleName="J." role="Defendant"></party>
+ <party fullName="New York Association of Convenience Stores" lastName="New York Association of Convenience Stores" role="Amicus"></party>
+ <party fullName="New York State Association Of Counties" lastName="New York State Association Of Counties" role="Amicus"></party>
+ <party fullName="Oneida Nation of New York" lastName="Oneida Nation of New York" role="Plaintiff"></party>
+ <party firstName="David" fullName="David A. Paterson" lastName="Paterson" middleName="A." role="Defendant"></party>
+ <party firstName="Jamie" fullName="Jamie Woodward" lastName="Woodward" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Oneida Nation of New York v. Paterson et al</title>
+ <partNumber>6:10-cv-01071</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_10-cv-01071/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:10-cv-01071;10-1071</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Utica</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>American Cancer Society</displayForm>
+ <namePart type="family">American Cancer Society</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus</description>
+</name>
+<name type="personal">
+ <displayForm>William J. Comiskey</displayForm>
+ <namePart type="family">Comiskey</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New York Association of Convenience Stores</displayForm>
+ <namePart type="family">New York Association of Convenience Stores</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus</description>
+</name>
+<name type="personal">
+ <displayForm>New York State Association Of Counties</displayForm>
+ <namePart type="family">New York State Association Of Counties</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus</description>
+</name>
+<name type="personal">
+ <displayForm>Oneida Nation of New York</displayForm>
+ <namePart type="family">Oneida Nation of New York</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>David A. Paterson</displayForm>
+ <namePart type="family">Paterson</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jamie Woodward</displayForm>
+ <namePart type="family">Woodward</namePart>
+ <namePart type="given">Jamie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-6_10-cv-01071</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>6:10-cv-01071</caseNumber>
+ <caseOffice>Utica</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>950</natureSuitCode>
+ <natureSuit>Contitutionality of State Statutes</natureSuit>
+ <party fullName="American Cancer Society" lastName="American Cancer Society" role="Amicus"></party>
+ <party firstName="William" fullName="William J. Comiskey" lastName="Comiskey" middleName="J." role="Defendant"></party>
+ <party fullName="New York Association of Convenience Stores" lastName="New York Association of Convenience Stores" role="Amicus"></party>
+ <party fullName="New York State Association Of Counties" lastName="New York State Association Of Counties" role="Amicus"></party>
+ <party fullName="Oneida Nation of New York" lastName="Oneida Nation of New York" role="Plaintiff"></party>
+ <party firstName="David" fullName="David A. Paterson" lastName="Paterson" middleName="A." role="Defendant"></party>
+ <party firstName="Jamie" fullName="Jamie Woodward" lastName="Woodward" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-6_10-cv-01071-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_10-cv-01071/USCOURTS-nynd-6_10-cv-01071-0/mods.xml">
+ <titleInfo>
+  <title>Oneida Nation of New York v. Paterson et al</title>
+  <subTitle>**VACATED pursuant to the 74 Order** MEMORANDUM-DECISION AND ORDER and PRELIMINARY INJUNCTION: defts&apos; Motion to Consolidate Cases is DENIED; pltf&apos;s Motion for a preliminary injunction is GRANTED ; pltf&apos;s motion for court-ordered mediation is GRANTED; mediation to conclude no later that 12/17/10. Signed by Judge David N. Hurd on 10/14/10. (cbm ) Modified on 6/16/2011 (see, ).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-6_10-cv-01071-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18171a921</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_10-cv-01071/USCOURTS-nynd-6_10-cv-01071-0</identifier>
+ <identifier type="former granule identifier">nynd-6_10-cv-01071_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_10-cv-01071/USCOURTS-nynd-6_10-cv-01071-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_10-cv-01071/pdf/USCOURTS-nynd-6_10-cv-01071-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:10-cv-01071; Oneida Nation of New York v. Paterson et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-6_10-cv-01071-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-10-14</dateIssued>
+  <docketText>**VACATED pursuant to the 74 Order** MEMORANDUM-DECISION AND ORDER and PRELIMINARY INJUNCTION: defts&apos; Motion to Consolidate Cases is DENIED; pltf&apos;s Motion for a preliminary injunction is GRANTED ; pltf&apos;s motion for court-ordered mediation is GRANTED; mediation to conclude no later that 12/17/10. Signed by Judge David N. Hurd on 10/14/10. (cbm ) Modified on 6/16/2011 (see, ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-6_10-cv-01071-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_10-cv-01071/USCOURTS-nynd-6_10-cv-01071-1/mods.xml">
+ <titleInfo>
+  <title>Oneida Nation of New York v. Paterson et al</title>
+  <subTitle>MEMORANDUM-DECISION&amp;ORDER: The Oneida Nation&apos;s motion to dismiss without prejudice is GRANTED; Defendants&apos; motion for summary judgment is DENIED; and the complaint is DISMISSED WITHOUT PREJUDICE. The Clerk of the Court is directed to enter judgment accordingly. Signed by Judge David N. Hurd on 1/9/2012. (see)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-6_10-cv-01071-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18171a922</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_10-cv-01071/USCOURTS-nynd-6_10-cv-01071-1</identifier>
+ <identifier type="former granule identifier">nynd-6_10-cv-01071_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_10-cv-01071/USCOURTS-nynd-6_10-cv-01071-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_10-cv-01071/pdf/USCOURTS-nynd-6_10-cv-01071-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:10-cv-01071; Oneida Nation of New York v. Paterson et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-6_10-cv-01071-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>MEMORANDUM-DECISION&amp;ORDER: The Oneida Nation&apos;s motion to dismiss without prejudice is GRANTED; Defendants&apos; motion for summary judgment is DENIED; and the complaint is DISMISSED WITHOUT PREJUDICE. The Clerk of the Court is directed to enter judgment accordingly. Signed by Judge David N. Hurd on 1/9/2012. (see)</docketText>
+</extension>
+</relatedItem>
+</mods>

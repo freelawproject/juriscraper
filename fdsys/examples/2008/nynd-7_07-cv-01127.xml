@@ -1,0 +1,187 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18111eeda">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-7_07-cv-01127</identifier>
+<identifier type="local">P0b002ee18111eeda</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-7_07-cv-01127</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-7_07-cv-01127</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>7:07-cv-01127</caseNumber>
+ <caseOffice>Watertown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel E. Smith" lastName="Smith" middleName="E." role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Smith v. Commissioner of Social Security</title>
+ <partNumber>7:07-cv-01127</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-7_07-cv-01127/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">7:07-cv-01127;07-1127</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Watertown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel E. Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security Administration</displayForm>
+ <namePart type="family">Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-7_07-cv-01127</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>7:07-cv-01127</caseNumber>
+ <caseOffice>Watertown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel E. Smith" lastName="Smith" middleName="E." role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Interested Party"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-7_07-cv-01127-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-7_07-cv-01127/USCOURTS-nynd-7_07-cv-01127-0/mods.xml">
+ <titleInfo>
+  <title>Smith v. Commissioner of Social Security</title>
+  <subTitle>JUDGMENT in favor of Daniel E. Smith against Commissioner of Social Security. (lmp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-7_07-cv-01127-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813fd66f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-7_07-cv-01127/USCOURTS-nynd-7_07-cv-01127-0</identifier>
+ <identifier type="former granule identifier">nynd-7_07-cv-01127_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-7_07-cv-01127/USCOURTS-nynd-7_07-cv-01127-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-7_07-cv-01127/pdf/USCOURTS-nynd-7_07-cv-01127-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:07-cv-01127; Smith v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-7_07-cv-01127-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-12-06</dateIssued>
+  <docketText>JUDGMENT in favor of Daniel E. Smith against Commissioner of Social Security. (lmp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-7_07-cv-01127-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-7_07-cv-01127/USCOURTS-nynd-7_07-cv-01127-1/mods.xml">
+ <titleInfo>
+  <title>Smith v. Commissioner of Social Security</title>
+  <subTitle>ORDER: approving the # 12 Stipulation for payment of fees pursuant to the Equal Access to Justice Act, plaintiff Daniel E. Smith is allowed a fee award under the Equal Access to Justice Act in the amount of $264.00 in Attorney Fees and Expenses, plus an additional amount of $350.00 for costs, made payable to plaintiff. This matter is hereby dismissed with prejudice. Signed by Judge Frederick J. Scullin Jr. on 1/7/08. (jmb)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-7_07-cv-01127-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813fd66e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-7_07-cv-01127/USCOURTS-nynd-7_07-cv-01127-1</identifier>
+ <identifier type="former granule identifier">nynd-7_07-cv-01127_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-7_07-cv-01127/USCOURTS-nynd-7_07-cv-01127-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-7_07-cv-01127/pdf/USCOURTS-nynd-7_07-cv-01127-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:07-cv-01127; Smith v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-7_07-cv-01127-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-07</dateIssued>
+  <docketText>ORDER: approving the # 12 Stipulation for payment of fees pursuant to the Equal Access to Justice Act, plaintiff Daniel E. Smith is allowed a fee award under the Equal Access to Justice Act in the amount of $264.00 in Attorney Fees and Expenses, plus an additional amount of $350.00 for costs, made payable to plaintiff. This matter is hereby dismissed with prejudice. Signed by Judge Frederick J. Scullin Jr. on 1/7/08. (jmb)</docketText>
+</extension>
+</relatedItem>
+</mods>

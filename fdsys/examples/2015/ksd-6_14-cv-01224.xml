@@ -1,0 +1,288 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bcd91">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_14-cv-01224</identifier>
+<identifier type="local">P0b002ee18a8bcd91</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-6_14-cv-01224</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_14-cv-01224</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:14-cv-01224</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1441 Petition for Removal- Breach of Contract</cause>
+ <party fullName="BEC Holding Company" lastName="BEC Holding Company" role="Plaintiff"></party>
+ <party fullName="Bowen Engineering Corporation" lastName="Bowen Engineering Corporation" role="Plaintiff"></party>
+ <party fullName="CIC Group, Inc." lastName="CIC Group, Inc." role="Defendant"></party>
+ <party fullName="Federal Insurance Company" lastName="Federal Insurance Company" role="Defendant"></party>
+ <party fullName="Pacific Indemnity Co." lastName="Pacific Indemnity Co." role="Cross Claimant"></party>
+ <party fullName="Pacific Indemnity Co." lastName="Pacific Indemnity Co." role="Defendant"></party>
+ <party fullName="Pacific Indemnity Co." lastName="Pacific Indemnity Co." role="Third Party Plaintiff"></party>
+ <party fullName="Scott Process Systems, Inc." lastName="Scott Process Systems, Inc." role="Cross Claimant"></party>
+ <party fullName="Scott Process Systems, Inc." lastName="Scott Process Systems, Inc." role="Defendant"></party>
+ <party fullName="Scott Process Systems, Inc." lastName="Scott Process Systems, Inc." role="Third Party Plaintiff"></party>
+ <party fullName="The Chubb Corporation" lastName="The Chubb Corporation" role="Defendant"></party>
+ <party fullName="Walters Metal Fabrication, Inc." lastName="Walters Metal Fabrication, Inc." role="Cross Defendant"></party>
+ <party fullName="Walters Metal Fabrication, Inc." lastName="Walters Metal Fabrication, Inc." role="Defendant"></party>
+ <party fullName="Walters Metal Fabrication, Inc." lastName="Walters Metal Fabrication, Inc." role="Third Party Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Bowen Engineering Corporation v. Pacific Indemnity Co.,et al.</title>
+ <partNumber>6:14-cv-01224</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_14-cv-01224/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:14-cv-01224;14-1224</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Wichita</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>BEC Holding Company</displayForm>
+ <namePart type="family">BEC Holding Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Bowen Engineering Corporation</displayForm>
+ <namePart type="family">Bowen Engineering Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CIC Group, Inc.</displayForm>
+ <namePart type="family">CIC Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Federal Insurance Company</displayForm>
+ <namePart type="family">Federal Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pacific Indemnity Co.</displayForm>
+ <namePart type="family">Pacific Indemnity Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Pacific Indemnity Co.</displayForm>
+ <namePart type="family">Pacific Indemnity Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pacific Indemnity Co.</displayForm>
+ <namePart type="family">Pacific Indemnity Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Process Systems, Inc.</displayForm>
+ <namePart type="family">Scott Process Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Process Systems, Inc.</displayForm>
+ <namePart type="family">Scott Process Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Process Systems, Inc.</displayForm>
+ <namePart type="family">Scott Process Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>The Chubb Corporation</displayForm>
+ <namePart type="family">The Chubb Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Walters Metal Fabrication, Inc.</displayForm>
+ <namePart type="family">Walters Metal Fabrication, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Walters Metal Fabrication, Inc.</displayForm>
+ <namePart type="family">Walters Metal Fabrication, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Walters Metal Fabrication, Inc.</displayForm>
+ <namePart type="family">Walters Metal Fabrication, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Third Party Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_14-cv-01224</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:14-cv-01224</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1441 Petition for Removal- Breach of Contract</cause>
+ <party fullName="BEC Holding Company" lastName="BEC Holding Company" role="Plaintiff"></party>
+ <party fullName="Bowen Engineering Corporation" lastName="Bowen Engineering Corporation" role="Plaintiff"></party>
+ <party fullName="CIC Group, Inc." lastName="CIC Group, Inc." role="Defendant"></party>
+ <party fullName="Federal Insurance Company" lastName="Federal Insurance Company" role="Defendant"></party>
+ <party fullName="Pacific Indemnity Co." lastName="Pacific Indemnity Co." role="Cross Claimant"></party>
+ <party fullName="Pacific Indemnity Co." lastName="Pacific Indemnity Co." role="Defendant"></party>
+ <party fullName="Pacific Indemnity Co." lastName="Pacific Indemnity Co." role="Third Party Plaintiff"></party>
+ <party fullName="Scott Process Systems, Inc." lastName="Scott Process Systems, Inc." role="Cross Claimant"></party>
+ <party fullName="Scott Process Systems, Inc." lastName="Scott Process Systems, Inc." role="Defendant"></party>
+ <party fullName="Scott Process Systems, Inc." lastName="Scott Process Systems, Inc." role="Third Party Plaintiff"></party>
+ <party fullName="The Chubb Corporation" lastName="The Chubb Corporation" role="Defendant"></party>
+ <party fullName="Walters Metal Fabrication, Inc." lastName="Walters Metal Fabrication, Inc." role="Cross Defendant"></party>
+ <party fullName="Walters Metal Fabrication, Inc." lastName="Walters Metal Fabrication, Inc." role="Defendant"></party>
+ <party fullName="Walters Metal Fabrication, Inc." lastName="Walters Metal Fabrication, Inc." role="Third Party Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_14-cv-01224-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_14-cv-01224/USCOURTS-ksd-6_14-cv-01224-0/mods.xml">
+ <titleInfo>
+  <title>Bowen Engineering Corporation v. Pacific Indemnity Co.,et al.</title>
+  <subTitle>MEMORANDUM AND ORDER denying 53 Defendants Scott Process Systems, Inc.&apos;s and Pacific Indemnity Company&apos;s Motion for Leave to File Crossclaims Against Defendant Walters Metal Fabrication, Inc. and granting 59 Plaintiff Bowen Engineering Corporation&apos;s unopposed Motion for Leave to File First Amended Complaint. Within seven (7) days of the date of this Order, Plaintiff shall electronically file its First Amended Complaint. Pursuant to Fed. R. Civ. P. 15(a)(3), Defendants Scott Process and Pacific Indemnity shall have 14 days after Plaintiff files its First Amended Complaint in which to file an answer or otherwise respond. Signed by Magistrate Judge Teresa J. James on 12/8/2014. (byk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_14-cv-01224/pdf/USCOURTS-ksd-6_14-cv-01224-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c05e5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_14-cv-01224/USCOURTS-ksd-6_14-cv-01224-0</identifier>
+ <identifier type="former granule identifier">ksd-6_14-cv-01224_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_14-cv-01224/USCOURTS-ksd-6_14-cv-01224-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_14-cv-01224/pdf/USCOURTS-ksd-6_14-cv-01224-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:14-cv-01224; Bowen Engineering Corporation v. Pacific Indemnity Co.,et al.; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_14-cv-01224-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-12-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 53 Defendants Scott Process Systems, Inc.&apos;s and Pacific Indemnity Company&apos;s Motion for Leave to File Crossclaims Against Defendant Walters Metal Fabrication, Inc. and granting 59 Plaintiff Bowen Engineering Corporation&apos;s unopposed Motion for Leave to File First Amended Complaint. Within seven (7) days of the date of this Order, Plaintiff shall electronically file its First Amended Complaint. Pursuant to Fed. R. Civ. P. 15(a)(3), Defendants Scott Process and Pacific Indemnity shall have 14 days after Plaintiff files its First Amended Complaint in which to file an answer or otherwise respond. Signed by Magistrate Judge Teresa J. James on 12/8/2014. (byk)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_14-cv-01224-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_14-cv-01224/USCOURTS-ksd-6_14-cv-01224-1/mods.xml">
+ <titleInfo>
+  <title>Bowen Engineering Corporation v. Pacific Indemnity Co.,et al.</title>
+  <subTitle>MEMORANDUM AND ORDER granting 27 defendants&apos; Motion to Transfer Case and 29 Motion to Dismiss Party. Signed by Chief Judge J. Thomas Marten on 1/5/15. (mss)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_14-cv-01224/pdf/USCOURTS-ksd-6_14-cv-01224-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c05e6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_14-cv-01224/USCOURTS-ksd-6_14-cv-01224-1</identifier>
+ <identifier type="former granule identifier">ksd-6_14-cv-01224_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_14-cv-01224/USCOURTS-ksd-6_14-cv-01224-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_14-cv-01224/pdf/USCOURTS-ksd-6_14-cv-01224-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:14-cv-01224; Bowen Engineering Corporation v. Pacific Indemnity Co.,et al.; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_14-cv-01224-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 27 defendants&apos; Motion to Transfer Case and 29 Motion to Dismiss Party. Signed by Chief Judge J. Thomas Marten on 1/5/15. (mss)</docketText>
+</extension>
+</relatedItem>
+</mods>

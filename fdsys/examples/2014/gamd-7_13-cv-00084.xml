@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c54de39">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-05-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-07-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00084</identifier>
+<identifier type="local">P0b002ee18c54de39</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-05-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-05-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-7_13-cv-00084</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_13-cv-00084</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:13-cv-00084</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party firstName="CHARESE" fullName="CHARESE BELL" lastName="BELL" role="Plaintiff"></party>
+ <party fullName="GENESIS EMS INC" lastName="GENESIS EMS INC" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>BELL v. GENESIS EMS INC</title>
+ <partNumber>7:13-cv-00084</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00084/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">7:13-cv-00084;13-084</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Valdosta</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CHARESE BELL</displayForm>
+ <namePart type="family">BELL</namePart>
+ <namePart type="given">CHARESE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>GENESIS EMS INC</displayForm>
+ <namePart type="family">GENESIS EMS INC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_13-cv-00084</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:13-cv-00084</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party firstName="CHARESE" fullName="CHARESE BELL" lastName="BELL" role="Plaintiff"></party>
+ <party fullName="GENESIS EMS INC" lastName="GENESIS EMS INC" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_13-cv-00084-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00084/USCOURTS-gamd-7_13-cv-00084-0/mods.xml">
+ <titleInfo>
+  <title>BELL v. GENESIS EMS INC</title>
+  <subTitle>ORDER denying without prejudice 4 Motion to Dismiss for Failure to State a Claim. Deadline for conducting limited discovery is 10/11/2013; deadline for refiling motion to dismiss is 10/25/2013 if appropriate. Discovery stay entered 7/23/2013 remains in effect. Ordered by Judge Hugh Lawson on 8/29/2013. (nbp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00084/pdf/USCOURTS-gamd-7_13-cv-00084-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c603fa5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00084/USCOURTS-gamd-7_13-cv-00084-0</identifier>
+ <identifier type="former granule identifier">gamd-7_13-cv-00084_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00084/USCOURTS-gamd-7_13-cv-00084-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00084/pdf/USCOURTS-gamd-7_13-cv-00084-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:13-cv-00084; BELL v. GENESIS EMS INC; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_13-cv-00084-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-08-29</dateIssued>
+  <docketText>ORDER denying without prejudice 4 Motion to Dismiss for Failure to State a Claim. Deadline for conducting limited discovery is 10/11/2013; deadline for refiling motion to dismiss is 10/25/2013 if appropriate. Discovery stay entered 7/23/2013 remains in effect. Ordered by Judge Hugh Lawson on 8/29/2013. (nbp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_13-cv-00084-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00084/USCOURTS-gamd-7_13-cv-00084-1/mods.xml">
+ <titleInfo>
+  <title>BELL v. GENESIS EMS INC</title>
+  <subTitle>ORDER converting Motion to Dismiss to motion for summary judgment and requesting additional information. Ordered by U.S. District Judge Hugh Lawson on January 3, 2014. (mbh)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00084/pdf/USCOURTS-gamd-7_13-cv-00084-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c604025</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00084/USCOURTS-gamd-7_13-cv-00084-1</identifier>
+ <identifier type="former granule identifier">gamd-7_13-cv-00084_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00084/USCOURTS-gamd-7_13-cv-00084-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00084/pdf/USCOURTS-gamd-7_13-cv-00084-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:13-cv-00084; BELL v. GENESIS EMS INC; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_13-cv-00084-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER converting Motion to Dismiss to motion for summary judgment and requesting additional information. Ordered by U.S. District Judge Hugh Lawson on January 3, 2014. (mbh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_13-cv-00084-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00084/USCOURTS-gamd-7_13-cv-00084-2/mods.xml">
+ <titleInfo>
+  <title>BELL v. GENESIS EMS INC</title>
+  <subTitle>ORDER granting 21 Motion for Summary Judgment. Ordered by U.S. District Judge HUGH LAWSON on 7/17/2014 (nbp)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00084/pdf/USCOURTS-gamd-7_13-cv-00084-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c604024</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00084/USCOURTS-gamd-7_13-cv-00084-2</identifier>
+ <identifier type="former granule identifier">gamd-7_13-cv-00084_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_13-cv-00084/USCOURTS-gamd-7_13-cv-00084-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_13-cv-00084/pdf/USCOURTS-gamd-7_13-cv-00084-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:13-cv-00084; BELL v. GENESIS EMS INC; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_13-cv-00084-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-07-17</dateIssued>
+  <docketText>ORDER granting 21 Motion for Summary Judgment. Ordered by U.S. District Judge HUGH LAWSON on 7/17/2014 (nbp)</docketText>
+</extension>
+</relatedItem>
+</mods>

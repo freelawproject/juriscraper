@@ -1,0 +1,513 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18bb570bc">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-03-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-03-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586</identifier>
+<identifier type="local">P0b002ee18bb570bc</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-03-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-03-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-00586</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00586</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00586</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Julio" fullName="Julio Amador" lastName="Amador" role="Defendant"></party>
+ <party firstName="Elida" fullName="Elida Arias" lastName="Arias" role="Plaintiff"></party>
+ <party firstName="Dedra" fullName="Dedra Borges" lastName="Borges" role="Defendant"></party>
+ <party fullName="City of Ceres" lastName="City of Ceres" role="Defendant"></party>
+ <party firstName="Jason" fullName="Jason Coley" lastName="Coley" role="Defendant"></party>
+ <party firstName="Pat" fullName="Pat Dayton" lastName="Dayton" role="Defendant"></party>
+ <party firstName="Art" fullName="Art De Werk" lastName="De Werk" role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan Ferreira" lastName="Ferreira" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose J. Martinez" lastName="Martinez" middleName="J." role="Plaintiff"></party>
+ <party firstName="Mike" fullName="Mike Perez" lastName="Perez" role="Defendant"></party>
+ <party firstName="Jon" fullName="Jon Vera" lastName="Vera" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Arias et al v. Amador et al</title>
+ <partNumber>1:12-cv-00586</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-00586;12-586</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Julio Amador</displayForm>
+ <namePart type="family">Amador</namePart>
+ <namePart type="given">Julio</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Elida Arias</displayForm>
+ <namePart type="family">Arias</namePart>
+ <namePart type="given">Elida</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dedra Borges</displayForm>
+ <namePart type="family">Borges</namePart>
+ <namePart type="given">Dedra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>City of Ceres</displayForm>
+ <namePart type="family">City of Ceres</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jason Coley</displayForm>
+ <namePart type="family">Coley</namePart>
+ <namePart type="given">Jason</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pat Dayton</displayForm>
+ <namePart type="family">Dayton</namePart>
+ <namePart type="given">Pat</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Art De Werk</displayForm>
+ <namePart type="family">De Werk</namePart>
+ <namePart type="given">Art</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bryan Ferreira</displayForm>
+ <namePart type="family">Ferreira</namePart>
+ <namePart type="given">Bryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jose J. Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mike Perez</displayForm>
+ <namePart type="family">Perez</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jon Vera</displayForm>
+ <namePart type="family">Vera</namePart>
+ <namePart type="given">Jon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00586</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00586</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Julio" fullName="Julio Amador" lastName="Amador" role="Defendant"></party>
+ <party firstName="Elida" fullName="Elida Arias" lastName="Arias" role="Plaintiff"></party>
+ <party firstName="Dedra" fullName="Dedra Borges" lastName="Borges" role="Defendant"></party>
+ <party fullName="City of Ceres" lastName="City of Ceres" role="Defendant"></party>
+ <party firstName="Jason" fullName="Jason Coley" lastName="Coley" role="Defendant"></party>
+ <party firstName="Pat" fullName="Pat Dayton" lastName="Dayton" role="Defendant"></party>
+ <party firstName="Art" fullName="Art De Werk" lastName="De Werk" role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan Ferreira" lastName="Ferreira" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose J. Martinez" lastName="Martinez" middleName="J." role="Plaintiff"></party>
+ <party firstName="Mike" fullName="Mike Perez" lastName="Perez" role="Defendant"></party>
+ <party firstName="Jon" fullName="Jon Vera" lastName="Vera" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00586-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-0/mods.xml">
+ <titleInfo>
+  <title>Arias et al v. Amador et al</title>
+  <subTitle>ORDER Granting 2 Motion to Proceed IFP signed by Magistrate Judge Dennis L. Beck on 04/17/2012. (Flores, E)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb5fd82</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00586_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00586; Arias et al v. Amador et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00586-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-04-17</dateIssued>
+  <docketText>ORDER Granting 2 Motion to Proceed IFP signed by Magistrate Judge Dennis L. Beck on 04/17/2012. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00586-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-1/mods.xml">
+ <titleInfo>
+  <title>Arias et al v. Amador et al</title>
+  <subTitle>ORDER re Settlement Conference. Signed by Magistrate Judge Stanley A. Boone on 10/18/2013. (Hernandez, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb5fd84</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00586_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00586; Arias et al v. Amador et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00586-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-10-18</dateIssued>
+  <docketText>ORDER re Settlement Conference. Signed by Magistrate Judge Stanley A. Boone on 10/18/2013. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00586-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-2/mods.xml">
+ <titleInfo>
+  <title>Arias et al v. Amador et al</title>
+  <subTitle>ORDER setting Settlement Conference for 3/4/2014 at 11:00 AM in Courtroom 9 (SAB) before Magistrate Judge Stanley A. Boone. Signed by Magistrate Judge Stanley A. Boone on 10/30/2013. (Hernandez, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb5fd83</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00586_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00586; Arias et al v. Amador et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00586-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-10-30</dateIssued>
+  <docketText>ORDER setting Settlement Conference for 3/4/2014 at 11:00 AM in Courtroom 9 (SAB) before Magistrate Judge Stanley A. Boone. Signed by Magistrate Judge Stanley A. Boone on 10/30/2013. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00586-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-3/mods.xml">
+ <titleInfo>
+  <title>Arias et al v. Amador et al</title>
+  <subTitle>ORDER TO CONTINUE DEFENDANTS&apos; SUMMARY JUDGMENT MOTION HEARING currently set for 10/22/2014 has been CONTINUED to 11/5/2014 at 09:00 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill signed by District Judge Lawrence J. O&apos;Neill on September 22, 2014. (Munoz, I)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb5fd87</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00586_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00586; Arias et al v. Amador et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00586-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-09-22</dateIssued>
+  <docketText>ORDER TO CONTINUE DEFENDANTS&apos; SUMMARY JUDGMENT MOTION HEARING currently set for 10/22/2014 has been CONTINUED to 11/5/2014 at 09:00 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill signed by District Judge Lawrence J. O&apos;Neill on September 22, 2014. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00586-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-4/mods.xml">
+ <titleInfo>
+  <title>Arias et al v. Amador et al</title>
+  <subTitle>ORDER to DISMISS and CLOSE CASE, signed by District Judge Lawrence J. O&apos;Neill on 9/22/2014. CASE CLOSED. (Marrujo, C)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb5fd86</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00586_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00586; Arias et al v. Amador et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00586-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-09-22</dateIssued>
+  <docketText>ORDER to DISMISS and CLOSE CASE, signed by District Judge Lawrence J. O&apos;Neill on 9/22/2014. CASE CLOSED. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00586-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-5/mods.xml">
+ <titleInfo>
+  <title>Arias et al v. Amador et al</title>
+  <subTitle>ORDER to REOPEN CASE and DISMISS Defendants City of Ceres and Art De Werk, signed by District Judge Lawrence J. O&apos;Neill on 9/22/2014. (Marrujo, C)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb5fddd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00586_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00586; Arias et al v. Amador et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00586-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-09-23</dateIssued>
+  <docketText>ORDER to REOPEN CASE and DISMISS Defendants City of Ceres and Art De Werk, signed by District Judge Lawrence J. O&apos;Neill on 9/22/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00586-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-6/mods.xml">
+ <titleInfo>
+  <title>Arias et al v. Amador et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER GRANTING IN PART AND DENYING IN PART 31 Defendants&apos; MOTION for SUMMARY JUDGMENT signed by District Judge Lawrence J. O&apos;Neill on 11/21/2014. (Jessen, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb5fd88</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00586_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00586; Arias et al v. Amador et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00586-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-11-21</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER GRANTING IN PART AND DENYING IN PART 31 Defendants&apos; MOTION for SUMMARY JUDGMENT signed by District Judge Lawrence J. O&apos;Neill on 11/21/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00586-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-7/mods.xml">
+ <titleInfo>
+  <title>Arias et al v. Amador et al</title>
+  <subTitle>ORDER RE: DEFENDANTS MOTIONS IN LIMINE (Doc. 54) signed by District Judge Lawrence J. O&apos;Neill on January 6, 2015. Motion Hearing currently set for 1/12/2015 is VACATED. (Munoz, I)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb5fd85</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00586_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00586; Arias et al v. Amador et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00586-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER RE: DEFENDANTS MOTIONS IN LIMINE (Doc. 54) signed by District Judge Lawrence J. O&apos;Neill on January 6, 2015. Motion Hearing currently set for 1/12/2015 is VACATED. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00586-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-8/mods.xml">
+ <titleInfo>
+  <title>Arias et al v. Amador et al</title>
+  <subTitle>ORDER Dismissing Defendant Mike Perez, signed by District Judge Lawrence J. O&apos;Neill on 2/3/2015. Mike Perez terminated.(Fahrney, E)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb5fddc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-8</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00586_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00586; Arias et al v. Amador et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00586-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-02-04</dateIssued>
+  <docketText>ORDER Dismissing Defendant Mike Perez, signed by District Judge Lawrence J. O&apos;Neill on 2/3/2015. Mike Perez terminated.(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00586-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-9/mods.xml">
+ <titleInfo>
+  <title>Arias et al v. Amador et al</title>
+  <subTitle>ORDER Re: Defendant Dedra Borges, signed by District Judge Lawrence J. O&apos;Neill on 2/6/2015. Dedra Borges terminated. (Fahrney, E)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb5fd89</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-9</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00586_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00586; Arias et al v. Amador et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00586-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2015-02-06</dateIssued>
+  <docketText>ORDER Re: Defendant Dedra Borges, signed by District Judge Lawrence J. O&apos;Neill on 2/6/2015. Dedra Borges terminated. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00586-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-10/mods.xml">
+ <titleInfo>
+  <title>Arias et al v. Amador et al</title>
+  <subTitle>Order denying 88 Bill of Costs pursuant to stipulation, signed by Magistrate Judge Stanley A. Boone on 3/13/2015. (Rosales, O)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18bb5fddb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-10</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00586_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00586/USCOURTS-caed-1_12-cv-00586-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00586/pdf/USCOURTS-caed-1_12-cv-00586-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00586; Arias et al v. Amador et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00586-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2015-03-16</dateIssued>
+  <docketText>Order denying 88 Bill of Costs pursuant to stipulation, signed by Magistrate Judge Stanley A. Boone on 3/13/2015. (Rosales, O)</docketText>
+</extension>
+</relatedItem>
+</mods>

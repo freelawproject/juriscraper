@@ -1,0 +1,564 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118f23a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_08-cv-00844</identifier>
+<identifier type="local">P0b002ee18118f23a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_08-cv-00844</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_08-cv-00844</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:08-cv-00844</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party firstName="Dominick" fullName="Dominick Bizzarro" lastName="Bizzarro" role="Defendant"></party>
+ <party firstName="Linda" fullName="Linda Breault" lastName="Breault" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert A. Breault" lastName="Breault" middleName="A." role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Breslin" lastName="Breslin" role="Defendant"></party>
+ <party firstName="Gregg" fullName="Gregg W. Brown" lastName="Brown" middleName="W." role="Defendant"></party>
+ <party firstName="Christine" fullName="Christine Cioffi" lastName="Cioffi" role="Defendant"></party>
+ <party firstName="James" fullName="James Connolly" lastName="Connolly" role="Defendant"></party>
+ <party firstName="James" fullName="James W. Connolly" lastName="Connolly" middleName="W." role="Defendant"></party>
+ <party firstName="Andrew" fullName="Andrew M. Cuomo" lastName="Cuomo" middleName="M." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas D&apos;Andrea" lastName="D&apos;Andrea" role="Defendant"></party>
+ <party firstName="Harry" fullName="Harry Depan" lastName="Depan" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Donovan" lastName="Donovan" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Ebeltoft" lastName="Ebeltoft" role="Defendant"></party>
+ <party fullName="Ellis Hospital" lastName="Ellis Hospital" role="Defendant"></party>
+ <party firstName="John" fullName="John Flynn" lastName="Flynn" role="Defendant"></party>
+ <party firstName="Howard" fullName="Howard S. Foote" lastName="Foote" middleName="S." role="Defendant"></party>
+ <party firstName="D." fullName="D. Joseph Gersuk" lastName="Gersuk" middleName="Joseph" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank Harte" lastName="Harte" role="Defendant"></party>
+ <party firstName="Dale" fullName="Dale Hedman" lastName="Hedman" role="Defendant"></party>
+ <party firstName="John" fullName="John Jaski" lastName="Jaski" role="Defendant"></party>
+ <party firstName="Nora" fullName="Nora Jaski" lastName="Jaski" role="Defendant"></party>
+ <party fullName="John Does 1 - 30" lastName="John Does 1 - 30" role="Defendant"></party>
+ <party firstName="Marshall" fullName="Marshall G. Jones" lastName="Jones" middleName="G." role="Defendant"></party>
+ <party firstName="Bonnie" fullName="Bonnie McGuire Jones" lastName="Jones" middleName="McGuire" role="Defendant"></party>
+ <party firstName="Patrick" fullName="Patrick Kehoe" lastName="Kehoe" role="Defendant"></party>
+ <party firstName="William" fullName="William J. Kenneally" lastName="Kenneally" middleName="J." role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert J. Kennedy" lastName="Kennedy" middleName="J." role="Defendant"></party>
+ <party firstName="Barbara" fullName="Barbara C. Lawrence" lastName="Lawrence" middleName="C." role="Defendant"></party>
+ <party firstName="Sue" fullName="Sue Lehrman" lastName="Lehrman" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Liebers" lastName="Liebers" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Lipman" lastName="Lipman" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark M. Little" lastName="Little" middleName="M." role="Defendant"></party>
+ <party firstName="Judith" fullName="Judith B. McIlduff" lastName="McIlduff" middleName="B." role="Defendant"></party>
+ <party firstName="Deborah" fullName="Deborah Mullaney" lastName="Mullaney" role="Defendant"></party>
+ <party firstName="Hugh" fullName="Hugh J. Murphy" lastName="Murphy" middleName="J." role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert F. Murray" lastName="Murray" middleName="F." role="Defendant"></party>
+ <party firstName="Joan" fullName="Joan R. Pipito" lastName="Pipito" middleName="R." role="Defendant"></party>
+ <party firstName="Norma" fullName="Norma Cummings Rettek" lastName="Rettek" middleName="Cummings" role="Plaintiff"></party>
+ <party firstName="Sarah" fullName="Sarah Schermerhorn" lastName="Schermerhorn" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Scudder" lastName="Scudder" role="Defendant"></party>
+ <party firstName="Zygmond" fullName="Zygmond Slezak" lastName="Slezak" role="Defendant"></party>
+ <party firstName="Suzanne" fullName="Suzanne Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Toll" lastName="Toll" role="Defendant"></party>
+ <party firstName="John" fullName="John VanDeloo" lastName="VanDeloo" role="Defendant"></party>
+ <party firstName="Kirby" fullName="Kirby Vosburgh" lastName="Vosburgh" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Williamsen" lastName="Williamsen" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Wood" lastName="Wood" role="Defendant"></party>
+ <party firstName="Vincent" fullName="Vincent J. Zeccola" lastName="Zeccola" middleName="J." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Rettek v. Ellis Hospital et al</title>
+ <partNumber>1:08-cv-00844</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_08-cv-00844/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-00844;08-844</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dominick Bizzarro</displayForm>
+ <namePart type="family">Bizzarro</namePart>
+ <namePart type="given">Dominick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Linda Breault</displayForm>
+ <namePart type="family">Breault</namePart>
+ <namePart type="given">Linda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert A. Breault</displayForm>
+ <namePart type="family">Breault</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Breslin</displayForm>
+ <namePart type="family">Breslin</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gregg W. Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Gregg</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christine Cioffi</displayForm>
+ <namePart type="family">Cioffi</namePart>
+ <namePart type="given">Christine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Connolly</displayForm>
+ <namePart type="family">Connolly</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James W. Connolly</displayForm>
+ <namePart type="family">Connolly</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Andrew M. Cuomo</displayForm>
+ <namePart type="family">Cuomo</namePart>
+ <namePart type="given">Andrew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas D&apos;Andrea</displayForm>
+ <namePart type="family">D&apos;Andrea</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harry Depan</displayForm>
+ <namePart type="family">Depan</namePart>
+ <namePart type="given">Harry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Donovan</displayForm>
+ <namePart type="family">Donovan</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Ebeltoft</displayForm>
+ <namePart type="family">Ebeltoft</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ellis Hospital</displayForm>
+ <namePart type="family">Ellis Hospital</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Flynn</displayForm>
+ <namePart type="family">Flynn</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Howard S. Foote</displayForm>
+ <namePart type="family">Foote</namePart>
+ <namePart type="given">Howard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Joseph Gersuk</displayForm>
+ <namePart type="family">Gersuk</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frank Harte</displayForm>
+ <namePart type="family">Harte</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dale Hedman</displayForm>
+ <namePart type="family">Hedman</namePart>
+ <namePart type="given">Dale</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Jaski</displayForm>
+ <namePart type="family">Jaski</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nora Jaski</displayForm>
+ <namePart type="family">Jaski</namePart>
+ <namePart type="given">Nora</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Does 1 - 30</displayForm>
+ <namePart type="family">John Does 1 - 30</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marshall G. Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Marshall</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bonnie McGuire Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Bonnie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patrick Kehoe</displayForm>
+ <namePart type="family">Kehoe</namePart>
+ <namePart type="given">Patrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William J. Kenneally</displayForm>
+ <namePart type="family">Kenneally</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert J. Kennedy</displayForm>
+ <namePart type="family">Kennedy</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Barbara C. Lawrence</displayForm>
+ <namePart type="family">Lawrence</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sue Lehrman</displayForm>
+ <namePart type="family">Lehrman</namePart>
+ <namePart type="given">Sue</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Liebers</displayForm>
+ <namePart type="family">Liebers</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Lipman</displayForm>
+ <namePart type="family">Lipman</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark M. Little</displayForm>
+ <namePart type="family">Little</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Judith B. McIlduff</displayForm>
+ <namePart type="family">McIlduff</namePart>
+ <namePart type="given">Judith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Deborah Mullaney</displayForm>
+ <namePart type="family">Mullaney</namePart>
+ <namePart type="given">Deborah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hugh J. Murphy</displayForm>
+ <namePart type="family">Murphy</namePart>
+ <namePart type="given">Hugh</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert F. Murray</displayForm>
+ <namePart type="family">Murray</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joan R. Pipito</displayForm>
+ <namePart type="family">Pipito</namePart>
+ <namePart type="given">Joan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Norma Cummings Rettek</displayForm>
+ <namePart type="family">Rettek</namePart>
+ <namePart type="given">Norma</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sarah Schermerhorn</displayForm>
+ <namePart type="family">Schermerhorn</namePart>
+ <namePart type="given">Sarah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul Scudder</displayForm>
+ <namePart type="family">Scudder</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Zygmond Slezak</displayForm>
+ <namePart type="family">Slezak</namePart>
+ <namePart type="given">Zygmond</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Suzanne Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Suzanne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Toll</displayForm>
+ <namePart type="family">Toll</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John VanDeloo</displayForm>
+ <namePart type="family">VanDeloo</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kirby Vosburgh</displayForm>
+ <namePart type="family">Vosburgh</namePart>
+ <namePart type="given">Kirby</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Williamsen</displayForm>
+ <namePart type="family">Williamsen</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Wood</displayForm>
+ <namePart type="family">Wood</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vincent J. Zeccola</displayForm>
+ <namePart type="family">Zeccola</namePart>
+ <namePart type="given">Vincent</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_08-cv-00844</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:08-cv-00844</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party firstName="Dominick" fullName="Dominick Bizzarro" lastName="Bizzarro" role="Defendant"></party>
+ <party firstName="Linda" fullName="Linda Breault" lastName="Breault" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert A. Breault" lastName="Breault" middleName="A." role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Breslin" lastName="Breslin" role="Defendant"></party>
+ <party firstName="Gregg" fullName="Gregg W. Brown" lastName="Brown" middleName="W." role="Defendant"></party>
+ <party firstName="Christine" fullName="Christine Cioffi" lastName="Cioffi" role="Defendant"></party>
+ <party firstName="James" fullName="James Connolly" lastName="Connolly" role="Defendant"></party>
+ <party firstName="James" fullName="James W. Connolly" lastName="Connolly" middleName="W." role="Defendant"></party>
+ <party firstName="Andrew" fullName="Andrew M. Cuomo" lastName="Cuomo" middleName="M." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas D&apos;Andrea" lastName="D&apos;Andrea" role="Defendant"></party>
+ <party firstName="Harry" fullName="Harry Depan" lastName="Depan" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Donovan" lastName="Donovan" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Ebeltoft" lastName="Ebeltoft" role="Defendant"></party>
+ <party fullName="Ellis Hospital" lastName="Ellis Hospital" role="Defendant"></party>
+ <party firstName="John" fullName="John Flynn" lastName="Flynn" role="Defendant"></party>
+ <party firstName="Howard" fullName="Howard S. Foote" lastName="Foote" middleName="S." role="Defendant"></party>
+ <party firstName="D." fullName="D. Joseph Gersuk" lastName="Gersuk" middleName="Joseph" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank Harte" lastName="Harte" role="Defendant"></party>
+ <party firstName="Dale" fullName="Dale Hedman" lastName="Hedman" role="Defendant"></party>
+ <party firstName="John" fullName="John Jaski" lastName="Jaski" role="Defendant"></party>
+ <party firstName="Nora" fullName="Nora Jaski" lastName="Jaski" role="Defendant"></party>
+ <party fullName="John Does 1 - 30" lastName="John Does 1 - 30" role="Defendant"></party>
+ <party firstName="Marshall" fullName="Marshall G. Jones" lastName="Jones" middleName="G." role="Defendant"></party>
+ <party firstName="Bonnie" fullName="Bonnie McGuire Jones" lastName="Jones" middleName="McGuire" role="Defendant"></party>
+ <party firstName="Patrick" fullName="Patrick Kehoe" lastName="Kehoe" role="Defendant"></party>
+ <party firstName="William" fullName="William J. Kenneally" lastName="Kenneally" middleName="J." role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert J. Kennedy" lastName="Kennedy" middleName="J." role="Defendant"></party>
+ <party firstName="Barbara" fullName="Barbara C. Lawrence" lastName="Lawrence" middleName="C." role="Defendant"></party>
+ <party firstName="Sue" fullName="Sue Lehrman" lastName="Lehrman" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Liebers" lastName="Liebers" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Lipman" lastName="Lipman" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark M. Little" lastName="Little" middleName="M." role="Defendant"></party>
+ <party firstName="Judith" fullName="Judith B. McIlduff" lastName="McIlduff" middleName="B." role="Defendant"></party>
+ <party firstName="Deborah" fullName="Deborah Mullaney" lastName="Mullaney" role="Defendant"></party>
+ <party firstName="Hugh" fullName="Hugh J. Murphy" lastName="Murphy" middleName="J." role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert F. Murray" lastName="Murray" middleName="F." role="Defendant"></party>
+ <party firstName="Joan" fullName="Joan R. Pipito" lastName="Pipito" middleName="R." role="Defendant"></party>
+ <party firstName="Norma" fullName="Norma Cummings Rettek" lastName="Rettek" middleName="Cummings" role="Plaintiff"></party>
+ <party firstName="Sarah" fullName="Sarah Schermerhorn" lastName="Schermerhorn" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Scudder" lastName="Scudder" role="Defendant"></party>
+ <party firstName="Zygmond" fullName="Zygmond Slezak" lastName="Slezak" role="Defendant"></party>
+ <party firstName="Suzanne" fullName="Suzanne Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Toll" lastName="Toll" role="Defendant"></party>
+ <party firstName="John" fullName="John VanDeloo" lastName="VanDeloo" role="Defendant"></party>
+ <party firstName="Kirby" fullName="Kirby Vosburgh" lastName="Vosburgh" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Williamsen" lastName="Williamsen" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Wood" lastName="Wood" role="Defendant"></party>
+ <party firstName="Vincent" fullName="Vincent J. Zeccola" lastName="Zeccola" middleName="J." role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_08-cv-00844-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_08-cv-00844/USCOURTS-nynd-1_08-cv-00844-0/mods.xml">
+ <titleInfo>
+  <title>Rettek v. Ellis Hospital et al</title>
+  <subTitle>MEMORANDUM-DECISION and ORDER, that defendants&apos; 5 Motion to Dismiss and 6 Motion to Dismiss are GRANTED and the complaint is DISMISSED IN ITS ENTIRETY. That the Clerk of the Court enter judgment and close this case. Signed by Judge Gary L. Sharpe on 1/12/2009. (jel, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_08-cv-00844-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813f0989</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_08-cv-00844/USCOURTS-nynd-1_08-cv-00844-0</identifier>
+ <identifier type="former granule identifier">nynd-1_08-cv-00844_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_08-cv-00844/USCOURTS-nynd-1_08-cv-00844-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_08-cv-00844/pdf/USCOURTS-nynd-1_08-cv-00844-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00844; Rettek v. Ellis Hospital et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_08-cv-00844-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-12</dateIssued>
+  <docketText>MEMORANDUM-DECISION and ORDER, that defendants&apos; 5 Motion to Dismiss and 6 Motion to Dismiss are GRANTED and the complaint is DISMISSED IN ITS ENTIRETY. That the Clerk of the Court enter judgment and close this case. Signed by Judge Gary L. Sharpe on 1/12/2009. (jel, )</docketText>
+</extension>
+</relatedItem>
+</mods>

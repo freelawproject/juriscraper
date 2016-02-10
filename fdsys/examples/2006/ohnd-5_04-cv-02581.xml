@@ -1,0 +1,225 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18155b3ae">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_04-cv-02581</identifier>
+<identifier type="local">P0b002ee18155b3ae</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-5_04-cv-02581</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_04-cv-02581</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:04-cv-02581</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>29:621 Job Discrimination (Age)</cause>
+ <party firstName="Dave" fullName="Dave Campanale" lastName="Campanale" role="Plaintiff"></party>
+ <party firstName="Dave" fullName="Dave Nowakowski" lastName="Nowakowski" role="Plaintiff"></party>
+ <party firstName="Chris" fullName="Chris Reminder" lastName="Reminder" role="Plaintiff"></party>
+ <party fullName="Roadway Express Inc." lastName="Roadway Express Inc." role="Defendant"></party>
+ <party fullName="Roadway Express, Inc." lastName="Roadway Express, Inc." role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Shelton" lastName="Shelton" role="Plaintiff"></party>
+ <party fullName="Yellow Roadway Corporation" lastName="Yellow Roadway Corporation" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Reminder et al v. Yellow Roadway Corporation</title>
+ <partNumber>5:04-cv-02581</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_04-cv-02581/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:04-cv-02581;04-2581</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Akron</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dave Campanale</displayForm>
+ <namePart type="family">Campanale</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dave Nowakowski</displayForm>
+ <namePart type="family">Nowakowski</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Chris Reminder</displayForm>
+ <namePart type="family">Reminder</namePart>
+ <namePart type="given">Chris</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Roadway Express Inc.</displayForm>
+ <namePart type="family">Roadway Express Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roadway Express, Inc.</displayForm>
+ <namePart type="family">Roadway Express, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Shelton</displayForm>
+ <namePart type="family">Shelton</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Yellow Roadway Corporation</displayForm>
+ <namePart type="family">Yellow Roadway Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_04-cv-02581</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:04-cv-02581</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>29:621 Job Discrimination (Age)</cause>
+ <party firstName="Dave" fullName="Dave Campanale" lastName="Campanale" role="Plaintiff"></party>
+ <party firstName="Dave" fullName="Dave Nowakowski" lastName="Nowakowski" role="Plaintiff"></party>
+ <party firstName="Chris" fullName="Chris Reminder" lastName="Reminder" role="Plaintiff"></party>
+ <party fullName="Roadway Express Inc." lastName="Roadway Express Inc." role="Defendant"></party>
+ <party fullName="Roadway Express, Inc." lastName="Roadway Express, Inc." role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Shelton" lastName="Shelton" role="Plaintiff"></party>
+ <party fullName="Yellow Roadway Corporation" lastName="Yellow Roadway Corporation" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_04-cv-02581-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_04-cv-02581/USCOURTS-ohnd-5_04-cv-02581-0/mods.xml">
+ <titleInfo>
+  <title>Reminder et al v. Yellow Roadway Corporation</title>
+  <subTitle>Opinion and Memorandum signed by Judge James S. Gwin on 11/1/05. Defendant&apos;s motion to exclude the expert testimony and report of Dr. Steiner is denied and defendant&apos;s motion for summary judgment is granted in part and denied in part. (Related Doc. 37, 38, 48, 52, 54, 59, 61, 66, 68) (M, G)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_04-cv-02581-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815fabd7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_04-cv-02581/USCOURTS-ohnd-5_04-cv-02581-0</identifier>
+ <identifier type="former granule identifier">ohnd-5_04-cv-02581_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_04-cv-02581/USCOURTS-ohnd-5_04-cv-02581-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_04-cv-02581/pdf/USCOURTS-ohnd-5_04-cv-02581-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-02581; Reminder et al v. Yellow Roadway Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_04-cv-02581-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-11-01</dateIssued>
+  <docketText>Opinion and Memorandum signed by Judge James S. Gwin on 11/1/05. Defendant&apos;s motion to exclude the expert testimony and report of Dr. Steiner is denied and defendant&apos;s motion for summary judgment is granted in part and denied in part. (Related Doc. 37, 38, 48, 52, 54, 59, 61, 66, 68) (M, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_04-cv-02581-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_04-cv-02581/USCOURTS-ohnd-5_04-cv-02581-1/mods.xml">
+ <titleInfo>
+  <title>Reminder et al v. Yellow Roadway Corporation</title>
+  <subTitle>Opinion and Memorandum signed by Judge James S. Gwin on 1/10/06 denying defendant&apos;s motion to dismiss the plaintiffs&apos; state law age discrimination claims. The Court finds that the mere act of filing a charge with the EEOC does not bar the plaintiffs from electing a judicial remedy for their age discrimination claims under Ohio Rev. Code Chapter 4112. Additionally, the Court finds that to the extent the plaintiffs bring their claims under Sec. 4112.14 or under Sec. 4112.99 but premised on a violation of Sec. 4112.14, their claims fall safely within the applicable six-year statute of limitations. (Related Doc. 81, 84, 85) (M, G)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_04-cv-02581-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815fabd8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_04-cv-02581/USCOURTS-ohnd-5_04-cv-02581-1</identifier>
+ <identifier type="former granule identifier">ohnd-5_04-cv-02581_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_04-cv-02581/USCOURTS-ohnd-5_04-cv-02581-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_04-cv-02581/pdf/USCOURTS-ohnd-5_04-cv-02581-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-02581; Reminder et al v. Yellow Roadway Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_04-cv-02581-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-10</dateIssued>
+  <docketText>Opinion and Memorandum signed by Judge James S. Gwin on 1/10/06 denying defendant&apos;s motion to dismiss the plaintiffs&apos; state law age discrimination claims. The Court finds that the mere act of filing a charge with the EEOC does not bar the plaintiffs from electing a judicial remedy for their age discrimination claims under Ohio Rev. Code Chapter 4112. Additionally, the Court finds that to the extent the plaintiffs bring their claims under Sec. 4112.14 or under Sec. 4112.99 but premised on a violation of Sec. 4112.14, their claims fall safely within the applicable six-year statute of limitations. (Related Doc. 81, 84, 85) (M, G)</docketText>
+</extension>
+</relatedItem>
+</mods>

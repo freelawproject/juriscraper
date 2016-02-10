@@ -1,0 +1,196 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813d915e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-00791</identifier>
+<identifier type="local">P0b002ee1813d915e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_09-cv-00791</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_09-cv-00791</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:09-cv-00791</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>120</natureSuitCode>
+ <natureSuit>Marine Contract Actions</natureSuit>
+ <party fullName="AGRICOLA RAIMAPU S.A." lastName="AGRICOLA RAIMAPU S.A." role="Plaintiff"></party>
+ <party fullName="JAPAN TRUSTEE SERVICES BANK, LTD" lastName="JAPAN TRUSTEE SERVICES BANK, LTD" role="Defendant"></party>
+ <party fullName="M/V APL MANAGUA" lastName="M/V APL MANAGUA" role="Defendant"></party>
+ <party fullName="MOL MITSUI O.S.K. LINES, LTD." lastName="MOL MITSUI O.S.K. LINES, LTD." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>AGRICOLA RAIMAPU S.A. v. M/V APL MANAGUA et al</title>
+ <partNumber>2:09-cv-00791</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-00791/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-00791;09-791</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>AGRICOLA RAIMAPU S.A.</displayForm>
+ <namePart type="family">AGRICOLA RAIMAPU S.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>JAPAN TRUSTEE SERVICES BANK, LTD</displayForm>
+ <namePart type="family">JAPAN TRUSTEE SERVICES BANK, LTD</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M/V APL MANAGUA</displayForm>
+ <namePart type="family">M/V APL MANAGUA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MOL MITSUI O.S.K. LINES, LTD.</displayForm>
+ <namePart type="family">MOL MITSUI O.S.K. LINES, LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_09-cv-00791</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:09-cv-00791</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>120</natureSuitCode>
+ <natureSuit>Marine Contract Actions</natureSuit>
+ <party fullName="AGRICOLA RAIMAPU S.A." lastName="AGRICOLA RAIMAPU S.A." role="Plaintiff"></party>
+ <party fullName="JAPAN TRUSTEE SERVICES BANK, LTD" lastName="JAPAN TRUSTEE SERVICES BANK, LTD" role="Defendant"></party>
+ <party fullName="M/V APL MANAGUA" lastName="M/V APL MANAGUA" role="Defendant"></party>
+ <party fullName="MOL MITSUI O.S.K. LINES, LTD." lastName="MOL MITSUI O.S.K. LINES, LTD." role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cv-00791-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-00791/USCOURTS-paed-2_09-cv-00791-0/mods.xml">
+ <titleInfo>
+  <title>AGRICOLA RAIMAPU S.A. v. M/V APL MANAGUA et al</title>
+  <subTitle>MEMORANDUM AND OPINION. SIGNED BY HONORABLE JOHN P. FULLAM ON 1/5/10. 1/6/10 ENTERED AND COPIES E-MAILED.(rf, ) Modified on 1/6/2010 (rf, ).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cv-00791-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18150fc2d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-00791/USCOURTS-paed-2_09-cv-00791-0</identifier>
+ <identifier type="former granule identifier">paed-2_09-cv-00791_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-00791/USCOURTS-paed-2_09-cv-00791-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-00791/pdf/USCOURTS-paed-2_09-cv-00791-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-00791; AGRICOLA RAIMAPU S.A. v. M/V APL MANAGUA et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cv-00791-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-05</dateIssued>
+  <docketText>MEMORANDUM AND OPINION. SIGNED BY HONORABLE JOHN P. FULLAM ON 1/5/10. 1/6/10 ENTERED AND COPIES E-MAILED.(rf, ) Modified on 1/6/2010 (rf, ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cv-00791-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-00791/USCOURTS-paed-2_09-cv-00791-1/mods.xml">
+ <titleInfo>
+  <title>AGRICOLA RAIMAPU S.A. v. M/V APL MANAGUA et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT DEFENDANTS MOTION TO DISMISS IS GRANTED. THE COMPLAINT IS DISMISSED WITHOUT PREJUDICE.. SIGNED BY HONORABLE JOHN P. FULLAM ON 1/5/10. 1/6/10 ENTERED AND COPIES EMAILED.(rf, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cv-00791-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18150fc2e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-00791/USCOURTS-paed-2_09-cv-00791-1</identifier>
+ <identifier type="former granule identifier">paed-2_09-cv-00791_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-00791/USCOURTS-paed-2_09-cv-00791-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-00791/pdf/USCOURTS-paed-2_09-cv-00791-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-00791; AGRICOLA RAIMAPU S.A. v. M/V APL MANAGUA et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cv-00791-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT DEFENDANTS MOTION TO DISMISS IS GRANTED. THE COMPLAINT IS DISMISSED WITHOUT PREJUDICE.. SIGNED BY HONORABLE JOHN P. FULLAM ON 1/5/10. 1/6/10 ENTERED AND COPIES EMAILED.(rf, )</docketText>
+</extension>
+</relatedItem>
+</mods>

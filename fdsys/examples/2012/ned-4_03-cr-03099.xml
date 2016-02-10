@@ -1,0 +1,463 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183923903">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-12-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-12-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099</identifier>
+<identifier type="local">P0b002ee183923903</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-12-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-12-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_03-cr-03099</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_03-cr-03099</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:03-cr-03099</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jeremas" fullName="Jeremas Espino" lastName="Espino" role="Defendant"></party>
+ <party firstName="Jeremy" fullName="Jeremy M. Espino" lastName="Espino" middleName="M." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Espino</title>
+ <partNumber>4:03-cr-03099</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:03-cr-03099;03-3099</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jeremas Espino</displayForm>
+ <namePart type="family">Espino</namePart>
+ <namePart type="given">Jeremas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeremy M. Espino</displayForm>
+ <namePart type="family">Espino</namePart>
+ <namePart type="given">Jeremy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_03-cr-03099</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:03-cr-03099</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jeremas" fullName="Jeremas Espino" lastName="Espino" role="Defendant"></party>
+ <party firstName="Jeremy" fullName="Jeremy M. Espino" lastName="Espino" middleName="M." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_03-cr-03099-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Espino</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Jeremy M. Espino. Ordered by Magistrate Judge David L. Piester. (LKH)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_03-cr-03099-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183924c5e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-0</identifier>
+ <identifier type="former granule identifier">ned-4_03-cr-03099_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/pdf/USCOURTS-ned-4_03-cr-03099-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-03099; USA v. Espino; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_03-cr-03099-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-03-18</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Jeremy M. Espino. Ordered by Magistrate Judge David L. Piester. (LKH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_03-cr-03099-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Espino</title>
+  <subTitle>ORDER that the defendant is sentenced to the custody of the Bureau of Prisons for a term of six (6) months in connection with the petition for offender under supervision 32; defendant shall receive credit for six weeks which he has served in custody following the filing of this petition; the second petition for offender under supervision 47 is dismissed; upon completion of the defendant&apos;s incarceration, he will be placed on supervised release for a period of 3 years, under the same terms and conditions of release previously imposed on April 7, 2004 as to as to defendant Jeremy M. Espino. Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_03-cr-03099-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183924c70</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-1</identifier>
+ <identifier type="former granule identifier">ned-4_03-cr-03099_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/pdf/USCOURTS-ned-4_03-cr-03099-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-03099; USA v. Espino; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_03-cr-03099-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-07-07</dateIssued>
+  <docketText>ORDER that the defendant is sentenced to the custody of the Bureau of Prisons for a term of six (6) months in connection with the petition for offender under supervision 32; defendant shall receive credit for six weeks which he has served in custody following the filing of this petition; the second petition for offender under supervision 47 is dismissed; upon completion of the defendant&apos;s incarceration, he will be placed on supervised release for a period of 3 years, under the same terms and conditions of release previously imposed on April 7, 2004 as to as to defendant Jeremy M. Espino. Ordered by Senior Judge Lyle E. Strom. (1 certified copy to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_03-cr-03099-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Espino</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Jeremy M. Espino - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_03-cr-03099-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183924c59</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-2</identifier>
+ <identifier type="former granule identifier">ned-4_03-cr-03099_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/pdf/USCOURTS-ned-4_03-cr-03099-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-03099; USA v. Espino; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_03-cr-03099-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Jeremy M. Espino - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_03-cr-03099-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Espino</title>
+  <subTitle>ORDER granting 67 motion to continue as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 4/28/2011 at 10:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_03-cr-03099-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183924c57</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-3</identifier>
+ <identifier type="former granule identifier">ned-4_03-cr-03099_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/pdf/USCOURTS-ned-4_03-cr-03099-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-03099; USA v. Espino; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_03-cr-03099-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-02-16</dateIssued>
+  <docketText>ORDER granting 67 motion to continue as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 4/28/2011 at 10:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_03-cr-03099-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Espino</title>
+  <subTitle>ORDER granting 69 motion to continue PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 55 is set for hearing as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 5/11/2011 at 10:30 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_03-cr-03099-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183924c55</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-4</identifier>
+ <identifier type="former granule identifier">ned-4_03-cr-03099_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/pdf/USCOURTS-ned-4_03-cr-03099-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-03099; USA v. Espino; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_03-cr-03099-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-04-25</dateIssued>
+  <docketText>ORDER granting 69 motion to continue PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 55 is set for hearing as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 5/11/2011 at 10:30 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_03-cr-03099-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Espino</title>
+  <subTitle>ORDER - The defendant shall submit to a substance abuse evaluation and attend a domestic violence treatment program. The Final Disposition hearing is continued until September 9, 2011, at 9:00 a.m. as to defendant Jeremy M. Espino. Ordered by Senior Judge Lyle E. Strom. (TCL )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_03-cr-03099-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183924c56</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-5</identifier>
+ <identifier type="former granule identifier">ned-4_03-cr-03099_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/pdf/USCOURTS-ned-4_03-cr-03099-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-03099; USA v. Espino; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_03-cr-03099-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-05-16</dateIssued>
+  <docketText>ORDER - The defendant shall submit to a substance abuse evaluation and attend a domestic violence treatment program. The Final Disposition hearing is continued until September 9, 2011, at 9:00 a.m. as to defendant Jeremy M. Espino. Ordered by Senior Judge Lyle E. Strom. (TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_03-cr-03099-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Espino</title>
+  <subTitle>ORDER granting 73 motion to continue. PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 55 is set for hearing as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 1/13/2012 at 09:30 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_03-cr-03099-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183924c5d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-6</identifier>
+ <identifier type="former granule identifier">ned-4_03-cr-03099_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/pdf/USCOURTS-ned-4_03-cr-03099-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-03099; USA v. Espino; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_03-cr-03099-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-09-01</dateIssued>
+  <docketText>ORDER granting 73 motion to continue. PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 55 is set for hearing as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 1/13/2012 at 09:30 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_03-cr-03099-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Espino</title>
+  <subTitle>ORDER regarding detention as to defendant Jeremy M. Espino. Defendant is currently in state custody in Adams County on related charges, and he shall be returned to the custody of Adams County. The Marshal shall place a detainer on the defendant to assure that upon defendant&apos;s release from the custody of Adams County, the defendant is immediately placed in the Marshal&apos;s custody. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_03-cr-03099-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183924c71</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-7</identifier>
+ <identifier type="former granule identifier">ned-4_03-cr-03099_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/pdf/USCOURTS-ned-4_03-cr-03099-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-03099; USA v. Espino; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_03-cr-03099-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>ORDER regarding detention as to defendant Jeremy M. Espino. Defendant is currently in state custody in Adams County on related charges, and he shall be returned to the custody of Adams County. The Marshal shall place a detainer on the defendant to assure that upon defendant&apos;s release from the custody of Adams County, the defendant is immediately placed in the Marshal&apos;s custody. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_03-cr-03099-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Espino</title>
+  <subTitle>ORDER granting 88 motion to continue. PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 78, PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 55 is set for hearing as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 6/8/2012 at 10:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_03-cr-03099-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183924c5c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-8</identifier>
+ <identifier type="former granule identifier">ned-4_03-cr-03099_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/pdf/USCOURTS-ned-4_03-cr-03099-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-03099; USA v. Espino; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_03-cr-03099-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-03-07</dateIssued>
+  <docketText>ORDER granting 88 motion to continue. PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 78, PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 55 is set for hearing as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 6/8/2012 at 10:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_03-cr-03099-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Espino</title>
+  <subTitle>ORDER granting 99 motion to continue Revocation Disposition Hearing. PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 78, PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 55 is set for hearing as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 10/23/2012 at 10:30 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_03-cr-03099-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183924c5b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-9</identifier>
+ <identifier type="former granule identifier">ned-4_03-cr-03099_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/pdf/USCOURTS-ned-4_03-cr-03099-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-03099; USA v. Espino; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_03-cr-03099-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-08-27</dateIssued>
+  <docketText>ORDER granting 99 motion to continue Revocation Disposition Hearing. PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 78, PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 55 is set for hearing as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 10/23/2012 at 10:30 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_03-cr-03099-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Espino</title>
+  <subTitle>ORDER granting 101 motion to continue. PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 78, PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 55 is set for hearing as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 12/13/2012 at 10:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_03-cr-03099-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183924c58</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-10</identifier>
+ <identifier type="former granule identifier">ned-4_03-cr-03099_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/pdf/USCOURTS-ned-4_03-cr-03099-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-03099; USA v. Espino; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_03-cr-03099-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-10-17</dateIssued>
+  <docketText>ORDER granting 101 motion to continue. PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 78, PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 55 is set for hearing as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 12/13/2012 at 10:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_03-cr-03099-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Espino</title>
+  <subTitle>ORDER granting 103 motion to continue. PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 78, PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 55. Hearing as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 1/10/2013 at 10:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_03-cr-03099-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183924c5a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-11</identifier>
+ <identifier type="former granule identifier">ned-4_03-cr-03099_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_03-cr-03099/USCOURTS-ned-4_03-cr-03099-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_03-cr-03099/pdf/USCOURTS-ned-4_03-cr-03099-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:03-cr-03099; USA v. Espino; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_03-cr-03099-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-12-07</dateIssued>
+  <docketText>ORDER granting 103 motion to continue. PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 78, PETITION FOR OFFENDER UNDER SUPERVISION - Warrant Issued 55. Hearing as to Jeremy M. Espino (1) - Violation of Supervised Release Hearing set for 1/10/2013 at 10:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+</mods>

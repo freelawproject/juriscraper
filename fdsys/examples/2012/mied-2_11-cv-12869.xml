@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18195b11b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cv-12869</identifier>
+<identifier type="local">P0b002ee18195b11b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_11-cv-12869</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_11-cv-12869</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:11-cv-12869</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>152</natureSuitCode>
+ <natureSuit>Recovery of Defaulted Student Loans</natureSuit>
+ <cause>28:1345 Default of Student Loan</cause>
+ <party firstName="Opal" fullName="Opal Lesse" lastName="Lesse" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Lesse</title>
+ <partNumber>2:11-cv-12869</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cv-12869/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-12869;11-12869</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Opal Lesse</displayForm>
+ <namePart type="family">Lesse</namePart>
+ <namePart type="given">Opal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_11-cv-12869</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:11-cv-12869</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>152</natureSuitCode>
+ <natureSuit>Recovery of Defaulted Student Loans</natureSuit>
+ <cause>28:1345 Default of Student Loan</cause>
+ <party firstName="Opal" fullName="Opal Lesse" lastName="Lesse" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_11-cv-12869-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-12869/USCOURTS-mied-2_11-cv-12869-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Lesse</title>
+  <subTitle>ORDER granting 3 Motion for Alternate Service. Signed by District Judge Robert H. Cleland. (LWag)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_11-cv-12869-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a5e785</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-12869/USCOURTS-mied-2_11-cv-12869-0</identifier>
+ <identifier type="former granule identifier">mied-2_11-cv-12869_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-12869/USCOURTS-mied-2_11-cv-12869-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cv-12869/pdf/USCOURTS-mied-2_11-cv-12869-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-12869; United States of America v. Lesse; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_11-cv-12869-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-10-26</dateIssued>
+  <docketText>ORDER granting 3 Motion for Alternate Service. Signed by District Judge Robert H. Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_11-cv-12869-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-12869/USCOURTS-mied-2_11-cv-12869-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Lesse</title>
+  <subTitle>ORDER DISMISSING CASE Signed by District Judge Robert H. Cleland. (LWag)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_11-cv-12869-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a5e786</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-12869/USCOURTS-mied-2_11-cv-12869-1</identifier>
+ <identifier type="former granule identifier">mied-2_11-cv-12869_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-12869/USCOURTS-mied-2_11-cv-12869-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cv-12869/pdf/USCOURTS-mied-2_11-cv-12869-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-12869; United States of America v. Lesse; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_11-cv-12869-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-13</dateIssued>
+  <docketText>ORDER DISMISSING CASE Signed by District Judge Robert H. Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+</mods>

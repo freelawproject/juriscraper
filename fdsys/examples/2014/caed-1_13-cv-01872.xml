@@ -1,0 +1,236 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18712ea8b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-02-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01872</identifier>
+<identifier type="local">P0b002ee18712ea8b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-01872</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01872</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01872</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>290</natureSuitCode>
+ <natureSuit>Other Real Property Actions</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party firstName="Nancy" fullName="Nancy Montes" lastName="Montes" role="Defendant"></party>
+ <party fullName="SRD Investments Inc." lastName="SRD Investments Inc." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>SRD Investments Inc. v. Montes</title>
+ <partNumber>1:13-cv-01872</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01872/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-01872;13-1872</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Nancy Montes</displayForm>
+ <namePart type="family">Montes</namePart>
+ <namePart type="given">Nancy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SRD Investments Inc.</displayForm>
+ <namePart type="family">SRD Investments Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01872</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01872</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>290</natureSuitCode>
+ <natureSuit>Other Real Property Actions</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party firstName="Nancy" fullName="Nancy Montes" lastName="Montes" role="Defendant"></party>
+ <party fullName="SRD Investments Inc." lastName="SRD Investments Inc." role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01872-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01872/USCOURTS-caed-1_13-cv-01872-0/mods.xml">
+ <titleInfo>
+  <title>SRD Investments Inc. v. Montes</title>
+  <subTitle>ORDER GRANTING plaintiff&apos;s Motion, document 7, to appear telephonically at the hearing on the Motion to Remand and for Attorney&apos;s Fees, set for 1/8/2014 at 9:30 AM before Magistrate Boone. Order signed by Magistrate Judge Stanley A. Boone on 12/23/2013. (Rooney, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01872/pdf/USCOURTS-caed-1_13-cv-01872-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187137444</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01872/USCOURTS-caed-1_13-cv-01872-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01872_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01872/USCOURTS-caed-1_13-cv-01872-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01872/pdf/USCOURTS-caed-1_13-cv-01872-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01872; SRD Investments Inc. v. Montes; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01872-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-12-23</dateIssued>
+  <docketText>ORDER GRANTING plaintiff&apos;s Motion, document 7, to appear telephonically at the hearing on the Motion to Remand and for Attorney&apos;s Fees, set for 1/8/2014 at 9:30 AM before Magistrate Boone. Order signed by Magistrate Judge Stanley A. Boone on 12/23/2013. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01872-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01872/USCOURTS-caed-1_13-cv-01872-1/mods.xml">
+ <titleInfo>
+  <title>SRD Investments Inc. v. Montes</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS recommending that remand is appropriate and that an award of $1,705.00 in attorneys fees is appropriate. Motion referred to Judge O&apos;Neill, signed by Magistrate Judge Stanley A. Boone on 12/31/2013. (Kusamura, W)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01872/pdf/USCOURTS-caed-1_13-cv-01872-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187137445</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01872/USCOURTS-caed-1_13-cv-01872-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01872_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01872/USCOURTS-caed-1_13-cv-01872-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01872/pdf/USCOURTS-caed-1_13-cv-01872-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01872; SRD Investments Inc. v. Montes; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01872-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-12-31</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS recommending that remand is appropriate and that an award of $1,705.00 in attorneys fees is appropriate. Motion referred to Judge O&apos;Neill, signed by Magistrate Judge Stanley A. Boone on 12/31/2013. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01872-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01872/USCOURTS-caed-1_13-cv-01872-2/mods.xml">
+ <titleInfo>
+  <title>SRD Investments Inc. v. Montes</title>
+  <subTitle>AMENDED FINDINGS and RECOMMENDATIONS recommending that Plaintiff&apos;s Motion to Remand be GRANTED 4; This action be Remanded to State Court; Plaintiff be awarded in $1,705.00 in attorneys&apos; fees incurred as a result of improper removal ; referred to Judge O&apos;Neill; ORDERED that the hearing on Plaintiff&apos;s Motion scheduled for January 8, 2014 at 9:30 a.m. is VACATED, signed by Magistrate Judge Stanley A. Boone on 01/02/2013. Objections to F&amp;R due by 2/6/2014 (Martin-Gill, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01872/pdf/USCOURTS-caed-1_13-cv-01872-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18713757a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01872/USCOURTS-caed-1_13-cv-01872-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01872_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01872/USCOURTS-caed-1_13-cv-01872-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01872/pdf/USCOURTS-caed-1_13-cv-01872-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01872; SRD Investments Inc. v. Montes; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01872-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>AMENDED FINDINGS and RECOMMENDATIONS recommending that Plaintiff&apos;s Motion to Remand be GRANTED 4; This action be Remanded to State Court; Plaintiff be awarded in $1,705.00 in attorneys&apos; fees incurred as a result of improper removal ; referred to Judge O&apos;Neill; ORDERED that the hearing on Plaintiff&apos;s Motion scheduled for January 8, 2014 at 9:30 a.m. is VACATED, signed by Magistrate Judge Stanley A. Boone on 01/02/2013. Objections to F&amp;R due by 2/6/2014 (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01872-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01872/USCOURTS-caed-1_13-cv-01872-3/mods.xml">
+ <titleInfo>
+  <title>SRD Investments Inc. v. Montes</title>
+  <subTitle>ORDER Adopting FINDINGS AND RECOMMENDATIONS (ECF No.11), signed by District Judge Lawrence J. O&apos;Neill on 2/10/2014. The January 2, 2014 Findings and Recommendations are ADOPTED IN FULL. Plaintiff&apos;s motion to remand is GRANTED (ECF No.4). This action is REMANDED to state court. Plaintiff is awarded $1,705.00 in attorneys&apos; fees incurred as a result of improper removal. The clerk is directed to take necessary action to remand this action to Madera County Superior Court and to close this action. REMANDING CASE to Madera County Superior Court. Copy of remand order sent to other court. CASE CLOSED.(Fahrney, E)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01872/pdf/USCOURTS-caed-1_13-cv-01872-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18713757b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01872/USCOURTS-caed-1_13-cv-01872-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01872_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01872/USCOURTS-caed-1_13-cv-01872-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01872/pdf/USCOURTS-caed-1_13-cv-01872-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01872; SRD Investments Inc. v. Montes; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01872-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-02-11</dateIssued>
+  <docketText>ORDER Adopting FINDINGS AND RECOMMENDATIONS (ECF No.11), signed by District Judge Lawrence J. O&apos;Neill on 2/10/2014. The January 2, 2014 Findings and Recommendations are ADOPTED IN FULL. Plaintiff&apos;s motion to remand is GRANTED (ECF No.4). This action is REMANDED to state court. Plaintiff is awarded $1,705.00 in attorneys&apos; fees incurred as a result of improper removal. The clerk is directed to take necessary action to remand this action to Madera County Superior Court and to close this action. REMANDING CASE to Madera County Superior Court. Copy of remand order sent to other court. CASE CLOSED.(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

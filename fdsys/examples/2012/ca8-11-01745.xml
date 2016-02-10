@@ -1,0 +1,214 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181721681">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-11-01745</identifier>
+<identifier type="local">P0b002ee181721681</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-11-01745</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-11-01745</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>11-01745</caseNumber>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party firstName="Michael" fullName="Michael Black" lastName="Black" role="Appellee"></party>
+ <party fullName="City of Sisseton" lastName="City of Sisseton" role="Appellant"></party>
+ <party fullName="County of Roberts" lastName="County of Roberts" role="Appellant"></party>
+ <party firstName="Larry" fullName="Larry Echo Hawk" lastName="Echo Hawk" role="Appellee"></party>
+ <party firstName="Russell" fullName="Russell Hawkins" lastName="Hawkins" role="Appellee"></party>
+ <party fullName="Sisseton School District No. 54-2" lastName="Sisseton School District No. 54-2" role="Appellant"></party>
+ <party fullName="Sisseton-Wahpeton Oyate of the Lake Traverse Reservation" lastName="Sisseton-Wahpeton Oyate of the Lake Traverse Reservation" role="Amicus on Behalf of Appellee"></party>
+ <party fullName="State of South Dakota" lastName="State of South Dakota" role="Appellant"></party>
+ <party fullName="United States Department of Interior" lastName="United States Department of Interior" role="Appellee"></party>
+ <party fullName="Wilmont School District No. 54-7" lastName="Wilmont School District No. 54-7" role="Appellant"></party>
+</extension>
+<titleInfo>
+ <title>State of South Dakota, et al v. U.S. Department of Interior, et al</title>
+ <partNumber>11-01745</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-11-01745/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">11-01745;11-1745</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Michael Black</displayForm>
+ <namePart type="family">Black</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>City of Sisseton</displayForm>
+ <namePart type="family">City of Sisseton</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>County of Roberts</displayForm>
+ <namePart type="family">County of Roberts</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Echo Hawk</displayForm>
+ <namePart type="family">Echo Hawk</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Russell Hawkins</displayForm>
+ <namePart type="family">Hawkins</namePart>
+ <namePart type="given">Russell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Sisseton School District No. 54-2</displayForm>
+ <namePart type="family">Sisseton School District No. 54-2</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Sisseton-Wahpeton Oyate of the Lake Traverse Reservation</displayForm>
+ <namePart type="family">Sisseton-Wahpeton Oyate of the Lake Traverse Reservation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus on Behalf of Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>State of South Dakota</displayForm>
+ <namePart type="family">State of South Dakota</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>United States Department of Interior</displayForm>
+ <namePart type="family">United States Department of Interior</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Wilmont School District No. 54-7</displayForm>
+ <namePart type="family">Wilmont School District No. 54-7</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-11-01745</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>11-01745</caseNumber>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party firstName="Michael" fullName="Michael Black" lastName="Black" role="Appellee"></party>
+ <party fullName="City of Sisseton" lastName="City of Sisseton" role="Appellant"></party>
+ <party fullName="County of Roberts" lastName="County of Roberts" role="Appellant"></party>
+ <party firstName="Larry" fullName="Larry Echo Hawk" lastName="Echo Hawk" role="Appellee"></party>
+ <party firstName="Russell" fullName="Russell Hawkins" lastName="Hawkins" role="Appellee"></party>
+ <party fullName="Sisseton School District No. 54-2" lastName="Sisseton School District No. 54-2" role="Appellant"></party>
+ <party fullName="Sisseton-Wahpeton Oyate of the Lake Traverse Reservation" lastName="Sisseton-Wahpeton Oyate of the Lake Traverse Reservation" role="Amicus on Behalf of Appellee"></party>
+ <party fullName="State of South Dakota" lastName="State of South Dakota" role="Appellant"></party>
+ <party fullName="United States Department of Interior" lastName="United States Department of Interior" role="Appellee"></party>
+ <party fullName="Wilmont School District No. 54-7" lastName="Wilmont School District No. 54-7" role="Appellant"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-11-01745-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-11-01745/USCOURTS-ca8-11-01745-0/mods.xml">
+ <titleInfo>
+  <title>State of South Dakota, et al v. U.S. Department of Interior, et al</title>
+  <subTitle>OPINION FILED - THE COURT: WILLIAM JAY RILEY, ROGER L. WOLLMAN and C. ARLEN BEAM. William Jay Riley, Authoring Judge (PUBLISHED) [3867802] [11-1745]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-11-01745-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18172250b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-11-01745/USCOURTS-ca8-11-01745-0</identifier>
+ <identifier type="former granule identifier">ca8-11-01745_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-11-01745/USCOURTS-ca8-11-01745-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-11-01745/pdf/USCOURTS-ca8-11-01745-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 11-01745; State of South Dakota, et al v. U.S. Department of Interior, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-11-01745-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-11</dateIssued>
+  <docketText>OPINION FILED - THE COURT: WILLIAM JAY RILEY, ROGER L. WOLLMAN and C. ARLEN BEAM. William Jay Riley, Authoring Judge (PUBLISHED) [3867802] [11-1745]</docketText>
+</extension>
+</relatedItem>
+</mods>

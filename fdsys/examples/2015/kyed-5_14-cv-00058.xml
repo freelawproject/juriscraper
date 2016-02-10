@@ -1,0 +1,332 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8ab443">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Kentucky</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_14-cv-00058</identifier>
+<identifier type="local">P0b002ee18a8ab443</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-kyed-5_14-cv-00058</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-kyed-5_14-cv-00058</accessId>
+ <courtType>District</courtType>
+ <courtCode>kyed</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Kentucky</courtState>
+ <courtSortOrder>2201</courtSortOrder>
+ <caseNumber>5:14-cv-00058</caseNumber>
+ <caseOffice>Lexington</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>350</natureSuitCode>
+ <natureSuit>Motor Vehicle Personal Injury</natureSuit>
+ <cause>28:1441 Petition for Removal- Auto Negligence</cause>
+ <party fullName="1176026 Ontario Inc." lastName="1176026 Ontario Inc." role="Cross Defendant"></party>
+ <party fullName="1176026 Ontario Inc." lastName="1176026 Ontario Inc." role="Defendant"></party>
+ <party fullName="1176026 Ontario Inc." lastName="1176026 Ontario Inc." role="Intervenor Defendant"></party>
+ <party fullName="Amerisure Mutual Insurance Company" lastName="Amerisure Mutual Insurance Company" role="Cross Claimant"></party>
+ <party fullName="Amerisure Mutual Insurance Company" lastName="Amerisure Mutual Insurance Company" role="Cross Defendant"></party>
+ <party fullName="Amerisure Mutual Insurance Company" lastName="Amerisure Mutual Insurance Company" role="Defendant"></party>
+ <party fullName="Amerisure Mutual Insurance Company" lastName="Amerisure Mutual Insurance Company" role="Intervenor Defendant"></party>
+ <party fullName="Bodkin Leasing Corporation" lastName="Bodkin Leasing Corporation" role="Cross Defendant"></party>
+ <party fullName="Bodkin Leasing Corporation" lastName="Bodkin Leasing Corporation" role="Defendant"></party>
+ <party fullName="Bodkin Leasing Corporation" lastName="Bodkin Leasing Corporation" role="Intervenor Defendant"></party>
+ <party firstName="Susan" fullName="Susan Cobb" lastName="Cobb" role="Plaintiff"></party>
+ <party firstName="Stephen" fullName="Stephen A. Cobb" lastName="Cobb" middleName="A." role="Plaintiff"></party>
+ <party firstName="Stanislaw" fullName="Stanislaw Czekajlo" lastName="Czekajlo" role="Cross Defendant"></party>
+ <party firstName="Stanislaw" fullName="Stanislaw Czekajlo" lastName="Czekajlo" role="Defendant"></party>
+ <party firstName="Stanislaw" fullName="Stanislaw Czekajlo" lastName="Czekajlo" role="Intervenor Defendant"></party>
+ <party fullName="Presto Transport" lastName="Presto Transport" role="Defendant"></party>
+ <party fullName="Presto Transport" lastName="Presto Transport" role="Intervenor Defendant"></party>
+ <party fullName="Ready Electric Company" lastName="Ready Electric Company" role="Intervenor Plaintiff"></party>
+ <party fullName="State Farm Insurance Companies" lastName="State Farm Insurance Companies" role="Defendant"></party>
+ <party fullName="State Farm Mutual Automobile Insurance Company" lastName="State Farm Mutual Automobile Insurance Company" role="Cross Claimant"></party>
+ <party fullName="State Farm Mutual Automobile Insurance Company" lastName="State Farm Mutual Automobile Insurance Company" role="Defendant"></party>
+ <party fullName="State Farm Mutual Automobile Insurance Company" lastName="State Farm Mutual Automobile Insurance Company" role="Intervenor Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Cobb et al v. Czekajlo et al</title>
+ <partNumber>5:14-cv-00058</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_14-cv-00058/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:14-cv-00058;14-058</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Kentucky</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Lexington</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>1176026 Ontario Inc.</displayForm>
+ <namePart type="family">1176026 Ontario Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>1176026 Ontario Inc.</displayForm>
+ <namePart type="family">1176026 Ontario Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>1176026 Ontario Inc.</displayForm>
+ <namePart type="family">1176026 Ontario Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Amerisure Mutual Insurance Company</displayForm>
+ <namePart type="family">Amerisure Mutual Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Amerisure Mutual Insurance Company</displayForm>
+ <namePart type="family">Amerisure Mutual Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Amerisure Mutual Insurance Company</displayForm>
+ <namePart type="family">Amerisure Mutual Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Amerisure Mutual Insurance Company</displayForm>
+ <namePart type="family">Amerisure Mutual Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bodkin Leasing Corporation</displayForm>
+ <namePart type="family">Bodkin Leasing Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bodkin Leasing Corporation</displayForm>
+ <namePart type="family">Bodkin Leasing Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bodkin Leasing Corporation</displayForm>
+ <namePart type="family">Bodkin Leasing Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Susan Cobb</displayForm>
+ <namePart type="family">Cobb</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Stephen A. Cobb</displayForm>
+ <namePart type="family">Cobb</namePart>
+ <namePart type="given">Stephen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Stanislaw Czekajlo</displayForm>
+ <namePart type="family">Czekajlo</namePart>
+ <namePart type="given">Stanislaw</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stanislaw Czekajlo</displayForm>
+ <namePart type="family">Czekajlo</namePart>
+ <namePart type="given">Stanislaw</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stanislaw Czekajlo</displayForm>
+ <namePart type="family">Czekajlo</namePart>
+ <namePart type="given">Stanislaw</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Presto Transport</displayForm>
+ <namePart type="family">Presto Transport</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Presto Transport</displayForm>
+ <namePart type="family">Presto Transport</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ready Electric Company</displayForm>
+ <namePart type="family">Ready Electric Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>State Farm Insurance Companies</displayForm>
+ <namePart type="family">State Farm Insurance Companies</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State Farm Mutual Automobile Insurance Company</displayForm>
+ <namePart type="family">State Farm Mutual Automobile Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>State Farm Mutual Automobile Insurance Company</displayForm>
+ <namePart type="family">State Farm Mutual Automobile Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State Farm Mutual Automobile Insurance Company</displayForm>
+ <namePart type="family">State Farm Mutual Automobile Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-kyed-5_14-cv-00058</accessId>
+ <courtType>District</courtType>
+ <courtCode>kyed</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Kentucky</courtState>
+ <courtSortOrder>2201</courtSortOrder>
+ <caseNumber>5:14-cv-00058</caseNumber>
+ <caseOffice>Lexington</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>350</natureSuitCode>
+ <natureSuit>Motor Vehicle Personal Injury</natureSuit>
+ <cause>28:1441 Petition for Removal- Auto Negligence</cause>
+ <party fullName="1176026 Ontario Inc." lastName="1176026 Ontario Inc." role="Cross Defendant"></party>
+ <party fullName="1176026 Ontario Inc." lastName="1176026 Ontario Inc." role="Defendant"></party>
+ <party fullName="1176026 Ontario Inc." lastName="1176026 Ontario Inc." role="Intervenor Defendant"></party>
+ <party fullName="Amerisure Mutual Insurance Company" lastName="Amerisure Mutual Insurance Company" role="Cross Claimant"></party>
+ <party fullName="Amerisure Mutual Insurance Company" lastName="Amerisure Mutual Insurance Company" role="Cross Defendant"></party>
+ <party fullName="Amerisure Mutual Insurance Company" lastName="Amerisure Mutual Insurance Company" role="Defendant"></party>
+ <party fullName="Amerisure Mutual Insurance Company" lastName="Amerisure Mutual Insurance Company" role="Intervenor Defendant"></party>
+ <party fullName="Bodkin Leasing Corporation" lastName="Bodkin Leasing Corporation" role="Cross Defendant"></party>
+ <party fullName="Bodkin Leasing Corporation" lastName="Bodkin Leasing Corporation" role="Defendant"></party>
+ <party fullName="Bodkin Leasing Corporation" lastName="Bodkin Leasing Corporation" role="Intervenor Defendant"></party>
+ <party firstName="Susan" fullName="Susan Cobb" lastName="Cobb" role="Plaintiff"></party>
+ <party firstName="Stephen" fullName="Stephen A. Cobb" lastName="Cobb" middleName="A." role="Plaintiff"></party>
+ <party firstName="Stanislaw" fullName="Stanislaw Czekajlo" lastName="Czekajlo" role="Cross Defendant"></party>
+ <party firstName="Stanislaw" fullName="Stanislaw Czekajlo" lastName="Czekajlo" role="Defendant"></party>
+ <party firstName="Stanislaw" fullName="Stanislaw Czekajlo" lastName="Czekajlo" role="Intervenor Defendant"></party>
+ <party fullName="Presto Transport" lastName="Presto Transport" role="Defendant"></party>
+ <party fullName="Presto Transport" lastName="Presto Transport" role="Intervenor Defendant"></party>
+ <party fullName="Ready Electric Company" lastName="Ready Electric Company" role="Intervenor Plaintiff"></party>
+ <party fullName="State Farm Insurance Companies" lastName="State Farm Insurance Companies" role="Defendant"></party>
+ <party fullName="State Farm Mutual Automobile Insurance Company" lastName="State Farm Mutual Automobile Insurance Company" role="Cross Claimant"></party>
+ <party fullName="State Farm Mutual Automobile Insurance Company" lastName="State Farm Mutual Automobile Insurance Company" role="Defendant"></party>
+ <party fullName="State Farm Mutual Automobile Insurance Company" lastName="State Farm Mutual Automobile Insurance Company" role="Intervenor Defendant"></party>
+ <state>Kentucky</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-5_14-cv-00058-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_14-cv-00058/USCOURTS-kyed-5_14-cv-00058-0/mods.xml">
+ <titleInfo>
+  <title>Cobb et al v. Czekajlo et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER: it is ORDERED as follows: 1. Dft Bodkin Leasing Corporation&apos;s 35 MOTION for Summary Judgment is GRANTED; 2. The claims contained in Counts II &amp; III of plas&apos; Complaint against Dft Bodkin Leasing Corporation are DISMISSED, with prejudice; 3. Dft Bodkin Leasing Corporation is DISMISSED as a party to this proceeding; 4. Plas Steven &amp; Susan Cobb will be required to pay the taxable costs incurred by Dft Bodkin Leasing Corporation in this proceeding. Signed by Judge Danny C. Reeves on January 5, 2015. (MWZ) cc: COR</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_14-cv-00058/pdf/USCOURTS-kyed-5_14-cv-00058-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b6ac6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_14-cv-00058/USCOURTS-kyed-5_14-cv-00058-0</identifier>
+ <identifier type="former granule identifier">kyed-5_14-cv-00058_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_14-cv-00058/USCOURTS-kyed-5_14-cv-00058-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_14-cv-00058/pdf/USCOURTS-kyed-5_14-cv-00058-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:14-cv-00058; Cobb et al v. Czekajlo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-5_14-cv-00058-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER: it is ORDERED as follows: 1. Dft Bodkin Leasing Corporation&apos;s 35 MOTION for Summary Judgment is GRANTED; 2. The claims contained in Counts II &amp; III of plas&apos; Complaint against Dft Bodkin Leasing Corporation are DISMISSED, with prejudice; 3. Dft Bodkin Leasing Corporation is DISMISSED as a party to this proceeding; 4. Plas Steven &amp; Susan Cobb will be required to pay the taxable costs incurred by Dft Bodkin Leasing Corporation in this proceeding. Signed by Judge Danny C. Reeves on January 5, 2015. (MWZ) cc: COR</docketText>
+</extension>
+</relatedItem>
+</mods>

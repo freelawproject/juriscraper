@@ -1,0 +1,477 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c32b9c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01016</identifier>
+<identifier type="local">P0b002ee186c32b9c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-01016</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01016</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01016</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1981 Civil Rights</cause>
+ <party firstName="Dave" fullName="Dave Adams" lastName="Adams" role="Defendant"></party>
+ <party firstName="Aaron" fullName="Aaron Ames" lastName="Ames" role="Defendant"></party>
+ <party firstName="Norma" fullName="Norma Archer" lastName="Archer" role="Defendant"></party>
+ <party firstName="Davion" fullName="Davion Barlow" lastName="Barlow" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Bevins" lastName="Bevins" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Blair" lastName="Blair" role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis Bunting" lastName="Bunting" role="Defendant"></party>
+ <party firstName="Curtis" fullName="Curtis Cardwell" lastName="Cardwell" role="Defendant"></party>
+ <party fullName="Davis Police Department" lastName="Davis Police Department" role="Defendant"></party>
+ <party firstName="Darrin" fullName="Darrin DeFreece" lastName="DeFreece" role="Defendant"></party>
+ <party firstName="Brad" fullName="Brad DeWall" lastName="DeWall" role="Defendant"></party>
+ <party firstName="Mike" fullName="Mike Doane" lastName="Doane" role="Defendant"></party>
+ <party firstName="Don" fullName="Don Dubain" lastName="Dubain" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Elliot" lastName="Elliot" role="Defendant"></party>
+ <party firstName="John" fullName="John Ellis" lastName="Ellis" role="Defendant"></party>
+ <party firstName="Yvette" fullName="Yvette Evans" lastName="Evans" role="Defendant"></party>
+ <party firstName="Alejandro" fullName="Alejandro Garza" lastName="Garza" role="Defendant"></party>
+ <party firstName="Sondra" fullName="Sondra Hoffman" lastName="Hoffman" role="Defendant"></party>
+ <party firstName="Ken" fullName="Ken Kramer" lastName="Kramer" role="Defendant"></party>
+ <party firstName="Ramona" fullName="Ramona Margherio" lastName="Margherio" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Miller" lastName="Miller" role="Defendant"></party>
+ <party firstName="Missy" fullName="Missy Morris" lastName="Morris" role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen Murray" lastName="Murray" role="Defendant"></party>
+ <party fullName="Placer County District Attorney&apos;s Office" lastName="Placer County District Attorney&apos;s Office" role="Defendant"></party>
+ <party firstName="Cyndy" fullName="Cyndy Pymm" lastName="Pymm" role="Defendant"></party>
+ <party firstName="Lisa" fullName="Lisa Rapalyea" lastName="Rapalyea" role="Defendant"></party>
+ <party firstName="Dan" fullName="Dan Schick" lastName="Schick" role="Defendant"></party>
+ <party firstName="Jeremy" fullName="Jeremy Screeton" lastName="Screeton" role="Defendant"></party>
+ <party fullName="Solano County District Attorney&apos;s Office" lastName="Solano County District Attorney&apos;s Office" role="Defendant"></party>
+ <party fullName="Solano County Sheriff&apos;s Department" lastName="Solano County Sheriff&apos;s Department" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Spanos" lastName="Spanos" role="Defendant"></party>
+ <party firstName="Derek" fullName="Derek Todd" lastName="Todd" role="Plaintiff"></party>
+ <party firstName="Mike" fullName="Mike Waller" lastName="Waller" role="Defendant"></party>
+ <party firstName="Suzanne" fullName="Suzanne White" lastName="White" role="Defendant"></party>
+ <party firstName="Crystal" fullName="Crystal Williams" lastName="Williams" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PS) Todd v. Ellis et al</title>
+ <partNumber>2:13-cv-01016</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01016/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-01016;13-1016</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dave Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Aaron Ames</displayForm>
+ <namePart type="family">Ames</namePart>
+ <namePart type="given">Aaron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Norma Archer</displayForm>
+ <namePart type="family">Archer</namePart>
+ <namePart type="given">Norma</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Davion Barlow</displayForm>
+ <namePart type="family">Barlow</namePart>
+ <namePart type="given">Davion</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Bevins</displayForm>
+ <namePart type="family">Bevins</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Blair</displayForm>
+ <namePart type="family">Blair</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Bunting</displayForm>
+ <namePart type="family">Bunting</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Curtis Cardwell</displayForm>
+ <namePart type="family">Cardwell</namePart>
+ <namePart type="given">Curtis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Davis Police Department</displayForm>
+ <namePart type="family">Davis Police Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Darrin DeFreece</displayForm>
+ <namePart type="family">DeFreece</namePart>
+ <namePart type="given">Darrin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brad DeWall</displayForm>
+ <namePart type="family">DeWall</namePart>
+ <namePart type="given">Brad</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mike Doane</displayForm>
+ <namePart type="family">Doane</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Don Dubain</displayForm>
+ <namePart type="family">Dubain</namePart>
+ <namePart type="given">Don</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Elliot</displayForm>
+ <namePart type="family">Elliot</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Ellis</displayForm>
+ <namePart type="family">Ellis</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Yvette Evans</displayForm>
+ <namePart type="family">Evans</namePart>
+ <namePart type="given">Yvette</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alejandro Garza</displayForm>
+ <namePart type="family">Garza</namePart>
+ <namePart type="given">Alejandro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sondra Hoffman</displayForm>
+ <namePart type="family">Hoffman</namePart>
+ <namePart type="given">Sondra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ken Kramer</displayForm>
+ <namePart type="family">Kramer</namePart>
+ <namePart type="given">Ken</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ramona Margherio</displayForm>
+ <namePart type="family">Margherio</namePart>
+ <namePart type="given">Ramona</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Miller</displayForm>
+ <namePart type="family">Miller</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Missy Morris</displayForm>
+ <namePart type="family">Morris</namePart>
+ <namePart type="given">Missy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kathleen Murray</displayForm>
+ <namePart type="family">Murray</namePart>
+ <namePart type="given">Kathleen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Placer County District Attorney&apos;s Office</displayForm>
+ <namePart type="family">Placer County District Attorney&apos;s Office</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cyndy Pymm</displayForm>
+ <namePart type="family">Pymm</namePart>
+ <namePart type="given">Cyndy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lisa Rapalyea</displayForm>
+ <namePart type="family">Rapalyea</namePart>
+ <namePart type="given">Lisa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dan Schick</displayForm>
+ <namePart type="family">Schick</namePart>
+ <namePart type="given">Dan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeremy Screeton</displayForm>
+ <namePart type="family">Screeton</namePart>
+ <namePart type="given">Jeremy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Solano County District Attorney&apos;s Office</displayForm>
+ <namePart type="family">Solano County District Attorney&apos;s Office</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Solano County Sheriff&apos;s Department</displayForm>
+ <namePart type="family">Solano County Sheriff&apos;s Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Spanos</displayForm>
+ <namePart type="family">Spanos</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Derek Todd</displayForm>
+ <namePart type="family">Todd</namePart>
+ <namePart type="given">Derek</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mike Waller</displayForm>
+ <namePart type="family">Waller</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Suzanne White</displayForm>
+ <namePart type="family">White</namePart>
+ <namePart type="given">Suzanne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Crystal Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Crystal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01016</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01016</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1981 Civil Rights</cause>
+ <party firstName="Dave" fullName="Dave Adams" lastName="Adams" role="Defendant"></party>
+ <party firstName="Aaron" fullName="Aaron Ames" lastName="Ames" role="Defendant"></party>
+ <party firstName="Norma" fullName="Norma Archer" lastName="Archer" role="Defendant"></party>
+ <party firstName="Davion" fullName="Davion Barlow" lastName="Barlow" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Bevins" lastName="Bevins" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Blair" lastName="Blair" role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis Bunting" lastName="Bunting" role="Defendant"></party>
+ <party firstName="Curtis" fullName="Curtis Cardwell" lastName="Cardwell" role="Defendant"></party>
+ <party fullName="Davis Police Department" lastName="Davis Police Department" role="Defendant"></party>
+ <party firstName="Darrin" fullName="Darrin DeFreece" lastName="DeFreece" role="Defendant"></party>
+ <party firstName="Brad" fullName="Brad DeWall" lastName="DeWall" role="Defendant"></party>
+ <party firstName="Mike" fullName="Mike Doane" lastName="Doane" role="Defendant"></party>
+ <party firstName="Don" fullName="Don Dubain" lastName="Dubain" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Elliot" lastName="Elliot" role="Defendant"></party>
+ <party firstName="John" fullName="John Ellis" lastName="Ellis" role="Defendant"></party>
+ <party firstName="Yvette" fullName="Yvette Evans" lastName="Evans" role="Defendant"></party>
+ <party firstName="Alejandro" fullName="Alejandro Garza" lastName="Garza" role="Defendant"></party>
+ <party firstName="Sondra" fullName="Sondra Hoffman" lastName="Hoffman" role="Defendant"></party>
+ <party firstName="Ken" fullName="Ken Kramer" lastName="Kramer" role="Defendant"></party>
+ <party firstName="Ramona" fullName="Ramona Margherio" lastName="Margherio" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Miller" lastName="Miller" role="Defendant"></party>
+ <party firstName="Missy" fullName="Missy Morris" lastName="Morris" role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen Murray" lastName="Murray" role="Defendant"></party>
+ <party fullName="Placer County District Attorney&apos;s Office" lastName="Placer County District Attorney&apos;s Office" role="Defendant"></party>
+ <party firstName="Cyndy" fullName="Cyndy Pymm" lastName="Pymm" role="Defendant"></party>
+ <party firstName="Lisa" fullName="Lisa Rapalyea" lastName="Rapalyea" role="Defendant"></party>
+ <party firstName="Dan" fullName="Dan Schick" lastName="Schick" role="Defendant"></party>
+ <party firstName="Jeremy" fullName="Jeremy Screeton" lastName="Screeton" role="Defendant"></party>
+ <party fullName="Solano County District Attorney&apos;s Office" lastName="Solano County District Attorney&apos;s Office" role="Defendant"></party>
+ <party fullName="Solano County Sheriff&apos;s Department" lastName="Solano County Sheriff&apos;s Department" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Spanos" lastName="Spanos" role="Defendant"></party>
+ <party firstName="Derek" fullName="Derek Todd" lastName="Todd" role="Plaintiff"></party>
+ <party firstName="Mike" fullName="Mike Waller" lastName="Waller" role="Defendant"></party>
+ <party firstName="Suzanne" fullName="Suzanne White" lastName="White" role="Defendant"></party>
+ <party firstName="Crystal" fullName="Crystal Williams" lastName="Williams" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01016-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01016/USCOURTS-caed-2_13-cv-01016-0/mods.xml">
+ <titleInfo>
+  <title>(PS) Todd v. Ellis et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 6/24/2013 ORDERING that Plaintiff&apos;s 2 request to proceed in forma pauperis is GRANTED. Plaintiff&apos;s complaint is DISMISSED with LEAVE TO AMEND. Plaintiff shall file any amended complaint in accordance with this order within 35 days. Failure to timely file an amended complaint that complies with this order and the Federal Rules of Civil Procedure may result in a recommendation that the action be dismissed with prejudice pursuant to Federal Rule of Civil Procedure 41(b). (Zignago, K.)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_13-cv-01016-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4c095</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01016/USCOURTS-caed-2_13-cv-01016-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01016_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01016/USCOURTS-caed-2_13-cv-01016-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01016/pdf/USCOURTS-caed-2_13-cv-01016-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01016; (PS) Todd v. Ellis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01016-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-06-25</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 6/24/2013 ORDERING that Plaintiff&apos;s 2 request to proceed in forma pauperis is GRANTED. Plaintiff&apos;s complaint is DISMISSED with LEAVE TO AMEND. Plaintiff shall file any amended complaint in accordance with this order within 35 days. Failure to timely file an amended complaint that complies with this order and the Federal Rules of Civil Procedure may result in a recommendation that the action be dismissed with prejudice pursuant to Federal Rule of Civil Procedure 41(b). (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01016-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01016/USCOURTS-caed-2_13-cv-01016-1/mods.xml">
+ <titleInfo>
+  <title>(PS) Todd v. Ellis et al</title>
+  <subTitle>ORDER and FINDINGS AND RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 1/2/2014 RECOMMENDING that the plaintiff&apos;s claims against Defendants John Ellis, Cyndy Pymm, the Solano County District Attorney&apos;s Office, and Crystal Williams Archer related to the 7/12/2011 alleged obstruction of a criminal investigation be dismissed with prejudice; RECOMMENDING that the remaining claims and defendants be dismissed without prejudice for improper joinder under F.R.Cv.P. Rule 20(a)(2); RECOMMENDING that the Clerk of Court be directed to close this case; STAYING any deadlines, discovery, and motion practice in this action pending the resolution of the findings and recommendations; REFERRING this matter to Judge Troy L. Nunley; ORDERING that any objections be filed within fourteen (14) days. (Michel, G) Modified on 1/3/2014 (Michel, G).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_13-cv-01016-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4c096</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01016/USCOURTS-caed-2_13-cv-01016-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01016_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01016/USCOURTS-caed-2_13-cv-01016-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01016/pdf/USCOURTS-caed-2_13-cv-01016-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01016; (PS) Todd v. Ellis et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01016-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER and FINDINGS AND RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 1/2/2014 RECOMMENDING that the plaintiff&apos;s claims against Defendants John Ellis, Cyndy Pymm, the Solano County District Attorney&apos;s Office, and Crystal Williams Archer related to the 7/12/2011 alleged obstruction of a criminal investigation be dismissed with prejudice; RECOMMENDING that the remaining claims and defendants be dismissed without prejudice for improper joinder under F.R.Cv.P. Rule 20(a)(2); RECOMMENDING that the Clerk of Court be directed to close this case; STAYING any deadlines, discovery, and motion practice in this action pending the resolution of the findings and recommendations; REFERRING this matter to Judge Troy L. Nunley; ORDERING that any objections be filed within fourteen (14) days. (Michel, G) Modified on 1/3/2014 (Michel, G).</docketText>
+</extension>
+</relatedItem>
+</mods>

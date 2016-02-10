@@ -1,0 +1,197 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18155d2e8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-dp-20139</identifier>
+<identifier type="local">P0b002ee18155d2e8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_11-dp-20139</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_11-dp-20139</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:11-dp-20139</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType></caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party fullName="Depuy Orthopaedics, Inc." lastName="Depuy Orthopaedics, Inc." role="Defendant"></party>
+ <party fullName="Johnson&amp;Johnson Services, Inc." lastName="Johnson&amp;Johnson Services, Inc." role="Defendant"></party>
+ <party fullName="Johnson&amp;Johnson, Inc." lastName="Johnson&amp;Johnson, Inc." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Schmalzried" lastName="Schmalzried" role="Defendant"></party>
+ <party firstName="Christina" fullName="Christina Smouse" lastName="Smouse" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas Vail" lastName="Vail" role="Defendant"></party>
+ <party fullName="Vail Consulting, LLC" lastName="Vail Consulting, LLC" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Smouse v. Johnson&amp;Johnson Services, Inc. et al</title>
+ <partNumber>1:11-dp-20139</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-dp-20139/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-dp-20139;11-20139</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Depuy Orthopaedics, Inc.</displayForm>
+ <namePart type="family">Depuy Orthopaedics, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Johnson&amp;Johnson Services, Inc.</displayForm>
+ <namePart type="family">Johnson&amp;Johnson Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Johnson&amp;Johnson, Inc.</displayForm>
+ <namePart type="family">Johnson&amp;Johnson, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Schmalzried</displayForm>
+ <namePart type="family">Schmalzried</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christina Smouse</displayForm>
+ <namePart type="family">Smouse</namePart>
+ <namePart type="given">Christina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Vail</displayForm>
+ <namePart type="family">Vail</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vail Consulting, LLC</displayForm>
+ <namePart type="family">Vail Consulting, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_11-dp-20139</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:11-dp-20139</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType></caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party fullName="Depuy Orthopaedics, Inc." lastName="Depuy Orthopaedics, Inc." role="Defendant"></party>
+ <party fullName="Johnson&amp;Johnson Services, Inc." lastName="Johnson&amp;Johnson Services, Inc." role="Defendant"></party>
+ <party fullName="Johnson&amp;Johnson, Inc." lastName="Johnson&amp;Johnson, Inc." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Schmalzried" lastName="Schmalzried" role="Defendant"></party>
+ <party firstName="Christina" fullName="Christina Smouse" lastName="Smouse" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas Vail" lastName="Vail" role="Defendant"></party>
+ <party fullName="Vail Consulting, LLC" lastName="Vail Consulting, LLC" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_11-dp-20139-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20139/USCOURTS-ohnd-1_11-dp-20139-0/mods.xml">
+ <titleInfo>
+  <title>Smouse v. Johnson&amp;Johnson Services, Inc. et al</title>
+  <subTitle>ORDER TRANSFERRING CASE to Northern District of Ohio (MDL No. 2197.) (mjj2, COURT STAFF) (Filed on 1/28/2011) [Transferred from cand on 1/31/2011.]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_11-dp-20139-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18160a71f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20139/USCOURTS-ohnd-1_11-dp-20139-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_11-dp-20139_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20139/USCOURTS-ohnd-1_11-dp-20139-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-dp-20139/pdf/USCOURTS-ohnd-1_11-dp-20139-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-dp-20139; Smouse v. Johnson&amp;Johnson Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_11-dp-20139-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-28</dateIssued>
+  <docketText>ORDER TRANSFERRING CASE to Northern District of Ohio (MDL No. 2197.) (mjj2, COURT STAFF) (Filed on 1/28/2011) [Transferred from cand on 1/31/2011.]</docketText>
+</extension>
+</relatedItem>
+</mods>

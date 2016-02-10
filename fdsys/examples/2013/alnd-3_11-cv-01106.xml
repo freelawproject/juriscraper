@@ -1,0 +1,243 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183ce42b7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-02-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-3_11-cv-01106</identifier>
+<identifier type="local">P0b002ee183ce42b7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alnd-3_11-cv-01106</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alnd-3_11-cv-01106</accessId>
+ <courtType>District</courtType>
+ <courtCode>alnd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2012</courtSortOrder>
+ <caseNumber>3:11-cv-01106</caseNumber>
+ <caseOffice>Northwestern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Mark" fullName="Mark Bowers" lastName="Bowers" role="Defendant"></party>
+ <party firstName="Lee" fullName="Lee Bradford" lastName="Bradford" role="Defendant"></party>
+ <party firstName="Patrick" fullName="Patrick Davis" lastName="Davis" role="Defendant"></party>
+ <party firstName="James" fullName="James Distefano" lastName="Distefano" role="Defendant"></party>
+ <party firstName="Jan" fullName="Jan Montgomery" lastName="Montgomery" role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry Morris" lastName="Morris" role="Plaintiff"></party>
+ <party fullName="Town of Anderson, Alabama" lastName="Town of Anderson, Alabama" role="Defendant"></party>
+ <party fullName="Town of Lexington, Alabama" lastName="Town of Lexington, Alabama" role="Defendant"></party>
+ <party firstName="Matt" fullName="Matt Wigginton" lastName="Wigginton" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Morris v. Town of Lexington, Alabama et al</title>
+ <partNumber>3:11-cv-01106</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-3_11-cv-01106/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:11-cv-01106;11-1106</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Northwestern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mark Bowers</displayForm>
+ <namePart type="family">Bowers</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lee Bradford</displayForm>
+ <namePart type="family">Bradford</namePart>
+ <namePart type="given">Lee</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patrick Davis</displayForm>
+ <namePart type="family">Davis</namePart>
+ <namePart type="given">Patrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Distefano</displayForm>
+ <namePart type="family">Distefano</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jan Montgomery</displayForm>
+ <namePart type="family">Montgomery</namePart>
+ <namePart type="given">Jan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jerry Morris</displayForm>
+ <namePart type="family">Morris</namePart>
+ <namePart type="given">Jerry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Town of Anderson, Alabama</displayForm>
+ <namePart type="family">Town of Anderson, Alabama</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Town of Lexington, Alabama</displayForm>
+ <namePart type="family">Town of Lexington, Alabama</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matt Wigginton</displayForm>
+ <namePart type="family">Wigginton</namePart>
+ <namePart type="given">Matt</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alnd-3_11-cv-01106</accessId>
+ <courtType>District</courtType>
+ <courtCode>alnd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2012</courtSortOrder>
+ <caseNumber>3:11-cv-01106</caseNumber>
+ <caseOffice>Northwestern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Mark" fullName="Mark Bowers" lastName="Bowers" role="Defendant"></party>
+ <party firstName="Lee" fullName="Lee Bradford" lastName="Bradford" role="Defendant"></party>
+ <party firstName="Patrick" fullName="Patrick Davis" lastName="Davis" role="Defendant"></party>
+ <party firstName="James" fullName="James Distefano" lastName="Distefano" role="Defendant"></party>
+ <party firstName="Jan" fullName="Jan Montgomery" lastName="Montgomery" role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry Morris" lastName="Morris" role="Plaintiff"></party>
+ <party fullName="Town of Anderson, Alabama" lastName="Town of Anderson, Alabama" role="Defendant"></party>
+ <party fullName="Town of Lexington, Alabama" lastName="Town of Lexington, Alabama" role="Defendant"></party>
+ <party firstName="Matt" fullName="Matt Wigginton" lastName="Wigginton" role="Defendant"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-3_11-cv-01106-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-3_11-cv-01106/USCOURTS-alnd-3_11-cv-01106-0/mods.xml">
+ <titleInfo>
+  <title>Morris v. Town of Lexington, Alabama et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER that the court GRANTS in part and DENIES in part the motions to dismiss and the plaintiff is ORDERED to Show Cause in writing by 1/17/2013, why his claims against Anderson Reserve Police Officer Wiggington should not be dismissed for failure to serve and prosecute; as more fully set out in order. Signed by Judge C Lynwood Smith, Jr on 1/4/2013. (AHI)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-3_11-cv-01106-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183ce5af1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-3_11-cv-01106/USCOURTS-alnd-3_11-cv-01106-0</identifier>
+ <identifier type="former granule identifier">alnd-3_11-cv-01106_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-3_11-cv-01106/USCOURTS-alnd-3_11-cv-01106-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-3_11-cv-01106/pdf/USCOURTS-alnd-3_11-cv-01106-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:11-cv-01106; Morris v. Town of Lexington, Alabama et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-3_11-cv-01106-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER that the court GRANTS in part and DENIES in part the motions to dismiss and the plaintiff is ORDERED to Show Cause in writing by 1/17/2013, why his claims against Anderson Reserve Police Officer Wiggington should not be dismissed for failure to serve and prosecute; as more fully set out in order. Signed by Judge C Lynwood Smith, Jr on 1/4/2013. (AHI)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-3_11-cv-01106-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-3_11-cv-01106/USCOURTS-alnd-3_11-cv-01106-1/mods.xml">
+ <titleInfo>
+  <title>Morris v. Town of Lexington, Alabama et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER that the motions by Town of Anderson PoliceChief Mark Bowers and Town of Lexington Police Officer Lee Bradford to stay allproceedings in this action pending the disposition of their interlocutory appeals by the Eleventh Circuit are GRANTED and all proceedings are STAYED until further order of the court as more fully set out in order. Signed by Judge C Lynwood Smith, Jr on 2/13/2013. (AHI)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-3_11-cv-01106-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183ce5af2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-3_11-cv-01106/USCOURTS-alnd-3_11-cv-01106-1</identifier>
+ <identifier type="former granule identifier">alnd-3_11-cv-01106_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-3_11-cv-01106/USCOURTS-alnd-3_11-cv-01106-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-3_11-cv-01106/pdf/USCOURTS-alnd-3_11-cv-01106-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:11-cv-01106; Morris v. Town of Lexington, Alabama et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-3_11-cv-01106-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-02-13</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER that the motions by Town of Anderson PoliceChief Mark Bowers and Town of Lexington Police Officer Lee Bradford to stay allproceedings in this action pending the disposition of their interlocutory appeals by the Eleventh Circuit are GRANTED and all proceedings are STAYED until further order of the court as more fully set out in order. Signed by Judge C Lynwood Smith, Jr on 2/13/2013. (AHI)</docketText>
+</extension>
+</relatedItem>
+</mods>

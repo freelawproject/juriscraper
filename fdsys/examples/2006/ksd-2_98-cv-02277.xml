@@ -1,0 +1,321 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180f1d3a0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_98-cv-02277</identifier>
+<identifier type="local">P0b002ee180f1d3a0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_98-cv-02277</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_98-cv-02277</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:98-cv-02277</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>850</natureSuitCode>
+ <natureSuit>Securities, Commodities, Exchange</natureSuit>
+ <party firstName="Ouziel" fullName="Ouziel Aryeh" lastName="Aryeh" role="Defendant"></party>
+ <party firstName="Enrique" fullName="Enrique R. Carrion" lastName="Carrion" middleName="R." role="Defendant"></party>
+ <party fullName="Charles Schwab&amp;Co., Inc" lastName="Charles Schwab&amp;Co., Inc" role="Defendant"></party>
+ <party firstName="Hector" fullName="Hector Cruz" lastName="Cruz" role="Defendant"></party>
+ <party fullName="DCGR International Holdings, Inc." lastName="DCGR International Holdings, Inc." role="Defendant"></party>
+ <party firstName="Isaac" fullName="Isaac Hager" lastName="Hager" role="Defendant"></party>
+ <party fullName="Manhattan Transfer Registrar Company" lastName="Manhattan Transfer Registrar Company" role="Defendant"></party>
+ <party fullName="Montecristi Group, The" lastName="Montecristi Group, The" role="Defendant"></party>
+ <party fullName="Olde Discount Corporation" lastName="Olde Discount Corporation" role="Defendant"></party>
+ <party fullName="Power Phone Inc" lastName="Power Phone Inc" role="Defendant"></party>
+ <party fullName="Princeton Research, Inc" lastName="Princeton Research, Inc" role="Defendant"></party>
+ <party fullName="Principal Financial" lastName="Principal Financial" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Salamon" lastName="Salamon" role="Defendant"></party>
+ <party firstName="Jack" fullName="Jack Savage" lastName="Savage" role="Defendant"></party>
+ <party firstName="J." fullName="J. Wesley Savage" lastName="Savage" middleName="Wesley" role="Defendant"></party>
+ <party firstName="Dave" fullName="Dave Sheldon" lastName="Sheldon" role="Plaintiff"></party>
+ <party firstName="Noah" fullName="Noah Steinberg" lastName="Steinberg" role="Defendant"></party>
+ <party fullName="TMC Agroworld Inc" lastName="TMC Agroworld Inc" role="Defendant"></party>
+ <party firstName="Gershon" fullName="Gershon Tannenbaum" lastName="Tannenbaum" role="Defendant"></party>
+ <party firstName="Carmen" fullName="Carmen Vermonty" lastName="Vermonty" role="Defendant"></party>
+ <party firstName="Jay" fullName="Jay Vermonty" lastName="Vermonty" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Sheldon v. Vermonty, et al</title>
+ <partNumber>2:98-cv-02277</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_98-cv-02277/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:98-cv-02277;98-2277</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ouziel Aryeh</displayForm>
+ <namePart type="family">Aryeh</namePart>
+ <namePart type="given">Ouziel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Enrique R. Carrion</displayForm>
+ <namePart type="family">Carrion</namePart>
+ <namePart type="given">Enrique</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Schwab&amp;Co., Inc</displayForm>
+ <namePart type="family">Charles Schwab&amp;Co., Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hector Cruz</displayForm>
+ <namePart type="family">Cruz</namePart>
+ <namePart type="given">Hector</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DCGR International Holdings, Inc.</displayForm>
+ <namePart type="family">DCGR International Holdings, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Isaac Hager</displayForm>
+ <namePart type="family">Hager</namePart>
+ <namePart type="given">Isaac</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Manhattan Transfer Registrar Company</displayForm>
+ <namePart type="family">Manhattan Transfer Registrar Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Montecristi Group, The</displayForm>
+ <namePart type="family">Montecristi Group, The</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Olde Discount Corporation</displayForm>
+ <namePart type="family">Olde Discount Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Power Phone Inc</displayForm>
+ <namePart type="family">Power Phone Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Princeton Research, Inc</displayForm>
+ <namePart type="family">Princeton Research, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Principal Financial</displayForm>
+ <namePart type="family">Principal Financial</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Salamon</displayForm>
+ <namePart type="family">Salamon</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jack Savage</displayForm>
+ <namePart type="family">Savage</namePart>
+ <namePart type="given">Jack</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Wesley Savage</displayForm>
+ <namePart type="family">Savage</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dave Sheldon</displayForm>
+ <namePart type="family">Sheldon</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Noah Steinberg</displayForm>
+ <namePart type="family">Steinberg</namePart>
+ <namePart type="given">Noah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TMC Agroworld Inc</displayForm>
+ <namePart type="family">TMC Agroworld Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gershon Tannenbaum</displayForm>
+ <namePart type="family">Tannenbaum</namePart>
+ <namePart type="given">Gershon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carmen Vermonty</displayForm>
+ <namePart type="family">Vermonty</namePart>
+ <namePart type="given">Carmen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jay Vermonty</displayForm>
+ <namePart type="family">Vermonty</namePart>
+ <namePart type="given">Jay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_98-cv-02277</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:98-cv-02277</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>850</natureSuitCode>
+ <natureSuit>Securities, Commodities, Exchange</natureSuit>
+ <party firstName="Ouziel" fullName="Ouziel Aryeh" lastName="Aryeh" role="Defendant"></party>
+ <party firstName="Enrique" fullName="Enrique R. Carrion" lastName="Carrion" middleName="R." role="Defendant"></party>
+ <party fullName="Charles Schwab&amp;Co., Inc" lastName="Charles Schwab&amp;Co., Inc" role="Defendant"></party>
+ <party firstName="Hector" fullName="Hector Cruz" lastName="Cruz" role="Defendant"></party>
+ <party fullName="DCGR International Holdings, Inc." lastName="DCGR International Holdings, Inc." role="Defendant"></party>
+ <party firstName="Isaac" fullName="Isaac Hager" lastName="Hager" role="Defendant"></party>
+ <party fullName="Manhattan Transfer Registrar Company" lastName="Manhattan Transfer Registrar Company" role="Defendant"></party>
+ <party fullName="Montecristi Group, The" lastName="Montecristi Group, The" role="Defendant"></party>
+ <party fullName="Olde Discount Corporation" lastName="Olde Discount Corporation" role="Defendant"></party>
+ <party fullName="Power Phone Inc" lastName="Power Phone Inc" role="Defendant"></party>
+ <party fullName="Princeton Research, Inc" lastName="Princeton Research, Inc" role="Defendant"></party>
+ <party fullName="Principal Financial" lastName="Principal Financial" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Salamon" lastName="Salamon" role="Defendant"></party>
+ <party firstName="Jack" fullName="Jack Savage" lastName="Savage" role="Defendant"></party>
+ <party firstName="J." fullName="J. Wesley Savage" lastName="Savage" middleName="Wesley" role="Defendant"></party>
+ <party firstName="Dave" fullName="Dave Sheldon" lastName="Sheldon" role="Plaintiff"></party>
+ <party firstName="Noah" fullName="Noah Steinberg" lastName="Steinberg" role="Defendant"></party>
+ <party fullName="TMC Agroworld Inc" lastName="TMC Agroworld Inc" role="Defendant"></party>
+ <party firstName="Gershon" fullName="Gershon Tannenbaum" lastName="Tannenbaum" role="Defendant"></party>
+ <party firstName="Carmen" fullName="Carmen Vermonty" lastName="Vermonty" role="Defendant"></party>
+ <party firstName="Jay" fullName="Jay Vermonty" lastName="Vermonty" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_98-cv-02277-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_98-cv-02277/USCOURTS-ksd-2_98-cv-02277-0/mods.xml">
+ <titleInfo>
+  <title>Sheldon v. Vermonty, et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 391 Motion to Alter or amend the Judgment. Specifically the court awards the plaintiff $40,290.05 in fees; motion is denied in all other respects. Signed by Judge John W. Lungstrum on 01/27/2006. (ses)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_98-cv-02277-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f2ba7b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_98-cv-02277/USCOURTS-ksd-2_98-cv-02277-0</identifier>
+ <identifier type="former granule identifier">ksd-2_98-cv-02277_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_98-cv-02277/USCOURTS-ksd-2_98-cv-02277-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_98-cv-02277/pdf/USCOURTS-ksd-2_98-cv-02277-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:98-cv-02277; Sheldon v. Vermonty, et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_98-cv-02277-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 391 Motion to Alter or amend the Judgment. Specifically the court awards the plaintiff $40,290.05 in fees; motion is denied in all other respects. Signed by Judge John W. Lungstrum on 01/27/2006. (ses)</docketText>
+</extension>
+</relatedItem>
+</mods>

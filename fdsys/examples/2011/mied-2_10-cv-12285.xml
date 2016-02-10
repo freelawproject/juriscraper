@@ -1,0 +1,270 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181953c71">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-12285</identifier>
+<identifier type="local">P0b002ee181953c71</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_10-cv-12285</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_10-cv-12285</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:10-cv-12285</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>450</natureSuitCode>
+ <natureSuit>Interstate Commerce</natureSuit>
+ <cause>28:1331 Fed. Question: Interstate Commerce Act</cause>
+ <party fullName="Chieftain Contract Services" lastName="Chieftain Contract Services" role="Intervenor Plaintiff"></party>
+ <party fullName="Churchill Transportation Inc." lastName="Churchill Transportation Inc." role="Intervenor Plaintiff"></party>
+ <party fullName="Detroit International Bridge Co." lastName="Detroit International Bridge Co." role="Defendant"></party>
+ <party fullName="E.L. Hollingsworth&amp;Co." lastName="E.L. Hollingsworth&amp;Co." role="Intervenor Plaintiff"></party>
+ <party fullName="Mason Dixon Intermodal, Inc." lastName="Mason Dixon Intermodal, Inc." role="Plaintiff"></party>
+ <party fullName="Rush Trucking Company" lastName="Rush Trucking Company" role="Intervenor Plaintiff"></party>
+ <party firstName="Kirk" fullName="Kirk T. Steudle" lastName="Steudle" middleName="T." role="Defendant"></party>
+ <party fullName="Superior Global, Inc." lastName="Superior Global, Inc." role="Intervenor Plaintiff"></party>
+ <party fullName="The Mason and Dixon Lines, Incorporated" lastName="The Mason and Dixon Lines, Incorporated" role="Plaintiff"></party>
+ <party fullName="Universal Am-Can, Ltd." lastName="Universal Am-Can, Ltd." role="Plaintiff"></party>
+ <party fullName="Universal Truckload Services, Inc." lastName="Universal Truckload Services, Inc." role="Plaintiff"></party>
+ <party firstName="Ted" fullName="Ted B. Wahby" lastName="Wahby" middleName="B." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>The Mason and Dixon Lines, Incorporated et al v. Steudle, et al</title>
+ <partNumber>2:10-cv-12285</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-12285/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cv-12285;10-12285</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Chieftain Contract Services</displayForm>
+ <namePart type="family">Chieftain Contract Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Churchill Transportation Inc.</displayForm>
+ <namePart type="family">Churchill Transportation Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Detroit International Bridge Co.</displayForm>
+ <namePart type="family">Detroit International Bridge Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>E.L. Hollingsworth&amp;Co.</displayForm>
+ <namePart type="family">E.L. Hollingsworth&amp;Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mason Dixon Intermodal, Inc.</displayForm>
+ <namePart type="family">Mason Dixon Intermodal, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rush Trucking Company</displayForm>
+ <namePart type="family">Rush Trucking Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kirk T. Steudle</displayForm>
+ <namePart type="family">Steudle</namePart>
+ <namePart type="given">Kirk</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Superior Global, Inc.</displayForm>
+ <namePart type="family">Superior Global, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>The Mason and Dixon Lines, Incorporated</displayForm>
+ <namePart type="family">The Mason and Dixon Lines, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Universal Am-Can, Ltd.</displayForm>
+ <namePart type="family">Universal Am-Can, Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Universal Truckload Services, Inc.</displayForm>
+ <namePart type="family">Universal Truckload Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ted B. Wahby</displayForm>
+ <namePart type="family">Wahby</namePart>
+ <namePart type="given">Ted</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_10-cv-12285</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:10-cv-12285</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>450</natureSuitCode>
+ <natureSuit>Interstate Commerce</natureSuit>
+ <cause>28:1331 Fed. Question: Interstate Commerce Act</cause>
+ <party fullName="Chieftain Contract Services" lastName="Chieftain Contract Services" role="Intervenor Plaintiff"></party>
+ <party fullName="Churchill Transportation Inc." lastName="Churchill Transportation Inc." role="Intervenor Plaintiff"></party>
+ <party fullName="Detroit International Bridge Co." lastName="Detroit International Bridge Co." role="Defendant"></party>
+ <party fullName="E.L. Hollingsworth&amp;Co." lastName="E.L. Hollingsworth&amp;Co." role="Intervenor Plaintiff"></party>
+ <party fullName="Mason Dixon Intermodal, Inc." lastName="Mason Dixon Intermodal, Inc." role="Plaintiff"></party>
+ <party fullName="Rush Trucking Company" lastName="Rush Trucking Company" role="Intervenor Plaintiff"></party>
+ <party firstName="Kirk" fullName="Kirk T. Steudle" lastName="Steudle" middleName="T." role="Defendant"></party>
+ <party fullName="Superior Global, Inc." lastName="Superior Global, Inc." role="Intervenor Plaintiff"></party>
+ <party fullName="The Mason and Dixon Lines, Incorporated" lastName="The Mason and Dixon Lines, Incorporated" role="Plaintiff"></party>
+ <party fullName="Universal Am-Can, Ltd." lastName="Universal Am-Can, Ltd." role="Plaintiff"></party>
+ <party fullName="Universal Truckload Services, Inc." lastName="Universal Truckload Services, Inc." role="Plaintiff"></party>
+ <party firstName="Ted" fullName="Ted B. Wahby" lastName="Wahby" middleName="B." role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_10-cv-12285-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-12285/USCOURTS-mied-2_10-cv-12285-0/mods.xml">
+ <titleInfo>
+  <title>The Mason and Dixon Lines, Incorporated et al v. Steudle, et al</title>
+  <subTitle>ORDER denying 68 Motion to Reassign Case or to Consolidate Cases. Signed by District Judge David M. Lawson. (DTof)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_10-cv-12285-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a25708</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-12285/USCOURTS-mied-2_10-cv-12285-0</identifier>
+ <identifier type="former granule identifier">mied-2_10-cv-12285_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-12285/USCOURTS-mied-2_10-cv-12285-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-12285/pdf/USCOURTS-mied-2_10-cv-12285-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-12285; The Mason and Dixon Lines, Incorporated et al v. Steudle, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_10-cv-12285-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-10-18</dateIssued>
+  <docketText>ORDER denying 68 Motion to Reassign Case or to Consolidate Cases. Signed by District Judge David M. Lawson. (DTof)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_10-cv-12285-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-12285/USCOURTS-mied-2_10-cv-12285-1/mods.xml">
+ <titleInfo>
+  <title>The Mason and Dixon Lines, Incorporated et al v. Steudle, et al</title>
+  <subTitle>OPINION and ORDER GRANTING 13 MOTION to Dismiss, DENYING (8 MOTION for Preliminary Injunction, 81 Emergency MOTION for Preliminary Injunction, 77 Intervenor Complaint,, 82 Emergency MOTION for Preliminary Injunction, 83 MOTION for Preliminary Injunction, 37 MOTION Allow Discovery Under FRCP 56(f),36 MOTION to Strike); AND DISMISSING (1 Complaint, 12 Amended Complaint) - Signed by District Judge David M. Lawson. (DTof)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_10-cv-12285-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a25707</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-12285/USCOURTS-mied-2_10-cv-12285-1</identifier>
+ <identifier type="former granule identifier">mied-2_10-cv-12285_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-12285/USCOURTS-mied-2_10-cv-12285-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-12285/pdf/USCOURTS-mied-2_10-cv-12285-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-12285; The Mason and Dixon Lines, Incorporated et al v. Steudle, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_10-cv-12285-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-13</dateIssued>
+  <docketText>OPINION and ORDER GRANTING 13 MOTION to Dismiss, DENYING (8 MOTION for Preliminary Injunction, 81 Emergency MOTION for Preliminary Injunction, 77 Intervenor Complaint,, 82 Emergency MOTION for Preliminary Injunction, 83 MOTION for Preliminary Injunction, 37 MOTION Allow Discovery Under FRCP 56(f),36 MOTION to Strike); AND DISMISSING (1 Complaint, 12 Amended Complaint) - Signed by District Judge David M. Lawson. (DTof)</docketText>
+</extension>
+</relatedItem>
+</mods>

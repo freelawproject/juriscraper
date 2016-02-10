@@ -1,0 +1,393 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813518da">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_91-cv-06785</identifier>
+<identifier type="local">P0b002ee1813518da</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_91-cv-06785</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_91-cv-06785</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:91-cv-06785</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party fullName="CIGNA WORLDWIDE INSURANCE COMPANY" lastName="CIGNA WORLDWIDE INSURANCE COMPANY" role="Defendant"></party>
+ <party fullName="CNA REINSURANCE OF LONDON LTD." lastName="CNA REINSURANCE OF LONDON LTD." role="Defendant"></party>
+ <party fullName="COMMERICAL UNION ASSURANCE COMPANY PLC" lastName="COMMERICAL UNION ASSURANCE COMPANY PLC" role="Defendant"></party>
+ <party fullName="CONTINENTAL ASSURANCE CO. OF LONDON, LTD." lastName="CONTINENTAL ASSURANCE CO. OF LONDON, LTD." role="Defendant"></party>
+ <party fullName="CONTINENTAL INSURANCE CO. (UK) LTD." lastName="CONTINENTAL INSURANCE CO. (UK) LTD." role="Defendant"></party>
+ <party fullName="EAGLE STAR INSURANCE CO. LTD." lastName="EAGLE STAR INSURANCE CO. LTD." role="Defendant"></party>
+ <party fullName="GALLAGHER PLUMER, Ltd." lastName="GALLAGHER PLUMER, Ltd." role="Defendant"></party>
+ <party fullName="GENERALI INS. CO." lastName="GENERALI INS. CO." role="Defendant"></party>
+ <party fullName="GREAT LANES RE-INSURANCE, LTD. (UK)" lastName="GREAT LANES RE-INSURANCE, LTD. (UK)" role="Defendant"></party>
+ <party fullName="HIR UK LTD." lastName="HIR UK LTD." role="Defendant"></party>
+ <party firstName="SAMUEL" fullName="SAMUEL M. LOHMAN ESQ." generation="ESQ." lastName="LOHMAN" middleName="M." role="Respondent"></party>
+ <party fullName="MUNICHRE GENERAL SERVICES LTD." lastName="MUNICHRE GENERAL SERVICES LTD." role="Defendant"></party>
+ <party fullName="NRG FENCHURCH INSURANCE CO. LTD." lastName="NRG FENCHURCH INSURANCE CO. LTD." role="Defendant"></party>
+ <party fullName="ORION INSURANCE CO. PLC." lastName="ORION INSURANCE CO. PLC." role="Defendant"></party>
+ <party fullName="REED SMITH LLP" lastName="REED SMITH LLP" role="Respondent"></party>
+ <party firstName="HENRY" fullName="HENRY F. REICHNER" lastName="REICHNER" middleName="F." role="Respondent"></party>
+ <party fullName="ROYAL RE-INSURANCE CO. LTD." lastName="ROYAL RE-INSURANCE CO. LTD." role="Defendant"></party>
+ <party firstName="Henry" fullName="Henry F. Reichner" lastName="Reichner" middleName="F." role="Respondent"></party>
+ <party firstName="JOSIE" fullName="JOSIE SENESIE" lastName="SENESIE" role="Receiver"></party>
+ <party firstName="FODAY" fullName="FODAY SESAY" lastName="SESAY" role="Movant"></party>
+ <party fullName="SIRIUS (UK) INSURANCE PLC" lastName="SIRIUS (UK) INSURANCE PLC" role="Defendant"></party>
+ <party fullName="ST. PAUL FIRE AND MARINE INSURANCE COMPANY" lastName="ST. PAUL FIRE AND MARINE INSURANCE COMPANY" role="Defendant"></party>
+ <party fullName="STAR ASSURANCE SOCIETY, LTD." lastName="STAR ASSURANCE SOCIETY, LTD." role="Defendant"></party>
+ <party fullName="THE ABI JAOUDI AND AZAR TRADING CORPORATION" lastName="THE ABI JAOUDI AND AZAR TRADING CORPORATION" role="Plaintiff"></party>
+ <party fullName="U A P INS. CO." lastName="U A P INS. CO." role="Defendant"></party>
+ <party fullName="UNITED STATES OF AMERICA" lastName="UNITED STATES OF AMERICA" role="Notice Only Party"></party>
+ <party fullName="WHISTONDALE&amp;PARTNERS, INC." lastName="WHISTONDALE&amp;PARTNERS, INC." role="Defendant"></party>
+ <party fullName="WHISTONDALE&amp;PARTNERS, P.L.C." lastName="WHISTONDALE&amp;PARTNERS, P.L.C." role="Defendant"></party>
+ <party fullName="YASUDA TRUST EUROPE LTD." lastName="YASUDA TRUST EUROPE LTD." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>THE ABI JAOUDI v. CIGNA WORLDWIDE INS, et al</title>
+ <partNumber>2:91-cv-06785</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_91-cv-06785/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:91-cv-06785;91-6785</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CIGNA WORLDWIDE INSURANCE COMPANY</displayForm>
+ <namePart type="family">CIGNA WORLDWIDE INSURANCE COMPANY</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CNA REINSURANCE OF LONDON LTD.</displayForm>
+ <namePart type="family">CNA REINSURANCE OF LONDON LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>COMMERICAL UNION ASSURANCE COMPANY PLC</displayForm>
+ <namePart type="family">COMMERICAL UNION ASSURANCE COMPANY PLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CONTINENTAL ASSURANCE CO. OF LONDON, LTD.</displayForm>
+ <namePart type="family">CONTINENTAL ASSURANCE CO. OF LONDON, LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CONTINENTAL INSURANCE CO. (UK) LTD.</displayForm>
+ <namePart type="family">CONTINENTAL INSURANCE CO. (UK) LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>EAGLE STAR INSURANCE CO. LTD.</displayForm>
+ <namePart type="family">EAGLE STAR INSURANCE CO. LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GALLAGHER PLUMER, Ltd.</displayForm>
+ <namePart type="family">GALLAGHER PLUMER, Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GENERALI INS. CO.</displayForm>
+ <namePart type="family">GENERALI INS. CO.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GREAT LANES RE-INSURANCE, LTD. (UK)</displayForm>
+ <namePart type="family">GREAT LANES RE-INSURANCE, LTD. (UK)</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>HIR UK LTD.</displayForm>
+ <namePart type="family">HIR UK LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SAMUEL M. LOHMAN ESQ.</displayForm>
+ <namePart type="family">LOHMAN</namePart>
+ <namePart type="given">SAMUEL</namePart>
+ <namePart type="termsOfAddress">ESQ.</namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>MUNICHRE GENERAL SERVICES LTD.</displayForm>
+ <namePart type="family">MUNICHRE GENERAL SERVICES LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>NRG FENCHURCH INSURANCE CO. LTD.</displayForm>
+ <namePart type="family">NRG FENCHURCH INSURANCE CO. LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ORION INSURANCE CO. PLC.</displayForm>
+ <namePart type="family">ORION INSURANCE CO. PLC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>REED SMITH LLP</displayForm>
+ <namePart type="family">REED SMITH LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>HENRY F. REICHNER</displayForm>
+ <namePart type="family">REICHNER</namePart>
+ <namePart type="given">HENRY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>ROYAL RE-INSURANCE CO. LTD.</displayForm>
+ <namePart type="family">ROYAL RE-INSURANCE CO. LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Henry F. Reichner</displayForm>
+ <namePart type="family">Reichner</namePart>
+ <namePart type="given">Henry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>JOSIE SENESIE</displayForm>
+ <namePart type="family">SENESIE</namePart>
+ <namePart type="given">JOSIE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Receiver</description>
+</name>
+<name type="personal">
+ <displayForm>FODAY SESAY</displayForm>
+ <namePart type="family">SESAY</namePart>
+ <namePart type="given">FODAY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>SIRIUS (UK) INSURANCE PLC</displayForm>
+ <namePart type="family">SIRIUS (UK) INSURANCE PLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ST. PAUL FIRE AND MARINE INSURANCE COMPANY</displayForm>
+ <namePart type="family">ST. PAUL FIRE AND MARINE INSURANCE COMPANY</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>STAR ASSURANCE SOCIETY, LTD.</displayForm>
+ <namePart type="family">STAR ASSURANCE SOCIETY, LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>THE ABI JAOUDI AND AZAR TRADING CORPORATION</displayForm>
+ <namePart type="family">THE ABI JAOUDI AND AZAR TRADING CORPORATION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>U A P INS. CO.</displayForm>
+ <namePart type="family">U A P INS. CO.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>UNITED STATES OF AMERICA</displayForm>
+ <namePart type="family">UNITED STATES OF AMERICA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>WHISTONDALE&amp;PARTNERS, INC.</displayForm>
+ <namePart type="family">WHISTONDALE&amp;PARTNERS, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>WHISTONDALE&amp;PARTNERS, P.L.C.</displayForm>
+ <namePart type="family">WHISTONDALE&amp;PARTNERS, P.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>YASUDA TRUST EUROPE LTD.</displayForm>
+ <namePart type="family">YASUDA TRUST EUROPE LTD.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_91-cv-06785</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:91-cv-06785</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party fullName="CIGNA WORLDWIDE INSURANCE COMPANY" lastName="CIGNA WORLDWIDE INSURANCE COMPANY" role="Defendant"></party>
+ <party fullName="CNA REINSURANCE OF LONDON LTD." lastName="CNA REINSURANCE OF LONDON LTD." role="Defendant"></party>
+ <party fullName="COMMERICAL UNION ASSURANCE COMPANY PLC" lastName="COMMERICAL UNION ASSURANCE COMPANY PLC" role="Defendant"></party>
+ <party fullName="CONTINENTAL ASSURANCE CO. OF LONDON, LTD." lastName="CONTINENTAL ASSURANCE CO. OF LONDON, LTD." role="Defendant"></party>
+ <party fullName="CONTINENTAL INSURANCE CO. (UK) LTD." lastName="CONTINENTAL INSURANCE CO. (UK) LTD." role="Defendant"></party>
+ <party fullName="EAGLE STAR INSURANCE CO. LTD." lastName="EAGLE STAR INSURANCE CO. LTD." role="Defendant"></party>
+ <party fullName="GALLAGHER PLUMER, Ltd." lastName="GALLAGHER PLUMER, Ltd." role="Defendant"></party>
+ <party fullName="GENERALI INS. CO." lastName="GENERALI INS. CO." role="Defendant"></party>
+ <party fullName="GREAT LANES RE-INSURANCE, LTD. (UK)" lastName="GREAT LANES RE-INSURANCE, LTD. (UK)" role="Defendant"></party>
+ <party fullName="HIR UK LTD." lastName="HIR UK LTD." role="Defendant"></party>
+ <party firstName="SAMUEL" fullName="SAMUEL M. LOHMAN ESQ." generation="ESQ." lastName="LOHMAN" middleName="M." role="Respondent"></party>
+ <party fullName="MUNICHRE GENERAL SERVICES LTD." lastName="MUNICHRE GENERAL SERVICES LTD." role="Defendant"></party>
+ <party fullName="NRG FENCHURCH INSURANCE CO. LTD." lastName="NRG FENCHURCH INSURANCE CO. LTD." role="Defendant"></party>
+ <party fullName="ORION INSURANCE CO. PLC." lastName="ORION INSURANCE CO. PLC." role="Defendant"></party>
+ <party fullName="REED SMITH LLP" lastName="REED SMITH LLP" role="Respondent"></party>
+ <party firstName="HENRY" fullName="HENRY F. REICHNER" lastName="REICHNER" middleName="F." role="Respondent"></party>
+ <party fullName="ROYAL RE-INSURANCE CO. LTD." lastName="ROYAL RE-INSURANCE CO. LTD." role="Defendant"></party>
+ <party firstName="Henry" fullName="Henry F. Reichner" lastName="Reichner" middleName="F." role="Respondent"></party>
+ <party firstName="JOSIE" fullName="JOSIE SENESIE" lastName="SENESIE" role="Receiver"></party>
+ <party firstName="FODAY" fullName="FODAY SESAY" lastName="SESAY" role="Movant"></party>
+ <party fullName="SIRIUS (UK) INSURANCE PLC" lastName="SIRIUS (UK) INSURANCE PLC" role="Defendant"></party>
+ <party fullName="ST. PAUL FIRE AND MARINE INSURANCE COMPANY" lastName="ST. PAUL FIRE AND MARINE INSURANCE COMPANY" role="Defendant"></party>
+ <party fullName="STAR ASSURANCE SOCIETY, LTD." lastName="STAR ASSURANCE SOCIETY, LTD." role="Defendant"></party>
+ <party fullName="THE ABI JAOUDI AND AZAR TRADING CORPORATION" lastName="THE ABI JAOUDI AND AZAR TRADING CORPORATION" role="Plaintiff"></party>
+ <party fullName="U A P INS. CO." lastName="U A P INS. CO." role="Defendant"></party>
+ <party fullName="UNITED STATES OF AMERICA" lastName="UNITED STATES OF AMERICA" role="Notice Only Party"></party>
+ <party fullName="WHISTONDALE&amp;PARTNERS, INC." lastName="WHISTONDALE&amp;PARTNERS, INC." role="Defendant"></party>
+ <party fullName="WHISTONDALE&amp;PARTNERS, P.L.C." lastName="WHISTONDALE&amp;PARTNERS, P.L.C." role="Defendant"></party>
+ <party fullName="YASUDA TRUST EUROPE LTD." lastName="YASUDA TRUST EUROPE LTD." role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_91-cv-06785-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_91-cv-06785/USCOURTS-paed-2_91-cv-06785-0/mods.xml">
+ <titleInfo>
+  <title>THE ABI JAOUDI v. CIGNA WORLDWIDE INS, et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT RESPONDENTS&apos; OBJECTIONS TO SERVICE&amp;JURISDICTION ARE OVERRULED. RESPONDENTS MAY FILE MEMORANDA IN OPPOSITION TO THE SUBSTANTIVE ISSUES RAISED IN THE MOTION FOR CONTEMPT WITHIN 20 DAYS OF THE DATE OF THIS ORDER&amp;PETITIONER MAY FILE A REPLY WITHIN 10 DAYS OF THE RESPONSES. SIGNED BY HONORABLE JOHN P. FULLAM ON 1/12/09. 1/13/09 ENTERED AND COPIES MAILED AND E-MAILED: COPIES FAXED BY CHAMBERS ON 1/12/09.(kw, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_91-cv-06785-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181372abb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_91-cv-06785/USCOURTS-paed-2_91-cv-06785-0</identifier>
+ <identifier type="former granule identifier">paed-2_91-cv-06785_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_91-cv-06785/USCOURTS-paed-2_91-cv-06785-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_91-cv-06785/pdf/USCOURTS-paed-2_91-cv-06785-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:91-cv-06785; THE ABI JAOUDI v. CIGNA WORLDWIDE INS, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_91-cv-06785-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT RESPONDENTS&apos; OBJECTIONS TO SERVICE&amp;JURISDICTION ARE OVERRULED. RESPONDENTS MAY FILE MEMORANDA IN OPPOSITION TO THE SUBSTANTIVE ISSUES RAISED IN THE MOTION FOR CONTEMPT WITHIN 20 DAYS OF THE DATE OF THIS ORDER&amp;PETITIONER MAY FILE A REPLY WITHIN 10 DAYS OF THE RESPONSES. SIGNED BY HONORABLE JOHN P. FULLAM ON 1/12/09. 1/13/09 ENTERED AND COPIES MAILED AND E-MAILED: COPIES FAXED BY CHAMBERS ON 1/12/09.(kw, )</docketText>
+</extension>
+</relatedItem>
+</mods>

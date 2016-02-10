@@ -1,0 +1,263 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181563ddd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-00533</identifier>
+<identifier type="local">P0b002ee181563ddd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_07-cv-00533</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_07-cv-00533</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:07-cv-00533</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1983 Civil Rights</cause>
+ <party fullName="Board of Trustess, Lorain County Community College" lastName="Board of Trustess, Lorain County Community College" role="Defendant"></party>
+ <party firstName="Judith" fullName="Judith DeMarino" lastName="DeMarino" role="Plaintiff"></party>
+ <party firstName="Genorosa" fullName="Genorosa Lopez-Mulina" lastName="Lopez-Mulina" role="Defendant"></party>
+ <party fullName="Lorain County Community College" lastName="Lorain County Community College" role="Defendant"></party>
+ <party firstName="Theodora" fullName="Theodora Scott" lastName="Scott" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>DeMarino v. Lorain County Community College et al</title>
+ <partNumber>1:07-cv-00533</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-00533/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:07-cv-00533;07-533</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Board of Trustess, Lorain County Community College</displayForm>
+ <namePart type="family">Board of Trustess, Lorain County Community College</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Judith DeMarino</displayForm>
+ <namePart type="family">DeMarino</namePart>
+ <namePart type="given">Judith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Genorosa Lopez-Mulina</displayForm>
+ <namePart type="family">Lopez-Mulina</namePart>
+ <namePart type="given">Genorosa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lorain County Community College</displayForm>
+ <namePart type="family">Lorain County Community College</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Theodora Scott</displayForm>
+ <namePart type="family">Scott</namePart>
+ <namePart type="given">Theodora</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_07-cv-00533</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:07-cv-00533</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1983 Civil Rights</cause>
+ <party fullName="Board of Trustess, Lorain County Community College" lastName="Board of Trustess, Lorain County Community College" role="Defendant"></party>
+ <party firstName="Judith" fullName="Judith DeMarino" lastName="DeMarino" role="Plaintiff"></party>
+ <party firstName="Genorosa" fullName="Genorosa Lopez-Mulina" lastName="Lopez-Mulina" role="Defendant"></party>
+ <party fullName="Lorain County Community College" lastName="Lorain County Community College" role="Defendant"></party>
+ <party firstName="Theodora" fullName="Theodora Scott" lastName="Scott" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_07-cv-00533-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00533/USCOURTS-ohnd-1_07-cv-00533-0/mods.xml">
+ <titleInfo>
+  <title>DeMarino v. Lorain County Community College et al</title>
+  <subTitle>Opinion and Order denying Plaintiff&apos;s Motion to remand case (Related Doc # 5). Plaintiff&apos;s request for an award of costs and attorney fees under USC 1447(c) is denied. Signed by Judge Christopher A. Boyko on 05/18/07.(M,M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_07-cv-00533-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181636be8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00533/USCOURTS-ohnd-1_07-cv-00533-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_07-cv-00533_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00533/USCOURTS-ohnd-1_07-cv-00533-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-00533/pdf/USCOURTS-ohnd-1_07-cv-00533-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00533; DeMarino v. Lorain County Community College et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_07-cv-00533-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-05-18</dateIssued>
+  <docketText>Opinion and Order denying Plaintiff&apos;s Motion to remand case (Related Doc # 5). Plaintiff&apos;s request for an award of costs and attorney fees under USC 1447(c) is denied. Signed by Judge Christopher A. Boyko on 05/18/07.(M,M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_07-cv-00533-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00533/USCOURTS-ohnd-1_07-cv-00533-1/mods.xml">
+ <titleInfo>
+  <title>DeMarino v. Lorain County Community College et al</title>
+  <subTitle>Report and Recommendation that the court grant defendants&apos; motion to dismiss a portion of DeMarino&apos;s fourth cause of action alleging a conspiracy to violate her right to equal protection in violation of Section 1985. Objections to R&amp;R due by 8/2/2007. Signed by Magistrate Judge Patricia A. Hemann on 7/19/2007.(W,G)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_07-cv-00533-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181636be9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00533/USCOURTS-ohnd-1_07-cv-00533-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_07-cv-00533_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00533/USCOURTS-ohnd-1_07-cv-00533-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-00533/pdf/USCOURTS-ohnd-1_07-cv-00533-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00533; DeMarino v. Lorain County Community College et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_07-cv-00533-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-07-19</dateIssued>
+  <docketText>Report and Recommendation that the court grant defendants&apos; motion to dismiss a portion of DeMarino&apos;s fourth cause of action alleging a conspiracy to violate her right to equal protection in violation of Section 1985. Objections to R&amp;R due by 8/2/2007. Signed by Magistrate Judge Patricia A. Hemann on 7/19/2007.(W,G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_07-cv-00533-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00533/USCOURTS-ohnd-1_07-cv-00533-2/mods.xml">
+ <titleInfo>
+  <title>DeMarino v. Lorain County Community College et al</title>
+  <subTitle>Order Adopting Report and Recommendation of the Magistrate Judge dismissing that portion of DeMarinos fourth cause of action alleging a conspiracy to violate her right to equal protection in violation of 42 U.S.C. § 1985 7, 22. Signed by Judge Christopher A. Boyko on 09/06/07.(M,M) Modified docket text on 9/8/2007 (R, N).</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_07-cv-00533-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181636bea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00533/USCOURTS-ohnd-1_07-cv-00533-2</identifier>
+ <identifier type="former granule identifier">ohnd-1_07-cv-00533_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00533/USCOURTS-ohnd-1_07-cv-00533-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-00533/pdf/USCOURTS-ohnd-1_07-cv-00533-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00533; DeMarino v. Lorain County Community College et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_07-cv-00533-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-09-07</dateIssued>
+  <docketText>Order Adopting Report and Recommendation of the Magistrate Judge dismissing that portion of DeMarinos fourth cause of action alleging a conspiracy to violate her right to equal protection in violation of 42 U.S.C. § 1985 7, 22. Signed by Judge Christopher A. Boyko on 09/06/07.(M,M) Modified docket text on 9/8/2007 (R, N).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_07-cv-00533-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00533/USCOURTS-ohnd-1_07-cv-00533-3/mods.xml">
+ <titleInfo>
+  <title>DeMarino v. Lorain County Community College et al</title>
+  <subTitle>Order of Case Dismissal. It is ordered this action is closed. It shall be marked settled and dismissed, with prejudice, each party to bear its own costs. Signed by Judge Christopher A. Boyko on 01/16/08. (M,M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_07-cv-00533-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181636be7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00533/USCOURTS-ohnd-1_07-cv-00533-3</identifier>
+ <identifier type="former granule identifier">ohnd-1_07-cv-00533_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-00533/USCOURTS-ohnd-1_07-cv-00533-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-00533/pdf/USCOURTS-ohnd-1_07-cv-00533-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00533; DeMarino v. Lorain County Community College et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_07-cv-00533-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-01-16</dateIssued>
+  <docketText>Order of Case Dismissal. It is ordered this action is closed. It shall be marked settled and dismissed, with prejudice, each party to bear its own costs. Signed by Judge Christopher A. Boyko on 01/16/08. (M,M)</docketText>
+</extension>
+</relatedItem>
+</mods>

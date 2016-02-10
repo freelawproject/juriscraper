@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18761f020">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-24</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_06-cv-01387</identifier>
+<identifier type="local">P0b002ee18761f020</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-24</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-24</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-6_06-cv-01387</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_06-cv-01387</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:06-cv-01387</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (SSID)</cause>
+ <party fullName="Social Security Administration, Commissioner of" lastName="Social Security Administration, Commissioner of" role="Defendant"></party>
+ <party fullName="Social Security Regional Administrator" lastName="Social Security Regional Administrator" role="Interested Party"></party>
+ <party firstName="Harold" fullName="Harold G. Timbers" lastName="Timbers" middleName="G." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Timbers v. Social Security Administration, Commissioner of</title>
+ <partNumber>6:06-cv-01387</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_06-cv-01387/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:06-cv-01387;06-1387</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Wichita</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Social Security Administration, Commissioner of</displayForm>
+ <namePart type="family">Social Security Administration, Commissioner of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security Regional Administrator</displayForm>
+ <namePart type="family">Social Security Regional Administrator</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Harold G. Timbers</displayForm>
+ <namePart type="family">Timbers</namePart>
+ <namePart type="given">Harold</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_06-cv-01387</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:06-cv-01387</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (SSID)</cause>
+ <party fullName="Social Security Administration, Commissioner of" lastName="Social Security Administration, Commissioner of" role="Defendant"></party>
+ <party fullName="Social Security Regional Administrator" lastName="Social Security Regional Administrator" role="Interested Party"></party>
+ <party firstName="Harold" fullName="Harold G. Timbers" lastName="Timbers" middleName="G." role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_06-cv-01387-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_06-cv-01387/USCOURTS-ksd-6_06-cv-01387-0/mods.xml">
+ <titleInfo>
+  <title>Timbers v. Social Security Administration, Commissioner of</title>
+  <subTitle>REPORT AND RECOMMENDATION: That the decision of the Commissioner be reversed, and that the case be remanded for further proceedings (sentence four remand). Signed by Magistrate Judge John T. Reid on 1/10/08.(cl)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_06-cv-01387/pdf/USCOURTS-ksd-6_06-cv-01387-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18764e8ea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_06-cv-01387/USCOURTS-ksd-6_06-cv-01387-0</identifier>
+ <identifier type="former granule identifier">ksd-6_06-cv-01387_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_06-cv-01387/USCOURTS-ksd-6_06-cv-01387-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_06-cv-01387/pdf/USCOURTS-ksd-6_06-cv-01387-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:06-cv-01387; Timbers v. Social Security Administration, Commissioner of; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_06-cv-01387-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-10</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION: That the decision of the Commissioner be reversed, and that the case be remanded for further proceedings (sentence four remand). Signed by Magistrate Judge John T. Reid on 1/10/08.(cl)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_06-cv-01387-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_06-cv-01387/USCOURTS-ksd-6_06-cv-01387-1/mods.xml">
+ <titleInfo>
+  <title>Timbers v. Social Security Administration, Commissioner of</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATION. Signed by District Judge Monti L Belot on 1/29/08.(cl)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_06-cv-01387/pdf/USCOURTS-ksd-6_06-cv-01387-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18764e8e9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_06-cv-01387/USCOURTS-ksd-6_06-cv-01387-1</identifier>
+ <identifier type="former granule identifier">ksd-6_06-cv-01387_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_06-cv-01387/USCOURTS-ksd-6_06-cv-01387-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_06-cv-01387/pdf/USCOURTS-ksd-6_06-cv-01387-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:06-cv-01387; Timbers v. Social Security Administration, Commissioner of; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_06-cv-01387-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-29</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATION. Signed by District Judge Monti L Belot on 1/29/08.(cl)</docketText>
+</extension>
+</relatedItem>
+</mods>

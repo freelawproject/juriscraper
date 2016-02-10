@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d1db2fe">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-07-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-07-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318</identifier>
+<identifier type="local">P0b002ee18d1db2fe</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-07-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-07-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cr-00318</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cr-00318</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cr-00318</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Ramon" fullName="Ramon Alexander Rodriguez" lastName="Rodriguez" middleName="Alexander" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Rodriguez</title>
+ <partNumber>1:13-cr-00318</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cr-00318;13-318</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ramon Alexander Rodriguez</displayForm>
+ <namePart type="family">Rodriguez</namePart>
+ <namePart type="given">Ramon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cr-00318</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cr-00318</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Ramon" fullName="Ramon Alexander Rodriguez" lastName="Rodriguez" middleName="Alexander" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00318-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Rodriguez</title>
+  <subTitle>DETENTION ORDER as to Ramon Alexander Rodriguez, Signed by Magistrate Judge Stanley A. Boone on 8/19/2013. (Arellano, S.)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/pdf/USCOURTS-caed-1_13-cr-00318-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d1ef92e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00318_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/pdf/USCOURTS-caed-1_13-cr-00318-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00318; USA v. Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00318-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-08-21</dateIssued>
+  <docketText>DETENTION ORDER as to Ramon Alexander Rodriguez, Signed by Magistrate Judge Stanley A. Boone on 8/19/2013. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00318-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Rodriguez</title>
+  <subTitle>STIPULATION and ORDER to Continue the Trial Date and Corresponding Dates set forth in the Court&apos;s Pretrial Order: Motions in Limine are due 9/22/2014, Oppositions due by 10/7/2014, Replies due by 10/13/2014, Motion in Limine/Trial Confirmation Hearing set for 10/27/2014 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, Jury Trial is now set for set for 11/12/2014 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, signed by District Judge Anthony W. Ishii on 4/7/2014. (Kusamura, W)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/pdf/USCOURTS-caed-1_13-cr-00318-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d1ef92d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00318_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/pdf/USCOURTS-caed-1_13-cr-00318-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00318; USA v. Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00318-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-04-08</dateIssued>
+  <docketText>STIPULATION and ORDER to Continue the Trial Date and Corresponding Dates set forth in the Court&apos;s Pretrial Order: Motions in Limine are due 9/22/2014, Oppositions due by 10/7/2014, Replies due by 10/13/2014, Motion in Limine/Trial Confirmation Hearing set for 10/27/2014 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, Jury Trial is now set for set for 11/12/2014 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, signed by District Judge Anthony W. Ishii on 4/7/2014. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00318-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Rodriguez</title>
+  <subTitle>STIPULATION to Continue Scheduling Dates Consistent With New trial Date; ORDER THEREON as to Ramon Alexander Rodriguez, signed by District Judge Anthony W. Ishii on 10/7/2014. (Motions in Limine to be filed by 12/8/2014, Oppositions due by 12/22/2014, Replies due by 12/29/2014; proposed jury instructions be filed and served by 1/6/2015; witness lists, trial briefs, exhibits, proposed voir dire, and matters related to use of videotapes, CDs, computers, and other audio/visual equipment be served and filed by 1/22/2015; the parties to meet and confer before the jury instruction hearing and trial confirmation hearing date on 1/12/2015.) (Gaumnitz, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/pdf/USCOURTS-caed-1_13-cr-00318-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d1ef92f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00318_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/pdf/USCOURTS-caed-1_13-cr-00318-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00318; USA v. Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00318-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-10-07</dateIssued>
+  <docketText>STIPULATION to Continue Scheduling Dates Consistent With New trial Date; ORDER THEREON as to Ramon Alexander Rodriguez, signed by District Judge Anthony W. Ishii on 10/7/2014. (Motions in Limine to be filed by 12/8/2014, Oppositions due by 12/22/2014, Replies due by 12/29/2014; proposed jury instructions be filed and served by 1/6/2015; witness lists, trial briefs, exhibits, proposed voir dire, and matters related to use of videotapes, CDs, computers, and other audio/visual equipment be served and filed by 1/22/2015; the parties to meet and confer before the jury instruction hearing and trial confirmation hearing date on 1/12/2015.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00318-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Rodriguez</title>
+  <subTitle>ORDER on Motion to Withdraw the Federal Defender as Counsel, Appoint Ad Hoc CJA Counsel, and Defendant&apos;s Consent as to Ramon Alexander Rodriguez (1), signed by Magistrate Judge Barbara A. McAuliffe on 1/5/15: Effective January 12, 2015. (Hellings, J)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/pdf/USCOURTS-caed-1_13-cr-00318-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d1ef92c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00318_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/pdf/USCOURTS-caed-1_13-cr-00318-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00318; USA v. Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00318-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER on Motion to Withdraw the Federal Defender as Counsel, Appoint Ad Hoc CJA Counsel, and Defendant&apos;s Consent as to Ramon Alexander Rodriguez (1), signed by Magistrate Judge Barbara A. McAuliffe on 1/5/15: Effective January 12, 2015. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00318-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Rodriguez</title>
+  <subTitle>STIPULATION and ORDER to Continue Jury Trial and Briefing Schedule Dates Consistent With New Trial Date as to Ramon Alexander Rodriguez, signed by District Judge Anthony W. Ishii on 1/6/2015. (Motions in Limine to be filed by 4/13/2015, Oppositions due by 4/27/2015, any Replies due by 5/4/2015, Motion to Suppress Hearing CONTINUED To 4/27/2015 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, Motions in Limine/Trial Confirmation Hearing CONTINUED to 5/18/2015, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, and Jury Trial CONTINUED to 6/2/2015 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/pdf/USCOURTS-caed-1_13-cr-00318-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d1ef92b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00318_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/pdf/USCOURTS-caed-1_13-cr-00318-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00318; USA v. Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00318-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-01-07</dateIssued>
+  <docketText>STIPULATION and ORDER to Continue Jury Trial and Briefing Schedule Dates Consistent With New Trial Date as to Ramon Alexander Rodriguez, signed by District Judge Anthony W. Ishii on 1/6/2015. (Motions in Limine to be filed by 4/13/2015, Oppositions due by 4/27/2015, any Replies due by 5/4/2015, Motion to Suppress Hearing CONTINUED To 4/27/2015 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, Motions in Limine/Trial Confirmation Hearing CONTINUED to 5/18/2015, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii, and Jury Trial CONTINUED to 6/2/2015 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00318-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Rodriguez</title>
+  <subTitle>JUDGMENT and COMMITMENT signed by District Judge Anthony W. Ishii on 7/24/2015 as to Ramon Alexander Rodriguez. (Rooney, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/pdf/USCOURTS-caed-1_13-cr-00318-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d1efa5d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-5</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00318_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00318/USCOURTS-caed-1_13-cr-00318-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00318/pdf/USCOURTS-caed-1_13-cr-00318-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00318; USA v. Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00318-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-07-24</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT signed by District Judge Anthony W. Ishii on 7/24/2015 as to Ramon Alexander Rodriguez. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

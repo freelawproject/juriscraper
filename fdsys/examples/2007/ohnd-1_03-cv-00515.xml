@@ -1,0 +1,225 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d112d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_03-cv-00515</identifier>
+<identifier type="local">P0b002ee1815d112d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_03-cv-00515</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_03-cv-00515</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:03-cv-00515</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Other Contract</cause>
+ <party fullName="Citrus Health Care and Rehab Center" lastName="Citrus Health Care and Rehab Center" role="Defendant"></party>
+ <party fullName="Legacy Healthcare Services, Inc." lastName="Legacy Healthcare Services, Inc." role="Counter-Defendant"></party>
+ <party fullName="Legacy Healthcare Services, Inc." lastName="Legacy Healthcare Services, Inc." role="Plaintiff"></party>
+ <party fullName="Long Term Care Foundation" lastName="Long Term Care Foundation" role="Defendant"></party>
+ <party fullName="Provident Foundation, Inc." lastName="Provident Foundation, Inc." role="Counter-Claimant"></party>
+ <party fullName="Provident Foundation, Inc." lastName="Provident Foundation, Inc." role="Defendant"></party>
+ <party firstName="James" fullName="James C. Sokell" lastName="Sokell" middleName="C." role="Mediator"></party>
+</extension>
+<titleInfo>
+ <title>Legacy Healthcare Services, Inc. v. Provident Foundation, Inc. et al</title>
+ <partNumber>1:03-cv-00515</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_03-cv-00515/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:03-cv-00515;03-515</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Citrus Health Care and Rehab Center</displayForm>
+ <namePart type="family">Citrus Health Care and Rehab Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Legacy Healthcare Services, Inc.</displayForm>
+ <namePart type="family">Legacy Healthcare Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Legacy Healthcare Services, Inc.</displayForm>
+ <namePart type="family">Legacy Healthcare Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Long Term Care Foundation</displayForm>
+ <namePart type="family">Long Term Care Foundation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Provident Foundation, Inc.</displayForm>
+ <namePart type="family">Provident Foundation, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Provident Foundation, Inc.</displayForm>
+ <namePart type="family">Provident Foundation, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James C. Sokell</displayForm>
+ <namePart type="family">Sokell</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_03-cv-00515</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:03-cv-00515</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Other Contract</cause>
+ <party fullName="Citrus Health Care and Rehab Center" lastName="Citrus Health Care and Rehab Center" role="Defendant"></party>
+ <party fullName="Legacy Healthcare Services, Inc." lastName="Legacy Healthcare Services, Inc." role="Counter-Defendant"></party>
+ <party fullName="Legacy Healthcare Services, Inc." lastName="Legacy Healthcare Services, Inc." role="Plaintiff"></party>
+ <party fullName="Long Term Care Foundation" lastName="Long Term Care Foundation" role="Defendant"></party>
+ <party fullName="Provident Foundation, Inc." lastName="Provident Foundation, Inc." role="Counter-Claimant"></party>
+ <party fullName="Provident Foundation, Inc." lastName="Provident Foundation, Inc." role="Defendant"></party>
+ <party firstName="James" fullName="James C. Sokell" lastName="Sokell" middleName="C." role="Mediator"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_03-cv-00515-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_03-cv-00515/USCOURTS-ohnd-1_03-cv-00515-0/mods.xml">
+ <titleInfo>
+  <title>Legacy Healthcare Services, Inc. v. Provident Foundation, Inc. et al</title>
+  <subTitle>Memorandum of Opinion denying Provident Group&apos;s motion to dismiss for improper venue (Related Doc # 66). Signed by Judge Ann Aldrich on 1-22-07.(K,V)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_03-cv-00515-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816d4a60</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_03-cv-00515/USCOURTS-ohnd-1_03-cv-00515-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_03-cv-00515_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_03-cv-00515/USCOURTS-ohnd-1_03-cv-00515-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_03-cv-00515/pdf/USCOURTS-ohnd-1_03-cv-00515-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:03-cv-00515; Legacy Healthcare Services, Inc. v. Provident Foundation, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_03-cv-00515-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-22</dateIssued>
+  <docketText>Memorandum of Opinion denying Provident Group&apos;s motion to dismiss for improper venue (Related Doc # 66). Signed by Judge Ann Aldrich on 1-22-07.(K,V)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_03-cv-00515-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_03-cv-00515/USCOURTS-ohnd-1_03-cv-00515-1/mods.xml">
+ <titleInfo>
+  <title>Legacy Healthcare Services, Inc. v. Provident Foundation, Inc. et al</title>
+  <subTitle>Memorandum and Orderr denying Provident Group&apos;s motions for summary judgment (Related Doc # 67); (Related Doc # 68)and settingStatus Conference for 2/23/2007 10:00 AM in Chambers 17B before Hon. Ann Aldrich.,Jury Trial set for 3/12/2007 09:00 AM in Courtroom 17B before Hon. Ann Aldrich. Signed by Judge Ann Aldrich on 1/26/07.(K,V)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_03-cv-00515-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816d4a61</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_03-cv-00515/USCOURTS-ohnd-1_03-cv-00515-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_03-cv-00515_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_03-cv-00515/USCOURTS-ohnd-1_03-cv-00515-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_03-cv-00515/pdf/USCOURTS-ohnd-1_03-cv-00515-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:03-cv-00515; Legacy Healthcare Services, Inc. v. Provident Foundation, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_03-cv-00515-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-26</dateIssued>
+  <docketText>Memorandum and Orderr denying Provident Group&apos;s motions for summary judgment (Related Doc # 67); (Related Doc # 68)and settingStatus Conference for 2/23/2007 10:00 AM in Chambers 17B before Hon. Ann Aldrich.,Jury Trial set for 3/12/2007 09:00 AM in Courtroom 17B before Hon. Ann Aldrich. Signed by Judge Ann Aldrich on 1/26/07.(K,V)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c7c1f5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01288</identifier>
+<identifier type="local">P0b002ee186c7c1f5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-01288</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01288</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01288</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1981 Civil Rights</cause>
+ <party firstName="Daniel" fullName="Daniel Devlin" lastName="Devlin" role="Plaintiff"></party>
+ <party fullName="France" lastName="France" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PS)Devlin v. France</title>
+ <partNumber>2:13-cv-01288</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01288/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-01288;13-1288</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Daniel Devlin</displayForm>
+ <namePart type="family">Devlin</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>France</displayForm>
+ <namePart type="family">France</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01288</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01288</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1981 Civil Rights</cause>
+ <party firstName="Daniel" fullName="Daniel Devlin" lastName="Devlin" role="Plaintiff"></party>
+ <party fullName="France" lastName="France" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01288-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01288/USCOURTS-caed-2_13-cv-01288-0/mods.xml">
+ <titleInfo>
+  <title>(PS)Devlin v. France</title>
+  <subTitle>ORDER granting plaintiff&apos;s 2 Motion to Proceed IFP, signed by Magistrate Judge Kendall J. Newman on 7/26/13. Plaintiff&apos;s complaint is dismissed with leave to amend. Plaintiff is GRANTED 45 days from the entry of this order to file an amended complaint. Failure to timely file an amended complaint in accordance with this order will result in a recommendation that this action be dismissed. (Kastilahn, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01288/pdf/USCOURTS-caed-2_13-cv-01288-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c8211d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01288/USCOURTS-caed-2_13-cv-01288-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01288_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01288/USCOURTS-caed-2_13-cv-01288-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01288/pdf/USCOURTS-caed-2_13-cv-01288-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01288; (PS)Devlin v. France; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01288-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-07-26</dateIssued>
+  <docketText>ORDER granting plaintiff&apos;s 2 Motion to Proceed IFP, signed by Magistrate Judge Kendall J. Newman on 7/26/13. Plaintiff&apos;s complaint is dismissed with leave to amend. Plaintiff is GRANTED 45 days from the entry of this order to file an amended complaint. Failure to timely file an amended complaint in accordance with this order will result in a recommendation that this action be dismissed. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01288-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01288/USCOURTS-caed-2_13-cv-01288-1/mods.xml">
+ <titleInfo>
+  <title>(PS)Devlin v. France</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 10/9/2013 ORDERING Plaintiff to SHOW CAUSE, in writing, by November 30, 2013, as to why this action should not de dismissed for Plaintiff&apos;s failure to prosecute this action and failure to follow 3 Order; ORDERING Plaintiff to file an Amended Complaint compliant with all aspects of 3 Order by November 30, 2013. (Michel, G)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01288/pdf/USCOURTS-caed-2_13-cv-01288-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c8211b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01288/USCOURTS-caed-2_13-cv-01288-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01288_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01288/USCOURTS-caed-2_13-cv-01288-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01288/pdf/USCOURTS-caed-2_13-cv-01288-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01288; (PS)Devlin v. France; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01288-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-10-10</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 10/9/2013 ORDERING Plaintiff to SHOW CAUSE, in writing, by November 30, 2013, as to why this action should not de dismissed for Plaintiff&apos;s failure to prosecute this action and failure to follow 3 Order; ORDERING Plaintiff to file an Amended Complaint compliant with all aspects of 3 Order by November 30, 2013. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01288-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01288/USCOURTS-caed-2_13-cv-01288-2/mods.xml">
+ <titleInfo>
+  <title>(PS)Devlin v. France</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 1/7/14 Recommending that this action be dismissed with prejudice pursuant to FRCP 41(b) re 1 Complaint filed by Daniel Devlin. The Clerk be directed to close this case and vacate all dates. These Findings and Recommendations are submitted to U.S. District Judge Troy L. Nunley. Objections to these F&amp;R due within fourteen days.(Mena-Sanchez, L)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01288/pdf/USCOURTS-caed-2_13-cv-01288-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c8211c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01288/USCOURTS-caed-2_13-cv-01288-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01288_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01288/USCOURTS-caed-2_13-cv-01288-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01288/pdf/USCOURTS-caed-2_13-cv-01288-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01288; (PS)Devlin v. France; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01288-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-07</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Kendall J. Newman on 1/7/14 Recommending that this action be dismissed with prejudice pursuant to FRCP 41(b) re 1 Complaint filed by Daniel Devlin. The Clerk be directed to close this case and vacate all dates. These Findings and Recommendations are submitted to U.S. District Judge Troy L. Nunley. Objections to these F&amp;R due within fourteen days.(Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+</mods>

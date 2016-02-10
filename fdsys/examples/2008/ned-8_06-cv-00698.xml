@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181760279">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00698</identifier>
+<identifier type="local">P0b002ee181760279</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cv-00698</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00698</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00698</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:0405 Review of HHS Decision</cause>
+ <party firstName="Theresa" fullName="Theresa Smith" lastName="Smith" role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Smith v. Social Security Administration</title>
+ <partNumber>8:06-cv-00698</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00698/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cv-00698;06-698</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Theresa Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Theresa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security Administration</displayForm>
+ <namePart type="family">Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00698</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00698</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:0405 Review of HHS Decision</cause>
+ <party firstName="Theresa" fullName="Theresa Smith" lastName="Smith" role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00698-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00698/USCOURTS-ned-8_06-cv-00698-0/mods.xml">
+ <titleInfo>
+  <title>Smith v. Social Security Administration</title>
+  <subTitle>MEMORANDUM AND ORDER granting 2 Motion for Leave to Proceed in forma pauperis. The Clerk of Court shall send a copy of this order together with threesummons forms and three USM-285 forms to the plaintiff&apos;s attorney, to be completed and returned to the Clerk who shall forward to the US Marshal for service. Fed. R. Civ. P. 4(m) requiresservice of process by no later than 120 days after the filing of a civil complaint. Ordered by Judge Joseph F. Bataillon.(ADB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00698-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817cefe5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00698/USCOURTS-ned-8_06-cv-00698-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00698_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00698/USCOURTS-ned-8_06-cv-00698-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00698/pdf/USCOURTS-ned-8_06-cv-00698-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00698; Smith v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00698-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-11-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 2 Motion for Leave to Proceed in forma pauperis. The Clerk of Court shall send a copy of this order together with threesummons forms and three USM-285 forms to the plaintiff&apos;s attorney, to be completed and returned to the Clerk who shall forward to the US Marshal for service. Fed. R. Civ. P. 4(m) requiresservice of process by no later than 120 days after the filing of a civil complaint. Ordered by Judge Joseph F. Bataillon.(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00698-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00698/USCOURTS-ned-8_06-cv-00698-1/mods.xml">
+ <titleInfo>
+  <title>Smith v. Social Security Administration</title>
+  <subTitle>MEMORANDUM AND ORDER reversing the decision of the Commissioner and remanding for award of benefits. Ordered by Judge Joseph F. Bataillon. (SMS, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00698-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817cefe4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00698/USCOURTS-ned-8_06-cv-00698-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00698_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00698/USCOURTS-ned-8_06-cv-00698-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00698/pdf/USCOURTS-ned-8_06-cv-00698-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00698; Smith v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00698-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-10-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER reversing the decision of the Commissioner and remanding for award of benefits. Ordered by Judge Joseph F. Bataillon. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00698-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00698/USCOURTS-ned-8_06-cv-00698-2/mods.xml">
+ <titleInfo>
+  <title>Smith v. Social Security Administration</title>
+  <subTitle>ORDER granting 23 Plaintiff&apos;s Motion for Attorney Fees. Ordered by Chief Judge Joseph F. Bataillon. (SMS, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00698-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817cefe3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00698/USCOURTS-ned-8_06-cv-00698-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00698_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00698/USCOURTS-ned-8_06-cv-00698-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00698/pdf/USCOURTS-ned-8_06-cv-00698-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00698; Smith v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00698-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-01-03</dateIssued>
+  <docketText>ORDER granting 23 Plaintiff&apos;s Motion for Attorney Fees. Ordered by Chief Judge Joseph F. Bataillon. (SMS, )</docketText>
+</extension>
+</relatedItem>
+</mods>

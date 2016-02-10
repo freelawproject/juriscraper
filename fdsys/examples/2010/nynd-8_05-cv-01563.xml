@@ -1,0 +1,233 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18114c1f5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-8_05-cv-01563</identifier>
+<identifier type="local">P0b002ee18114c1f5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-8_05-cv-01563</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-8_05-cv-01563</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>8:05-cv-01563</caseNumber>
+ <caseOffice>Plattsburgh</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party fullName="Crouse-Community Center, Inc." lastName="Crouse-Community Center, Inc." role="Counter Claimant"></party>
+ <party fullName="Crouse-Community Center, Inc." lastName="Crouse-Community Center, Inc." role="Defendant"></party>
+ <party fullName="Employers Insurance Company of Wausau" lastName="Employers Insurance Company of Wausau" role="Counter Defendant"></party>
+ <party fullName="Employers Insurance Company of Wausau" lastName="Employers Insurance Company of Wausau" role="Plaintiff"></party>
+ <party fullName="Liberty Mutual Group, Inc." lastName="Liberty Mutual Group, Inc." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Employers Insurance Company of Wausau v. Crouse-Community Center, Inc.</title>
+ <partNumber>8:05-cv-01563</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-8_05-cv-01563/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cv-01563;05-1563</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Plattsburgh</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Crouse-Community Center, Inc.</displayForm>
+ <namePart type="family">Crouse-Community Center, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Crouse-Community Center, Inc.</displayForm>
+ <namePart type="family">Crouse-Community Center, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Employers Insurance Company of Wausau</displayForm>
+ <namePart type="family">Employers Insurance Company of Wausau</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Employers Insurance Company of Wausau</displayForm>
+ <namePart type="family">Employers Insurance Company of Wausau</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Liberty Mutual Group, Inc.</displayForm>
+ <namePart type="family">Liberty Mutual Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-8_05-cv-01563</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>8:05-cv-01563</caseNumber>
+ <caseOffice>Plattsburgh</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party fullName="Crouse-Community Center, Inc." lastName="Crouse-Community Center, Inc." role="Counter Claimant"></party>
+ <party fullName="Crouse-Community Center, Inc." lastName="Crouse-Community Center, Inc." role="Defendant"></party>
+ <party fullName="Employers Insurance Company of Wausau" lastName="Employers Insurance Company of Wausau" role="Counter Defendant"></party>
+ <party fullName="Employers Insurance Company of Wausau" lastName="Employers Insurance Company of Wausau" role="Plaintiff"></party>
+ <party fullName="Liberty Mutual Group, Inc." lastName="Liberty Mutual Group, Inc." role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-8_05-cv-01563-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-01563/USCOURTS-nynd-8_05-cv-01563-0/mods.xml">
+ <titleInfo>
+  <title>Employers Insurance Company of Wausau v. Crouse-Community Center, Inc.</title>
+  <subTitle>MEMORANDUM-DECISION&amp;ORDER granting in part and denying in part 13 Motion to Dismiss and Strike. Signed by Judge Lawrence E. Kahn on 4/25/07. (wjg, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-8_05-cv-01563-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181406208</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-01563/USCOURTS-nynd-8_05-cv-01563-0</identifier>
+ <identifier type="former granule identifier">nynd-8_05-cv-01563_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-01563/USCOURTS-nynd-8_05-cv-01563-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-8_05-cv-01563/pdf/USCOURTS-nynd-8_05-cv-01563-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-01563; Employers Insurance Company of Wausau v. Crouse-Community Center, Inc.; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-8_05-cv-01563-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-04-25</dateIssued>
+  <docketText>MEMORANDUM-DECISION&amp;ORDER granting in part and denying in part 13 Motion to Dismiss and Strike. Signed by Judge Lawrence E. Kahn on 4/25/07. (wjg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-8_05-cv-01563-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-01563/USCOURTS-nynd-8_05-cv-01563-1/mods.xml">
+ <titleInfo>
+  <title>Employers Insurance Company of Wausau v. Crouse-Community Center, Inc.</title>
+  <subTitle>MEMORANDUM-DECISION and ORDER denying 61 Motion for Reconsideration. ORDERED that Plaintiff&apos;s Motion for Reconsideration is DENIED. Signed by Senior Judge Lawrence E. Kahn on 3/6/08. (ban)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-8_05-cv-01563-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18140620a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-01563/USCOURTS-nynd-8_05-cv-01563-1</identifier>
+ <identifier type="former granule identifier">nynd-8_05-cv-01563_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-01563/USCOURTS-nynd-8_05-cv-01563-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-8_05-cv-01563/pdf/USCOURTS-nynd-8_05-cv-01563-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-01563; Employers Insurance Company of Wausau v. Crouse-Community Center, Inc.; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-8_05-cv-01563-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-03-06</dateIssued>
+  <docketText>MEMORANDUM-DECISION and ORDER denying 61 Motion for Reconsideration. ORDERED that Plaintiff&apos;s Motion for Reconsideration is DENIED. Signed by Senior Judge Lawrence E. Kahn on 3/6/08. (ban)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-8_05-cv-01563-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-01563/USCOURTS-nynd-8_05-cv-01563-2/mods.xml">
+ <titleInfo>
+  <title>Employers Insurance Company of Wausau v. Crouse-Community Center, Inc.</title>
+  <subTitle>DECISION and ORDERED, that Plaintiffs Motion for summary judgment (Dkt. No. 42) is GRANTED IN ITS ENTIRETY; and it is further ORDERED, that Plaintiffs Motion to strike (Dkt. No. 42) is DENIED, without prejudice, as moot in light of the foregoing; and it is further ORDERED, that Defendants Motion for summary judgment (Dkt. No. 38) is DENIED IN ITS ENTIRETY; and it is further ORDERED, that the Plaintiff is directed to file a Motion for damages within 30 days. Signed by Senior Judge Lawrence E. Kahn on January 29, 2010. (sas)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-8_05-cv-01563-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181406209</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-01563/USCOURTS-nynd-8_05-cv-01563-2</identifier>
+ <identifier type="former granule identifier">nynd-8_05-cv-01563_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-01563/USCOURTS-nynd-8_05-cv-01563-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-8_05-cv-01563/pdf/USCOURTS-nynd-8_05-cv-01563-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-01563; Employers Insurance Company of Wausau v. Crouse-Community Center, Inc.; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-8_05-cv-01563-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-01-29</dateIssued>
+  <docketText>DECISION and ORDERED, that Plaintiffs Motion for summary judgment (Dkt. No. 42) is GRANTED IN ITS ENTIRETY; and it is further ORDERED, that Plaintiffs Motion to strike (Dkt. No. 42) is DENIED, without prejudice, as moot in light of the foregoing; and it is further ORDERED, that Defendants Motion for summary judgment (Dkt. No. 38) is DENIED IN ITS ENTIRETY; and it is further ORDERED, that the Plaintiff is directed to file a Motion for damages within 30 days. Signed by Senior Judge Lawrence E. Kahn on January 29, 2010. (sas)</docketText>
+</extension>
+</relatedItem>
+</mods>

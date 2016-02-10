@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812def57">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court District of Maine</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-meb-1_04-bk-11037</identifier>
+<identifier type="local">P0b002ee1812def57</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-meb-1_04-bk-11037</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-meb-1_04-bk-11037</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>meb</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Maine</courtState>
+ <courtSortOrder>3220</courtSortOrder>
+ <caseNumber>1:04-bk-11037</caseNumber>
+ <caseOffice>Bangor</caseOffice>
+ <party firstName="Randall" fullName="Randall K. Haskell" lastName="Haskell" middleName="K." role="Debtor"></party>
+ <party fullName="Office of U.S. Trustee" lastName="Office of U.S. Trustee" role="U.S. Trustee"></party>
+ <party firstName="Peter" fullName="Peter C. Fessenden" lastName="Fessenden" middleName="C." role="Trustee"></party>
+ <party firstName="Jenna" fullName="Jenna Berry" lastName="Berry" role="Creditor"></party>
+ <party fullName="Brent Haskell" lastName="Brent Haskell" role="Creditor"></party>
+ <party fullName="Eunice Haskell" lastName="Eunice Haskell" role="Creditor"></party>
+ <party fullName="Ernest Haskell" lastName="Ernest Haskell" role="Creditor"></party>
+</extension>
+<titleInfo>
+ <title>Randall K. Haskell</title>
+ <partNumber>1:04-bk-11037</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-meb-1_04-bk-11037/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">1:04-bk-11037;04-11037</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court District of Maine</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Bangor</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Randall K. Haskell</displayForm>
+ <namePart type="family">Haskell</namePart>
+ <namePart type="given">Randall</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Office of U.S. Trustee</displayForm>
+ <namePart type="family">Office of U.S. Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>U.S. Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Peter C. Fessenden</displayForm>
+ <namePart type="family">Fessenden</namePart>
+ <namePart type="given">Peter</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Jenna Berry</displayForm>
+ <namePart type="family">Berry</namePart>
+ <namePart type="given">Jenna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Brent Haskell</displayForm>
+ <namePart type="family">Brent Haskell</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Eunice Haskell</displayForm>
+ <namePart type="family">Eunice Haskell</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Ernest Haskell</displayForm>
+ <namePart type="family">Ernest Haskell</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-meb-1_04-bk-11037</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>meb</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Maine</courtState>
+ <courtSortOrder>3220</courtSortOrder>
+ <caseNumber>1:04-bk-11037</caseNumber>
+ <caseOffice>Bangor</caseOffice>
+ <party firstName="Randall" fullName="Randall K. Haskell" lastName="Haskell" middleName="K." role="Debtor"></party>
+ <party fullName="Office of U.S. Trustee" lastName="Office of U.S. Trustee" role="U.S. Trustee"></party>
+ <party firstName="Peter" fullName="Peter C. Fessenden" lastName="Fessenden" middleName="C." role="Trustee"></party>
+ <party firstName="Jenna" fullName="Jenna Berry" lastName="Berry" role="Creditor"></party>
+ <party fullName="Brent Haskell" lastName="Brent Haskell" role="Creditor"></party>
+ <party fullName="Eunice Haskell" lastName="Eunice Haskell" role="Creditor"></party>
+ <party fullName="Ernest Haskell" lastName="Ernest Haskell" role="Creditor"></party>
+ <state>Maine</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-meb-1_04-bk-11037-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-meb-1_04-bk-11037/USCOURTS-meb-1_04-bk-11037-0/mods.xml">
+ <titleInfo>
+  <title>Randall K. Haskell</title>
+  <subTitle>Memorandum of Decision (related document(s):62 Order on Motion to Dismiss Case, 63 Order Denying Confirmation of Chapter 13 Plan). (ljs,)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-meb-1_04-bk-11037-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181331421</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-meb-1_04-bk-11037/USCOURTS-meb-1_04-bk-11037-0</identifier>
+ <identifier type="former granule identifier">meb-1_04-bk-11037_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-meb-1_04-bk-11037/USCOURTS-meb-1_04-bk-11037-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-meb-1_04-bk-11037/pdf/USCOURTS-meb-1_04-bk-11037-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-bk-11037; Randall K. Haskell; </searchTitle>
+  <courtName>United States Bankruptcy Court District of Maine</courtName>
+  <state>Maine</state>
+  <accessId>USCOURTS-meb-1_04-bk-11037-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-18</dateIssued>
+  <docketText>Memorandum of Decision (related document(s):62 Order on Motion to Dismiss Case, 63 Order Denying Confirmation of Chapter 13 Plan). (ljs,)</docketText>
+</extension>
+</relatedItem>
+</mods>

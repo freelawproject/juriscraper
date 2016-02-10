@@ -1,0 +1,288 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1825e9c39">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-04-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-04-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_11-cv-00684</identifier>
+<identifier type="local">P0b002ee1825e9c39</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-04-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-04-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_11-cv-00684</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_11-cv-00684</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:11-cv-00684</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Clarence" fullName="Clarence Delaney Jr." generation="Jr." lastName="Delaney" role="Plaintiff"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Janine" fullName="Janine Dykeman" lastName="Dykeman" role="Defendant"></party>
+ <party firstName="Kimmberli" fullName="Kimmberli Flory" lastName="Flory" role="Defendant"></party>
+ <party firstName="Sue" fullName="Sue Herba" lastName="Herba" role="Defendant"></party>
+ <party firstName="Lori" fullName="Lori Lavenia" lastName="Lavenia" role="Defendant"></party>
+ <party fullName="Montgomery Transitional Services, Inc." lastName="Montgomery Transitional Services, Inc." role="Defendant"></party>
+ <party fullName="New York State Office of Mental Health" lastName="New York State Office of Mental Health" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Delaney v. Montgomery Transitional Services, Inc. et al</title>
+ <partNumber>1:11-cv-00684</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_11-cv-00684/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-00684;11-684</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Clarence Delaney Jr.</displayForm>
+ <namePart type="family">Delaney</namePart>
+ <namePart type="given">Clarence</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jane Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">Jane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Janine Dykeman</displayForm>
+ <namePart type="family">Dykeman</namePart>
+ <namePart type="given">Janine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kimmberli Flory</displayForm>
+ <namePart type="family">Flory</namePart>
+ <namePart type="given">Kimmberli</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sue Herba</displayForm>
+ <namePart type="family">Herba</namePart>
+ <namePart type="given">Sue</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lori Lavenia</displayForm>
+ <namePart type="family">Lavenia</namePart>
+ <namePart type="given">Lori</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Montgomery Transitional Services, Inc.</displayForm>
+ <namePart type="family">Montgomery Transitional Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>New York State Office of Mental Health</displayForm>
+ <namePart type="family">New York State Office of Mental Health</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_11-cv-00684</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:11-cv-00684</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Clarence" fullName="Clarence Delaney Jr." generation="Jr." lastName="Delaney" role="Plaintiff"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Janine" fullName="Janine Dykeman" lastName="Dykeman" role="Defendant"></party>
+ <party firstName="Kimmberli" fullName="Kimmberli Flory" lastName="Flory" role="Defendant"></party>
+ <party firstName="Sue" fullName="Sue Herba" lastName="Herba" role="Defendant"></party>
+ <party firstName="Lori" fullName="Lori Lavenia" lastName="Lavenia" role="Defendant"></party>
+ <party fullName="Montgomery Transitional Services, Inc." lastName="Montgomery Transitional Services, Inc." role="Defendant"></party>
+ <party fullName="New York State Office of Mental Health" lastName="New York State Office of Mental Health" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_11-cv-00684-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-cv-00684/USCOURTS-nynd-1_11-cv-00684-0/mods.xml">
+ <titleInfo>
+  <title>Delaney v. Montgomery Transitional Services, Inc. et al</title>
+  <subTitle>REPORT-RECOMMENDATION and ORDER re 2 Plaintiff&apos;s MOTION for Leave to Proceed in forma pauperis and 11 Plaintiff&apos;s Amended Complaint. IT IS HEREBY ORDERED that Plaintiff&apos;s Motion to Proceed In Forma Pauperis is granted. IT IS RECOMMENDED that the Amended Complaint be dismissed for failure to state a claim upon which relief may be granted and for failure to establish subject matter jurisdiction. IT IS FURTHER RECOMMENDED that, in light of Plaintiff&apos;s pro se status, prior to any dismissal, Plaintiff be afforded an opportunity to amend his Complaint. The parties have fourteen (14) days within which to file written objections to the foregoing report. Failure to object to this report within fourteen (14) days will preclude appellate review. Objections to R&amp;R due by 12/1/2011. Case Review Deadline 12/8/2011. Signed by Magistrate Judge Randolph F. Treece on 11/17/2011. {Copy of this Report-Recommendation and Order mailed to pro se plaintiff}. (mab)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_11-cv-00684-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ee30d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-cv-00684/USCOURTS-nynd-1_11-cv-00684-0</identifier>
+ <identifier type="former granule identifier">nynd-1_11-cv-00684_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-cv-00684/USCOURTS-nynd-1_11-cv-00684-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_11-cv-00684/pdf/USCOURTS-nynd-1_11-cv-00684-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00684; Delaney v. Montgomery Transitional Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_11-cv-00684-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-11-17</dateIssued>
+  <docketText>REPORT-RECOMMENDATION and ORDER re 2 Plaintiff&apos;s MOTION for Leave to Proceed in forma pauperis and 11 Plaintiff&apos;s Amended Complaint. IT IS HEREBY ORDERED that Plaintiff&apos;s Motion to Proceed In Forma Pauperis is granted. IT IS RECOMMENDED that the Amended Complaint be dismissed for failure to state a claim upon which relief may be granted and for failure to establish subject matter jurisdiction. IT IS FURTHER RECOMMENDED that, in light of Plaintiff&apos;s pro se status, prior to any dismissal, Plaintiff be afforded an opportunity to amend his Complaint. The parties have fourteen (14) days within which to file written objections to the foregoing report. Failure to object to this report within fourteen (14) days will preclude appellate review. Objections to R&amp;R due by 12/1/2011. Case Review Deadline 12/8/2011. Signed by Magistrate Judge Randolph F. Treece on 11/17/2011. {Copy of this Report-Recommendation and Order mailed to pro se plaintiff}. (mab)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_11-cv-00684-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-cv-00684/USCOURTS-nynd-1_11-cv-00684-1/mods.xml">
+ <titleInfo>
+  <title>Delaney v. Montgomery Transitional Services, Inc. et al</title>
+  <subTitle>ORDER adopting Report and Recommendations re 13 Report and Recommendations.. Signed by Chief Judge Gary L. Sharpe on 1/10/12. (Attachments: # (1) Report&amp;Recommendation) (tab)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_11-cv-00684-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ee30e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-cv-00684/USCOURTS-nynd-1_11-cv-00684-1</identifier>
+ <identifier type="former granule identifier">nynd-1_11-cv-00684_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-cv-00684/USCOURTS-nynd-1_11-cv-00684-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_11-cv-00684/pdf/USCOURTS-nynd-1_11-cv-00684-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00684; Delaney v. Montgomery Transitional Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_11-cv-00684-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-10</dateIssued>
+  <docketText>ORDER adopting Report and Recommendations re 13 Report and Recommendations.. Signed by Chief Judge Gary L. Sharpe on 1/10/12. (Attachments: # (1) Report&amp;Recommendation) (tab)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_11-cv-00684-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-cv-00684/USCOURTS-nynd-1_11-cv-00684-2/mods.xml">
+ <titleInfo>
+  <title>Delaney v. Montgomery Transitional Services, Inc. et al</title>
+  <subTitle>REPORT-RECOMMENDATION and ORDER: it is hereby RECOMMENDED that the 22 Second Amended Complaint be dismissed pursuant to 28 U.S.C. Sec. 1959(e)(2)(B)(ii)&amp;(iii) for failure to state a claim upon which relief may be granted and for failure to establish subject matter jurisdiction; and it is further ORDERED, that the Clerk of the Court serve a copy of this Report-Recommendation and Order upon the parties to this action. Objections to R&amp;R due by 3/16/2012. Case Review Deadline 3/23/2012. Signed by Magistrate Judge Randolph F. Treece on 3/2/2012. (A copy of this Report-Recommendation and Order sent via regular mail and certified mail, return receipt requested to pro se plaintiff)(sg )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_11-cv-00684-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ee348</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-cv-00684/USCOURTS-nynd-1_11-cv-00684-2</identifier>
+ <identifier type="former granule identifier">nynd-1_11-cv-00684_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-cv-00684/USCOURTS-nynd-1_11-cv-00684-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_11-cv-00684/pdf/USCOURTS-nynd-1_11-cv-00684-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00684; Delaney v. Montgomery Transitional Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_11-cv-00684-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-03-02</dateIssued>
+  <docketText>REPORT-RECOMMENDATION and ORDER: it is hereby RECOMMENDED that the 22 Second Amended Complaint be dismissed pursuant to 28 U.S.C. Sec. 1959(e)(2)(B)(ii)&amp;(iii) for failure to state a claim upon which relief may be granted and for failure to establish subject matter jurisdiction; and it is further ORDERED, that the Clerk of the Court serve a copy of this Report-Recommendation and Order upon the parties to this action. Objections to R&amp;R due by 3/16/2012. Case Review Deadline 3/23/2012. Signed by Magistrate Judge Randolph F. Treece on 3/2/2012. (A copy of this Report-Recommendation and Order sent via regular mail and certified mail, return receipt requested to pro se plaintiff)(sg )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_11-cv-00684-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-cv-00684/USCOURTS-nynd-1_11-cv-00684-3/mods.xml">
+ <titleInfo>
+  <title>Delaney v. Montgomery Transitional Services, Inc. et al</title>
+  <subTitle>ORDER - That the 23 Report-Recommendation of Magistrate Judge Randolph F. Treece filed on March 2, 2012 is ACCEPTED in its entirety. That the Second Amended Complaint (Dkt. No. 22) is dismissed pursuant to 28 U.S.C. § 1915(e)(2)(B)(ii)&amp;(iii) for failure to statea claim upon which relief may be granted and for failure to establish subjectmatter jurisdiction. Signed by Chief Judge Gary L. Sharpe on 4/26/2012. (Attachments: # (1) Judge Treece&apos;s Report-Recommendation) (jel, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_11-cv-00684-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ee30c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-cv-00684/USCOURTS-nynd-1_11-cv-00684-3</identifier>
+ <identifier type="former granule identifier">nynd-1_11-cv-00684_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_11-cv-00684/USCOURTS-nynd-1_11-cv-00684-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_11-cv-00684/pdf/USCOURTS-nynd-1_11-cv-00684-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00684; Delaney v. Montgomery Transitional Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_11-cv-00684-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-04-26</dateIssued>
+  <docketText>ORDER - That the 23 Report-Recommendation of Magistrate Judge Randolph F. Treece filed on March 2, 2012 is ACCEPTED in its entirety. That the Second Amended Complaint (Dkt. No. 22) is dismissed pursuant to 28 U.S.C. § 1915(e)(2)(B)(ii)&amp;(iii) for failure to statea claim upon which relief may be granted and for failure to establish subjectmatter jurisdiction. Signed by Chief Judge Gary L. Sharpe on 4/26/2012. (Attachments: # (1) Judge Treece&apos;s Report-Recommendation) (jel, )</docketText>
+</extension>
+</relatedItem>
+</mods>

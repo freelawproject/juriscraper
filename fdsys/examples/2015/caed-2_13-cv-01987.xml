@@ -1,0 +1,328 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bdb90">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987</identifier>
+<identifier type="local">P0b002ee18a8bdb90</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-01987</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01987</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01987</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Ivan" fullName="Ivan Carter" lastName="Carter" role="Plaintiff"></party>
+ <party fullName="City of Vallejo" lastName="City of Vallejo" role="Defendant"></party>
+ <party fullName="IDC" lastName="IDC" role="Plaintiff"></party>
+ <party firstName="Sean" fullName="Sean Kenney" lastName="Kenney" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Thompson" lastName="Thompson" role="Defendant"></party>
+ <party fullName="Vallejo Police Department" lastName="Vallejo Police Department" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>IDC v. City of Vallejo et al</title>
+ <partNumber>2:13-cv-01987</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-01987;13-1987</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ivan Carter</displayForm>
+ <namePart type="family">Carter</namePart>
+ <namePart type="given">Ivan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>City of Vallejo</displayForm>
+ <namePart type="family">City of Vallejo</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>IDC</displayForm>
+ <namePart type="family">IDC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sean Kenney</displayForm>
+ <namePart type="family">Kenney</namePart>
+ <namePart type="given">Sean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Thompson</displayForm>
+ <namePart type="family">Thompson</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vallejo Police Department</displayForm>
+ <namePart type="family">Vallejo Police Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01987</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01987</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Ivan" fullName="Ivan Carter" lastName="Carter" role="Plaintiff"></party>
+ <party fullName="City of Vallejo" lastName="City of Vallejo" role="Defendant"></party>
+ <party fullName="IDC" lastName="IDC" role="Plaintiff"></party>
+ <party firstName="Sean" fullName="Sean Kenney" lastName="Kenney" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Thompson" lastName="Thompson" role="Defendant"></party>
+ <party fullName="Vallejo Police Department" lastName="Vallejo Police Department" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01987-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-0/mods.xml">
+ <titleInfo>
+  <title>IDC v. City of Vallejo et al</title>
+  <subTitle>Order by Magistrate Judge Donna M. Ryu granting 4 Motion to Appoint Guardian ad Litem. .(dmrlc2, COURT STAFF) (Filed on 8/5/2013) [Transferred from cand on 9/24/2013.]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/pdf/USCOURTS-caed-2_13-cv-01987-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5834</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01987_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/pdf/USCOURTS-caed-2_13-cv-01987-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01987; IDC v. City of Vallejo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01987-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-08-05</dateIssued>
+  <docketText>Order by Magistrate Judge Donna M. Ryu granting 4 Motion to Appoint Guardian ad Litem. .(dmrlc2, COURT STAFF) (Filed on 8/5/2013) [Transferred from cand on 9/24/2013.]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01987-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-1/mods.xml">
+ <titleInfo>
+  <title>IDC v. City of Vallejo et al</title>
+  <subTitle>ORDER TRANSFERRING CASE to the Eastern District of California. Signed by Judge Thelton E. Henderson on 09/23/13. (tehlc3, COURT STAFF) (Filed on 9/23/2013) [Transferred from cand on 9/24/2013.]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/pdf/USCOURTS-caed-2_13-cv-01987-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5832</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01987_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/pdf/USCOURTS-caed-2_13-cv-01987-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01987; IDC v. City of Vallejo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01987-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-09-23</dateIssued>
+  <docketText>ORDER TRANSFERRING CASE to the Eastern District of California. Signed by Judge Thelton E. Henderson on 09/23/13. (tehlc3, COURT STAFF) (Filed on 9/23/2013) [Transferred from cand on 9/24/2013.]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01987-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-2/mods.xml">
+ <titleInfo>
+  <title>IDC v. City of Vallejo et al</title>
+  <subTitle>ORDER granting in part and denying in part 21 Motion to Dismiss signed by Magistrate Judge Dale A. Drozd on 12/17/13: The complaint&apos;s second cause of action and claim for punitive damages against the City of Vallejo are dismissed. Plaintiff is granted twenty-eight days from the date of this order to file an amended complaint. (Kaminski, H)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/pdf/USCOURTS-caed-2_13-cv-01987-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5833</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01987_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/pdf/USCOURTS-caed-2_13-cv-01987-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01987; IDC v. City of Vallejo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01987-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-12-18</dateIssued>
+  <docketText>ORDER granting in part and denying in part 21 Motion to Dismiss signed by Magistrate Judge Dale A. Drozd on 12/17/13: The complaint&apos;s second cause of action and claim for punitive damages against the City of Vallejo are dismissed. Plaintiff is granted twenty-eight days from the date of this order to file an amended complaint. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01987-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-3/mods.xml">
+ <titleInfo>
+  <title>IDC v. City of Vallejo et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 6/5/2014. Defendants&apos; 2/27/2014 27 Motion to Dismiss is GRANTED in part and DENIED in part. Plaintiff is granted 21 days from date of Order to file a Second Amended Complaint. If any defendant named in Amended Complaint is named as a defendant in Second Amended Complaint, that defendant shall respond to pleading within 28 days after it is filed and served. If plaintiff does not file a Second Amended Complaint within the 21-day period, this action shall proceed on claims found in Amended Complaint that have not been dismissed and defendants shall file an Answer within 14 days thereafter. (Marciel, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/pdf/USCOURTS-caed-2_13-cv-01987-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5837</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-3</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01987_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/pdf/USCOURTS-caed-2_13-cv-01987-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01987; IDC v. City of Vallejo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01987-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-06-06</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 6/5/2014. Defendants&apos; 2/27/2014 27 Motion to Dismiss is GRANTED in part and DENIED in part. Plaintiff is granted 21 days from date of Order to file a Second Amended Complaint. If any defendant named in Amended Complaint is named as a defendant in Second Amended Complaint, that defendant shall respond to pleading within 28 days after it is filed and served. If plaintiff does not file a Second Amended Complaint within the 21-day period, this action shall proceed on claims found in Amended Complaint that have not been dismissed and defendants shall file an Answer within 14 days thereafter. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01987-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-4/mods.xml">
+ <titleInfo>
+  <title>IDC v. City of Vallejo et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 7/17/14 ORDERING a Status Conference set for 8/22/2014 at 10:00 AM in Courtroom 27 (DAD) before Magistrate Judge Dale A. Drozd. Plaintiff shall file and serve a status report on or before August 8, 2014, and defendants shall file and serve a status report on or before August 15, 2014. The parties are cautioned that failure to file a status report or failure to appear at the status conference may result in an order imposing an appropriate sanction. See Local Rules 110 and 183. (Becknal, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/pdf/USCOURTS-caed-2_13-cv-01987-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5835</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-4</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01987_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/pdf/USCOURTS-caed-2_13-cv-01987-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01987; IDC v. City of Vallejo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01987-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-07-18</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 7/17/14 ORDERING a Status Conference set for 8/22/2014 at 10:00 AM in Courtroom 27 (DAD) before Magistrate Judge Dale A. Drozd. Plaintiff shall file and serve a status report on or before August 8, 2014, and defendants shall file and serve a status report on or before August 15, 2014. The parties are cautioned that failure to file a status report or failure to appear at the status conference may result in an order imposing an appropriate sanction. See Local Rules 110 and 183. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01987-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-5/mods.xml">
+ <titleInfo>
+  <title>IDC v. City of Vallejo et al</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Dale A. Drozd on 1/5/2015 ORDERING that this action is DISMISSED with prejudice pursuant to FRCP 41(a)(2). The Parties shall bear their own costs and attorneys&apos; fees. CASE CLOSED. (Zignago, K.)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/pdf/USCOURTS-caed-2_13-cv-01987-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5836</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-5</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01987_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01987/USCOURTS-caed-2_13-cv-01987-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01987/pdf/USCOURTS-caed-2_13-cv-01987-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01987; IDC v. City of Vallejo et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01987-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Dale A. Drozd on 1/5/2015 ORDERING that this action is DISMISSED with prejudice pursuant to FRCP 41(a)(2). The Parties shall bear their own costs and attorneys&apos; fees. CASE CLOSED. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+</mods>

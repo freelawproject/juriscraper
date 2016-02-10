@@ -1,0 +1,236 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b11a6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03061</identifier>
+<identifier type="local">P0b002ee1817b11a6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_09-cv-03061</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_09-cv-03061</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:09-cv-03061</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:3601 Fair Housing Act</cause>
+ <party firstName="Tracy" fullName="Tracy Hill" lastName="Hill" role="Plaintiff"></party>
+ <party fullName="Village of Loomis, Nebraska" lastName="Village of Loomis, Nebraska" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Hill v. Village of Loomis, Nebraska</title>
+ <partNumber>4:09-cv-03061</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03061/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:09-cv-03061;09-3061</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Tracy Hill</displayForm>
+ <namePart type="family">Hill</namePart>
+ <namePart type="given">Tracy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Village of Loomis, Nebraska</displayForm>
+ <namePart type="family">Village of Loomis, Nebraska</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_09-cv-03061</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:09-cv-03061</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:3601 Fair Housing Act</cause>
+ <party firstName="Tracy" fullName="Tracy Hill" lastName="Hill" role="Plaintiff"></party>
+ <party fullName="Village of Loomis, Nebraska" lastName="Village of Loomis, Nebraska" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03061-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03061/USCOURTS-ned-4_09-cv-03061-0/mods.xml">
+ <titleInfo>
+  <title>Hill v. Village of Loomis, Nebraska</title>
+  <subTitle>ORDER - The motion to withdraw as counsel for the defendant filed by Roger Shiffermiller, Patrick Cooper, and Fraser Stryker PC, LLO, (filing no. 16), is granted. Ordered by Judge Richard G. Kopf. (GJG)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03061-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a0185</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03061/USCOURTS-ned-4_09-cv-03061-0</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03061_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03061/USCOURTS-ned-4_09-cv-03061-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03061/pdf/USCOURTS-ned-4_09-cv-03061-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03061; Hill v. Village of Loomis, Nebraska; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03061-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-06-12</dateIssued>
+  <docketText>ORDER - The motion to withdraw as counsel for the defendant filed by Roger Shiffermiller, Patrick Cooper, and Fraser Stryker PC, LLO, (filing no. 16), is granted. Ordered by Judge Richard G. Kopf. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03061-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03061/USCOURTS-ned-4_09-cv-03061-1/mods.xml">
+ <titleInfo>
+  <title>Hill v. Village of Loomis, Nebraska</title>
+  <subTitle>MEMORANDUM AND ORDER granting 19 Motion to Strike. The defendant&apos;s jury demand was due on June 4, 2009. It was untimely filed on June 5, 2009. The plaintiffs motion strike the defendant&apos;s jury demand as untimely, (filing no. 19), will be granted. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03061-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a0184</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03061/USCOURTS-ned-4_09-cv-03061-1</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03061_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03061/USCOURTS-ned-4_09-cv-03061-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03061/pdf/USCOURTS-ned-4_09-cv-03061-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03061; Hill v. Village of Loomis, Nebraska; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03061-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-06-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 19 Motion to Strike. The defendant&apos;s jury demand was due on June 4, 2009. It was untimely filed on June 5, 2009. The plaintiffs motion strike the defendant&apos;s jury demand as untimely, (filing no. 19), will be granted. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03061-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03061/USCOURTS-ned-4_09-cv-03061-2/mods.xml">
+ <titleInfo>
+  <title>Hill v. Village of Loomis, Nebraska</title>
+  <subTitle>MEMORANDUM AND ORDER - With the agreement of Judge Piester, the Chief Judge and the other district judges, Judge Kopf has begun handling all magistrate matters previously handled by Judge Piester. As to those cases listed, unless a party files a motion to request a telephonic planning conference on or before July 10, 2009, no planning conference will be held to discuss the scheduling of the case to trial, and a final progression order will be entered based on the representations set forth in the parties&apos; Rule 26(f) Report. Ordered by Judge Richard G. Kopf. (LKH)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03061-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a0186</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03061/USCOURTS-ned-4_09-cv-03061-2</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03061_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03061/USCOURTS-ned-4_09-cv-03061-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03061/pdf/USCOURTS-ned-4_09-cv-03061-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03061; Hill v. Village of Loomis, Nebraska; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03061-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-07-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - With the agreement of Judge Piester, the Chief Judge and the other district judges, Judge Kopf has begun handling all magistrate matters previously handled by Judge Piester. As to those cases listed, unless a party files a motion to request a telephonic planning conference on or before July 10, 2009, no planning conference will be held to discuss the scheduling of the case to trial, and a final progression order will be entered based on the representations set forth in the parties&apos; Rule 26(f) Report. Ordered by Judge Richard G. Kopf. (LKH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03061-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03061/USCOURTS-ned-4_09-cv-03061-3/mods.xml">
+ <titleInfo>
+  <title>Hill v. Village of Loomis, Nebraska</title>
+  <subTitle>ORDER. It is ordered that: (1)The following matter previously scheduled before the undersigned is herewith referred to Judge Zwart, to wit,(A)Nature of hearing:Pretrial conference.(B)Date and time of hearing: Thursday, September 16, 2010, at 11:00 a.m.(C)Place of hearing: Judge Zwart&apos;s chambers, Room 566, United States Courthouse and Federal Building, 100 Centennial Mall, North, Lincoln, Nebraska.(2)Judge Zwart will issue a report and recommendation or order as is appropriate. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03061-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a0183</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03061/USCOURTS-ned-4_09-cv-03061-3</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03061_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03061/USCOURTS-ned-4_09-cv-03061-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03061/pdf/USCOURTS-ned-4_09-cv-03061-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03061; Hill v. Village of Loomis, Nebraska; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03061-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-01-22</dateIssued>
+  <docketText>ORDER. It is ordered that: (1)The following matter previously scheduled before the undersigned is herewith referred to Judge Zwart, to wit,(A)Nature of hearing:Pretrial conference.(B)Date and time of hearing: Thursday, September 16, 2010, at 11:00 a.m.(C)Place of hearing: Judge Zwart&apos;s chambers, Room 566, United States Courthouse and Federal Building, 100 Centennial Mall, North, Lincoln, Nebraska.(2)Judge Zwart will issue a report and recommendation or order as is appropriate. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+</mods>

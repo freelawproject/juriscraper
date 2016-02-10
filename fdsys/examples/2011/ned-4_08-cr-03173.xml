@@ -1,0 +1,640 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b5368">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173</identifier>
+<identifier type="local">P0b002ee1817b5368</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_08-cr-03173</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cr-03173</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cr-03173</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="John" fullName="John S. Cisneros" lastName="Cisneros" middleName="S." role="Defendant"></party>
+ <party firstName="Brandi" fullName="Brandi L. Phillips" lastName="Phillips" middleName="L." role="Defendant"></party>
+ <party fullName="Taz" lastName="Taz" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Cisneros et al</title>
+ <partNumber>4:08-cr-03173</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:08-cr-03173;08-3173</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John S. Cisneros</displayForm>
+ <namePart type="family">Cisneros</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brandi L. Phillips</displayForm>
+ <namePart type="family">Phillips</namePart>
+ <namePart type="given">Brandi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Taz</displayForm>
+ <namePart type="family">Taz</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cr-03173</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cr-03173</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="John" fullName="John S. Cisneros" lastName="Cisneros" middleName="S." role="Defendant"></party>
+ <party firstName="Brandi" fullName="Brandi L. Phillips" lastName="Phillips" middleName="L." role="Defendant"></party>
+ <party fullName="Taz" lastName="Taz" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Michael D. Nelson appointed as counsel as to defendant Brandi L. Phillips as ordered by Magistrate Judge David L. Piester. (SED)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22ae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-0</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-12-23</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Michael D. Nelson appointed as counsel as to defendant Brandi L. Phillips as ordered by Magistrate Judge David L. Piester. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Brandi L. Phillips as ordered by Magistrate Judge David L. Piester. (SED)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-1</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-12-23</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Brandi L. Phillips as ordered by Magistrate Judge David L. Piester. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Michael J. Tasset appointed as counsel as to defendant John S. Cisneros as ordered by Magistrate Judge David L. Piester. (SED)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22a9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-2</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-01-09</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Michael J. Tasset appointed as counsel as to defendant John S. Cisneros as ordered by Magistrate Judge David L. Piester. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>ORDER granting 28 Motion to Seal and filing no.29 shall be maintained as a sealed document as to John S. Cisneros (1). Ordered by Magistrate Judge David L. Piester. (LKH)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c21bd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-3</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-16</dateIssued>
+  <docketText>ORDER granting 28 Motion to Seal and filing no.29 shall be maintained as a sealed document as to John S. Cisneros (1). Ordered by Magistrate Judge David L. Piester. (LKH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>ORDER regarding 27 Motion to Modify Conditions of Release as to John S. Cisneros (1). Upon consideration of the defendant&apos;s motion to amend conditions of release, filing no. 27, IT IS ORDERED: The motion for modification of conditions of release is denied subject to the following. The motion may be renewed at such as Priscilla Huff: 1. (a) has been admitted to participate in drug court or (b) has begun an intensive treatment program, and 2. can document that she has tested clear of drugs for three consecutive weeks. Ordered by Magistrate Judge David L. Piester. (LKH)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c21bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-4</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-01-16</dateIssued>
+  <docketText>ORDER regarding 27 Motion to Modify Conditions of Release as to John S. Cisneros (1). Upon consideration of the defendant&apos;s motion to amend conditions of release, filing no. 27, IT IS ORDERED: The motion for modification of conditions of release is denied subject to the following. The motion may be renewed at such as Priscilla Huff: 1. (a) has been admitted to participate in drug court or (b) has begun an intensive treatment program, and 2. can document that she has tested clear of drugs for three consecutive weeks. Ordered by Magistrate Judge David L. Piester. (LKH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>ORDER regarding Motions. IT IS ORDERED: Defendant&apos;s motion strike incomplete document (filing no. 34) is granted and the clerk is directed to strike the document. Ordered by Magistrate Judge David L. Piester. (LKH)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22ab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-5</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-02-04</dateIssued>
+  <docketText>ORDER regarding Motions. IT IS ORDERED: Defendant&apos;s motion strike incomplete document (filing no. 34) is granted and the clerk is directed to strike the document. Ordered by Magistrate Judge David L. Piester. (LKH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>ORDER granting 41 Motion to Continue as to John S. Cisneros (1). Trial of this matter is continued to 9:00 a.m., March 23, 2009 before the Honorable Warren K. Urbom in Courtroom 4, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. Jury selection will be held at commencement of trial. The time between February 18, 2009 and March 23, 2009 shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge David L. Piester. (LKH)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22ac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-6</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-02-18</dateIssued>
+  <docketText>ORDER granting 41 Motion to Continue as to John S. Cisneros (1). Trial of this matter is continued to 9:00 a.m., March 23, 2009 before the Honorable Warren K. Urbom in Courtroom 4, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. Jury selection will be held at commencement of trial. The time between February 18, 2009 and March 23, 2009 shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge David L. Piester. (LKH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding petition for action on conditions of pretrial release47 as to defendant John S. Cisneros. The defendant admitted the allegations in the petition. I therefore find that the allegations of the petition are true. The previous order releasing the defendant on conditions, filing 25, as amended, is revoked. Defendant shall be detained until further order. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22de</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-7</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2009-04-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding petition for action on conditions of pretrial release47 as to defendant John S. Cisneros. The defendant admitted the allegations in the petition. I therefore find that the allegations of the petition are true. The previous order releasing the defendant on conditions, filing 25, as amended, is revoked. Defendant shall be detained until further order. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITURE sustaining 62 Motion as to John S. Cisneros (1) and Brandi L. Phillips (2). Based upon Count II of the Indictment and the Defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $579.00 in United States currency. The Defendants interest in said property is hereby forfeited to the United States for disposition in accordance with the law. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C., § 853(n), in which all interests will be addressed. Ordered by Senior Judge Warren K. Urbom. (1 Certified copy to USM)(JAB)PRELIMINARY ORDER OF FORFEITURE sustaining 62 Motion as to John S. Cisneros (1) and Brandi L. Phillips (2). Based upon Count II of the Indictment and the Defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $579.00 in United States currency. The Defendants interest in said property is hereby forfeited to the United States for disposition in accordance with the law. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C., § 853(n), in which all interests will be addressed. Ordered by Senior Judge Warren K. Urbom. (1 Certified copy to USM)(JAB)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-8</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2009-04-06</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITURE sustaining 62 Motion as to John S. Cisneros (1) and Brandi L. Phillips (2). Based upon Count II of the Indictment and the Defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $579.00 in United States currency. The Defendants interest in said property is hereby forfeited to the United States for disposition in accordance with the law. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C., § 853(n), in which all interests will be addressed. Ordered by Senior Judge Warren K. Urbom. (1 Certified copy to USM)(JAB)PRELIMINARY ORDER OF FORFEITURE sustaining 62 Motion as to John S. Cisneros (1) and Brandi L. Phillips (2). Based upon Count II of the Indictment and the Defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $579.00 in United States currency. The Defendants interest in said property is hereby forfeited to the United States for disposition in accordance with the law. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C., § 853(n), in which all interests will be addressed. Ordered by Senior Judge Warren K. Urbom. (1 Certified copy to USM)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant(s) John S. Cisneros. Ordered by Senior Judge Warren K. Urbom. (EJL)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22e0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-9</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2009-06-10</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant(s) John S. Cisneros. Ordered by Senior Judge Warren K. Urbom. (EJL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant(s) Brandi L. Phillips. Ordered by Senior Judge Warren K. Urbom. (EJL)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22a8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-10</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2009-06-10</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant(s) Brandi L. Phillips. Ordered by Senior Judge Warren K. Urbom. (EJL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>FINAL ORDER OF FORFEITURE regarding 77 Motion for Final Forfeiture as to defendants John S. Cisneros (1), and Brandi L. Phillips (2). The Plaintiff&apos;s Motion for Final Order of Forfeiture is sustained. All right, title and interest in and to the $579.00 in United States currency, held by any person or entity, is hereby forever barred and foreclosed. The same hereby is, forfeited to the United States of America. The United States Marshal for the District of Nebraska is directed to dispose of said property in accordance with law. Ordered by Senior Judge Warren K. Urbom. (1 Certified copy to USM)(LKH)FINAL ORDER OF FORFEITURE regarding 77 Motion for Final Forfeiture as to defendants John S. Cisneros (1), and Brandi L. Phillips (2). The Plaintiff&apos;s Motion for Final Order of Forfeiture is sustained. All right, title and interest in and to the $579.00 in United States currency, held by any person or entity, is hereby forever barred and foreclosed. The same hereby is, forfeited to the United States of America. The United States Marshal for the District of Nebraska is directed to dispose of said property in accordance with law. Ordered by Senior Judge Warren K. Urbom. (1 Certified copy to USM)(LKH)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22aa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-11</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2009-06-22</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE regarding 77 Motion for Final Forfeiture as to defendants John S. Cisneros (1), and Brandi L. Phillips (2). The Plaintiff&apos;s Motion for Final Order of Forfeiture is sustained. All right, title and interest in and to the $579.00 in United States currency, held by any person or entity, is hereby forever barred and foreclosed. The same hereby is, forfeited to the United States of America. The United States Marshal for the District of Nebraska is directed to dispose of said property in accordance with law. Ordered by Senior Judge Warren K. Urbom. (1 Certified copy to USM)(LKH)FINAL ORDER OF FORFEITURE regarding 77 Motion for Final Forfeiture as to defendants John S. Cisneros (1), and Brandi L. Phillips (2). The Plaintiff&apos;s Motion for Final Order of Forfeiture is sustained. All right, title and interest in and to the $579.00 in United States currency, held by any person or entity, is hereby forever barred and foreclosed. The same hereby is, forfeited to the United States of America. The United States Marshal for the District of Nebraska is directed to dispose of said property in accordance with law. Ordered by Senior Judge Warren K. Urbom. (1 Certified copy to USM)(LKH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>JUDGMENT as to defendant John S. Cisneros (1). DEFENDANT pleaded guilty to counts I and II of the Indictment and is committed to the custody of the Bureau of Prisons for 121 months; 5 years supervised release with special conditions; $100.00 special assessment. Final order of forfeiture filed on 06/22/2009 as to Count II. The defendant shall forfeit the defendants interest in the following property to the United States: $579.00 in United States currency. Ordered by Senior Judge Warren K. Urbom. (4 Certified copies to USM)(LKH, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22df</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-12</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2009-06-22</dateIssued>
+  <docketText>JUDGMENT as to defendant John S. Cisneros (1). DEFENDANT pleaded guilty to counts I and II of the Indictment and is committed to the custody of the Bureau of Prisons for 121 months; 5 years supervised release with special conditions; $100.00 special assessment. Final order of forfeiture filed on 06/22/2009 as to Count II. The defendant shall forfeit the defendants interest in the following property to the United States: $579.00 in United States currency. Ordered by Senior Judge Warren K. Urbom. (4 Certified copies to USM)(LKH, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>JUDGMENT as to defendant Brandi L. Phillips (2). DEFENDANT pleaded guilty to counts I and II of the Indictment and is committed to the custody of the Bureau of Prisons for 87 months; 5 years supervised release with special conditions; $100.00 special assessment. Final order of forfeiture filed on 6/22/09 as to Count II. The defendant shall forfeit the defendants interest in the following property to the United States: $579.00 in U.S. currency. Ordered by Senior Judge Warren K. Urbom. (4 Certified copies to USM)(LKH)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c21ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-13</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2009-07-01</dateIssued>
+  <docketText>JUDGMENT as to defendant Brandi L. Phillips (2). DEFENDANT pleaded guilty to counts I and II of the Indictment and is committed to the custody of the Bureau of Prisons for 87 months; 5 years supervised release with special conditions; $100.00 special assessment. Final order of forfeiture filed on 6/22/09 as to Count II. The defendant shall forfeit the defendants interest in the following property to the United States: $579.00 in U.S. currency. Ordered by Senior Judge Warren K. Urbom. (4 Certified copies to USM)(LKH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>ORDER granting 102 Motion to Restrict pursuant to the E-Government Act as to John S. Cisneros (1). Ordered by Senior Judge Warren K. Urbom. ( EJL)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22ad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-14</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2010-08-16</dateIssued>
+  <docketText>ORDER granting 102 Motion to Restrict pursuant to the E-Government Act as to John S. Cisneros (1). Ordered by Senior Judge Warren K. Urbom. ( EJL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>ORDER granting 106 Motion to Restrict pursuant to the E-Government Act as to John S. Cisneros (1). Ordered by Senior Judge Warren K. Urbom. ( EJL)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c21bb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-15</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2010-09-20</dateIssued>
+  <docketText>ORDER granting 106 Motion to Restrict pursuant to the E-Government Act as to John S. Cisneros (1). Ordered by Senior Judge Warren K. Urbom. ( EJL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>ORDER granting 115 Motion to Restrict pursuant to the E-Government Act as to Brandi L. Phillips (2). Ordered by Senior Judge Warren K. Urbom. ( EJL)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-16</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2011-01-13</dateIssued>
+  <docketText>ORDER granting 115 Motion to Restrict pursuant to the E-Government Act as to Brandi L. Phillips (2). Ordered by Senior Judge Warren K. Urbom. ( EJL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03173-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Cisneros et al</title>
+  <subTitle>ORDER granting 118 Motion to Restrict pursuant to the E-Government Act as to Brandi L. Phillips (2). Ordered by Senior Judge Warren K. Urbom. ( EJL)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03173-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c22b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-17</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03173_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03173/USCOURTS-ned-4_08-cr-03173-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03173/pdf/USCOURTS-ned-4_08-cr-03173-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03173; USA v. Cisneros et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03173-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2011-01-18</dateIssued>
+  <docketText>ORDER granting 118 Motion to Restrict pursuant to the E-Government Act as to Brandi L. Phillips (2). Ordered by Senior Judge Warren K. Urbom. ( EJL)</docketText>
+</extension>
+</relatedItem>
+</mods>

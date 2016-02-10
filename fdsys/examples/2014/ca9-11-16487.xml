@@ -1,0 +1,349 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c14d24a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Ninth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-04-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-10-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca9-11-16487</identifier>
+<identifier type="local">P0b002ee18c14d24a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-04-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-04-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca9-11-16487</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca9-11-16487</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca9</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtSortOrder>1090</courtSortOrder>
+ <caseNumber>11-16487</caseNumber>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party fullName="Arizona Attorneys for Criminal Justice" lastName="Arizona Attorneys for Criminal Justice" role="Amicus Curiae"></party>
+ <party firstName="Joseph" fullName="Joseph M. Arpaio" lastName="Arpaio" middleName="M." role="Appellee"></party>
+ <party firstName="Devon" fullName="Devon Carbado" lastName="Carbado" role="Amicus Curiae"></party>
+ <party firstName="Isaac" fullName="Isaac Castro-Armenta" lastName="Castro-Armenta" role="Appellant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Chacon" lastName="Chacon" role="Amicus Curiae"></party>
+ <party firstName="Erwin" fullName="Erwin Chemerinsky" lastName="Chemerinsky" role="Amicus Curiae"></party>
+ <party firstName="Gabriel" fullName="Gabriel J. Chin" lastName="Chin" middleName="J." role="Amicus Curiae"></party>
+ <party fullName="County of Maricopa" lastName="County of Maricopa" role="Appellee"></party>
+ <party firstName="Ingrid" fullName="Ingrid V. Eagly" lastName="Eagly" middleName="V." role="Amicus Curiae"></party>
+ <party firstName="Susan" fullName="Susan Herman" lastName="Herman" role="Amicus Curiae"></party>
+ <party firstName="Angel" fullName="Angel Lopez-Valenzuela" lastName="Lopez-Valenzuela" role="Appellant"></party>
+ <party firstName="William" fullName="William Gerard Montgomery" lastName="Montgomery" middleName="Gerard" role="Appellee"></party>
+ <party firstName="Anthony" fullName="Anthony Paul O&apos;Rourke" lastName="O&apos;Rourke" middleName="Paul" role="Amicus Curiae"></party>
+ <party firstName="Heidi" fullName="Heidi L. Rummel" lastName="Rummel" middleName="L." role="Amicus Curiae"></party>
+ <party firstName="Jayashri" fullName="Jayashri Srikantiah" lastName="Srikantiah" role="Amicus Curiae"></party>
+ <party firstName="Rick" fullName="Rick Su" lastName="Su" role="Amicus Curiae"></party>
+ <party firstName="Robert" fullName="Robert Weisberg" lastName="Weisberg" role="Amicus Curiae"></party>
+ <party firstName="Charles" fullName="Charles D. Weisselberg" lastName="Weisselberg" middleName="D." role="Amicus Curiae"></party>
+ <party firstName="Michael" fullName="Michael Joel Wishnie" lastName="Wishnie" middleName="Joel" role="Amicus Curiae"></party>
+</extension>
+<titleInfo>
+ <title>Angel Lopez-Valenzuela, et al v. County of Maricopa, et al</title>
+ <partNumber>11-16487</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca9-11-16487/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">11-16487;11-16487</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Ninth Circuit</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Arizona Attorneys for Criminal Justice</displayForm>
+ <namePart type="family">Arizona Attorneys for Criminal Justice</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph M. Arpaio</displayForm>
+ <namePart type="family">Arpaio</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Devon Carbado</displayForm>
+ <namePart type="family">Carbado</namePart>
+ <namePart type="given">Devon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Isaac Castro-Armenta</displayForm>
+ <namePart type="family">Castro-Armenta</namePart>
+ <namePart type="given">Isaac</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Jennifer Chacon</displayForm>
+ <namePart type="family">Chacon</namePart>
+ <namePart type="given">Jennifer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Erwin Chemerinsky</displayForm>
+ <namePart type="family">Chemerinsky</namePart>
+ <namePart type="given">Erwin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Gabriel J. Chin</displayForm>
+ <namePart type="family">Chin</namePart>
+ <namePart type="given">Gabriel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>County of Maricopa</displayForm>
+ <namePart type="family">County of Maricopa</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Ingrid V. Eagly</displayForm>
+ <namePart type="family">Eagly</namePart>
+ <namePart type="given">Ingrid</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Susan Herman</displayForm>
+ <namePart type="family">Herman</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Angel Lopez-Valenzuela</displayForm>
+ <namePart type="family">Lopez-Valenzuela</namePart>
+ <namePart type="given">Angel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>William Gerard Montgomery</displayForm>
+ <namePart type="family">Montgomery</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Paul O&apos;Rourke</displayForm>
+ <namePart type="family">O&apos;Rourke</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Heidi L. Rummel</displayForm>
+ <namePart type="family">Rummel</namePart>
+ <namePart type="given">Heidi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Jayashri Srikantiah</displayForm>
+ <namePart type="family">Srikantiah</namePart>
+ <namePart type="given">Jayashri</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Rick Su</displayForm>
+ <namePart type="family">Su</namePart>
+ <namePart type="given">Rick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Weisberg</displayForm>
+ <namePart type="family">Weisberg</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Charles D. Weisselberg</displayForm>
+ <namePart type="family">Weisselberg</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Joel Wishnie</displayForm>
+ <namePart type="family">Wishnie</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Amicus Curiae</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca9-11-16487</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca9</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtSortOrder>1090</courtSortOrder>
+ <caseNumber>11-16487</caseNumber>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party fullName="Arizona Attorneys for Criminal Justice" lastName="Arizona Attorneys for Criminal Justice" role="Amicus Curiae"></party>
+ <party firstName="Joseph" fullName="Joseph M. Arpaio" lastName="Arpaio" middleName="M." role="Appellee"></party>
+ <party firstName="Devon" fullName="Devon Carbado" lastName="Carbado" role="Amicus Curiae"></party>
+ <party firstName="Isaac" fullName="Isaac Castro-Armenta" lastName="Castro-Armenta" role="Appellant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Chacon" lastName="Chacon" role="Amicus Curiae"></party>
+ <party firstName="Erwin" fullName="Erwin Chemerinsky" lastName="Chemerinsky" role="Amicus Curiae"></party>
+ <party firstName="Gabriel" fullName="Gabriel J. Chin" lastName="Chin" middleName="J." role="Amicus Curiae"></party>
+ <party fullName="County of Maricopa" lastName="County of Maricopa" role="Appellee"></party>
+ <party firstName="Ingrid" fullName="Ingrid V. Eagly" lastName="Eagly" middleName="V." role="Amicus Curiae"></party>
+ <party firstName="Susan" fullName="Susan Herman" lastName="Herman" role="Amicus Curiae"></party>
+ <party firstName="Angel" fullName="Angel Lopez-Valenzuela" lastName="Lopez-Valenzuela" role="Appellant"></party>
+ <party firstName="William" fullName="William Gerard Montgomery" lastName="Montgomery" middleName="Gerard" role="Appellee"></party>
+ <party firstName="Anthony" fullName="Anthony Paul O&apos;Rourke" lastName="O&apos;Rourke" middleName="Paul" role="Amicus Curiae"></party>
+ <party firstName="Heidi" fullName="Heidi L. Rummel" lastName="Rummel" middleName="L." role="Amicus Curiae"></party>
+ <party firstName="Jayashri" fullName="Jayashri Srikantiah" lastName="Srikantiah" role="Amicus Curiae"></party>
+ <party firstName="Rick" fullName="Rick Su" lastName="Su" role="Amicus Curiae"></party>
+ <party firstName="Robert" fullName="Robert Weisberg" lastName="Weisberg" role="Amicus Curiae"></party>
+ <party firstName="Charles" fullName="Charles D. Weisselberg" lastName="Weisselberg" middleName="D." role="Amicus Curiae"></party>
+ <party firstName="Michael" fullName="Michael Joel Wishnie" lastName="Wishnie" middleName="Joel" role="Amicus Curiae"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca9-11-16487-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca9-11-16487/USCOURTS-ca9-11-16487-0/mods.xml">
+ <titleInfo>
+  <title>Angel Lopez-Valenzuela, et al v. County of Maricopa, et al</title>
+  <subTitle>FILED OPINION (RAYMOND C. FISHER, RICHARD C. TALLMAN and CONSUELO M. CALLAHAN) AFFIRMED. Judge: RCF Dissenting, Judge: RCT Authoring, FILED AND ENTERED JUDGMENT. [8671263]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca9-11-16487/pdf/USCOURTS-ca9-11-16487-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c17177d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca9-11-16487/USCOURTS-ca9-11-16487-0</identifier>
+ <identifier type="former granule identifier">ca9-11-16487_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca9-11-16487/USCOURTS-ca9-11-16487-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca9-11-16487/pdf/USCOURTS-ca9-11-16487-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 11-16487; Angel Lopez-Valenzuela, et al v. County of Maricopa, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Ninth Circuit</courtName>
+  <accessId>USCOURTS-ca9-11-16487-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-06-18</dateIssued>
+  <docketText>FILED OPINION (RAYMOND C. FISHER, RICHARD C. TALLMAN and CONSUELO M. CALLAHAN) AFFIRMED. Judge: RCF Dissenting, Judge: RCT Authoring, FILED AND ENTERED JUDGMENT. [8671263]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ca9-11-16487-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca9-11-16487/USCOURTS-ca9-11-16487-1/mods.xml">
+ <titleInfo>
+  <title>Angel Lopez-Valenzuela, et al v. County of Maricopa, et al</title>
+  <subTitle>Filed En Banc Order for PUBLICATION (ALEX KOZINSKI) Chief Judge: Upon the vote of a majority of nonrecused active judges, it is ordered that this case be reheard en banc pursuant to Federal Rule of Appellate Procedure 35(a) and Circuit Rule 35-3. The three-judge panel opinion shall not be cited as precedent by or to any court of the Ninth Circuit. Judges Murguia and Hurwitz did not participate in the deliberations or vote in this case. [8922097]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca9-11-16487/pdf/USCOURTS-ca9-11-16487-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c17177b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca9-11-16487/USCOURTS-ca9-11-16487-1</identifier>
+ <identifier type="former granule identifier">ca9-11-16487_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca9-11-16487/USCOURTS-ca9-11-16487-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca9-11-16487/pdf/USCOURTS-ca9-11-16487-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 11-16487; Angel Lopez-Valenzuela, et al v. County of Maricopa, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Ninth Circuit</courtName>
+  <accessId>USCOURTS-ca9-11-16487-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>Filed En Banc Order for PUBLICATION (ALEX KOZINSKI) Chief Judge: Upon the vote of a majority of nonrecused active judges, it is ordered that this case be reheard en banc pursuant to Federal Rule of Appellate Procedure 35(a) and Circuit Rule 35-3. The three-judge panel opinion shall not be cited as precedent by or to any court of the Ninth Circuit. Judges Murguia and Hurwitz did not participate in the deliberations or vote in this case. [8922097]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ca9-11-16487-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca9-11-16487/USCOURTS-ca9-11-16487-2/mods.xml">
+ <titleInfo>
+  <title>Angel Lopez-Valenzuela, et al v. County of Maricopa, et al</title>
+  <subTitle>FILED OPINION (ALEX KOZINSKI, DIARMUID F. O&apos;SCANNLAIN, SIDNEY R. THOMAS, M. MARGARET MCKEOWN, RAYMOND C. FISHER, MARSHA S. BERZON, RICHARD C. TALLMAN, JAY S. BYBEE, MILAN D. SMITH, JR., JACQUELINE H. NGUYEN and PAUL J. WATFORD) REVERSED AND REMANDED. Opinion by Judge Fisher; Concurrence by Judge Nguyen; Dissent by Judge Tallman; Dissent by Judge O???Scannlain. FILED AND ENTERED JUDGMENT. [9277112]</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca9-11-16487/pdf/USCOURTS-ca9-11-16487-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c17177c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca9-11-16487/USCOURTS-ca9-11-16487-2</identifier>
+ <identifier type="former granule identifier">ca9-11-16487_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca9-11-16487/USCOURTS-ca9-11-16487-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca9-11-16487/pdf/USCOURTS-ca9-11-16487-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 11-16487; Angel Lopez-Valenzuela, et al v. County of Maricopa, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Ninth Circuit</courtName>
+  <accessId>USCOURTS-ca9-11-16487-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-10-15</dateIssued>
+  <docketText>FILED OPINION (ALEX KOZINSKI, DIARMUID F. O&apos;SCANNLAIN, SIDNEY R. THOMAS, M. MARGARET MCKEOWN, RAYMOND C. FISHER, MARSHA S. BERZON, RICHARD C. TALLMAN, JAY S. BYBEE, MILAN D. SMITH, JR., JACQUELINE H. NGUYEN and PAUL J. WATFORD) REVERSED AND REMANDED. Opinion by Judge Fisher; Concurrence by Judge Nguyen; Dissent by Judge Tallman; Dissent by Judge O???Scannlain. FILED AND ENTERED JUDGMENT. [9277112]</docketText>
+</extension>
+</relatedItem>
+</mods>

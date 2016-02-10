@@ -1,0 +1,370 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a35a3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03038</identifier>
+<identifier type="local">P0b002ee1817a35a3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_10-cr-03038</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_10-cr-03038</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:10-cr-03038</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Daniel" fullName="Daniel Kuca" lastName="Kuca" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Kuca</title>
+ <partNumber>4:10-cr-03038</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03038/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:10-cr-03038;10-3038</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Daniel Kuca</displayForm>
+ <namePart type="family">Kuca</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_10-cr-03038</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:10-cr-03038</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Daniel" fullName="Daniel Kuca" lastName="Kuca" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03038-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Kuca</title>
+  <subTitle>MEMORANDUM AND ORDER granting 13the defendant&apos;s Motion to Extend Time as to Daniel Kuca (1). Pretrial motions are due on or before July 2, 2010. The trial of this case remains scheduled to commence beforeJudge Richard G. Kopf. Jury Trial set for 7/12/2010 at 09:00 AM in Courtroom 1, Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf. The ends of justice served by granting defendants motion to enlarge time outweigh the interests of the public and the defendant in a speedy trial, and the additional time arising as a result of the granting of the motion, the time between todays date and July 2, 2010, shall be deemed excluded in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03038-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18183f916</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-0</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03038_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03038/pdf/USCOURTS-ned-4_10-cr-03038-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03038; USA v. Kuca; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03038-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-06-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 13the defendant&apos;s Motion to Extend Time as to Daniel Kuca (1). Pretrial motions are due on or before July 2, 2010. The trial of this case remains scheduled to commence beforeJudge Richard G. Kopf. Jury Trial set for 7/12/2010 at 09:00 AM in Courtroom 1, Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf. The ends of justice served by granting defendants motion to enlarge time outweigh the interests of the public and the defendant in a speedy trial, and the additional time arising as a result of the granting of the motion, the time between todays date and July 2, 2010, shall be deemed excluded in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03038-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Kuca</title>
+  <subTitle>MEMORANDUM AND ORDER granting 15 Motion to Continue Trial as to Daniel Kuca (1). The defendants pretrial motions shall be filed on or before August 2, 2010. Trial of this case is continued pending resolution of any pretrial motions filed. The time between July 2, 2010 and August 2, 2010, shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-07-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03038-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18183f919</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-1</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03038_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03038/pdf/USCOURTS-ned-4_10-cr-03038-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03038; USA v. Kuca; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03038-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-07-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 15 Motion to Continue Trial as to Daniel Kuca (1). The defendants pretrial motions shall be filed on or before August 2, 2010. Trial of this case is continued pending resolution of any pretrial motions filed. The time between July 2, 2010 and August 2, 2010, shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03038-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Kuca</title>
+  <subTitle>ORDER granting 17 Oral Motion as to Daniel Kuca (1) Change of Plea Hearing set for 9/29/2010 10:00 AM in Courtroom 2, Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03038-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18183f917</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-2</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03038_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03038/pdf/USCOURTS-ned-4_10-cr-03038-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03038; USA v. Kuca; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03038-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-08-05</dateIssued>
+  <docketText>ORDER granting 17 Oral Motion as to Daniel Kuca (1) Change of Plea Hearing set for 9/29/2010 10:00 AM in Courtroom 2, Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03038-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Kuca</title>
+  <subTitle>ORDER granting 19 Oral Motion as to Daniel Kuca (1) Change of Plea Hearing set for 10/1/2010 11:00 PM in Courtroom 2, Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03038-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18183f91a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-3</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03038_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03038/pdf/USCOURTS-ned-4_10-cr-03038-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03038; USA v. Kuca; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03038-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-09-14</dateIssued>
+  <docketText>ORDER granting 19 Oral Motion as to Daniel Kuca (1) Change of Plea Hearing set for 10/1/2010 11:00 PM in Courtroom 2, Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03038-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Kuca</title>
+  <subTitle>ORDER granting 21 Oral Motion as to Daniel Kuca (1) Change of Plea Hearing set for 10/19/2010 11:00 AM in Courtroom 2, Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03038-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18183f914</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-4</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03038_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03038/pdf/USCOURTS-ned-4_10-cr-03038-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03038; USA v. Kuca; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03038-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-09-29</dateIssued>
+  <docketText>ORDER granting 21 Oral Motion as to Daniel Kuca (1) Change of Plea Hearing set for 10/19/2010 11:00 AM in Courtroom 2, Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03038-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Kuca</title>
+  <subTitle>ORDER granting 23 Oral Motion as to Daniel Kuca (1) Change of Plea Hearing set for 10/20/2010 11:00 AM in Courtroom 2, Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03038-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18183f918</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-5</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03038_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03038/pdf/USCOURTS-ned-4_10-cr-03038-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03038; USA v. Kuca; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03038-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-10-13</dateIssued>
+  <docketText>ORDER granting 23 Oral Motion as to Daniel Kuca (1) Change of Plea Hearing set for 10/20/2010 11:00 AM in Courtroom 2, Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03038-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Kuca</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 35 is hereby sustained. Based upon the Forfeiture Allegation of the Indictment and the plea of guilty, the United States is hereby authorized to seize the above-referenced properties. The Defendant&apos;s interest in said properties is hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 18 U.S.C., § 2253. The aforementioned forfeited properties are to be held by the United States in its secure custody and control. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 18 U.S.C., § 2253, in which all nterests will be addressed. Ordered by Judge Richard G. Kopf. (1 Certified copy to USM)(AOA)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03038-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18183f94e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-6</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03038_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03038/pdf/USCOURTS-ned-4_10-cr-03038-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03038; USA v. Kuca; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03038-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-10-22</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 35 is hereby sustained. Based upon the Forfeiture Allegation of the Indictment and the plea of guilty, the United States is hereby authorized to seize the above-referenced properties. The Defendant&apos;s interest in said properties is hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 18 U.S.C., § 2253. The aforementioned forfeited properties are to be held by the United States in its secure custody and control. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 18 U.S.C., § 2253, in which all nterests will be addressed. Ordered by Judge Richard G. Kopf. (1 Certified copy to USM)(AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03038-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Kuca</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report and Addendum as to defendant Daniel Kuca. It is ordered that:... (2)(A)Defendant&apos;s objections 40 to the presentence report and specifically paragraphs 13 and 26 predicated upon the assertion that the defendant had little specific knowledge of how &quot;LimeWire&quot; worked and he did not intend to distribute child pornography will be resolved at sentencing.(B)On its own motion, and based upon the factors set for in 18 U.S.C. sec. 3553(a) and the excellent probation officer&apos;s recommendation, the Court gives notice that it is contemplating a variance and the imposition of a sentence of 96 months in prison and 5 years of supervised release. (C)The defendant&apos;s motion for deviation or variance 41 predicated on the assertion that the Guidelines have no empirical basis, the enhancements attributed to the defendant are arbitrary, and a sentence of 60 months in prison is appropriate considering the sec. 3553(a) factors will be resolved at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03038-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18183f915</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-7</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03038_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03038/pdf/USCOURTS-ned-4_10-cr-03038-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03038; USA v. Kuca; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03038-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-01-07</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report and Addendum as to defendant Daniel Kuca. It is ordered that:... (2)(A)Defendant&apos;s objections 40 to the presentence report and specifically paragraphs 13 and 26 predicated upon the assertion that the defendant had little specific knowledge of how &quot;LimeWire&quot; worked and he did not intend to distribute child pornography will be resolved at sentencing.(B)On its own motion, and based upon the factors set for in 18 U.S.C. sec. 3553(a) and the excellent probation officer&apos;s recommendation, the Court gives notice that it is contemplating a variance and the imposition of a sentence of 96 months in prison and 5 years of supervised release. (C)The defendant&apos;s motion for deviation or variance 41 predicated on the assertion that the Guidelines have no empirical basis, the enhancements attributed to the defendant are arbitrary, and a sentence of 60 months in prison is appropriate considering the sec. 3553(a) factors will be resolved at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03038-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Kuca</title>
+  <subTitle>FINAL ORDER OF FORFEITURE - The Plaintiff&apos;s Motion for Final Order 45 of Forfeiture is hereby sustained as to Daniel Kuca (1). All right, title and interest in and to the properties held by any person or entity, is hereby forever barred and foreclosed. The properties be, and the same hereby are, forfeited to the United States of America. The United States Marshal for the District of Nebraska is directed to dispose of said property in accordance with law. Ordered by Judge Richard G. Kopf. (1 Certified copy to USM)(AOA)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03038-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18183f94d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-8</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03038_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03038/USCOURTS-ned-4_10-cr-03038-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03038/pdf/USCOURTS-ned-4_10-cr-03038-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03038; USA v. Kuca; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03038-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-01-14</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE - The Plaintiff&apos;s Motion for Final Order 45 of Forfeiture is hereby sustained as to Daniel Kuca (1). All right, title and interest in and to the properties held by any person or entity, is hereby forever barred and foreclosed. The properties be, and the same hereby are, forfeited to the United States of America. The United States Marshal for the District of Nebraska is directed to dispose of said property in accordance with law. Ordered by Judge Richard G. Kopf. (1 Certified copy to USM)(AOA)</docketText>
+</extension>
+</relatedItem>
+</mods>

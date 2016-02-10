@@ -1,0 +1,369 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118a237">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_05-cv-01273</identifier>
+<identifier type="local">P0b002ee18118a237</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_05-cv-01273</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_05-cv-01273</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:05-cv-01273</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Mark" fullName="Mark Bradt" lastName="Bradt" role="Defendant"></party>
+ <party firstName="John" fullName="John Burge" lastName="Burge" role="Defendant"></party>
+ <party firstName="T." fullName="T. Christopher" lastName="Christopher" role="Defendant"></party>
+ <party firstName="John" fullName="John DOE 2" lastName="DOE 2" role="Defendant"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 1" generation="1" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 3" generation="3" lastName="Doe" role="Defendant"></party>
+ <party firstName="Doctor" fullName="Doctor Kooi" lastName="Kooi" role="Defendant"></party>
+ <party firstName="William" fullName="William J. Martens" lastName="Martens" middleName="J." role="Defendant"></party>
+ <party firstName="Hector" fullName="Hector Matos Jr." generation="Jr." lastName="Matos" role="Plaintiff"></party>
+ <party fullName="McKeen" lastName="McKeen" role="Defendant"></party>
+ <party fullName="Porten" lastName="Porten" role="Defendant"></party>
+ <party firstName="E." fullName="E. Rizzo" lastName="Rizzo" role="Defendant"></party>
+ <party firstName="Ahsan" fullName="Ahsan Samina" lastName="Samina" role="Defendant"></party>
+ <party fullName="Sharples" lastName="Sharples" role="Defendant"></party>
+ <party fullName="Staton" lastName="Staton" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Matos v. Burge et al</title>
+ <partNumber>9:05-cv-01273</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_05-cv-01273/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:05-cv-01273;05-1273</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mark Bradt</displayForm>
+ <namePart type="family">Bradt</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Burge</displayForm>
+ <namePart type="family">Burge</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. Christopher</displayForm>
+ <namePart type="family">Christopher</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John DOE 2</displayForm>
+ <namePart type="family">DOE 2</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jane Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">Jane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe 1</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">1</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe 3</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">3</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Doctor Kooi</displayForm>
+ <namePart type="family">Kooi</namePart>
+ <namePart type="given">Doctor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William J. Martens</displayForm>
+ <namePart type="family">Martens</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hector Matos Jr.</displayForm>
+ <namePart type="family">Matos</namePart>
+ <namePart type="given">Hector</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>McKeen</displayForm>
+ <namePart type="family">McKeen</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Porten</displayForm>
+ <namePart type="family">Porten</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>E. Rizzo</displayForm>
+ <namePart type="family">Rizzo</namePart>
+ <namePart type="given">E.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ahsan Samina</displayForm>
+ <namePart type="family">Samina</namePart>
+ <namePart type="given">Ahsan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sharples</displayForm>
+ <namePart type="family">Sharples</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Staton</displayForm>
+ <namePart type="family">Staton</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_05-cv-01273</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:05-cv-01273</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Mark" fullName="Mark Bradt" lastName="Bradt" role="Defendant"></party>
+ <party firstName="John" fullName="John Burge" lastName="Burge" role="Defendant"></party>
+ <party firstName="T." fullName="T. Christopher" lastName="Christopher" role="Defendant"></party>
+ <party firstName="John" fullName="John DOE 2" lastName="DOE 2" role="Defendant"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 1" generation="1" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 3" generation="3" lastName="Doe" role="Defendant"></party>
+ <party firstName="Doctor" fullName="Doctor Kooi" lastName="Kooi" role="Defendant"></party>
+ <party firstName="William" fullName="William J. Martens" lastName="Martens" middleName="J." role="Defendant"></party>
+ <party firstName="Hector" fullName="Hector Matos Jr." generation="Jr." lastName="Matos" role="Plaintiff"></party>
+ <party fullName="McKeen" lastName="McKeen" role="Defendant"></party>
+ <party fullName="Porten" lastName="Porten" role="Defendant"></party>
+ <party firstName="E." fullName="E. Rizzo" lastName="Rizzo" role="Defendant"></party>
+ <party firstName="Ahsan" fullName="Ahsan Samina" lastName="Samina" role="Defendant"></party>
+ <party fullName="Sharples" lastName="Sharples" role="Defendant"></party>
+ <party fullName="Staton" lastName="Staton" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_05-cv-01273-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-01273/USCOURTS-nynd-9_05-cv-01273-0/mods.xml">
+ <titleInfo>
+  <title>Matos v. Burge et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS. RECOMMENDED that 46 MOTION to Dismiss filed by William J. Martens, Mark Bradt, John Burge be DENIED.Objections to R&amp;R due by 9/6/2007, Case Review Deadline 9/11/2007. Signed by Judge David R. Homer on 8/22/07. (nas)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_05-cv-01273-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143b3f5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-01273/USCOURTS-nynd-9_05-cv-01273-0</identifier>
+ <identifier type="former granule identifier">nynd-9_05-cv-01273_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-01273/USCOURTS-nynd-9_05-cv-01273-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_05-cv-01273/pdf/USCOURTS-nynd-9_05-cv-01273-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:05-cv-01273; Matos v. Burge et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_05-cv-01273-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-08-22</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS. RECOMMENDED that 46 MOTION to Dismiss filed by William J. Martens, Mark Bradt, John Burge be DENIED.Objections to R&amp;R due by 9/6/2007, Case Review Deadline 9/11/2007. Signed by Judge David R. Homer on 8/22/07. (nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_05-cv-01273-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-01273/USCOURTS-nynd-9_05-cv-01273-1/mods.xml">
+ <titleInfo>
+  <title>Matos v. Burge et al</title>
+  <subTitle>ORDER that 80 Report and Recommendations is ACCEPTED AND ADOPTED IN ALL RESPECTS. ORDERED denying 46 Motion to Dismiss. Defendants Burge, Bradt and Martens shall file and serve an answer to the complaint on or before 10/25/07. Signed by Judge David N. Hurd on 10/10/07. (nas)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_05-cv-01273-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143b44a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-01273/USCOURTS-nynd-9_05-cv-01273-1</identifier>
+ <identifier type="former granule identifier">nynd-9_05-cv-01273_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-01273/USCOURTS-nynd-9_05-cv-01273-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_05-cv-01273/pdf/USCOURTS-nynd-9_05-cv-01273-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:05-cv-01273; Matos v. Burge et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_05-cv-01273-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-10-11</dateIssued>
+  <docketText>ORDER that 80 Report and Recommendations is ACCEPTED AND ADOPTED IN ALL RESPECTS. ORDERED denying 46 Motion to Dismiss. Defendants Burge, Bradt and Martens shall file and serve an answer to the complaint on or before 10/25/07. Signed by Judge David N. Hurd on 10/10/07. (nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_05-cv-01273-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-01273/USCOURTS-nynd-9_05-cv-01273-2/mods.xml">
+ <titleInfo>
+  <title>Matos v. Burge et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS. RECOMMENDED that this action be DISMISSED as to all claims and all defendants. Objections to R&amp;R due by 12/3/2007, Case Review Deadline 12/6/2007. Signed by Judge David R. Homer on 11/16/07. (nas)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_05-cv-01273-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143b3f4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-01273/USCOURTS-nynd-9_05-cv-01273-2</identifier>
+ <identifier type="former granule identifier">nynd-9_05-cv-01273_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-01273/USCOURTS-nynd-9_05-cv-01273-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_05-cv-01273/pdf/USCOURTS-nynd-9_05-cv-01273-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:05-cv-01273; Matos v. Burge et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_05-cv-01273-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-11-16</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS. RECOMMENDED that this action be DISMISSED as to all claims and all defendants. Objections to R&amp;R due by 12/3/2007, Case Review Deadline 12/6/2007. Signed by Judge David R. Homer on 11/16/07. (nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_05-cv-01273-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-01273/USCOURTS-nynd-9_05-cv-01273-3/mods.xml">
+ <titleInfo>
+  <title>Matos v. Burge et al</title>
+  <subTitle>DECISION&amp;ORDER: accepting&amp;adopting the 84 Report and Recommendation of Magistrate Judge Homer; The above action is DISMISSED in all respects;&amp;The Clerk is directed to file a judgment accordingly. Signed by Judge David N. Hurd on 1/11/2008. (see)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_05-cv-01273-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143b44b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-01273/USCOURTS-nynd-9_05-cv-01273-3</identifier>
+ <identifier type="former granule identifier">nynd-9_05-cv-01273_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-01273/USCOURTS-nynd-9_05-cv-01273-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_05-cv-01273/pdf/USCOURTS-nynd-9_05-cv-01273-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:05-cv-01273; Matos v. Burge et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_05-cv-01273-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-01-11</dateIssued>
+  <docketText>DECISION&amp;ORDER: accepting&amp;adopting the 84 Report and Recommendation of Magistrate Judge Homer; The above action is DISMISSED in all respects;&amp;The Clerk is directed to file a judgment accordingly. Signed by Judge David N. Hurd on 1/11/2008. (see)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,262 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c68c53">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01369</identifier>
+<identifier type="local">P0b002ee186c68c53</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-01369</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01369</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01369</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Balderas" lastName="Balderas" role="Defendant"></party>
+ <party fullName="Bueno" lastName="Bueno" role="Defendant"></party>
+ <party fullName="Cifra" lastName="Cifra" role="Defendant"></party>
+ <party fullName="Governor J. Brown" lastName="Governor J. Brown" role="Defendant"></party>
+ <party firstName="M." fullName="M. Guzman" lastName="Guzman" role="Defendant"></party>
+ <party fullName="Rouger" lastName="Rouger" role="Defendant"></party>
+ <party firstName="Isabel" fullName="Isabel Tubach" lastName="Tubach" role="Plaintiff"></party>
+ <party fullName="Umath" lastName="Umath" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC)Tubach v. Governor J. Brown et al</title>
+ <partNumber>1:12-cv-01369</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01369/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-01369;12-1369</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Balderas</displayForm>
+ <namePart type="family">Balderas</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bueno</displayForm>
+ <namePart type="family">Bueno</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cifra</displayForm>
+ <namePart type="family">Cifra</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Governor J. Brown</displayForm>
+ <namePart type="family">Governor J. Brown</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Guzman</displayForm>
+ <namePart type="family">Guzman</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rouger</displayForm>
+ <namePart type="family">Rouger</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Isabel Tubach</displayForm>
+ <namePart type="family">Tubach</namePart>
+ <namePart type="given">Isabel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Umath</displayForm>
+ <namePart type="family">Umath</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01369</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01369</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Balderas" lastName="Balderas" role="Defendant"></party>
+ <party fullName="Bueno" lastName="Bueno" role="Defendant"></party>
+ <party fullName="Cifra" lastName="Cifra" role="Defendant"></party>
+ <party fullName="Governor J. Brown" lastName="Governor J. Brown" role="Defendant"></party>
+ <party firstName="M." fullName="M. Guzman" lastName="Guzman" role="Defendant"></party>
+ <party fullName="Rouger" lastName="Rouger" role="Defendant"></party>
+ <party firstName="Isabel" fullName="Isabel Tubach" lastName="Tubach" role="Plaintiff"></party>
+ <party fullName="Umath" lastName="Umath" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01369-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01369/USCOURTS-caed-1_12-cv-01369-0/mods.xml">
+ <titleInfo>
+  <title>(PC)Tubach v. Governor J. Brown et al</title>
+  <subTitle>ORDER REQUIRING Plaintiff to Submit More Definite Statement of Facts, signed by Magistrate Judge Sandra M. Snyder on 10/1/13: Response Due Within Thirty (30) Days. (Hellings, J)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01369-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c769b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01369/USCOURTS-caed-1_12-cv-01369-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01369_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01369/USCOURTS-caed-1_12-cv-01369-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01369/pdf/USCOURTS-caed-1_12-cv-01369-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01369; (PC)Tubach v. Governor J. Brown et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01369-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-10-02</dateIssued>
+  <docketText>ORDER REQUIRING Plaintiff to Submit More Definite Statement of Facts, signed by Magistrate Judge Sandra M. Snyder on 10/1/13: Response Due Within Thirty (30) Days. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01369-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01369/USCOURTS-caed-1_12-cv-01369-1/mods.xml">
+ <titleInfo>
+  <title>(PC)Tubach v. Governor J. Brown et al</title>
+  <subTitle>ORDER To SHOW CAUSE Why This Action Should Not Be Dismissed For Plaintiff&apos;s Failure To Obey A Court Order (Doc.7), Response Due Within Fifteen (15) Days, signed by Magistrate Judge Sandra M. Snyder on 11/6/2013. Show Cause Response due by 11/27/2013.(Fahrney, E)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01369-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c769b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01369/USCOURTS-caed-1_12-cv-01369-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01369_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01369/USCOURTS-caed-1_12-cv-01369-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01369/pdf/USCOURTS-caed-1_12-cv-01369-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01369; (PC)Tubach v. Governor J. Brown et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01369-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-11-07</dateIssued>
+  <docketText>ORDER To SHOW CAUSE Why This Action Should Not Be Dismissed For Plaintiff&apos;s Failure To Obey A Court Order (Doc.7), Response Due Within Fifteen (15) Days, signed by Magistrate Judge Sandra M. Snyder on 11/6/2013. Show Cause Response due by 11/27/2013.(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01369-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01369/USCOURTS-caed-1_12-cv-01369-2/mods.xml">
+ <titleInfo>
+  <title>(PC)Tubach v. Governor J. Brown et al</title>
+  <subTitle>ORDER Dismissing Action, without Prejudice, for Failure to Prosecute, signed by Magistrate Judge Sandra M. Snyder on 1/5/14. CASE CLOSED. (Verduzco, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01369-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c769af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01369/USCOURTS-caed-1_12-cv-01369-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01369_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01369/USCOURTS-caed-1_12-cv-01369-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01369/pdf/USCOURTS-caed-1_12-cv-01369-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01369; (PC)Tubach v. Governor J. Brown et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01369-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER Dismissing Action, without Prejudice, for Failure to Prosecute, signed by Magistrate Judge Sandra M. Snyder on 1/5/14. CASE CLOSED. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

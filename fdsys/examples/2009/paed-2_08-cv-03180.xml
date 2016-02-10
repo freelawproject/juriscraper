@@ -1,0 +1,196 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813d8fc0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_08-cv-03180</identifier>
+<identifier type="local">P0b002ee1813d8fc0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_08-cv-03180</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_08-cv-03180</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:08-cv-03180</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="RAYMOND" fullName="RAYMOND COLON" lastName="COLON" role="Petitioner"></party>
+ <party firstName="GERALD" fullName="GERALD L. ROZUM" lastName="ROZUM" middleName="L." role="Respondent"></party>
+ <party fullName="THE ATTORNEY GENERAL OF THE STATE OF PENNA, TOM CORBETT" lastName="THE ATTORNEY GENERAL OF THE STATE OF PENNA, TOM CORBETT" role="Respondent"></party>
+ <party fullName="THE DISTRICT ATTORNEY OF THE COUNTY OF MONTGOMERY, RISA VETRI FERMAN, ESQ." lastName="THE DISTRICT ATTORNEY OF THE COUNTY OF MONTGOMERY, RISA VETRI FERMAN, ESQ." role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>COLON v. ROZUM et al</title>
+ <partNumber>2:08-cv-03180</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_08-cv-03180/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:08-cv-03180;08-3180</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>RAYMOND COLON</displayForm>
+ <namePart type="family">COLON</namePart>
+ <namePart type="given">RAYMOND</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>GERALD L. ROZUM</displayForm>
+ <namePart type="family">ROZUM</namePart>
+ <namePart type="given">GERALD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>THE ATTORNEY GENERAL OF THE STATE OF PENNA, TOM CORBETT</displayForm>
+ <namePart type="family">THE ATTORNEY GENERAL OF THE STATE OF PENNA, TOM CORBETT</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>THE DISTRICT ATTORNEY OF THE COUNTY OF MONTGOMERY, RISA VETRI FERMAN, ESQ.</displayForm>
+ <namePart type="family">THE DISTRICT ATTORNEY OF THE COUNTY OF MONTGOMERY, RISA VETRI FERMAN, ESQ.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_08-cv-03180</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:08-cv-03180</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="RAYMOND" fullName="RAYMOND COLON" lastName="COLON" role="Petitioner"></party>
+ <party firstName="GERALD" fullName="GERALD L. ROZUM" lastName="ROZUM" middleName="L." role="Respondent"></party>
+ <party fullName="THE ATTORNEY GENERAL OF THE STATE OF PENNA, TOM CORBETT" lastName="THE ATTORNEY GENERAL OF THE STATE OF PENNA, TOM CORBETT" role="Respondent"></party>
+ <party fullName="THE DISTRICT ATTORNEY OF THE COUNTY OF MONTGOMERY, RISA VETRI FERMAN, ESQ." lastName="THE DISTRICT ATTORNEY OF THE COUNTY OF MONTGOMERY, RISA VETRI FERMAN, ESQ." role="Respondent"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_08-cv-03180-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-03180/USCOURTS-paed-2_08-cv-03180-0/mods.xml">
+ <titleInfo>
+  <title>COLON v. ROZUM et al</title>
+  <subTitle>MAGISTRATE THOMAS J. RUETER&apos;S REPORT AND RECOMMENDATION THAT THE PETITION FOR WRIT OF HABEAS CORPUS BE DISMISSED AS TIME-BARRED AND THAT NO CERTIFICATE OF APPEALABILITY BE GRANTED. THE PETITIONER MAY FILE OBJECTIONS TO THE REPORT AND RECOMMENDATION. OBJECTIONS TO R&amp;R DUE BY 10/30/2008. SIGNED BY HONORABLE JAMES T. GILES ON 10/9/08. (Attachments: # (1) order) 10/9/08 ENTERED AND COPIES MAILED TO ALL PARTIES, E-MAILED TO COUNSEL.(pr, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_08-cv-03180-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18150ec15</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-03180/USCOURTS-paed-2_08-cv-03180-0</identifier>
+ <identifier type="former granule identifier">paed-2_08-cv-03180_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-03180/USCOURTS-paed-2_08-cv-03180-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_08-cv-03180/pdf/USCOURTS-paed-2_08-cv-03180-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03180; COLON v. ROZUM et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_08-cv-03180-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-10-09</dateIssued>
+  <docketText>MAGISTRATE THOMAS J. RUETER&apos;S REPORT AND RECOMMENDATION THAT THE PETITION FOR WRIT OF HABEAS CORPUS BE DISMISSED AS TIME-BARRED AND THAT NO CERTIFICATE OF APPEALABILITY BE GRANTED. THE PETITIONER MAY FILE OBJECTIONS TO THE REPORT AND RECOMMENDATION. OBJECTIONS TO R&amp;R DUE BY 10/30/2008. SIGNED BY HONORABLE JAMES T. GILES ON 10/9/08. (Attachments: # (1) order) 10/9/08 ENTERED AND COPIES MAILED TO ALL PARTIES, E-MAILED TO COUNSEL.(pr, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_08-cv-03180-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-03180/USCOURTS-paed-2_08-cv-03180-1/mods.xml">
+ <titleInfo>
+  <title>COLON v. ROZUM et al</title>
+  <subTitle>ORDER THAT THE REPORT AND RECOMMENDATION OF MAGISTRATE JUDGE THOMAS J. RUETER IS APPROVED AND ADOPTED; THE PETITION FOR WRIT OF HABEAS CORPUS IS DENIED WITH PREJUDICE AND DISMISSED WITHOUT AN EVIDENTIARY HEARING; PETITIONER&apos;S PETITION TO AMEND IS DENIED AS MOOT; THERE IS NO PROBABLE CAUSE TO ISSUE A CERT. OF APPEALABILITY AND THE CLERK SHALL CLOSE THIS CASE.. SIGNED BY HONORABLE MICHAEL M. BAYLSON ON 1/28/09. 2/2/09 ENTERED AND COPIES MAILED TO ALL PARTIES, E-MAILED TO COUNSEL.(pr, ) Modified on 2/2/2009 (pr, ).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_08-cv-03180-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18150ec14</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-03180/USCOURTS-paed-2_08-cv-03180-1</identifier>
+ <identifier type="former granule identifier">paed-2_08-cv-03180_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-03180/USCOURTS-paed-2_08-cv-03180-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_08-cv-03180/pdf/USCOURTS-paed-2_08-cv-03180-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-03180; COLON v. ROZUM et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_08-cv-03180-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-30</dateIssued>
+  <docketText>ORDER THAT THE REPORT AND RECOMMENDATION OF MAGISTRATE JUDGE THOMAS J. RUETER IS APPROVED AND ADOPTED; THE PETITION FOR WRIT OF HABEAS CORPUS IS DENIED WITH PREJUDICE AND DISMISSED WITHOUT AN EVIDENTIARY HEARING; PETITIONER&apos;S PETITION TO AMEND IS DENIED AS MOOT; THERE IS NO PROBABLE CAUSE TO ISSUE A CERT. OF APPEALABILITY AND THE CLERK SHALL CLOSE THIS CASE.. SIGNED BY HONORABLE MICHAEL M. BAYLSON ON 1/28/09. 2/2/09 ENTERED AND COPIES MAILED TO ALL PARTIES, E-MAILED TO COUNSEL.(pr, ) Modified on 2/2/2009 (pr, ).</docketText>
+</extension>
+</relatedItem>
+</mods>

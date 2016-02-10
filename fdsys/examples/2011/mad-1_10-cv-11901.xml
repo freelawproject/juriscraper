@@ -1,0 +1,170 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814e3f0b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-11901</identifier>
+<identifier type="local">P0b002ee1814e3f0b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_10-cv-11901</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_10-cv-11901</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:10-cv-11901</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>480</natureSuitCode>
+ <natureSuit>Consumer Credit</natureSuit>
+ <cause>28:1441 Notice of Removal</cause>
+ <party fullName="American Express Company" lastName="American Express Company" role="Defendant"></party>
+ <party fullName="Berkshire Hathaway Inc." lastName="Berkshire Hathaway Inc." role="Defendant"></party>
+ <party fullName="GC Services Limited Partnership" lastName="GC Services Limited Partnership" role="Defendant"></party>
+ <party firstName="Bill" fullName="Bill Gaudreau" lastName="Gaudreau" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Gaudreau et al v. American Express Company</title>
+ <partNumber>1:10-cv-11901</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-11901/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-11901;10-11901</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>American Express Company</displayForm>
+ <namePart type="family">American Express Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Berkshire Hathaway Inc.</displayForm>
+ <namePart type="family">Berkshire Hathaway Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GC Services Limited Partnership</displayForm>
+ <namePart type="family">GC Services Limited Partnership</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bill Gaudreau</displayForm>
+ <namePart type="family">Gaudreau</namePart>
+ <namePart type="given">Bill</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_10-cv-11901</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:10-cv-11901</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>480</natureSuitCode>
+ <natureSuit>Consumer Credit</natureSuit>
+ <cause>28:1441 Notice of Removal</cause>
+ <party fullName="American Express Company" lastName="American Express Company" role="Defendant"></party>
+ <party fullName="Berkshire Hathaway Inc." lastName="Berkshire Hathaway Inc." role="Defendant"></party>
+ <party fullName="GC Services Limited Partnership" lastName="GC Services Limited Partnership" role="Defendant"></party>
+ <party firstName="Bill" fullName="Bill Gaudreau" lastName="Gaudreau" role="Plaintiff"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_10-cv-11901-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-11901/USCOURTS-mad-1_10-cv-11901-0/mods.xml">
+ <titleInfo>
+  <title>Gaudreau et al v. American Express Company</title>
+  <subTitle>Judge William G. Young: ORDER entered. The motion to Dismiss of American Express Company ECF No. 3 is ALLOWED in part and DENIED in part. The motion to Dismiss of GC Services Limited Partnership ECF No. 6 is ALLOWED as to all counts. (Paine, Matthew)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_10-cv-11901-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18158f8b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-11901/USCOURTS-mad-1_10-cv-11901-0</identifier>
+ <identifier type="former granule identifier">mad-1_10-cv-11901_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-11901/USCOURTS-mad-1_10-cv-11901-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-11901/pdf/USCOURTS-mad-1_10-cv-11901-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-11901; Gaudreau et al v. American Express Company; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_10-cv-11901-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>Judge William G. Young: ORDER entered. The motion to Dismiss of American Express Company ECF No. 3 is ALLOWED in part and DENIED in part. The motion to Dismiss of GC Services Limited Partnership ECF No. 6 is ALLOWED as to all counts. (Paine, Matthew)</docketText>
+</extension>
+</relatedItem>
+</mods>

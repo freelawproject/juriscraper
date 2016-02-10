@@ -1,0 +1,351 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817940c4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00140</identifier>
+<identifier type="local">P0b002ee1817940c4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cr-00140</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00140</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00140</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Brenda" fullName="Brenda Jacobo-Aguayo" lastName="Jacobo-Aguayo" role="Defendant"></party>
+ <party firstName="Roberto" fullName="Roberto Mendoza-Romero" lastName="Mendoza-Romero" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Mendoza-Romero et al</title>
+ <partNumber>8:07-cr-00140</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00140/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:07-cr-00140;07-140</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Brenda Jacobo-Aguayo</displayForm>
+ <namePart type="family">Jacobo-Aguayo</namePart>
+ <namePart type="given">Brenda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roberto Mendoza-Romero</displayForm>
+ <namePart type="family">Mendoza-Romero</namePart>
+ <namePart type="given">Roberto</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00140</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00140</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Brenda" fullName="Brenda Jacobo-Aguayo" lastName="Jacobo-Aguayo" role="Defendant"></party>
+ <party firstName="Roberto" fullName="Roberto Mendoza-Romero" lastName="Mendoza-Romero" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00140-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendoza-Romero et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Roberto Mendoza-Romero. Ordered by Magistrate Judge Thomas D. Thalken.(MLF, )[8:07-mj-00034-TDT]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00140-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f79a7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-0</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00140_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00140/pdf/USCOURTS-ned-8_07-cr-00140-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00140; USA v. Mendoza-Romero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00140-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-03-29</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Roberto Mendoza-Romero. Ordered by Magistrate Judge Thomas D. Thalken.(MLF, )[8:07-mj-00034-TDT]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00140-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendoza-Romero et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Julie A. Frank appointed as counsel for the defendant Brenda Jacobo-Aguayo. Ordered by Magistrate Judge Thomas D. Thalken.(MLF, )[8:07-mj-00034-TDT]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00140-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f79a4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-1</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00140_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00140/pdf/USCOURTS-ned-8_07-cr-00140-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00140; USA v. Mendoza-Romero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00140-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-03-29</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Julie A. Frank appointed as counsel for the defendant Brenda Jacobo-Aguayo. Ordered by Magistrate Judge Thomas D. Thalken.(MLF, )[8:07-mj-00034-TDT]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00140-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendoza-Romero et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Roberto Mendoza-Romero. Ordered by Magistrate Judge Thomas D. Thalken.(ADB)[8:07-mj-00034-TDT]</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00140-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f79a2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-2</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00140_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00140/pdf/USCOURTS-ned-8_07-cr-00140-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00140; USA v. Mendoza-Romero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00140-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-04-02</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Roberto Mendoza-Romero. Ordered by Magistrate Judge Thomas D. Thalken.(ADB)[8:07-mj-00034-TDT]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00140-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendoza-Romero et al</title>
+  <subTitle>ORDER - Jacobo-Aguayo&apos;s motion to continue trial 33 is granted. Trial of this matter is re-scheduled for 8/13/07, before Chief Judge Joseph F. Bataillon and a jury. The time between 6/27/07 and 8/13/07 shall be excluded under the Speedy Trial Act as to defendant Brenda Jacobo-Aguayo. Jury Trial set for 8/13/2007 in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00140-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f79a1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-3</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00140_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00140/pdf/USCOURTS-ned-8_07-cr-00140-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00140; USA v. Mendoza-Romero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00140-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-06-27</dateIssued>
+  <docketText>ORDER - Jacobo-Aguayo&apos;s motion to continue trial 33 is granted. Trial of this matter is re-scheduled for 8/13/07, before Chief Judge Joseph F. Bataillon and a jury. The time between 6/27/07 and 8/13/07 shall be excluded under the Speedy Trial Act as to defendant Brenda Jacobo-Aguayo. Jury Trial set for 8/13/2007 in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon. Ordered by Magistrate Judge Thomas D. Thalken. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00140-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendoza-Romero et al</title>
+  <subTitle>ORDER requiring noncustodial return of defendantas to defendant(s) Brenda Jacobo-Aguayo. Ordered by Judge Joseph F. Bataillon.(SMS, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00140-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f79a5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-4</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00140_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00140/pdf/USCOURTS-ned-8_07-cr-00140-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00140; USA v. Mendoza-Romero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00140-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-08-29</dateIssued>
+  <docketText>ORDER requiring noncustodial return of defendantas to defendant(s) Brenda Jacobo-Aguayo. Ordered by Judge Joseph F. Bataillon.(SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00140-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendoza-Romero et al</title>
+  <subTitle>STRICKEN - ORDER - The defendant&apos;s oral motion for reimbursement of costs in forma pauperis is granted. The United States Marshal is ordered to arrange and pay for defendant&apos;s return noncustodial transportation from Omaha, Nebraska, to Los Angeles, California, following the hearing on 8/29/07, and for lodging and subsistence not to exceed the authorized per diem as to defendant Brenda Jacobo-Aguayo. Ordered by Judge Joseph F. Bataillon. - (2 certified copies to the USM) (KBJ) Modified on 8/29/2007 to reflect that this pleading is stricken pursuant to Strike Order 45(KBJ).</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00140-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f79a3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-5</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00140_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00140/pdf/USCOURTS-ned-8_07-cr-00140-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00140; USA v. Mendoza-Romero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00140-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-08-29</dateIssued>
+  <docketText>STRICKEN - ORDER - The defendant&apos;s oral motion for reimbursement of costs in forma pauperis is granted. The United States Marshal is ordered to arrange and pay for defendant&apos;s return noncustodial transportation from Omaha, Nebraska, to Los Angeles, California, following the hearing on 8/29/07, and for lodging and subsistence not to exceed the authorized per diem as to defendant Brenda Jacobo-Aguayo. Ordered by Judge Joseph F. Bataillon. - (2 certified copies to the USM) (KBJ) Modified on 8/29/2007 to reflect that this pleading is stricken pursuant to Strike Order 45(KBJ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00140-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendoza-Romero et al</title>
+  <subTitle>JUDGMENT as to Roberto Mendoza-Romero. The defendant plead guilty to Count I of the Indictment and is sentenced to the custody of the Bureau of Prisons for 57 months; and shall be given credit for time served. Supervised Release of 5 years with special conditions; $100.00 Special Assessment due and payable immediately. Count II of the Indictment is dismissed on the motion of the government as to this defendant only as to defendant Roberto Mendoza-Romero. Ordered by Judge Joseph F. Bataillon. - (4 certified copies to the USM) (KBJ)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00140-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f79a6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-6</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00140_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00140/pdf/USCOURTS-ned-8_07-cr-00140-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00140; USA v. Mendoza-Romero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00140-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-10-17</dateIssued>
+  <docketText>JUDGMENT as to Roberto Mendoza-Romero. The defendant plead guilty to Count I of the Indictment and is sentenced to the custody of the Bureau of Prisons for 57 months; and shall be given credit for time served. Supervised Release of 5 years with special conditions; $100.00 Special Assessment due and payable immediately. Count II of the Indictment is dismissed on the motion of the government as to this defendant only as to defendant Roberto Mendoza-Romero. Ordered by Judge Joseph F. Bataillon. - (4 certified copies to the USM) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00140-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendoza-Romero et al</title>
+  <subTitle>JUDGMENT as to Brenda Jacobo-Aguayo. The defendant plead guilty to Count I of the Indictment and is sentenced to the custody of the Bureau of Prisons for 24 months; and shall be given credit for time served. Supervised Release of 3 years with special conditions; $100.00 Special Assessment due and payable immediately. Count II of the Indictment is dismissed on the motion of the government as to this defendant only. The defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons as to defendant Brenda Jacobo-Aguayo. Ordered by Chief Judge Joseph F. Bataillon. (4 Certified copies to USM)(KBJ)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00140-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f79a8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-7</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00140_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00140/USCOURTS-ned-8_07-cr-00140-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00140/pdf/USCOURTS-ned-8_07-cr-00140-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00140; USA v. Mendoza-Romero et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00140-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-01-08</dateIssued>
+  <docketText>JUDGMENT as to Brenda Jacobo-Aguayo. The defendant plead guilty to Count I of the Indictment and is sentenced to the custody of the Bureau of Prisons for 24 months; and shall be given credit for time served. Supervised Release of 3 years with special conditions; $100.00 Special Assessment due and payable immediately. Count II of the Indictment is dismissed on the motion of the government as to this defendant only. The defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons as to defendant Brenda Jacobo-Aguayo. Ordered by Chief Judge Joseph F. Bataillon. (4 Certified copies to USM)(KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

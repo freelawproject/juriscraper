@@ -1,0 +1,394 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1849d25a0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-05-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-05-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01965</identifier>
+<identifier type="local">P0b002ee1849d25a0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-05-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-05-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-01965</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01965</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01965</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="B." fullName="B. Fleming" lastName="Fleming" role="Defendant"></party>
+ <party firstName="J." fullName="J. Harrison" lastName="Harrison" role="Defendant"></party>
+ <party firstName="Roberto" fullName="Roberto Herrera" lastName="Herrera" role="Plaintiff"></party>
+ <party firstName="R." fullName="R. J. Marquez" lastName="Marquez" middleName="J." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Herrera v. Fleming, et al</title>
+ <partNumber>2:12-cv-01965</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01965/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-01965;12-1965</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>B. Fleming</displayForm>
+ <namePart type="family">Fleming</namePart>
+ <namePart type="given">B.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Harrison</displayForm>
+ <namePart type="family">Harrison</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roberto Herrera</displayForm>
+ <namePart type="family">Herrera</namePart>
+ <namePart type="given">Roberto</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>R. J. Marquez</displayForm>
+ <namePart type="family">Marquez</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01965</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01965</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="B." fullName="B. Fleming" lastName="Fleming" role="Defendant"></party>
+ <party firstName="J." fullName="J. Harrison" lastName="Harrison" role="Defendant"></party>
+ <party firstName="Roberto" fullName="Roberto Herrera" lastName="Herrera" role="Plaintiff"></party>
+ <party firstName="R." fullName="R. J. Marquez" lastName="Marquez" middleName="J." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01965-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Fleming, et al</title>
+  <subTitle>[F&amp;R VACATED PURSUANT TO 14 ORDER] ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 09/05/12 granting 2 Motion to Proceed IFP. Plaintiff shall pay the statutory filing fee of $350.00 for this action. All fees shall be paid in accordance with the court&apos;s CDC order filed concurrently herewith. Also, RECOMMENDING that this action be dismissed without prejudice for failure to exhaust administrative remedies prior to filing suit. Referred to Judge William B. Shubb. Objections due within 14 days. (Plummer, M) Modified on 10/24/2012 (Yin, K).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01965-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d9b53</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01965_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01965/pdf/USCOURTS-caed-2_12-cv-01965-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01965; (PC) Herrera v. Fleming, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01965-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-09-05</dateIssued>
+  <docketText>[F&amp;R VACATED PURSUANT TO 14 ORDER] ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 09/05/12 granting 2 Motion to Proceed IFP. Plaintiff shall pay the statutory filing fee of $350.00 for this action. All fees shall be paid in accordance with the court&apos;s CDC order filed concurrently herewith. Also, RECOMMENDING that this action be dismissed without prejudice for failure to exhaust administrative remedies prior to filing suit. Referred to Judge William B. Shubb. Objections due within 14 days. (Plummer, M) Modified on 10/24/2012 (Yin, K).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01965-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Fleming, et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Roberto Herrera signed by Magistrate Judge Edmund F. Brennan on 09/05/12. CDC is to collect payments from plaintiff&apos;s account and forward to the clerk until the $350.00 filing fee is paid in full. Clerk to serve this order and a copy of plaintiff&apos;s IFP application on the Director of CDC. Clerk to also serve Financial with a copy of this order. (cc: CDC Director and Financial)(Plummer, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01965-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d9b6d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01965_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01965/pdf/USCOURTS-caed-2_12-cv-01965-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01965; (PC) Herrera v. Fleming, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01965-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-09-05</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Roberto Herrera signed by Magistrate Judge Edmund F. Brennan on 09/05/12. CDC is to collect payments from plaintiff&apos;s account and forward to the clerk until the $350.00 filing fee is paid in full. Clerk to serve this order and a copy of plaintiff&apos;s IFP application on the Director of CDC. Clerk to also serve Financial with a copy of this order. (cc: CDC Director and Financial)(Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01965-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Fleming, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 9/20/12 DENYING 9 Motion to Appoint Counsel. (Dillon, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01965-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d9b88</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01965_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01965/pdf/USCOURTS-caed-2_12-cv-01965-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01965; (PC) Herrera v. Fleming, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01965-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-09-20</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 9/20/12 DENYING 9 Motion to Appoint Counsel. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01965-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Fleming, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/24/2012 ORDERING that the 6 findings and recommendations are VACATED; plaintiff&apos;s 13 request for leave to proceed ifp on appeal is DENIED as unnecessary; the complaint is DISMISSED with leave to amend within 30 days. (Yin, K)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01965-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d9b69</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01965_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01965/pdf/USCOURTS-caed-2_12-cv-01965-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01965; (PC) Herrera v. Fleming, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01965-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-10-24</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/24/2012 ORDERING that the 6 findings and recommendations are VACATED; plaintiff&apos;s 13 request for leave to proceed ifp on appeal is DENIED as unnecessary; the complaint is DISMISSED with leave to amend within 30 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01965-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Fleming, et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 12/03/12 recommending that this action be dismissed. Referred to Judge William B. Shubb. Objections due within 14 days. (Plummer, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01965-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d9b51</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01965_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01965/pdf/USCOURTS-caed-2_12-cv-01965-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01965; (PC) Herrera v. Fleming, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01965-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-12-03</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 12/03/12 recommending that this action be dismissed. Referred to Judge William B. Shubb. Objections due within 14 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01965-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Fleming, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/3/13 DENYING 18 Motion to Appoint Counsel. (Dillon, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01965-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d9b83</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01965_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01965/pdf/USCOURTS-caed-2_12-cv-01965-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01965; (PC) Herrera v. Fleming, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01965-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/3/13 DENYING 18 Motion to Appoint Counsel. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01965-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Fleming, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/10/13 GRANTING 21 Motion to the extent that plaintiffs amended complaint is due 30 days from the date of this order. (Dillon, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01965-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d9b67</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01965_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01965/pdf/USCOURTS-caed-2_12-cv-01965-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01965; (PC) Herrera v. Fleming, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01965-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-01-10</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/10/13 GRANTING 21 Motion to the extent that plaintiffs amended complaint is due 30 days from the date of this order. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01965-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Fleming, et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 3/4/2013 RECOMMENDING that plaintiff&apos;s 25 amended complaint be dismissed for failure to state a claim and that the Clerk be directed to close the case. Referred to Judge William B. Shubb; Objections due within 14 days. (Yin, K)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01965-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d9b85</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01965_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01965/pdf/USCOURTS-caed-2_12-cv-01965-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01965; (PC) Herrera v. Fleming, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01965-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-03-04</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 3/4/2013 RECOMMENDING that plaintiff&apos;s 25 amended complaint be dismissed for failure to state a claim and that the Clerk be directed to close the case. Referred to Judge William B. Shubb; Objections due within 14 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01965-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Herrera v. Fleming, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/1/2013 DENYING plaintiff&apos;s 31 request for appointment of counsel. (Yin, K)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01965-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849d9b64</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01965_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01965/USCOURTS-caed-2_12-cv-01965-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01965/pdf/USCOURTS-caed-2_12-cv-01965-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01965; (PC) Herrera v. Fleming, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01965-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-05-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/1/2013 DENYING plaintiff&apos;s 31 request for appointment of counsel. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+</mods>

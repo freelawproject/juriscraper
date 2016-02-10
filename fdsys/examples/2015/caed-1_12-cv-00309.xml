@@ -1,0 +1,682 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c29ce06">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-04-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-04-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309</identifier>
+<identifier type="local">P0b002ee18c29ce06</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-04-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-04-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-00309</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00309</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00309</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Kathleen" fullName="Kathleen Allison" lastName="Allison" role="Defendant"></party>
+ <party fullName="C.D.C.R." lastName="C.D.C.R." role="Defendant"></party>
+ <party firstName="A." fullName="A. Enenmoh" lastName="Enenmoh" role="Defendant"></party>
+ <party firstName="J. Clark" fullName="J. Clark Kelso" lastName="Kelso" role="Defendant"></party>
+ <party fullName="Metts" lastName="Metts" role="Defendant"></party>
+ <party firstName="Gregory" fullName="Gregory Adonis Murphy" lastName="Murphy" middleName="Adonis" role="Plaintiff"></party>
+ <party firstName="O." fullName="O. Onyeje" lastName="Onyeje" role="Defendant"></party>
+ <party fullName="San Quentin State Prison" lastName="San Quentin State Prison" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Murphy v. Kelso et al</title>
+ <partNumber>1:12-cv-00309</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-00309;12-309</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kathleen Allison</displayForm>
+ <namePart type="family">Allison</namePart>
+ <namePart type="given">Kathleen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C.D.C.R.</displayForm>
+ <namePart type="family">C.D.C.R.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Enenmoh</displayForm>
+ <namePart type="family">Enenmoh</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Clark Kelso</displayForm>
+ <namePart type="family">Kelso</namePart>
+ <namePart type="given">J. Clark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Metts</displayForm>
+ <namePart type="family">Metts</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gregory Adonis Murphy</displayForm>
+ <namePart type="family">Murphy</namePart>
+ <namePart type="given">Gregory</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>O. Onyeje</displayForm>
+ <namePart type="family">Onyeje</namePart>
+ <namePart type="given">O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>San Quentin State Prison</displayForm>
+ <namePart type="family">San Quentin State Prison</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00309</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00309</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Kathleen" fullName="Kathleen Allison" lastName="Allison" role="Defendant"></party>
+ <party fullName="C.D.C.R." lastName="C.D.C.R." role="Defendant"></party>
+ <party firstName="A." fullName="A. Enenmoh" lastName="Enenmoh" role="Defendant"></party>
+ <party firstName="J. Clark" fullName="J. Clark Kelso" lastName="Kelso" role="Defendant"></party>
+ <party fullName="Metts" lastName="Metts" role="Defendant"></party>
+ <party firstName="Gregory" fullName="Gregory Adonis Murphy" lastName="Murphy" middleName="Adonis" role="Plaintiff"></party>
+ <party firstName="O." fullName="O. Onyeje" lastName="Onyeje" role="Defendant"></party>
+ <party fullName="San Quentin State Prison" lastName="San Quentin State Prison" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER TRANSFERRING CASE to the U.S. District Court, Eastern District of CA, FORTHWITH. All pending matters are TERMINATED. Signed by Judge Saundra Brown Armstrong, on 2/28/12. (lrc, COURT STAFF) (Filed on 2/29/2012) Modified on 3/1/2012 (jlm, COURT STAFF). [Transferred from cand on 3/1/2012.]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11d1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-02-29</dateIssued>
+  <docketText>ORDER TRANSFERRING CASE to the U.S. District Court, Eastern District of CA, FORTHWITH. All pending matters are TERMINATED. Signed by Judge Saundra Brown Armstrong, on 2/28/12. (lrc, COURT STAFF) (Filed on 2/29/2012) Modified on 3/1/2012 (jlm, COURT STAFF). [Transferred from cand on 3/1/2012.]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER GRANTING 5 Motion to Proceed IFP and ORDER DIRECTING Payment of Inmate Filing Fee by California Department of Corrections signed by Magistrate Judge Jennifer L. Thurston on 4/6/2012. (Attachments: # (1) IFP Motion)(Sant Agata, S)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11d6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-04-06</dateIssued>
+  <docketText>ORDER GRANTING 5 Motion to Proceed IFP and ORDER DIRECTING Payment of Inmate Filing Fee by California Department of Corrections signed by Magistrate Judge Jennifer L. Thurston on 4/6/2012. (Attachments: # (1) IFP Motion)(Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND (Doc.4), signed by Magistrate Judge Jennifer L. Thurston on 4/3/2013. Amended Complaint due by 4/26/2013. (Attachments: # (1) Amended Complaint Form)(Fahrney, E)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11cb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-04-03</dateIssued>
+  <docketText>ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND (Doc.4), signed by Magistrate Judge Jennifer L. Thurston on 4/3/2013. Amended Complaint due by 4/26/2013. (Attachments: # (1) Amended Complaint Form)(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER to SHOW CAUSE Why the Action Should Not Be Dismissed for Plaintiff&apos;s Failure to Comply With the Court&apos;s Order 11, signed by Magistrate Judge Jennifer L. Thurston on 5/3/13: Show Cause Response due within fourteen (14) days of the date of service of this Order. (Hellings, J)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11cd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-05-03</dateIssued>
+  <docketText>ORDER to SHOW CAUSE Why the Action Should Not Be Dismissed for Plaintiff&apos;s Failure to Comply With the Court&apos;s Order 11, signed by Magistrate Judge Jennifer L. Thurston on 5/3/13: Show Cause Response due within fourteen (14) days of the date of service of this Order. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER CONSTRUING Plaintiff&apos;s Letter to the Court as a Motion for Extension of Time to File an Amended Complaint; ORDER GRANTING Plaintiff&apos;s Motion for Extension of Time to File an Amended Complaint; 30-Day Deadline signed by Magistrate Judge Jennifer L. Thurston on 5/22/2013. (Sant Agata, S)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11c2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-05-23</dateIssued>
+  <docketText>ORDER CONSTRUING Plaintiff&apos;s Letter to the Court as a Motion for Extension of Time to File an Amended Complaint; ORDER GRANTING Plaintiff&apos;s Motion for Extension of Time to File an Amended Complaint; 30-Day Deadline signed by Magistrate Judge Jennifer L. Thurston on 5/22/2013. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER Requiring Defendants Enenmoh, Allison and Metts, to FIle a Response to the Marshal&apos;s 26 Request for Reimbursement of Costs of Service, signed by Magistrate Judge Jennifer L. Thurston on 05/20/14. Twenty-Day Deadline. (Gonzalez, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11d2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-05-21</dateIssued>
+  <docketText>ORDER Requiring Defendants Enenmoh, Allison and Metts, to FIle a Response to the Marshal&apos;s 26 Request for Reimbursement of Costs of Service, signed by Magistrate Judge Jennifer L. Thurston on 05/20/14. Twenty-Day Deadline. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER Striking Plaintiff&apos;s 31 Opposition to Defendants Answer, signed by Magistrate Judge Jennifer L. Thurston on 05/20/14. (Gonzalez, R)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11d0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-05-21</dateIssued>
+  <docketText>ORDER Striking Plaintiff&apos;s 31 Opposition to Defendants Answer, signed by Magistrate Judge Jennifer L. Thurston on 05/20/14. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER Forwarding a Copy of Defendants&apos; Response to the Marshal&apos;s Request for Reimbursement of Costs of Service and REQUIRING Clarification from the Marshal as to Service Efforts signed by Magistrate Judge Jennifer L. Thurston on 8/1/2014. (Sant Agata, S)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11c3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-08-01</dateIssued>
+  <docketText>ORDER Forwarding a Copy of Defendants&apos; Response to the Marshal&apos;s Request for Reimbursement of Costs of Service and REQUIRING Clarification from the Marshal as to Service Efforts signed by Magistrate Judge Jennifer L. Thurston on 8/1/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER GRANTING 38 Motion Conduct Plaintiff&apos;s Deposition via Videoconference, signed by Magistrate Judge Jennifer L. Thurston on 8/13/14. (Martin-Gill, S)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11c0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-8</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-08-13</dateIssued>
+  <docketText>ORDER GRANTING 38 Motion Conduct Plaintiff&apos;s Deposition via Videoconference, signed by Magistrate Judge Jennifer L. Thurston on 8/13/14. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER GRANTING Marshal&apos;s Request for Reimbursement of Costs of Service; ORDERED that Defendants: Kathleen Allison, Anthony Enemoh, M.D., and J. Metts, M.D. are to pay the Marshal&apos;s Office the sum of $85.16, for a total payment of $255.48, as to 25, 26, 34, and 36,signed by Magistrate Judge Jennifer L. Thurston on 8/13/14. (30-Day Deadline) (Martin-Gill, S)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11cf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-9</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-08-14</dateIssued>
+  <docketText>ORDER GRANTING Marshal&apos;s Request for Reimbursement of Costs of Service; ORDERED that Defendants: Kathleen Allison, Anthony Enemoh, M.D., and J. Metts, M.D. are to pay the Marshal&apos;s Office the sum of $85.16, for a total payment of $255.48, as to 25, 26, 34, and 36,signed by Magistrate Judge Jennifer L. Thurston on 8/13/14. (30-Day Deadline) (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER DENYING and STRIKING Plaintiff&apos;s 42 Motion to Make Correspondence Part of the Permanent Record, signed by Magistrate Judge Jennifer L. Thurston on 9/8/2014. (Marrujo, C)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11c1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-10</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-09-08</dateIssued>
+  <docketText>ORDER DENYING and STRIKING Plaintiff&apos;s 42 Motion to Make Correspondence Part of the Permanent Record, signed by Magistrate Judge Jennifer L. Thurston on 9/8/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER DENYING 47 Motion to Appoint Counsel, signed by Magistrate Judge Jennifer L. Thurston on 10/23/2014. (Martin-Gill, S)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-11</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2014-10-23</dateIssued>
+  <docketText>ORDER DENYING 47 Motion to Appoint Counsel, signed by Magistrate Judge Jennifer L. Thurston on 10/23/2014. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>jection Deadline. (Gonzalez, R)FINDINGS and RECOMMENDATIONS Recommending Plaintiff&apos;s 44 MOTION for Preliminary Injunctive Relief be Denied for Lack of Jurisdiction, signed by Magistrate Judge Jennifer L. Thurston on 10/23/14. Referred to Judge O&apos;Neill. 30-Day Ob</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-12</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2014-10-24</dateIssued>
+  <docketText>jection Deadline. (Gonzalez, R)FINDINGS and RECOMMENDATIONS Recommending Plaintiff&apos;s 44 MOTION for Preliminary Injunctive Relief be Denied for Lack of Jurisdiction, signed by Magistrate Judge Jennifer L. Thurston on 10/23/14. Referred to Judge O&apos;Neill. 30-Day Ob</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER Adopting 49 Findings and Recommendations, and Denying Plaintiff&apos;s 44Motion for a Preliminary Injunction, signed by District Judge Lawrence J. O&apos;Neill on 12/31/14. (Verduzco, M)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11ce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-13</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER Adopting 49 Findings and Recommendations, and Denying Plaintiff&apos;s 44Motion for a Preliminary Injunction, signed by District Judge Lawrence J. O&apos;Neill on 12/31/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Motion For Change Of Venue (Doc.54), signed by Magistrate Judge Jennifer L. Thurston on 1/21/2015. (Fahrney, E)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11d4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-14</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2015-01-21</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Motion For Change Of Venue (Doc.54), signed by Magistrate Judge Jennifer L. Thurston on 1/21/2015. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS recommending that the motions for summary judgment filed by Plaintiff on October 27, 2014 50 and November 21, 2014 52 be DENIED re 52 MOTION for SUMMARY JUDGMENT filed by Gregory Adonis Murphy, 50 MOTION for SUMMARY JUDGMENT filed by Gregory Adonis Murphy ; referred to Judge O&apos;Neill,signed by Magistrate Judge Jennifer L. Thurston on 01/27/2015. Objections to F&amp;R due by 3/2/2015 (Martin-Gill, S)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11cc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-15</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2015-01-27</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS recommending that the motions for summary judgment filed by Plaintiff on October 27, 2014 50 and November 21, 2014 52 be DENIED re 52 MOTION for SUMMARY JUDGMENT filed by Gregory Adonis Murphy, 50 MOTION for SUMMARY JUDGMENT filed by Gregory Adonis Murphy ; referred to Judge O&apos;Neill,signed by Magistrate Judge Jennifer L. Thurston on 01/27/2015. Objections to F&amp;R due by 3/2/2015 (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>ORDER Adopting 58 Findings and Recommendations and Denying Plaintiff&apos;s Motions for Summary Judgment re 50, 52, signed by District Judge Lawrence J. O&apos;Neill on 03/09/15. (Gonzalez, R)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11d3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-16</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2015-03-09</dateIssued>
+  <docketText>ORDER Adopting 58 Findings and Recommendations and Denying Plaintiff&apos;s Motions for Summary Judgment re 50, 52, signed by District Judge Lawrence J. O&apos;Neill on 03/09/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00309-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Murphy v. Kelso et al</title>
+  <subTitle>SECOND INFORMATIONAL ORDER-NOTICE And Warning Of Requirements For Opposing Defendants&apos; Motion For Summary Judgment (Doc.62), signed by Magistrate Judge Jennifer L. Thurston on 4/29/2015. (Fahrney, E)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c2b11d5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-17</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00309_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00309/USCOURTS-caed-1_12-cv-00309-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00309/pdf/USCOURTS-caed-1_12-cv-00309-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00309; (PC) Murphy v. Kelso et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00309-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2015-04-29</dateIssued>
+  <docketText>SECOND INFORMATIONAL ORDER-NOTICE And Warning Of Requirements For Opposing Defendants&apos; Motion For Summary Judgment (Doc.62), signed by Magistrate Judge Jennifer L. Thurston on 4/29/2015. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

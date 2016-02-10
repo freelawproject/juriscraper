@@ -1,0 +1,244 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181e36439">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-02-09</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-02-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_09-cv-00056</identifier>
+<identifier type="local">P0b002ee181e36439</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-02-09</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-02-09</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-4_09-cv-00056</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-4_09-cv-00056</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>4:09-cv-00056</caseNumber>
+ <caseOffice>Columbus</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1446 Notice of Removal</cause>
+ <party firstName="Eric" fullName="Eric Barkwell" lastName="Barkwell" role="Plaintiff"></party>
+ <party firstName="Gary" fullName="Gary Massey" lastName="Massey" role="Plaintiff"></party>
+ <party fullName="Sprint Communications Company L.P." lastName="Sprint Communications Company L.P." role="Defendant"></party>
+ <party fullName="Sprint Nextel Corporation" lastName="Sprint Nextel Corporation" role="Defendant"></party>
+ <party fullName="Sprint Solutions, Inc." lastName="Sprint Solutions, Inc." role="Defendant"></party>
+ <party fullName="Sprint Spectrum, L.P." lastName="Sprint Spectrum, L.P." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Barkwell v. Sprint Communications Company L.P.</title>
+ <partNumber>4:09-cv-00056</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_09-cv-00056/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:09-cv-00056;09-056</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Columbus</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Eric Barkwell</displayForm>
+ <namePart type="family">Barkwell</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Massey</displayForm>
+ <namePart type="family">Massey</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sprint Communications Company L.P.</displayForm>
+ <namePart type="family">Sprint Communications Company L.P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sprint Nextel Corporation</displayForm>
+ <namePart type="family">Sprint Nextel Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sprint Solutions, Inc.</displayForm>
+ <namePart type="family">Sprint Solutions, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sprint Spectrum, L.P.</displayForm>
+ <namePart type="family">Sprint Spectrum, L.P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-4_09-cv-00056</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>4:09-cv-00056</caseNumber>
+ <caseOffice>Columbus</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1446 Notice of Removal</cause>
+ <party firstName="Eric" fullName="Eric Barkwell" lastName="Barkwell" role="Plaintiff"></party>
+ <party firstName="Gary" fullName="Gary Massey" lastName="Massey" role="Plaintiff"></party>
+ <party fullName="Sprint Communications Company L.P." lastName="Sprint Communications Company L.P." role="Defendant"></party>
+ <party fullName="Sprint Nextel Corporation" lastName="Sprint Nextel Corporation" role="Defendant"></party>
+ <party fullName="Sprint Solutions, Inc." lastName="Sprint Solutions, Inc." role="Defendant"></party>
+ <party fullName="Sprint Spectrum, L.P." lastName="Sprint Spectrum, L.P." role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-4_09-cv-00056-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_09-cv-00056/USCOURTS-gamd-4_09-cv-00056-0/mods.xml">
+ <titleInfo>
+  <title>Barkwell v. Sprint Communications Company L.P.</title>
+  <subTitle>ORDER denying 44 Motion for Summary Judgment; finding as moot 45 Motion to Strike; finding as moot 54 Motion for Status Conference; ordering proposed revised scheduling order. Ordered by Judge Clay D. Land on 12/06/2010. (CGC)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-4_09-cv-00056-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e3a0a1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_09-cv-00056/USCOURTS-gamd-4_09-cv-00056-0</identifier>
+ <identifier type="former granule identifier">gamd-4_09-cv-00056_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_09-cv-00056/USCOURTS-gamd-4_09-cv-00056-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_09-cv-00056/pdf/USCOURTS-gamd-4_09-cv-00056-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-00056; Barkwell v. Sprint Communications Company L.P.; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-4_09-cv-00056-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-12-06</dateIssued>
+  <docketText>ORDER denying 44 Motion for Summary Judgment; finding as moot 45 Motion to Strike; finding as moot 54 Motion for Status Conference; ordering proposed revised scheduling order. Ordered by Judge Clay D. Land on 12/06/2010. (CGC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-4_09-cv-00056-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_09-cv-00056/USCOURTS-gamd-4_09-cv-00056-1/mods.xml">
+ <titleInfo>
+  <title>Barkwell v. Sprint Communications Company L.P.</title>
+  <subTitle>ORDER denying 63 Motion to Compel Arbitration. Ordered by Judge Clay D. Land on 1/12/2012. (CGC)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-4_09-cv-00056-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e3a0a3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_09-cv-00056/USCOURTS-gamd-4_09-cv-00056-1</identifier>
+ <identifier type="former granule identifier">gamd-4_09-cv-00056_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_09-cv-00056/USCOURTS-gamd-4_09-cv-00056-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_09-cv-00056/pdf/USCOURTS-gamd-4_09-cv-00056-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-00056; Barkwell v. Sprint Communications Company L.P.; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-4_09-cv-00056-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>ORDER denying 63 Motion to Compel Arbitration. Ordered by Judge Clay D. Land on 1/12/2012. (CGC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-4_09-cv-00056-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_09-cv-00056/USCOURTS-gamd-4_09-cv-00056-2/mods.xml">
+ <titleInfo>
+  <title>Barkwell v. Sprint Communications Company L.P.</title>
+  <subTitle>ORDER granting 69 Motion to Stay. Ordered by Judge Clay D. Land on 02/08/2012. (CGC)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-4_09-cv-00056-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e3a0a2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_09-cv-00056/USCOURTS-gamd-4_09-cv-00056-2</identifier>
+ <identifier type="former granule identifier">gamd-4_09-cv-00056_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-4_09-cv-00056/USCOURTS-gamd-4_09-cv-00056-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-4_09-cv-00056/pdf/USCOURTS-gamd-4_09-cv-00056-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-00056; Barkwell v. Sprint Communications Company L.P.; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-4_09-cv-00056-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-02-08</dateIssued>
+  <docketText>ORDER granting 69 Motion to Stay. Ordered by Judge Clay D. Land on 02/08/2012. (CGC)</docketText>
+</extension>
+</relatedItem>
+</mods>

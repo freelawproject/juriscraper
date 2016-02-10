@@ -1,0 +1,754 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18179db85">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406</identifier>
+<identifier type="local">P0b002ee18179db85</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_03-cv-00406</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_03-cv-00406</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:03-cv-00406</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>443</natureSuitCode>
+ <natureSuit>Civil Rights Accommodations</natureSuit>
+ <cause>42:3601 Fair Housing Act</cause>
+ <party firstName="Schallina" fullName="Schallina Brown" lastName="Brown" role="Interested Party"></party>
+ <party firstName="Lisa" fullName="Lisa Carroll" lastName="Carroll" role="Intervenor"></party>
+ <party firstName="Latonda" fullName="Latonda Johnson" lastName="Johnson" role="Interested Party"></party>
+ <party firstName="Tamra" fullName="Tamra Keys" lastName="Keys" role="Interested Party"></party>
+ <party firstName="John" fullName="John R. Koch" lastName="Koch" middleName="R." role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew McBride" lastName="McBride" role="Movant"></party>
+ <party firstName="Tamechia" fullName="Tamechia Nedds" lastName="Nedds" role="Interested Party"></party>
+ <party firstName="Michelle" fullName="Michelle A. Peters" lastName="Peters" middleName="A." role="Movant"></party>
+ <party firstName="Jacqueline" fullName="Jacqueline Phillips" lastName="Phillips" role="Interested Party"></party>
+ <party firstName="Latesia" fullName="Latesia Rogers" lastName="Rogers" role="Interested Party"></party>
+ <party firstName="Felisha" fullName="Felisha Scoggins" lastName="Scoggins" role="Interested Party"></party>
+ <party firstName="Molly" fullName="Molly Smolko" lastName="Smolko" role="Movant"></party>
+ <party firstName="Debra" fullName="Debra Sterling" lastName="Sterling" role="Interested Party"></party>
+ <party firstName="Brenda" fullName="Brenda Parker Taylor" lastName="Taylor" middleName="Parker" role="Interested Party"></party>
+ <party firstName="Anita" fullName="Anita Thomas" lastName="Thomas" role="Interested Party"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Koch</title>
+ <partNumber>8:03-cv-00406</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:03-cv-00406;03-406</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Schallina Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Schallina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Lisa Carroll</displayForm>
+ <namePart type="family">Carroll</namePart>
+ <namePart type="given">Lisa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor</description>
+</name>
+<name type="personal">
+ <displayForm>Latonda Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Latonda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Tamra Keys</displayForm>
+ <namePart type="family">Keys</namePart>
+ <namePart type="given">Tamra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>John R. Koch</displayForm>
+ <namePart type="family">Koch</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew McBride</displayForm>
+ <namePart type="family">McBride</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Tamechia Nedds</displayForm>
+ <namePart type="family">Nedds</namePart>
+ <namePart type="given">Tamechia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Michelle A. Peters</displayForm>
+ <namePart type="family">Peters</namePart>
+ <namePart type="given">Michelle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Jacqueline Phillips</displayForm>
+ <namePart type="family">Phillips</namePart>
+ <namePart type="given">Jacqueline</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Latesia Rogers</displayForm>
+ <namePart type="family">Rogers</namePart>
+ <namePart type="given">Latesia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Felisha Scoggins</displayForm>
+ <namePart type="family">Scoggins</namePart>
+ <namePart type="given">Felisha</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Molly Smolko</displayForm>
+ <namePart type="family">Smolko</namePart>
+ <namePart type="given">Molly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>Debra Sterling</displayForm>
+ <namePart type="family">Sterling</namePart>
+ <namePart type="given">Debra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Brenda Parker Taylor</displayForm>
+ <namePart type="family">Taylor</namePart>
+ <namePart type="given">Brenda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Anita Thomas</displayForm>
+ <namePart type="family">Thomas</namePart>
+ <namePart type="given">Anita</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_03-cv-00406</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:03-cv-00406</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>443</natureSuitCode>
+ <natureSuit>Civil Rights Accommodations</natureSuit>
+ <cause>42:3601 Fair Housing Act</cause>
+ <party firstName="Schallina" fullName="Schallina Brown" lastName="Brown" role="Interested Party"></party>
+ <party firstName="Lisa" fullName="Lisa Carroll" lastName="Carroll" role="Intervenor"></party>
+ <party firstName="Latonda" fullName="Latonda Johnson" lastName="Johnson" role="Interested Party"></party>
+ <party firstName="Tamra" fullName="Tamra Keys" lastName="Keys" role="Interested Party"></party>
+ <party firstName="John" fullName="John R. Koch" lastName="Koch" middleName="R." role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew McBride" lastName="McBride" role="Movant"></party>
+ <party firstName="Tamechia" fullName="Tamechia Nedds" lastName="Nedds" role="Interested Party"></party>
+ <party firstName="Michelle" fullName="Michelle A. Peters" lastName="Peters" middleName="A." role="Movant"></party>
+ <party firstName="Jacqueline" fullName="Jacqueline Phillips" lastName="Phillips" role="Interested Party"></party>
+ <party firstName="Latesia" fullName="Latesia Rogers" lastName="Rogers" role="Interested Party"></party>
+ <party firstName="Felisha" fullName="Felisha Scoggins" lastName="Scoggins" role="Interested Party"></party>
+ <party firstName="Molly" fullName="Molly Smolko" lastName="Smolko" role="Movant"></party>
+ <party firstName="Debra" fullName="Debra Sterling" lastName="Sterling" role="Interested Party"></party>
+ <party firstName="Brenda" fullName="Brenda Parker Taylor" lastName="Taylor" middleName="Parker" role="Interested Party"></party>
+ <party firstName="Anita" fullName="Anita Thomas" lastName="Thomas" role="Interested Party"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 154 Motion to Extend or Allow Additional Response Time to Lisa Carroll&apos;s Motion to Intervene150. Defendant shall have on or before December 16, 2005, to file a response to Lisa Carroll&apos;s Motion to Intervene. Signed by Judge Warren K. Urbom on 12/5/2005. (EJL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ed29</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-0</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-12-05</dateIssued>
+  <docketText>ORDER granting 154 Motion to Extend or Allow Additional Response Time to Lisa Carroll&apos;s Motion to Intervene150. Defendant shall have on or before December 16, 2005, to file a response to Lisa Carroll&apos;s Motion to Intervene. Signed by Judge Warren K. Urbom on 12/5/2005. (EJL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 160 Motion to Extend and Allow Additional Response Time to Motion for Issuance of an Order to Show Cause 155. Defendant shall have until on or before December 16, 2005, in which to file his response. Signed by Judge Warren K. Urbom on 12/12/2005. (EJL, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ec6a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-1</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-12-12</dateIssued>
+  <docketText>ORDER granting 160 Motion to Extend and Allow Additional Response Time to Motion for Issuance of an Order to Show Cause 155. Defendant shall have until on or before December 16, 2005, in which to file his response. Signed by Judge Warren K. Urbom on 12/12/2005. (EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 162 Defendant&apos;s Second Motion to Extend Time to Allow Responses to Pending Motions, filings 150and 155. The responses shall be filed on or before December 30, 2005. Signed by Judge Warren K. Urbom on 12/19/2005. (EJL )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ec6d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-2</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-12-19</dateIssued>
+  <docketText>ORDER granting 162 Defendant&apos;s Second Motion to Extend Time to Allow Responses to Pending Motions, filings 150and 155. The responses shall be filed on or before December 30, 2005. Signed by Judge Warren K. Urbom on 12/19/2005. (EJL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER that counsel&apos;s motion to withdraw, filing 163, is granted, effective upon the filing of a certificate of service or affidavit indicating that the defendant has been served with a copy of this order. Defendant is given 15 days from the date of this order in which to either: (1) obtain the services of substitute counsel and have that attorney file an appearance in his behalf; (2) file a motion in this court for the appointment of counsel, setting forth his present financial status, and the reasons he believes counsel should be appointed; or (3) indicate, by pleading, that he will proceed in this case without counsel. Signed by Judge Warren K. Urbom on 12/19/2005. (CS, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ec66</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-3</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-12-19</dateIssued>
+  <docketText>ORDER that counsel&apos;s motion to withdraw, filing 163, is granted, effective upon the filing of a certificate of service or affidavit indicating that the defendant has been served with a copy of this order. Defendant is given 15 days from the date of this order in which to either: (1) obtain the services of substitute counsel and have that attorney file an appearance in his behalf; (2) file a motion in this court for the appointment of counsel, setting forth his present financial status, and the reasons he believes counsel should be appointed; or (3) indicate, by pleading, that he will proceed in this case without counsel. Signed by Judge Warren K. Urbom on 12/19/2005. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-4/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 168 Motion to Extend or Allow Defendant Additional Response Time to Motion for Issuance of an Order to Show Cause 155 and Motion to Intervene 150. The defendant shall have on or before January 20, 2006, to fle a response to the government&apos;s Motion for Issuance of an Order to Show Cause and Motion to Intervene. Signed by Judge Warren K. Urbom on 1/3/2006. (EJL, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ed23</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-4</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-01-03</dateIssued>
+  <docketText>ORDER granting 168 Motion to Extend or Allow Defendant Additional Response Time to Motion for Issuance of an Order to Show Cause 155 and Motion to Intervene 150. The defendant shall have on or before January 20, 2006, to fle a response to the government&apos;s Motion for Issuance of an Order to Show Cause and Motion to Intervene. Signed by Judge Warren K. Urbom on 1/3/2006. (EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-5/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 171 Motion for Extension of time. Defendant shall have on or before February 20, 2006, in which to file his response to Plaintiff&apos;s Motion for Issuance of an Order to Show Cause Why Defendant Should Not be Held in Contempt of Court155. Signed by Judge Warren K. Urbom on 1/30/2006. (EJL, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ec6b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-5</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-01-30</dateIssued>
+  <docketText>ORDER granting 171 Motion for Extension of time. Defendant shall have on or before February 20, 2006, in which to file his response to Plaintiff&apos;s Motion for Issuance of an Order to Show Cause Why Defendant Should Not be Held in Contempt of Court155. Signed by Judge Warren K. Urbom on 1/30/2006. (EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-6/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 174 Defendant&apos;s Motion for Extension of time to file response to MOTION for issuance of an order to show cause why defendant should not be held in contempt of court155. The defendant shall have on or before March 20, 2006, to file his response. Signed by Judge Warren K. Urbom on 2/22/2006. (EJL, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-02-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ed27</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-6</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-02-22</dateIssued>
+  <docketText>ORDER granting 174 Defendant&apos;s Motion for Extension of time to file response to MOTION for issuance of an order to show cause why defendant should not be held in contempt of court155. The defendant shall have on or before March 20, 2006, to file his response. Signed by Judge Warren K. Urbom on 2/22/2006. (EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-7/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 176 Defendant&apos;s Motion for Extension of Time. Defendant shall on or before April 20, 2006, file his response to Plaintiff&apos;s MOTION for Issuance of an Order to Show Cause why defendant should not be held in contempt of court155. Signed by Judge Warren K. Urbom on 3/21/2006. (EJL, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ed22</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-7</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2006-03-21</dateIssued>
+  <docketText>ORDER granting 176 Defendant&apos;s Motion for Extension of Time. Defendant shall on or before April 20, 2006, file his response to Plaintiff&apos;s MOTION for Issuance of an Order to Show Cause why defendant should not be held in contempt of court155. Signed by Judge Warren K. Urbom on 3/21/2006. (EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-8/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 178 Motion for Extension of Time to respond to MOTION for Issuance of an Order to Show Cause why defendant should not be held in contempt of court155. The defendant shall have on or before May 19, 2006, in which to file his response. Signed by Judge Warren K. Urbom on 4/25/2006. (EJL, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ed26</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-8</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2006-04-25</dateIssued>
+  <docketText>ORDER granting 178 Motion for Extension of Time to respond to MOTION for Issuance of an Order to Show Cause why defendant should not be held in contempt of court155. The defendant shall have on or before May 19, 2006, in which to file his response. Signed by Judge Warren K. Urbom on 4/25/2006. (EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-9/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 180 Defendant&apos;s Motion for Extension of Time to respond to Plaintiff&apos;s Motion for Issuance of an Order to Show Cause why defendant should not be held in contempt of court155. The defendant shall file and serve his response on or before June 16, 2006, unless the remaining issues are resolved prior to that date. Signed by Judge Warren K. Urbom on 5/23/2006. (EJL, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ed25</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-9</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2006-05-23</dateIssued>
+  <docketText>ORDER granting 180 Defendant&apos;s Motion for Extension of Time to respond to Plaintiff&apos;s Motion for Issuance of an Order to Show Cause why defendant should not be held in contempt of court155. The defendant shall file and serve his response on or before June 16, 2006, unless the remaining issues are resolved prior to that date. Signed by Judge Warren K. Urbom on 5/23/2006. (EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-10/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER dismissing 155 Motion for Issuance of an Order to Show Cause Why Defendant Should not be Held in Contempt of Court, granting 184 Motion to Dismiss Motion for Issuance of an Order to Show Cause Why Defendant Should not be Held in Contempt of Court. Signed by Judge Warren K. Urbom on 6/20/2006. (EJL, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ec6c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-10</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2006-06-20</dateIssued>
+  <docketText>ORDER dismissing 155 Motion for Issuance of an Order to Show Cause Why Defendant Should not be Held in Contempt of Court, granting 184 Motion to Dismiss Motion for Issuance of an Order to Show Cause Why Defendant Should not be Held in Contempt of Court. Signed by Judge Warren K. Urbom on 6/20/2006. (EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-11/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 150 Motion to Intervene. Signed by Judge Warren K. Urbom on 6/20/2006. (EJL, )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ed28</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-11</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2006-06-20</dateIssued>
+  <docketText>ORDER granting 150 Motion to Intervene. Signed by Judge Warren K. Urbom on 6/20/2006. (EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-12/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER SETTING TIME LIMITATION FOR INTERVENTION. Lisa Carroll, the intervenor, shall have only until September 1, 2006, to file whatever she intends to file in order to move this action toward conclusion by Judge Warren K. Urbom. (EJL, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ec67</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-12</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2006-08-14</dateIssued>
+  <docketText>ORDER SETTING TIME LIMITATION FOR INTERVENTION. Lisa Carroll, the intervenor, shall have only until September 1, 2006, to file whatever she intends to file in order to move this action toward conclusion by Judge Warren K. Urbom. (EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-13/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 192 Oral Motion requesting a continuance of the show cause hearing; and the show cause hearing is continued to December 1, 2006, commencing at 9:00 a.m. in Courtroom No. 4, U.S. Courthouse, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Judge Warren K. Urbom.(EJL, )</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ed2a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-13</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2006-11-07</dateIssued>
+  <docketText>ORDER granting 192 Oral Motion requesting a continuance of the show cause hearing; and the show cause hearing is continued to December 1, 2006, commencing at 9:00 a.m. in Courtroom No. 4, U.S. Courthouse, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Judge Warren K. Urbom.(EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-14/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 194 and 195 Motions to Quash Subpoenas. Because Michelle Peters agrees to make a true and accurate copy of the entire investigative file of the Omaha Human Rights and Relations Department for counsel of the defendant John Koch and the intervenor Lisa Carroll and submit those copies to Jim McGough and Kate Mahern, and because counsel for the defendant and for the intervenor agree that those copies will be considered as adequate foundation for admission in evidence, while reserving the issue of relevance, the Motion to Quash Subpoena of Michelle Peters, filing 194, is granted and Michelle Peters need not appear as a witness in the case; because witness Molly Smolko&apos;s compliance with her subpoena on December 1, 2006, would impose upon her an undue burden, the Motion to Quash Subpoena of Molly Smolko, filing 195, is granted; and the hearing on the Order to Show Cause, dated October 30, 2006, shall be held on Friday, December 22, 2006, beginning at 9:00 a.m. in Courtroom No. 4, U.S. Courthouse, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Judge Warren K. Urbom.(EJL, )</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ec69</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-14</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2006-11-15</dateIssued>
+  <docketText>ORDER granting 194 and 195 Motions to Quash Subpoenas. Because Michelle Peters agrees to make a true and accurate copy of the entire investigative file of the Omaha Human Rights and Relations Department for counsel of the defendant John Koch and the intervenor Lisa Carroll and submit those copies to Jim McGough and Kate Mahern, and because counsel for the defendant and for the intervenor agree that those copies will be considered as adequate foundation for admission in evidence, while reserving the issue of relevance, the Motion to Quash Subpoena of Michelle Peters, filing 194, is granted and Michelle Peters need not appear as a witness in the case; because witness Molly Smolko&apos;s compliance with her subpoena on December 1, 2006, would impose upon her an undue burden, the Motion to Quash Subpoena of Molly Smolko, filing 195, is granted; and the hearing on the Order to Show Cause, dated October 30, 2006, shall be held on Friday, December 22, 2006, beginning at 9:00 a.m. in Courtroom No. 4, U.S. Courthouse, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Judge Warren K. Urbom.(EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-15/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 197 Motion to Quash Subpoena of Matthew L. McBride; and the hearing on the Intervenor&apos;s Motion for Issuance of an Order to Show Cause Why Defendant Should not be Held in Contempt of Court, filing 188, is continued to February 2, 2007, at 9:00 a.m. in Courtroom No. 4, U.S. Courthouse, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Judge Warren K. Urbom.(EJL, )</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ed21</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-15</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2006-12-12</dateIssued>
+  <docketText>ORDER granting 197 Motion to Quash Subpoena of Matthew L. McBride; and the hearing on the Intervenor&apos;s Motion for Issuance of an Order to Show Cause Why Defendant Should not be Held in Contempt of Court, filing 188, is continued to February 2, 2007, at 9:00 a.m. in Courtroom No. 4, U.S. Courthouse, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Judge Warren K. Urbom.(EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-16/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER granting 199 Oral Motion. The hearing on the Intervenor&apos;s Motion for Issuance of an Order to Show Cause Why Defendant Should not be Held in Contempt of Court, filing 188, is continued to February 16, 2007, at 9:00 a.m. in Courtroom No. 4, U.S. Courthouse, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Judge Warren K. Urbom.(EJL, )</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ec68</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-16</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2006-12-13</dateIssued>
+  <docketText>ORDER granting 199 Oral Motion. The hearing on the Intervenor&apos;s Motion for Issuance of an Order to Show Cause Why Defendant Should not be Held in Contempt of Court, filing 188, is continued to February 16, 2007, at 9:00 a.m. in Courtroom No. 4, U.S. Courthouse, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Judge Warren K. Urbom.(EJL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_03-cv-00406-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-17/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Koch</title>
+  <subTitle>ORDER TO WITHDRAW EXHIBITS - Counsel for parties, shall either 1)withdraw the following exhibits previously submitted in this matter within 14 calendar daysof the date of this order, or 2) show cause why the exhibits should not be destroyed. Ordered by Senior Judge Warren K. Urbom. (JAB)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_03-cv-00406-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181ed24</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-17</identifier>
+ <identifier type="former granule identifier">ned-8_03-cv-00406_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_03-cv-00406/USCOURTS-ned-8_03-cv-00406-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_03-cv-00406/pdf/USCOURTS-ned-8_03-cv-00406-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:03-cv-00406; United States of America v. Koch; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_03-cv-00406-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>ORDER TO WITHDRAW EXHIBITS - Counsel for parties, shall either 1)withdraw the following exhibits previously submitted in this matter within 14 calendar daysof the date of this order, or 2) show cause why the exhibits should not be destroyed. Ordered by Senior Judge Warren K. Urbom. (JAB)</docketText>
+</extension>
+</relatedItem>
+</mods>

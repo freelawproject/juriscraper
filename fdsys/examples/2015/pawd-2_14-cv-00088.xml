@@ -1,0 +1,287 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aabe0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Western District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-pawd-2_14-cv-00088</identifier>
+<identifier type="local">P0b002ee18a8aabe0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-pawd-2_14-cv-00088</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-pawd-2_14-cv-00088</accessId>
+ <courtType>District</courtType>
+ <courtCode>pawd</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2424</courtSortOrder>
+ <caseNumber>2:14-cv-00088</caseNumber>
+ <caseOffice>Pittsburgh</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983pr Prisoner Civil Rights</cause>
+ <party firstName="SUE" fullName="SUE BERRIE" lastName="BERRIE" role="Defendant"></party>
+ <party firstName="BRIAN" fullName="BRIAN V. COLEMAN" lastName="COLEMAN" middleName="V." role="Defendant"></party>
+ <party fullName="CUMMINGS" lastName="CUMMINGS" role="Defendant"></party>
+ <party firstName="CLARK" fullName="CLARK GABLE" lastName="GABLE" role="Defendant"></party>
+ <party fullName="HARVEY" lastName="HARVEY" role="Defendant"></party>
+ <party firstName="R." fullName="R. MACKEY" lastName="MACKEY" role="Defendant"></party>
+ <party firstName="SHELLY" fullName="SHELLY MANKEY" lastName="MANKEY" role="Defendant"></party>
+ <party firstName="KATHY" fullName="KATHY MCMILLAN" lastName="MCMILLAN" role="Defendant"></party>
+ <party fullName="MORAN" lastName="MORAN" role="Defendant"></party>
+ <party fullName="PATTERSON" lastName="PATTERSON" role="Defendant"></party>
+ <party fullName="RICE" lastName="RICE" role="Defendant"></party>
+ <party fullName="SHAULIS" lastName="SHAULIS" role="Defendant"></party>
+ <party firstName="PHILIP" fullName="PHILIP SHIPLEY" lastName="SHIPLEY" role="Defendant"></party>
+ <party firstName="JAMAL" fullName="JAMAL SMITH" lastName="SMITH" role="Plaintiff"></party>
+ <party fullName="THOMAS" lastName="THOMAS" role="Defendant"></party>
+ <party firstName="JOHN" fullName="JOHN E. WETZEL" lastName="WETZEL" middleName="E." role="Defendant"></party>
+ <party fullName="WILLIAM" lastName="WILLIAM" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>SMITH v. WETZEL et al</title>
+ <partNumber>2:14-cv-00088</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-pawd-2_14-cv-00088/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-00088;14-088</identifier>
+<name type="corporate">
+ <namePart>United States District Court Western District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Pittsburgh</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>SUE BERRIE</displayForm>
+ <namePart type="family">BERRIE</namePart>
+ <namePart type="given">SUE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>BRIAN V. COLEMAN</displayForm>
+ <namePart type="family">COLEMAN</namePart>
+ <namePart type="given">BRIAN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CUMMINGS</displayForm>
+ <namePart type="family">CUMMINGS</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CLARK GABLE</displayForm>
+ <namePart type="family">GABLE</namePart>
+ <namePart type="given">CLARK</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>HARVEY</displayForm>
+ <namePart type="family">HARVEY</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. MACKEY</displayForm>
+ <namePart type="family">MACKEY</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SHELLY MANKEY</displayForm>
+ <namePart type="family">MANKEY</namePart>
+ <namePart type="given">SHELLY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>KATHY MCMILLAN</displayForm>
+ <namePart type="family">MCMILLAN</namePart>
+ <namePart type="given">KATHY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MORAN</displayForm>
+ <namePart type="family">MORAN</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PATTERSON</displayForm>
+ <namePart type="family">PATTERSON</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RICE</displayForm>
+ <namePart type="family">RICE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SHAULIS</displayForm>
+ <namePart type="family">SHAULIS</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PHILIP SHIPLEY</displayForm>
+ <namePart type="family">SHIPLEY</namePart>
+ <namePart type="given">PHILIP</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JAMAL SMITH</displayForm>
+ <namePart type="family">SMITH</namePart>
+ <namePart type="given">JAMAL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>THOMAS</displayForm>
+ <namePart type="family">THOMAS</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOHN E. WETZEL</displayForm>
+ <namePart type="family">WETZEL</namePart>
+ <namePart type="given">JOHN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>WILLIAM</displayForm>
+ <namePart type="family">WILLIAM</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-pawd-2_14-cv-00088</accessId>
+ <courtType>District</courtType>
+ <courtCode>pawd</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2424</courtSortOrder>
+ <caseNumber>2:14-cv-00088</caseNumber>
+ <caseOffice>Pittsburgh</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983pr Prisoner Civil Rights</cause>
+ <party firstName="SUE" fullName="SUE BERRIE" lastName="BERRIE" role="Defendant"></party>
+ <party firstName="BRIAN" fullName="BRIAN V. COLEMAN" lastName="COLEMAN" middleName="V." role="Defendant"></party>
+ <party fullName="CUMMINGS" lastName="CUMMINGS" role="Defendant"></party>
+ <party firstName="CLARK" fullName="CLARK GABLE" lastName="GABLE" role="Defendant"></party>
+ <party fullName="HARVEY" lastName="HARVEY" role="Defendant"></party>
+ <party firstName="R." fullName="R. MACKEY" lastName="MACKEY" role="Defendant"></party>
+ <party firstName="SHELLY" fullName="SHELLY MANKEY" lastName="MANKEY" role="Defendant"></party>
+ <party firstName="KATHY" fullName="KATHY MCMILLAN" lastName="MCMILLAN" role="Defendant"></party>
+ <party fullName="MORAN" lastName="MORAN" role="Defendant"></party>
+ <party fullName="PATTERSON" lastName="PATTERSON" role="Defendant"></party>
+ <party fullName="RICE" lastName="RICE" role="Defendant"></party>
+ <party fullName="SHAULIS" lastName="SHAULIS" role="Defendant"></party>
+ <party firstName="PHILIP" fullName="PHILIP SHIPLEY" lastName="SHIPLEY" role="Defendant"></party>
+ <party firstName="JAMAL" fullName="JAMAL SMITH" lastName="SMITH" role="Plaintiff"></party>
+ <party fullName="THOMAS" lastName="THOMAS" role="Defendant"></party>
+ <party firstName="JOHN" fullName="JOHN E. WETZEL" lastName="WETZEL" middleName="E." role="Defendant"></party>
+ <party fullName="WILLIAM" lastName="WILLIAM" role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-pawd-2_14-cv-00088-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-pawd-2_14-cv-00088/USCOURTS-pawd-2_14-cv-00088-0/mods.xml">
+ <titleInfo>
+  <title>SMITH v. WETZEL et al</title>
+  <subTitle>OPINION &amp; ORDER granting 38 Defendants&apos; Motion to Dismiss, with prejudice, as to all Defendants and Rhonda House. In addition, to the extent Plaintiff moves this Court for the third time for the appointment of counsel, and for the reasons stated more fully in this Opinion, Plaintiff&apos;s Motion to Appoint Counsel is denied. Signed by Chief Magistrate Judge Maureen P. Kelly on 1/5/2015. Copy of this Opinion &amp; Order mailed to Plaintiff at address of record on 1/5/2015. (dgg)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-pawd-2_14-cv-00088/pdf/USCOURTS-pawd-2_14-cv-00088-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b003f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-pawd-2_14-cv-00088/USCOURTS-pawd-2_14-cv-00088-0</identifier>
+ <identifier type="former granule identifier">pawd-2_14-cv-00088_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-pawd-2_14-cv-00088/USCOURTS-pawd-2_14-cv-00088-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-pawd-2_14-cv-00088/pdf/USCOURTS-pawd-2_14-cv-00088-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00088; SMITH v. WETZEL et al; </searchTitle>
+  <courtName>United States District Court Western District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-pawd-2_14-cv-00088-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>OPINION &amp; ORDER granting 38 Defendants&apos; Motion to Dismiss, with prejudice, as to all Defendants and Rhonda House. In addition, to the extent Plaintiff moves this Court for the third time for the appointment of counsel, and for the reasons stated more fully in this Opinion, Plaintiff&apos;s Motion to Appoint Counsel is denied. Signed by Chief Magistrate Judge Maureen P. Kelly on 1/5/2015. Copy of this Opinion &amp; Order mailed to Plaintiff at address of record on 1/5/2015. (dgg)</docketText>
+</extension>
+</relatedItem>
+</mods>

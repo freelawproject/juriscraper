@@ -1,0 +1,150 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180eebbda">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_08-cv-03304</identifier>
+<identifier type="local">P0b002ee180eebbda</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_08-cv-03304</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_08-cv-03304</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:08-cv-03304</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="C." fullName="C. Chester" lastName="Chester" role="Respondent"></party>
+ <party firstName="George" fullName="George Washington Williams" lastName="Williams" middleName="Washington" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Williams v. Chester</title>
+ <partNumber>5:08-cv-03304</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_08-cv-03304/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:08-cv-03304;08-3304</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>C. Chester</displayForm>
+ <namePart type="family">Chester</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>George Washington Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_08-cv-03304</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:08-cv-03304</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="C." fullName="C. Chester" lastName="Chester" role="Respondent"></party>
+ <party firstName="George" fullName="George Washington Williams" lastName="Williams" middleName="Washington" role="Petitioner"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_08-cv-03304-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_08-cv-03304/USCOURTS-ksd-5_08-cv-03304-0/mods.xml">
+ <titleInfo>
+  <title>Williams v. Chester</title>
+  <subTitle>MEMORANDUM AND ORDER ENTERED: Petitioner is granted to and including January 31, 2011, to show cause why this matter should not be dismissed as moot. The failure to file a timely response may result in the dismissal of this matter without additional prior notice to the petitioner. Signed by Senior District Judge Richard D. Rogers on 1/3/2011. (Mailed to pro se party George Washington Williams by regular mail.) (Attachments: #(1) Inmate Locator Record; #(2) Unpublished Orders) (smnd)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_08-cv-03304-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f1193f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_08-cv-03304/USCOURTS-ksd-5_08-cv-03304-0</identifier>
+ <identifier type="former granule identifier">ksd-5_08-cv-03304_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_08-cv-03304/USCOURTS-ksd-5_08-cv-03304-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_08-cv-03304/pdf/USCOURTS-ksd-5_08-cv-03304-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-03304; Williams v. Chester; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_08-cv-03304-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER ENTERED: Petitioner is granted to and including January 31, 2011, to show cause why this matter should not be dismissed as moot. The failure to file a timely response may result in the dismissal of this matter without additional prior notice to the petitioner. Signed by Senior District Judge Richard D. Rogers on 1/3/2011. (Mailed to pro se party George Washington Williams by regular mail.) (Attachments: #(1) Inmate Locator Record; #(2) Unpublished Orders) (smnd)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,217 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c68b26">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-5_10-cv-02520</identifier>
+<identifier type="local">P0b002ee186c68b26</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alnd-5_10-cv-02520</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alnd-5_10-cv-02520</accessId>
+ <courtType>District</courtType>
+ <courtCode>alnd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2012</courtSortOrder>
+ <caseNumber>5:10-cv-02520</caseNumber>
+ <caseOffice>Northeastern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party fullName="Attorney General of the State of Alabama, The" lastName="Attorney General of the State of Alabama, The" role="Respondent"></party>
+ <party firstName="Billy" fullName="Billy Mitchem" lastName="Mitchem" role="Respondent"></party>
+ <party firstName="Mark" fullName="Mark Anthony Partain" lastName="Partain" middleName="Anthony" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Partain v. Mitchem et al</title>
+ <partNumber>5:10-cv-02520</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-5_10-cv-02520/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:10-cv-02520;10-2520</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Northeastern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Attorney General of the State of Alabama, The</displayForm>
+ <namePart type="family">Attorney General of the State of Alabama, The</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Billy Mitchem</displayForm>
+ <namePart type="family">Mitchem</namePart>
+ <namePart type="given">Billy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Anthony Partain</displayForm>
+ <namePart type="family">Partain</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alnd-5_10-cv-02520</accessId>
+ <courtType>District</courtType>
+ <courtCode>alnd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2012</courtSortOrder>
+ <caseNumber>5:10-cv-02520</caseNumber>
+ <caseOffice>Northeastern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party fullName="Attorney General of the State of Alabama, The" lastName="Attorney General of the State of Alabama, The" role="Respondent"></party>
+ <party firstName="Billy" fullName="Billy Mitchem" lastName="Mitchem" role="Respondent"></party>
+ <party firstName="Mark" fullName="Mark Anthony Partain" lastName="Partain" middleName="Anthony" role="Petitioner"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-5_10-cv-02520-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_10-cv-02520/USCOURTS-alnd-5_10-cv-02520-0/mods.xml">
+ <titleInfo>
+  <title>Partain v. Mitchem et al</title>
+  <subTitle>MAGISTRATE JUDGE&apos;S REPORT AND RECOMMENDATION, as set out, re 1 Petition for Writ of Habeas Corpus filed by Mark Anthony Partain. Any party may file specific written objections w/ the clerk of this court w/in 14 days of the date on which the R&amp;R is entered. Objections to R&amp;R due by 1/6/2014. Signed by Magistrate Judge John H England, III on 12/19/13. (CTS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-5_10-cv-02520-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75925</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_10-cv-02520/USCOURTS-alnd-5_10-cv-02520-0</identifier>
+ <identifier type="former granule identifier">alnd-5_10-cv-02520_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_10-cv-02520/USCOURTS-alnd-5_10-cv-02520-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-5_10-cv-02520/pdf/USCOURTS-alnd-5_10-cv-02520-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cv-02520; Partain v. Mitchem et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-5_10-cv-02520-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-12-20</dateIssued>
+  <docketText>MAGISTRATE JUDGE&apos;S REPORT AND RECOMMENDATION, as set out, re 1 Petition for Writ of Habeas Corpus filed by Mark Anthony Partain. Any party may file specific written objections w/ the clerk of this court w/in 14 days of the date on which the R&amp;R is entered. Objections to R&amp;R due by 1/6/2014. Signed by Magistrate Judge John H England, III on 12/19/13. (CTS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-5_10-cv-02520-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_10-cv-02520/USCOURTS-alnd-5_10-cv-02520-1/mods.xml">
+ <titleInfo>
+  <title>Partain v. Mitchem et al</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge Madeline Hughes Haikala on 1/6/14. (ASL)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-5_10-cv-02520-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c759fc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_10-cv-02520/USCOURTS-alnd-5_10-cv-02520-1</identifier>
+ <identifier type="former granule identifier">alnd-5_10-cv-02520_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_10-cv-02520/USCOURTS-alnd-5_10-cv-02520-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-5_10-cv-02520/pdf/USCOURTS-alnd-5_10-cv-02520-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cv-02520; Partain v. Mitchem et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-5_10-cv-02520-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge Madeline Hughes Haikala on 1/6/14. (ASL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-5_10-cv-02520-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_10-cv-02520/USCOURTS-alnd-5_10-cv-02520-2/mods.xml">
+ <titleInfo>
+  <title>Partain v. Mitchem et al</title>
+  <subTitle>ORDER REASSIGNING CASE. Case reassigned to Judge Madeline Hughes Haikala ORDER OF DISMISSAL in accordance with memorandum opinion, the petition for writ of habeas corpus is DISMISSED, costs are taxed to petitioner. Signed by Judge Madeline Hughes Haikala on 1/6/14. (ASL)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-5_10-cv-02520-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75926</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_10-cv-02520/USCOURTS-alnd-5_10-cv-02520-2</identifier>
+ <identifier type="former granule identifier">alnd-5_10-cv-02520_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-5_10-cv-02520/USCOURTS-alnd-5_10-cv-02520-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-5_10-cv-02520/pdf/USCOURTS-alnd-5_10-cv-02520-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cv-02520; Partain v. Mitchem et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-5_10-cv-02520-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER REASSIGNING CASE. Case reassigned to Judge Madeline Hughes Haikala ORDER OF DISMISSAL in accordance with memorandum opinion, the petition for writ of habeas corpus is DISMISSED, costs are taxed to petitioner. Signed by Judge Madeline Hughes Haikala on 1/6/14. (ASL)</docketText>
+</extension>
+</relatedItem>
+</mods>

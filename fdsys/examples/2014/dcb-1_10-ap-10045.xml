@@ -1,0 +1,209 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c31187">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court District of Columbia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-dcb-1_10-ap-10045</identifier>
+<identifier type="local">P0b002ee186c31187</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-dcb-1_10-ap-10045</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-dcb-1_10-ap-10045</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>dcb</courtCode>
+ <courtCircuit>DC</courtCircuit>
+ <courtState>District of Columbia</courtState>
+ <courtSortOrder>3100</courtSortOrder>
+ <caseNumber>1:10-ap-10045</caseNumber>
+ <caseOffice>Washington, D.C.</caseOffice>
+ <party firstName="Stephen" fullName="Stephen Thomas Yelverton" lastName="Yelverton" middleName="Thomas" role="Plaintiff"></party>
+ <party fullName="District of Columbia" lastName="District of Columbia" role="Defendant"></party>
+ <party firstName="Wendell" fullName="Wendell W. Webster" lastName="Webster" middleName="W." role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Yelverton v. District of Columbia</title>
+ <partNumber>1:10-ap-10045</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-dcb-1_10-ap-10045/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">1:10-ap-10045;10-10045</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court District of Columbia</namePart>
+ <namePart>DC Circuit</namePart>
+ <namePart>Washington, D.C.</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Stephen Thomas Yelverton</displayForm>
+ <namePart type="family">Yelverton</namePart>
+ <namePart type="given">Stephen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>District of Columbia</displayForm>
+ <namePart type="family">District of Columbia</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wendell W. Webster</displayForm>
+ <namePart type="family">Webster</namePart>
+ <namePart type="given">Wendell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-dcb-1_10-ap-10045</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>dcb</courtCode>
+ <courtCircuit>DC</courtCircuit>
+ <courtState>District of Columbia</courtState>
+ <courtSortOrder>3100</courtSortOrder>
+ <caseNumber>1:10-ap-10045</caseNumber>
+ <caseOffice>Washington, D.C.</caseOffice>
+ <party firstName="Stephen" fullName="Stephen Thomas Yelverton" lastName="Yelverton" middleName="Thomas" role="Plaintiff"></party>
+ <party fullName="District of Columbia" lastName="District of Columbia" role="Defendant"></party>
+ <party firstName="Wendell" fullName="Wendell W. Webster" lastName="Webster" middleName="W." role="Interested Party"></party>
+ <state>District of Columbia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-dcb-1_10-ap-10045-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-dcb-1_10-ap-10045/USCOURTS-dcb-1_10-ap-10045-0/mods.xml">
+ <titleInfo>
+  <title>Yelverton v. District of Columbia</title>
+  <subTitle>Memorandum Decision and Order Denying Debtor&apos;s Motion for Permission to Appeal In Forma Pauperis (Related Document(s) #:21 Motion for Leave.) Order entered on 7/18/2011. (Meador, Patti)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-dcb-1_10-ap-10045-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3e915</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-dcb-1_10-ap-10045/USCOURTS-dcb-1_10-ap-10045-0</identifier>
+ <identifier type="former granule identifier">dcb-1_10-ap-10045_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-dcb-1_10-ap-10045/USCOURTS-dcb-1_10-ap-10045-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-dcb-1_10-ap-10045/pdf/USCOURTS-dcb-1_10-ap-10045-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-ap-10045; Yelverton v. District of Columbia; </searchTitle>
+  <courtName>United States Bankruptcy Court District of Columbia</courtName>
+  <state>District of Columbia</state>
+  <accessId>USCOURTS-dcb-1_10-ap-10045-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-07-18</dateIssued>
+  <docketText>Memorandum Decision and Order Denying Debtor&apos;s Motion for Permission to Appeal In Forma Pauperis (Related Document(s) #:21 Motion for Leave.) Order entered on 7/18/2011. (Meador, Patti)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-dcb-1_10-ap-10045-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-dcb-1_10-ap-10045/USCOURTS-dcb-1_10-ap-10045-1/mods.xml">
+ <titleInfo>
+  <title>Yelverton v. District of Columbia</title>
+  <subTitle>Memorandum Decision on Remand (Re: Related Document(s)33 Final Order by District Court re: Appeal.) Order entered on 12/4/2013. (Meador, Patti)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-dcb-1_10-ap-10045-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3e914</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-dcb-1_10-ap-10045/USCOURTS-dcb-1_10-ap-10045-1</identifier>
+ <identifier type="former granule identifier">dcb-1_10-ap-10045_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-dcb-1_10-ap-10045/USCOURTS-dcb-1_10-ap-10045-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-dcb-1_10-ap-10045/pdf/USCOURTS-dcb-1_10-ap-10045-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-ap-10045; Yelverton v. District of Columbia; </searchTitle>
+  <courtName>United States Bankruptcy Court District of Columbia</courtName>
+  <state>District of Columbia</state>
+  <accessId>USCOURTS-dcb-1_10-ap-10045-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-12-04</dateIssued>
+  <docketText>Memorandum Decision on Remand (Re: Related Document(s)33 Final Order by District Court re: Appeal.) Order entered on 12/4/2013. (Meador, Patti)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-dcb-1_10-ap-10045-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-dcb-1_10-ap-10045/USCOURTS-dcb-1_10-ap-10045-2/mods.xml">
+ <titleInfo>
+  <title>Yelverton v. District of Columbia</title>
+  <subTitle>Memorandum Decision Re: Plaintiff&apos;s Motion to Alter or Amend Decision Per Rule 59(e) (Re: Related Document(s)39 Motion to Amend/Modify.) Order entered on 1/3/2014. (Meador, Patti)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-dcb-1_10-ap-10045-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3e913</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-dcb-1_10-ap-10045/USCOURTS-dcb-1_10-ap-10045-2</identifier>
+ <identifier type="former granule identifier">dcb-1_10-ap-10045_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-dcb-1_10-ap-10045/USCOURTS-dcb-1_10-ap-10045-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-dcb-1_10-ap-10045/pdf/USCOURTS-dcb-1_10-ap-10045-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-ap-10045; Yelverton v. District of Columbia; </searchTitle>
+  <courtName>United States Bankruptcy Court District of Columbia</courtName>
+  <state>District of Columbia</state>
+  <accessId>USCOURTS-dcb-1_10-ap-10045-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>Memorandum Decision Re: Plaintiff&apos;s Motion to Alter or Amend Decision Per Rule 59(e) (Re: Related Document(s)39 Motion to Amend/Modify.) Order entered on 1/3/2014. (Meador, Patti)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,272 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8ab5b4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Missouri</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_10-cv-00086</identifier>
+<identifier type="local">P0b002ee18a8ab5b4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-moed-4_10-cv-00086</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-moed-4_10-cv-00086</accessId>
+ <courtType>District</courtType>
+ <courtCode>moed</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Missouri</courtState>
+ <courtSortOrder>2281</courtSortOrder>
+ <caseNumber>4:10-cv-00086</caseNumber>
+ <caseOffice>St. Louis</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>240</natureSuitCode>
+ <natureSuit>Torts to Land</natureSuit>
+ <cause>28:1332 Diversity-Torts to Land</cause>
+ <party fullName="Arco Midcon, L.L.C." lastName="Arco Midcon, L.L.C." role="Defendant"></party>
+ <party firstName="Ralph" fullName="Ralph Dennis Dooley" lastName="Dooley" middleName="Dennis" role="witness"></party>
+ <party firstName="Glenn" fullName="Glenn A. Henke" lastName="Henke" middleName="A." role="Plaintiff"></party>
+ <party firstName="Linda" fullName="Linda Kluner" lastName="Kluner" role="Plaintiff"></party>
+ <party fullName="Magellan Pipeline Company, L.P." lastName="Magellan Pipeline Company, L.P." role="Defendant"></party>
+ <party fullName="Wiltel Communications, L.L.C." lastName="Wiltel Communications, L.L.C." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Henke et al v. Wiltel Communications, L.L.C. et al</title>
+ <partNumber>4:10-cv-00086</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_10-cv-00086/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:10-cv-00086;10-086</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Missouri</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>St. Louis</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Arco Midcon, L.L.C.</displayForm>
+ <namePart type="family">Arco Midcon, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ralph Dennis Dooley</displayForm>
+ <namePart type="family">Dooley</namePart>
+ <namePart type="given">Ralph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>witness</description>
+</name>
+<name type="personal">
+ <displayForm>Glenn A. Henke</displayForm>
+ <namePart type="family">Henke</namePart>
+ <namePart type="given">Glenn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Linda Kluner</displayForm>
+ <namePart type="family">Kluner</namePart>
+ <namePart type="given">Linda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Magellan Pipeline Company, L.P.</displayForm>
+ <namePart type="family">Magellan Pipeline Company, L.P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wiltel Communications, L.L.C.</displayForm>
+ <namePart type="family">Wiltel Communications, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-moed-4_10-cv-00086</accessId>
+ <courtType>District</courtType>
+ <courtCode>moed</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Missouri</courtState>
+ <courtSortOrder>2281</courtSortOrder>
+ <caseNumber>4:10-cv-00086</caseNumber>
+ <caseOffice>St. Louis</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>240</natureSuitCode>
+ <natureSuit>Torts to Land</natureSuit>
+ <cause>28:1332 Diversity-Torts to Land</cause>
+ <party fullName="Arco Midcon, L.L.C." lastName="Arco Midcon, L.L.C." role="Defendant"></party>
+ <party firstName="Ralph" fullName="Ralph Dennis Dooley" lastName="Dooley" middleName="Dennis" role="witness"></party>
+ <party firstName="Glenn" fullName="Glenn A. Henke" lastName="Henke" middleName="A." role="Plaintiff"></party>
+ <party firstName="Linda" fullName="Linda Kluner" lastName="Kluner" role="Plaintiff"></party>
+ <party fullName="Magellan Pipeline Company, L.P." lastName="Magellan Pipeline Company, L.P." role="Defendant"></party>
+ <party fullName="Wiltel Communications, L.L.C." lastName="Wiltel Communications, L.L.C." role="Defendant"></party>
+ <state>Missouri</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_10-cv-00086-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_10-cv-00086/USCOURTS-moed-4_10-cv-00086-0/mods.xml">
+ <titleInfo>
+  <title>Henke et al v. Wiltel Communications, L.L.C. et al</title>
+  <subTitle>OPINION MEMORANDUM AND ORDER IT IS HEREBY ORDERED that Defendant Wiltel Communications, L.L.C.s Motion to Dismiss, [Doc. No. 4], is granted in part and denied in part; IT IS FURTHER ORDERED that Defendant Magellan Pipeline Company, L.P.s Motion to Dismiss, [Doc. No. 15], is granted in part and denied in part; IT IS FURTHER ORDERED that Plaintiffs Motion for Leave to file an Amended Complaint, [Doc. No. 19], is granted as to Count VI; IT IS FURTHER ORDERED that Defendant ARCO Midcon, L.L.Cs Motion to Dismiss and Strike, [Doc. No. 28], is granted. IT IS FURTHER ORDERED that Count I is dismissed as to Wiltel and Magellan; IT IS FURTHER ORDERED that Count IV is dismissed as to all defendants; IT IS FURTHER ORDERED that Count V is dismissed as to all defendants, IT IS FURTHER ORDERED that Count VI is dismissed as to all defendants. IT IS FURTHER ORDERED that Plaintiffs are given 14 days from the date of this Opinion to file an Amended Count VI as to Defendant Wiltel. IT IS FURTHER ORDERED that Plaintiffs demand for medicalmonitoring is stricken.28 15 19 4 ( Response to Court due by 11/16/2010.) Signed by Honorable Henry E. Autrey on 11/2/10. (CLA)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_10-cv-00086/pdf/USCOURTS-moed-4_10-cv-00086-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b6025</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_10-cv-00086/USCOURTS-moed-4_10-cv-00086-0</identifier>
+ <identifier type="former granule identifier">moed-4_10-cv-00086_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_10-cv-00086/USCOURTS-moed-4_10-cv-00086-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_10-cv-00086/pdf/USCOURTS-moed-4_10-cv-00086-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-00086; Henke et al v. Wiltel Communications, L.L.C. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_10-cv-00086-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-11-02</dateIssued>
+  <docketText>OPINION MEMORANDUM AND ORDER IT IS HEREBY ORDERED that Defendant Wiltel Communications, L.L.C.s Motion to Dismiss, [Doc. No. 4], is granted in part and denied in part; IT IS FURTHER ORDERED that Defendant Magellan Pipeline Company, L.P.s Motion to Dismiss, [Doc. No. 15], is granted in part and denied in part; IT IS FURTHER ORDERED that Plaintiffs Motion for Leave to file an Amended Complaint, [Doc. No. 19], is granted as to Count VI; IT IS FURTHER ORDERED that Defendant ARCO Midcon, L.L.Cs Motion to Dismiss and Strike, [Doc. No. 28], is granted. IT IS FURTHER ORDERED that Count I is dismissed as to Wiltel and Magellan; IT IS FURTHER ORDERED that Count IV is dismissed as to all defendants; IT IS FURTHER ORDERED that Count V is dismissed as to all defendants, IT IS FURTHER ORDERED that Count VI is dismissed as to all defendants. IT IS FURTHER ORDERED that Plaintiffs are given 14 days from the date of this Opinion to file an Amended Count VI as to Defendant Wiltel. IT IS FURTHER ORDERED that Plaintiffs demand for medicalmonitoring is stricken.28 15 19 4 ( Response to Court due by 11/16/2010.) Signed by Honorable Henry E. Autrey on 11/2/10. (CLA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_10-cv-00086-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_10-cv-00086/USCOURTS-moed-4_10-cv-00086-1/mods.xml">
+ <titleInfo>
+  <title>Henke et al v. Wiltel Communications, L.L.C. et al</title>
+  <subTitle>OPINION, MEMORANDUM AND ORDER; HEREBY ORDERED that Defendant Wiltel Communications, L.L.C.s Motion for Partial Summary Judgment, [Doc. No. 81], is granted. A separate judgment in accordance with this Opinion, Memorandum andOrder will be entered upon the resolution of the remaining claims herein. Signed by District Judge Henry E. Autrey on 03/07/2014. (CLK)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_10-cv-00086/pdf/USCOURTS-moed-4_10-cv-00086-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b6022</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_10-cv-00086/USCOURTS-moed-4_10-cv-00086-1</identifier>
+ <identifier type="former granule identifier">moed-4_10-cv-00086_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_10-cv-00086/USCOURTS-moed-4_10-cv-00086-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_10-cv-00086/pdf/USCOURTS-moed-4_10-cv-00086-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-00086; Henke et al v. Wiltel Communications, L.L.C. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_10-cv-00086-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-03-07</dateIssued>
+  <docketText>OPINION, MEMORANDUM AND ORDER; HEREBY ORDERED that Defendant Wiltel Communications, L.L.C.s Motion for Partial Summary Judgment, [Doc. No. 81], is granted. A separate judgment in accordance with this Opinion, Memorandum andOrder will be entered upon the resolution of the remaining claims herein. Signed by District Judge Henry E. Autrey on 03/07/2014. (CLK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_10-cv-00086-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_10-cv-00086/USCOURTS-moed-4_10-cv-00086-2/mods.xml">
+ <titleInfo>
+  <title>Henke et al v. Wiltel Communications, L.L.C. et al</title>
+  <subTitle>OPINION MEMORANDUM AND ORDER IT IS HEREBY ORDERED that Plaintiffs Motion for Class Certification, [Doc. 98], is DENIED. 98 Signed by District Judge Henry E. Autrey on 3/12/14. (CLA)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_10-cv-00086/pdf/USCOURTS-moed-4_10-cv-00086-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b6023</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_10-cv-00086/USCOURTS-moed-4_10-cv-00086-2</identifier>
+ <identifier type="former granule identifier">moed-4_10-cv-00086_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_10-cv-00086/USCOURTS-moed-4_10-cv-00086-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_10-cv-00086/pdf/USCOURTS-moed-4_10-cv-00086-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-00086; Henke et al v. Wiltel Communications, L.L.C. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_10-cv-00086-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-03-12</dateIssued>
+  <docketText>OPINION MEMORANDUM AND ORDER IT IS HEREBY ORDERED that Plaintiffs Motion for Class Certification, [Doc. 98], is DENIED. 98 Signed by District Judge Henry E. Autrey on 3/12/14. (CLA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-moed-4_10-cv-00086-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_10-cv-00086/USCOURTS-moed-4_10-cv-00086-3/mods.xml">
+ <titleInfo>
+  <title>Henke et al v. Wiltel Communications, L.L.C. et al</title>
+  <subTitle>OPINION MEMORANDUM AND ORDER IT IS HEREBY ORDERED that Defendants Motion for Summary Judgment, [Doc. 156], is granted. A separate judgment in accordance with this Opinion, Memorandum and Order is entered this same date.156 Signed by District Judge Henry Edward Autrey on 1/5/15. (CLA)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_10-cv-00086/pdf/USCOURTS-moed-4_10-cv-00086-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b6024</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_10-cv-00086/USCOURTS-moed-4_10-cv-00086-3</identifier>
+ <identifier type="former granule identifier">moed-4_10-cv-00086_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-moed-4_10-cv-00086/USCOURTS-moed-4_10-cv-00086-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-moed-4_10-cv-00086/pdf/USCOURTS-moed-4_10-cv-00086-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-00086; Henke et al v. Wiltel Communications, L.L.C. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Missouri</courtName>
+  <state>Missouri</state>
+  <accessId>USCOURTS-moed-4_10-cv-00086-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>OPINION MEMORANDUM AND ORDER IT IS HEREBY ORDERED that Defendants Motion for Summary Judgment, [Doc. 156], is granted. A separate judgment in accordance with this Opinion, Memorandum and Order is entered this same date.156 Signed by District Judge Henry Edward Autrey on 1/5/15. (CLA)</docketText>
+</extension>
+</relatedItem>
+</mods>

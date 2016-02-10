@@ -1,0 +1,339 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a02ef3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cb-03006</identifier>
+<identifier type="local">P0b002ee183a02ef3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_11-cb-03006</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cb-03006</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cb-03006</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType></caseType>
+ <party firstName="Jessica" fullName="Jessica J. Anderson" lastName="Anderson" middleName="J." role="Defendant"></party>
+ <party firstName="Latoya" fullName="Latoya L. Fasthorse" lastName="Fasthorse" middleName="L." role="Defendant"></party>
+ <party firstName="Zachary" fullName="Zachary W. Fitzgerald" lastName="Fitzgerald" middleName="W." role="Defendant"></party>
+ <party firstName="Taylor" fullName="Taylor Gardner" lastName="Gardner" role="Defendant"></party>
+ <party firstName="Mallory" fullName="Mallory R. Hellbusch" lastName="Hellbusch" middleName="R." role="Defendant"></party>
+ <party firstName="Michelle" fullName="Michelle R. Hellbusch" lastName="Hellbusch" middleName="R." role="Defendant"></party>
+ <party firstName="Tonya" fullName="Tonya M. Meier" lastName="Meier" middleName="M." role="Defendant"></party>
+ <party firstName="Dylan" fullName="Dylan J. Robinett" lastName="Robinett" middleName="J." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="James" fullName="James D. Winters" lastName="Winters" middleName="D." role="Defendant"></party>
+ <party firstName="Eugene" fullName="Eugene L. Winters" lastName="Winters" middleName="L." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Anderson et al</title>
+ <partNumber>4:11-cb-03006</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cb-03006/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:11-cb-03006;11-3006</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jessica J. Anderson</displayForm>
+ <namePart type="family">Anderson</namePart>
+ <namePart type="given">Jessica</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Latoya L. Fasthorse</displayForm>
+ <namePart type="family">Fasthorse</namePart>
+ <namePart type="given">Latoya</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Zachary W. Fitzgerald</displayForm>
+ <namePart type="family">Fitzgerald</namePart>
+ <namePart type="given">Zachary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Taylor Gardner</displayForm>
+ <namePart type="family">Gardner</namePart>
+ <namePart type="given">Taylor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mallory R. Hellbusch</displayForm>
+ <namePart type="family">Hellbusch</namePart>
+ <namePart type="given">Mallory</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michelle R. Hellbusch</displayForm>
+ <namePart type="family">Hellbusch</namePart>
+ <namePart type="given">Michelle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tonya M. Meier</displayForm>
+ <namePart type="family">Meier</namePart>
+ <namePart type="given">Tonya</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dylan J. Robinett</displayForm>
+ <namePart type="family">Robinett</namePart>
+ <namePart type="given">Dylan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James D. Winters</displayForm>
+ <namePart type="family">Winters</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eugene L. Winters</displayForm>
+ <namePart type="family">Winters</namePart>
+ <namePart type="given">Eugene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cb-03006</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cb-03006</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType></caseType>
+ <party firstName="Jessica" fullName="Jessica J. Anderson" lastName="Anderson" middleName="J." role="Defendant"></party>
+ <party firstName="Latoya" fullName="Latoya L. Fasthorse" lastName="Fasthorse" middleName="L." role="Defendant"></party>
+ <party firstName="Zachary" fullName="Zachary W. Fitzgerald" lastName="Fitzgerald" middleName="W." role="Defendant"></party>
+ <party firstName="Taylor" fullName="Taylor Gardner" lastName="Gardner" role="Defendant"></party>
+ <party firstName="Mallory" fullName="Mallory R. Hellbusch" lastName="Hellbusch" middleName="R." role="Defendant"></party>
+ <party firstName="Michelle" fullName="Michelle R. Hellbusch" lastName="Hellbusch" middleName="R." role="Defendant"></party>
+ <party firstName="Tonya" fullName="Tonya M. Meier" lastName="Meier" middleName="M." role="Defendant"></party>
+ <party firstName="Dylan" fullName="Dylan J. Robinett" lastName="Robinett" middleName="J." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="James" fullName="James D. Winters" lastName="Winters" middleName="D." role="Defendant"></party>
+ <party firstName="Eugene" fullName="Eugene L. Winters" lastName="Winters" middleName="L." role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cb-03006-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Anderson et al</title>
+  <subTitle>ORDER granting 25 Oral Motion as to Eugene L. Winters (9). The Central Violations Bureau matter against Eugene L Winters, ticket number 1157732, is dismissed. Ordered by Magistrate Judge Cheryl R. Zwart. (E-mailed to CVB)(JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cb-03006-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a04311</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-0</identifier>
+ <identifier type="former granule identifier">ned-4_11-cb-03006_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cb-03006/pdf/USCOURTS-ned-4_11-cb-03006-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cb-03006; USA v. Anderson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cb-03006-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>ORDER granting 25 Oral Motion as to Eugene L. Winters (9). The Central Violations Bureau matter against Eugene L Winters, ticket number 1157732, is dismissed. Ordered by Magistrate Judge Cheryl R. Zwart. (E-mailed to CVB)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cb-03006-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Anderson et al</title>
+  <subTitle>MOTION AND ORDER TO DISMISS as to defendant Latoya L. Fasthorse. Violation Notices #W1157733 and W1157734 dismissed at the request of the case agent. Ordered by Magistrate Judge Cheryl R. Zwart. (Certified Copy to USM) (TEL) Modified on 1/30/2012 to add copy information. (TEL)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cb-03006-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a04312</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-1</identifier>
+ <identifier type="former granule identifier">ned-4_11-cb-03006_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cb-03006/pdf/USCOURTS-ned-4_11-cb-03006-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cb-03006; USA v. Anderson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cb-03006-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-26</dateIssued>
+  <docketText>MOTION AND ORDER TO DISMISS as to defendant Latoya L. Fasthorse. Violation Notices #W1157733 and W1157734 dismissed at the request of the case agent. Ordered by Magistrate Judge Cheryl R. Zwart. (Certified Copy to USM) (TEL) Modified on 1/30/2012 to add copy information. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cb-03006-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Anderson et al</title>
+  <subTitle>MOTION AND ORDER TO DISMISS as to defendant James D. Winters. Ordered by Magistrate Judge Cheryl R. Zwart. (Certified Copy to USM) (TEL) Modified on 1/30/2012 to add copy information. (TEL)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cb-03006-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a04313</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-2</identifier>
+ <identifier type="former granule identifier">ned-4_11-cb-03006_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cb-03006/pdf/USCOURTS-ned-4_11-cb-03006-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cb-03006; USA v. Anderson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cb-03006-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-26</dateIssued>
+  <docketText>MOTION AND ORDER TO DISMISS as to defendant James D. Winters. Ordered by Magistrate Judge Cheryl R. Zwart. (Certified Copy to USM) (TEL) Modified on 1/30/2012 to add copy information. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cb-03006-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Anderson et al</title>
+  <subTitle>ORDER granting 34 Government&apos;s Motion to Dismiss Criminal Case as to Zachary W. Fitzgerald (3). Upon motion of the government, the violation is dismissed. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cb-03006-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a04314</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-3</identifier>
+ <identifier type="former granule identifier">ned-4_11-cb-03006_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cb-03006/pdf/USCOURTS-ned-4_11-cb-03006-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cb-03006; USA v. Anderson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cb-03006-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-10-01</dateIssued>
+  <docketText>ORDER granting 34 Government&apos;s Motion to Dismiss Criminal Case as to Zachary W. Fitzgerald (3). Upon motion of the government, the violation is dismissed. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cb-03006-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Anderson et al</title>
+  <subTitle>ORDER - Upon the 38 Motion to Dismiss Criminal Case of the government, the violation is dismissed as to Michelle R. Hellbusch (5). Ordered by Magistrate Judge Cheryl R. Zwart. (Copy mailed to pro se party)( MKR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cb-03006-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a04310</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-4</identifier>
+ <identifier type="former granule identifier">ned-4_11-cb-03006_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cb-03006/USCOURTS-ned-4_11-cb-03006-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cb-03006/pdf/USCOURTS-ned-4_11-cb-03006-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cb-03006; USA v. Anderson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cb-03006-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER - Upon the 38 Motion to Dismiss Criminal Case of the government, the violation is dismissed as to Michelle R. Hellbusch (5). Ordered by Magistrate Judge Cheryl R. Zwart. (Copy mailed to pro se party)( MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

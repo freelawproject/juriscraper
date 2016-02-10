@@ -1,0 +1,290 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815cc48c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_05-cr-00544</identifier>
+<identifier type="local">P0b002ee1815cc48c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-4_05-cr-00544</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_05-cr-00544</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:05-cr-00544</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Gerald" fullName="Gerald R. Baker" lastName="Baker" middleName="R." role="Defendant"></party>
+ <party firstName="Dorian" fullName="Dorian W. Christian" lastName="Christian" middleName="W." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph N. Flaviano, Sr." lastName="Flaviano, Sr." middleName="N." role="Defendant"></party>
+ <party firstName="Cleveland" fullName="Cleveland G. Hightower, Jr." lastName="Hightower, Jr." middleName="G." role="Defendant"></party>
+ <party firstName="Malcolm" fullName="Malcolm Floyd Kimble" lastName="Kimble" middleName="Floyd" role="Defendant"></party>
+ <party fullName="Lenny" lastName="Lenny" role="Defendant"></party>
+ <party firstName="Marvin" fullName="Marvin L. McWilson" lastName="McWilson" middleName="L." role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Francisco Melo" lastName="Melo" middleName="Francisco" role="Defendant"></party>
+ <party fullName="Pee Wee" lastName="Pee Wee" role="Defendant"></party>
+ <party firstName="Valerie" fullName="Valerie Pickins" lastName="Pickins" role="Interested Party"></party>
+ <party firstName="Fransheria" fullName="Fransheria Pierce" lastName="Pierce" role="Interested Party"></party>
+ <party firstName="Thomas" fullName="Thomas A. Pierce" lastName="Pierce" middleName="A." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas A. Pierce, Jr." lastName="Pierce, Jr." middleName="A." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas A. Pierce, Sr." lastName="Pierce, Sr." middleName="A." role="Defendant"></party>
+ <party firstName="Ralph" fullName="Ralph Everett Stoddard" lastName="Stoddard" middleName="Everett" role="Petitioner"></party>
+ <party firstName="Ralph" fullName="Ralph R. Stoddard" lastName="Stoddard" middleName="R." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Booker" fullName="Booker T. Wellington, Jr." lastName="Wellington, Jr." middleName="T." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Melo et al</title>
+ <partNumber>4:05-cr-00544</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_05-cr-00544/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:05-cr-00544;05-544</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Youngstown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Gerald R. Baker</displayForm>
+ <namePart type="family">Baker</namePart>
+ <namePart type="given">Gerald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dorian W. Christian</displayForm>
+ <namePart type="family">Christian</namePart>
+ <namePart type="given">Dorian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph N. Flaviano, Sr.</displayForm>
+ <namePart type="family">Flaviano, Sr.</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cleveland G. Hightower, Jr.</displayForm>
+ <namePart type="family">Hightower, Jr.</namePart>
+ <namePart type="given">Cleveland</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Malcolm Floyd Kimble</displayForm>
+ <namePart type="family">Kimble</namePart>
+ <namePart type="given">Malcolm</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lenny</displayForm>
+ <namePart type="family">Lenny</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marvin L. McWilson</displayForm>
+ <namePart type="family">McWilson</namePart>
+ <namePart type="given">Marvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Juan Francisco Melo</displayForm>
+ <namePart type="family">Melo</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pee Wee</displayForm>
+ <namePart type="family">Pee Wee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Valerie Pickins</displayForm>
+ <namePart type="family">Pickins</namePart>
+ <namePart type="given">Valerie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Fransheria Pierce</displayForm>
+ <namePart type="family">Pierce</namePart>
+ <namePart type="given">Fransheria</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas A. Pierce</displayForm>
+ <namePart type="family">Pierce</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas A. Pierce, Jr.</displayForm>
+ <namePart type="family">Pierce, Jr.</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas A. Pierce, Sr.</displayForm>
+ <namePart type="family">Pierce, Sr.</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ralph Everett Stoddard</displayForm>
+ <namePart type="family">Stoddard</namePart>
+ <namePart type="given">Ralph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Ralph R. Stoddard</displayForm>
+ <namePart type="family">Stoddard</namePart>
+ <namePart type="given">Ralph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Booker T. Wellington, Jr.</displayForm>
+ <namePart type="family">Wellington, Jr.</namePart>
+ <namePart type="given">Booker</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_05-cr-00544</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:05-cr-00544</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Gerald" fullName="Gerald R. Baker" lastName="Baker" middleName="R." role="Defendant"></party>
+ <party firstName="Dorian" fullName="Dorian W. Christian" lastName="Christian" middleName="W." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph N. Flaviano, Sr." lastName="Flaviano, Sr." middleName="N." role="Defendant"></party>
+ <party firstName="Cleveland" fullName="Cleveland G. Hightower, Jr." lastName="Hightower, Jr." middleName="G." role="Defendant"></party>
+ <party firstName="Malcolm" fullName="Malcolm Floyd Kimble" lastName="Kimble" middleName="Floyd" role="Defendant"></party>
+ <party fullName="Lenny" lastName="Lenny" role="Defendant"></party>
+ <party firstName="Marvin" fullName="Marvin L. McWilson" lastName="McWilson" middleName="L." role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Francisco Melo" lastName="Melo" middleName="Francisco" role="Defendant"></party>
+ <party fullName="Pee Wee" lastName="Pee Wee" role="Defendant"></party>
+ <party firstName="Valerie" fullName="Valerie Pickins" lastName="Pickins" role="Interested Party"></party>
+ <party firstName="Fransheria" fullName="Fransheria Pierce" lastName="Pierce" role="Interested Party"></party>
+ <party firstName="Thomas" fullName="Thomas A. Pierce" lastName="Pierce" middleName="A." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas A. Pierce, Jr." lastName="Pierce, Jr." middleName="A." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas A. Pierce, Sr." lastName="Pierce, Sr." middleName="A." role="Defendant"></party>
+ <party firstName="Ralph" fullName="Ralph Everett Stoddard" lastName="Stoddard" middleName="Everett" role="Petitioner"></party>
+ <party firstName="Ralph" fullName="Ralph R. Stoddard" lastName="Stoddard" middleName="R." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Booker" fullName="Booker T. Wellington, Jr." lastName="Wellington, Jr." middleName="T." role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_05-cr-00544-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_05-cr-00544/USCOURTS-ohnd-4_05-cr-00544-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Melo et al</title>
+  <subTitle>Memorandum of Opinion and Order: Plaintiff&apos;s Motion to Dismiss the Petition of Valerie Pinkins is granted. 202 Signed by Judge Patricia A. Gaughan on 1/8/07. (L-C, S)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_05-cr-00544-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816ae62c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_05-cr-00544/USCOURTS-ohnd-4_05-cr-00544-0</identifier>
+ <identifier type="former granule identifier">ohnd-4_05-cr-00544_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_05-cr-00544/USCOURTS-ohnd-4_05-cr-00544-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_05-cr-00544/pdf/USCOURTS-ohnd-4_05-cr-00544-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-00544; United States of America v. Melo et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_05-cr-00544-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-08</dateIssued>
+  <docketText>Memorandum of Opinion and Order: Plaintiff&apos;s Motion to Dismiss the Petition of Valerie Pinkins is granted. 202 Signed by Judge Patricia A. Gaughan on 1/8/07. (L-C, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

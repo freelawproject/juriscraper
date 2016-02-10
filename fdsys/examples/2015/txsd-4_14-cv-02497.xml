@@ -1,0 +1,188 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8ab651">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Southern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txsd-4_14-cv-02497</identifier>
+<identifier type="local">P0b002ee18a8ab651</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txsd-4_14-cv-02497</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txsd-4_14-cv-02497</accessId>
+ <courtType>District</courtType>
+ <courtCode>txsd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2483</courtSortOrder>
+ <caseNumber>4:14-cv-02497</caseNumber>
+ <caseOffice>Houston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>290</natureSuitCode>
+ <natureSuit>Other Real Property Actions</natureSuit>
+ <cause>28:1331(a) Fed. Question: Real Property</cause>
+ <party fullName="Bank Of America, NA" lastName="Bank Of America, NA" role="Defendant"></party>
+ <party fullName="Bank of New York" lastName="Bank of New York" role="Defendant"></party>
+ <party fullName="Green Tree Loan Servicing, LLC" lastName="Green Tree Loan Servicing, LLC" role="Defendant"></party>
+ <party firstName="Antwan" fullName="Antwan Henry" lastName="Henry" role="Plaintiff"></party>
+ <party fullName="The Bank of New York Mellon" lastName="The Bank of New York Mellon" role="Defendant"></party>
+ <party fullName="Walter Investment Management Corp" lastName="Walter Investment Management Corp" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Henry v. Bank Of America, NA et al</title>
+ <partNumber>4:14-cv-02497</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txsd-4_14-cv-02497/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:14-cv-02497;14-2497</identifier>
+<name type="corporate">
+ <namePart>United States District Court Southern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Houston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bank Of America, NA</displayForm>
+ <namePart type="family">Bank Of America, NA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bank of New York</displayForm>
+ <namePart type="family">Bank of New York</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Green Tree Loan Servicing, LLC</displayForm>
+ <namePart type="family">Green Tree Loan Servicing, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Antwan Henry</displayForm>
+ <namePart type="family">Henry</namePart>
+ <namePart type="given">Antwan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>The Bank of New York Mellon</displayForm>
+ <namePart type="family">The Bank of New York Mellon</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Walter Investment Management Corp</displayForm>
+ <namePart type="family">Walter Investment Management Corp</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txsd-4_14-cv-02497</accessId>
+ <courtType>District</courtType>
+ <courtCode>txsd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2483</courtSortOrder>
+ <caseNumber>4:14-cv-02497</caseNumber>
+ <caseOffice>Houston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>290</natureSuitCode>
+ <natureSuit>Other Real Property Actions</natureSuit>
+ <cause>28:1331(a) Fed. Question: Real Property</cause>
+ <party fullName="Bank Of America, NA" lastName="Bank Of America, NA" role="Defendant"></party>
+ <party fullName="Bank of New York" lastName="Bank of New York" role="Defendant"></party>
+ <party fullName="Green Tree Loan Servicing, LLC" lastName="Green Tree Loan Servicing, LLC" role="Defendant"></party>
+ <party firstName="Antwan" fullName="Antwan Henry" lastName="Henry" role="Plaintiff"></party>
+ <party fullName="The Bank of New York Mellon" lastName="The Bank of New York Mellon" role="Defendant"></party>
+ <party fullName="Walter Investment Management Corp" lastName="Walter Investment Management Corp" role="Defendant"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txsd-4_14-cv-02497-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txsd-4_14-cv-02497/USCOURTS-txsd-4_14-cv-02497-0/mods.xml">
+ <titleInfo>
+  <title>Henry v. Bank Of America, NA et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER denying 8 MOTION for Temporary Restraining Order (Signed by Judge Sim Lake) Parties notified. (aboyd, 4)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-txsd-4_14-cv-02497/pdf/USCOURTS-txsd-4_14-cv-02497-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b6020</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txsd-4_14-cv-02497/USCOURTS-txsd-4_14-cv-02497-0</identifier>
+ <identifier type="former granule identifier">txsd-4_14-cv-02497_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txsd-4_14-cv-02497/USCOURTS-txsd-4_14-cv-02497-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txsd-4_14-cv-02497/pdf/USCOURTS-txsd-4_14-cv-02497-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:14-cv-02497; Henry v. Bank Of America, NA et al; </searchTitle>
+  <courtName>United States District Court Southern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txsd-4_14-cv-02497-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER denying 8 MOTION for Temporary Restraining Order (Signed by Judge Sim Lake) Parties notified. (aboyd, 4)</docketText>
+</extension>
+</relatedItem>
+</mods>

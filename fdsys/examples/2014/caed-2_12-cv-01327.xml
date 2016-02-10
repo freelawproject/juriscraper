@@ -1,0 +1,548 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1894ac118">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-06-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-06-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327</identifier>
+<identifier type="local">P0b002ee1894ac118</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-06-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-06-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-01327</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01327</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01327</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Tremayne" fullName="Tremayne Deon Carroll" lastName="Carroll" middleName="Deon" role="Plaintiff"></party>
+ <party firstName="Matthew" fullName="Matthew Cate" lastName="Cate" role="Defendant"></party>
+ <party fullName="Department of Mental Health" lastName="Department of Mental Health" role="Defendant"></party>
+ <party firstName="-" fullName="- Dulay" lastName="Dulay" role="Defendant"></party>
+ <party fullName="Gallegos" lastName="Gallegos" role="Defendant"></party>
+ <party fullName="Garrison" lastName="Garrison" role="Defendant"></party>
+ <party fullName="Gibson" lastName="Gibson" role="Defendant"></party>
+ <party fullName="Gonzales" lastName="Gonzales" role="Defendant"></party>
+ <party fullName="Hafer" lastName="Hafer" role="Defendant"></party>
+ <party fullName="Hedgepeth" lastName="Hedgepeth" role="Defendant"></party>
+ <party fullName="Houston" lastName="Houston" role="Defendant"></party>
+ <party fullName="Mchewa" lastName="Mchewa" role="Defendant"></party>
+ <party fullName="Paramo" lastName="Paramo" role="Defendant"></party>
+ <party fullName="Safi" lastName="Safi" role="Defendant"></party>
+ <party fullName="Soto" lastName="Soto" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Virga" lastName="Virga" role="Defendant"></party>
+ <party fullName="Warden, California Medical Facility" lastName="Warden, California Medical Facility" role="Defendant"></party>
+ <party fullName="Warden, Deuel Vocational Institute" lastName="Warden, Deuel Vocational Institute" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Carroll v. Virga, et al</title>
+ <partNumber>2:12-cv-01327</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-01327;12-1327</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Tremayne Deon Carroll</displayForm>
+ <namePart type="family">Carroll</namePart>
+ <namePart type="given">Tremayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Cate</displayForm>
+ <namePart type="family">Cate</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Department of Mental Health</displayForm>
+ <namePart type="family">Department of Mental Health</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>- Dulay</displayForm>
+ <namePart type="family">Dulay</namePart>
+ <namePart type="given">-</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gallegos</displayForm>
+ <namePart type="family">Gallegos</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Garrison</displayForm>
+ <namePart type="family">Garrison</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gibson</displayForm>
+ <namePart type="family">Gibson</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gonzales</displayForm>
+ <namePart type="family">Gonzales</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hafer</displayForm>
+ <namePart type="family">Hafer</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hedgepeth</displayForm>
+ <namePart type="family">Hedgepeth</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Houston</displayForm>
+ <namePart type="family">Houston</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mchewa</displayForm>
+ <namePart type="family">Mchewa</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paramo</displayForm>
+ <namePart type="family">Paramo</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Safi</displayForm>
+ <namePart type="family">Safi</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Soto</displayForm>
+ <namePart type="family">Soto</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tim Virga</displayForm>
+ <namePart type="family">Virga</namePart>
+ <namePart type="given">Tim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Warden, California Medical Facility</displayForm>
+ <namePart type="family">Warden, California Medical Facility</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Warden, Deuel Vocational Institute</displayForm>
+ <namePart type="family">Warden, Deuel Vocational Institute</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01327</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01327</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Tremayne" fullName="Tremayne Deon Carroll" lastName="Carroll" middleName="Deon" role="Plaintiff"></party>
+ <party firstName="Matthew" fullName="Matthew Cate" lastName="Cate" role="Defendant"></party>
+ <party fullName="Department of Mental Health" lastName="Department of Mental Health" role="Defendant"></party>
+ <party firstName="-" fullName="- Dulay" lastName="Dulay" role="Defendant"></party>
+ <party fullName="Gallegos" lastName="Gallegos" role="Defendant"></party>
+ <party fullName="Garrison" lastName="Garrison" role="Defendant"></party>
+ <party fullName="Gibson" lastName="Gibson" role="Defendant"></party>
+ <party fullName="Gonzales" lastName="Gonzales" role="Defendant"></party>
+ <party fullName="Hafer" lastName="Hafer" role="Defendant"></party>
+ <party fullName="Hedgepeth" lastName="Hedgepeth" role="Defendant"></party>
+ <party fullName="Houston" lastName="Houston" role="Defendant"></party>
+ <party fullName="Mchewa" lastName="Mchewa" role="Defendant"></party>
+ <party fullName="Paramo" lastName="Paramo" role="Defendant"></party>
+ <party fullName="Safi" lastName="Safi" role="Defendant"></party>
+ <party fullName="Soto" lastName="Soto" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Virga" lastName="Virga" role="Defendant"></party>
+ <party fullName="Warden, California Medical Facility" lastName="Warden, California Medical Facility" role="Defendant"></party>
+ <party fullName="Warden, Deuel Vocational Institute" lastName="Warden, Deuel Vocational Institute" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01327-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Carroll v. Virga, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 5/29/12 ORDERING that 2 Motion to Proceed IFP is DISMISSED without prejudice; Clerk of the Court is directed to send plaintiff a new Application to Proceed In Forma Pauperis By a Prisoner; and Plaintiff shall submit, within 30 days from the date of this order, a completed application to proceed in forma pauperis.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1894b4ab1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01327_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01327; (PC) Carroll v. Virga, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01327-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-05-30</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 5/29/12 ORDERING that 2 Motion to Proceed IFP is DISMISSED without prejudice; Clerk of the Court is directed to send plaintiff a new Application to Proceed In Forma Pauperis By a Prisoner; and Plaintiff shall submit, within 30 days from the date of this order, a completed application to proceed in forma pauperis.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01327-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Carroll v. Virga, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 7/19/12 ORDERING that plaintiffs 6 motion for an extension of time is GRANTED; Plaintiff is granted 30 days in which to comply with this courts May 30, 2012 order; and Plaintiffs 6 motion for the appointment of counsel is DENIED without prejudice.(Dillon, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1894b4aae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01327_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01327; (PC) Carroll v. Virga, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01327-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-07-20</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 7/19/12 ORDERING that plaintiffs 6 motion for an extension of time is GRANTED; Plaintiff is granted 30 days in which to comply with this courts May 30, 2012 order; and Plaintiffs 6 motion for the appointment of counsel is DENIED without prejudice.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01327-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Carroll v. Virga, et al</title>
+  <subTitle>[VACATED PURSUANT TO 11/05/12 ORDER]ORDER signed by Magistrate Judge Kendall J. Newman on 10/23/12 DISMISSING CASE without prejudice. CASE CLOSED. (Plummer, M) Modified on 11/5/2012 (Plummer, M).</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1894b4aad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01327_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01327; (PC) Carroll v. Virga, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01327-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-10-23</dateIssued>
+  <docketText>[VACATED PURSUANT TO 11/05/12 ORDER]ORDER signed by Magistrate Judge Kendall J. Newman on 10/23/12 DISMISSING CASE without prejudice. CASE CLOSED. (Plummer, M) Modified on 11/5/2012 (Plummer, M).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01327-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Carroll v. Virga, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 11/02/12 granting 12 Motion for Extension of time. The 10/23/12 order and judgment are vacated 10, and 11. The clerk of the court is directed to send plaintiff an application to proceed in forma pauperis by a prisoner. Plaintiff is granted 60 days in which to file a completed application to proceed in forma pauperis. Plaintiff&apos;s request for appointment of counsel 12 is denied without prejudice. (Plummer, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1894b4e69</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01327_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01327; (PC) Carroll v. Virga, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01327-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-11-05</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 11/02/12 granting 12 Motion for Extension of time. The 10/23/12 order and judgment are vacated 10, and 11. The clerk of the court is directed to send plaintiff an application to proceed in forma pauperis by a prisoner. Plaintiff is granted 60 days in which to file a completed application to proceed in forma pauperis. Plaintiff&apos;s request for appointment of counsel 12 is denied without prejudice. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01327-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Carroll v. Virga, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 1/16/13 ORDERING that this action is DISMISSED without prejudice. CASE CLOSED. (Dillon, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1894b4ab0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01327_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01327; (PC) Carroll v. Virga, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01327-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-16</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 1/16/13 ORDERING that this action is DISMISSED without prejudice. CASE CLOSED. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01327-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Carroll v. Virga, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 3/28/13 ORDERING that Plaintiffs motions for reconsideration (dkt. nos. 17 &amp; 19) are granted; The January 16, 2013 order and judgment (dkt. nos. 15 &amp; 16) are vacated; Plaintiffs motion for extension of time (dkt. no. 17) is denied as moot; Plaintiffs request for leave to proceed in forma pauperis is granted. Plaintiff is obligated to pay the statutory filing fee of $350.00 for this action. Plaintiffs complaint is dismissed with leave to amend to only raise claims based on incidents at CSP-SAC within 30 days. Plaintiffs requests for appointment counsel (dkt. nos. 17 &amp; 19) are denied without prejudice.(Dillon, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1894b4aab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01327_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01327; (PC) Carroll v. Virga, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01327-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-03-29</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 3/28/13 ORDERING that Plaintiffs motions for reconsideration (dkt. nos. 17 &amp; 19) are granted; The January 16, 2013 order and judgment (dkt. nos. 15 &amp; 16) are vacated; Plaintiffs motion for extension of time (dkt. no. 17) is denied as moot; Plaintiffs request for leave to proceed in forma pauperis is granted. Plaintiff is obligated to pay the statutory filing fee of $350.00 for this action. Plaintiffs complaint is dismissed with leave to amend to only raise claims based on incidents at CSP-SAC within 30 days. Plaintiffs requests for appointment counsel (dkt. nos. 17 &amp; 19) are denied without prejudice.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01327-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Carroll v. Virga, et al</title>
+  <subTitle>350 is paid in full. The clerk is directed to serve a copy of this order and the plaintiff&apos;s IFP on the Director of the CDC. The clerk is directed to serve a copy of this order on the financial department of the court. (cc Financial, CDC Prisoner Payment Orders ). (Dillon, M)ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Kendall J. Newman on 3/28/13 ORDERING the director of the CDC to collect and forward payment from the prison trust account of Deon Carroll to the clerk until the balance of $</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1894b4aac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01327_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01327; (PC) Carroll v. Virga, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01327-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-03-29</dateIssued>
+  <docketText>350 is paid in full. The clerk is directed to serve a copy of this order and the plaintiff&apos;s IFP on the Director of the CDC. The clerk is directed to serve a copy of this order on the financial department of the court. (cc Financial, CDC Prisoner Payment Orders ). (Dillon, M)ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Kendall J. Newman on 3/28/13 ORDERING the director of the CDC to collect and forward payment from the prison trust account of Deon Carroll to the clerk until the balance of $</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01327-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Carroll v. Virga, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 11/21/13 ordering plaintiff&apos;s filing, construed as a request for reconsideration 23 is denied. Plaintiff&apos;s motion for appointment of counsel 23 is denied. Plaintiff is granted leave to amend to (a) raise claims on incidents at CSP-SAC as set forth in the court&apos;s 03/29/13 order or (b) raise claims alleging excessive transfers as set forth above. Within 30 days from the date of this order, plaintiff shall file an original and 1 copy of the amended complaint. (Plummer, M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1894b4aaf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01327_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01327; (PC) Carroll v. Virga, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01327-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-11-21</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 11/21/13 ordering plaintiff&apos;s filing, construed as a request for reconsideration 23 is denied. Plaintiff&apos;s motion for appointment of counsel 23 is denied. Plaintiff is granted leave to amend to (a) raise claims on incidents at CSP-SAC as set forth in the court&apos;s 03/29/13 order or (b) raise claims alleging excessive transfers as set forth above. Within 30 days from the date of this order, plaintiff shall file an original and 1 copy of the amended complaint. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01327-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Carroll v. Virga, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 1/3/2014 ORDERING that this action is DISMISSED without prejudice. CASE CLOSED. (Yin, K)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1894b4e68</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01327_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01327; (PC) Carroll v. Virga, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01327-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 1/3/2014 ORDERING that this action is DISMISSED without prejudice. CASE CLOSED. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01327-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Carroll v. Virga, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 6/6/14 denying 27 Motion. (Dillon, M)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1894b4ab2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-9</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01327_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01327/USCOURTS-caed-2_12-cv-01327-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01327/pdf/USCOURTS-caed-2_12-cv-01327-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01327; (PC) Carroll v. Virga, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01327-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-06-09</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 6/6/14 denying 27 Motion. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

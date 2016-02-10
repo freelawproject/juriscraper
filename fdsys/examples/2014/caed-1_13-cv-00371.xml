@@ -1,0 +1,254 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a476941">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-26</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-11-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00371</identifier>
+<identifier type="local">P0b002ee18a476941</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-26</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-26</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-00371</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00371</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00371</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="City of Madera" lastName="City of Madera" role="Defendant"></party>
+ <party firstName="A. Michael" fullName="A. Michael De Cesare" lastName="De Cesare" role="Plaintiff"></party>
+ <party firstName="Dorlene" fullName="Dorlene De Cesare" lastName="De Cesare" role="Plaintiff"></party>
+ <party firstName="Monica" fullName="Monica Diaz" lastName="Diaz" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>De Cesare et al v. Diaz et al</title>
+ <partNumber>1:13-cv-00371</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00371/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-00371;13-371</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>City of Madera</displayForm>
+ <namePart type="family">City of Madera</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Michael De Cesare</displayForm>
+ <namePart type="family">De Cesare</namePart>
+ <namePart type="given">A. Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dorlene De Cesare</displayForm>
+ <namePart type="family">De Cesare</namePart>
+ <namePart type="given">Dorlene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Monica Diaz</displayForm>
+ <namePart type="family">Diaz</namePart>
+ <namePart type="given">Monica</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00371</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00371</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="City of Madera" lastName="City of Madera" role="Defendant"></party>
+ <party firstName="A. Michael" fullName="A. Michael De Cesare" lastName="De Cesare" role="Plaintiff"></party>
+ <party firstName="Dorlene" fullName="Dorlene De Cesare" lastName="De Cesare" role="Plaintiff"></party>
+ <party firstName="Monica" fullName="Monica Diaz" lastName="Diaz" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00371-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00371/USCOURTS-caed-1_13-cv-00371-0/mods.xml">
+ <titleInfo>
+  <title>De Cesare et al v. Diaz et al</title>
+  <subTitle>SCHEDULING ORDER (Fed.R.Civ.P 16), signed by Magistrate Judge Sheila K. Oberto on 6/24/2013. (Initial Disclosures: 7/18/2013, Expert Disclosures: 12/31/2013, Rebuttal Disclosures: 1/29/2014, Non Expert Discovery: 12/31/2013, Expert Discovery: 2/28/2014, Non-Dispositive Motions to be filed by 3/3/2014, Dispositive Motions to be filed by 4/7/2014, Settlement Conference set for 2/25/2014, at 09:30 AM in Courtroom 9 (SAB) before Magistrate Judge Stanley A Boone, Pretrial Conference set for 7/16/2014, at 02:00 PM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto, &amp; Jury Trial set for 9/9/2014 (3-5 days), at 08:30 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. (Gaumnitz, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00371/pdf/USCOURTS-caed-1_13-cv-00371-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a49db1b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00371/USCOURTS-caed-1_13-cv-00371-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00371_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00371/USCOURTS-caed-1_13-cv-00371-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00371/pdf/USCOURTS-caed-1_13-cv-00371-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00371; De Cesare et al v. Diaz et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00371-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-06-24</dateIssued>
+  <docketText>SCHEDULING ORDER (Fed.R.Civ.P 16), signed by Magistrate Judge Sheila K. Oberto on 6/24/2013. (Initial Disclosures: 7/18/2013, Expert Disclosures: 12/31/2013, Rebuttal Disclosures: 1/29/2014, Non Expert Discovery: 12/31/2013, Expert Discovery: 2/28/2014, Non-Dispositive Motions to be filed by 3/3/2014, Dispositive Motions to be filed by 4/7/2014, Settlement Conference set for 2/25/2014, at 09:30 AM in Courtroom 9 (SAB) before Magistrate Judge Stanley A Boone, Pretrial Conference set for 7/16/2014, at 02:00 PM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto, &amp; Jury Trial set for 9/9/2014 (3-5 days), at 08:30 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00371-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00371/USCOURTS-caed-1_13-cv-00371-1/mods.xml">
+ <titleInfo>
+  <title>De Cesare et al v. Diaz et al</title>
+  <subTitle>ORDER DENYING without prejudice stipulated request to amend the schedule 17. The parties may renew their request by proposing a schedule that comports with the specifications set forth in the order. Order signed by Magistrate Judge Sheila K. Oberto on 1/6/2014. (Timken, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00371/pdf/USCOURTS-caed-1_13-cv-00371-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a49db58</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00371/USCOURTS-caed-1_13-cv-00371-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00371_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00371/USCOURTS-caed-1_13-cv-00371-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00371/pdf/USCOURTS-caed-1_13-cv-00371-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00371; De Cesare et al v. Diaz et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00371-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER DENYING without prejudice stipulated request to amend the schedule 17. The parties may renew their request by proposing a schedule that comports with the specifications set forth in the order. Order signed by Magistrate Judge Sheila K. Oberto on 1/6/2014. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00371-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00371/USCOURTS-caed-1_13-cv-00371-2/mods.xml">
+ <titleInfo>
+  <title>De Cesare et al v. Diaz et al</title>
+  <subTitle>ORDER requiring parties to file dispositional documents by 11/21/2014. Signed by Magistrate Judge Stanley A. Boone on 11/17/2014. (Hernandez, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00371/pdf/USCOURTS-caed-1_13-cv-00371-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a49db1c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00371/USCOURTS-caed-1_13-cv-00371-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00371_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00371/USCOURTS-caed-1_13-cv-00371-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00371/pdf/USCOURTS-caed-1_13-cv-00371-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00371; De Cesare et al v. Diaz et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00371-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-11-17</dateIssued>
+  <docketText>ORDER requiring parties to file dispositional documents by 11/21/2014. Signed by Magistrate Judge Stanley A. Boone on 11/17/2014. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00371-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00371/USCOURTS-caed-1_13-cv-00371-3/mods.xml">
+ <titleInfo>
+  <title>De Cesare et al v. Diaz et al</title>
+  <subTitle>STIPULATION and ORDER DISMISSING ACTION signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. CASE CLOSED. (Flores, E)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00371/pdf/USCOURTS-caed-1_13-cv-00371-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a49db1d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00371/USCOURTS-caed-1_13-cv-00371-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00371_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00371/USCOURTS-caed-1_13-cv-00371-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00371/pdf/USCOURTS-caed-1_13-cv-00371-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00371; De Cesare et al v. Diaz et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00371-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-11-25</dateIssued>
+  <docketText>STIPULATION and ORDER DISMISSING ACTION signed by Magistrate Judge Sheila K. Oberto on 11/25/2014. CASE CLOSED. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

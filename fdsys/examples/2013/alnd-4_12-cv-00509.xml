@@ -1,0 +1,188 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1839f4530">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-4_12-cv-00509</identifier>
+<identifier type="local">P0b002ee1839f4530</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alnd-4_12-cv-00509</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alnd-4_12-cv-00509</accessId>
+ <courtType>District</courtType>
+ <courtCode>alnd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2012</courtSortOrder>
+ <caseNumber>4:12-cv-00509</caseNumber>
+ <caseOffice>Middle</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Muhommod" fullName="Muhommod Al Aneen" lastName="Al Aneen" role="Plaintiff"></party>
+ <party firstName="Muhammad" fullName="Muhammad Al-Ameen" lastName="Al-Ameen" role="Plaintiff"></party>
+ <party firstName="Terry" fullName="Terry Rivers" lastName="Rivers" role="Plaintiff"></party>
+ <party firstName="Terry" fullName="Terry Dena Rivers" lastName="Rivers" middleName="Dena" role="Plaintiff"></party>
+ <party firstName="William" fullName="William Talley" lastName="Talley" role="Defendant"></party>
+ <party fullName="staff attorney 1" lastName="staff attorney 1" role="Miscellaneous"></party>
+</extension>
+<titleInfo>
+ <title>Al-Ameen v. Talley</title>
+ <partNumber>4:12-cv-00509</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-4_12-cv-00509/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:12-cv-00509;12-509</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Middle</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Muhommod Al Aneen</displayForm>
+ <namePart type="family">Al Aneen</namePart>
+ <namePart type="given">Muhommod</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Muhammad Al-Ameen</displayForm>
+ <namePart type="family">Al-Ameen</namePart>
+ <namePart type="given">Muhammad</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Terry Rivers</displayForm>
+ <namePart type="family">Rivers</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Terry Dena Rivers</displayForm>
+ <namePart type="family">Rivers</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>William Talley</displayForm>
+ <namePart type="family">Talley</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>staff attorney 1</displayForm>
+ <namePart type="family">staff attorney 1</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Miscellaneous</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alnd-4_12-cv-00509</accessId>
+ <courtType>District</courtType>
+ <courtCode>alnd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2012</courtSortOrder>
+ <caseNumber>4:12-cv-00509</caseNumber>
+ <caseOffice>Middle</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Muhommod" fullName="Muhommod Al Aneen" lastName="Al Aneen" role="Plaintiff"></party>
+ <party firstName="Muhammad" fullName="Muhammad Al-Ameen" lastName="Al-Ameen" role="Plaintiff"></party>
+ <party firstName="Terry" fullName="Terry Rivers" lastName="Rivers" role="Plaintiff"></party>
+ <party firstName="Terry" fullName="Terry Dena Rivers" lastName="Rivers" middleName="Dena" role="Plaintiff"></party>
+ <party firstName="William" fullName="William Talley" lastName="Talley" role="Defendant"></party>
+ <party fullName="staff attorney 1" lastName="staff attorney 1" role="Miscellaneous"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-4_12-cv-00509-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-4_12-cv-00509/USCOURTS-alnd-4_12-cv-00509-0/mods.xml">
+ <titleInfo>
+  <title>Al-Ameen v. Talley</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge Inge P Johnson on 1/2/13. (ASL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-4_12-cv-00509-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f85cc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-4_12-cv-00509/USCOURTS-alnd-4_12-cv-00509-0</identifier>
+ <identifier type="former granule identifier">alnd-4_12-cv-00509_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-4_12-cv-00509/USCOURTS-alnd-4_12-cv-00509-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-4_12-cv-00509/pdf/USCOURTS-alnd-4_12-cv-00509-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cv-00509; Al-Ameen v. Talley; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-4_12-cv-00509-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge Inge P Johnson on 1/2/13. (ASL)</docketText>
+</extension>
+</relatedItem>
+</mods>

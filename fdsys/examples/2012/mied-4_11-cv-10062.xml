@@ -1,0 +1,322 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1819130dd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_11-cv-10062</identifier>
+<identifier type="local">P0b002ee1819130dd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-4_11-cv-10062</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-4_11-cv-10062</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>4:11-cv-10062</caseNumber>
+ <caseOffice>Flint</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <party fullName="ABN AMRO Mortgage Group" lastName="ABN AMRO Mortgage Group" role="Defendant"></party>
+ <party fullName="Bank of America" lastName="Bank of America" role="Defendant"></party>
+ <party fullName="Bank of America National Association" lastName="Bank of America National Association" role="Defendant"></party>
+ <party fullName="C-BASS" lastName="C-BASS" role="Defendant"></party>
+ <party fullName="C-Bass Loan Mortgage Asset-Back Certificates" lastName="C-Bass Loan Mortgage Asset-Back Certificates" role="Defendant"></party>
+ <party fullName="CitiMortgage Inc" lastName="CitiMortgage Inc" role="Defendant"></party>
+ <party fullName="GMAC Bank Correspondent Funding" lastName="GMAC Bank Correspondent Funding" role="Defendant"></party>
+ <party fullName="GMAC Mortgage" lastName="GMAC Mortgage" role="Defendant"></party>
+ <party fullName="GMAC Residential Funding" lastName="GMAC Residential Funding" role="Defendant"></party>
+ <party fullName="Homecomings Financial, LLC" lastName="Homecomings Financial, LLC" role="Defendant"></party>
+ <party fullName="LaSalle Bank" lastName="LaSalle Bank" role="Defendant"></party>
+ <party fullName="LaSalle Bank National Association" lastName="LaSalle Bank National Association" role="Defendant"></party>
+ <party fullName="Litton Loan Servicing" lastName="Litton Loan Servicing" role="Defendant"></party>
+ <party fullName="Merrill Lynch" lastName="Merrill Lynch" role="Defendant"></party>
+ <party fullName="Mortgage Electronic Registration Systems Incorporated" lastName="Mortgage Electronic Registration Systems Incorporated" role="Defendant"></party>
+ <party firstName="Sandra" fullName="Sandra Mullen" lastName="Mullen" role="Plaintiff"></party>
+ <party fullName="New Century Mortgage Corporation" lastName="New Century Mortgage Corporation" role="Defendant"></party>
+ <party fullName="Westworks Mortgage" lastName="Westworks Mortgage" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Mullen v. Bank of America et al</title>
+ <partNumber>4:11-cv-10062</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_11-cv-10062/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:11-cv-10062;11-10062</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Flint</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ABN AMRO Mortgage Group</displayForm>
+ <namePart type="family">ABN AMRO Mortgage Group</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bank of America</displayForm>
+ <namePart type="family">Bank of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bank of America National Association</displayForm>
+ <namePart type="family">Bank of America National Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C-BASS</displayForm>
+ <namePart type="family">C-BASS</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C-Bass Loan Mortgage Asset-Back Certificates</displayForm>
+ <namePart type="family">C-Bass Loan Mortgage Asset-Back Certificates</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CitiMortgage Inc</displayForm>
+ <namePart type="family">CitiMortgage Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GMAC Bank Correspondent Funding</displayForm>
+ <namePart type="family">GMAC Bank Correspondent Funding</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GMAC Mortgage</displayForm>
+ <namePart type="family">GMAC Mortgage</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GMAC Residential Funding</displayForm>
+ <namePart type="family">GMAC Residential Funding</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Homecomings Financial, LLC</displayForm>
+ <namePart type="family">Homecomings Financial, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LaSalle Bank</displayForm>
+ <namePart type="family">LaSalle Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LaSalle Bank National Association</displayForm>
+ <namePart type="family">LaSalle Bank National Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Litton Loan Servicing</displayForm>
+ <namePart type="family">Litton Loan Servicing</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Merrill Lynch</displayForm>
+ <namePart type="family">Merrill Lynch</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mortgage Electronic Registration Systems Incorporated</displayForm>
+ <namePart type="family">Mortgage Electronic Registration Systems Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sandra Mullen</displayForm>
+ <namePart type="family">Mullen</namePart>
+ <namePart type="given">Sandra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>New Century Mortgage Corporation</displayForm>
+ <namePart type="family">New Century Mortgage Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Westworks Mortgage</displayForm>
+ <namePart type="family">Westworks Mortgage</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-4_11-cv-10062</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>4:11-cv-10062</caseNumber>
+ <caseOffice>Flint</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <party fullName="ABN AMRO Mortgage Group" lastName="ABN AMRO Mortgage Group" role="Defendant"></party>
+ <party fullName="Bank of America" lastName="Bank of America" role="Defendant"></party>
+ <party fullName="Bank of America National Association" lastName="Bank of America National Association" role="Defendant"></party>
+ <party fullName="C-BASS" lastName="C-BASS" role="Defendant"></party>
+ <party fullName="C-Bass Loan Mortgage Asset-Back Certificates" lastName="C-Bass Loan Mortgage Asset-Back Certificates" role="Defendant"></party>
+ <party fullName="CitiMortgage Inc" lastName="CitiMortgage Inc" role="Defendant"></party>
+ <party fullName="GMAC Bank Correspondent Funding" lastName="GMAC Bank Correspondent Funding" role="Defendant"></party>
+ <party fullName="GMAC Mortgage" lastName="GMAC Mortgage" role="Defendant"></party>
+ <party fullName="GMAC Residential Funding" lastName="GMAC Residential Funding" role="Defendant"></party>
+ <party fullName="Homecomings Financial, LLC" lastName="Homecomings Financial, LLC" role="Defendant"></party>
+ <party fullName="LaSalle Bank" lastName="LaSalle Bank" role="Defendant"></party>
+ <party fullName="LaSalle Bank National Association" lastName="LaSalle Bank National Association" role="Defendant"></party>
+ <party fullName="Litton Loan Servicing" lastName="Litton Loan Servicing" role="Defendant"></party>
+ <party fullName="Merrill Lynch" lastName="Merrill Lynch" role="Defendant"></party>
+ <party fullName="Mortgage Electronic Registration Systems Incorporated" lastName="Mortgage Electronic Registration Systems Incorporated" role="Defendant"></party>
+ <party firstName="Sandra" fullName="Sandra Mullen" lastName="Mullen" role="Plaintiff"></party>
+ <party fullName="New Century Mortgage Corporation" lastName="New Century Mortgage Corporation" role="Defendant"></party>
+ <party fullName="Westworks Mortgage" lastName="Westworks Mortgage" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-4_11-cv-10062-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_11-cv-10062/USCOURTS-mied-4_11-cv-10062-0/mods.xml">
+ <titleInfo>
+  <title>Mullen v. Bank of America et al</title>
+  <subTitle>REPORT AND RECOMMENDATION re 4 MOTION to Dismiss filed by Bank of America National Association, Bank of America, GMAC Bank Correspondent Funding, C-Bass Loan Mortgage Asset-Back Certificates, Homecomings Financial, LLC, Litton Loan Servicing, LaSalle Bank, Mortgage Electronic Registration Systems Incorporated, CitiMortgage Inc, LaSalle Bank National Association, ABN AMRO Mortgage Group, Merrill Lynch, GMAC Mortgage Signed by Magistrate Judge Mark A. Randon. (BRad)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-4_11-cv-10062-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18199cc67</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_11-cv-10062/USCOURTS-mied-4_11-cv-10062-0</identifier>
+ <identifier type="former granule identifier">mied-4_11-cv-10062_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_11-cv-10062/USCOURTS-mied-4_11-cv-10062-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_11-cv-10062/pdf/USCOURTS-mied-4_11-cv-10062-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-10062; Mullen v. Bank of America et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-4_11-cv-10062-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-11-07</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 4 MOTION to Dismiss filed by Bank of America National Association, Bank of America, GMAC Bank Correspondent Funding, C-Bass Loan Mortgage Asset-Back Certificates, Homecomings Financial, LLC, Litton Loan Servicing, LaSalle Bank, Mortgage Electronic Registration Systems Incorporated, CitiMortgage Inc, LaSalle Bank National Association, ABN AMRO Mortgage Group, Merrill Lynch, GMAC Mortgage Signed by Magistrate Judge Mark A. Randon. (BRad)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-4_11-cv-10062-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_11-cv-10062/USCOURTS-mied-4_11-cv-10062-1/mods.xml">
+ <titleInfo>
+  <title>Mullen v. Bank of America et al</title>
+  <subTitle>ORDER Adopting 14 Report and Recommendation, Overruling Plaintiff&apos;s Objectons and Granting Defendants&apos; 4 Motion to Dismiss. Signed by District Judge Mark A. Goldsmith. (Goltz, D)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-4_11-cv-10062-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18199cc68</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_11-cv-10062/USCOURTS-mied-4_11-cv-10062-1</identifier>
+ <identifier type="former granule identifier">mied-4_11-cv-10062_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-4_11-cv-10062/USCOURTS-mied-4_11-cv-10062-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-4_11-cv-10062/pdf/USCOURTS-mied-4_11-cv-10062-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-10062; Mullen v. Bank of America et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-4_11-cv-10062-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>ORDER Adopting 14 Report and Recommendation, Overruling Plaintiff&apos;s Objectons and Granting Defendants&apos; 4 Motion to Dismiss. Signed by District Judge Mark A. Goldsmith. (Goltz, D)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,292 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a4f63">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00534</identifier>
+<identifier type="local">P0b002ee1817a4f63</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cv-00534</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00534</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00534</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1331 Fed. Question: Employment Discrimination</cause>
+ <party firstName="Carl" fullName="Carl DeMonbrun" lastName="DeMonbrun" role="Plaintiff"></party>
+ <party fullName="Stevens Transport" lastName="Stevens Transport" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>DeMonbrun v. Stevens Transport</title>
+ <partNumber>8:06-cv-00534</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00534/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cv-00534;06-534</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Carl DeMonbrun</displayForm>
+ <namePart type="family">DeMonbrun</namePart>
+ <namePart type="given">Carl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Stevens Transport</displayForm>
+ <namePart type="family">Stevens Transport</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00534</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00534</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1331 Fed. Question: Employment Discrimination</cause>
+ <party firstName="Carl" fullName="Carl DeMonbrun" lastName="DeMonbrun" role="Plaintiff"></party>
+ <party fullName="Stevens Transport" lastName="Stevens Transport" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00534-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-0/mods.xml">
+ <titleInfo>
+  <title>DeMonbrun v. Stevens Transport</title>
+  <subTitle>ORDER granting 2 Motion for Leave to Proceed in forma pauperis subject to the admonitions stated above in this Order. The Clerk of Court shall send the plaintiff a summons and a Form-285 together with a copy of this order. The Marshal shall serve the summons and complaint without payment of costs or fees. Plaintiff shall obtain service on a defendant within 120 days from the filingof the complaint. The plaintiff shall keep the court informed of his current address at all times while the case is pending. Signed by Magistrate Judge F. A. Gossett on 8/9/2006. One summons form and one 285 form sent to plaintiff. (JAE, ) Modified on 8/11/2006 to add Magistrate (DKM, ).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00534-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187ca86</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00534_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00534/pdf/USCOURTS-ned-8_06-cv-00534-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00534; DeMonbrun v. Stevens Transport; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00534-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-08-09</dateIssued>
+  <docketText>ORDER granting 2 Motion for Leave to Proceed in forma pauperis subject to the admonitions stated above in this Order. The Clerk of Court shall send the plaintiff a summons and a Form-285 together with a copy of this order. The Marshal shall serve the summons and complaint without payment of costs or fees. Plaintiff shall obtain service on a defendant within 120 days from the filingof the complaint. The plaintiff shall keep the court informed of his current address at all times while the case is pending. Signed by Magistrate Judge F. A. Gossett on 8/9/2006. One summons form and one 285 form sent to plaintiff. (JAE, ) Modified on 8/11/2006 to add Magistrate (DKM, ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00534-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-1/mods.xml">
+ <titleInfo>
+  <title>DeMonbrun v. Stevens Transport</title>
+  <subTitle>ORDER granting 6 and 7 Motions to Amend Complaint. Going forward the complaint shall consist of filing 1 as amended by filing 7. Ordered by Magistrate Judge F. A. Gossett. (JSF)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00534-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187ca87</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00534_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00534/pdf/USCOURTS-ned-8_06-cv-00534-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00534; DeMonbrun v. Stevens Transport; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00534-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-08-22</dateIssued>
+  <docketText>ORDER granting 6 and 7 Motions to Amend Complaint. Going forward the complaint shall consist of filing 1 as amended by filing 7. Ordered by Magistrate Judge F. A. Gossett. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00534-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-2/mods.xml">
+ <titleInfo>
+  <title>DeMonbrun v. Stevens Transport</title>
+  <subTitle>MEMORANDUM AND ORDER that by November 17, 2006 Plaintiff shall provide to the court copies of all charges and claims brought by the Plaintiff to the NEOC or EEOC and all Commission Determinations, Right to Sue Letters, or any other communications Plaintiff received from the NEOC or the EEOC. The Clerk of Court shall send a copy of the Memorandum and Order to the plaintiff at his last know address. Case Management Deadline set for 11/17/2006.Ordered by Magistrate Judge F. A. Gossett. Copy mailed to the plaintiff as directed.(MKR )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00534-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187ca89</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00534_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00534/pdf/USCOURTS-ned-8_06-cv-00534-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00534; DeMonbrun v. Stevens Transport; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00534-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-10-23</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that by November 17, 2006 Plaintiff shall provide to the court copies of all charges and claims brought by the Plaintiff to the NEOC or EEOC and all Commission Determinations, Right to Sue Letters, or any other communications Plaintiff received from the NEOC or the EEOC. The Clerk of Court shall send a copy of the Memorandum and Order to the plaintiff at his last know address. Case Management Deadline set for 11/17/2006.Ordered by Magistrate Judge F. A. Gossett. Copy mailed to the plaintiff as directed.(MKR )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00534-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-3/mods.xml">
+ <titleInfo>
+  <title>DeMonbrun v. Stevens Transport</title>
+  <subTitle>MEMORANDUM AND ORDER regarding plaintiff&apos;s Response20 to the court&apos;s October 23, 2006 Memorandum and Order. the court is still unclear on the history of the case. Therefore, by November 17, 2006, the plaintiff is ordered to file with the court copies of all charges filed with any agency, and all documents it has received in response to charges filed with any agency. Absent a timely response to this order defendant&apos;s case is subject to dismissal without prejudice. Case Management Deadline set for 11/17/2006.Ordered by Magistrate Judge F. A. Gossett. (MKR )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00534-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187ca8a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-3</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00534_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00534/pdf/USCOURTS-ned-8_06-cv-00534-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00534; DeMonbrun v. Stevens Transport; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00534-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-11-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding plaintiff&apos;s Response20 to the court&apos;s October 23, 2006 Memorandum and Order. the court is still unclear on the history of the case. Therefore, by November 17, 2006, the plaintiff is ordered to file with the court copies of all charges filed with any agency, and all documents it has received in response to charges filed with any agency. Absent a timely response to this order defendant&apos;s case is subject to dismissal without prejudice. Case Management Deadline set for 11/17/2006.Ordered by Magistrate Judge F. A. Gossett. (MKR )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00534-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-4/mods.xml">
+ <titleInfo>
+  <title>DeMonbrun v. Stevens Transport</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff shall amend his complaint by 1/12/07. The Clerk shall mail a copy of this Memorandum and Order to plaintiff at his last-known address.Ordered by Magistrate Judge F. A. Gossett. COPIES MAILED(JSF)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00534-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187ca88</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-4</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00534_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00534/pdf/USCOURTS-ned-8_06-cv-00534-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00534; DeMonbrun v. Stevens Transport; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00534-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-12-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff shall amend his complaint by 1/12/07. The Clerk shall mail a copy of this Memorandum and Order to plaintiff at his last-known address.Ordered by Magistrate Judge F. A. Gossett. COPIES MAILED(JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00534-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-5/mods.xml">
+ <titleInfo>
+  <title>DeMonbrun v. Stevens Transport</title>
+  <subTitle>MEMORANDUM AND ORDER- The defendant&apos;s motion to dismiss 11 is granted; and the Plaintiff&apos;s complaint is dismissed without prejudice. Ordered by Judge Laurie Smith Camp. (MKR )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00534-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187ca8b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-5</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00534_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00534/USCOURTS-ned-8_06-cv-00534-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00534/pdf/USCOURTS-ned-8_06-cv-00534-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00534; DeMonbrun v. Stevens Transport; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00534-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-01-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER- The defendant&apos;s motion to dismiss 11 is granted; and the Plaintiff&apos;s complaint is dismissed without prejudice. Ordered by Judge Laurie Smith Camp. (MKR )</docketText>
+</extension>
+</relatedItem>
+</mods>

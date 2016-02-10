@@ -1,0 +1,153 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c679df">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Middle District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-pamb-5_13-ap-00171</identifier>
+<identifier type="local">P0b002ee186c679df</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-pamb-5_13-ap-00171</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-pamb-5_13-ap-00171</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>pamb</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>3425</courtSortOrder>
+ <caseNumber>5:13-ap-00171</caseNumber>
+ <caseOffice>Wilkes-Barre</caseOffice>
+ <party fullName="Lease Associates, Inc." lastName="Lease Associates, Inc." role="Defendant"></party>
+ <party firstName="William" fullName="William G Schwab (Trustee)" lastName="Schwab (Trustee)" middleName="G" role="Plaintiff"></party>
+ <party firstName="Myles" fullName="Myles Wren" lastName="Wren" role="Mediator"></party>
+</extension>
+<titleInfo>
+ <title>Schwab (Trustee) v. Lease Associates, Inc.</title>
+ <partNumber>5:13-ap-00171</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-pamb-5_13-ap-00171/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">5:13-ap-00171;13-171</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Middle District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Wilkes-Barre</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Lease Associates, Inc.</displayForm>
+ <namePart type="family">Lease Associates, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William G Schwab (Trustee)</displayForm>
+ <namePart type="family">Schwab (Trustee)</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Myles Wren</displayForm>
+ <namePart type="family">Wren</namePart>
+ <namePart type="given">Myles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-pamb-5_13-ap-00171</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>pamb</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>3425</courtSortOrder>
+ <caseNumber>5:13-ap-00171</caseNumber>
+ <caseOffice>Wilkes-Barre</caseOffice>
+ <party fullName="Lease Associates, Inc." lastName="Lease Associates, Inc." role="Defendant"></party>
+ <party firstName="William" fullName="William G Schwab (Trustee)" lastName="Schwab (Trustee)" middleName="G" role="Plaintiff"></party>
+ <party firstName="Myles" fullName="Myles Wren" lastName="Wren" role="Mediator"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-pamb-5_13-ap-00171-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-pamb-5_13-ap-00171/USCOURTS-pamb-5_13-ap-00171-0/mods.xml">
+ <titleInfo>
+  <title>Schwab (Trustee) v. Lease Associates, Inc.</title>
+  <subTitle>Opinion of the Court re: Plaintiff&apos;s Motion for Summary Judgment.(RE: related document(s)8). (Sisk, Cathy)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-pamb-5_13-ap-00171-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c6e334</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-pamb-5_13-ap-00171/USCOURTS-pamb-5_13-ap-00171-0</identifier>
+ <identifier type="former granule identifier">pamb-5_13-ap-00171_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-pamb-5_13-ap-00171/USCOURTS-pamb-5_13-ap-00171-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-pamb-5_13-ap-00171/pdf/USCOURTS-pamb-5_13-ap-00171-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-ap-00171; Schwab (Trustee) v. Lease Associates, Inc.; </searchTitle>
+  <courtName>United States Bankruptcy Court Middle District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-pamb-5_13-ap-00171-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>Opinion of the Court re: Plaintiff&apos;s Motion for Summary Judgment.(RE: related document(s)8). (Sisk, Cathy)</docketText>
+</extension>
+</relatedItem>
+</mods>

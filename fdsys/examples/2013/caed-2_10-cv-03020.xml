@@ -1,0 +1,282 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a214db">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-03020</identifier>
+<identifier type="local">P0b002ee183a214db</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_10-cv-03020</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_10-cv-03020</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:10-cv-03020</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>29:1001 E.R.I.S.A.: Employee Retirement</cause>
+ <party fullName="Employers Insurance Company of Nevada" lastName="Employers Insurance Company of Nevada" role="Defendant"></party>
+ <party fullName="Lincoln National Life Insurance" lastName="Lincoln National Life Insurance" role="Defendant"></party>
+ <party firstName="Teresa" fullName="Teresa Shappell" lastName="Shappell" role="Plaintiff"></party>
+ <party fullName="Sun Life Assurance Company" lastName="Sun Life Assurance Company" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Shappell v. Sun Life Assurance Company et al</title>
+ <partNumber>2:10-cv-03020</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-03020/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cv-03020;10-3020</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Employers Insurance Company of Nevada</displayForm>
+ <namePart type="family">Employers Insurance Company of Nevada</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lincoln National Life Insurance</displayForm>
+ <namePart type="family">Lincoln National Life Insurance</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Teresa Shappell</displayForm>
+ <namePart type="family">Shappell</namePart>
+ <namePart type="given">Teresa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sun Life Assurance Company</displayForm>
+ <namePart type="family">Sun Life Assurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_10-cv-03020</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:10-cv-03020</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>29:1001 E.R.I.S.A.: Employee Retirement</cause>
+ <party fullName="Employers Insurance Company of Nevada" lastName="Employers Insurance Company of Nevada" role="Defendant"></party>
+ <party fullName="Lincoln National Life Insurance" lastName="Lincoln National Life Insurance" role="Defendant"></party>
+ <party firstName="Teresa" fullName="Teresa Shappell" lastName="Shappell" role="Plaintiff"></party>
+ <party fullName="Sun Life Assurance Company" lastName="Sun Life Assurance Company" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-03020-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-0/mods.xml">
+ <titleInfo>
+  <title>Shappell v. Sun Life Assurance Company et al</title>
+  <subTitle>ORDER signed by Judge Morrison C. England, Jr on 2/8/11 ORDERING that because the Second Cause of Action may indeed invoke state law claims as currently constituted, Sun Life&apos;s 9 Motion to Dismiss is GRANTED. Plaintiff may file an amended complaint, not later than ten (10) days following the date this Order is electronically filed, in order to properly state a claim for benefits under ERISA, only. (Duong, D)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_10-cv-03020-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a257fe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-0</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-03020_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-03020/pdf/USCOURTS-caed-2_10-cv-03020-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-03020; Shappell v. Sun Life Assurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-03020-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-02-09</dateIssued>
+  <docketText>ORDER signed by Judge Morrison C. England, Jr on 2/8/11 ORDERING that because the Second Cause of Action may indeed invoke state law claims as currently constituted, Sun Life&apos;s 9 Motion to Dismiss is GRANTED. Plaintiff may file an amended complaint, not later than ten (10) days following the date this Order is electronically filed, in order to properly state a claim for benefits under ERISA, only. (Duong, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-03020-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-1/mods.xml">
+ <titleInfo>
+  <title>Shappell v. Sun Life Assurance Company et al</title>
+  <subTitle>ORDER signed by Judge Morrison C. England, Jr on 5/20/2011 GRANTING 28 Motion to Dismiss. This litigation is terminated against Employers, although Plaintiff&apos;s remaining claims against Sun Life and Lincoln remain pending and viable. (Zignago, K.)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_10-cv-03020-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a257fd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-1</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-03020_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-03020/pdf/USCOURTS-caed-2_10-cv-03020-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-03020; Shappell v. Sun Life Assurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-03020-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-05-23</dateIssued>
+  <docketText>ORDER signed by Judge Morrison C. England, Jr on 5/20/2011 GRANTING 28 Motion to Dismiss. This litigation is terminated against Employers, although Plaintiff&apos;s remaining claims against Sun Life and Lincoln remain pending and viable. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-03020-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-2/mods.xml">
+ <titleInfo>
+  <title>Shappell v. Sun Life Assurance Company et al</title>
+  <subTitle>MEMORANDUM and ORDER signed by Judge Morrison C. England, Jr. on 1/11/2012 DENYING 34 Joint Motion to Stay without prejudice. (Michel, G)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_10-cv-03020-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a257fb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-2</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-03020_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-03020/pdf/USCOURTS-caed-2_10-cv-03020-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-03020; Shappell v. Sun Life Assurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-03020-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>MEMORANDUM and ORDER signed by Judge Morrison C. England, Jr. on 1/11/2012 DENYING 34 Joint Motion to Stay without prejudice. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-03020-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-3/mods.xml">
+ <titleInfo>
+  <title>Shappell v. Sun Life Assurance Company et al</title>
+  <subTitle>ORDER signed by Judge Morrison C. England, Jr., on 6/21/12 ORDERING that plaintiffs&apos; 41 Motion for Protective Order is GRANTED. Plaintiff&apos;s request for sanctions is DENIED. Defendant Sun Life&apos;s 52 Ex Parte Application is DENIED. (Kastilahn, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_10-cv-03020-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a257ff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-3</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-03020_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-03020/pdf/USCOURTS-caed-2_10-cv-03020-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-03020; Shappell v. Sun Life Assurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-03020-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-06-22</dateIssued>
+  <docketText>ORDER signed by Judge Morrison C. England, Jr., on 6/21/12 ORDERING that plaintiffs&apos; 41 Motion for Protective Order is GRANTED. Plaintiff&apos;s request for sanctions is DENIED. Defendant Sun Life&apos;s 52 Ex Parte Application is DENIED. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-03020-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-4/mods.xml">
+ <titleInfo>
+  <title>Shappell v. Sun Life Assurance Company et al</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr. on 1/3/13 ORDERING judgment shall be entered in favor of Defendants. Because judgment will be entered in favor of the Defendants, it is not necessary for the Court to award attorney&apos;s fees, costs or interest. (Matson, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_10-cv-03020-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a257fc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-4</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-03020_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-03020/USCOURTS-caed-2_10-cv-03020-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-03020/pdf/USCOURTS-caed-2_10-cv-03020-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-03020; Shappell v. Sun Life Assurance Company et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-03020-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr. on 1/3/13 ORDERING judgment shall be entered in favor of Defendants. Because judgment will be entered in favor of the Defendants, it is not necessary for the Court to award attorney&apos;s fees, costs or interest. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

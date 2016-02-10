@@ -1,0 +1,333 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813d59a2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-00370</identifier>
+<identifier type="local">P0b002ee1813d59a2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_05-cv-00370</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_05-cv-00370</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:05-cv-00370</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="BERKS COUNTY MENTAL HEALTH AND MENTAL RETARDATION PROGRAM" lastName="BERKS COUNTY MENTAL HEALTH AND MENTAL RETARDATION PROGRAM" role="Defendant"></party>
+ <party fullName="COMMUNITY BEHAVIORAL HEALTH" lastName="COMMUNITY BEHAVIORAL HEALTH" role="Respondent"></party>
+ <party fullName="COMMUNITY CARE BEHAVIORAL HEALTH ORGANIZATION" lastName="COMMUNITY CARE BEHAVIORAL HEALTH ORGANIZATION" role="Defendant"></party>
+ <party firstName="LAWRENCE" fullName="LAWRENCE DEMILIO" lastName="DEMILIO" role="Defendant"></party>
+ <party fullName="KEVIN H. WRIGHT&amp;ASSOCIATES" lastName="KEVIN H. WRIGHT&amp;ASSOCIATES" role="Petitioner"></party>
+ <party fullName="MAGELLAN BEHAVIORAL HEALTH OF PENNSYLVANIA, INC." lastName="MAGELLAN BEHAVIORAL HEALTH OF PENNSYLVANIA, INC." role="Respondent"></party>
+ <party firstName="CHARLENE" fullName="CHARLENE OBERLY" lastName="OBERLY" role="Plaintiff"></party>
+ <party fullName="SERVICE ACCESS AND MANAGEMENT, INC." lastName="SERVICE ACCESS AND MANAGEMENT, INC." role="Defendant"></party>
+ <party firstName="DAMIEN" fullName="DAMIEN STANSFIELD" lastName="STANSFIELD" role="Plaintiff"></party>
+ <party fullName="SUMMIT QUEST ACADEMY" lastName="SUMMIT QUEST ACADEMY" role="Defendant"></party>
+ <party fullName="THE DEPARTMENT OF HUMAN SERVICES" lastName="THE DEPARTMENT OF HUMAN SERVICES" role="Movant"></party>
+ <party fullName="VIAQUEST BEHAVIORAL HEALTH OF PENNSYLVANIA, LLC" lastName="VIAQUEST BEHAVIORAL HEALTH OF PENNSYLVANIA, LLC" role="Defendant"></party>
+ <party fullName="VIAQUEST BEHAVIORAL HEALTH, LLC" lastName="VIAQUEST BEHAVIORAL HEALTH, LLC" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>STANSFIELD et al v. SUMMIT QUEST ACADEMY et al</title>
+ <partNumber>2:05-cv-00370</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-00370/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-00370;05-370</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>BERKS COUNTY MENTAL HEALTH AND MENTAL RETARDATION PROGRAM</displayForm>
+ <namePart type="family">BERKS COUNTY MENTAL HEALTH AND MENTAL RETARDATION PROGRAM</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>COMMUNITY BEHAVIORAL HEALTH</displayForm>
+ <namePart type="family">COMMUNITY BEHAVIORAL HEALTH</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>COMMUNITY CARE BEHAVIORAL HEALTH ORGANIZATION</displayForm>
+ <namePart type="family">COMMUNITY CARE BEHAVIORAL HEALTH ORGANIZATION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LAWRENCE DEMILIO</displayForm>
+ <namePart type="family">DEMILIO</namePart>
+ <namePart type="given">LAWRENCE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>KEVIN H. WRIGHT&amp;ASSOCIATES</displayForm>
+ <namePart type="family">KEVIN H. WRIGHT&amp;ASSOCIATES</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>MAGELLAN BEHAVIORAL HEALTH OF PENNSYLVANIA, INC.</displayForm>
+ <namePart type="family">MAGELLAN BEHAVIORAL HEALTH OF PENNSYLVANIA, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>CHARLENE OBERLY</displayForm>
+ <namePart type="family">OBERLY</namePart>
+ <namePart type="given">CHARLENE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>SERVICE ACCESS AND MANAGEMENT, INC.</displayForm>
+ <namePart type="family">SERVICE ACCESS AND MANAGEMENT, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DAMIEN STANSFIELD</displayForm>
+ <namePart type="family">STANSFIELD</namePart>
+ <namePart type="given">DAMIEN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>SUMMIT QUEST ACADEMY</displayForm>
+ <namePart type="family">SUMMIT QUEST ACADEMY</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>THE DEPARTMENT OF HUMAN SERVICES</displayForm>
+ <namePart type="family">THE DEPARTMENT OF HUMAN SERVICES</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>VIAQUEST BEHAVIORAL HEALTH OF PENNSYLVANIA, LLC</displayForm>
+ <namePart type="family">VIAQUEST BEHAVIORAL HEALTH OF PENNSYLVANIA, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>VIAQUEST BEHAVIORAL HEALTH, LLC</displayForm>
+ <namePart type="family">VIAQUEST BEHAVIORAL HEALTH, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_05-cv-00370</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:05-cv-00370</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="BERKS COUNTY MENTAL HEALTH AND MENTAL RETARDATION PROGRAM" lastName="BERKS COUNTY MENTAL HEALTH AND MENTAL RETARDATION PROGRAM" role="Defendant"></party>
+ <party fullName="COMMUNITY BEHAVIORAL HEALTH" lastName="COMMUNITY BEHAVIORAL HEALTH" role="Respondent"></party>
+ <party fullName="COMMUNITY CARE BEHAVIORAL HEALTH ORGANIZATION" lastName="COMMUNITY CARE BEHAVIORAL HEALTH ORGANIZATION" role="Defendant"></party>
+ <party firstName="LAWRENCE" fullName="LAWRENCE DEMILIO" lastName="DEMILIO" role="Defendant"></party>
+ <party fullName="KEVIN H. WRIGHT&amp;ASSOCIATES" lastName="KEVIN H. WRIGHT&amp;ASSOCIATES" role="Petitioner"></party>
+ <party fullName="MAGELLAN BEHAVIORAL HEALTH OF PENNSYLVANIA, INC." lastName="MAGELLAN BEHAVIORAL HEALTH OF PENNSYLVANIA, INC." role="Respondent"></party>
+ <party firstName="CHARLENE" fullName="CHARLENE OBERLY" lastName="OBERLY" role="Plaintiff"></party>
+ <party fullName="SERVICE ACCESS AND MANAGEMENT, INC." lastName="SERVICE ACCESS AND MANAGEMENT, INC." role="Defendant"></party>
+ <party firstName="DAMIEN" fullName="DAMIEN STANSFIELD" lastName="STANSFIELD" role="Plaintiff"></party>
+ <party fullName="SUMMIT QUEST ACADEMY" lastName="SUMMIT QUEST ACADEMY" role="Defendant"></party>
+ <party fullName="THE DEPARTMENT OF HUMAN SERVICES" lastName="THE DEPARTMENT OF HUMAN SERVICES" role="Movant"></party>
+ <party fullName="VIAQUEST BEHAVIORAL HEALTH OF PENNSYLVANIA, LLC" lastName="VIAQUEST BEHAVIORAL HEALTH OF PENNSYLVANIA, LLC" role="Defendant"></party>
+ <party fullName="VIAQUEST BEHAVIORAL HEALTH, LLC" lastName="VIAQUEST BEHAVIORAL HEALTH, LLC" role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_05-cv-00370-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-00370/USCOURTS-paed-2_05-cv-00370-0/mods.xml">
+ <titleInfo>
+  <title>STANSFIELD et al v. SUMMIT QUEST ACADEMY et al</title>
+  <subTitle>MEMORANDUM AND OPINION THAT DEFENDANTS&apos; PARTIAL MOTION TO DISMISS PLAINTIFFS&apos; SECOND AMENDED COMPLAINT IS DENIED IN ITS ENTIRETY. SIGNED BY JUDGE CLIFFORD SCOTT GREEN ON 3/9/06. 3/9/06 ENTERED AND COPIES MAILED, E-MAILED.(fdc)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_05-cv-00370-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814f3ef9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-00370/USCOURTS-paed-2_05-cv-00370-0</identifier>
+ <identifier type="former granule identifier">paed-2_05-cv-00370_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-00370/USCOURTS-paed-2_05-cv-00370-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-00370/pdf/USCOURTS-paed-2_05-cv-00370-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-00370; STANSFIELD et al v. SUMMIT QUEST ACADEMY et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_05-cv-00370-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-03-09</dateIssued>
+  <docketText>MEMORANDUM AND OPINION THAT DEFENDANTS&apos; PARTIAL MOTION TO DISMISS PLAINTIFFS&apos; SECOND AMENDED COMPLAINT IS DENIED IN ITS ENTIRETY. SIGNED BY JUDGE CLIFFORD SCOTT GREEN ON 3/9/06. 3/9/06 ENTERED AND COPIES MAILED, E-MAILED.(fdc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_05-cv-00370-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-00370/USCOURTS-paed-2_05-cv-00370-1/mods.xml">
+ <titleInfo>
+  <title>STANSFIELD et al v. SUMMIT QUEST ACADEMY et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT PLAINTIFF&apos;S OMNIBUS MOTION TO COMPEL PRODUCTION OF DOCUMENTS PURSUANT TO SUBPOENAS IS DENIED. SIGNED BY JUDGE CLIFFORD SCOTT GREEN ON 9/26/06. 9/27/06 ENTERED AND COPIES MAILED, E-MAILED.(fdc)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_05-cv-00370-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814f3ef7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-00370/USCOURTS-paed-2_05-cv-00370-1</identifier>
+ <identifier type="former granule identifier">paed-2_05-cv-00370_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-00370/USCOURTS-paed-2_05-cv-00370-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-00370/pdf/USCOURTS-paed-2_05-cv-00370-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-00370; STANSFIELD et al v. SUMMIT QUEST ACADEMY et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_05-cv-00370-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-09-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT PLAINTIFF&apos;S OMNIBUS MOTION TO COMPEL PRODUCTION OF DOCUMENTS PURSUANT TO SUBPOENAS IS DENIED. SIGNED BY JUDGE CLIFFORD SCOTT GREEN ON 9/26/06. 9/27/06 ENTERED AND COPIES MAILED, E-MAILED.(fdc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_05-cv-00370-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-00370/USCOURTS-paed-2_05-cv-00370-2/mods.xml">
+ <titleInfo>
+  <title>STANSFIELD et al v. SUMMIT QUEST ACADEMY et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT PLAINTIFF&apos;S MOTION TO COMPEL PRODUCTION OF DOCUMENTS IS GRANTED IN PART AND DENIED IN PART. IT IS FURTHER ORDERED THAT PLAINTIFFS&apos; MOTION TO COMPEL PRODUCTION OF CCHB&apos;S CREDENTIALING DOCUMENTS FOR NON-PARTY FACILITIES HOFFMAN HOMES, NORTHWESTERN HUMAN SERVICES, AND SERVICE ACCESS AND MANAGEMENT, INC. IS DENIED. CCHB IS ORDERED TO PRODUCE THE RAW NUMBER OF INCIDENTS OF INAPPROPRIATE SEXUAL CONTACT, AS DEFINED BY 55 PA. CODE SECTION 3800.16 (A)(4), INVOLVING MINORS AT DEFENDANT SUMMIT QUEST&apos;S FACILITY. SIGNED BY JUDGE CLIFFORD SCOTT GREEN ON 10/25/06. (Attachments: # (1) order) 10/26/06 ENTERED AND COPIES MAILED, E-MAILED.(fdc, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_05-cv-00370-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814f3efa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-00370/USCOURTS-paed-2_05-cv-00370-2</identifier>
+ <identifier type="former granule identifier">paed-2_05-cv-00370_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-00370/USCOURTS-paed-2_05-cv-00370-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-00370/pdf/USCOURTS-paed-2_05-cv-00370-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-00370; STANSFIELD et al v. SUMMIT QUEST ACADEMY et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_05-cv-00370-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-10-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT PLAINTIFF&apos;S MOTION TO COMPEL PRODUCTION OF DOCUMENTS IS GRANTED IN PART AND DENIED IN PART. IT IS FURTHER ORDERED THAT PLAINTIFFS&apos; MOTION TO COMPEL PRODUCTION OF CCHB&apos;S CREDENTIALING DOCUMENTS FOR NON-PARTY FACILITIES HOFFMAN HOMES, NORTHWESTERN HUMAN SERVICES, AND SERVICE ACCESS AND MANAGEMENT, INC. IS DENIED. CCHB IS ORDERED TO PRODUCE THE RAW NUMBER OF INCIDENTS OF INAPPROPRIATE SEXUAL CONTACT, AS DEFINED BY 55 PA. CODE SECTION 3800.16 (A)(4), INVOLVING MINORS AT DEFENDANT SUMMIT QUEST&apos;S FACILITY. SIGNED BY JUDGE CLIFFORD SCOTT GREEN ON 10/25/06. (Attachments: # (1) order) 10/26/06 ENTERED AND COPIES MAILED, E-MAILED.(fdc, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_05-cv-00370-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-00370/USCOURTS-paed-2_05-cv-00370-3/mods.xml">
+ <titleInfo>
+  <title>STANSFIELD et al v. SUMMIT QUEST ACADEMY et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT PLAINTIFFS&apos; MOTION FOR A PROTECTIVE ORDER IS GRANTED IN PART AND DENIED IN PART. IT IS FURTHER ORDERED THAT PLAINTIFFS&apos; MOTION TO LIMIT THE QUESTIONING OF DAMIEN STANSFIELD TO PERIODS OF 30 MINUTES OF UNINTERRUPTED QUESTIONING FOLLOWED BY 10 MINUTE BREAKS IS GRANTED; PLAINTIFFS&apos; MOTION IS DENIED IN ALL OTHER RESPECTS. SIGNED BY JUDGE CLIFFORD SCOTT GREEN ON 1/9/07. 1/9/07 ENTERED AND COPIES MAILED, E-MAILED.(fdc)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_05-cv-00370-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814f3ef8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-00370/USCOURTS-paed-2_05-cv-00370-3</identifier>
+ <identifier type="former granule identifier">paed-2_05-cv-00370_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-00370/USCOURTS-paed-2_05-cv-00370-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-00370/pdf/USCOURTS-paed-2_05-cv-00370-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-00370; STANSFIELD et al v. SUMMIT QUEST ACADEMY et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_05-cv-00370-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-01-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT PLAINTIFFS&apos; MOTION FOR A PROTECTIVE ORDER IS GRANTED IN PART AND DENIED IN PART. IT IS FURTHER ORDERED THAT PLAINTIFFS&apos; MOTION TO LIMIT THE QUESTIONING OF DAMIEN STANSFIELD TO PERIODS OF 30 MINUTES OF UNINTERRUPTED QUESTIONING FOLLOWED BY 10 MINUTE BREAKS IS GRANTED; PLAINTIFFS&apos; MOTION IS DENIED IN ALL OTHER RESPECTS. SIGNED BY JUDGE CLIFFORD SCOTT GREEN ON 1/9/07. 1/9/07 ENTERED AND COPIES MAILED, E-MAILED.(fdc)</docketText>
+</extension>
+</relatedItem>
+</mods>

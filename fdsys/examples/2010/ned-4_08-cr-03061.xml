@@ -1,0 +1,734 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b72ba">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061</identifier>
+<identifier type="local">P0b002ee1817b72ba</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_08-cr-03061</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cr-03061</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cr-03061</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Retha" fullName="Retha Hudkins" lastName="Hudkins" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Hudkins</title>
+ <partNumber>4:08-cr-03061</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:08-cr-03061;08-3061</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Retha Hudkins</displayForm>
+ <namePart type="family">Hudkins</namePart>
+ <namePart type="given">Retha</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cr-03061</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cr-03061</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Retha" fullName="Retha Hudkins" lastName="Hudkins" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER as to defendant Retha Hudkins. Because of a possible appearance of impropriety in my handling this case, IT IS ORDERED that the matter is referred to the Chief Judge for reassignment. Ordered by Senior Judge Warren K. Urbom. (JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd62e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-0</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-04-28</dateIssued>
+  <docketText>ORDER as to defendant Retha Hudkins. Because of a possible appearance of impropriety in my handling this case, IT IS ORDERED that the matter is referred to the Chief Judge for reassignment. Ordered by Senior Judge Warren K. Urbom. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER granting 13 Motion to Continue deadline as to Retha Hudkins (1). The deadline for filing pretrial motions is extended to September 1, 2008. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd642</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-1</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-07-30</dateIssued>
+  <docketText>ORDER granting 13 Motion to Continue deadline as to Retha Hudkins (1). The deadline for filing pretrial motions is extended to September 1, 2008. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>AMEMDED ORDER as to defendant Retha Hudkins. The deadline for filing pretrial motions, previously identified as September 1, 2008, is extended to September 2, 2008. Ordered by Magistrate Judge David L. Piester. (LKL)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd63c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-2</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-08-29</dateIssued>
+  <docketText>AMEMDED ORDER as to defendant Retha Hudkins. The deadline for filing pretrial motions, previously identified as September 1, 2008, is extended to September 2, 2008. Ordered by Magistrate Judge David L. Piester. (LKL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER granting 16 Joint Motion to Continue Trial as to Retha Hudkins (1). Trial is set for 9:00 a.m. on December 8, 2008 for a duration of seven trial days before the Honorable Richard G. Kopf. Jury selection will be at the commencement of trial. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd576</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-3</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-09-03</dateIssued>
+  <docketText>ORDER granting 16 Joint Motion to Continue Trial as to Retha Hudkins (1). Trial is set for 9:00 a.m. on December 8, 2008 for a duration of seven trial days before the Honorable Richard G. Kopf. Jury selection will be at the commencement of trial. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER granting 30 Plaintiff&apos;s Motion to Extend as to Retha Hudkins (1). The plaintiff is given until September 16, 2008, to file a response to defendant&apos;s pretrial motions and applications. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd625</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-4</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-09-10</dateIssued>
+  <docketText>ORDER granting 30 Plaintiff&apos;s Motion to Extend as to Retha Hudkins (1). The plaintiff is given until September 16, 2008, to file a response to defendant&apos;s pretrial motions and applications. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER granting 18 Motion to Seal as to Retha Hudkins (1). The motion in limine and request for hearing (filing 19) shall be sealed. I will take up the motion in limine and motion for hearing (filing 19) on the first day of trial. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd641</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-5</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-09-15</dateIssued>
+  <docketText>ORDER granting 18 Motion to Seal as to Retha Hudkins (1). The motion in limine and request for hearing (filing 19) shall be sealed. I will take up the motion in limine and motion for hearing (filing 19) on the first day of trial. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER granting 33 Motion to Extend Deadline as to Retha Hudkins (1). The deadline for plaintiff to respond to defendant&apos;s pretrial motions is extended to September 19, 2008. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd62b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-6</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2008-09-17</dateIssued>
+  <docketText>ORDER granting 33 Motion to Extend Deadline as to Retha Hudkins (1). The deadline for plaintiff to respond to defendant&apos;s pretrial motions is extended to September 19, 2008. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER granting 39 Motion to Extend as to Retha Hudkins (1). The deadline for Defendant to respond to Plaintiffs Motion to Deny or Quash the Issuance of Subpoenas Duces Tecum and supporting Brief of the United States on Defendant&apos;s Pretrial Motions and Plaintiff&apos;s Motion to Deny or Quash is extended to October 3, 2008. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd63b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-7</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-09-25</dateIssued>
+  <docketText>ORDER granting 39 Motion to Extend as to Retha Hudkins (1). The deadline for Defendant to respond to Plaintiffs Motion to Deny or Quash the Issuance of Subpoenas Duces Tecum and supporting Brief of the United States on Defendant&apos;s Pretrial Motions and Plaintiff&apos;s Motion to Deny or Quash is extended to October 3, 2008. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER granting 40 Motion to Extend as to Retha Hudkins (1). The deadline for Defendant to respond to Plaintiffs Brief in Response to Defendant&apos;s Motion for Additional Discovery or in the Alternative, Motion to Suppress is extended to October 3, 2008. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd627</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-8</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-09-25</dateIssued>
+  <docketText>ORDER granting 40 Motion to Extend as to Retha Hudkins (1). The deadline for Defendant to respond to Plaintiffs Brief in Response to Defendant&apos;s Motion for Additional Discovery or in the Alternative, Motion to Suppress is extended to October 3, 2008. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER regarding motions. Upon consideration of pending motions, IT THEREFORE HEREBY IS ORDERED: Defendant&apos;s motion for production of witness notes, filing 20, is denied. Defendant&apos;s motions for issuance of subpoenas duces tecum, filing nos. 21,22, 23, 24, 25, and 26 are denied. Plaintiff&apos;s motion to quash, filing 35, is granted. Defendant&apos;s objection filing 43, is stricken and has been considered as a brief. Ordered by Magistrate Judge David L. Piester. (LKL)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd63f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-9</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2008-10-17</dateIssued>
+  <docketText>ORDER regarding motions. Upon consideration of pending motions, IT THEREFORE HEREBY IS ORDERED: Defendant&apos;s motion for production of witness notes, filing 20, is denied. Defendant&apos;s motions for issuance of subpoenas duces tecum, filing nos. 21,22, 23, 24, 25, and 26 are denied. Plaintiff&apos;s motion to quash, filing 35, is granted. Defendant&apos;s objection filing 43, is stricken and has been considered as a brief. Ordered by Magistrate Judge David L. Piester. (LKL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>MEMORANDUM AND ORDER regarding Memorandum and Order45 as to Retha Hudkins (1). The Objection to Magistrate&apos;s Memorandum and Order Re: Issuance of Subpoenas Duces Tecum (filing 46) is denied. 2. The Objection to Magistrates Memorandum and Order Re: Additional Discovery or, In the Alternative, Motion to Suppress and Request for Evidentiary Hearing (filing 47) is denied except as stated. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd63d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-10</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2008-11-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding Memorandum and Order45 as to Retha Hudkins (1). The Objection to Magistrate&apos;s Memorandum and Order Re: Issuance of Subpoenas Duces Tecum (filing 46) is denied. 2. The Objection to Magistrates Memorandum and Order Re: Additional Discovery or, In the Alternative, Motion to Suppress and Request for Evidentiary Hearing (filing 47) is denied except as stated. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>MEMORANDUM AND ORDER as to defendant Retha Hudkins. The district judge has remanded that part of filing no. 47, which in turn, appears to echo that part of filing no. 20 which seeks suppression of any &quot;statement and any testimony of Roger Cox.&quot; IT THEREFORE HEREBY IS ORDERED: 1. The defendant is given until December 1, 2008 to file a motion to suppress particularized statements and/or testimony of Roger Cox. 2. Trial of this matter is continued until further order of the court following resolution of any motion filed by the defendant. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd574</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-11</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2008-11-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to defendant Retha Hudkins. The district judge has remanded that part of filing no. 47, which in turn, appears to echo that part of filing no. 20 which seeks suppression of any &quot;statement and any testimony of Roger Cox.&quot; IT THEREFORE HEREBY IS ORDERED: 1. The defendant is given until December 1, 2008 to file a motion to suppress particularized statements and/or testimony of Roger Cox. 2. Trial of this matter is continued until further order of the court following resolution of any motion filed by the defendant. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER granting MOTION for status conference 50 as to defendant(s) Retha Hudkins. A telephonic status conference will be held before the undersigned magistrate judge on December 3, 2008 at 2:30 p.m. Counsel for the government shall place the call. Ordered by Magistrate Judge David L. Piester. (CRZ)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd640</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-12</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2008-11-26</dateIssued>
+  <docketText>ORDER granting MOTION for status conference 50 as to defendant(s) Retha Hudkins. A telephonic status conference will be held before the undersigned magistrate judge on December 3, 2008 at 2:30 p.m. Counsel for the government shall place the call. Ordered by Magistrate Judge David L. Piester. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER-The court has been informed that due to illness, defendant&apos;s counsel is unavailable for the telephone conference that was scheduled for today. With the agreement of plaintiff&apos;s counsel, IT IS ORDERED that the telephone conference is continued to December 10, 2008 at 9:00 a.m. Plaintiffs counsel shall place the call. Ordered by Magistrate Judge David L. Piester. (LKL)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd628</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-13</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2008-12-03</dateIssued>
+  <docketText>ORDER-The court has been informed that due to illness, defendant&apos;s counsel is unavailable for the telephone conference that was scheduled for today. With the agreement of plaintiff&apos;s counsel, IT IS ORDERED that the telephone conference is continued to December 10, 2008 at 9:00 a.m. Plaintiffs counsel shall place the call. Ordered by Magistrate Judge David L. Piester. (LKL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER granting 55 Motion to Extend Time as to Retha Hudkins (1). The plaintiff is given until December 15, 2008, to file a responsive brief to the defendant&apos;s motion to suppress. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd63e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-14</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2008-12-09</dateIssued>
+  <docketText>ORDER granting 55 Motion to Extend Time as to Retha Hudkins (1). The plaintiff is given until December 15, 2008, to file a responsive brief to the defendant&apos;s motion to suppress. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>REPORT AND RECOMMENDATION to the Honorable Richard G. Kopf,United States District Judge, that the motion to suppress, (filing no. 52), be denied in all respects. The parties are notified that a failure to object to this recommendation in accordance with the local rules of practice may be held to be a waiver of any right to appeal the district judges adoption of this recommendation as to defendant Retha Hudkins. IT IS FURTHER ORDERED: The evidentiary hearing on defendant&apos;s motion to suppress, (filing no. 52), is cancelled. Ordered by Magistrate Judge David L. Piester. (LKH)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd575</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-15</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2009-01-13</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION to the Honorable Richard G. Kopf,United States District Judge, that the motion to suppress, (filing no. 52), be denied in all respects. The parties are notified that a failure to object to this recommendation in accordance with the local rules of practice may be held to be a waiver of any right to appeal the district judges adoption of this recommendation as to defendant Retha Hudkins. IT IS FURTHER ORDERED: The evidentiary hearing on defendant&apos;s motion to suppress, (filing no. 52), is cancelled. Ordered by Magistrate Judge David L. Piester. (LKH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>MEMORANDUM AND ORDER adopting 61 Magistrate Judge&apos;s Recommendation and denying 52 Motion to Suppress as to Retha Hudkins (1). Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd62d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-16</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2009-02-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER adopting 61 Magistrate Judge&apos;s Recommendation and denying 52 Motion to Suppress as to Retha Hudkins (1). Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Retha Hudkins. It is ordered that:... (2)The defendant&apos;s objection to loss 73 and her motion for variance 74 will be resolved at sentencing. Because a lengthy evidentiary hearing is requested, defense counsel and counsel for the government shall arrange a telephone conference with me to discuss scheduling. Counsel shall call my judicial assistant to schedule the telephone conference. The motion in limine 19 is denied as moot.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd629</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-17</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2009-06-10</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Retha Hudkins. It is ordered that:... (2)The defendant&apos;s objection to loss 73 and her motion for variance 74 will be resolved at sentencing. Because a lengthy evidentiary hearing is requested, defense counsel and counsel for the government shall arrange a telephone conference with me to discuss scheduling. Counsel shall call my judicial assistant to schedule the telephone conference. The motion in limine 19 is denied as moot.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>ORDER as to defendant Retha Hudkins. A conference call was held with counsel.IT IS ORDERED that Defendant Hudkins&apos; revocation hearing is rescheduled to Thursday, August 20, 2009, at 2:00 to 4:30 p.m. and continued on Friday, August 21, 2009, at 9:00 a.m. to 12:00 noon and 1:15 to 4:30 p.m., before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd63a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-18</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2009-06-10</dateIssued>
+  <docketText>ORDER as to defendant Retha Hudkins. A conference call was held with counsel.IT IS ORDERED that Defendant Hudkins&apos; revocation hearing is rescheduled to Thursday, August 20, 2009, at 2:00 to 4:30 p.m. and continued on Friday, August 21, 2009, at 9:00 a.m. to 12:00 noon and 1:15 to 4:30 p.m., before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>CORRECTED ORDER as to defendant Retha Hudkins. A conference call was held with counsel.IT IS ORDERED that Defendant Hudkins&apos; EVIDENTIARY HEARING AND SENTENCING are rescheduled to Thursday, August 20, 2009, at 2:00 to 4:30 p.m. and continued on Friday, August 21, 2009, at 9:00 a.m. to 12:00 noon and 1:15 to 4:30 p.m., before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd626</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-19</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2009-06-10</dateIssued>
+  <docketText>CORRECTED ORDER as to defendant Retha Hudkins. A conference call was held with counsel.IT IS ORDERED that Defendant Hudkins&apos; EVIDENTIARY HEARING AND SENTENCING are rescheduled to Thursday, August 20, 2009, at 2:00 to 4:30 p.m. and continued on Friday, August 21, 2009, at 9:00 a.m. to 12:00 noon and 1:15 to 4:30 p.m., before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>MEMORANDUM AND ORDER as to the question of &quot;loss&quot; and &quot;restitution&quot; as to defendant Retha Hudkins. Ordered by Judge Richard G. Kopf. (CCB)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd62c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-20</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2009-11-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to the question of &quot;loss&quot; and &quot;restitution&quot; as to defendant Retha Hudkins. Ordered by Judge Richard G. Kopf. (CCB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03061-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-21/mods.xml">
+ <titleInfo>
+  <title>USA v. Hudkins</title>
+  <subTitle>MEMORANDUM AND ORDER as to defendant Retha Hudkins. I am in receipt of a letter from the defendant. Treating the letter as a motion, the motion is granted in part and denied in part. The government is directed to respond to the defendant&apos;s questions set forth in the letter within ten days of this order. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(JAB)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03061-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cd62a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-21</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03061_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03061/USCOURTS-ned-4_08-cr-03061-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03061/pdf/USCOURTS-ned-4_08-cr-03061-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03061; USA v. Hudkins; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03061-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2010-01-26</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to defendant Retha Hudkins. I am in receipt of a letter from the defendant. Treating the letter as a motion, the motion is granted in part and denied in part. The government is directed to respond to the defendant&apos;s questions set forth in the letter within ten days of this order. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(JAB)</docketText>
+</extension>
+</relatedItem>
+</mods>

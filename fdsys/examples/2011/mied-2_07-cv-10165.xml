@@ -1,0 +1,473 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818eb248">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10165</identifier>
+<identifier type="local">P0b002ee1818eb248</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_07-cv-10165</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-cv-10165</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-cv-10165</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>196</natureSuitCode>
+ <natureSuit>Franchise</natureSuit>
+ <party fullName="Fairlane Car Wash, Incorporated" lastName="Fairlane Car Wash, Incorporated" role="Counter Defendant"></party>
+ <party fullName="Fairlane Car Wash, Incorporated" lastName="Fairlane Car Wash, Incorporated" role="Plaintiff"></party>
+ <party fullName="JP Morgan Chase Bank, NA" lastName="JP Morgan Chase Bank, NA" role="Garnishee"></party>
+ <party fullName="Knight Enterprises, Incorporated" lastName="Knight Enterprises, Incorporated" role="Counter Claimant"></party>
+ <party fullName="Knight Enterprises, Incorporated" lastName="Knight Enterprises, Incorporated" role="Defendant"></party>
+ <party firstName="James" fullName="James Masouras" lastName="Masouras" role="Counter Defendant"></party>
+ <party firstName="James" fullName="James Masouras" lastName="Masouras" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Masouras" lastName="Masouras" role="Counter Defendant"></party>
+ <party firstName="John" fullName="John Masouras" lastName="Masouras" role="Plaintiff"></party>
+ <party fullName="PJJ Enterprises, L. L. C." lastName="PJJ Enterprises, L. L. C." role="Counter Defendant"></party>
+ <party fullName="PJJ Enterprises, L. L. C." lastName="PJJ Enterprises, L. L. C." role="Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark Smiley" lastName="Smiley" role="Interested Party"></party>
+ <party fullName="Travelers Casualty and Surety Company of America" lastName="Travelers Casualty and Surety Company of America" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated</title>
+ <partNumber>2:07-cv-10165</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10165/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-10165;07-10165</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Fairlane Car Wash, Incorporated</displayForm>
+ <namePart type="family">Fairlane Car Wash, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fairlane Car Wash, Incorporated</displayForm>
+ <namePart type="family">Fairlane Car Wash, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>JP Morgan Chase Bank, NA</displayForm>
+ <namePart type="family">JP Morgan Chase Bank, NA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Garnishee</description>
+</name>
+<name type="personal">
+ <displayForm>Knight Enterprises, Incorporated</displayForm>
+ <namePart type="family">Knight Enterprises, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Knight Enterprises, Incorporated</displayForm>
+ <namePart type="family">Knight Enterprises, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Masouras</displayForm>
+ <namePart type="family">Masouras</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Masouras</displayForm>
+ <namePart type="family">Masouras</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Masouras</displayForm>
+ <namePart type="family">Masouras</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Masouras</displayForm>
+ <namePart type="family">Masouras</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>PJJ Enterprises, L. L. C.</displayForm>
+ <namePart type="family">PJJ Enterprises, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PJJ Enterprises, L. L. C.</displayForm>
+ <namePart type="family">PJJ Enterprises, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Smiley</displayForm>
+ <namePart type="family">Smiley</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Travelers Casualty and Surety Company of America</displayForm>
+ <namePart type="family">Travelers Casualty and Surety Company of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-cv-10165</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-cv-10165</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>196</natureSuitCode>
+ <natureSuit>Franchise</natureSuit>
+ <party fullName="Fairlane Car Wash, Incorporated" lastName="Fairlane Car Wash, Incorporated" role="Counter Defendant"></party>
+ <party fullName="Fairlane Car Wash, Incorporated" lastName="Fairlane Car Wash, Incorporated" role="Plaintiff"></party>
+ <party fullName="JP Morgan Chase Bank, NA" lastName="JP Morgan Chase Bank, NA" role="Garnishee"></party>
+ <party fullName="Knight Enterprises, Incorporated" lastName="Knight Enterprises, Incorporated" role="Counter Claimant"></party>
+ <party fullName="Knight Enterprises, Incorporated" lastName="Knight Enterprises, Incorporated" role="Defendant"></party>
+ <party firstName="James" fullName="James Masouras" lastName="Masouras" role="Counter Defendant"></party>
+ <party firstName="James" fullName="James Masouras" lastName="Masouras" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Masouras" lastName="Masouras" role="Counter Defendant"></party>
+ <party firstName="John" fullName="John Masouras" lastName="Masouras" role="Plaintiff"></party>
+ <party fullName="PJJ Enterprises, L. L. C." lastName="PJJ Enterprises, L. L. C." role="Counter Defendant"></party>
+ <party fullName="PJJ Enterprises, L. L. C." lastName="PJJ Enterprises, L. L. C." role="Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark Smiley" lastName="Smiley" role="Interested Party"></party>
+ <party fullName="Travelers Casualty and Surety Company of America" lastName="Travelers Casualty and Surety Company of America" role="Respondent"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10165-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-0/mods.xml">
+ <titleInfo>
+  <title>Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated</title>
+  <subTitle>ORDER denying 15 Defendant&apos;s Motion for Summary Judgment; granting 16 Plaintiff&apos;s Motion for Summary Judgment. Signed by Honorable Robert H Cleland. (LWag)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10165-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818fbc44</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-0</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10165_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10165/pdf/USCOURTS-mied-2_07-cv-10165-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10165; Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10165-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-31</dateIssued>
+  <docketText>ORDER denying 15 Defendant&apos;s Motion for Summary Judgment; granting 16 Plaintiff&apos;s Motion for Summary Judgment. Signed by Honorable Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10165-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-1/mods.xml">
+ <titleInfo>
+  <title>Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated</title>
+  <subTitle>ORDER regarding proposed jury instructions. Signed by Honorable Robert H Cleland. (LWag)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10165-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818fbc47</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-1</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10165_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10165/pdf/USCOURTS-mied-2_07-cv-10165-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10165; Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10165-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-03-10</dateIssued>
+  <docketText>ORDER regarding proposed jury instructions. Signed by Honorable Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10165-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-2/mods.xml">
+ <titleInfo>
+  <title>Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated</title>
+  <subTitle>ORDER granting in part and denying in part 29 Defendant&apos;s Motion in Limine and request to instruct the jury on willful disregard of the Petroleum Marketing Practices Act. Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10165-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818fbd5f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-2</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10165_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10165/pdf/USCOURTS-mied-2_07-cv-10165-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10165; Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10165-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-04-24</dateIssued>
+  <docketText>ORDER granting in part and denying in part 29 Defendant&apos;s Motion in Limine and request to instruct the jury on willful disregard of the Petroleum Marketing Practices Act. Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10165-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-3/mods.xml">
+ <titleInfo>
+  <title>Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated</title>
+  <subTitle>ORDER concluding bench trial proceedings; proposed judgment to be submitted to the court no later than 7/28/2008. Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10165-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818fbc42</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-3</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10165_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10165/pdf/USCOURTS-mied-2_07-cv-10165-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10165; Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10165-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-07-24</dateIssued>
+  <docketText>ORDER concluding bench trial proceedings; proposed judgment to be submitted to the court no later than 7/28/2008. Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10165-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-4/mods.xml">
+ <titleInfo>
+  <title>Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated</title>
+  <subTitle>ORDER terminating as moot 46 Plaintiff&apos;s Motion to Enter Judgment. Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10165-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818fbc46</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-4</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10165_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10165/pdf/USCOURTS-mied-2_07-cv-10165-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10165; Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10165-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-08-06</dateIssued>
+  <docketText>ORDER terminating as moot 46 Plaintiff&apos;s Motion to Enter Judgment. Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10165-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-5/mods.xml">
+ <titleInfo>
+  <title>Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated</title>
+  <subTitle>OPINION AND ORDER denying 45Defendant&apos;s Motion for Return of Property; denying 50 Defendant&apos;s Motion for New Trial, Order for Stay of Proceedings and Costs and Attorney Fees and granting 51Plaintiffs&apos; Motion for Attorney Fees. Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10165-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818fbc43</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-5</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10165_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10165/pdf/USCOURTS-mied-2_07-cv-10165-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10165; Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10165-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-03-31</dateIssued>
+  <docketText>OPINION AND ORDER denying 45Defendant&apos;s Motion for Return of Property; denying 50 Defendant&apos;s Motion for New Trial, Order for Stay of Proceedings and Costs and Attorney Fees and granting 51Plaintiffs&apos; Motion for Attorney Fees. Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10165-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-6/mods.xml">
+ <titleInfo>
+  <title>Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated</title>
+  <subTitle>OPINION AND ORDER granting 80 Defendant&apos;s Motion for a Superseadeas Bond. Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-08-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10165-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818fbd5e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-6</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10165_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10165/pdf/USCOURTS-mied-2_07-cv-10165-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10165; Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10165-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-08-06</dateIssued>
+  <docketText>OPINION AND ORDER granting 80 Defendant&apos;s Motion for a Superseadeas Bond. Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10165-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-7/mods.xml">
+ <titleInfo>
+  <title>Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated</title>
+  <subTitle>ORDER denying 91Plaintiffs&apos; Motion for Proceedings Against Surety. Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10165-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818fbd60</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-7</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10165_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10165/pdf/USCOURTS-mied-2_07-cv-10165-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10165; Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10165-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-11-18</dateIssued>
+  <docketText>ORDER denying 91Plaintiffs&apos; Motion for Proceedings Against Surety. Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10165-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-8/mods.xml">
+ <titleInfo>
+  <title>Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated</title>
+  <subTitle>OPINION AND ORDER denying 97 Attorney Mark Smiley&apos;s Motion for Attorney Fees to Enforce Lien against Judgment; denying 98 Motion for Appellate Attorney Fees; terminating as Moot 102 Motion to Strike. Signed by District Judge Robert H Cleland. (LWag)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10165-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818fbc45</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-8</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10165_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10165/USCOURTS-mied-2_07-cv-10165-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10165/pdf/USCOURTS-mied-2_07-cv-10165-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10165; Fairlane Car Wash, Incorporated et al v. Knight Enterprises, Incorporated; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10165-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-01-19</dateIssued>
+  <docketText>OPINION AND ORDER denying 97 Attorney Mark Smiley&apos;s Motion for Attorney Fees to Enforce Lien against Judgment; denying 98 Motion for Appellate Attorney Fees; terminating as Moot 102 Motion to Strike. Signed by District Judge Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+</mods>

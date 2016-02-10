@@ -1,0 +1,244 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18e2a8caf">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-12-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-12-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">https://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_13-cv-01208</identifier>
+<identifier type="local">P0b002ee18e2a8caf</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-12-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_13-cv-01208</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_13-cv-01208</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:13-cv-01208</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="C.O." fullName="C.O. Fisher" lastName="Fisher" role="Defendant"></party>
+ <party firstName="R." fullName="R. Gayne" lastName="Gayne" role="Defendant"></party>
+ <party firstName="B." fullName="B. McArdle" lastName="McArdle" role="Defendant"></party>
+ <party fullName="NYS Dept of Corrections" lastName="NYS Dept of Corrections" role="Defendant"></party>
+ <party firstName="Jacolby" fullName="Jacolby Wallace" lastName="Wallace" role="Plaintiff"></party>
+ <party firstName="Jocolby" fullName="Jocolby Wallace" lastName="Wallace" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Wallace v. McArdle et al</title>
+ <partNumber>9:13-cv-01208</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_13-cv-01208/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:13-cv-01208;13-1208</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>C.O. Fisher</displayForm>
+ <namePart type="family">Fisher</namePart>
+ <namePart type="given">C.O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. Gayne</displayForm>
+ <namePart type="family">Gayne</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>B. McArdle</displayForm>
+ <namePart type="family">McArdle</namePart>
+ <namePart type="given">B.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>NYS Dept of Corrections</displayForm>
+ <namePart type="family">NYS Dept of Corrections</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jacolby Wallace</displayForm>
+ <namePart type="family">Wallace</namePart>
+ <namePart type="given">Jacolby</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jocolby Wallace</displayForm>
+ <namePart type="family">Wallace</namePart>
+ <namePart type="given">Jocolby</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_13-cv-01208</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:13-cv-01208</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="C.O." fullName="C.O. Fisher" lastName="Fisher" role="Defendant"></party>
+ <party firstName="R." fullName="R. Gayne" lastName="Gayne" role="Defendant"></party>
+ <party firstName="B." fullName="B. McArdle" lastName="McArdle" role="Defendant"></party>
+ <party fullName="NYS Dept of Corrections" lastName="NYS Dept of Corrections" role="Defendant"></party>
+ <party firstName="Jacolby" fullName="Jacolby Wallace" lastName="Wallace" role="Plaintiff"></party>
+ <party firstName="Jocolby" fullName="Jocolby Wallace" lastName="Wallace" role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_13-cv-01208-0" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_13-cv-01208/USCOURTS-nynd-9_13-cv-01208-0/mods.xml">
+ <titleInfo>
+  <title>Wallace v. McArdle et al</title>
+  <subTitle>REPORT-RECOMMENDATION AND ORDER: RECOMMENDED, that defendant&apos;s motion to dismiss (Dkt. No. 23) be DENIED. Objections to R&amp;R due by 10/3/2014 Case Review Deadline 10/7/2014. Signed by Magistrate Judge Christian F. Hummel on 9/16/14. (served on plaintiff by regular mail)(alh, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_13-cv-01208/pdf/USCOURTS-nynd-9_13-cv-01208-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2b94a3</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_13-cv-01208/USCOURTS-nynd-9_13-cv-01208-0</identifier>
+ <identifier type="former granule identifier">nynd-9_13-cv-01208_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_13-cv-01208/USCOURTS-nynd-9_13-cv-01208-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_13-cv-01208/pdf/USCOURTS-nynd-9_13-cv-01208-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:13-cv-01208; Wallace v. McArdle et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_13-cv-01208-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-09-16</dateIssued>
+  <docketText>REPORT-RECOMMENDATION AND ORDER: RECOMMENDED, that defendant&apos;s motion to dismiss (Dkt. No. 23) be DENIED. Objections to R&amp;R due by 10/3/2014 Case Review Deadline 10/7/2014. Signed by Magistrate Judge Christian F. Hummel on 9/16/14. (served on plaintiff by regular mail)(alh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_13-cv-01208-1" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_13-cv-01208/USCOURTS-nynd-9_13-cv-01208-1/mods.xml">
+ <titleInfo>
+  <title>Wallace v. McArdle et al</title>
+  <subTitle>DECISION AND ORDER: ORDERED that Magistrate Judge Hummel&apos;s Report-Recommendation (Dkt. No. 28) is ACCEPTED and ADOPTED in its entirety. ORDERED that Defendant&apos;s motion to dismiss (Dkt. No. 23) is DENIED. Signed by Judge Glenn T. Suddaby on 1/5/15. (served on plaintiff by regular mail) (alh, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_13-cv-01208/pdf/USCOURTS-nynd-9_13-cv-01208-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2b9448</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_13-cv-01208/USCOURTS-nynd-9_13-cv-01208-1</identifier>
+ <identifier type="former granule identifier">nynd-9_13-cv-01208_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_13-cv-01208/USCOURTS-nynd-9_13-cv-01208-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_13-cv-01208/pdf/USCOURTS-nynd-9_13-cv-01208-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:13-cv-01208; Wallace v. McArdle et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_13-cv-01208-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>DECISION AND ORDER: ORDERED that Magistrate Judge Hummel&apos;s Report-Recommendation (Dkt. No. 28) is ACCEPTED and ADOPTED in its entirety. ORDERED that Defendant&apos;s motion to dismiss (Dkt. No. 23) is DENIED. Signed by Judge Glenn T. Suddaby on 1/5/15. (served on plaintiff by regular mail) (alh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_13-cv-01208-2" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_13-cv-01208/USCOURTS-nynd-9_13-cv-01208-2/mods.xml">
+ <titleInfo>
+  <title>Wallace v. McArdle et al</title>
+  <subTitle>DECISION AND ORDER that Plaintiff&apos;s Verified Amended Complaint (Dkt. No. 10) is DISMISSED in its entirety for failure to exhaust his available administrative remedies before filing this action, pursuant to PLRA. Signed by Chief Judge Glenn T. Suddaby on 12/18/15. (lmw) (Copy served upon pro se plaintiff via regular and certified mai)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_13-cv-01208/pdf/USCOURTS-nynd-9_13-cv-01208-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2b94a7</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_13-cv-01208/USCOURTS-nynd-9_13-cv-01208-2</identifier>
+ <identifier type="former granule identifier">nynd-9_13-cv-01208_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_13-cv-01208/USCOURTS-nynd-9_13-cv-01208-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_13-cv-01208/pdf/USCOURTS-nynd-9_13-cv-01208-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:13-cv-01208; Wallace v. McArdle et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_13-cv-01208-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-12-18</dateIssued>
+  <docketText>DECISION AND ORDER that Plaintiff&apos;s Verified Amended Complaint (Dkt. No. 10) is DISMISSED in its entirety for failure to exhaust his available administrative remedies before filing this action, pursuant to PLRA. Signed by Chief Judge Glenn T. Suddaby on 12/18/15. (lmw) (Copy served upon pro se plaintiff via regular and certified mai)</docketText>
+</extension>
+</relatedItem>
+</mods>

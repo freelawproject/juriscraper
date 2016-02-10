@@ -1,0 +1,612 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1835a1b2d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-09-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-09-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050</identifier>
+<identifier type="local">P0b002ee1835a1b2d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-09-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-09-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_10-cr-03050</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_10-cr-03050</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:10-cr-03050</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Anisha" fullName="Anisha Evans" lastName="Evans" role="Material Witness"></party>
+ <party firstName="Bobbie" fullName="Bobbie H. Keys" lastName="Keys" middleName="H." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Terry" fullName="Terry Weber" lastName="Weber" role="Movant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Keys</title>
+ <partNumber>4:10-cr-03050</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:10-cr-03050;10-3050</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Anisha Evans</displayForm>
+ <namePart type="family">Evans</namePart>
+ <namePart type="given">Anisha</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Material Witness</description>
+</name>
+<name type="personal">
+ <displayForm>Bobbie H. Keys</displayForm>
+ <namePart type="family">Keys</namePart>
+ <namePart type="given">Bobbie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Terry Weber</displayForm>
+ <namePart type="family">Weber</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_10-cr-03050</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:10-cr-03050</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Anisha" fullName="Anisha Evans" lastName="Evans" role="Material Witness"></party>
+ <party firstName="Bobbie" fullName="Bobbie H. Keys" lastName="Keys" middleName="H." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Terry" fullName="Terry Weber" lastName="Weber" role="Movant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Bobbie H. Keys. James K. McGough is appointed as attorney of record for the above-named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3603</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-0</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-07-26</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Bobbie H. Keys. James K. McGough is appointed as attorney of record for the above-named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>MEMORANDUM AND ORDER granting 17 Motion to Continue as to Bobbie H. Keys (1). Jury Trial set for 9/26/2011 at 09:00 AM in Courtroom 1, Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf. Pretrial Motion Deadline set for 9/8/2011. Ordered by Magistrate Judge Cheryl R. Zwart. (TEL)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3617</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-1</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-08-26</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 17 Motion to Continue as to Bobbie H. Keys (1). Jury Trial set for 9/26/2011 at 09:00 AM in Courtroom 1, Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf. Pretrial Motion Deadline set for 9/8/2011. Ordered by Magistrate Judge Cheryl R. Zwart. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>ORDER granting 19 Motion to Continue as to Bobbie H. Keys. Jury Trial set for 12/12/2011 at 09:00 AM in Courtroom 1, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf. Pretrial Motion Deadline set for 10/14/2011. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3604</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-2</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-09-09</dateIssued>
+  <docketText>ORDER granting 19 Motion to Continue as to Bobbie H. Keys. Jury Trial set for 12/12/2011 at 09:00 AM in Courtroom 1, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf. Pretrial Motion Deadline set for 10/14/2011. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>ORDER granting 23 Motion to Extend. Pretrial Motion Deadline set for 10/21/2011. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3618</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-3</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-10-17</dateIssued>
+  <docketText>ORDER granting 23 Motion to Extend. Pretrial Motion Deadline set for 10/21/2011. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>ORDER granting 25 Motion to Extend as to Bobbie H. Keys (1) Pretrial Motion Deadline set for 10/28/2011. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3616</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-4</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-10-21</dateIssued>
+  <docketText>ORDER granting 25 Motion to Extend as to Bobbie H. Keys (1) Pretrial Motion Deadline set for 10/28/2011. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>ORDER granting 31 Motion to Extend. The government&apos;s response to the defendant&apos;s MOTION to Suppress 27 shall be filed on or before 11/18/2011. The defendant&apos;s Motion to Continue, 32, is granted.The Jury Trial of this case is continued and is set for 1/30/2012 at 09:00 AM in Courtroom 1, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a354c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-5</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-11-05</dateIssued>
+  <docketText>ORDER granting 31 Motion to Extend. The government&apos;s response to the defendant&apos;s MOTION to Suppress 27 shall be filed on or before 11/18/2011. The defendant&apos;s Motion to Continue, 32, is granted.The Jury Trial of this case is continued and is set for 1/30/2012 at 09:00 AM in Courtroom 1, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>FINDINGS AND RECOMMENDATION Motion to suppress and request for Franks hearing should be denied in all respects as to defendant Bobbie H. Keys. Jury trial remains set to commence before the Honorable Richard G. Kopf at 9:00 a.m. on January 30, 2012, or as soon thereafter as the case may be called, for a duration of three (3) trial days. Ordered by Magistrate Judge Cheryl R. Zwart. (BHC)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3609</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-6</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-11-21</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATION Motion to suppress and request for Franks hearing should be denied in all respects as to defendant Bobbie H. Keys. Jury trial remains set to commence before the Honorable Richard G. Kopf at 9:00 a.m. on January 30, 2012, or as soon thereafter as the case may be called, for a duration of three (3) trial days. Ordered by Magistrate Judge Cheryl R. Zwart. (BHC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>MEMORANDUM AND ORDER as to Bobbie H. Keys (1) - The magistrate judge&apos;s findings and recommendation (filing 36) are adopted; The defendant&apos;s statement of objections (filing 39) is denied; and The defendant&apos;s motion to suppress and request for a Franks hearing (filing 27) is denied in all respects. Ordered by Senior Judge Richard G. Kopf. (TEL)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3600</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-7</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-01-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to Bobbie H. Keys (1) - The magistrate judge&apos;s findings and recommendation (filing 36) are adopted; The defendant&apos;s statement of objections (filing 39) is denied; and The defendant&apos;s motion to suppress and request for a Franks hearing (filing 27) is denied in all respects. Ordered by Senior Judge Richard G. Kopf. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>MEMORANDUM AND ORDER sustaining 41 Motion to Quash as to Bobbie H. Keys. The court&apos;s prior order, filing 34, is withdrawn. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ) Modified on 1/10/2012. (TEL)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3606</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-8</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER sustaining 41 Motion to Quash as to Bobbie H. Keys. The court&apos;s prior order, filing 34, is withdrawn. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ) Modified on 1/10/2012. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>ORDER as to Bobbie H. Keys (1) - The defendant&apos;s motion in limine (filing 50) shall be held in abeyance and not considered until the first day of trial, during the conference which will be held immediately prior to trial, unless a party shall show cause, within 5 days of this order, why such deferral would be inappropriate. Ordered by Senior Judge Richard G. Kopf. (TEL)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3607</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-9</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-02-07</dateIssued>
+  <docketText>ORDER as to Bobbie H. Keys (1) - The defendant&apos;s motion in limine (filing 50) shall be held in abeyance and not considered until the first day of trial, during the conference which will be held immediately prior to trial, unless a party shall show cause, within 5 days of this order, why such deferral would be inappropriate. Ordered by Senior Judge Richard G. Kopf. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>ORDER as to Bobbie H. Keys. It is ordered that the defendant&apos;s motion in limine 50 will be taken up immediately prior to trial at the in-chambers conference with counsel. Ordered by Senior Judge Richard G. Kopf. ( KLL, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3613</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-10</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-03-22</dateIssued>
+  <docketText>ORDER as to Bobbie H. Keys. It is ordered that the defendant&apos;s motion in limine 50 will be taken up immediately prior to trial at the in-chambers conference with counsel. Ordered by Senior Judge Richard G. Kopf. ( KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Bobbie H. Keys. Korey Reiman is appointed as attorney of record for material witness, Anisha Evans in this matter. Ordered by Senior Judge Richard G. Kopf. (JAB) Modified on 3/27/2012 to reflect copy to Karen Burks. (JAB)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3608</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-11</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-03-27</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Bobbie H. Keys. Korey Reiman is appointed as attorney of record for material witness, Anisha Evans in this matter. Ordered by Senior Judge Richard G. Kopf. (JAB) Modified on 3/27/2012 to reflect copy to Karen Burks. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>ORDER granting 111 Government&apos;s Motion to Compel Testimony as to Bobbie H. Keys (1). ORDERED, pursuant to Title 18, United States Code, Section 6003, that Anisha Evans give testimony or provide information, which she may refuse to give or provide on the basis of her privilege against self-incrimination, as to all matters about which he may be asked before said Jury. Ordered by Senior Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3601</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-12</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-03-28</dateIssued>
+  <docketText>ORDER granting 111 Government&apos;s Motion to Compel Testimony as to Bobbie H. Keys (1). ORDERED, pursuant to Title 18, United States Code, Section 6003, that Anisha Evans give testimony or provide information, which she may refuse to give or provide on the basis of her privilege against self-incrimination, as to all matters about which he may be asked before said Jury. Ordered by Senior Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>ORDER that deposition of Dan Radar shall commence at approximately 1:00 p.m. on Friday March 30, 2012, and by agreement of parties, the deposition will be conducted and recorded using the Court&apos;s video conference equipment with the defendant, defense counsel, and the prosecutor in Courtroom No. 1 in Lincoln, Nebraska, and the deponent in the federal courthouse in Kansas City, Kansas. The media produced by the video conference equipment shall be used to present the deposition to the jury as to defendant Bobbie H. Keys. The clerk shall obtain a transcript of the deposition following trial. The Justice department shall pay the costs of the transcript. Ordered by Senior Judge Richard G. Kopf. (CCB)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3614</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-13</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2012-03-30</dateIssued>
+  <docketText>ORDER that deposition of Dan Radar shall commence at approximately 1:00 p.m. on Friday March 30, 2012, and by agreement of parties, the deposition will be conducted and recorded using the Court&apos;s video conference equipment with the defendant, defense counsel, and the prosecutor in Courtroom No. 1 in Lincoln, Nebraska, and the deponent in the federal courthouse in Kansas City, Kansas. The media produced by the video conference equipment shall be used to present the deposition to the jury as to defendant Bobbie H. Keys. The clerk shall obtain a transcript of the deposition following trial. The Justice department shall pay the costs of the transcript. Ordered by Senior Judge Richard G. Kopf. (CCB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>AMENDED ORDER ON SENTENCING SCHEDULE - granting 146 Motion to Continue as to Bobbie H. Keys (1). Sentencing set for 7/26/2012 12:30 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Senior Judge Richard G. Kopf. Ordered by Senior Judge Richard G. Kopf. (AOA)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3602</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-14</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-06-15</dateIssued>
+  <docketText>AMENDED ORDER ON SENTENCING SCHEDULE - granting 146 Motion to Continue as to Bobbie H. Keys (1). Sentencing set for 7/26/2012 12:30 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Senior Judge Richard G. Kopf. Ordered by Senior Judge Richard G. Kopf. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report and Addendum as to defendant Bobbie H. Keys. It is ordered that:...(2)The defendant&apos;s motion for variance 148 and associated objection to obstruction of justice will be resolved at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Senior Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3605</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-15</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-07-20</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report and Addendum as to defendant Bobbie H. Keys. It is ordered that:...(2)The defendant&apos;s motion for variance 148 and associated objection to obstruction of justice will be resolved at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Senior Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_10-cr-03050-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Keys</title>
+  <subTitle>ORDER permitting defendant to appeal in forma pauperis as to defendant Bobbie H. Keys. Ordered by Senior Judge Richard G. Kopf. (GJG)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_10-cr-03050-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835a3615</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-16</identifier>
+ <identifier type="former granule identifier">ned-4_10-cr-03050_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_10-cr-03050/USCOURTS-ned-4_10-cr-03050-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_10-cr-03050/pdf/USCOURTS-ned-4_10-cr-03050-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cr-03050; USA v. Keys; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_10-cr-03050-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2012-09-24</dateIssued>
+  <docketText>ORDER permitting defendant to appeal in forma pauperis as to defendant Bobbie H. Keys. Ordered by Senior Judge Richard G. Kopf. (GJG)</docketText>
+</extension>
+</relatedItem>
+</mods>

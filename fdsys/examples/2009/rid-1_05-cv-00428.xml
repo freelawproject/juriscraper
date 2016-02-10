@@ -1,0 +1,484 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e8ac6e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428</identifier>
+<identifier type="local">P0b002ee180e8ac6e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-rid-1_05-cv-00428</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_05-cv-00428</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:05-cv-00428</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="David" fullName="David Campbell" lastName="Campbell" role="Plaintiff"></party>
+ <party fullName="Cornell Corrections, Inc" lastName="Cornell Corrections, Inc" role="Defendant"></party>
+ <party firstName="Dave" fullName="Dave Dumas" lastName="Dumas" role="Defendant"></party>
+ <party firstName="Henry" fullName="Henry Paul" lastName="Paul" role="Defendant"></party>
+ <party firstName="April" fullName="April Perry" lastName="Perry" role="Defendant"></party>
+ <party firstName="Officer" fullName="Officer Reis" lastName="Reis" role="Defendant"></party>
+ <party firstName="Maureen" fullName="Maureen Rocha" lastName="Rocha" role="Defendant"></party>
+ <party firstName="Geoff" fullName="Geoff Weston" lastName="Weston" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Campbell v. Cornell Corrections, Inc. et al</title>
+ <partNumber>1:05-cv-00428</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-00428;05-428</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Providence</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>David Campbell</displayForm>
+ <namePart type="family">Campbell</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cornell Corrections, Inc</displayForm>
+ <namePart type="family">Cornell Corrections, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dave Dumas</displayForm>
+ <namePart type="family">Dumas</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Henry Paul</displayForm>
+ <namePart type="family">Paul</namePart>
+ <namePart type="given">Henry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>April Perry</displayForm>
+ <namePart type="family">Perry</namePart>
+ <namePart type="given">April</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Officer Reis</displayForm>
+ <namePart type="family">Reis</namePart>
+ <namePart type="given">Officer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maureen Rocha</displayForm>
+ <namePart type="family">Rocha</namePart>
+ <namePart type="given">Maureen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Geoff Weston</displayForm>
+ <namePart type="family">Weston</namePart>
+ <namePart type="given">Geoff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_05-cv-00428</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:05-cv-00428</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="David" fullName="David Campbell" lastName="Campbell" role="Plaintiff"></party>
+ <party fullName="Cornell Corrections, Inc" lastName="Cornell Corrections, Inc" role="Defendant"></party>
+ <party firstName="Dave" fullName="Dave Dumas" lastName="Dumas" role="Defendant"></party>
+ <party firstName="Henry" fullName="Henry Paul" lastName="Paul" role="Defendant"></party>
+ <party firstName="April" fullName="April Perry" lastName="Perry" role="Defendant"></party>
+ <party firstName="Officer" fullName="Officer Reis" lastName="Reis" role="Defendant"></party>
+ <party firstName="Maureen" fullName="Maureen Rocha" lastName="Rocha" role="Defendant"></party>
+ <party firstName="Geoff" fullName="Geoff Weston" lastName="Weston" role="Defendant"></party>
+ <state>Rhode Island</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00428-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-0/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Cornell Corrections, Inc. et al</title>
+  <subTitle>ORDER finding as moot 4 Motion for Leave to Proceed in forma pauperis, granting 6 Motion for Leave to Proceed in forma pauperis . Signed by Magistrate Judge Jacob Hagopian on 11/10/05; faxed/mailed to all parties of record (Jackson, Ryan)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00428-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9a891</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-0</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00428_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428/pdf/USCOURTS-rid-1_05-cv-00428-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00428; Campbell v. Cornell Corrections, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00428-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-11-10</dateIssued>
+  <docketText>ORDER finding as moot 4 Motion for Leave to Proceed in forma pauperis, granting 6 Motion for Leave to Proceed in forma pauperis . Signed by Magistrate Judge Jacob Hagopian on 11/10/05; faxed/mailed to all parties of record (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00428-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-1/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Cornell Corrections, Inc. et al</title>
+  <subTitle>ORDER denying 13 Motion to Compel without prejudice; furthermore, Defendant&apos;s motion to extend time to respond to the discovery requests is granted to 8/10/06. Signed by Magistrate Judge Jacob Hagopian on 7/31/06(Jackson, Ryan)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00428-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9a76d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-1</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00428_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428/pdf/USCOURTS-rid-1_05-cv-00428-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00428; Campbell v. Cornell Corrections, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00428-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-08-02</dateIssued>
+  <docketText>ORDER denying 13 Motion to Compel without prejudice; furthermore, Defendant&apos;s motion to extend time to respond to the discovery requests is granted to 8/10/06. Signed by Magistrate Judge Jacob Hagopian on 7/31/06(Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00428-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-2/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Cornell Corrections, Inc. et al</title>
+  <subTitle>ORDER granting 19 Motion to Compel . So Ordered by Magistrate Judge Jacob Hagopian on 11/14/06. (Jackson, Ryan)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00428-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9a76f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-2</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00428_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428/pdf/USCOURTS-rid-1_05-cv-00428-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00428; Campbell v. Cornell Corrections, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00428-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-11-15</dateIssued>
+  <docketText>ORDER granting 19 Motion to Compel . So Ordered by Magistrate Judge Jacob Hagopian on 11/14/06. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00428-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-3/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Cornell Corrections, Inc. et al</title>
+  <subTitle>ORDER denying 30 Motion for Entry of Default, denying 32 Motion for Sanctions, granting 26 Motion to Compel, granting 27 Motion to Compel . So Ordered by Magistrate Judge Jacob Hagopian on 1/30/07. (Jackson, Ryan)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00428-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9a88f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-3</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00428_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428/pdf/USCOURTS-rid-1_05-cv-00428-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00428; Campbell v. Cornell Corrections, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00428-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-01-30</dateIssued>
+  <docketText>ORDER denying 30 Motion for Entry of Default, denying 32 Motion for Sanctions, granting 26 Motion to Compel, granting 27 Motion to Compel . So Ordered by Magistrate Judge Jacob Hagopian on 1/30/07. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00428-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-4/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Cornell Corrections, Inc. et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS re 42 MOTION for Default Judgment as to Defendants filed by David Campbell; Recommending the motion be DENIED; Objections to R&amp;R due by 3/21/2007. So Ordered by Magistrate Judge Jacob Hagopian on 3/7/07. (Jackson, Ryan)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00428-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9a88b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-4</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00428_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428/pdf/USCOURTS-rid-1_05-cv-00428-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00428; Campbell v. Cornell Corrections, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00428-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-03-07</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS re 42 MOTION for Default Judgment as to Defendants filed by David Campbell; Recommending the motion be DENIED; Objections to R&amp;R due by 3/21/2007. So Ordered by Magistrate Judge Jacob Hagopian on 3/7/07. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00428-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-5/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Cornell Corrections, Inc. et al</title>
+  <subTitle>ORDER denying 51 Motion to Compel . So Ordered by Magistrate Judge Jacob Hagopian on 4/17/07. (Jackson, Ryan)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00428-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9a770</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-5</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00428_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428/pdf/USCOURTS-rid-1_05-cv-00428-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00428; Campbell v. Cornell Corrections, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00428-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-04-18</dateIssued>
+  <docketText>ORDER denying 51 Motion to Compel . So Ordered by Magistrate Judge Jacob Hagopian on 4/17/07. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00428-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-6/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Cornell Corrections, Inc. et al</title>
+  <subTitle>ORDER denying 42 Motion for Default Judgment, adopting Report and Recommendations re 47 Report and Recommendations. . So Ordered by Judge Ernest C. Torres on 5/2/07. (Jackson, Ryan)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00428-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9a88c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-6</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00428_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428/pdf/USCOURTS-rid-1_05-cv-00428-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00428; Campbell v. Cornell Corrections, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00428-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-05-03</dateIssued>
+  <docketText>ORDER denying 42 Motion for Default Judgment, adopting Report and Recommendations re 47 Report and Recommendations. . So Ordered by Judge Ernest C. Torres on 5/2/07. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00428-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-7/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Cornell Corrections, Inc. et al</title>
+  <subTitle>ORDER re 51 MOTION to Compel Production of Documents filed by David Campbell, and the previous 54 Order re: that Motion to Compel; Plaintiff&apos;s Motion to Compel Production of the entries made in the &quot;R&amp;D&quot; logbook is DENIED. So Ordered by Magistrate Judge Jacob Hagopian on 5/15/07. (Jackson, Ryan)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00428-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9a890</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-7</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00428_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428/pdf/USCOURTS-rid-1_05-cv-00428-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00428; Campbell v. Cornell Corrections, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00428-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2007-05-16</dateIssued>
+  <docketText>ORDER re 51 MOTION to Compel Production of Documents filed by David Campbell, and the previous 54 Order re: that Motion to Compel; Plaintiff&apos;s Motion to Compel Production of the entries made in the &quot;R&amp;D&quot; logbook is DENIED. So Ordered by Magistrate Judge Jacob Hagopian on 5/15/07. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00428-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-8/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Cornell Corrections, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying Campbell&apos;s 57 Motion for Summary Judgment; terminating Campbell&apos;s 62 Motion for Leave to File; granting in part and denying in part Cornell Corrections&apos; 59 Cross-Motion for Summary Judgment. So Ordered by Judge Ernest C. Torres on 6/26/08. (Jackson, Ryan)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00428-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9a88d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-8</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00428_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428/pdf/USCOURTS-rid-1_05-cv-00428-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00428; Campbell v. Cornell Corrections, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00428-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-06-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying Campbell&apos;s 57 Motion for Summary Judgment; terminating Campbell&apos;s 62 Motion for Leave to File; granting in part and denying in part Cornell Corrections&apos; 59 Cross-Motion for Summary Judgment. So Ordered by Judge Ernest C. Torres on 6/26/08. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00428-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-9/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Cornell Corrections, Inc. et al</title>
+  <subTitle>ORDER TO SHOW CAUSE in writing; Show Cause Response due by 8/1/2008. So Ordered by Judge Ernest C. Torres on 6/25/08. (Jackson, Ryan)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00428-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9a88e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-9</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00428_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428/pdf/USCOURTS-rid-1_05-cv-00428-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00428; Campbell v. Cornell Corrections, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00428-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2008-06-27</dateIssued>
+  <docketText>ORDER TO SHOW CAUSE in writing; Show Cause Response due by 8/1/2008. So Ordered by Judge Ernest C. Torres on 6/25/08. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00428-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-10/mods.xml">
+ <titleInfo>
+  <title>Campbell v. Cornell Corrections, Inc. et al</title>
+  <subTitle>ORDER GRANTING MOTION TO DISMISS AND DISMISSING CLAIMS FOR FAILURE TO SHOW CAUSE; granting 68 Motion to Dismiss, re: 65 ORDER TO SHOW CAUSE in writing. So Ordered by Judge Ernest C. Torres on 1/15/09. (Jackson, Ryan)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00428-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e9a76e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-10</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00428_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00428/USCOURTS-rid-1_05-cv-00428-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00428/pdf/USCOURTS-rid-1_05-cv-00428-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00428; Campbell v. Cornell Corrections, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00428-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2009-01-15</dateIssued>
+  <docketText>ORDER GRANTING MOTION TO DISMISS AND DISMISSING CLAIMS FOR FAILURE TO SHOW CAUSE; granting 68 Motion to Dismiss, re: 65 ORDER TO SHOW CAUSE in writing. So Ordered by Judge Ernest C. Torres on 1/15/09. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+</mods>

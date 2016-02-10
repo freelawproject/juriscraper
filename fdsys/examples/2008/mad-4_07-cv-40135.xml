@@ -1,0 +1,179 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814e38ab">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_07-cv-40135</identifier>
+<identifier type="local">P0b002ee1814e38ab</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-4_07-cv-40135</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-4_07-cv-40135</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>4:07-cv-40135</caseNumber>
+ <caseOffice>Worcester</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>28:1331 Federal Question: Bivens Act</cause>
+ <party firstName="A." fullName="A. Joe Fish" lastName="Fish" middleName="Joe" role="Defendant"></party>
+ <party firstName="Alberto" fullName="Alberto Gonzalez" lastName="Gonzalez" role="Defendant"></party>
+ <party firstName="Harley" fullName="Harley Lappin" lastName="Lappin" role="Defendant"></party>
+ <party firstName="Lester" fullName="Lester Jon Ruston" lastName="Ruston" middleName="Jon" role="Plaintiff"></party>
+ <party firstName="Carolyn" fullName="Carolyn A. Sabol" lastName="Sabol" middleName="A." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Ruston v. Gonzalez et al</title>
+ <partNumber>4:07-cv-40135</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_07-cv-40135/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:07-cv-40135;07-40135</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Worcester</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>A. Joe Fish</displayForm>
+ <namePart type="family">Fish</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alberto Gonzalez</displayForm>
+ <namePart type="family">Gonzalez</namePart>
+ <namePart type="given">Alberto</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harley Lappin</displayForm>
+ <namePart type="family">Lappin</namePart>
+ <namePart type="given">Harley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lester Jon Ruston</displayForm>
+ <namePart type="family">Ruston</namePart>
+ <namePart type="given">Lester</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Carolyn A. Sabol</displayForm>
+ <namePart type="family">Sabol</namePart>
+ <namePart type="given">Carolyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-4_07-cv-40135</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>4:07-cv-40135</caseNumber>
+ <caseOffice>Worcester</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>28:1331 Federal Question: Bivens Act</cause>
+ <party firstName="A." fullName="A. Joe Fish" lastName="Fish" middleName="Joe" role="Defendant"></party>
+ <party firstName="Alberto" fullName="Alberto Gonzalez" lastName="Gonzalez" role="Defendant"></party>
+ <party firstName="Harley" fullName="Harley Lappin" lastName="Lappin" role="Defendant"></party>
+ <party firstName="Lester" fullName="Lester Jon Ruston" lastName="Ruston" middleName="Jon" role="Plaintiff"></party>
+ <party firstName="Carolyn" fullName="Carolyn A. Sabol" lastName="Sabol" middleName="A." role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_07-cv-40135-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_07-cv-40135/USCOURTS-mad-4_07-cv-40135-0/mods.xml">
+ <titleInfo>
+  <title>Ruston v. Gonzalez et al</title>
+  <subTitle>Judge Nancy Gertner: ORDER entered GRANTING 2 Motion for Leave to Proceed in forma pauperis; DENYING AS UNNECESSARY 6 Motion to Amend, 10 Motion to Amend, 15 Motion to Amend, 23 Motion to Amend, 35 Motion to Amend, 37 Motion to Amend, 43 Motion for Joinder/Amend; DENYING WITHOUT PREJUDICE 39 Motion to Compel, 44 Motion for Joinder, 3 Motion to Compel, 7 Motion for Joinder, 8 Motion for Joinder, 9 Motion to Expedite, 11 Motion for Joinder, 12 Motion to Compel, 13 Motion for Leave to File, 14 Sealed Motion, 17 Motion for TRO, 18 Motion to Compel, 19 Motion to Compel, 21 Motion for Leave to File, 22 Motion for Leave to File, 28 Motion to Compel, 33 Motion for Joinder. If the plaintiff wishes to pursue this action, he must, within thirty-five (35) days of the date of this Memorandum and Order, show good cause, by filing an amended complaint, why this action should not be dismissed for the reasons stated above. Failure to comply with this directive will result in dismissal of this action without prejudice. (PSSA, 3) Modified on 2/13/2008 (PSSA, 3).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_07-cv-40135-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18158dbec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_07-cv-40135/USCOURTS-mad-4_07-cv-40135-0</identifier>
+ <identifier type="former granule identifier">mad-4_07-cv-40135_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_07-cv-40135/USCOURTS-mad-4_07-cv-40135-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_07-cv-40135/pdf/USCOURTS-mad-4_07-cv-40135-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-40135; Ruston v. Gonzalez et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_07-cv-40135-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-29</dateIssued>
+  <docketText>Judge Nancy Gertner: ORDER entered GRANTING 2 Motion for Leave to Proceed in forma pauperis; DENYING AS UNNECESSARY 6 Motion to Amend, 10 Motion to Amend, 15 Motion to Amend, 23 Motion to Amend, 35 Motion to Amend, 37 Motion to Amend, 43 Motion for Joinder/Amend; DENYING WITHOUT PREJUDICE 39 Motion to Compel, 44 Motion for Joinder, 3 Motion to Compel, 7 Motion for Joinder, 8 Motion for Joinder, 9 Motion to Expedite, 11 Motion for Joinder, 12 Motion to Compel, 13 Motion for Leave to File, 14 Sealed Motion, 17 Motion for TRO, 18 Motion to Compel, 19 Motion to Compel, 21 Motion for Leave to File, 22 Motion for Leave to File, 28 Motion to Compel, 33 Motion for Joinder. If the plaintiff wishes to pursue this action, he must, within thirty-five (35) days of the date of this Memorandum and Order, show good cause, by filing an amended complaint, why this action should not be dismissed for the reasons stated above. Failure to comply with this directive will result in dismissal of this action without prejudice. (PSSA, 3) Modified on 2/13/2008 (PSSA, 3).</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,453 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e857f2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-07-02220</identifier>
+<identifier type="local">P0b002ee180e857f2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-07-02220</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-07-02220</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>07-02220</caseNumber>
+ <party fullName="Bank of Luxemburg" lastName="Bank of Luxemburg" role="Appellee"></party>
+ <party fullName="Bremer Business Finance Corporation" lastName="Bremer Business Finance Corporation" role="Appellee"></party>
+ <party fullName="Campbell County Bank Inc." lastName="Campbell County Bank Inc." role="Appellee"></party>
+ <party fullName="Choice Financial Group" lastName="Choice Financial Group" role="Appellee"></party>
+ <party fullName="Citizens State Bank of Roseau" lastName="Citizens State Bank of Roseau" role="Appellee"></party>
+ <party fullName="Community National Bank" lastName="Community National Bank" role="Appellee"></party>
+ <party fullName="Dacotah Bank" lastName="Dacotah Bank" role="Appellee"></party>
+ <party fullName="Dorsey &amp; Whitney LLP" lastName="Dorsey &amp; Whitney LLP" role="Appellant"></party>
+ <party fullName="Farmers State Bank" lastName="Farmers State Bank" role="Appellee"></party>
+ <party fullName="First American Bank and Trust" lastName="First American Bank and Trust" role="Appellee"></party>
+ <party fullName="First Federal Bank of the Midwest" lastName="First Federal Bank of the Midwest" role="Appellee"></party>
+ <party fullName="First Independent Bank" lastName="First Independent Bank" role="Appellee"></party>
+ <party fullName="First National Bank and Trust Company" lastName="First National Bank and Trust Company" role="Appellee"></party>
+ <party fullName="First National Bank of the North" lastName="First National Bank of the North" role="Appellee"></party>
+ <party fullName="First State Bank of Bigfork" lastName="First State Bank of Bigfork" role="Appellee"></party>
+ <party fullName="Lake Country State Bank" lastName="Lake Country State Bank" role="Appellee"></party>
+ <party firstName="Brian" fullName="Brian F. Leonard" lastName="Leonard" middleName="F." role="Appellee"></party>
+ <party fullName="Marshall Investments Corp." lastName="Marshall Investments Corp." role="Appellee"></party>
+ <party fullName="McIntosh County Bank" lastName="McIntosh County Bank" role="Appellee"></party>
+ <party fullName="Mcville State Bank" lastName="Mcville State Bank" role="Appellee"></party>
+ <party fullName="New Auburn Investment Inc." lastName="New Auburn Investment Inc." role="Appellee"></party>
+ <party fullName="North Country Bank and Trust" lastName="North Country Bank and Trust" role="Appellee"></party>
+ <party fullName="Northstate LLC" lastName="Northstate LLC" role="Appellee"></party>
+ <party fullName="Oregon Community Bank and Trust" lastName="Oregon Community Bank and Trust" role="Appellee"></party>
+ <party fullName="Page State Bank" lastName="Page State Bank" role="Appellee"></party>
+ <party fullName="Peoples State Bank of Madison Lake" lastName="Peoples State Bank of Madison Lake" role="Appellee"></party>
+ <party fullName="Ramsey National Bank and Trust of Devils Lake" lastName="Ramsey National Bank and Trust of Devils Lake" role="Appellee"></party>
+ <party fullName="Security Bank of USA" lastName="Security Bank of USA" role="Appellee"></party>
+ <party fullName="Security First Bank of North Dakota" lastName="Security First Bank of North Dakota" role="Appellee"></party>
+ <party fullName="Security State Bank" lastName="Security State Bank" role="Appellee"></party>
+ <party fullName="Security State Bank of Sebeka" lastName="Security State Bank of Sebeka" role="Appellee"></party>
+ <party fullName="State Bank of Park Rapids" lastName="State Bank of Park Rapids" role="Appellee"></party>
+ <party fullName="Ultima Bank Minnesota" lastName="Ultima Bank Minnesota" role="Appellee"></party>
+ <party fullName="United Community Bank of North Dakota" lastName="United Community Bank of North Dakota" role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>Brian Leonard, et al v. Dorsey &amp; Whitney LLP</title>
+ <partNumber>07-02220</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-07-02220/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">07-02220;07-2220</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bank of Luxemburg</displayForm>
+ <namePart type="family">Bank of Luxemburg</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Bremer Business Finance Corporation</displayForm>
+ <namePart type="family">Bremer Business Finance Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Campbell County Bank Inc.</displayForm>
+ <namePart type="family">Campbell County Bank Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Choice Financial Group</displayForm>
+ <namePart type="family">Choice Financial Group</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Citizens State Bank of Roseau</displayForm>
+ <namePart type="family">Citizens State Bank of Roseau</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Community National Bank</displayForm>
+ <namePart type="family">Community National Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Dacotah Bank</displayForm>
+ <namePart type="family">Dacotah Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Dorsey &amp; Whitney LLP</displayForm>
+ <namePart type="family">Dorsey &amp; Whitney LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Farmers State Bank</displayForm>
+ <namePart type="family">Farmers State Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>First American Bank and Trust</displayForm>
+ <namePart type="family">First American Bank and Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>First Federal Bank of the Midwest</displayForm>
+ <namePart type="family">First Federal Bank of the Midwest</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>First Independent Bank</displayForm>
+ <namePart type="family">First Independent Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>First National Bank and Trust Company</displayForm>
+ <namePart type="family">First National Bank and Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>First National Bank of the North</displayForm>
+ <namePart type="family">First National Bank of the North</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>First State Bank of Bigfork</displayForm>
+ <namePart type="family">First State Bank of Bigfork</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Lake Country State Bank</displayForm>
+ <namePart type="family">Lake Country State Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Brian F. Leonard</displayForm>
+ <namePart type="family">Leonard</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Marshall Investments Corp.</displayForm>
+ <namePart type="family">Marshall Investments Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>McIntosh County Bank</displayForm>
+ <namePart type="family">McIntosh County Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Mcville State Bank</displayForm>
+ <namePart type="family">Mcville State Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>New Auburn Investment Inc.</displayForm>
+ <namePart type="family">New Auburn Investment Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>North Country Bank and Trust</displayForm>
+ <namePart type="family">North Country Bank and Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Northstate LLC</displayForm>
+ <namePart type="family">Northstate LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Oregon Community Bank and Trust</displayForm>
+ <namePart type="family">Oregon Community Bank and Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Page State Bank</displayForm>
+ <namePart type="family">Page State Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Peoples State Bank of Madison Lake</displayForm>
+ <namePart type="family">Peoples State Bank of Madison Lake</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Ramsey National Bank and Trust of Devils Lake</displayForm>
+ <namePart type="family">Ramsey National Bank and Trust of Devils Lake</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Security Bank of USA</displayForm>
+ <namePart type="family">Security Bank of USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Security First Bank of North Dakota</displayForm>
+ <namePart type="family">Security First Bank of North Dakota</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Security State Bank</displayForm>
+ <namePart type="family">Security State Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Security State Bank of Sebeka</displayForm>
+ <namePart type="family">Security State Bank of Sebeka</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>State Bank of Park Rapids</displayForm>
+ <namePart type="family">State Bank of Park Rapids</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Ultima Bank Minnesota</displayForm>
+ <namePart type="family">Ultima Bank Minnesota</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>United Community Bank of North Dakota</displayForm>
+ <namePart type="family">United Community Bank of North Dakota</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-07-02220</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>07-02220</caseNumber>
+ <party fullName="Bank of Luxemburg" lastName="Bank of Luxemburg" role="Appellee"></party>
+ <party fullName="Bremer Business Finance Corporation" lastName="Bremer Business Finance Corporation" role="Appellee"></party>
+ <party fullName="Campbell County Bank Inc." lastName="Campbell County Bank Inc." role="Appellee"></party>
+ <party fullName="Choice Financial Group" lastName="Choice Financial Group" role="Appellee"></party>
+ <party fullName="Citizens State Bank of Roseau" lastName="Citizens State Bank of Roseau" role="Appellee"></party>
+ <party fullName="Community National Bank" lastName="Community National Bank" role="Appellee"></party>
+ <party fullName="Dacotah Bank" lastName="Dacotah Bank" role="Appellee"></party>
+ <party fullName="Dorsey &amp; Whitney LLP" lastName="Dorsey &amp; Whitney LLP" role="Appellant"></party>
+ <party fullName="Farmers State Bank" lastName="Farmers State Bank" role="Appellee"></party>
+ <party fullName="First American Bank and Trust" lastName="First American Bank and Trust" role="Appellee"></party>
+ <party fullName="First Federal Bank of the Midwest" lastName="First Federal Bank of the Midwest" role="Appellee"></party>
+ <party fullName="First Independent Bank" lastName="First Independent Bank" role="Appellee"></party>
+ <party fullName="First National Bank and Trust Company" lastName="First National Bank and Trust Company" role="Appellee"></party>
+ <party fullName="First National Bank of the North" lastName="First National Bank of the North" role="Appellee"></party>
+ <party fullName="First State Bank of Bigfork" lastName="First State Bank of Bigfork" role="Appellee"></party>
+ <party fullName="Lake Country State Bank" lastName="Lake Country State Bank" role="Appellee"></party>
+ <party firstName="Brian" fullName="Brian F. Leonard" lastName="Leonard" middleName="F." role="Appellee"></party>
+ <party fullName="Marshall Investments Corp." lastName="Marshall Investments Corp." role="Appellee"></party>
+ <party fullName="McIntosh County Bank" lastName="McIntosh County Bank" role="Appellee"></party>
+ <party fullName="Mcville State Bank" lastName="Mcville State Bank" role="Appellee"></party>
+ <party fullName="New Auburn Investment Inc." lastName="New Auburn Investment Inc." role="Appellee"></party>
+ <party fullName="North Country Bank and Trust" lastName="North Country Bank and Trust" role="Appellee"></party>
+ <party fullName="Northstate LLC" lastName="Northstate LLC" role="Appellee"></party>
+ <party fullName="Oregon Community Bank and Trust" lastName="Oregon Community Bank and Trust" role="Appellee"></party>
+ <party fullName="Page State Bank" lastName="Page State Bank" role="Appellee"></party>
+ <party fullName="Peoples State Bank of Madison Lake" lastName="Peoples State Bank of Madison Lake" role="Appellee"></party>
+ <party fullName="Ramsey National Bank and Trust of Devils Lake" lastName="Ramsey National Bank and Trust of Devils Lake" role="Appellee"></party>
+ <party fullName="Security Bank of USA" lastName="Security Bank of USA" role="Appellee"></party>
+ <party fullName="Security First Bank of North Dakota" lastName="Security First Bank of North Dakota" role="Appellee"></party>
+ <party fullName="Security State Bank" lastName="Security State Bank" role="Appellee"></party>
+ <party fullName="Security State Bank of Sebeka" lastName="Security State Bank of Sebeka" role="Appellee"></party>
+ <party fullName="State Bank of Park Rapids" lastName="State Bank of Park Rapids" role="Appellee"></party>
+ <party fullName="Ultima Bank Minnesota" lastName="Ultima Bank Minnesota" role="Appellee"></party>
+ <party fullName="United Community Bank of North Dakota" lastName="United Community Bank of North Dakota" role="Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-07-02220-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-07-02220/USCOURTS-ca8-07-02220-0/mods.xml">
+ <titleInfo>
+  <title>Brian Leonard, et al v. Dorsey &amp; Whitney LLP</title>
+  <subTitle>OPINION FILED - THE COURT: DIANA E. MURPHY, STEVEN M. COLLOTON and BOBBY E. SHEPHERD. Bobby E. Shepherd, Authoring Judge (PUBLISHED); DISSENT BY: STEVEN M. COLLOTON [3507503] [07-2220, 07-2242, 07-2261, 07-2258, 07-2260]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-07-02220-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e85b00</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-07-02220/USCOURTS-ca8-07-02220-0</identifier>
+ <identifier type="former granule identifier">ca8-07-02220_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-07-02220/USCOURTS-ca8-07-02220-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-07-02220/pdf/USCOURTS-ca8-07-02220-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 07-02220; Brian Leonard, et al v. Dorsey &amp; Whitney LLP; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-07-02220-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-15</dateIssued>
+  <docketText>OPINION FILED - THE COURT: DIANA E. MURPHY, STEVEN M. COLLOTON and BOBBY E. SHEPHERD. Bobby E. Shepherd, Authoring Judge (PUBLISHED); DISSENT BY: STEVEN M. COLLOTON [3507503] [07-2220, 07-2242, 07-2261, 07-2258, 07-2260]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-07-02220-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-07-02220/USCOURTS-ca8-07-02220-1/mods.xml">
+ <titleInfo>
+  <title>Brian Leonard, et al v. Dorsey &amp; Whitney LLP</title>
+  <subTitle>CORRECTED OPINION FILED 01/22/2009 The fifth line of Footnote 11 on Page 47 is edited to read &quot;Ante, at 33-34&quot; 01/15/2009 [3509319] [07-2220, 07-2242, 07-2261, 07-2258, 07-2260]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-07-02220-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e85b01</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-07-02220/USCOURTS-ca8-07-02220-1</identifier>
+ <identifier type="former granule identifier">ca8-07-02220_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-07-02220/USCOURTS-ca8-07-02220-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-07-02220/pdf/USCOURTS-ca8-07-02220-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 07-02220; Brian Leonard, et al v. Dorsey &amp; Whitney LLP; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-07-02220-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-22</dateIssued>
+  <docketText>CORRECTED OPINION FILED 01/22/2009 The fifth line of Footnote 11 on Page 47 is edited to read &quot;Ante, at 33-34&quot; 01/15/2009 [3509319] [07-2220, 07-2242, 07-2261, 07-2258, 07-2260]</docketText>
+</extension>
+</relatedItem>
+</mods>

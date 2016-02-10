@@ -1,0 +1,348 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aa9c8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864</identifier>
+<identifier type="local">P0b002ee18a8aa9c8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-01864</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01864</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01864</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Connie" fullName="Connie Gipson" lastName="Gipson" role="Respondent"></party>
+ <party firstName="Luis" fullName="Luis Alberto Valencia" lastName="Valencia" middleName="Alberto" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>(HC) Valencia v. Gipson</title>
+ <partNumber>1:13-cv-01864</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-01864;13-1864</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Connie Gipson</displayForm>
+ <namePart type="family">Gipson</namePart>
+ <namePart type="given">Connie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Luis Alberto Valencia</displayForm>
+ <namePart type="family">Valencia</namePart>
+ <namePart type="given">Luis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01864</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01864</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Connie" fullName="Connie Gipson" lastName="Gipson" role="Respondent"></party>
+ <party firstName="Luis" fullName="Luis Alberto Valencia" lastName="Valencia" middleName="Alberto" role="Petitioner"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01864-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-0/mods.xml">
+ <titleInfo>
+  <title>(HC) Valencia v. Gipson</title>
+  <subTitle>ORDER Striking Unexhausted Claim, ORDER Granting Petitioner&apos;s Motion For Stay And Abeyance (Doc.1), ORDER Directing Petitioner To File Status Report, signed by Magistrate Judge Sandra M. Snyder on 1/8/2014. (Status Report Deadline: 2/13/2014) (Fahrney, E)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8affb1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01864_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01864; (HC) Valencia v. Gipson; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01864-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-09</dateIssued>
+  <docketText>ORDER Striking Unexhausted Claim, ORDER Granting Petitioner&apos;s Motion For Stay And Abeyance (Doc.1), ORDER Directing Petitioner To File Status Report, signed by Magistrate Judge Sandra M. Snyder on 1/8/2014. (Status Report Deadline: 2/13/2014) (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01864-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-1/mods.xml">
+ <titleInfo>
+  <title>(HC) Valencia v. Gipson</title>
+  <subTitle>ORDER Lifting Stay (Docs.7 and 14), signed by Magistrate Judge Sandra M. Snyder on 6/25/2014. The Court hereby ORDERS that the stay of proceedings in this case be lifted. Petitioner is directed to file an amended petition, reinstating claim 3, within thirty (30) days. (Fahrney, E)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8affb2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01864_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01864; (HC) Valencia v. Gipson; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01864-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-06-25</dateIssued>
+  <docketText>ORDER Lifting Stay (Docs.7 and 14), signed by Magistrate Judge Sandra M. Snyder on 6/25/2014. The Court hereby ORDERS that the stay of proceedings in this case be lifted. Petitioner is directed to file an amended petition, reinstating claim 3, within thirty (30) days. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01864-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-2/mods.xml">
+ <titleInfo>
+  <title>(HC) Valencia v. Gipson</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS recommending that ground two, alleging the trial court&apos;s admission of the uncorroborated testimony of Petitioner&apos;s accomplice, be dismissed from the petition for writ of habeas corpus; re 18 Amended Petition for Writ of Habeas Corpus filed by Luis Alberto Valencia ; referred to Judge O&apos;Neill,signed by Magistrate Judge Sandra M. Snyder on 8/20/14. Objections to F&amp;R due by 9/22/2014 (Martin-Gill, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8affb4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01864_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01864; (HC) Valencia v. Gipson; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01864-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-08-20</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS recommending that ground two, alleging the trial court&apos;s admission of the uncorroborated testimony of Petitioner&apos;s accomplice, be dismissed from the petition for writ of habeas corpus; re 18 Amended Petition for Writ of Habeas Corpus filed by Luis Alberto Valencia ; referred to Judge O&apos;Neill,signed by Magistrate Judge Sandra M. Snyder on 8/20/14. Objections to F&amp;R due by 9/22/2014 (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01864-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-3/mods.xml">
+ <titleInfo>
+  <title>(HC) Valencia v. Gipson</title>
+  <subTitle>***STRICKEN per Order 24*** ORDER Adopting FINDINGS AND RECOMMENDATIONS Recommending Dismissal Of Petitioner&apos;s Second Ground For Relief (Doc.19), signed by District Judge Lawrence J. O&apos;Neill on 10/27/2014. The second ground of the petition is hereby DISMISSED. The Magistrate Judge is directed to issue an order requiring respondent to file a response, an order setting briefing schedule, and an order directing the Clerk of Court to serve documents on the Attorney General.(Fahrney, E) Modified on 12/1/2014 (Verduzco, M).</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8affc6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01864_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01864; (HC) Valencia v. Gipson; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01864-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-10-28</dateIssued>
+  <docketText>***STRICKEN per Order 24*** ORDER Adopting FINDINGS AND RECOMMENDATIONS Recommending Dismissal Of Petitioner&apos;s Second Ground For Relief (Doc.19), signed by District Judge Lawrence J. O&apos;Neill on 10/27/2014. The second ground of the petition is hereby DISMISSED. The Magistrate Judge is directed to issue an order requiring respondent to file a response, an order setting briefing schedule, and an order directing the Clerk of Court to serve documents on the Attorney General.(Fahrney, E) Modified on 12/1/2014 (Verduzco, M).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01864-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-4/mods.xml">
+ <titleInfo>
+  <title>(HC) Valencia v. Gipson</title>
+  <subTitle>***DISMISSED per Order 23*** FINDINGS And RECOMMENDATIONS Recommending That The Court Dismiss Case Without Prejudice For Failure To Prosecute (Doc.18), signed by Magistrate Judge Sandra M. Snyder on 11/17/2014. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 12/8/2014. (Fahrney, E)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8affaf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01864_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01864; (HC) Valencia v. Gipson; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01864-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-11-18</dateIssued>
+  <docketText>***DISMISSED per Order 23*** FINDINGS And RECOMMENDATIONS Recommending That The Court Dismiss Case Without Prejudice For Failure To Prosecute (Doc.18), signed by Magistrate Judge Sandra M. Snyder on 11/17/2014. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 12/8/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01864-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-5/mods.xml">
+ <titleInfo>
+  <title>(HC) Valencia v. Gipson</title>
+  <subTitle>ORDER Dismissing 21 Findings and Recommendations Recommending Dismissal of Petitioner&apos;s Case without Prejudice, signed by District Judge Lawrence J. O&apos;Neill on 11/26/14. (Verduzco, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8affc5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-5</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01864_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01864; (HC) Valencia v. Gipson; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01864-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-12-01</dateIssued>
+  <docketText>ORDER Dismissing 21 Findings and Recommendations Recommending Dismissal of Petitioner&apos;s Case without Prejudice, signed by District Judge Lawrence J. O&apos;Neill on 11/26/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01864-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-6/mods.xml">
+ <titleInfo>
+  <title>(HC) Valencia v. Gipson</title>
+  <subTitle>ORDER Striking the 20 Order Adopting 19 Findings and Recommendations and Reopening the Period for Petition to Comment Thereon, signed by District Judge Lawrence J. O&apos;Neill on 11/26/14. 30-Day Deadline. (Verduzco, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8affb3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-6</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01864_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01864; (HC) Valencia v. Gipson; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01864-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-12-01</dateIssued>
+  <docketText>ORDER Striking the 20 Order Adopting 19 Findings and Recommendations and Reopening the Period for Petition to Comment Thereon, signed by District Judge Lawrence J. O&apos;Neill on 11/26/14. 30-Day Deadline. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01864-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-7/mods.xml">
+ <titleInfo>
+  <title>(HC) Valencia v. Gipson</title>
+  <subTitle>ORDER DISMISSING CASE, Without Prejudice, for Failure to Prosecute, signed by District Judge Lawrence J. O&apos;Neill on 1/5/15. CASE CLOSED. (Marrujo, C)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8affb0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-7</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01864_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01864/USCOURTS-caed-1_13-cv-01864-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01864/pdf/USCOURTS-caed-1_13-cv-01864-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01864; (HC) Valencia v. Gipson; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01864-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER DISMISSING CASE, Without Prejudice, for Failure to Prosecute, signed by District Judge Lawrence J. O&apos;Neill on 1/5/15. CASE CLOSED. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+</mods>

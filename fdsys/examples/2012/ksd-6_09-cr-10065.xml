@@ -1,0 +1,146 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18171d4fc">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-11</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_09-cr-10065</identifier>
+<identifier type="local">P0b002ee18171d4fc</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-11</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-11</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-6_09-cr-10065</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_09-cr-10065</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:09-cr-10065</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="John" fullName="John H. Dickerson" lastName="Dickerson" middleName="H." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Dickerson</title>
+ <partNumber>6:09-cr-10065</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_09-cr-10065/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:09-cr-10065;09-10065</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Wichita</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John H. Dickerson</displayForm>
+ <namePart type="family">Dickerson</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_09-cr-10065</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:09-cr-10065</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="John" fullName="John H. Dickerson" lastName="Dickerson" middleName="H." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_09-cr-10065-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_09-cr-10065/USCOURTS-ksd-6_09-cr-10065-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Dickerson</title>
+  <subTitle>MEMORANDUM AND ORDER denying 16 Motion to Reduce Sentence re Crack Cocaine Offense - 18:3582 for John H. Dickerson (1). Signed by District Judge Wesley E. Brown on 1/10/2012. Mailed to pro se party John H. Dickerson by regular mail. (alm)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-6_09-cr-10065-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18171ec1f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_09-cr-10065/USCOURTS-ksd-6_09-cr-10065-0</identifier>
+ <identifier type="former granule identifier">ksd-6_09-cr-10065_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_09-cr-10065/USCOURTS-ksd-6_09-cr-10065-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_09-cr-10065/pdf/USCOURTS-ksd-6_09-cr-10065-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:09-cr-10065; USA v. Dickerson; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_09-cr-10065-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-10</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 16 Motion to Reduce Sentence re Crack Cocaine Offense - 18:3582 for John H. Dickerson (1). Signed by District Judge Wesley E. Brown on 1/10/2012. Mailed to pro se party John H. Dickerson by regular mail. (alm)</docketText>
+</extension>
+</relatedItem>
+</mods>

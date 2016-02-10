@@ -1,0 +1,214 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18170fe95">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cv-03180</identifier>
+<identifier type="local">P0b002ee18170fe95</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_10-cv-03180</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_10-cv-03180</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:10-cv-03180</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <party firstName="Charles" fullName="Charles A. Burnett" lastName="Burnett" middleName="A." role="Plaintiff"></party>
+ <party firstName="John" fullName="John Calhoon" lastName="Calhoon" role="Defendant"></party>
+ <party fullName="Kansas, State of" lastName="Kansas, State of" role="Defendant"></party>
+ <party firstName="FNU" fullName="FNU LNU (1)" lastName="LNU (1)" role="Defendant"></party>
+ <party firstName="FNU" fullName="FNU LNU (2)" lastName="LNU (2)" role="Defendant"></party>
+ <party firstName="Travis" fullName="Travis Wright" lastName="Wright" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Burnett v. State of Kansas</title>
+ <partNumber>5:10-cv-03180</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cv-03180/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:10-cv-03180;10-3180</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Charles A. Burnett</displayForm>
+ <namePart type="family">Burnett</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Calhoon</displayForm>
+ <namePart type="family">Calhoon</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kansas, State of</displayForm>
+ <namePart type="family">Kansas, State of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>FNU LNU (1)</displayForm>
+ <namePart type="family">LNU (1)</namePart>
+ <namePart type="given">FNU</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>FNU LNU (2)</displayForm>
+ <namePart type="family">LNU (2)</namePart>
+ <namePart type="given">FNU</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Travis Wright</displayForm>
+ <namePart type="family">Wright</namePart>
+ <namePart type="given">Travis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_10-cv-03180</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:10-cv-03180</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <party firstName="Charles" fullName="Charles A. Burnett" lastName="Burnett" middleName="A." role="Plaintiff"></party>
+ <party firstName="John" fullName="John Calhoon" lastName="Calhoon" role="Defendant"></party>
+ <party fullName="Kansas, State of" lastName="Kansas, State of" role="Defendant"></party>
+ <party firstName="FNU" fullName="FNU LNU (1)" lastName="LNU (1)" role="Defendant"></party>
+ <party firstName="FNU" fullName="FNU LNU (2)" lastName="LNU (2)" role="Defendant"></party>
+ <party firstName="Travis" fullName="Travis Wright" lastName="Wright" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_10-cv-03180-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cv-03180/USCOURTS-ksd-5_10-cv-03180-0/mods.xml">
+ <titleInfo>
+  <title>Burnett v. State of Kansas</title>
+  <subTitle>ORDER ENTERED: Plaintiff&apos;s motion 9 for leave to proceed in forma pauperis is granted. Plaintiff is granted twenty (20) days to show cause why the amended complaint should not be summarily dismissed as stating no claim for relief under 42 U.S.C. 1983. Plaintiff&apos;s motion 4 for the appointment of counsel and motion 10 for an order to be sent to a medical specialist are denied without prejudice. Signed by Senior District Judge Sam A. Crow on 6/24/2011. (Mailed to pro se party Charles A. Burnett by regular mail.) (smnd)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_10-cv-03180-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18171021c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cv-03180/USCOURTS-ksd-5_10-cv-03180-0</identifier>
+ <identifier type="former granule identifier">ksd-5_10-cv-03180_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cv-03180/USCOURTS-ksd-5_10-cv-03180-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cv-03180/pdf/USCOURTS-ksd-5_10-cv-03180-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cv-03180; Burnett v. State of Kansas; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_10-cv-03180-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-06-24</dateIssued>
+  <docketText>ORDER ENTERED: Plaintiff&apos;s motion 9 for leave to proceed in forma pauperis is granted. Plaintiff is granted twenty (20) days to show cause why the amended complaint should not be summarily dismissed as stating no claim for relief under 42 U.S.C. 1983. Plaintiff&apos;s motion 4 for the appointment of counsel and motion 10 for an order to be sent to a medical specialist are denied without prejudice. Signed by Senior District Judge Sam A. Crow on 6/24/2011. (Mailed to pro se party Charles A. Burnett by regular mail.) (smnd)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_10-cv-03180-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cv-03180/USCOURTS-ksd-5_10-cv-03180-1/mods.xml">
+ <titleInfo>
+  <title>Burnett v. State of Kansas</title>
+  <subTitle>ORDER ENTERED: The amended complaint is dismissed as stating no claim for relief. Signed by Senior District Judge Sam A. Crow on 1/5/2012. (Mailed to pro se party Charles A. Burnett by regular mail.) (smnd)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_10-cv-03180-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18171021b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cv-03180/USCOURTS-ksd-5_10-cv-03180-1</identifier>
+ <identifier type="former granule identifier">ksd-5_10-cv-03180_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cv-03180/USCOURTS-ksd-5_10-cv-03180-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cv-03180/pdf/USCOURTS-ksd-5_10-cv-03180-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cv-03180; Burnett v. State of Kansas; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_10-cv-03180-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>ORDER ENTERED: The amended complaint is dismissed as stating no claim for relief. Signed by Senior District Judge Sam A. Crow on 1/5/2012. (Mailed to pro se party Charles A. Burnett by regular mail.) (smnd)</docketText>
+</extension>
+</relatedItem>
+</mods>

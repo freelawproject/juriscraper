@@ -1,0 +1,288 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814e45ba">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30033</identifier>
+<identifier type="local">P0b002ee1814e45ba</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-3_10-cv-30033</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-3_10-cv-30033</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>3:10-cv-30033</caseNumber>
+ <caseOffice>Springfield</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party fullName="City of Springfield" lastName="City of Springfield" role="Defendant"></party>
+ <party firstName="James" fullName="James J. Ferrara III" generation="III" lastName="Ferrara" middleName="J." role="Defendant"></party>
+ <party firstName="William" fullName="William T. Foley" lastName="Foley" middleName="T." role="Defendant"></party>
+ <party firstName="Patrick" fullName="Patrick J. Markey" lastName="Markey" middleName="J." role="Defendant"></party>
+ <party firstName="Rosemarie" fullName="Rosemarie Mazza-Moriarty" lastName="Mazza-Moriarty" role="Defendant"></party>
+ <party fullName="Roman Catholic Bishop of Springfield, as Corporation Sole" lastName="Roman Catholic Bishop of Springfield, as Corporation Sole" role="Plaintiff"></party>
+ <party firstName="Timothy" fullName="Timothy J. Rooke" lastName="Rooke" middleName="J." role="Defendant"></party>
+ <party firstName="Dominic" fullName="Dominic J. Sarno" lastName="Sarno" middleName="J." role="Defendant"></party>
+ <party firstName="City of" fullName="City of Springfield" lastName="Springfield" role="All Defendants"></party>
+ <party firstName="Bruce" fullName="Bruce W. Stebbins" lastName="Stebbins" middleName="W." role="Defendant"></party>
+ <party fullName="THE SPRINGFIELD CITY COUNCIL" lastName="THE SPRINGFIELD CITY COUNCIL" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose Tosado" lastName="Tosado" role="Defendant"></party>
+ <party firstName="Kateri" fullName="Kateri Walsh" lastName="Walsh" role="Defendant"></party>
+ <party firstName="Bud" fullName="Bud L. Williams" lastName="Williams" middleName="L." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Roman Catholic Bishop of Springfield v. City of Springfield, et al</title>
+ <partNumber>3:10-cv-30033</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30033/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:10-cv-30033;10-30033</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Springfield</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>City of Springfield</displayForm>
+ <namePart type="family">City of Springfield</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James J. Ferrara III</displayForm>
+ <namePart type="family">Ferrara</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William T. Foley</displayForm>
+ <namePart type="family">Foley</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patrick J. Markey</displayForm>
+ <namePart type="family">Markey</namePart>
+ <namePart type="given">Patrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rosemarie Mazza-Moriarty</displayForm>
+ <namePart type="family">Mazza-Moriarty</namePart>
+ <namePart type="given">Rosemarie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roman Catholic Bishop of Springfield, as Corporation Sole</displayForm>
+ <namePart type="family">Roman Catholic Bishop of Springfield, as Corporation Sole</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy J. Rooke</displayForm>
+ <namePart type="family">Rooke</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dominic J. Sarno</displayForm>
+ <namePart type="family">Sarno</namePart>
+ <namePart type="given">Dominic</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>City of Springfield</displayForm>
+ <namePart type="family">Springfield</namePart>
+ <namePart type="given">City of</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>All Defendants</description>
+</name>
+<name type="personal">
+ <displayForm>Bruce W. Stebbins</displayForm>
+ <namePart type="family">Stebbins</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>THE SPRINGFIELD CITY COUNCIL</displayForm>
+ <namePart type="family">THE SPRINGFIELD CITY COUNCIL</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jose Tosado</displayForm>
+ <namePart type="family">Tosado</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kateri Walsh</displayForm>
+ <namePart type="family">Walsh</namePart>
+ <namePart type="given">Kateri</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bud L. Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Bud</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-3_10-cv-30033</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>3:10-cv-30033</caseNumber>
+ <caseOffice>Springfield</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party fullName="City of Springfield" lastName="City of Springfield" role="Defendant"></party>
+ <party firstName="James" fullName="James J. Ferrara III" generation="III" lastName="Ferrara" middleName="J." role="Defendant"></party>
+ <party firstName="William" fullName="William T. Foley" lastName="Foley" middleName="T." role="Defendant"></party>
+ <party firstName="Patrick" fullName="Patrick J. Markey" lastName="Markey" middleName="J." role="Defendant"></party>
+ <party firstName="Rosemarie" fullName="Rosemarie Mazza-Moriarty" lastName="Mazza-Moriarty" role="Defendant"></party>
+ <party fullName="Roman Catholic Bishop of Springfield, as Corporation Sole" lastName="Roman Catholic Bishop of Springfield, as Corporation Sole" role="Plaintiff"></party>
+ <party firstName="Timothy" fullName="Timothy J. Rooke" lastName="Rooke" middleName="J." role="Defendant"></party>
+ <party firstName="Dominic" fullName="Dominic J. Sarno" lastName="Sarno" middleName="J." role="Defendant"></party>
+ <party firstName="City of" fullName="City of Springfield" lastName="Springfield" role="All Defendants"></party>
+ <party firstName="Bruce" fullName="Bruce W. Stebbins" lastName="Stebbins" middleName="W." role="Defendant"></party>
+ <party fullName="THE SPRINGFIELD CITY COUNCIL" lastName="THE SPRINGFIELD CITY COUNCIL" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose Tosado" lastName="Tosado" role="Defendant"></party>
+ <party firstName="Kateri" fullName="Kateri Walsh" lastName="Walsh" role="Defendant"></party>
+ <party firstName="Bud" fullName="Bud L. Williams" lastName="Williams" middleName="L." role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_10-cv-30033-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30033/USCOURTS-mad-3_10-cv-30033-0/mods.xml">
+ <titleInfo>
+  <title>Roman Catholic Bishop of Springfield v. City of Springfield, et al</title>
+  <subTitle>Judge Michael A Ponsor: MEMORANDUM AND ORDER entered. As follows: Defendants Cross Motion for Summary Judgment (Dkt. No. 22) is hereby ALLOWED in its entirety, and Plaintiffs Motion for Summary Judgment (Dkt. No. 14) is hereby DENIED in its entirety. The clerk will enter judgment for Defendants. This case may now be closed. See the attached memo and order for complete details. (Lindsay, Maurice)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_10-cv-30033-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815934e3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30033/USCOURTS-mad-3_10-cv-30033-0</identifier>
+ <identifier type="former granule identifier">mad-3_10-cv-30033_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30033/USCOURTS-mad-3_10-cv-30033-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30033/pdf/USCOURTS-mad-3_10-cv-30033-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:10-cv-30033; Roman Catholic Bishop of Springfield v. City of Springfield, et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_10-cv-30033-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-04</dateIssued>
+  <docketText>Judge Michael A Ponsor: MEMORANDUM AND ORDER entered. As follows: Defendants Cross Motion for Summary Judgment (Dkt. No. 22) is hereby ALLOWED in its entirety, and Plaintiffs Motion for Summary Judgment (Dkt. No. 14) is hereby DENIED in its entirety. The clerk will enter judgment for Defendants. This case may now be closed. See the attached memo and order for complete details. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_10-cv-30033-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30033/USCOURTS-mad-3_10-cv-30033-1/mods.xml">
+ <titleInfo>
+  <title>Roman Catholic Bishop of Springfield v. City of Springfield, et al</title>
+  <subTitle>Judge Michael A Ponsor: ORDER entered. JUDGMENT for defendants. (Lindsay, Maurice)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_10-cv-30033-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815934e4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30033/USCOURTS-mad-3_10-cv-30033-1</identifier>
+ <identifier type="former granule identifier">mad-3_10-cv-30033_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_10-cv-30033/USCOURTS-mad-3_10-cv-30033-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_10-cv-30033/pdf/USCOURTS-mad-3_10-cv-30033-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:10-cv-30033; Roman Catholic Bishop of Springfield v. City of Springfield, et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_10-cv-30033-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-04</dateIssued>
+  <docketText>Judge Michael A Ponsor: ORDER entered. JUDGMENT for defendants. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+</mods>

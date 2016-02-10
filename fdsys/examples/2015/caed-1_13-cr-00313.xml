@@ -1,0 +1,370 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bd508">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313</identifier>
+<identifier type="local">P0b002ee18a8bd508</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cr-00313</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cr-00313</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cr-00313</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Stephen" fullName="Stephen David Martinez" lastName="Martinez" middleName="David" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Martinez</title>
+ <partNumber>1:13-cr-00313</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cr-00313;13-313</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Stephen David Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">Stephen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cr-00313</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cr-00313</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Stephen" fullName="Stephen David Martinez" lastName="Martinez" middleName="David" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00313-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Martinez</title>
+  <subTitle>ORDER SETTING CONDITIONS of RELEASE as to Stephen David Martinez signed by Magistrate Judge Barbara A. McAuliffe on 07/26/2013. (Flores, E)[1:13-mj-00156-BAM]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c1724</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00313_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00313; USA v. Martinez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00313-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-07-26</dateIssued>
+  <docketText>ORDER SETTING CONDITIONS of RELEASE as to Stephen David Martinez signed by Magistrate Judge Barbara A. McAuliffe on 07/26/2013. (Flores, E)[1:13-mj-00156-BAM]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00313-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Martinez</title>
+  <subTitle>DETENTION ORDER as to Stephen David Martinez, signed by Magistrate Judge Barbara A. McAuliffe on 8/2/2013. (Herman, H)[1:13-mj-00156-BAM]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c1723</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00313_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00313; USA v. Martinez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00313-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-08-02</dateIssued>
+  <docketText>DETENTION ORDER as to Stephen David Martinez, signed by Magistrate Judge Barbara A. McAuliffe on 8/2/2013. (Herman, H)[1:13-mj-00156-BAM]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00313-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Martinez</title>
+  <subTitle>STIPULATION BETWEEN THE UNITED STATES AND DEFENDANT REGARDING PRODUCTION OF PROTECTED INFORMATION; PROTECTIVE ORDER RE: SAME signed by District Judge Lawrence J. O&apos;Neill on August 12, 2013. (Munoz, I)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c1722</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00313_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00313; USA v. Martinez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00313-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-08-12</dateIssued>
+  <docketText>STIPULATION BETWEEN THE UNITED STATES AND DEFENDANT REGARDING PRODUCTION OF PROTECTED INFORMATION; PROTECTIVE ORDER RE: SAME signed by District Judge Lawrence J. O&apos;Neill on August 12, 2013. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00313-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Martinez</title>
+  <subTitle>PROTECTIVE ORDER as to Stephen David Martinez signed by District Judge Lawrence J. O&apos;Neill on October 31, 2013. (Munoz, I)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c171e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00313_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00313; USA v. Martinez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00313-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-10-31</dateIssued>
+  <docketText>PROTECTIVE ORDER as to Stephen David Martinez signed by District Judge Lawrence J. O&apos;Neill on October 31, 2013. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00313-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Martinez</title>
+  <subTitle>STIPULATION and ORDER to CONTINUE Status Conference. The Status Conference currently set for 12/16/2013, is CONTINUED to 2/3/2014, at 01:00 PM in Courtroom 3 before Magistrate Judge Sheila K. Oberto. Time shall be excluded. Order signed by Magistrate Judge Sheila K. Oberto on 12/13/2013. (Timken, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c1726</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00313_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00313; USA v. Martinez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00313-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-12-13</dateIssued>
+  <docketText>STIPULATION and ORDER to CONTINUE Status Conference. The Status Conference currently set for 12/16/2013, is CONTINUED to 2/3/2014, at 01:00 PM in Courtroom 3 before Magistrate Judge Sheila K. Oberto. Time shall be excluded. Order signed by Magistrate Judge Sheila K. Oberto on 12/13/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00313-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Martinez</title>
+  <subTitle>STIPULATION to Continue February 3, 2014 Status Conference to March 17, 2014; ORDER, signed by Magistrate Judge Sheila K. Oberto on 1/30/2014. (Status Conference as to Stephen Martinez previously set for 2/3/2014, has been CONTINUED to 3/17/2014, at 01:00 PM in Courtroom 3 before Magistrate Judge Sheila K. Oberto. Time is excluded, XT Start: 2/3/2014, XT Stop: 3/17/2014.) (Gaumnitz, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c1720</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-5</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00313_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00313; USA v. Martinez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00313-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-01-30</dateIssued>
+  <docketText>STIPULATION to Continue February 3, 2014 Status Conference to March 17, 2014; ORDER, signed by Magistrate Judge Sheila K. Oberto on 1/30/2014. (Status Conference as to Stephen Martinez previously set for 2/3/2014, has been CONTINUED to 3/17/2014, at 01:00 PM in Courtroom 3 before Magistrate Judge Sheila K. Oberto. Time is excluded, XT Start: 2/3/2014, XT Stop: 3/17/2014.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00313-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Martinez</title>
+  <subTitle>PRELIMINARY ORDER of FORFEITURE as to Stephen David Martinez, signed by District Judge Lawrence J. O&apos;Neill on 7/17/2014. (Marrujo, C)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c1725</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-6</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00313_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00313; USA v. Martinez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00313-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-07-17</dateIssued>
+  <docketText>PRELIMINARY ORDER of FORFEITURE as to Stephen David Martinez, signed by District Judge Lawrence J. O&apos;Neill on 7/17/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00313-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Martinez</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Stephen David Martinez signed by District Judge Lawrence J. O&apos;Neill on October 1, 2014. (Munoz, I)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c171f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-7</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00313_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00313; USA v. Martinez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00313-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-10-01</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Stephen David Martinez signed by District Judge Lawrence J. O&apos;Neill on October 1, 2014. (Munoz, I)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cr-00313-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Martinez</title>
+  <subTitle>FINAL ORDER of FORFEITURE as to Stephen David Martinez signed by District Judge Lawrence J. O&apos;Neill on 01/06/2015. (Flores, E)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c1721</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-8</identifier>
+ <identifier type="former granule identifier">caed-1_13-cr-00313_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cr-00313/USCOURTS-caed-1_13-cr-00313-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cr-00313/pdf/USCOURTS-caed-1_13-cr-00313-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cr-00313; USA v. Martinez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cr-00313-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>FINAL ORDER of FORFEITURE as to Stephen David Martinez signed by District Judge Lawrence J. O&apos;Neill on 01/06/2015. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

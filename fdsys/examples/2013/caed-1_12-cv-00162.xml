@@ -1,0 +1,376 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1850d642b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-07-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-07-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00162</identifier>
+<identifier type="local">P0b002ee1850d642b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-07-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-07-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-00162</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00162</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00162</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1332 Diversity-(Citizenship)</cause>
+ <party fullName="Corrections Corporation of America" lastName="Corrections Corporation of America" role="Defendant"></party>
+ <party firstName="William" fullName="William Yeager" lastName="Yeager" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Yeager v. Corrections Corporation of America</title>
+ <partNumber>1:12-cv-00162</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00162/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-00162;12-162</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Corrections Corporation of America</displayForm>
+ <namePart type="family">Corrections Corporation of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Yeager</displayForm>
+ <namePart type="family">Yeager</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00162</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00162</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1332 Diversity-(Citizenship)</cause>
+ <party fullName="Corrections Corporation of America" lastName="Corrections Corporation of America" role="Defendant"></party>
+ <party firstName="William" fullName="William Yeager" lastName="Yeager" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00162-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-0/mods.xml">
+ <titleInfo>
+  <title>Yeager v. Corrections Corporation of America</title>
+  <subTitle>STIPULATION and ORDER to Continue Motion to Strike Hearing signed by Magistrate Judge Jennifer L. Thurston on 2/23/2012. 5 MOTION to STRIKE is continued to 3/28/2012 at 09:30 AM in Bakersfield at 18th Street (JLT) before Magistrate Judge Jennifer L. Thurston. (Leon-Guerrero, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00162-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850ee3fc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00162_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00162/pdf/USCOURTS-caed-1_12-cv-00162-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00162; Yeager v. Corrections Corporation of America; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00162-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-02-23</dateIssued>
+  <docketText>STIPULATION and ORDER to Continue Motion to Strike Hearing signed by Magistrate Judge Jennifer L. Thurston on 2/23/2012. 5 MOTION to STRIKE is continued to 3/28/2012 at 09:30 AM in Bakersfield at 18th Street (JLT) before Magistrate Judge Jennifer L. Thurston. (Leon-Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00162-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-1/mods.xml">
+ <titleInfo>
+  <title>Yeager v. Corrections Corporation of America</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Jennifer L. Thurston on 3/28/2012. Objections to F&amp;R due by 4/11/2012. (Leon-Guerrero, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00162-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850ee3f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00162_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00162/pdf/USCOURTS-caed-1_12-cv-00162-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00162; Yeager v. Corrections Corporation of America; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00162-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-03-28</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Jennifer L. Thurston on 3/28/2012. Objections to F&amp;R due by 4/11/2012. (Leon-Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00162-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-2/mods.xml">
+ <titleInfo>
+  <title>Yeager v. Corrections Corporation of America</title>
+  <subTitle>ORDER Adopting in Full the Findings and Recommendations Granting Defendant&apos;s 16 Motion to Strike Portions of Plaintiff&apos;s Complaint, signed by Chief Judge Anthony W. Ishii on 4/18/2012. (IT IS HEREBY ORDERED: 1. The 16 Findings and Recommendations filed 3/28/2012 are ADOPTED IN FULL; 2. Defendants motion as converted to a Rule 12(b)(6) motion is GRANTED; 3. Plaintiffs prayer for relief for punitive damages is STRICKEN; and 4. Plaintiff SHALL file an amended complaint within fourteen days of the date of service of this Order.) (Gaumnitz, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00162-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850ee3f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00162_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00162/pdf/USCOURTS-caed-1_12-cv-00162-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00162; Yeager v. Corrections Corporation of America; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00162-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-04-18</dateIssued>
+  <docketText>ORDER Adopting in Full the Findings and Recommendations Granting Defendant&apos;s 16 Motion to Strike Portions of Plaintiff&apos;s Complaint, signed by Chief Judge Anthony W. Ishii on 4/18/2012. (IT IS HEREBY ORDERED: 1. The 16 Findings and Recommendations filed 3/28/2012 are ADOPTED IN FULL; 2. Defendants motion as converted to a Rule 12(b)(6) motion is GRANTED; 3. Plaintiffs prayer for relief for punitive damages is STRICKEN; and 4. Plaintiff SHALL file an amended complaint within fourteen days of the date of service of this Order.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00162-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-3/mods.xml">
+ <titleInfo>
+  <title>Yeager v. Corrections Corporation of America</title>
+  <subTitle>ORDER GRANTING Stipulation to Continue Settlement Conference 26, signed by Magistrate Judge Jennifer L. Thurston on 1/3/2013. Settlement Conference continued to 1/28/2013 at 01:30 PM at the United States Courthouse, 510 19th Street, Bakersfield, before Magistrate Judge Jennifer L. Thurston. (Hall, S)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00162-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850ee48f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00162_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00162/pdf/USCOURTS-caed-1_12-cv-00162-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00162; Yeager v. Corrections Corporation of America; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00162-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER GRANTING Stipulation to Continue Settlement Conference 26, signed by Magistrate Judge Jennifer L. Thurston on 1/3/2013. Settlement Conference continued to 1/28/2013 at 01:30 PM at the United States Courthouse, 510 19th Street, Bakersfield, before Magistrate Judge Jennifer L. Thurston. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00162-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-4/mods.xml">
+ <titleInfo>
+  <title>Yeager v. Corrections Corporation of America</title>
+  <subTitle>ORDER VACATING hearing date of April 1, 2013 and taking matter29 under submission, signed by District Judge Anthony W. Ishii on 3/26/2013. (Figueroa, O)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00162-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850ee48c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00162_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00162/pdf/USCOURTS-caed-1_12-cv-00162-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00162; Yeager v. Corrections Corporation of America; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00162-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-03-26</dateIssued>
+  <docketText>ORDER VACATING hearing date of April 1, 2013 and taking matter29 under submission, signed by District Judge Anthony W. Ishii on 3/26/2013. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00162-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-5/mods.xml">
+ <titleInfo>
+  <title>Yeager v. Corrections Corporation of America</title>
+  <subTitle>ORDER GRANTING IN PART AND DENYING IN PART 29 Defendant&apos;s Motion for Summary Judgment signed by District Judge Anthony W. Ishii on 5/7/2013. (Jessen, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00162-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850ee3fa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00162_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00162/pdf/USCOURTS-caed-1_12-cv-00162-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00162; Yeager v. Corrections Corporation of America; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00162-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-05-07</dateIssued>
+  <docketText>ORDER GRANTING IN PART AND DENYING IN PART 29 Defendant&apos;s Motion for Summary Judgment signed by District Judge Anthony W. Ishii on 5/7/2013. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00162-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-6/mods.xml">
+ <titleInfo>
+  <title>Yeager v. Corrections Corporation of America</title>
+  <subTitle>ORDER requesting Notice of Settlement signed by District Judge Anthony W. Ishii on 6/18/2013. ( Filing Deadline: 7/10/2013).(Lundstrom, T)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00162-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850ee48d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00162_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00162/pdf/USCOURTS-caed-1_12-cv-00162-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00162; Yeager v. Corrections Corporation of America; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00162-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-06-19</dateIssued>
+  <docketText>ORDER requesting Notice of Settlement signed by District Judge Anthony W. Ishii on 6/18/2013. ( Filing Deadline: 7/10/2013).(Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00162-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-7/mods.xml">
+ <titleInfo>
+  <title>Yeager v. Corrections Corporation of America</title>
+  <subTitle>ORDER vacating all dates due to settlement. signed by District Judge Anthony W. Ishii on 6/25/13. (Nazaroff, H)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00162-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850ee48e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00162_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00162/pdf/USCOURTS-caed-1_12-cv-00162-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00162; Yeager v. Corrections Corporation of America; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00162-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-06-25</dateIssued>
+  <docketText>ORDER vacating all dates due to settlement. signed by District Judge Anthony W. Ishii on 6/25/13. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00162-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-8/mods.xml">
+ <titleInfo>
+  <title>Yeager v. Corrections Corporation of America</title>
+  <subTitle>ORDER DISMISSING CASE signed by District Judge Anthony W. Ishii on 7/2/2013. CASE CLOSED.(Lundstrom, T)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00162-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850ee3fb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-8</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00162_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00162/USCOURTS-caed-1_12-cv-00162-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00162/pdf/USCOURTS-caed-1_12-cv-00162-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00162; Yeager v. Corrections Corporation of America; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00162-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-07-03</dateIssued>
+  <docketText>ORDER DISMISSING CASE signed by District Judge Anthony W. Ishii on 7/2/2013. CASE CLOSED.(Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+</mods>

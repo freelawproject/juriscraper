@@ -1,0 +1,206 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18135514e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-04445</identifier>
+<identifier type="local">P0b002ee18135514e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_05-cv-04445</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_05-cv-04445</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:05-cv-04445</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="OXFORD ASSOCIATES REAL ESTATE, L.P." lastName="OXFORD ASSOCIATES REAL ESTATE, L.P." role="Plaintiff"></party>
+ <party fullName="TSI SOCIETY HILL, INC." lastName="TSI SOCIETY HILL, INC." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>OXFORD ASSOCIATES REAL ESTATE, L.P. v. TSI SOCIETY HILL, INC.</title>
+ <partNumber>2:05-cv-04445</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-04445/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-04445;05-4445</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>OXFORD ASSOCIATES REAL ESTATE, L.P.</displayForm>
+ <namePart type="family">OXFORD ASSOCIATES REAL ESTATE, L.P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>TSI SOCIETY HILL, INC.</displayForm>
+ <namePart type="family">TSI SOCIETY HILL, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_05-cv-04445</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:05-cv-04445</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="OXFORD ASSOCIATES REAL ESTATE, L.P." lastName="OXFORD ASSOCIATES REAL ESTATE, L.P." role="Plaintiff"></party>
+ <party fullName="TSI SOCIETY HILL, INC." lastName="TSI SOCIETY HILL, INC." role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_05-cv-04445-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04445/USCOURTS-paed-2_05-cv-04445-0/mods.xml">
+ <titleInfo>
+  <title>OXFORD ASSOCIATES REAL ESTATE, L.P. v. TSI SOCIETY HILL, INC.</title>
+  <subTitle>MEMORANDUM AND ORDER THAT DEFT&apos;S MOTION TO OPEN CONFESSED JUDGMENT IS GRANTED, ETC. SIGNED BY JUDGE BRUCE W. KAUFFMAN ON 3/6/06. 3/8/06 ENTERED AND COPIES E-MAILED.(kw, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_05-cv-04445-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18138d2d2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04445/USCOURTS-paed-2_05-cv-04445-0</identifier>
+ <identifier type="former granule identifier">paed-2_05-cv-04445_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04445/USCOURTS-paed-2_05-cv-04445-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-04445/pdf/USCOURTS-paed-2_05-cv-04445-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-04445; OXFORD ASSOCIATES REAL ESTATE, L.P. v. TSI SOCIETY HILL, INC.; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_05-cv-04445-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-03-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT DEFT&apos;S MOTION TO OPEN CONFESSED JUDGMENT IS GRANTED, ETC. SIGNED BY JUDGE BRUCE W. KAUFFMAN ON 3/6/06. 3/8/06 ENTERED AND COPIES E-MAILED.(kw, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_05-cv-04445-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04445/USCOURTS-paed-2_05-cv-04445-1/mods.xml">
+ <titleInfo>
+  <title>OXFORD ASSOCIATES REAL ESTATE, L.P. v. TSI SOCIETY HILL, INC.</title>
+  <subTitle>MEMORANDUM AND ORDER THAT PLFF&apos;S MOTION TO COMPEL IS GRANTED, ETC. SIGNED BY JUDGE JACOB P. HART ON 10/19/06. 10/20/06 ENTERED AND COPIES E-MAILED(kw, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_05-cv-04445-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18138d2d3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04445/USCOURTS-paed-2_05-cv-04445-1</identifier>
+ <identifier type="former granule identifier">paed-2_05-cv-04445_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04445/USCOURTS-paed-2_05-cv-04445-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-04445/pdf/USCOURTS-paed-2_05-cv-04445-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-04445; OXFORD ASSOCIATES REAL ESTATE, L.P. v. TSI SOCIETY HILL, INC.; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_05-cv-04445-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-10-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT PLFF&apos;S MOTION TO COMPEL IS GRANTED, ETC. SIGNED BY JUDGE JACOB P. HART ON 10/19/06. 10/20/06 ENTERED AND COPIES E-MAILED(kw, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_05-cv-04445-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04445/USCOURTS-paed-2_05-cv-04445-2/mods.xml">
+ <titleInfo>
+  <title>OXFORD ASSOCIATES REAL ESTATE, L.P. v. TSI SOCIETY HILL, INC.</title>
+  <subTitle>MEMORANDUM AND ORDER THAT DEFT&apos;S MOTION FOR SUMMARY JUDGMENT IS GRANTED. SIGNED BY JUDGE BRUCE W. KAUFFMAN ON 1/11/07. 1/12/07 ENTERED AND COPIES E-MAILED.(kw, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_05-cv-04445-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18138d2d1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04445/USCOURTS-paed-2_05-cv-04445-2</identifier>
+ <identifier type="former granule identifier">paed-2_05-cv-04445_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-04445/USCOURTS-paed-2_05-cv-04445-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-04445/pdf/USCOURTS-paed-2_05-cv-04445-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-04445; OXFORD ASSOCIATES REAL ESTATE, L.P. v. TSI SOCIETY HILL, INC.; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_05-cv-04445-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT DEFT&apos;S MOTION FOR SUMMARY JUDGMENT IS GRANTED. SIGNED BY JUDGE BRUCE W. KAUFFMAN ON 1/11/07. 1/12/07 ENTERED AND COPIES E-MAILED.(kw, )</docketText>
+</extension>
+</relatedItem>
+</mods>

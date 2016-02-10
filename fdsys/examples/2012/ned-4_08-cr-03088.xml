@@ -1,0 +1,258 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181f81142">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-03-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-03-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03088</identifier>
+<identifier type="local">P0b002ee181f81142</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-03-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-03-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_08-cr-03088</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cr-03088</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cr-03088</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Carlton" fullName="Carlton E. Bragg" lastName="Bragg" middleName="E." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Bragg</title>
+ <partNumber>4:08-cr-03088</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03088/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:08-cr-03088;08-3088</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Carlton E. Bragg</displayForm>
+ <namePart type="family">Bragg</namePart>
+ <namePart type="given">Carlton</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cr-03088</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cr-03088</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Carlton" fullName="Carlton E. Bragg" lastName="Bragg" middleName="E." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03088-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Bragg</title>
+  <subTitle>ORDER APPOINTING COUNSEL - James L. Beckmann appointed as counsel as to defendant Carlton E. Bragg as ordered by Magistrate Judge David L. Piester. (SED)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03088-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181f81e06</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-0</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03088_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03088/pdf/USCOURTS-ned-4_08-cr-03088-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03088; USA v. Bragg; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03088-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-03-24</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - James L. Beckmann appointed as counsel as to defendant Carlton E. Bragg as ordered by Magistrate Judge David L. Piester. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03088-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Bragg</title>
+  <subTitle>ORDER - The motion to continue, filing no. 16, is granted and the pretrial motion deadline is extended to May 13, 2009. If any hearing on motions is required, the hearing will be set following the filing of motions as to Carlton E. Bragg. Ordered by Magistrate Judge David L. Piester. (GJG)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03088-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181f81d2c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-1</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03088_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03088/pdf/USCOURTS-ned-4_08-cr-03088-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03088; USA v. Bragg; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03088-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-04-27</dateIssued>
+  <docketText>ORDER - The motion to continue, filing no. 16, is granted and the pretrial motion deadline is extended to May 13, 2009. If any hearing on motions is required, the hearing will be set following the filing of motions as to Carlton E. Bragg. Ordered by Magistrate Judge David L. Piester. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03088-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Bragg</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Carlton E. Bragg. It is ordered that:... (2)There are no disputed matters regarding the presentence report and the proper computation of the advisory Guidelines ranges.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03088-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181f81e07</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-2</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03088_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03088/pdf/USCOURTS-ned-4_08-cr-03088-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03088; USA v. Bragg; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03088-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-02-11</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Carlton E. Bragg. It is ordered that:... (2)There are no disputed matters regarding the presentence report and the proper computation of the advisory Guidelines ranges.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03088-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Bragg</title>
+  <subTitle>MEMORANDUM AND ORDER that the defendant may be entitled to a reduction in sentence due to the retroactive application of the &quot;Crack Cocaine Amendment&quot; to the federal Sentencing Guidelinesas to Carlton E. Bragg. No later than February 17, 2012, the probation office shall provide the undersigned and counsel of record with a &quot;Retroactive SentencingWorksheet.&quot; No later March 2, 2012, counsel of record shall confer and file a stipulation regarding sentence reduction or counsel for the government shall contact my judicial assistant and arrange a telephone conference with the undersigned and counsel for the defendant so that further progression of this case may be scheduled as to defendant Carlton E. Bragg. Ordered by Senior Judge Richard G. Kopf. (Copies to Mike Norton, counsel, and defendant as directed)(ADB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03088-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181f81d2d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-3</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03088_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03088/pdf/USCOURTS-ned-4_08-cr-03088-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03088; USA v. Bragg; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03088-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the defendant may be entitled to a reduction in sentence due to the retroactive application of the &quot;Crack Cocaine Amendment&quot; to the federal Sentencing Guidelinesas to Carlton E. Bragg. No later than February 17, 2012, the probation office shall provide the undersigned and counsel of record with a &quot;Retroactive SentencingWorksheet.&quot; No later March 2, 2012, counsel of record shall confer and file a stipulation regarding sentence reduction or counsel for the government shall contact my judicial assistant and arrange a telephone conference with the undersigned and counsel for the defendant so that further progression of this case may be scheduled as to defendant Carlton E. Bragg. Ordered by Senior Judge Richard G. Kopf. (Copies to Mike Norton, counsel, and defendant as directed)(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03088-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Bragg</title>
+  <subTitle>ORDER as to defendant Carlton E. Bragg. I held a telephone conference with counsel today at the request of defense counsel. Because of a pending case in the Supreme Court, and at the request of the defendant, through his counsel, and without objection by the government, IT IS ORDERED that consideration of the defendant&apos;s motion to reduce his sentence under 2011 crack cocaine Guideline amendment 42 is held in abeyance until defense counsel notifies me that this matter is ready for disposition. Ordered by Senior Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03088-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181f81d2b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-4</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03088_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03088/USCOURTS-ned-4_08-cr-03088-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03088/pdf/USCOURTS-ned-4_08-cr-03088-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03088; USA v. Bragg; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03088-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-03-07</dateIssued>
+  <docketText>ORDER as to defendant Carlton E. Bragg. I held a telephone conference with counsel today at the request of defense counsel. Because of a pending case in the Supreme Court, and at the request of the defendant, through his counsel, and without objection by the government, IT IS ORDERED that consideration of the defendant&apos;s motion to reduce his sentence under 2011 crack cocaine Guideline amendment 42 is held in abeyance until defense counsel notifies me that this matter is ready for disposition. Ordered by Senior Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+</mods>

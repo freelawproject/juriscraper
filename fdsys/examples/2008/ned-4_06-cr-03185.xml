@@ -1,0 +1,342 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817244d4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03185</identifier>
+<identifier type="local">P0b002ee1817244d4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_06-cr-03185</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_06-cr-03185</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:06-cr-03185</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Richard" fullName="Richard Gene Roberts" lastName="Roberts" middleName="Gene" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Roberts</title>
+ <partNumber>4:06-cr-03185</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03185/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:06-cr-03185;06-3185</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Richard Gene Roberts</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_06-cr-03185</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:06-cr-03185</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Richard" fullName="Richard Gene Roberts" lastName="Roberts" middleName="Gene" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03185-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Roberts</title>
+  <subTitle>ORDER APPOINTING COUNSEL - as to defendant(s) Richard Gene Roberts Ordered by Magistrate Judge David L. Piester.(BMH, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03185-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173797b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-0</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03185_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03185/pdf/USCOURTS-ned-4_06-cr-03185-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03185; USA v. Roberts; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03185-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-12-19</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - as to defendant(s) Richard Gene Roberts Ordered by Magistrate Judge David L. Piester.(BMH, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03185-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Roberts</title>
+  <subTitle>ORDER as to defendant Richard Gene Roberts. ***Change of Plea Hearing set for 2/22/2007 10:00 AM in Courtroom 2 (Lincoln) before Magistrate Judge David L. Piester; XT excludable started 2/12/2007-2/22/2007; termed 2/20/2007 trial date. Ordered by Judge Richard G. Kopf.(KLL, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-02-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03185-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817379fe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-1</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03185_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03185/pdf/USCOURTS-ned-4_06-cr-03185-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03185; USA v. Roberts; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03185-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-02-12</dateIssued>
+  <docketText>ORDER as to defendant Richard Gene Roberts. ***Change of Plea Hearing set for 2/22/2007 10:00 AM in Courtroom 2 (Lincoln) before Magistrate Judge David L. Piester; XT excludable started 2/12/2007-2/22/2007; termed 2/20/2007 trial date. Ordered by Judge Richard G. Kopf.(KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03185-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Roberts</title>
+  <subTitle>MEMORANDUM AND ORDER as to defendant Richard Gene Roberts. A hearing was held before me March 6, 2007 on allegations made in the amended petition for action on conditions of pretrial release. IT THEREFORE HEREBY IS ORDERED: 1. The previous order releasing the defendant on conditions, filing 10, is amended. 2. The pretrial services officer shall investigate the defendant&apos;s request to associate with Katherine Prang and report to the court and counsel as soon as practicable. Ordered by Magistrate Judge David L. Piester.(JAR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03185-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181737a00</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-2</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03185_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03185/pdf/USCOURTS-ned-4_06-cr-03185-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03185; USA v. Roberts; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03185-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-03-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to defendant Richard Gene Roberts. A hearing was held before me March 6, 2007 on allegations made in the amended petition for action on conditions of pretrial release. IT THEREFORE HEREBY IS ORDERED: 1. The previous order releasing the defendant on conditions, filing 10, is amended. 2. The pretrial services officer shall investigate the defendant&apos;s request to associate with Katherine Prang and report to the court and counsel as soon as practicable. Ordered by Magistrate Judge David L. Piester.(JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03185-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Roberts</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Richard Gene Roberts. It is ordered that: (1) There are no disputed matters regarding the presentence report and the proper computation of the advisory Guidelines ranges. (2) Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects.ETC. Ordered by Judge Richard G. Kopf.(KLL, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03185-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181737979</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-3</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03185_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03185/pdf/USCOURTS-ned-4_06-cr-03185-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03185; USA v. Roberts; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03185-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-05-22</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Richard Gene Roberts. It is ordered that: (1) There are no disputed matters regarding the presentence report and the proper computation of the advisory Guidelines ranges. (2) Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects.ETC. Ordered by Judge Richard G. Kopf.(KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03185-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Roberts</title>
+  <subTitle>JUDGMENT as to Richard Gene Roberts (1) - Defendant pleaded guilty to Count I of the Indictment and is committed to the Bureau of Prisons for a term of 120 months, followed by 5 years supervised release with special conditions, and pay Special Assessment in the amount of $100 as to defendant Richard Gene Roberts. Defendant remanded to the custody of the U.S. Marshal. Ordered by Judge Richard G. Kopf. (4 Certified Copies to USM)(CS, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03185-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173797c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-4</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03185_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03185/pdf/USCOURTS-ned-4_06-cr-03185-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03185; USA v. Roberts; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03185-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-06-01</dateIssued>
+  <docketText>JUDGMENT as to Richard Gene Roberts (1) - Defendant pleaded guilty to Count I of the Indictment and is committed to the Bureau of Prisons for a term of 120 months, followed by 5 years supervised release with special conditions, and pay Special Assessment in the amount of $100 as to defendant Richard Gene Roberts. Defendant remanded to the custody of the U.S. Marshal. Ordered by Judge Richard G. Kopf. (4 Certified Copies to USM)(CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03185-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Roberts</title>
+  <subTitle>ORDER that counsel for defendant shall withdraw exhibit 101 received at the 3/6/07 hearing on pretrial release within 15 days or show cause why exhibit should not be destroyed as to defendant(s) Richard Gene Roberts. If counsel fails to withdraw the exhibit or show cause why it should not be destroyed, the clerk&apos;s office is directed to destroy the exhibit without further notice. Ordered by Judge Richard G. Kopf. (CCB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03185-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173797d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-5</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03185_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03185/pdf/USCOURTS-ned-4_06-cr-03185-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03185; USA v. Roberts; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03185-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-07-16</dateIssued>
+  <docketText>ORDER that counsel for defendant shall withdraw exhibit 101 received at the 3/6/07 hearing on pretrial release within 15 days or show cause why exhibit should not be destroyed as to defendant(s) Richard Gene Roberts. If counsel fails to withdraw the exhibit or show cause why it should not be destroyed, the clerk&apos;s office is directed to destroy the exhibit without further notice. Ordered by Judge Richard G. Kopf. (CCB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03185-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Roberts</title>
+  <subTitle>ORDER as to defendant Richard Gene Roberts. It is ordered that: (1) The government&apos;s motion for hearing is granted. (2) A hearing on the government&apos;s motion for reduction of sentence pursuant to Rule 35(b) 44 has been set before the undersigned United States district judge on Friday, January 18, 2008, at 12:00 noon, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. (3) The United States Marshal is directed to return the defendant to the district for the hearing.(4) Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35(b) motion. If retained, counsel for the defendant remains as counsel for the defendant until the Rule 35(b) motion is resolved or until given leave to withdraw. (5) The Federal Public Defender shall provide CJA counsel with a new voucher. (6) The Clerk of the Court shall provide a copy of this order to counsel for the government and counsel for the defendant. The undersigned&apos;s judicial assistant will provide a copy to the Federal Public Defender. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03185-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817379ff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-6</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03185_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03185/pdf/USCOURTS-ned-4_06-cr-03185-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03185; USA v. Roberts; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03185-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2008-01-16</dateIssued>
+  <docketText>ORDER as to defendant Richard Gene Roberts. It is ordered that: (1) The government&apos;s motion for hearing is granted. (2) A hearing on the government&apos;s motion for reduction of sentence pursuant to Rule 35(b) 44 has been set before the undersigned United States district judge on Friday, January 18, 2008, at 12:00 noon, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. (3) The United States Marshal is directed to return the defendant to the district for the hearing.(4) Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35(b) motion. If retained, counsel for the defendant remains as counsel for the defendant until the Rule 35(b) motion is resolved or until given leave to withdraw. (5) The Federal Public Defender shall provide CJA counsel with a new voucher. (6) The Clerk of the Court shall provide a copy of this order to counsel for the government and counsel for the defendant. The undersigned&apos;s judicial assistant will provide a copy to the Federal Public Defender. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03185-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Roberts</title>
+  <subTitle>AMENDED JUDGMENT (Reduction of Sentence) as to Richard Gene Roberts (1). The defendant pleaded guilty to Count 1 of the indictment and defendant&apos;s sentence of imprisonment is reduced from the original sentence of 120 months to 60 months, followed by 5 years supervised release with special conditions, and pay special assessment in the amount of $100 (a balance of $50.00 remains) as to defendant Richard Gene Roberts. Ordered by Judge Richard G. Kopf. (4 Certified copies to USM)(CCB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03185-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173797a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-7</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03185_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03185/USCOURTS-ned-4_06-cr-03185-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03185/pdf/USCOURTS-ned-4_06-cr-03185-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03185; USA v. Roberts; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03185-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-01-18</dateIssued>
+  <docketText>AMENDED JUDGMENT (Reduction of Sentence) as to Richard Gene Roberts (1). The defendant pleaded guilty to Count 1 of the indictment and defendant&apos;s sentence of imprisonment is reduced from the original sentence of 120 months to 60 months, followed by 5 years supervised release with special conditions, and pay special assessment in the amount of $100 (a balance of $50.00 remains) as to defendant Richard Gene Roberts. Ordered by Judge Richard G. Kopf. (4 Certified copies to USM)(CCB)</docketText>
+</extension>
+</relatedItem>
+</mods>

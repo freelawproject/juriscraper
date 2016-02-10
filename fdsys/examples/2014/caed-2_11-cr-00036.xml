@@ -1,0 +1,687 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a3160da">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-10-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036</identifier>
+<identifier type="local">P0b002ee18a3160da</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cr-00036</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cr-00036</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cr-00036</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Larry" fullName="Larry Gene Jose Abeyta" lastName="Abeyta" middleName="Gene Jose" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Leroy Corsbie Jr." generation="Jr." lastName="Corsbie" middleName="Leroy" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Abeyta et al</title>
+ <partNumber>2:11-cr-00036</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cr-00036;11-036</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Larry Gene Jose Abeyta</displayForm>
+ <namePart type="family">Abeyta</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Leroy Corsbie Jr.</displayForm>
+ <namePart type="family">Corsbie</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cr-00036</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cr-00036</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Larry" fullName="Larry Gene Jose Abeyta" lastName="Abeyta" middleName="Gene Jose" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Leroy Corsbie Jr." generation="Jr." lastName="Corsbie" middleName="Leroy" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>DETENTION ORDER as to Larry Gene Jose Abeyta signed by Magistrate Judge Gregory G. Hollows on 2/1/11. (Matson, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-02-01</dateIssued>
+  <docketText>DETENTION ORDER as to Larry Gene Jose Abeyta signed by Magistrate Judge Gregory G. Hollows on 2/1/11. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>DETENTION ORDER as to Michael Leroy Corsbie, Jr. signed by Magistrate Judge Kendall J. Newman on 2/16/2011. (Zignago, K.)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fc2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-02-16</dateIssued>
+  <docketText>DETENTION ORDER as to Michael Leroy Corsbie, Jr. signed by Magistrate Judge Kendall J. Newman on 2/16/2011. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge William B. Shubb on 3/9/2011 ORDERING 15 Status Conference set for 3/28/2011 at 8:30 AM in Courtroom 5 before Judge William B. Shubb; Excludable started as to Larry Gene Jose Abeyta: XT4 Start: 3/10/2011 Stop: 3/28/2011. (Reader, L)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fbf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-03-10</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge William B. Shubb on 3/9/2011 ORDERING 15 Status Conference set for 3/28/2011 at 8:30 AM in Courtroom 5 before Judge William B. Shubb; Excludable started as to Larry Gene Jose Abeyta: XT4 Start: 3/10/2011 Stop: 3/28/2011. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>STIPULATION and ORDER 21 as to defendants Larry Abeyta and Michael Corsbie, Jr., signed by Judge William B. Shubb on 4/22/11. The Status Conference is hereby CONT&apos;D to 5/9/2011 at 08:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Larry Abeyta, and Michael Corsbie, Jr.,: XT4 Start: 4/25/11, Stop: 5/9/11. (Kastilahn, A)STIPULATION and ORDER 21 as to defendants Larry Abeyta and Michael Corsbie, Jr., signed by Judge William B. Shubb on 4/22/11. The Status Conference is hereby CONT&apos;D to 5/9/2011 at 08:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Larry Abeyta, and Michael Corsbie, Jr.,: XT4 Start: 4/25/11, Stop: 5/9/11. (Kastilahn, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fc0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-04-25</dateIssued>
+  <docketText>STIPULATION and ORDER 21 as to defendants Larry Abeyta and Michael Corsbie, Jr., signed by Judge William B. Shubb on 4/22/11. The Status Conference is hereby CONT&apos;D to 5/9/2011 at 08:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Larry Abeyta, and Michael Corsbie, Jr.,: XT4 Start: 4/25/11, Stop: 5/9/11. (Kastilahn, A)STIPULATION and ORDER 21 as to defendants Larry Abeyta and Michael Corsbie, Jr., signed by Judge William B. Shubb on 4/22/11. The Status Conference is hereby CONT&apos;D to 5/9/2011 at 08:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Larry Abeyta, and Michael Corsbie, Jr.,: XT4 Start: 4/25/11, Stop: 5/9/11. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>STIPULATION and ORDER 27 signed by Judge William B. Shubb on 5/20/2011 continuing the Change of Plea Hearing from 5/23/2011 to 5/31/2011 at 08:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Michael Leroy Corsbie, Jr: Local Code T-4 Start: 5/23/2011 Stop: 5/31/2011. (Kirksey Smith, K)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364faa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-4</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-05-20</dateIssued>
+  <docketText>STIPULATION and ORDER 27 signed by Judge William B. Shubb on 5/20/2011 continuing the Change of Plea Hearing from 5/23/2011 to 5/31/2011 at 08:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Michael Leroy Corsbie, Jr: Local Code T-4 Start: 5/23/2011 Stop: 5/31/2011. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Larry Gene Jose Abeyta signed by Judge William B. Shubb on 9/15/2011. (Kirksey Smith, K)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364f87</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-5</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-09-15</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Larry Gene Jose Abeyta signed by Judge William B. Shubb on 9/15/2011. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Michael Leroy Corsbie, Jr signed by Judge William B. Shubb on 9/15/2011. (Kirksey Smith, K)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-6</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-09-15</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Michael Leroy Corsbie, Jr signed by Judge William B. Shubb on 9/15/2011. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Kendall J. Newman on 10/21/11 ORDERING that Mr. Abeyta is to be RELEASED from custody to attend his Uncle Felix Rodriguez&apos;s funeral to be held at 10:30 a.m. at Truth &amp; Life Fellowship 5650 Power Inn Rd Sacramento, CA 95824; Mr. Abeyta is to be released to the custody of Federal Defender Investigator, Henry Hawkins, and Federal Defender Investigator, Juan Doig, who will pick up Mr. Abeyta at the Sacramento County Jail, Sacramento, CA at 10:00 a.m. on 10/28/11. Mr. Abeyta will be in our Investigators&apos; custody during the 4 hour duration and will return back to the jail on or before 2:30 p.m. on that date. (Benson, A.)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364faf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-7</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-10-24</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Kendall J. Newman on 10/21/11 ORDERING that Mr. Abeyta is to be RELEASED from custody to attend his Uncle Felix Rodriguez&apos;s funeral to be held at 10:30 a.m. at Truth &amp; Life Fellowship 5650 Power Inn Rd Sacramento, CA 95824; Mr. Abeyta is to be released to the custody of Federal Defender Investigator, Henry Hawkins, and Federal Defender Investigator, Juan Doig, who will pick up Mr. Abeyta at the Sacramento County Jail, Sacramento, CA at 10:00 a.m. on 10/28/11. Mr. Abeyta will be in our Investigators&apos; custody during the 4 hour duration and will return back to the jail on or before 2:30 p.m. on that date. (Benson, A.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>DETENTION ORDER as to Larry Gene Jose Abeyta signed by Magistrate Judge Edmund F. Brennan on 3/13/12. (Matson, R)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364f88</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-8</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-03-13</dateIssued>
+  <docketText>DETENTION ORDER as to Larry Gene Jose Abeyta signed by Magistrate Judge Edmund F. Brennan on 3/13/12. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>ORDER FOR RELEASE as to Larry Gene Jose Abeyta signed by Judge William B. Shubb on 5/7/12. (Mena-Sanchez, L)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fbc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-9</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-05-07</dateIssued>
+  <docketText>ORDER FOR RELEASE as to Larry Gene Jose Abeyta signed by Judge William B. Shubb on 5/7/12. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>REVOCATION JUDGMENT and COMMITMENT as to Larry Gene Jose Abeyta signed by Judge William B. Shubb on 5/10/2012. (Kirksey Smith, K)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fc1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-10</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-05-10</dateIssued>
+  <docketText>REVOCATION JUDGMENT and COMMITMENT as to Larry Gene Jose Abeyta signed by Judge William B. Shubb on 5/10/2012. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>DETENTION ORDER as to Michael Leroy Corsbie, Jr signed by Magistrate Judge Dale A. Drozd on 10/23/13. (Manzer, C)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-11</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-10-23</dateIssued>
+  <docketText>DETENTION ORDER as to Michael Leroy Corsbie, Jr signed by Magistrate Judge Dale A. Drozd on 10/23/13. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 11/18/13 CONTINUING Admit/Deny Hearing to 1/6/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Manzer, C)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fbd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-12</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2013-11-18</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 11/18/13 CONTINUING Admit/Deny Hearing to 1/6/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 1/3/14 re 63 CONTINUING Admit/Deny Hearing to 1/21/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Meuleman, A)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fa9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-13</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 1/3/14 re 63 CONTINUING Admit/Deny Hearing to 1/21/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>STIPULATION and ORDER 65 signed by Senior Judge William B. Shubb on 1/17/2014 resetting the Admit/Deny Hearing as to defendant Corsbie for 2/3/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. cc: USPO-Sac. (Kirksey Smith, K)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fb0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-14</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2014-01-17</dateIssued>
+  <docketText>STIPULATION and ORDER 65 signed by Senior Judge William B. Shubb on 1/17/2014 resetting the Admit/Deny Hearing as to defendant Corsbie for 2/3/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. cc: USPO-Sac. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>STIPULATION and ORDER for continuance 67 signed by Senior Judge William B. Shubb on 1/31/2014 resetting the Admit/Deny Hearing as to defendant Michael Corsbie for 2/18/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. cc: USPO- Sac. (Kirksey Smith, K)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fbe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-15</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-01-31</dateIssued>
+  <docketText>STIPULATION and ORDER for continuance 67 signed by Senior Judge William B. Shubb on 1/31/2014 resetting the Admit/Deny Hearing as to defendant Michael Corsbie for 2/18/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. cc: USPO- Sac. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>ORDER FOR RELEASE OF PERSON IN CUSTODY signed by Senior Judge William B. Shubb on 2/18/2014 as to Michael Leroy Corsbie, Jr. (Reader, L)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fa7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-16</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2014-02-18</dateIssued>
+  <docketText>ORDER FOR RELEASE OF PERSON IN CUSTODY signed by Senior Judge William B. Shubb on 2/18/2014 as to Michael Leroy Corsbie, Jr. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>REVOCATION JUDGMENT and COMMITMENT as to Michael Leroy Corsbie, Jr signed by Senior Judge William B. Shubb on 2/21/2014. (Kirksey Smith, K)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fbb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-17</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2014-02-21</dateIssued>
+  <docketText>REVOCATION JUDGMENT and COMMITMENT as to Michael Leroy Corsbie, Jr signed by Senior Judge William B. Shubb on 2/21/2014. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>ORDER FOR RELEASE OF PERSON IN CUSTODY as to Larry Gene Jose Abeyta signed by Magistrate Judge Allison Claire on 5/15/14. (Manzer, C)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fa8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-18</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2014-05-15</dateIssued>
+  <docketText>ORDER FOR RELEASE OF PERSON IN CUSTODY as to Larry Gene Jose Abeyta signed by Magistrate Judge Allison Claire on 5/15/14. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00036-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Abeyta et al</title>
+  <subTitle>REVOCATION JUDGMENT and COMMITMENT as to Larry Gene Jose Abeyta signed by Senior Judge William B. Shubb on 10/29/2014. (Kirksey Smith, K)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a364fad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-19</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00036_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00036/USCOURTS-caed-2_11-cr-00036-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00036/pdf/USCOURTS-caed-2_11-cr-00036-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00036; USA v. Abeyta et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00036-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2014-10-29</dateIssued>
+  <docketText>REVOCATION JUDGMENT and COMMITMENT as to Larry Gene Jose Abeyta signed by Senior Judge William B. Shubb on 10/29/2014. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+</mods>

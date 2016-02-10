@@ -1,0 +1,366 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18787644c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-03-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-03-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363</identifier>
+<identifier type="local">P0b002ee18787644c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-03-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-03-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-01363</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01363</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01363</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="California Exposition" lastName="California Exposition" role="Defendant"></party>
+ <party firstName="Regina" fullName="Regina Lerma" lastName="Lerma" role="Plaintiff"></party>
+ <party fullName="Raging Waters" lastName="Raging Waters" role="Defendant"></party>
+ <party fullName="State Fair Police" lastName="State Fair Police" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PS) Lerma v. California Exposition et al</title>
+ <partNumber>2:12-cv-01363</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-01363;12-1363</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>California Exposition</displayForm>
+ <namePart type="family">California Exposition</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Regina Lerma</displayForm>
+ <namePart type="family">Lerma</namePart>
+ <namePart type="given">Regina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Raging Waters</displayForm>
+ <namePart type="family">Raging Waters</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State Fair Police</displayForm>
+ <namePart type="family">State Fair Police</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01363</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01363</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="California Exposition" lastName="California Exposition" role="Defendant"></party>
+ <party firstName="Regina" fullName="Regina Lerma" lastName="Lerma" role="Plaintiff"></party>
+ <party fullName="Raging Waters" lastName="Raging Waters" role="Defendant"></party>
+ <party fullName="State Fair Police" lastName="State Fair Police" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01363-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-0/mods.xml">
+ <titleInfo>
+  <title>(PS) Lerma v. California Exposition et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 8/27/12 ORDERING the plaintiff&apos;s request for leave to proceed in forma pauperis is granted. Service is appropriate for the following defendants: California Exposition,State Fair Police and Raging Waters. The Clerk of the Court shall send plaintiff one USM-285 form for each defendant, one summons, a copy of the complaint, an appropriate form for consent to trial by a magistrate judge, and this courts status order. Within 14 days from the date of this order, the plaintiff shall provide all appropriate paperwork to the U.S. Marshal. The Clerk to serve a copy of this order on the U.S. Marshal.(Matson, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18788758f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01363_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01363; (PS) Lerma v. California Exposition et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01363-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-08-27</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 8/27/12 ORDERING the plaintiff&apos;s request for leave to proceed in forma pauperis is granted. Service is appropriate for the following defendants: California Exposition,State Fair Police and Raging Waters. The Clerk of the Court shall send plaintiff one USM-285 form for each defendant, one summons, a copy of the complaint, an appropriate form for consent to trial by a magistrate judge, and this courts status order. Within 14 days from the date of this order, the plaintiff shall provide all appropriate paperwork to the U.S. Marshal. The Clerk to serve a copy of this order on the U.S. Marshal.(Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01363-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-1/mods.xml">
+ <titleInfo>
+  <title>(PS) Lerma v. California Exposition et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 12/14/2012 GRANTING-IN-PART 3 Motion for Accommodation. (Donati, J)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187887630</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01363_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01363; (PS) Lerma v. California Exposition et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01363-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-12-14</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 12/14/2012 GRANTING-IN-PART 3 Motion for Accommodation. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01363-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-2/mods.xml">
+ <titleInfo>
+  <title>(PS) Lerma v. California Exposition et al</title>
+  <subTitle>ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 1/24/13 ORDERING that The parties shall show cause, in writing, within fourteen days from the date of this order, why a joint status report has not been filed, or they shall file their joint status report. (Mena-Sanchez, L)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18788758e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01363_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01363; (PS) Lerma v. California Exposition et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01363-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-25</dateIssued>
+  <docketText>ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 1/24/13 ORDERING that The parties shall show cause, in writing, within fourteen days from the date of this order, why a joint status report has not been filed, or they shall file their joint status report. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01363-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-3/mods.xml">
+ <titleInfo>
+  <title>(PS) Lerma v. California Exposition et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 9/24/13 GRANTING 17 Application to Modify Schedling Order: Discovery due by 11/14/2013, Dispositive Motions filed by 10/31/2013, Non-Dispositive Motions filed by 12/15/2013, Final Pretrial Conference RESET for 2/6/2014 at 03:30 PM in Courtroom 3 (KJM) before Judge Kimberly J. Mueller, Jury Trial RESET for 3/17/2014 at 09:00 AM in Courtroom 3 (KJM) before Judge Kimberly J. Mueller. (Meuleman, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187887633</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01363_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01363; (PS) Lerma v. California Exposition et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01363-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-09-25</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 9/24/13 GRANTING 17 Application to Modify Schedling Order: Discovery due by 11/14/2013, Dispositive Motions filed by 10/31/2013, Non-Dispositive Motions filed by 12/15/2013, Final Pretrial Conference RESET for 2/6/2014 at 03:30 PM in Courtroom 3 (KJM) before Judge Kimberly J. Mueller, Jury Trial RESET for 3/17/2014 at 09:00 AM in Courtroom 3 (KJM) before Judge Kimberly J. Mueller. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01363-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-4/mods.xml">
+ <titleInfo>
+  <title>(PS) Lerma v. California Exposition et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 10/24/2013 ORDERING that Plaintiff shall appear for her deposition on 11/6/2013 at 10:00 a.m. Plaintiff shall provide answers to all questions regarding her claims and background, with the exception of any privileged information. Plaintiff shall provide responses to all written discovery, including production of responsive documents, on 11/6/2013 at 10:00 a.m. Failure to comply with this order may result in sanctions, including the possibility that this action may be dismissed. (Zignago, K.)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187887632</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01363_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01363; (PS) Lerma v. California Exposition et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01363-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-10-24</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 10/24/2013 ORDERING that Plaintiff shall appear for her deposition on 11/6/2013 at 10:00 a.m. Plaintiff shall provide answers to all questions regarding her claims and background, with the exception of any privileged information. Plaintiff shall provide responses to all written discovery, including production of responsive documents, on 11/6/2013 at 10:00 a.m. Failure to comply with this order may result in sanctions, including the possibility that this action may be dismissed. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01363-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-5/mods.xml">
+ <titleInfo>
+  <title>(PS) Lerma v. California Exposition et al</title>
+  <subTitle>ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 12/3/2013 ORDERING that the 12/12/2013 hearing on defendants&apos; 29 motion for summary judgment is VACATED and will be taken under submission after the time has passed for plaintiff&apos;s opposition (and defendants&apos; reply) to be filed. Plaintiff shall file any opposition in accordance with this order, the Federal Rules of Civil Procedure, and the Local Rules by 12/17/2013. Defendants may file a reply brief to plaintiff&apos;s opposition, if any, no later than 12/24/2013. (Zignago, K.)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187887631</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01363_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01363; (PS) Lerma v. California Exposition et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01363-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-12-03</dateIssued>
+  <docketText>ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 12/3/2013 ORDERING that the 12/12/2013 hearing on defendants&apos; 29 motion for summary judgment is VACATED and will be taken under submission after the time has passed for plaintiff&apos;s opposition (and defendants&apos; reply) to be filed. Plaintiff shall file any opposition in accordance with this order, the Federal Rules of Civil Procedure, and the Local Rules by 12/17/2013. Defendants may file a reply brief to plaintiff&apos;s opposition, if any, no later than 12/24/2013. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01363-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-6/mods.xml">
+ <titleInfo>
+  <title>(PS) Lerma v. California Exposition et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 1/2/2014 RECOMMENDING 29 that defendants motion for summary judgment be granted; Referred to Judge Kimberly J. Mueller; Objections due within 14 days after being served with these F &amp; R&apos;s. (Reader, L)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18788762f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01363_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01363; (PS) Lerma v. California Exposition et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01363-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 1/2/2014 RECOMMENDING 29 that defendants motion for summary judgment be granted; Referred to Judge Kimberly J. Mueller; Objections due within 14 days after being served with these F &amp; R&apos;s. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01363-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-7/mods.xml">
+ <titleInfo>
+  <title>(PS) Lerma v. California Exposition et al</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 2/28/14 ORDERING that Defendants&apos; 11/14/13 MOTION for SUMMARY JUDGMENT 29 is GRANTED, and judgment is entered in favor of defendants. CASE CLOSED. (Mena-Sanchez, L)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18788758d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01363_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01363/USCOURTS-caed-2_12-cv-01363-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01363/pdf/USCOURTS-caed-2_12-cv-01363-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01363; (PS) Lerma v. California Exposition et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01363-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-03-03</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 2/28/14 ORDERING that Defendants&apos; 11/14/13 MOTION for SUMMARY JUDGMENT 29 is GRANTED, and judgment is entered in favor of defendants. CASE CLOSED. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+</mods>

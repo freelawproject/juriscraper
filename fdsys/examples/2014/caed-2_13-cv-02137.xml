@@ -1,0 +1,298 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c6907a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02137</identifier>
+<identifier type="local">P0b002ee186c6907a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-02137</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-02137</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-02137</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Dave" fullName="Dave Anderson" lastName="Anderson" role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy Lee Bludworth" lastName="Bludworth" middleName="Lee" role="Plaintiff"></party>
+ <party firstName="Gary" fullName="Gary Catherwoood" lastName="Catherwoood" role="Defendant"></party>
+ <party fullName="City of Stockton" lastName="City of Stockton" role="Defendant"></party>
+ <party fullName="District Attorney of San Joaquin County" lastName="District Attorney of San Joaquin County" role="Defendant"></party>
+ <party firstName="Lester" fullName="Lester Fleming" lastName="Fleming" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Himelblau" lastName="Himelblau" role="Defendant"></party>
+ <party fullName="Kelly" lastName="Kelly" role="Defendant"></party>
+ <party firstName="Marty" fullName="Marty Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="Andrew" fullName="Andrew Quinn" lastName="Quinn" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Saledo" lastName="Saledo" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert C. Wright" lastName="Wright" middleName="C." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Bludworth v. City of Stockton et al</title>
+ <partNumber>2:13-cv-02137</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02137/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-02137;13-2137</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dave Anderson</displayForm>
+ <namePart type="family">Anderson</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy Lee Bludworth</displayForm>
+ <namePart type="family">Bludworth</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Catherwoood</displayForm>
+ <namePart type="family">Catherwoood</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>City of Stockton</displayForm>
+ <namePart type="family">City of Stockton</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>District Attorney of San Joaquin County</displayForm>
+ <namePart type="family">District Attorney of San Joaquin County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lester Fleming</displayForm>
+ <namePart type="family">Fleming</namePart>
+ <namePart type="given">Lester</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Himelblau</displayForm>
+ <namePart type="family">Himelblau</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kelly</displayForm>
+ <namePart type="family">Kelly</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marty Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">Marty</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Andrew Quinn</displayForm>
+ <namePart type="family">Quinn</namePart>
+ <namePart type="given">Andrew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Saledo</displayForm>
+ <namePart type="family">Saledo</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert C. Wright</displayForm>
+ <namePart type="family">Wright</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-02137</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-02137</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Dave" fullName="Dave Anderson" lastName="Anderson" role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy Lee Bludworth" lastName="Bludworth" middleName="Lee" role="Plaintiff"></party>
+ <party firstName="Gary" fullName="Gary Catherwoood" lastName="Catherwoood" role="Defendant"></party>
+ <party fullName="City of Stockton" lastName="City of Stockton" role="Defendant"></party>
+ <party fullName="District Attorney of San Joaquin County" lastName="District Attorney of San Joaquin County" role="Defendant"></party>
+ <party firstName="Lester" fullName="Lester Fleming" lastName="Fleming" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Himelblau" lastName="Himelblau" role="Defendant"></party>
+ <party fullName="Kelly" lastName="Kelly" role="Defendant"></party>
+ <party firstName="Marty" fullName="Marty Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="Andrew" fullName="Andrew Quinn" lastName="Quinn" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Saledo" lastName="Saledo" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert C. Wright" lastName="Wright" middleName="C." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02137-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02137/USCOURTS-caed-2_13-cv-02137-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Bludworth v. City of Stockton et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 10/21/13 ORDERING that 2 Motion to Proceed IFP is GRANTED; Plaintiff is obligated to pay the statutory filing fee of $350.00 for this action. Plaintiff&apos;s complaint is DISMISSED with 30 days to amend.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_13-cv-02137-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75e3f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02137/USCOURTS-caed-2_13-cv-02137-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02137_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02137/USCOURTS-caed-2_13-cv-02137-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02137/pdf/USCOURTS-caed-2_13-cv-02137-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02137; (PC) Bludworth v. City of Stockton et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02137-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-10-22</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 10/21/13 ORDERING that 2 Motion to Proceed IFP is GRANTED; Plaintiff is obligated to pay the statutory filing fee of $350.00 for this action. Plaintiff&apos;s complaint is DISMISSED with 30 days to amend.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02137-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02137/USCOURTS-caed-2_13-cv-02137-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Bludworth v. City of Stockton et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Carolyn K. Delaney on 10/21/13 ORDERING the director of the CDC to collect and forward payment from the prison trust account of Timothy Lee Bludworth to the clerk until the balance of $350 is paid in full. The clerk is directed to serve a copy of this order and the plaintiff&apos;s IFP on the Director of the CDC. The clerk is directed to serve a copy of this order on the financial department of the court. (cc Financial, CDC Prisoner Payment Orders )(Dillon, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_13-cv-02137-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75e40</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02137/USCOURTS-caed-2_13-cv-02137-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02137_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02137/USCOURTS-caed-2_13-cv-02137-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02137/pdf/USCOURTS-caed-2_13-cv-02137-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02137; (PC) Bludworth v. City of Stockton et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02137-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-10-22</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Carolyn K. Delaney on 10/21/13 ORDERING the director of the CDC to collect and forward payment from the prison trust account of Timothy Lee Bludworth to the clerk until the balance of $350 is paid in full. The clerk is directed to serve a copy of this order and the plaintiff&apos;s IFP on the Director of the CDC. The clerk is directed to serve a copy of this order on the financial department of the court. (cc Financial, CDC Prisoner Payment Orders )(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02137-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02137/USCOURTS-caed-2_13-cv-02137-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Bludworth v. City of Stockton et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 01/06/14 recommending that plaintiff&apos;s first amended complaint be dismissed; and this case be closed. Referred to Judge Troy L. Nunley. Objections due within 14 days. (Plummer, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_13-cv-02137-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75e3e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02137/USCOURTS-caed-2_13-cv-02137-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02137_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02137/USCOURTS-caed-2_13-cv-02137-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02137/pdf/USCOURTS-caed-2_13-cv-02137-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02137; (PC) Bludworth v. City of Stockton et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02137-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 01/06/14 recommending that plaintiff&apos;s first amended complaint be dismissed; and this case be closed. Referred to Judge Troy L. Nunley. Objections due within 14 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,455 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee185b13597">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-07-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-07-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02809</identifier>
+<identifier type="local">P0b002ee185b13597</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-07-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-07-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02809</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02809</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02809</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Amador County Child Protective Services" lastName="Amador County Child Protective Services" role="Defendant"></party>
+ <party fullName="Amador County Department of Social Services" lastName="Amador County Department of Social Services" role="Defendant"></party>
+ <party fullName="Amador County Sheriff&apos;s Department" lastName="Amador County Sheriff&apos;s Department" role="Defendant"></party>
+ <party firstName="Debra" fullName="Debra Bowen" lastName="Bowen" role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="C." fullName="C. Z. C." lastName="C." middleName="Z." role="Plaintiff"></party>
+ <party firstName="Cynthia" fullName="Cynthia Curtin" lastName="Curtin" role="Defendant"></party>
+ <party firstName="Jamie" fullName="Jamie Curtin" lastName="Curtin" role="Plaintiff"></party>
+ <party fullName="Department of Health&amp;Human Services" lastName="Department of Health&amp;Human Services" role="Defendant"></party>
+ <party firstName="Jesse" fullName="Jesse Fonbuayna" lastName="Fonbuayna" role="Defendant"></party>
+ <party firstName="Judy" fullName="Judy Harlin" lastName="Harlin" role="Defendant"></party>
+ <party firstName="Lori" fullName="Lori Moni" lastName="Moni" role="Defendant"></party>
+ <party firstName="Lori" fullName="Lori Monnie" lastName="Monnie" role="Defendant"></party>
+ <party fullName="Riddle" lastName="Riddle" role="Defendant"></party>
+ <party firstName="Tracy" fullName="Tracy Russell" lastName="Russell" role="Defendant"></party>
+ <party fullName="State of California" lastName="State of California" role="Defendant"></party>
+ <party firstName="Kori" fullName="Kori Tearpak" lastName="Tearpak" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PS) Curtin v. Curtin et al</title>
+ <partNumber>2:12-cv-02809</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02809/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02809;12-2809</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Amador County Child Protective Services</displayForm>
+ <namePart type="family">Amador County Child Protective Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Amador County Department of Social Services</displayForm>
+ <namePart type="family">Amador County Department of Social Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Amador County Sheriff&apos;s Department</displayForm>
+ <namePart type="family">Amador County Sheriff&apos;s Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Debra Bowen</displayForm>
+ <namePart type="family">Bowen</namePart>
+ <namePart type="given">Debra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jerry Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Jerry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Z. C.</displayForm>
+ <namePart type="family">C.</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cynthia Curtin</displayForm>
+ <namePart type="family">Curtin</namePart>
+ <namePart type="given">Cynthia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jamie Curtin</displayForm>
+ <namePart type="family">Curtin</namePart>
+ <namePart type="given">Jamie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Department of Health&amp;Human Services</displayForm>
+ <namePart type="family">Department of Health&amp;Human Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jesse Fonbuayna</displayForm>
+ <namePart type="family">Fonbuayna</namePart>
+ <namePart type="given">Jesse</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Judy Harlin</displayForm>
+ <namePart type="family">Harlin</namePart>
+ <namePart type="given">Judy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lori Moni</displayForm>
+ <namePart type="family">Moni</namePart>
+ <namePart type="given">Lori</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lori Monnie</displayForm>
+ <namePart type="family">Monnie</namePart>
+ <namePart type="given">Lori</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Riddle</displayForm>
+ <namePart type="family">Riddle</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tracy Russell</displayForm>
+ <namePart type="family">Russell</namePart>
+ <namePart type="given">Tracy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State of California</displayForm>
+ <namePart type="family">State of California</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kori Tearpak</displayForm>
+ <namePart type="family">Tearpak</namePart>
+ <namePart type="given">Kori</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02809</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02809</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party fullName="Amador County Child Protective Services" lastName="Amador County Child Protective Services" role="Defendant"></party>
+ <party fullName="Amador County Department of Social Services" lastName="Amador County Department of Social Services" role="Defendant"></party>
+ <party fullName="Amador County Sheriff&apos;s Department" lastName="Amador County Sheriff&apos;s Department" role="Defendant"></party>
+ <party firstName="Debra" fullName="Debra Bowen" lastName="Bowen" role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="C." fullName="C. Z. C." lastName="C." middleName="Z." role="Plaintiff"></party>
+ <party firstName="Cynthia" fullName="Cynthia Curtin" lastName="Curtin" role="Defendant"></party>
+ <party firstName="Jamie" fullName="Jamie Curtin" lastName="Curtin" role="Plaintiff"></party>
+ <party fullName="Department of Health&amp;Human Services" lastName="Department of Health&amp;Human Services" role="Defendant"></party>
+ <party firstName="Jesse" fullName="Jesse Fonbuayna" lastName="Fonbuayna" role="Defendant"></party>
+ <party firstName="Judy" fullName="Judy Harlin" lastName="Harlin" role="Defendant"></party>
+ <party firstName="Lori" fullName="Lori Moni" lastName="Moni" role="Defendant"></party>
+ <party firstName="Lori" fullName="Lori Monnie" lastName="Monnie" role="Defendant"></party>
+ <party fullName="Riddle" lastName="Riddle" role="Defendant"></party>
+ <party firstName="Tracy" fullName="Tracy Russell" lastName="Russell" role="Defendant"></party>
+ <party fullName="State of California" lastName="State of California" role="Defendant"></party>
+ <party firstName="Kori" fullName="Kori Tearpak" lastName="Tearpak" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02809-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-0/mods.xml">
+ <titleInfo>
+  <title>(PS) Curtin v. Curtin et al</title>
+  <subTitle>ORDER granting 2 Motion to Proceed IFP signed by Magistrate Judge Edmund F. Brennan on 11/20/12. Plaintiff&apos;s complaint is dismissed with leave to amend, as provided in this order. Plaintiff is granted 30 days from the date of service of this order to file an amended complaint. (Kastilahn, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02809-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b1ac6e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02809_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02809/pdf/USCOURTS-caed-2_12-cv-02809-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02809; (PS) Curtin v. Curtin et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02809-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-21</dateIssued>
+  <docketText>ORDER granting 2 Motion to Proceed IFP signed by Magistrate Judge Edmund F. Brennan on 11/20/12. Plaintiff&apos;s complaint is dismissed with leave to amend, as provided in this order. Plaintiff is granted 30 days from the date of service of this order to file an amended complaint. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02809-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-1/mods.xml">
+ <titleInfo>
+  <title>(PS) Curtin v. Curtin et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 1/3/13 recommending that this action be dismissed without prejudice, and that the Clerk be directed to close this case. F&amp;R referred to Chief Judge Morrison C. England, Jr.. Objections to F&amp;R due within fourteen days. (Kaminski, H)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02809-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b1ac6d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02809_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02809/pdf/USCOURTS-caed-2_12-cv-02809-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02809; (PS) Curtin v. Curtin et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02809-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 1/3/13 recommending that this action be dismissed without prejudice, and that the Clerk be directed to close this case. F&amp;R referred to Chief Judge Morrison C. England, Jr.. Objections to F&amp;R due within fourteen days. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02809-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-2/mods.xml">
+ <titleInfo>
+  <title>(PS) Curtin v. Curtin et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/24/2013 VACATING 4 Findings and Recommendations and DENYING as moot 8 Motion to Proceed IFP. The 6 Amended Complaint is DISMISSED with leave to amend. Plaintiff is GRANTED 30 days from the date of this order to file a second amended complaint. (Donati, J)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02809-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b1ac6c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02809_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02809/pdf/USCOURTS-caed-2_12-cv-02809-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02809; (PS) Curtin v. Curtin et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02809-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-24</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/24/2013 VACATING 4 Findings and Recommendations and DENYING as moot 8 Motion to Proceed IFP. The 6 Amended Complaint is DISMISSED with leave to amend. Plaintiff is GRANTED 30 days from the date of this order to file a second amended complaint. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02809-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-3/mods.xml">
+ <titleInfo>
+  <title>(PS) Curtin v. Curtin et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/28/13 ORDERING that Plaintiff&apos;s 1/24/13 filings (documents 11 12 and 13) are STRICKEN; the clerk is directed to re-serve plaintiff with the 1/24/13 9 Order; the 13 Motion to Proceed IFP is DENIED as moot. Plaintiff has until 2/25/13 to file a second amended complaint. (Manzer, C)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02809-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b1abd3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02809_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02809/pdf/USCOURTS-caed-2_12-cv-02809-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02809; (PS) Curtin v. Curtin et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02809-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-28</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/28/13 ORDERING that Plaintiff&apos;s 1/24/13 filings (documents 11 12 and 13) are STRICKEN; the clerk is directed to re-serve plaintiff with the 1/24/13 9 Order; the 13 Motion to Proceed IFP is DENIED as moot. Plaintiff has until 2/25/13 to file a second amended complaint. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02809-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-4/mods.xml">
+ <titleInfo>
+  <title>(PS) Curtin v. Curtin et al</title>
+  <subTitle>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 3/28/2013 GRANTING 18 Request for an additional extension of time to file her second amended complaint. Plaintiff has until 5/3/2013 to file a second amended complaint. It is further RECOMMENDED that 18 Motion for Temporary Restraining Order be denied. Objections due within 14 days after being served with these findings and recommendations. Motion referred to Judge Morrison C. England, Jr. (Donati, J)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02809-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b1ac6a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02809_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02809/pdf/USCOURTS-caed-2_12-cv-02809-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02809; (PS) Curtin v. Curtin et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02809-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-03-28</dateIssued>
+  <docketText>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 3/28/2013 GRANTING 18 Request for an additional extension of time to file her second amended complaint. Plaintiff has until 5/3/2013 to file a second amended complaint. It is further RECOMMENDED that 18 Motion for Temporary Restraining Order be denied. Objections due within 14 days after being served with these findings and recommendations. Motion referred to Judge Morrison C. England, Jr. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02809-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-5/mods.xml">
+ <titleInfo>
+  <title>(PS) Curtin v. Curtin et al</title>
+  <subTitle>ORDER adopting 19 FINDINGS AND RECOMMENDATIONS IN FULL signed by Chief Judge Morrison C. England, Jr on 4/30/13: Plaintiff&apos;s Motion for a Temporary Restraining Order 18 is DENIED. (Kaminski, H)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02809-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b1ac6f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02809_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02809/pdf/USCOURTS-caed-2_12-cv-02809-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02809; (PS) Curtin v. Curtin et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02809-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-05-02</dateIssued>
+  <docketText>ORDER adopting 19 FINDINGS AND RECOMMENDATIONS IN FULL signed by Chief Judge Morrison C. England, Jr on 4/30/13: Plaintiff&apos;s Motion for a Temporary Restraining Order 18 is DENIED. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02809-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-6/mods.xml">
+ <titleInfo>
+  <title>(PS) Curtin v. Curtin et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 7/25/13 RECOMMENDING that Plaintiff&apos;s 20 third amended complaint be dismissed without leave to amend; and the Clerk be directed to close this case. Within 14 days after being served with these findings and recommendations, any party may file written objections with the court and serve a copy on all parties. Matter referred to Judge Morrison C. England, Jr.. (Kastilahn, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02809-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee185b1ac6b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02809_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02809/USCOURTS-caed-2_12-cv-02809-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02809/pdf/USCOURTS-caed-2_12-cv-02809-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02809; (PS) Curtin v. Curtin et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02809-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-07-26</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 7/25/13 RECOMMENDING that Plaintiff&apos;s 20 third amended complaint be dismissed without leave to amend; and the Clerk be directed to close this case. Within 14 days after being served with these findings and recommendations, any party may file written objections with the court and serve a copy on all parties. Matter referred to Judge Morrison C. England, Jr.. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

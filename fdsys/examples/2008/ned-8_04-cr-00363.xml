@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817592cf">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00363</identifier>
+<identifier type="local">P0b002ee1817592cf</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_04-cr-00363</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cr-00363</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cr-00363</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Phillip" fullName="Phillip D. Hatten" lastName="Hatten" middleName="D." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Hatten</title>
+ <partNumber>8:04-cr-00363</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00363/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:04-cr-00363;04-363</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Phillip D. Hatten</displayForm>
+ <namePart type="family">Hatten</namePart>
+ <namePart type="given">Phillip</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cr-00363</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cr-00363</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Phillip" fullName="Phillip D. Hatten" lastName="Hatten" middleName="D." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00363-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Hatten</title>
+  <subTitle>JUDGMENT as to Phillip D. Hatten (1), Count 1, The defendant pleaded guilty to count I of the Indictment after a plea of not guilty and sentenced to a term of 30 months in the Bureau of Prisons followed by 3 years of supervised release. $100 special assessment., defendant remanded to the custody of the US Marshal. as to defendant(s) Phillip D. Hatten. Signed by Judge Joseph F. Bataillon on 5/10/2005. (5 cert copies to USM) (PCV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00363-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181790067</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-0</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00363_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00363/pdf/USCOURTS-ned-8_04-cr-00363-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00363; USA v. Hatten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00363-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-10</dateIssued>
+  <docketText>JUDGMENT as to Phillip D. Hatten (1), Count 1, The defendant pleaded guilty to count I of the Indictment after a plea of not guilty and sentenced to a term of 30 months in the Bureau of Prisons followed by 3 years of supervised release. $100 special assessment., defendant remanded to the custody of the US Marshal. as to defendant(s) Phillip D. Hatten. Signed by Judge Joseph F. Bataillon on 5/10/2005. (5 cert copies to USM) (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00363-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Hatten</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Phillip D. Hatten - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00363-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181790027</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-1</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00363_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00363/pdf/USCOURTS-ned-8_04-cr-00363-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00363; USA v. Hatten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00363-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-06-12</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Phillip D. Hatten - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00363-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Hatten</title>
+  <subTitle>ORDER as to defendant Phillip D. Hatten. A final dispositional hearing will be held before Chief Judge Joseph F. Bataillon at 1:30 p.m. on 07/20/2007. The government&apos;s motion for detention of Phillip D. Hatten is held in abeyance pending the defendant&apos;s coming into federal custody. The U.S. Marshal is authorized to return the defendant to the custody of Nebraska state authorities. Ordered by Magistrate Judge Thomas D. Thalken. Certified copy to marshal. (MBB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00363-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18179002b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-2</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00363_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00363/pdf/USCOURTS-ned-8_04-cr-00363-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00363; USA v. Hatten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00363-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-06-12</dateIssued>
+  <docketText>ORDER as to defendant Phillip D. Hatten. A final dispositional hearing will be held before Chief Judge Joseph F. Bataillon at 1:30 p.m. on 07/20/2007. The government&apos;s motion for detention of Phillip D. Hatten is held in abeyance pending the defendant&apos;s coming into federal custody. The U.S. Marshal is authorized to return the defendant to the custody of Nebraska state authorities. Ordered by Magistrate Judge Thomas D. Thalken. Certified copy to marshal. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00363-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Hatten</title>
+  <subTitle>JUDGMENT (For Revocation of Probation or Supervised Release) as to Phillip D. Hatten. The defendant admits allegation 2 and is sentenced to the custody of the Bureau of Prisons for 24 months; and shall be given credit for time served from 5/17/07. No supervised release to follow. $100.00 Special Assessment ($50.00 balance remains due and payable). Allegations 1, 3,4,5 are withdrawn on the motion of the government. Defendant remanded to the custody of the U.S. Marshal as to defendant Phillip D. Hatten. Ordered by Judge Joseph F. Bataillon. (KBJ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00363-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181790029</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-3</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00363_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00363/pdf/USCOURTS-ned-8_04-cr-00363-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00363; USA v. Hatten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00363-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-08-13</dateIssued>
+  <docketText>JUDGMENT (For Revocation of Probation or Supervised Release) as to Phillip D. Hatten. The defendant admits allegation 2 and is sentenced to the custody of the Bureau of Prisons for 24 months; and shall be given credit for time served from 5/17/07. No supervised release to follow. $100.00 Special Assessment ($50.00 balance remains due and payable). Allegations 1, 3,4,5 are withdrawn on the motion of the government. Defendant remanded to the custody of the U.S. Marshal as to defendant Phillip D. Hatten. Ordered by Judge Joseph F. Bataillon. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00363-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Hatten</title>
+  <subTitle>AMENDED JUDGMENT for Revocation of Supervised Release as to Phillip D. Hatten (1). The defendant admits allegation 2 and is sentenced to the custody of the Bureau of Prisons for 24 months and shall be given credit for time served from 5/17/07. No term of supervised release to follow. $100.00 Special Assessment ($50.00 balance remains due and payable). Allegations 1, 3,4,5 are withdrawn on the motion of the government, as to defendant Phillip D. Hatten. Ordered by Judge Joseph F. Bataillon. (4 Certified copies to USM)(JAE, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00363-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18179002a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-4</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00363_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00363/pdf/USCOURTS-ned-8_04-cr-00363-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00363; USA v. Hatten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00363-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-10-18</dateIssued>
+  <docketText>AMENDED JUDGMENT for Revocation of Supervised Release as to Phillip D. Hatten (1). The defendant admits allegation 2 and is sentenced to the custody of the Bureau of Prisons for 24 months and shall be given credit for time served from 5/17/07. No term of supervised release to follow. $100.00 Special Assessment ($50.00 balance remains due and payable). Allegations 1, 3,4,5 are withdrawn on the motion of the government, as to defendant Phillip D. Hatten. Ordered by Judge Joseph F. Bataillon. (4 Certified copies to USM)(JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00363-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Hatten</title>
+  <subTitle>ORDER - Pursuant to NECivR 79.1(f) or NECrimR 55.1(g), counsel for the government shall either 1) withdraw the following exhibits previously submitted in this matter within 15 calendar days of the date of this order, or 2) show cause why the exhibits should not be destroyed. If counsel fails to withdraw these exhibits as directed or to show cause why the exhibits should not be destroyed, the clerk&apos;s office is directed to destroy the listed exhibits without further notice to the parties or order from the court as to defendant Phillip D. Hatten. Ordered by Chief Judge Joseph F. Bataillon. (TJS)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00363-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181790028</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-5</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00363_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00363/USCOURTS-ned-8_04-cr-00363-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00363/pdf/USCOURTS-ned-8_04-cr-00363-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00363; USA v. Hatten; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00363-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-01-08</dateIssued>
+  <docketText>ORDER - Pursuant to NECivR 79.1(f) or NECrimR 55.1(g), counsel for the government shall either 1) withdraw the following exhibits previously submitted in this matter within 15 calendar days of the date of this order, or 2) show cause why the exhibits should not be destroyed. If counsel fails to withdraw these exhibits as directed or to show cause why the exhibits should not be destroyed, the clerk&apos;s office is directed to destroy the listed exhibits without further notice to the parties or order from the court as to defendant Phillip D. Hatten. Ordered by Chief Judge Joseph F. Bataillon. (TJS)</docketText>
+</extension>
+</relatedItem>
+</mods>

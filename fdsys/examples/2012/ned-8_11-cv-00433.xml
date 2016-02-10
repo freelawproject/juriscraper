@@ -1,0 +1,254 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee182030e9f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-03-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-03-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00433</identifier>
+<identifier type="local">P0b002ee182030e9f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-03-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-03-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cv-00433</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00433</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00433</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Fed. Question</cause>
+ <party fullName="Luis" lastName="Luis" role="Defendant"></party>
+ <party fullName="Mayo" lastName="Mayo" role="Defendant"></party>
+ <party firstName="Billy" fullName="Billy Tyler" lastName="Tyler" role="Plaintiff"></party>
+ <party fullName="U.S. Marshall" lastName="U.S. Marshall" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Tyler v. Luis et al</title>
+ <partNumber>8:11-cv-00433</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00433/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cv-00433;11-433</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Luis</displayForm>
+ <namePart type="family">Luis</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mayo</displayForm>
+ <namePart type="family">Mayo</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Billy Tyler</displayForm>
+ <namePart type="family">Tyler</namePart>
+ <namePart type="given">Billy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Marshall</displayForm>
+ <namePart type="family">U.S. Marshall</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00433</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00433</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Fed. Question</cause>
+ <party fullName="Luis" lastName="Luis" role="Defendant"></party>
+ <party fullName="Mayo" lastName="Mayo" role="Defendant"></party>
+ <party firstName="Billy" fullName="Billy Tyler" lastName="Tyler" role="Plaintiff"></party>
+ <party fullName="U.S. Marshall" lastName="U.S. Marshall" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00433-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00433/USCOURTS-ned-8_11-cv-00433-0/mods.xml">
+ <titleInfo>
+  <title>Tyler v. Luis et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding Complaint1 filed by Billy Tyler. Plaintiff has failed to include the $350.00 filing fee. Plaintiff is directed to correct the above-listed technical defect in the Complaint on or before January 22, 2012. Failure to comply with this Memorandum and Order will result in dismissal ofthis matter without further notice. ***Pro Se Case Management Deadline set for 1/22/2012: deadline for payment or filing of IFP application. Ordered by Chief Judge Laurie Smith Camp. (Copy mailed to pro se party with form)(JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00433-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18204792b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00433/USCOURTS-ned-8_11-cv-00433-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00433_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00433/USCOURTS-ned-8_11-cv-00433-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00433/pdf/USCOURTS-ned-8_11-cv-00433-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00433; Tyler v. Luis et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00433-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-12-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding Complaint1 filed by Billy Tyler. Plaintiff has failed to include the $350.00 filing fee. Plaintiff is directed to correct the above-listed technical defect in the Complaint on or before January 22, 2012. Failure to comply with this Memorandum and Order will result in dismissal ofthis matter without further notice. ***Pro Se Case Management Deadline set for 1/22/2012: deadline for payment or filing of IFP application. Ordered by Chief Judge Laurie Smith Camp. (Copy mailed to pro se party with form)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00433-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00433/USCOURTS-ned-8_11-cv-00433-1/mods.xml">
+ <titleInfo>
+  <title>Tyler v. Luis et al</title>
+  <subTitle>MEMORANDUM AND ORDER provisionally granting 5 Motion for Leave to Proceed in forma pauperis, and the Complaint shall be filed without payment of fees. Ordered by Chief Judge Laurie Smith Camp. (Copy mailed/e-mailed to pro se party)(GJG)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00433-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18204792a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00433/USCOURTS-ned-8_11-cv-00433-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00433_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00433/USCOURTS-ned-8_11-cv-00433-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00433/pdf/USCOURTS-ned-8_11-cv-00433-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00433; Tyler v. Luis et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00433-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER provisionally granting 5 Motion for Leave to Proceed in forma pauperis, and the Complaint shall be filed without payment of fees. Ordered by Chief Judge Laurie Smith Camp. (Copy mailed/e-mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00433-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00433/USCOURTS-ned-8_11-cv-00433-2/mods.xml">
+ <titleInfo>
+  <title>Tyler v. Luis et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff&apos;s Complaint fails to state a claim upon which relief may be granted. However, Plaintiff shall have until March 5, 2012, to amend his Complaint to clearly state a claim upon which relief may be granted, in accordance with this Memorandum and Order. If Plaintiff fails to file an amended complaint, Plaintiff&apos;s current Complaint (Filing No. 1) will be dismissed without prejudice and without further notice for failure to state a claim upon which relief may be granted. In the event that Plaintiff files an amended complaint, Plaintiff shall restate the allegations of the current Complaint (Filing No. 1), and any new allegations. Failure to consolidate all claims into one document will result in the abandonment of claims. The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: Review amended complaint on March 5, 2012; dismiss if not filed. Ordered by Chief Judge Laurie Smith Camp. (Copy mailed/e-mailed to pro se party)(GJG)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00433-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18204792c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00433/USCOURTS-ned-8_11-cv-00433-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00433_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00433/USCOURTS-ned-8_11-cv-00433-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00433/pdf/USCOURTS-ned-8_11-cv-00433-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00433; Tyler v. Luis et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00433-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-02-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff&apos;s Complaint fails to state a claim upon which relief may be granted. However, Plaintiff shall have until March 5, 2012, to amend his Complaint to clearly state a claim upon which relief may be granted, in accordance with this Memorandum and Order. If Plaintiff fails to file an amended complaint, Plaintiff&apos;s current Complaint (Filing No. 1) will be dismissed without prejudice and without further notice for failure to state a claim upon which relief may be granted. In the event that Plaintiff files an amended complaint, Plaintiff shall restate the allegations of the current Complaint (Filing No. 1), and any new allegations. Failure to consolidate all claims into one document will result in the abandonment of claims. The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: Review amended complaint on March 5, 2012; dismiss if not filed. Ordered by Chief Judge Laurie Smith Camp. (Copy mailed/e-mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00433-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00433/USCOURTS-ned-8_11-cv-00433-3/mods.xml">
+ <titleInfo>
+  <title>Tyler v. Luis et al</title>
+  <subTitle>MEMORANDUM AND ORDER - This matter is dismissed without prejudice because Plaintiff failed to prosecute this matter diligently and failed to comply with this court&apos;s orders. A separate judgment will be entered in accordance with this Memorandum and Order Ordered by Chief Judge Laurie Smith Camp. (Copy mailed to pro se party)(GJG)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00433-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18204792d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00433/USCOURTS-ned-8_11-cv-00433-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00433_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00433/USCOURTS-ned-8_11-cv-00433-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00433/pdf/USCOURTS-ned-8_11-cv-00433-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00433; Tyler v. Luis et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00433-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-03-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - This matter is dismissed without prejudice because Plaintiff failed to prosecute this matter diligently and failed to comply with this court&apos;s orders. A separate judgment will be entered in accordance with this Memorandum and Order Ordered by Chief Judge Laurie Smith Camp. (Copy mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+</mods>

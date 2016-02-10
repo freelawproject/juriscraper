@@ -1,0 +1,488 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813ac6f6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_94-cr-00497</identifier>
+<identifier type="local">P0b002ee1813ac6f6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_94-cr-00497</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_94-cr-00497</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:94-cr-00497</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="FRANK" fullName="FRANK AYALA" lastName="AYALA" role="Defendant"></party>
+ <party firstName="EDWIN" fullName="EDWIN BARETTO" lastName="BARETTO" role="Defendant"></party>
+ <party firstName="DIEGO" fullName="DIEGO CACERES-PEVA" lastName="CACERES-PEVA" role="Defendant"></party>
+ <party fullName="CHAO" lastName="CHAO" role="Defendant"></party>
+ <party fullName="COCKEYE" lastName="COCKEYE" role="Defendant"></party>
+ <party fullName="CONO" lastName="CONO" role="Defendant"></party>
+ <party fullName="COOGIE" lastName="COOGIE" role="Defendant"></party>
+ <party firstName="ANTONIO" fullName="ANTONIO COREA" lastName="COREA" role="Defendant"></party>
+ <party firstName="JOHN" fullName="JOHN DOE" lastName="DOE" role="Defendant"></party>
+ <party fullName="EPPIE" lastName="EPPIE" role="Defendant"></party>
+ <party firstName="JOSE" fullName="JOSE FIGUEROA" lastName="FIGUEROA" role="Defendant"></party>
+ <party fullName="FRANKIE" lastName="FRANKIE" role="Defendant"></party>
+ <party fullName="FREDDIE" lastName="FREDDIE" role="Defendant"></party>
+ <party firstName="JAZZ" fullName="JAZZ HAYWOOD" lastName="HAYWOOD" role="Defendant"></party>
+ <party fullName="KUKA" lastName="KUKA" role="Defendant"></party>
+ <party fullName="LITTLE BENJI" lastName="LITTLE BENJI" role="Defendant"></party>
+ <party fullName="LITTLE PETE" lastName="LITTLE PETE" role="Defendant"></party>
+ <party firstName="SANTOS" fullName="SANTOS NEGRON" lastName="NEGRON" role="Defendant"></party>
+ <party fullName="NELSON" lastName="NELSON" role="Defendant"></party>
+ <party fullName="NINO" lastName="NINO" role="Defendant"></party>
+ <party firstName="JOSE" fullName="JOSE NUNEZ" lastName="NUNEZ" role="Defendant"></party>
+ <party firstName="ALFONSO" fullName="ALFONSO ORTIZ" lastName="ORTIZ" role="Defendant"></party>
+ <party firstName="ANGEL" fullName="ANGEL ORTIZ" lastName="ORTIZ" role="Defendant"></party>
+ <party firstName="IVELIESSE" fullName="IVELIESSE ORTIZ" lastName="ORTIZ" role="Defendant"></party>
+ <party firstName="MACHO" fullName="MACHO ORTIZ" lastName="ORTIZ" role="Defendant"></party>
+ <party firstName="MARIA" fullName="MARIA ORTIZ" lastName="ORTIZ" role="Defendant"></party>
+ <party firstName="WILFREDO" fullName="WILFREDO ORTIZ" lastName="ORTIZ" role="Defendant"></party>
+ <party fullName="PEBBLES" lastName="PEBBLES" role="Defendant"></party>
+ <party fullName="PITO" lastName="PITO" role="Defendant"></party>
+ <party firstName="RODOLFO" fullName="RODOLFO RAMIREZ-SANTIESTEBAN" lastName="RAMIREZ-SANTIESTEBAN" role="Defendant"></party>
+ <party firstName="JOHNNY" fullName="JOHNNY RIVERA" lastName="RIVERA" role="Defendant"></party>
+ <party firstName="EPIFANO" fullName="EPIFANO RODRIGUEZ" lastName="RODRIGUEZ" role="Defendant"></party>
+ <party firstName="JOSE" fullName="JOSE RODRIGUEZ" lastName="RODRIGUEZ" role="Defendant"></party>
+ <party firstName="ELIAS" fullName="ELIAS ROJAS" lastName="ROJAS" role="Defendant"></party>
+ <party firstName="ISIDRO" fullName="ISIDRO ROSADO" lastName="ROSADO" role="Defendant"></party>
+ <party firstName="BENJAMIN" fullName="BENJAMIN ROSADO-REYES" lastName="ROSADO-REYES" role="Defendant"></party>
+ <party firstName="FRANCISCO" fullName="FRANCISCO SANTO" lastName="SANTO" role="Defendant"></party>
+ <party fullName="TABU" lastName="TABU" role="Defendant"></party>
+ <party firstName="FELIX" fullName="FELIX TORRES" lastName="TORRES" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. RAMIREZ-SANTIESTEBAN, et al</title>
+ <partNumber>2:94-cr-00497</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_94-cr-00497/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:94-cr-00497;94-497</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>FRANK AYALA</displayForm>
+ <namePart type="family">AYALA</namePart>
+ <namePart type="given">FRANK</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>EDWIN BARETTO</displayForm>
+ <namePart type="family">BARETTO</namePart>
+ <namePart type="given">EDWIN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DIEGO CACERES-PEVA</displayForm>
+ <namePart type="family">CACERES-PEVA</namePart>
+ <namePart type="given">DIEGO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CHAO</displayForm>
+ <namePart type="family">CHAO</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>COCKEYE</displayForm>
+ <namePart type="family">COCKEYE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CONO</displayForm>
+ <namePart type="family">CONO</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>COOGIE</displayForm>
+ <namePart type="family">COOGIE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ANTONIO COREA</displayForm>
+ <namePart type="family">COREA</namePart>
+ <namePart type="given">ANTONIO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOHN DOE</displayForm>
+ <namePart type="family">DOE</namePart>
+ <namePart type="given">JOHN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>EPPIE</displayForm>
+ <namePart type="family">EPPIE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOSE FIGUEROA</displayForm>
+ <namePart type="family">FIGUEROA</namePart>
+ <namePart type="given">JOSE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>FRANKIE</displayForm>
+ <namePart type="family">FRANKIE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>FREDDIE</displayForm>
+ <namePart type="family">FREDDIE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JAZZ HAYWOOD</displayForm>
+ <namePart type="family">HAYWOOD</namePart>
+ <namePart type="given">JAZZ</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>KUKA</displayForm>
+ <namePart type="family">KUKA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LITTLE BENJI</displayForm>
+ <namePart type="family">LITTLE BENJI</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LITTLE PETE</displayForm>
+ <namePart type="family">LITTLE PETE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SANTOS NEGRON</displayForm>
+ <namePart type="family">NEGRON</namePart>
+ <namePart type="given">SANTOS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>NELSON</displayForm>
+ <namePart type="family">NELSON</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>NINO</displayForm>
+ <namePart type="family">NINO</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOSE NUNEZ</displayForm>
+ <namePart type="family">NUNEZ</namePart>
+ <namePart type="given">JOSE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ALFONSO ORTIZ</displayForm>
+ <namePart type="family">ORTIZ</namePart>
+ <namePart type="given">ALFONSO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ANGEL ORTIZ</displayForm>
+ <namePart type="family">ORTIZ</namePart>
+ <namePart type="given">ANGEL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>IVELIESSE ORTIZ</displayForm>
+ <namePart type="family">ORTIZ</namePart>
+ <namePart type="given">IVELIESSE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MACHO ORTIZ</displayForm>
+ <namePart type="family">ORTIZ</namePart>
+ <namePart type="given">MACHO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MARIA ORTIZ</displayForm>
+ <namePart type="family">ORTIZ</namePart>
+ <namePart type="given">MARIA</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>WILFREDO ORTIZ</displayForm>
+ <namePart type="family">ORTIZ</namePart>
+ <namePart type="given">WILFREDO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PEBBLES</displayForm>
+ <namePart type="family">PEBBLES</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PITO</displayForm>
+ <namePart type="family">PITO</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RODOLFO RAMIREZ-SANTIESTEBAN</displayForm>
+ <namePart type="family">RAMIREZ-SANTIESTEBAN</namePart>
+ <namePart type="given">RODOLFO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOHNNY RIVERA</displayForm>
+ <namePart type="family">RIVERA</namePart>
+ <namePart type="given">JOHNNY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>EPIFANO RODRIGUEZ</displayForm>
+ <namePart type="family">RODRIGUEZ</namePart>
+ <namePart type="given">EPIFANO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOSE RODRIGUEZ</displayForm>
+ <namePart type="family">RODRIGUEZ</namePart>
+ <namePart type="given">JOSE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ELIAS ROJAS</displayForm>
+ <namePart type="family">ROJAS</namePart>
+ <namePart type="given">ELIAS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ISIDRO ROSADO</displayForm>
+ <namePart type="family">ROSADO</namePart>
+ <namePart type="given">ISIDRO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>BENJAMIN ROSADO-REYES</displayForm>
+ <namePart type="family">ROSADO-REYES</namePart>
+ <namePart type="given">BENJAMIN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>FRANCISCO SANTO</displayForm>
+ <namePart type="family">SANTO</namePart>
+ <namePart type="given">FRANCISCO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TABU</displayForm>
+ <namePart type="family">TABU</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>FELIX TORRES</displayForm>
+ <namePart type="family">TORRES</namePart>
+ <namePart type="given">FELIX</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_94-cr-00497</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:94-cr-00497</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="FRANK" fullName="FRANK AYALA" lastName="AYALA" role="Defendant"></party>
+ <party firstName="EDWIN" fullName="EDWIN BARETTO" lastName="BARETTO" role="Defendant"></party>
+ <party firstName="DIEGO" fullName="DIEGO CACERES-PEVA" lastName="CACERES-PEVA" role="Defendant"></party>
+ <party fullName="CHAO" lastName="CHAO" role="Defendant"></party>
+ <party fullName="COCKEYE" lastName="COCKEYE" role="Defendant"></party>
+ <party fullName="CONO" lastName="CONO" role="Defendant"></party>
+ <party fullName="COOGIE" lastName="COOGIE" role="Defendant"></party>
+ <party firstName="ANTONIO" fullName="ANTONIO COREA" lastName="COREA" role="Defendant"></party>
+ <party firstName="JOHN" fullName="JOHN DOE" lastName="DOE" role="Defendant"></party>
+ <party fullName="EPPIE" lastName="EPPIE" role="Defendant"></party>
+ <party firstName="JOSE" fullName="JOSE FIGUEROA" lastName="FIGUEROA" role="Defendant"></party>
+ <party fullName="FRANKIE" lastName="FRANKIE" role="Defendant"></party>
+ <party fullName="FREDDIE" lastName="FREDDIE" role="Defendant"></party>
+ <party firstName="JAZZ" fullName="JAZZ HAYWOOD" lastName="HAYWOOD" role="Defendant"></party>
+ <party fullName="KUKA" lastName="KUKA" role="Defendant"></party>
+ <party fullName="LITTLE BENJI" lastName="LITTLE BENJI" role="Defendant"></party>
+ <party fullName="LITTLE PETE" lastName="LITTLE PETE" role="Defendant"></party>
+ <party firstName="SANTOS" fullName="SANTOS NEGRON" lastName="NEGRON" role="Defendant"></party>
+ <party fullName="NELSON" lastName="NELSON" role="Defendant"></party>
+ <party fullName="NINO" lastName="NINO" role="Defendant"></party>
+ <party firstName="JOSE" fullName="JOSE NUNEZ" lastName="NUNEZ" role="Defendant"></party>
+ <party firstName="ALFONSO" fullName="ALFONSO ORTIZ" lastName="ORTIZ" role="Defendant"></party>
+ <party firstName="ANGEL" fullName="ANGEL ORTIZ" lastName="ORTIZ" role="Defendant"></party>
+ <party firstName="IVELIESSE" fullName="IVELIESSE ORTIZ" lastName="ORTIZ" role="Defendant"></party>
+ <party firstName="MACHO" fullName="MACHO ORTIZ" lastName="ORTIZ" role="Defendant"></party>
+ <party firstName="MARIA" fullName="MARIA ORTIZ" lastName="ORTIZ" role="Defendant"></party>
+ <party firstName="WILFREDO" fullName="WILFREDO ORTIZ" lastName="ORTIZ" role="Defendant"></party>
+ <party fullName="PEBBLES" lastName="PEBBLES" role="Defendant"></party>
+ <party fullName="PITO" lastName="PITO" role="Defendant"></party>
+ <party firstName="RODOLFO" fullName="RODOLFO RAMIREZ-SANTIESTEBAN" lastName="RAMIREZ-SANTIESTEBAN" role="Defendant"></party>
+ <party firstName="JOHNNY" fullName="JOHNNY RIVERA" lastName="RIVERA" role="Defendant"></party>
+ <party firstName="EPIFANO" fullName="EPIFANO RODRIGUEZ" lastName="RODRIGUEZ" role="Defendant"></party>
+ <party firstName="JOSE" fullName="JOSE RODRIGUEZ" lastName="RODRIGUEZ" role="Defendant"></party>
+ <party firstName="ELIAS" fullName="ELIAS ROJAS" lastName="ROJAS" role="Defendant"></party>
+ <party firstName="ISIDRO" fullName="ISIDRO ROSADO" lastName="ROSADO" role="Defendant"></party>
+ <party firstName="BENJAMIN" fullName="BENJAMIN ROSADO-REYES" lastName="ROSADO-REYES" role="Defendant"></party>
+ <party firstName="FRANCISCO" fullName="FRANCISCO SANTO" lastName="SANTO" role="Defendant"></party>
+ <party fullName="TABU" lastName="TABU" role="Defendant"></party>
+ <party firstName="FELIX" fullName="FELIX TORRES" lastName="TORRES" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_94-cr-00497-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_94-cr-00497/USCOURTS-paed-2_94-cr-00497-0/mods.xml">
+ <titleInfo>
+  <title>USA v. RAMIREZ-SANTIESTEBAN, et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS AS TO FRANCISCO SANTO RE: 536 (PRO SE) MOTION TO VCATE/SET ASIDE/CORRECT SENTENCE (2255) UNDER 28 U.S.C. 2255 (CIVIL ACTION 04-3909), IT IS RECOMMENDED THAT MOVANT&apos;S PROCEDURALLY DEFAULTED CLAIM, GROUND 7, BE DISMISSED, WITHOUT AN EVIDENTIARY HEARING. ALL OTHER CLAIMS LACK MERIT AND, HENCE, SHOULD BE DENIED., ETC. THERE IS NO PRBABLE CAUSE TO ISSUE A CERTIFICATE OF APPEALABILITY. OBJECTIONS TO R&amp;R DUE BY 2/8/2006. Signed by Judge CAROL SANDRA MOORE WELLS on 1/20/06.(Attachments: #(1) PROPOSED ORDER)1/20/06 Entered and Copies Mailed, E-Mailed. (ke)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_94-cr-00497-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813b6b92</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_94-cr-00497/USCOURTS-paed-2_94-cr-00497-0</identifier>
+ <identifier type="former granule identifier">paed-2_94-cr-00497_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_94-cr-00497/USCOURTS-paed-2_94-cr-00497-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_94-cr-00497/pdf/USCOURTS-paed-2_94-cr-00497-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:94-cr-00497; USA v. RAMIREZ-SANTIESTEBAN, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_94-cr-00497-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-20</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS AS TO FRANCISCO SANTO RE: 536 (PRO SE) MOTION TO VCATE/SET ASIDE/CORRECT SENTENCE (2255) UNDER 28 U.S.C. 2255 (CIVIL ACTION 04-3909), IT IS RECOMMENDED THAT MOVANT&apos;S PROCEDURALLY DEFAULTED CLAIM, GROUND 7, BE DISMISSED, WITHOUT AN EVIDENTIARY HEARING. ALL OTHER CLAIMS LACK MERIT AND, HENCE, SHOULD BE DENIED., ETC. THERE IS NO PRBABLE CAUSE TO ISSUE A CERTIFICATE OF APPEALABILITY. OBJECTIONS TO R&amp;R DUE BY 2/8/2006. Signed by Judge CAROL SANDRA MOORE WELLS on 1/20/06.(Attachments: #(1) PROPOSED ORDER)1/20/06 Entered and Copies Mailed, E-Mailed. (ke)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,238 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee182f68d1a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-07-26</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-07-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cr-20078</identifier>
+<identifier type="local">P0b002ee182f68d1a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-07-26</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-07-26</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_11-cr-20078</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_11-cr-20078</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:11-cr-20078</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Vanessa" fullName="Vanessa Dowell" lastName="Dowell" role="Defendant"></party>
+ <party firstName="Carol" fullName="Carol Gant" lastName="Gant" role="Defendant"></party>
+ <party firstName="Fatima" fullName="Fatima Hassan" lastName="Hassan" role="Defendant"></party>
+ <party firstName="Victor" fullName="Victor Jayasundera" lastName="Jayasundera" role="Defendant"></party>
+ <party firstName="Tariq" fullName="Tariq Mahmud" lastName="Mahmud" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Mahmud et al</title>
+ <partNumber>2:11-cr-20078</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cr-20078/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cr-20078;11-20078</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Vanessa Dowell</displayForm>
+ <namePart type="family">Dowell</namePart>
+ <namePart type="given">Vanessa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Carol Gant</displayForm>
+ <namePart type="family">Gant</namePart>
+ <namePart type="given">Carol</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fatima Hassan</displayForm>
+ <namePart type="family">Hassan</namePart>
+ <namePart type="given">Fatima</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Victor Jayasundera</displayForm>
+ <namePart type="family">Jayasundera</namePart>
+ <namePart type="given">Victor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tariq Mahmud</displayForm>
+ <namePart type="family">Mahmud</namePart>
+ <namePart type="given">Tariq</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_11-cr-20078</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:11-cr-20078</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Vanessa" fullName="Vanessa Dowell" lastName="Dowell" role="Defendant"></party>
+ <party firstName="Carol" fullName="Carol Gant" lastName="Gant" role="Defendant"></party>
+ <party firstName="Fatima" fullName="Fatima Hassan" lastName="Hassan" role="Defendant"></party>
+ <party firstName="Victor" fullName="Victor Jayasundera" lastName="Jayasundera" role="Defendant"></party>
+ <party firstName="Tariq" fullName="Tariq Mahmud" lastName="Mahmud" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_11-cr-20078-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cr-20078/USCOURTS-mied-2_11-cr-20078-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Mahmud et al</title>
+  <subTitle>ORDER Granting Attorney Conducted Voir Dire 75 Motion as to Tariq Mahmud (1), Victor Jayasundera (3)and Denying Supplemental Jury Questionnaire 80 Motion as to Tariq Mahmud (1), Victor Jayasundera (3). Signed by Magistrate Judge Mark A. Randon. (Miles, M)ORDER Granting Attorney Conducted Voir Dire 75 Motion as to Tariq Mahmud (1), Victor Jayasundera (3)and Denying Supplemental Jury Questionnaire 80 Motion as to Tariq Mahmud (1), Victor Jayasundera (3). Signed by Magistrate Judge Mark A. Randon. (Miles, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_11-cr-20078-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182f6f74a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cr-20078/USCOURTS-mied-2_11-cr-20078-0</identifier>
+ <identifier type="former granule identifier">mied-2_11-cr-20078_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cr-20078/USCOURTS-mied-2_11-cr-20078-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cr-20078/pdf/USCOURTS-mied-2_11-cr-20078-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-20078; United States of America v. Mahmud et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_11-cr-20078-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-12-15</dateIssued>
+  <docketText>ORDER Granting Attorney Conducted Voir Dire 75 Motion as to Tariq Mahmud (1), Victor Jayasundera (3)and Denying Supplemental Jury Questionnaire 80 Motion as to Tariq Mahmud (1), Victor Jayasundera (3). Signed by Magistrate Judge Mark A. Randon. (Miles, M)ORDER Granting Attorney Conducted Voir Dire 75 Motion as to Tariq Mahmud (1), Victor Jayasundera (3)and Denying Supplemental Jury Questionnaire 80 Motion as to Tariq Mahmud (1), Victor Jayasundera (3). Signed by Magistrate Judge Mark A. Randon. (Miles, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_11-cr-20078-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cr-20078/USCOURTS-mied-2_11-cr-20078-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Mahmud et al</title>
+  <subTitle>ORDER Denying Motions re: denying 69 Motion in Limine as to Tariq Mahmud (1); denying 94 Motion in Limine as to Tariq Mahmud (1); denying 98 Motion for Discovery as to Tariq Mahmud (1); denying 79 Motion as to Victor Jayasundera (3); denying 96 Motion to Dismiss as to Victor Jayasundera (3); denying 97 Motion for Bill of Particulars as to Victor Jayasundera (3); denying 100 Motion to Sever Defendant as to Victor Jayasundera (3). Signed by District Judge Avern Cohn. (JOwe)ORDER Denying Motions re: denying 69 Motion in Limine as to Tariq Mahmud (1); denying 94 Motion in Limine as to Tariq Mahmud (1); denying 98 Motion for Discovery as to Tariq Mahmud (1); denying 79 Motion as to Victor Jayasundera (3); denying 96 Motion to Dismiss as to Victor Jayasundera (3); denying 97 Motion for Bill of Particulars as to Victor Jayasundera (3); denying 100 Motion to Sever Defendant as to Victor Jayasundera (3). Signed by District Judge Avern Cohn. (JOwe)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_11-cr-20078-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182f6f74c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cr-20078/USCOURTS-mied-2_11-cr-20078-1</identifier>
+ <identifier type="former granule identifier">mied-2_11-cr-20078_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cr-20078/USCOURTS-mied-2_11-cr-20078-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cr-20078/pdf/USCOURTS-mied-2_11-cr-20078-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-20078; United States of America v. Mahmud et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_11-cr-20078-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-11</dateIssued>
+  <docketText>ORDER Denying Motions re: denying 69 Motion in Limine as to Tariq Mahmud (1); denying 94 Motion in Limine as to Tariq Mahmud (1); denying 98 Motion for Discovery as to Tariq Mahmud (1); denying 79 Motion as to Victor Jayasundera (3); denying 96 Motion to Dismiss as to Victor Jayasundera (3); denying 97 Motion for Bill of Particulars as to Victor Jayasundera (3); denying 100 Motion to Sever Defendant as to Victor Jayasundera (3). Signed by District Judge Avern Cohn. (JOwe)ORDER Denying Motions re: denying 69 Motion in Limine as to Tariq Mahmud (1); denying 94 Motion in Limine as to Tariq Mahmud (1); denying 98 Motion for Discovery as to Tariq Mahmud (1); denying 79 Motion as to Victor Jayasundera (3); denying 96 Motion to Dismiss as to Victor Jayasundera (3); denying 97 Motion for Bill of Particulars as to Victor Jayasundera (3); denying 100 Motion to Sever Defendant as to Victor Jayasundera (3). Signed by District Judge Avern Cohn. (JOwe)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_11-cr-20078-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cr-20078/USCOURTS-mied-2_11-cr-20078-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Mahmud et al</title>
+  <subTitle>MEMORANDUM on Sentencing as to Tariq Mahmud re 147 Judgment Signed by District Judge Avern Cohn. (JOwe)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_11-cr-20078-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182f6f74b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cr-20078/USCOURTS-mied-2_11-cr-20078-2</identifier>
+ <identifier type="former granule identifier">mied-2_11-cr-20078_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cr-20078/USCOURTS-mied-2_11-cr-20078-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cr-20078/pdf/USCOURTS-mied-2_11-cr-20078-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-20078; United States of America v. Mahmud et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_11-cr-20078-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-07-25</dateIssued>
+  <docketText>MEMORANDUM on Sentencing as to Tariq Mahmud re 147 Judgment Signed by District Judge Avern Cohn. (JOwe)</docketText>
+</extension>
+</relatedItem>
+</mods>

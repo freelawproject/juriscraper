@@ -1,0 +1,311 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813600bc">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-23</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cr-00352</identifier>
+<identifier type="local">P0b002ee1813600bc</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-23</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_07-cr-00352</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_07-cr-00352</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:07-cr-00352</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="ANGEL" lastName="ANGEL" role="Defendant"></party>
+ <party firstName="PHILLIP" fullName="PHILLIP WAYNE ASAL" lastName="ASAL" middleName="WAYNE" role="Defendant"></party>
+ <party fullName="CHUCKY" lastName="CHUCKY" role="Defendant"></party>
+ <party firstName="RANDY" fullName="RANDY CLEVENSTINE" lastName="CLEVENSTINE" role="Defendant"></party>
+ <party firstName="RAYMOND" fullName="RAYMOND HOWARD FREEMAN" lastName="FREEMAN" middleName="HOWARD" role="Defendant"></party>
+ <party firstName="KENNETH" fullName="KENNETH DALE MAYBERRY" lastName="MAYBERRY" middleName="DALE" role="Defendant"></party>
+ <party firstName="RANDY" fullName="RANDY PARKE" lastName="PARKE" role="Defendant"></party>
+ <party firstName="TROY" fullName="TROY PICK" lastName="PICK" role="Defendant"></party>
+ <party firstName="CHARLES" fullName="CHARLES WALTER REHM" lastName="REHM" middleName="WALTER" role="Defendant"></party>
+ <party firstName="GERTRUDIS" fullName="GERTRUDIS RODRIGUEZ-JIMENEZ" lastName="RODRIGUEZ-JIMENEZ" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. PARKE et al</title>
+ <partNumber>2:07-cr-00352</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cr-00352/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cr-00352;07-352</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ANGEL</displayForm>
+ <namePart type="family">ANGEL</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PHILLIP WAYNE ASAL</displayForm>
+ <namePart type="family">ASAL</namePart>
+ <namePart type="given">PHILLIP</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CHUCKY</displayForm>
+ <namePart type="family">CHUCKY</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RANDY CLEVENSTINE</displayForm>
+ <namePart type="family">CLEVENSTINE</namePart>
+ <namePart type="given">RANDY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RAYMOND HOWARD FREEMAN</displayForm>
+ <namePart type="family">FREEMAN</namePart>
+ <namePart type="given">RAYMOND</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>KENNETH DALE MAYBERRY</displayForm>
+ <namePart type="family">MAYBERRY</namePart>
+ <namePart type="given">KENNETH</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RANDY PARKE</displayForm>
+ <namePart type="family">PARKE</namePart>
+ <namePart type="given">RANDY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TROY PICK</displayForm>
+ <namePart type="family">PICK</namePart>
+ <namePart type="given">TROY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CHARLES WALTER REHM</displayForm>
+ <namePart type="family">REHM</namePart>
+ <namePart type="given">CHARLES</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GERTRUDIS RODRIGUEZ-JIMENEZ</displayForm>
+ <namePart type="family">RODRIGUEZ-JIMENEZ</namePart>
+ <namePart type="given">GERTRUDIS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_07-cr-00352</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:07-cr-00352</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="ANGEL" lastName="ANGEL" role="Defendant"></party>
+ <party firstName="PHILLIP" fullName="PHILLIP WAYNE ASAL" lastName="ASAL" middleName="WAYNE" role="Defendant"></party>
+ <party fullName="CHUCKY" lastName="CHUCKY" role="Defendant"></party>
+ <party firstName="RANDY" fullName="RANDY CLEVENSTINE" lastName="CLEVENSTINE" role="Defendant"></party>
+ <party firstName="RAYMOND" fullName="RAYMOND HOWARD FREEMAN" lastName="FREEMAN" middleName="HOWARD" role="Defendant"></party>
+ <party firstName="KENNETH" fullName="KENNETH DALE MAYBERRY" lastName="MAYBERRY" middleName="DALE" role="Defendant"></party>
+ <party firstName="RANDY" fullName="RANDY PARKE" lastName="PARKE" role="Defendant"></party>
+ <party firstName="TROY" fullName="TROY PICK" lastName="PICK" role="Defendant"></party>
+ <party firstName="CHARLES" fullName="CHARLES WALTER REHM" lastName="REHM" middleName="WALTER" role="Defendant"></party>
+ <party firstName="GERTRUDIS" fullName="GERTRUDIS RODRIGUEZ-JIMENEZ" lastName="RODRIGUEZ-JIMENEZ" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_07-cr-00352-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cr-00352/USCOURTS-paed-2_07-cr-00352-0/mods.xml">
+ <titleInfo>
+  <title>USA v. PARKE et al</title>
+  <subTitle>MEMORANDUM AND OPINION AS TO GERTRUDIS RODRIGUEZ-JIMENEZ REGARDING DEFT. RODRIGUEZ-JIMENEZ&apos;S OMNIBUS MOTION. Signed by HONORABLE GENE E.K. PRATTER on 4/30/09.4/30/09 Entered and Copies E-Mailed. (gs)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_07-cr-00352-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18146019a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cr-00352/USCOURTS-paed-2_07-cr-00352-0</identifier>
+ <identifier type="former granule identifier">paed-2_07-cr-00352_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cr-00352/USCOURTS-paed-2_07-cr-00352-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cr-00352/pdf/USCOURTS-paed-2_07-cr-00352-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cr-00352; USA v. PARKE et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_07-cr-00352-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-04-30</dateIssued>
+  <docketText>MEMORANDUM AND OPINION AS TO GERTRUDIS RODRIGUEZ-JIMENEZ REGARDING DEFT. RODRIGUEZ-JIMENEZ&apos;S OMNIBUS MOTION. Signed by HONORABLE GENE E.K. PRATTER on 4/30/09.4/30/09 Entered and Copies E-Mailed. (gs)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_07-cr-00352-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cr-00352/USCOURTS-paed-2_07-cr-00352-1/mods.xml">
+ <titleInfo>
+  <title>USA v. PARKE et al</title>
+  <subTitle>ORDER AS TO GERTRUDIS RODRIGUEZ-JIMENEZ THAT THE OMNIBUS MOTION 199 IS GRANTED IN PART AND DENIED IN PART AS FOLLOWS: THE MOTION IS GRANTED AS TO SUPPRESSION OF EVIDENCE SEIZED FROM SEARCH OF THE 2002 CADILLAC SEDAN, WITHOUT PREJUDICE TO THE GOVERNMENT TO SEEK LEAVE TO PRESENT FURTHER EVIDENCE AS TO THAT SEARCH AND SEIZURE. IN ALL OTHER RESPECTS THE MOTION IS DENIED. Signed by HONORABLE GENE E.K. PRATTER on 4/30/09.4/30/09 Entered and Copies E-Mailed. (gs, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_07-cr-00352-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181460198</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cr-00352/USCOURTS-paed-2_07-cr-00352-1</identifier>
+ <identifier type="former granule identifier">paed-2_07-cr-00352_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cr-00352/USCOURTS-paed-2_07-cr-00352-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cr-00352/pdf/USCOURTS-paed-2_07-cr-00352-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cr-00352; USA v. PARKE et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_07-cr-00352-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-04-30</dateIssued>
+  <docketText>ORDER AS TO GERTRUDIS RODRIGUEZ-JIMENEZ THAT THE OMNIBUS MOTION 199 IS GRANTED IN PART AND DENIED IN PART AS FOLLOWS: THE MOTION IS GRANTED AS TO SUPPRESSION OF EVIDENCE SEIZED FROM SEARCH OF THE 2002 CADILLAC SEDAN, WITHOUT PREJUDICE TO THE GOVERNMENT TO SEEK LEAVE TO PRESENT FURTHER EVIDENCE AS TO THAT SEARCH AND SEIZURE. IN ALL OTHER RESPECTS THE MOTION IS DENIED. Signed by HONORABLE GENE E.K. PRATTER on 4/30/09.4/30/09 Entered and Copies E-Mailed. (gs, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_07-cr-00352-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cr-00352/USCOURTS-paed-2_07-cr-00352-2/mods.xml">
+ <titleInfo>
+  <title>USA v. PARKE et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION AS TO GERTRUDIS RODRIGUEZ-JIMENEZ. Signed by HONORABLE GENE E.K. PRATTER on 1/12/10.1/13/10 Entered and Copies E-Mailed. (gs, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_07-cr-00352-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181460199</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cr-00352/USCOURTS-paed-2_07-cr-00352-2</identifier>
+ <identifier type="former granule identifier">paed-2_07-cr-00352_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cr-00352/USCOURTS-paed-2_07-cr-00352-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cr-00352/pdf/USCOURTS-paed-2_07-cr-00352-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cr-00352; USA v. PARKE et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_07-cr-00352-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-01-13</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION AS TO GERTRUDIS RODRIGUEZ-JIMENEZ. Signed by HONORABLE GENE E.K. PRATTER on 1/12/10.1/13/10 Entered and Copies E-Mailed. (gs, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_07-cr-00352-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cr-00352/USCOURTS-paed-2_07-cr-00352-3/mods.xml">
+ <titleInfo>
+  <title>USA v. PARKE et al</title>
+  <subTitle>ORDER AS TO GERTRUDIS RODRIGUEZ-JIMENEZ. Signed by HONORABLE GENE E.K. PRATTER on 1/12/10.1/13/10 Entered and Copies E-Mailed. (gs, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_07-cr-00352-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181460197</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cr-00352/USCOURTS-paed-2_07-cr-00352-3</identifier>
+ <identifier type="former granule identifier">paed-2_07-cr-00352_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cr-00352/USCOURTS-paed-2_07-cr-00352-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cr-00352/pdf/USCOURTS-paed-2_07-cr-00352-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cr-00352; USA v. PARKE et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_07-cr-00352-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-01-13</dateIssued>
+  <docketText>ORDER AS TO GERTRUDIS RODRIGUEZ-JIMENEZ. Signed by HONORABLE GENE E.K. PRATTER on 1/12/10.1/13/10 Entered and Copies E-Mailed. (gs, )</docketText>
+</extension>
+</relatedItem>
+</mods>

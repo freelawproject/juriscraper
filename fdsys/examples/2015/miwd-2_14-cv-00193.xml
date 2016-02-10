@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8982a9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Western District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cv-00193</identifier>
+<identifier type="local">P0b002ee18a8982a9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-miwd-2_14-cv-00193</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-miwd-2_14-cv-00193</accessId>
+ <courtType>District</courtType>
+ <courtCode>miwd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2254</courtSortOrder>
+ <caseNumber>2:14-cv-00193</caseNumber>
+ <caseOffice>Northern Division (2)</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Aramark" lastName="Aramark" role="defendant"></party>
+ <party firstName="Johnny" fullName="Johnny Dar Eagle #525192" lastName="Eagle #525192" middleName="Dar" role="plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Eagle #525192 v. Aramark</title>
+ <partNumber>2:14-cv-00193</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cv-00193/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-00193;14-193</identifier>
+<name type="corporate">
+ <namePart>United States District Court Western District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Northern Division (2)</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Aramark</displayForm>
+ <namePart type="family">Aramark</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Johnny Dar Eagle #525192</displayForm>
+ <namePart type="family">Eagle #525192</namePart>
+ <namePart type="given">Johnny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-miwd-2_14-cv-00193</accessId>
+ <courtType>District</courtType>
+ <courtCode>miwd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2254</courtSortOrder>
+ <caseNumber>2:14-cv-00193</caseNumber>
+ <caseOffice>Northern Division (2)</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Aramark" lastName="Aramark" role="defendant"></party>
+ <party firstName="Johnny" fullName="Johnny Dar Eagle #525192" lastName="Eagle #525192" middleName="Dar" role="plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-miwd-2_14-cv-00193-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cv-00193/USCOURTS-miwd-2_14-cv-00193-0/mods.xml">
+ <titleInfo>
+  <title>Eagle #525192 v. Aramark</title>
+  <subTitle>OPINION ; signed by Judge R. Allan Edgar (Judge R. Allan Edgar, cam)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cv-00193/pdf/USCOURTS-miwd-2_14-cv-00193-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a89e43e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cv-00193/USCOURTS-miwd-2_14-cv-00193-0</identifier>
+ <identifier type="former granule identifier">miwd-2_14-cv-00193_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cv-00193/USCOURTS-miwd-2_14-cv-00193-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cv-00193/pdf/USCOURTS-miwd-2_14-cv-00193-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00193; Eagle #525192 v. Aramark; </searchTitle>
+  <courtName>United States District Court Western District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-miwd-2_14-cv-00193-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-10-14</dateIssued>
+  <docketText>OPINION ; signed by Judge R. Allan Edgar (Judge R. Allan Edgar, cam)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-miwd-2_14-cv-00193-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cv-00193/USCOURTS-miwd-2_14-cv-00193-1/mods.xml">
+ <titleInfo>
+  <title>Eagle #525192 v. Aramark</title>
+  <subTitle>OPINION Denying Leave to Proceed On Appeal In Forma Pauperis - Three Strikes ; signed by Judge R. Allan Edgar (Judge R. Allan Edgar, cam)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cv-00193/pdf/USCOURTS-miwd-2_14-cv-00193-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a89e43d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cv-00193/USCOURTS-miwd-2_14-cv-00193-1</identifier>
+ <identifier type="former granule identifier">miwd-2_14-cv-00193_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cv-00193/USCOURTS-miwd-2_14-cv-00193-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cv-00193/pdf/USCOURTS-miwd-2_14-cv-00193-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00193; Eagle #525192 v. Aramark; </searchTitle>
+  <courtName>United States District Court Western District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-miwd-2_14-cv-00193-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-02</dateIssued>
+  <docketText>OPINION Denying Leave to Proceed On Appeal In Forma Pauperis - Three Strikes ; signed by Judge R. Allan Edgar (Judge R. Allan Edgar, cam)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,230 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181ae03de">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00399</identifier>
+<identifier type="local">P0b002ee181ae03de</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cr-00399</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00399</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00399</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jose" fullName="Jose de Jesus Garcia-Castro" lastName="Garcia-Castro" middleName="de Jesus" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Garcia-Castro</title>
+ <partNumber>8:11-cr-00399</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00399/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cr-00399;11-399</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jose de Jesus Garcia-Castro</displayForm>
+ <namePart type="family">Garcia-Castro</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00399</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00399</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jose" fullName="Jose de Jesus Garcia-Castro" lastName="Garcia-Castro" middleName="de Jesus" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00399-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00399/USCOURTS-ned-8_11-cr-00399-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia-Castro</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Jose de Jesus Garcia-Castro - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00399-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b5b5e9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00399/USCOURTS-ned-8_11-cr-00399-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00399_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00399/USCOURTS-ned-8_11-cr-00399-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00399/pdf/USCOURTS-ned-8_11-cr-00399-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00399; USA v. Garcia-Castro; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00399-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-12-22</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Jose de Jesus Garcia-Castro - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00399-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00399/USCOURTS-ned-8_11-cr-00399-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia-Castro</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Jose de Jesus Garcia-Castro. Ordered by Magistrate Judge Thomas D. Thalken. (TCL )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00399-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b5b5ea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00399/USCOURTS-ned-8_11-cr-00399-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00399_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00399/USCOURTS-ned-8_11-cr-00399-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00399/pdf/USCOURTS-ned-8_11-cr-00399-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00399; USA v. Garcia-Castro; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00399-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-12-23</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Jose de Jesus Garcia-Castro. Ordered by Magistrate Judge Thomas D. Thalken. (TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00399-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00399/USCOURTS-ned-8_11-cr-00399-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia-Castro</title>
+  <subTitle>ORDER - This matter is before the court on the motion of defendant Jose de Jesus Garcia- Castro (Garcia-Castro) to review detention (Filing No. 15). Following the filing of the motion, counsel for Garcia-Castro informed Pretrial Services that Garcia-Castro&apos;s proposed thirdparty custodian withdrew from consideration. Accordingly, Garcia-Castros motion to review detention (Filing No. 15) is denied as moot. IT IS SO ORDERED as to Jose de Jesus Garcia-Castro. Ordered by Magistrate Judge Thomas D. Thalken. ( TCL )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00399-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b5b5e7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00399/USCOURTS-ned-8_11-cr-00399-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00399_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00399/USCOURTS-ned-8_11-cr-00399-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00399/pdf/USCOURTS-ned-8_11-cr-00399-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00399; USA v. Garcia-Castro; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00399-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>ORDER - This matter is before the court on the motion of defendant Jose de Jesus Garcia- Castro (Garcia-Castro) to review detention (Filing No. 15). Following the filing of the motion, counsel for Garcia-Castro informed Pretrial Services that Garcia-Castro&apos;s proposed thirdparty custodian withdrew from consideration. Accordingly, Garcia-Castros motion to review detention (Filing No. 15) is denied as moot. IT IS SO ORDERED as to Jose de Jesus Garcia-Castro. Ordered by Magistrate Judge Thomas D. Thalken. ( TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00399-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00399/USCOURTS-ned-8_11-cr-00399-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia-Castro</title>
+  <subTitle>ORDER - This matter is before the court on the motion of defendant Jose de Jesus Garcia-Castro (Garcia-Castro) for an investigation of a proposed third-party custodian (Filing No. 17). The motion (Filing No. 17) is granted. Pretrial Services shall investigate the proposed third-party custodian and provide a copy of the report to the court and counsel. IT IS SO ORDERED as to Jose de Jesus Garcia-Castro. Ordered by Magistrate Judge Thomas D. Thalken. (Copy to Pretrial)( TCL )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00399-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b5b5e8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00399/USCOURTS-ned-8_11-cr-00399-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00399_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00399/USCOURTS-ned-8_11-cr-00399-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00399/pdf/USCOURTS-ned-8_11-cr-00399-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00399; USA v. Garcia-Castro; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00399-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-17</dateIssued>
+  <docketText>ORDER - This matter is before the court on the motion of defendant Jose de Jesus Garcia-Castro (Garcia-Castro) for an investigation of a proposed third-party custodian (Filing No. 17). The motion (Filing No. 17) is granted. Pretrial Services shall investigate the proposed third-party custodian and provide a copy of the report to the court and counsel. IT IS SO ORDERED as to Jose de Jesus Garcia-Castro. Ordered by Magistrate Judge Thomas D. Thalken. (Copy to Pretrial)( TCL )</docketText>
+</extension>
+</relatedItem>
+</mods>

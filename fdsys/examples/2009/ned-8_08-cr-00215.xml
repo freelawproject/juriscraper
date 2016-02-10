@@ -1,0 +1,238 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b2030">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00215</identifier>
+<identifier type="local">P0b002ee1817b2030</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cr-00215</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cr-00215</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cr-00215</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Peter" fullName="Peter Lamers" lastName="Lamers" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald V. Lane" lastName="Lane" middleName="V." role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy R. Lowe" lastName="Lowe" middleName="R." role="Defendant"></party>
+ <party firstName="James" fullName="James Robert Rice" lastName="Rice" middleName="Robert" role="Defendant"></party>
+ <party firstName="Stuart" fullName="Stuart P. Sims" lastName="Sims" middleName="P." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Lamers</title>
+ <partNumber>8:08-cr-00215</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00215/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cr-00215;08-215</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Peter Lamers</displayForm>
+ <namePart type="family">Lamers</namePart>
+ <namePart type="given">Peter</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donald V. Lane</displayForm>
+ <namePart type="family">Lane</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy R. Lowe</displayForm>
+ <namePart type="family">Lowe</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Robert Rice</displayForm>
+ <namePart type="family">Rice</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stuart P. Sims</displayForm>
+ <namePart type="family">Sims</namePart>
+ <namePart type="given">Stuart</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cr-00215</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cr-00215</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Peter" fullName="Peter Lamers" lastName="Lamers" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald V. Lane" lastName="Lane" middleName="V." role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy R. Lowe" lastName="Lowe" middleName="R." role="Defendant"></party>
+ <party firstName="James" fullName="James Robert Rice" lastName="Rice" middleName="Robert" role="Defendant"></party>
+ <party firstName="Stuart" fullName="Stuart P. Sims" lastName="Sims" middleName="P." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00215-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00215/USCOURTS-ned-8_08-cr-00215-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Lamers</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Peter Lamers. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00215-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a6b80</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00215/USCOURTS-ned-8_08-cr-00215-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00215_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00215/USCOURTS-ned-8_08-cr-00215-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00215/pdf/USCOURTS-ned-8_08-cr-00215-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00215; USA v. Lamers; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00215-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-06-05</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Peter Lamers. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00215-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00215/USCOURTS-ned-8_08-cr-00215-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Lamers</title>
+  <subTitle>ORDER granting 14 Motion to Enlarge Time for Filing of Pretrial Motions as to Peter Lamers. Pretrial motions shall be filed on or before August 8, 2008. The time between July 8, 2008 and August 8, 2008, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F. A. Gossett. ( MLF, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00215-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a6b81</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00215/USCOURTS-ned-8_08-cr-00215-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00215_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00215/USCOURTS-ned-8_08-cr-00215-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00215/pdf/USCOURTS-ned-8_08-cr-00215-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00215; USA v. Lamers; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00215-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-07-09</dateIssued>
+  <docketText>ORDER granting 14 Motion to Enlarge Time for Filing of Pretrial Motions as to Peter Lamers. Pretrial motions shall be filed on or before August 8, 2008. The time between July 8, 2008 and August 8, 2008, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F. A. Gossett. ( MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00215-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00215/USCOURTS-ned-8_08-cr-00215-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Lamers</title>
+  <subTitle>JUDGMENT as to Peter Lamers (1), Defendant plead guilty to Count I of the Indictment and is committed to the Bureau of Prisons for 60 months; 3 years supervised release with special conditions; $100 special assessment; $3,375.00 restitution; Counts II - XIII of the Indictment are dismissed on the motion of the United States as to this defendant only; the defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons as to defendant Peter Lamers. Ordered by Chief Judge Joseph F. Bataillon. (4 certified copies to USM)(CJP)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00215-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a6b82</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00215/USCOURTS-ned-8_08-cr-00215-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00215_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00215/USCOURTS-ned-8_08-cr-00215-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00215/pdf/USCOURTS-ned-8_08-cr-00215-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00215; USA v. Lamers; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00215-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-01-14</dateIssued>
+  <docketText>JUDGMENT as to Peter Lamers (1), Defendant plead guilty to Count I of the Indictment and is committed to the Bureau of Prisons for 60 months; 3 years supervised release with special conditions; $100 special assessment; $3,375.00 restitution; Counts II - XIII of the Indictment are dismissed on the motion of the United States as to this defendant only; the defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons as to defendant Peter Lamers. Ordered by Chief Judge Joseph F. Bataillon. (4 certified copies to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+</mods>

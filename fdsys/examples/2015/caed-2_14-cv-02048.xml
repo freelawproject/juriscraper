@@ -1,0 +1,380 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18e12e4c0">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-12-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-12-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02048</identifier>
+<identifier type="local">P0b002ee18e12e4c0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-12-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-12-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_14-cv-02048</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-02048</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-02048</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Karuna" fullName="Karuna Anand" lastName="Anand" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan C. Carrillo" lastName="Carrillo" middleName="C." role="Defendant"></party>
+ <party fullName="Casa Bonita Incorporated" lastName="Casa Bonita Incorporated" role="Defendant"></party>
+ <party firstName="Roy" fullName="Roy C. Chavez" lastName="Chavez" middleName="C." role="Defendant"></party>
+ <party firstName="Elaine" fullName="Elaine Duran" lastName="Duran" role="Plaintiff"></party>
+ <party firstName="Steven" fullName="Steven A. Duran" lastName="Duran" middleName="A." role="Plaintiff"></party>
+ <party fullName="Estate of Joseph Duran" lastName="Estate of Joseph Duran" role="Plaintiff"></party>
+ <party firstName="Scott" fullName="Scott A. Heatley" lastName="Heatley" middleName="A." role="Defendant"></party>
+ <party firstName="William" fullName="William W. Knipp" lastName="Knipp" middleName="W." role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan D. McCloughan" lastName="McCloughan" middleName="D." role="Defendant"></party>
+ <party fullName="Michael" lastName="Michael" role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy Nelson" lastName="Nelson" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard E. Ortigo" lastName="Ortigo" middleName="E." role="Defendant"></party>
+ <party firstName="Martin" fullName="Martin A. Ryan" lastName="Ryan" middleName="A." role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Shepard" lastName="Shepard" role="Defendant"></party>
+ <party firstName="David" fullName="David Smiley" lastName="Smiley" role="Defendant"></party>
+ <party firstName="Jason" fullName="Jason R. Strongman" lastName="Strongman" middleName="R." role="Defendant"></party>
+ <party firstName="Janet" fullName="Janet Yu" lastName="Yu" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Estate of Joeseph Duran et al v. Chavez et al</title>
+ <partNumber>2:14-cv-02048</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02048/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-02048;14-2048</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Karuna Anand</displayForm>
+ <namePart type="family">Anand</namePart>
+ <namePart type="given">Karuna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Juan C. Carrillo</displayForm>
+ <namePart type="family">Carrillo</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Casa Bonita Incorporated</displayForm>
+ <namePart type="family">Casa Bonita Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roy C. Chavez</displayForm>
+ <namePart type="family">Chavez</namePart>
+ <namePart type="given">Roy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Elaine Duran</displayForm>
+ <namePart type="family">Duran</namePart>
+ <namePart type="given">Elaine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Steven A. Duran</displayForm>
+ <namePart type="family">Duran</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Estate of Joseph Duran</displayForm>
+ <namePart type="family">Estate of Joseph Duran</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Scott A. Heatley</displayForm>
+ <namePart type="family">Heatley</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William W. Knipp</displayForm>
+ <namePart type="family">Knipp</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bryan D. McCloughan</displayForm>
+ <namePart type="family">McCloughan</namePart>
+ <namePart type="given">Bryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael</displayForm>
+ <namePart type="family">Michael</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy Nelson</displayForm>
+ <namePart type="family">Nelson</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard E. Ortigo</displayForm>
+ <namePart type="family">Ortigo</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Martin A. Ryan</displayForm>
+ <namePart type="family">Ryan</namePart>
+ <namePart type="given">Martin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Shepard</displayForm>
+ <namePart type="family">Shepard</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Smiley</displayForm>
+ <namePart type="family">Smiley</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jason R. Strongman</displayForm>
+ <namePart type="family">Strongman</namePart>
+ <namePart type="given">Jason</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Janet Yu</displayForm>
+ <namePart type="family">Yu</namePart>
+ <namePart type="given">Janet</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-02048</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-02048</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Karuna" fullName="Karuna Anand" lastName="Anand" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan C. Carrillo" lastName="Carrillo" middleName="C." role="Defendant"></party>
+ <party fullName="Casa Bonita Incorporated" lastName="Casa Bonita Incorporated" role="Defendant"></party>
+ <party firstName="Roy" fullName="Roy C. Chavez" lastName="Chavez" middleName="C." role="Defendant"></party>
+ <party firstName="Elaine" fullName="Elaine Duran" lastName="Duran" role="Plaintiff"></party>
+ <party firstName="Steven" fullName="Steven A. Duran" lastName="Duran" middleName="A." role="Plaintiff"></party>
+ <party fullName="Estate of Joseph Duran" lastName="Estate of Joseph Duran" role="Plaintiff"></party>
+ <party firstName="Scott" fullName="Scott A. Heatley" lastName="Heatley" middleName="A." role="Defendant"></party>
+ <party firstName="William" fullName="William W. Knipp" lastName="Knipp" middleName="W." role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan D. McCloughan" lastName="McCloughan" middleName="D." role="Defendant"></party>
+ <party fullName="Michael" lastName="Michael" role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy Nelson" lastName="Nelson" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard E. Ortigo" lastName="Ortigo" middleName="E." role="Defendant"></party>
+ <party firstName="Martin" fullName="Martin A. Ryan" lastName="Ryan" middleName="A." role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Shepard" lastName="Shepard" role="Defendant"></party>
+ <party firstName="David" fullName="David Smiley" lastName="Smiley" role="Defendant"></party>
+ <party firstName="Jason" fullName="Jason R. Strongman" lastName="Strongman" middleName="R." role="Defendant"></party>
+ <party firstName="Janet" fullName="Janet Yu" lastName="Yu" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02048-0" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02048/USCOURTS-caed-2_14-cv-02048-0/mods.xml">
+ <titleInfo>
+  <title>Estate of Joeseph Duran et al v. Chavez et al</title>
+  <subTitle>STIPULATION and ORDER signed by District Judge Troy L. Nunley on 1/5/15: HEARING as to 9 MOTION to DISMISS RESET for 3/26/2015 at 02:00 PM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. (Kaminski, H)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02048/pdf/USCOURTS-caed-2_14-cv-02048-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1901ea</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02048/USCOURTS-caed-2_14-cv-02048-0</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02048_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02048/USCOURTS-caed-2_14-cv-02048-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02048/pdf/USCOURTS-caed-2_14-cv-02048-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02048; Estate of Joeseph Duran et al v. Chavez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02048-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>STIPULATION and ORDER signed by District Judge Troy L. Nunley on 1/5/15: HEARING as to 9 MOTION to DISMISS RESET for 3/26/2015 at 02:00 PM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02048-1" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02048/USCOURTS-caed-2_14-cv-02048-1/mods.xml">
+ <titleInfo>
+  <title>Estate of Joeseph Duran et al v. Chavez et al</title>
+  <subTitle>STIPULATION and ORDER signed by District Judge Troy L. Nunley on 1/5/15: Defendants Anand, Carrillo, Chavez, Heatley, Knipp, McCloughan, Michael, Nelson, Ortigo, Roy, Shepard, Strongman, Smiley, and Yu shall have until January 23, 2015, to respond to the Complaint. (Kaminski, H)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02048/pdf/USCOURTS-caed-2_14-cv-02048-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1901e9</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02048/USCOURTS-caed-2_14-cv-02048-1</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02048_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02048/USCOURTS-caed-2_14-cv-02048-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02048/pdf/USCOURTS-caed-2_14-cv-02048-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02048; Estate of Joeseph Duran et al v. Chavez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02048-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>STIPULATION and ORDER signed by District Judge Troy L. Nunley on 1/5/15: Defendants Anand, Carrillo, Chavez, Heatley, Knipp, McCloughan, Michael, Nelson, Ortigo, Roy, Shepard, Strongman, Smiley, and Yu shall have until January 23, 2015, to respond to the Complaint. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02048-2" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02048/USCOURTS-caed-2_14-cv-02048-2/mods.xml">
+ <titleInfo>
+  <title>Estate of Joeseph Duran et al v. Chavez et al</title>
+  <subTitle>STIPULATION and ORDER EXTENDING TIME FOR DEFENDANTS Chavez and Yu to file responsive pleading signed by District Judge Troy L. Nunley on 1/30/15. Defendants Chavez and Yu shall have until 2/23/2015, to respond to the Complaint. (Mena-Sanchez, L)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02048/pdf/USCOURTS-caed-2_14-cv-02048-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e1901eb</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02048/USCOURTS-caed-2_14-cv-02048-2</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02048_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02048/USCOURTS-caed-2_14-cv-02048-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02048/pdf/USCOURTS-caed-2_14-cv-02048-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02048; Estate of Joeseph Duran et al v. Chavez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02048-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-02-02</dateIssued>
+  <docketText>STIPULATION and ORDER EXTENDING TIME FOR DEFENDANTS Chavez and Yu to file responsive pleading signed by District Judge Troy L. Nunley on 1/30/15. Defendants Chavez and Yu shall have until 2/23/2015, to respond to the Complaint. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02048-3" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02048/USCOURTS-caed-2_14-cv-02048-3/mods.xml">
+ <titleInfo>
+  <title>Estate of Joeseph Duran et al v. Chavez et al</title>
+  <subTitle>ORDER signed by District Judge Troy L. Nunley on 12/4/15 ORDERING the Court hereby GRANTS IN PART and DENIES IN PART Defendants&apos; Motion to Dismiss. (ECF No. 16, ECF No. 9); The Court shall allow Plaintiffs to file an amended complaint as to the standing issues related to Counts I, II, III, IV, and V and the substantive issues related to Counts V, VI, VII, VIII, X, and XII. Should Plaintiffs elect to do so, it must be filed with this Court within twenty-one (21) days from the entry of this order. (Becknal, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02048/pdf/USCOURTS-caed-2_14-cv-02048-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e190217</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02048/USCOURTS-caed-2_14-cv-02048-3</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02048_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02048/USCOURTS-caed-2_14-cv-02048-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02048/pdf/USCOURTS-caed-2_14-cv-02048-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02048; Estate of Joeseph Duran et al v. Chavez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02048-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-12-07</dateIssued>
+  <docketText>ORDER signed by District Judge Troy L. Nunley on 12/4/15 ORDERING the Court hereby GRANTS IN PART and DENIES IN PART Defendants&apos; Motion to Dismiss. (ECF No. 16, ECF No. 9); The Court shall allow Plaintiffs to file an amended complaint as to the standing issues related to Counts I, II, III, IV, and V and the substantive issues related to Counts V, VI, VII, VIII, X, and XII. Should Plaintiffs elect to do so, it must be filed with this Court within twenty-one (21) days from the entry of this order. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

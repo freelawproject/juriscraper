@@ -1,0 +1,691 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1863e9d59">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-10-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-10-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027</identifier>
+<identifier type="local">P0b002ee1863e9d59</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-10-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-10-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-01027</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-01027</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-01027</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Terrence" fullName="Terrence Lamont Davis" lastName="Davis" middleName="Lamont" role="Plaintiff"></party>
+ <party firstName="K." fullName="K. Farrell" lastName="Farrell" role="Defendant"></party>
+ <party fullName="Gomez" lastName="Gomez" role="Defendant"></party>
+ <party firstName="J." fullName="J. Hernandez" lastName="Hernandez" role="Defendant"></party>
+ <party fullName="McEntire" lastName="McEntire" role="Defendant"></party>
+ <party fullName="Roberts" lastName="Roberts" role="Defendant"></party>
+ <party fullName="Sacramento County Jail" lastName="Sacramento County Jail" role="Defendant"></party>
+ <party fullName="Satak" lastName="Satak" role="Defendant"></party>
+ <party firstName="Sean" fullName="Sean Woodward" lastName="Woodward" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Davis v. Sacramento County Jail et al</title>
+ <partNumber>2:11-cv-01027</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-01027;11-1027</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Terrence Lamont Davis</displayForm>
+ <namePart type="family">Davis</namePart>
+ <namePart type="given">Terrence</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>K. Farrell</displayForm>
+ <namePart type="family">Farrell</namePart>
+ <namePart type="given">K.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gomez</displayForm>
+ <namePart type="family">Gomez</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Hernandez</displayForm>
+ <namePart type="family">Hernandez</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>McEntire</displayForm>
+ <namePart type="family">McEntire</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roberts</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sacramento County Jail</displayForm>
+ <namePart type="family">Sacramento County Jail</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Satak</displayForm>
+ <namePart type="family">Satak</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sean Woodward</displayForm>
+ <namePart type="family">Woodward</namePart>
+ <namePart type="given">Sean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-01027</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-01027</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Terrence" fullName="Terrence Lamont Davis" lastName="Davis" middleName="Lamont" role="Plaintiff"></party>
+ <party firstName="K." fullName="K. Farrell" lastName="Farrell" role="Defendant"></party>
+ <party fullName="Gomez" lastName="Gomez" role="Defendant"></party>
+ <party firstName="J." fullName="J. Hernandez" lastName="Hernandez" role="Defendant"></party>
+ <party fullName="McEntire" lastName="McEntire" role="Defendant"></party>
+ <party fullName="Roberts" lastName="Roberts" role="Defendant"></party>
+ <party fullName="Sacramento County Jail" lastName="Sacramento County Jail" role="Defendant"></party>
+ <party fullName="Satak" lastName="Satak" role="Defendant"></party>
+ <party firstName="Sean" fullName="Sean Woodward" lastName="Woodward" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 4/26/2011 ORDERING pltf to submit, w/in 30 days, either the $350.00 filing fee or a properly completed ifp application; the clerk to send pltf an ifp application; and pltf&apos;s 5 motion for appointment of counsel is DENIED. (Yin, K)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5f5c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-04-27</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 4/26/2011 ORDERING pltf to submit, w/in 30 days, either the $350.00 filing fee or a properly completed ifp application; the clerk to send pltf an ifp application; and pltf&apos;s 5 motion for appointment of counsel is DENIED. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Terrence L. Davis signed by Magistrate Judge Carolyn K. Delaney on 11/20/11. CDC is to collect payments from plaintiff&apos;s account and forward to the clerk until the $350.00 filing fee is paid in full. Clerk to serve this order and a copy of plaintiff&apos;s IFP on the Director of CDC. Clerk to also serve Financial with a copy of this order. (cc: CDC Director and Financial)(Plummer, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5e14</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-11-21</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Terrence L. Davis signed by Magistrate Judge Carolyn K. Delaney on 11/20/11. CDC is to collect payments from plaintiff&apos;s account and forward to the clerk until the $350.00 filing fee is paid in full. Clerk to serve this order and a copy of plaintiff&apos;s IFP on the Director of CDC. Clerk to also serve Financial with a copy of this order. (cc: CDC Director and Financial)(Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 1/3/12 denying 27 Motion for Reconsideration. (Dillon, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f592b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-03</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 1/3/12 denying 27 Motion for Reconsideration. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 1/26/2012 DENYING plaintiff&apos;s 35 motion for leave to amend. (Yin, K)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5e12</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-26</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 1/26/2012 DENYING plaintiff&apos;s 35 motion for leave to amend. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER and WRIT of HABEAS CORPUS AD TESTIFICANDUM ISSUED signed by Magistrate Judge Carolyn K. Delaney on 4/19/12 ORDERING the Custodian to produce Terrence Lamont Davis via telephonic conferencing at 10:00 a.m. on 5/2/12 in Courtroom 26 (CKD) before Magistrate Judge Carolyn K. Delaney. Custodian is ordered to notify the Court of any changes in custody and to provide new custodian with a copy of this writ. Clerk shall serve a copy of this order and writ on the Custodian. (cc: IT Dept; faxed to CSP Coordinator) (Manzer, C)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5f5d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-4</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-04-19</dateIssued>
+  <docketText>ORDER and WRIT of HABEAS CORPUS AD TESTIFICANDUM ISSUED signed by Magistrate Judge Carolyn K. Delaney on 4/19/12 ORDERING the Custodian to produce Terrence Lamont Davis via telephonic conferencing at 10:00 a.m. on 5/2/12 in Courtroom 26 (CKD) before Magistrate Judge Carolyn K. Delaney. Custodian is ordered to notify the Court of any changes in custody and to provide new custodian with a copy of this writ. Clerk shall serve a copy of this order and writ on the Custodian. (cc: IT Dept; faxed to CSP Coordinator) (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 5/7/2012 ORDERING that the 42 request by the US Marshal for an order of reimbursement for fees related to service of process on defendant Woodward is DENIED. (cc: USM)(Yin, K)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f592a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-5</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-05-07</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 5/7/2012 ORDERING that the 42 request by the US Marshal for an order of reimbursement for fees related to service of process on defendant Woodward is DENIED. (cc: USM)(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 5/7/2012 ORDERING the clerk to assign a district court judge to this case; and RECOMMENDING that defendant Woodward&apos;s 47 motion to dismiss be denied. Assigned and Referred to Judge William B. Shubb; Objections due within 21 days. (Yin, K)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5f5e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-6</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-05-07</dateIssued>
+  <docketText>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 5/7/2012 ORDERING the clerk to assign a district court judge to this case; and RECOMMENDING that defendant Woodward&apos;s 47 motion to dismiss be denied. Assigned and Referred to Judge William B. Shubb; Objections due within 21 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 05/29/12 denying 59, 60 Motions to Appoint Counsel. (Plummer, M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f592c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-7</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-05-29</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 05/29/12 denying 59, 60 Motions to Appoint Counsel. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER signed by Judge William B. Shubb on 6/25/12 ORDERING that the FINDINGS AND RECOMMENDATIONS filed 5/7/12 57 are ADOPTED in full; Defendant Woodward&apos;s 4/2/12 MOTION to Dismiss 47 is DENIED.(Mena-Sanchez, L)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5e11</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-8</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-06-26</dateIssued>
+  <docketText>ORDER signed by Judge William B. Shubb on 6/25/12 ORDERING that the FINDINGS AND RECOMMENDATIONS filed 5/7/12 57 are ADOPTED in full; Defendant Woodward&apos;s 4/2/12 MOTION to Dismiss 47 is DENIED.(Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER signed by Judge William B. Shubb on 8/3/2012 ORDERING 68 that, upon reconsideration, the order of the magistrate judge #62 is AFFIRMED; Plaintiff&apos;s request for appointment of counsel is DENIED without prejudice. (Reader, L)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5e17</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-9</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-08-06</dateIssued>
+  <docketText>ORDER signed by Judge William B. Shubb on 8/3/2012 ORDERING 68 that, upon reconsideration, the order of the magistrate judge #62 is AFFIRMED; Plaintiff&apos;s request for appointment of counsel is DENIED without prejudice. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 9/13/12 DENYING 71 Motion to quash the subpoena served by counsel for defendants on June 27, 2012 upon the litigation coordinator at California State Prison, Corcoran. (Dillon, M)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5e13</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-10</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-09-14</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 9/13/12 DENYING 71 Motion to quash the subpoena served by counsel for defendants on June 27, 2012 upon the litigation coordinator at California State Prison, Corcoran. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER denying 88 Motion to Compel signed by Magistrate Judge Carolyn K. Delaney on 12/19/12. (Plummer, M)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5929</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-11</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-12-20</dateIssued>
+  <docketText>ORDER denying 88 Motion to Compel signed by Magistrate Judge Carolyn K. Delaney on 12/19/12. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 1/02/13 ordering that plaintiff shall file and serve his pretrial statement and any motions necessary to obtain the witnesses at trial on or before 03/01/13. Defendants shall file their pretrial statement on or before 03/15/13. (Plummer, M)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5e19</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-12</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 1/02/13 ordering that plaintiff shall file and serve his pretrial statement and any motions necessary to obtain the witnesses at trial on or before 03/01/13. Defendants shall file their pretrial statement on or before 03/15/13. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 05/29/13 recommending that this action be dismissed without prejudice. Referred to Judge Troy L. Nunley. Objections due within 14 days. (Plummer, M)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5e18</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-13</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2013-05-30</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 05/29/13 recommending that this action be dismissed without prejudice. Referred to Judge Troy L. Nunley. Objections due within 14 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 06/24/13 vacating 96 FINDINGS AND RECOMMENDATIONS. Plaintiff&apos;s motion for an extension of time to file objections to the findings and recommendations 106 is denied as moot. Defendants are granted 21 days within which to file their pretrial statement. Plaintiff&apos;s requests for the appointment of counsel 99, 103 are denied. (Plummer, M)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5e10</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-14</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2013-06-24</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 06/24/13 vacating 96 FINDINGS AND RECOMMENDATIONS. Plaintiff&apos;s motion for an extension of time to file objections to the findings and recommendations 106 is denied as moot. Defendants are granted 21 days within which to file their pretrial statement. Plaintiff&apos;s requests for the appointment of counsel 99, 103 are denied. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 08/28/13 ordering ( Settlement Conference set for 10/10/2013 at 01:00 PM in Courtroom 9 (SAB) before Magistrate Judge Craig M. Kellison.) Judge Kellison or another representative from the court will be contacting the parties either by telephone or in person, approximately 1 week prior to the settlement conference to ascertain each party&apos;s expectations of the settlement conference. (cc: CMK) (Plummer, M)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5928</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-15</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2013-08-28</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 08/28/13 ordering ( Settlement Conference set for 10/10/2013 at 01:00 PM in Courtroom 9 (SAB) before Magistrate Judge Craig M. Kellison.) Judge Kellison or another representative from the court will be contacting the parties either by telephone or in person, approximately 1 week prior to the settlement conference to ascertain each party&apos;s expectations of the settlement conference. (cc: CMK) (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER and WRIT OF HABEAS CORPUS AD TESTIFICANDUM ISSUED signed by Magistrate Judge Carolyn K. Delaney on 08/28/13 ORDERING the custodian to produce Terrence Lamont Davis at 10/10/13 at 1:00 p.m. in courtroom 9 before Magistrate Judge Craig M. Kellison. Custodian is ordered to notify the court of any changes in custody and to provide new custodian with a copy of this writ. Clerk shall serve a copy of this order and writ on the Custodian and Out-to-Court Desk. (cc: OTCD and CMK) (Plummer, M)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5e15</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-16</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2013-08-28</dateIssued>
+  <docketText>ORDER and WRIT OF HABEAS CORPUS AD TESTIFICANDUM ISSUED signed by Magistrate Judge Carolyn K. Delaney on 08/28/13 ORDERING the custodian to produce Terrence Lamont Davis at 10/10/13 at 1:00 p.m. in courtroom 9 before Magistrate Judge Craig M. Kellison. Custodian is ordered to notify the court of any changes in custody and to provide new custodian with a copy of this writ. Clerk shall serve a copy of this order and writ on the Custodian and Out-to-Court Desk. (cc: OTCD and CMK) (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01027-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Davis v. Sacramento County Jail et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 10/11/13 ORDERING that Plaintiff shall file a stipulation of dismissal within 90 days of this order; and if the stipulation cannot be filed within 90 days, plaintiff shall file a request for an extension of time before the expiration of the deadline. (Dillon, M)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01027-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1863f5e16</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-17</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01027_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01027/USCOURTS-caed-2_11-cv-01027-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01027/pdf/USCOURTS-caed-2_11-cv-01027-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01027; (PC) Davis v. Sacramento County Jail et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01027-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2013-10-11</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 10/11/13 ORDERING that Plaintiff shall file a stipulation of dismissal within 90 days of this order; and if the stipulation cannot be filed within 90 days, plaintiff shall file a request for an extension of time before the expiration of the deadline. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18112ec6c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_05-cv-00743</identifier>
+<identifier type="local">P0b002ee18112ec6c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-6_05-cv-00743</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-6_05-cv-00743</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>6:05-cv-00743</caseNumber>
+ <caseOffice>Utica</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party fullName="Asolare II, LLC" lastName="Asolare II, LLC" role="Appellee"></party>
+ <party fullName="BSB Bank&amp;Trust Co." lastName="BSB Bank&amp;Trust Co." role="Appellee"></party>
+ <party fullName="Forest View, Inc." lastName="Forest View, Inc." role="Appellant"></party>
+ <party firstName="Lori" fullName="Lori Jo Hawkins" lastName="Hawkins" middleName="Jo" role="Appellant"></party>
+ <party firstName="James" fullName="James W. Hawkins" lastName="Hawkins" middleName="W." role="Appellant"></party>
+ <party fullName="Hawkins Development LLC" lastName="Hawkins Development LLC" role="Appellant"></party>
+ <party fullName="Hawkins Family LLC" lastName="Hawkins Family LLC" role="Appellant"></party>
+ <party fullName="Hawkins Manufactured Housing, Inc." lastName="Hawkins Manufactured Housing, Inc." role="Appellant"></party>
+ <party firstName="Paul" fullName="Paul A. Levine" lastName="Levine" middleName="A." role="Appellee"></party>
+ <party fullName="Reserve Capital Corporation" lastName="Reserve Capital Corporation" role="Appellant"></party>
+ <party fullName="Souther Tier Acquistion, LLC" lastName="Souther Tier Acquistion, LLC" role="Appellee"></party>
+ <party fullName="Tioga Park, LLC" lastName="Tioga Park, LLC" role="Appellant"></party>
+ <party fullName="U.S. Trustee" lastName="U.S. Trustee" role="Notice Only Party"></party>
+ <party fullName="Wooded Estates, LLC" lastName="Wooded Estates, LLC" role="Appellant"></party>
+</extension>
+<titleInfo>
+ <title>Reserve Capital Corporation et al v. Levine et al</title>
+ <partNumber>6:05-cv-00743</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_05-cv-00743/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:05-cv-00743;05-743</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Utica</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Asolare II, LLC</displayForm>
+ <namePart type="family">Asolare II, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>BSB Bank&amp;Trust Co.</displayForm>
+ <namePart type="family">BSB Bank&amp;Trust Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Forest View, Inc.</displayForm>
+ <namePart type="family">Forest View, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Lori Jo Hawkins</displayForm>
+ <namePart type="family">Hawkins</namePart>
+ <namePart type="given">Lori</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>James W. Hawkins</displayForm>
+ <namePart type="family">Hawkins</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Hawkins Development LLC</displayForm>
+ <namePart type="family">Hawkins Development LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Hawkins Family LLC</displayForm>
+ <namePart type="family">Hawkins Family LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Hawkins Manufactured Housing, Inc.</displayForm>
+ <namePart type="family">Hawkins Manufactured Housing, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul A. Levine</displayForm>
+ <namePart type="family">Levine</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Reserve Capital Corporation</displayForm>
+ <namePart type="family">Reserve Capital Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Souther Tier Acquistion, LLC</displayForm>
+ <namePart type="family">Souther Tier Acquistion, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Tioga Park, LLC</displayForm>
+ <namePart type="family">Tioga Park, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Trustee</displayForm>
+ <namePart type="family">U.S. Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>Wooded Estates, LLC</displayForm>
+ <namePart type="family">Wooded Estates, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-6_05-cv-00743</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>6:05-cv-00743</caseNumber>
+ <caseOffice>Utica</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party fullName="Asolare II, LLC" lastName="Asolare II, LLC" role="Appellee"></party>
+ <party fullName="BSB Bank&amp;Trust Co." lastName="BSB Bank&amp;Trust Co." role="Appellee"></party>
+ <party fullName="Forest View, Inc." lastName="Forest View, Inc." role="Appellant"></party>
+ <party firstName="Lori" fullName="Lori Jo Hawkins" lastName="Hawkins" middleName="Jo" role="Appellant"></party>
+ <party firstName="James" fullName="James W. Hawkins" lastName="Hawkins" middleName="W." role="Appellant"></party>
+ <party fullName="Hawkins Development LLC" lastName="Hawkins Development LLC" role="Appellant"></party>
+ <party fullName="Hawkins Family LLC" lastName="Hawkins Family LLC" role="Appellant"></party>
+ <party fullName="Hawkins Manufactured Housing, Inc." lastName="Hawkins Manufactured Housing, Inc." role="Appellant"></party>
+ <party firstName="Paul" fullName="Paul A. Levine" lastName="Levine" middleName="A." role="Appellee"></party>
+ <party fullName="Reserve Capital Corporation" lastName="Reserve Capital Corporation" role="Appellant"></party>
+ <party fullName="Souther Tier Acquistion, LLC" lastName="Souther Tier Acquistion, LLC" role="Appellee"></party>
+ <party fullName="Tioga Park, LLC" lastName="Tioga Park, LLC" role="Appellant"></party>
+ <party fullName="U.S. Trustee" lastName="U.S. Trustee" role="Notice Only Party"></party>
+ <party fullName="Wooded Estates, LLC" lastName="Wooded Estates, LLC" role="Appellant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-6_05-cv-00743-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_05-cv-00743/USCOURTS-nynd-6_05-cv-00743-0/mods.xml">
+ <titleInfo>
+  <title>Reserve Capital Corporation et al v. Levine et al</title>
+  <subTitle>DECISION&amp;ORDER affirming in part, remanding in part 1 Bankruptcy Appeal. Signed by Judge Lawrence E. Kahn on 1/30/07. (wjg, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-6_05-cv-00743-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814079b2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_05-cv-00743/USCOURTS-nynd-6_05-cv-00743-0</identifier>
+ <identifier type="former granule identifier">nynd-6_05-cv-00743_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_05-cv-00743/USCOURTS-nynd-6_05-cv-00743-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_05-cv-00743/pdf/USCOURTS-nynd-6_05-cv-00743-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:05-cv-00743; Reserve Capital Corporation et al v. Levine et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-6_05-cv-00743-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-30</dateIssued>
+  <docketText>DECISION&amp;ORDER affirming in part, remanding in part 1 Bankruptcy Appeal. Signed by Judge Lawrence E. Kahn on 1/30/07. (wjg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-6_05-cv-00743-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_05-cv-00743/USCOURTS-nynd-6_05-cv-00743-1/mods.xml">
+ <titleInfo>
+  <title>Reserve Capital Corporation et al v. Levine et al</title>
+  <subTitle>JUDGMENT dismissing action&amp;remanding matter to the USBC for further consideration, all in accordance with the Decision&amp;Order of the Hon. Lawrence E. Kahn, USDJ, dd 1/30/07. (wjg, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-6_05-cv-00743-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18140790d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_05-cv-00743/USCOURTS-nynd-6_05-cv-00743-1</identifier>
+ <identifier type="former granule identifier">nynd-6_05-cv-00743_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_05-cv-00743/USCOURTS-nynd-6_05-cv-00743-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_05-cv-00743/pdf/USCOURTS-nynd-6_05-cv-00743-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:05-cv-00743; Reserve Capital Corporation et al v. Levine et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-6_05-cv-00743-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-30</dateIssued>
+  <docketText>JUDGMENT dismissing action&amp;remanding matter to the USBC for further consideration, all in accordance with the Decision&amp;Order of the Hon. Lawrence E. Kahn, USDJ, dd 1/30/07. (wjg, )</docketText>
+</extension>
+</relatedItem>
+</mods>

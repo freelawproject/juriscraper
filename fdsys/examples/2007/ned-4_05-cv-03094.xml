@@ -1,0 +1,467 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b944a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03094</identifier>
+<identifier type="local">P0b002ee1817b944a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_05-cv-03094</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_05-cv-03094</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:05-cv-03094</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Harold" fullName="Harold Clarke" lastName="Clarke" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard D. Cruickshank" lastName="Cruickshank" middleName="D." role="Defendant"></party>
+ <party firstName="Unknown" fullName="Unknown Does" lastName="Does" role="Defendant"></party>
+ <party firstName="Unknown" fullName="Unknown Kinlund" lastName="Kinlund" role="Defendant"></party>
+ <party firstName="Jo Ann" fullName="Jo Ann Kinney" lastName="Kinney" role="Defendant"></party>
+ <party firstName="Mike" fullName="Mike Kinney" lastName="Kinney" role="Defendant"></party>
+ <party firstName="Unknown" fullName="Unknown Kinney" lastName="Kinney" role="Defendant"></party>
+ <party firstName="Unknown" fullName="Unknown Kirkpatrick" lastName="Kirkpatrick" role="Defendant"></party>
+ <party firstName="Lawrence" fullName="Lawrence Watkins" lastName="Watkins" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Watkins v. Kinney et al</title>
+ <partNumber>4:05-cv-03094</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03094/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:05-cv-03094;05-3094</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Harold Clarke</displayForm>
+ <namePart type="family">Clarke</namePart>
+ <namePart type="given">Harold</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard D. Cruickshank</displayForm>
+ <namePart type="family">Cruickshank</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Does</displayForm>
+ <namePart type="family">Does</namePart>
+ <namePart type="given">Unknown</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Kinlund</displayForm>
+ <namePart type="family">Kinlund</namePart>
+ <namePart type="given">Unknown</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jo Ann Kinney</displayForm>
+ <namePart type="family">Kinney</namePart>
+ <namePart type="given">Jo Ann</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mike Kinney</displayForm>
+ <namePart type="family">Kinney</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Kinney</displayForm>
+ <namePart type="family">Kinney</namePart>
+ <namePart type="given">Unknown</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unknown Kirkpatrick</displayForm>
+ <namePart type="family">Kirkpatrick</namePart>
+ <namePart type="given">Unknown</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lawrence Watkins</displayForm>
+ <namePart type="family">Watkins</namePart>
+ <namePart type="given">Lawrence</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_05-cv-03094</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:05-cv-03094</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Harold" fullName="Harold Clarke" lastName="Clarke" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard D. Cruickshank" lastName="Cruickshank" middleName="D." role="Defendant"></party>
+ <party firstName="Unknown" fullName="Unknown Does" lastName="Does" role="Defendant"></party>
+ <party firstName="Unknown" fullName="Unknown Kinlund" lastName="Kinlund" role="Defendant"></party>
+ <party firstName="Jo Ann" fullName="Jo Ann Kinney" lastName="Kinney" role="Defendant"></party>
+ <party firstName="Mike" fullName="Mike Kinney" lastName="Kinney" role="Defendant"></party>
+ <party firstName="Unknown" fullName="Unknown Kinney" lastName="Kinney" role="Defendant"></party>
+ <party firstName="Unknown" fullName="Unknown Kirkpatrick" lastName="Kirkpatrick" role="Defendant"></party>
+ <party firstName="Lawrence" fullName="Lawrence Watkins" lastName="Watkins" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03094-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-0/mods.xml">
+ <titleInfo>
+  <title>Watkins v. Kinney et al</title>
+  <subTitle>PRISONER PAYMENT ORDER granting plaintiff&apos;s 2 Motion for Leave to Proceed in forma pauperis. The plaintiff shall pay an initial partial filing fee of $15.55 by June 10, 2005, unless an enlargement of time is granted in response to a written motion; in the absence of the initial partial filing fee by the specified deadline, this case may be subject to dismissal. The clerk of court shall send a copy of this order to the appropriate official at the plaintiff&apos;s institution. Signed by Magistrate Judge F. A. Gossett on 5/6/2005. (Copy mailed to Inga Hookstra, Department of Correctional Services)(CS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03094-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818dcda8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-0</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03094_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03094/pdf/USCOURTS-ned-4_05-cv-03094-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03094; Watkins v. Kinney et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03094-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-06</dateIssued>
+  <docketText>PRISONER PAYMENT ORDER granting plaintiff&apos;s 2 Motion for Leave to Proceed in forma pauperis. The plaintiff shall pay an initial partial filing fee of $15.55 by June 10, 2005, unless an enlargement of time is granted in response to a written motion; in the absence of the initial partial filing fee by the specified deadline, this case may be subject to dismissal. The clerk of court shall send a copy of this order to the appropriate official at the plaintiff&apos;s institution. Signed by Magistrate Judge F. A. Gossett on 5/6/2005. (Copy mailed to Inga Hookstra, Department of Correctional Services)(CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03094-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-1/mods.xml">
+ <titleInfo>
+  <title>Watkins v. Kinney et al</title>
+  <subTitle>ORDER ON INITIAL REVIEW - Clerk to send summons and 285 form to plaintiff for completion and return. ***Set/Reset All Deadlines: Service of Summons due by 10/1/2005. Signed by Magistrate Judge F. A. Gossett on 6/2/2005. (1 Summons and 285 form mailed to plaintiff.)(JAR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03094-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818dcde9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-1</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03094_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03094/pdf/USCOURTS-ned-4_05-cv-03094-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03094; Watkins v. Kinney et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03094-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-06-02</dateIssued>
+  <docketText>ORDER ON INITIAL REVIEW - Clerk to send summons and 285 form to plaintiff for completion and return. ***Set/Reset All Deadlines: Service of Summons due by 10/1/2005. Signed by Magistrate Judge F. A. Gossett on 6/2/2005. (1 Summons and 285 form mailed to plaintiff.)(JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03094-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-2/mods.xml">
+ <titleInfo>
+  <title>Watkins v. Kinney et al</title>
+  <subTitle>MEMORANDUM AND ORDER that filing no. 23, the plaintiff&apos;s Motion for Summons and Form 285, is granted, and the Clerk of Court shall send the plaintiff one additional summons and one Form 285 to be completed and returned to the court for a second attempt at service of process on defendant-Cruickshank. The completed forms shall be returned to the court within thirty (30) days of the date of this Memorandum and Order for service by the U.S. Marshal; the Marshalshall serve the summons and complaint without payment of costs or fees; service may be by certified mail in the discretion of the Marshal. The Clerk of Court shall send the plaintiff an Application to Proceed IFP which the plaintiff may complete and return to the court within thirty (30) days of the dateof this Memorandum and Order. Filing nos. 25 and 32, the defendants&apos; Motions to Dismiss, are denied. Filing no. 30, the plaintiff&apos;s Objection to Motion to Dismiss, is granted. Signed by Judge Richard G. Kopf on 9/20/2005. (1 summons, 1 285 form, and Application to Proceed in Forma Pauperis mailed to plaintiff) (CS, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03094-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818dcda3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-2</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03094_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03094/pdf/USCOURTS-ned-4_05-cv-03094-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03094; Watkins v. Kinney et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03094-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-09-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that filing no. 23, the plaintiff&apos;s Motion for Summons and Form 285, is granted, and the Clerk of Court shall send the plaintiff one additional summons and one Form 285 to be completed and returned to the court for a second attempt at service of process on defendant-Cruickshank. The completed forms shall be returned to the court within thirty (30) days of the date of this Memorandum and Order for service by the U.S. Marshal; the Marshalshall serve the summons and complaint without payment of costs or fees; service may be by certified mail in the discretion of the Marshal. The Clerk of Court shall send the plaintiff an Application to Proceed IFP which the plaintiff may complete and return to the court within thirty (30) days of the dateof this Memorandum and Order. Filing nos. 25 and 32, the defendants&apos; Motions to Dismiss, are denied. Filing no. 30, the plaintiff&apos;s Objection to Motion to Dismiss, is granted. Signed by Judge Richard G. Kopf on 9/20/2005. (1 summons, 1 285 form, and Application to Proceed in Forma Pauperis mailed to plaintiff) (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03094-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-3/mods.xml">
+ <titleInfo>
+  <title>Watkins v. Kinney et al</title>
+  <subTitle>ORDER that filing no. 36 is denied. Filing no. 37, the plaintiff&apos;s motion to proceed in forma pauperis, is granted, subject to the admonitions stated above in this Order. The plaintiff shall keep the court informed of the plaintiff&apos;s current address at all times while this case is pending. The plaintiff is advised that he is bound by the Federal Rules of Civil Procedure and by the Local Rules of this court in the prosecution of this case. The federal rules are available at any law library, and the local rules are available at the office of the Clerk of Court, and also on the court&apos;s web site at www.ned.uscourts.gov. This order is entered without prejudice to the court later entering an ordertaxing costs in this case. No one, including the plaintiff, is relieved by this order from the obligation to pay or to reimburse taxable costs after this action is over. Signed by Magistrate Judge F. A. Gossett on 10/4/2005. (CS, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03094-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818dcda6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-3</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03094_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03094/pdf/USCOURTS-ned-4_05-cv-03094-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03094; Watkins v. Kinney et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03094-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-10-04</dateIssued>
+  <docketText>ORDER that filing no. 36 is denied. Filing no. 37, the plaintiff&apos;s motion to proceed in forma pauperis, is granted, subject to the admonitions stated above in this Order. The plaintiff shall keep the court informed of the plaintiff&apos;s current address at all times while this case is pending. The plaintiff is advised that he is bound by the Federal Rules of Civil Procedure and by the Local Rules of this court in the prosecution of this case. The federal rules are available at any law library, and the local rules are available at the office of the Clerk of Court, and also on the court&apos;s web site at www.ned.uscourts.gov. This order is entered without prejudice to the court later entering an ordertaxing costs in this case. No one, including the plaintiff, is relieved by this order from the obligation to pay or to reimburse taxable costs after this action is over. Signed by Magistrate Judge F. A. Gossett on 10/4/2005. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03094-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-4/mods.xml">
+ <titleInfo>
+  <title>Watkins v. Kinney et al</title>
+  <subTitle>ORDER granting 44 Motion to Withdraw as Attorney. IT IS HEREBY ORDERED that Filing 44, the withdrawal of the appearance by Defendant&apos;s attorney, Timothy P. Sullivan, is approved and the entry of appearance by Maureen Hannon on behalf of Defendant is recognized and approved. Signed by Magistrate Judge F. A. Gossett on 1/18/2006. (JAR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03094-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818dcda0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-4</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03094_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03094/pdf/USCOURTS-ned-4_05-cv-03094-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03094; Watkins v. Kinney et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03094-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-01-18</dateIssued>
+  <docketText>ORDER granting 44 Motion to Withdraw as Attorney. IT IS HEREBY ORDERED that Filing 44, the withdrawal of the appearance by Defendant&apos;s attorney, Timothy P. Sullivan, is approved and the entry of appearance by Maureen Hannon on behalf of Defendant is recognized and approved. Signed by Magistrate Judge F. A. Gossett on 1/18/2006. (JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03094-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-5/mods.xml">
+ <titleInfo>
+  <title>Watkins v. Kinney et al</title>
+  <subTitle>ORDER that by March 14, 2006, the plaintiff shall file a brief and any availableevidentiary support for his claims in response to the defendants&apos; Motion for Summary Judgment 41. In the absence of a timely response by the plaintiff to the defendants&apos; motion, this action may be subject, without further notice, to dismissal without prejudice, as abandoned and for lack of prosecution. Signed by Magistrate Judge F. A. Gossett on 2/14/2006. (CS, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-02-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03094-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818dcda1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-5</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03094_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03094/pdf/USCOURTS-ned-4_05-cv-03094-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03094; Watkins v. Kinney et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03094-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-02-14</dateIssued>
+  <docketText>ORDER that by March 14, 2006, the plaintiff shall file a brief and any availableevidentiary support for his claims in response to the defendants&apos; Motion for Summary Judgment 41. In the absence of a timely response by the plaintiff to the defendants&apos; motion, this action may be subject, without further notice, to dismissal without prejudice, as abandoned and for lack of prosecution. Signed by Magistrate Judge F. A. Gossett on 2/14/2006. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03094-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-6/mods.xml">
+ <titleInfo>
+  <title>Watkins v. Kinney et al</title>
+  <subTitle>ORDER granting 49 Motion to Withdraw as Attorney. IT IS HEREBY ORDERED that Filing 49, the withdrawal of the appearance by Defendants&apos; attorney, Maureen Hannon, is approved and the entry of appearance by David M. Handley on behalf of Defendants is recognized and approved. Signed by Magistrate Judge F. A. Gossett on 2/28/2006. (JAR)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-02-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03094-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818dcda2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-6</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03094_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03094/pdf/USCOURTS-ned-4_05-cv-03094-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03094; Watkins v. Kinney et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03094-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-02-28</dateIssued>
+  <docketText>ORDER granting 49 Motion to Withdraw as Attorney. IT IS HEREBY ORDERED that Filing 49, the withdrawal of the appearance by Defendants&apos; attorney, Maureen Hannon, is approved and the entry of appearance by David M. Handley on behalf of Defendants is recognized and approved. Signed by Magistrate Judge F. A. Gossett on 2/28/2006. (JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03094-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-7/mods.xml">
+ <titleInfo>
+  <title>Watkins v. Kinney et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding Memorandum and Order48. THEREFORE, IT IS ORDERED: 1. That this action and the plaintiff&apos;s complaint are dismissed, without prejudice, as abandoned and for lack of prosecution; 2. That all pending motions are denied as moot; and 3. That judgment will be entered accordingly. Signed by Judge Richard G. Kopf on 3/22/2006. (JAR)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03094-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818dcda7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-7</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03094_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03094/pdf/USCOURTS-ned-4_05-cv-03094-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03094; Watkins v. Kinney et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03094-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2006-03-22</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding Memorandum and Order48. THEREFORE, IT IS ORDERED: 1. That this action and the plaintiff&apos;s complaint are dismissed, without prejudice, as abandoned and for lack of prosecution; 2. That all pending motions are denied as moot; and 3. That judgment will be entered accordingly. Signed by Judge Richard G. Kopf on 3/22/2006. (JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03094-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-8/mods.xml">
+ <titleInfo>
+  <title>Watkins v. Kinney et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 53 Motion to Reopen Case. The Clerk of Court shall send the plaintiff, without cost, a copy of filing nos. 42, 48 and 51. Ordered by Judge Richard G. Kopf. Copies mailed as directed.(CS, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03094-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818dcda5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-8</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03094_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03094/pdf/USCOURTS-ned-4_05-cv-03094-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03094; Watkins v. Kinney et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03094-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2006-10-31</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 53 Motion to Reopen Case. The Clerk of Court shall send the plaintiff, without cost, a copy of filing nos. 42, 48 and 51. Ordered by Judge Richard G. Kopf. Copies mailed as directed.(CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03094-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-9/mods.xml">
+ <titleInfo>
+  <title>Watkins v. Kinney et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 60 Motion for Assistance and denying 61 Motion for Leave to file Amended Complaint. The plaintiff is requested to stop filing postjudgment motions asking in one form or another to reopen the above-entitled case. Ordered by Judge Richard G. Kopf.(JAR)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03094-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818dcda4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-9</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03094_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03094/USCOURTS-ned-4_05-cv-03094-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03094/pdf/USCOURTS-ned-4_05-cv-03094-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03094; Watkins v. Kinney et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03094-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2007-01-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 60 Motion for Assistance and denying 61 Motion for Leave to file Amended Complaint. The plaintiff is requested to stop filing postjudgment motions asking in one form or another to reopen the above-entitled case. Ordered by Judge Richard G. Kopf.(JAR)</docketText>
+</extension>
+</relatedItem>
+</mods>

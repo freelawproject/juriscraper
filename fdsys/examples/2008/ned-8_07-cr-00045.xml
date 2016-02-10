@@ -1,0 +1,258 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18174f1dd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00045</identifier>
+<identifier type="local">P0b002ee18174f1dd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cr-00045</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00045</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00045</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Anthony" fullName="Anthony D. Evans" lastName="Evans" middleName="D." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Evans</title>
+ <partNumber>8:07-cr-00045</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00045/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:07-cr-00045;07-045</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Anthony D. Evans</displayForm>
+ <namePart type="family">Evans</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00045</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00045</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Anthony" fullName="Anthony D. Evans" lastName="Evans" middleName="D." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00045-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Evans</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Anthony D. Evans. The Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-02-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00045-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181797fd1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-0</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00045_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00045/pdf/USCOURTS-ned-8_07-cr-00045-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00045; USA v. Evans; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00045-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-02-21</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Anthony D. Evans. The Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00045-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Evans</title>
+  <subTitle>ORDER as to defendant Anthony D. Evans scheduling Rule 11 hearing for May 4, 2007, at 10:30 a.m. Additional time between April 6, 2007, and May 4, 2007, shall be deemed excludable under the requirement of the speedy trial act. Ordered by Judge Lyle E. Strom.(JDR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00045-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181797f71</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-1</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00045_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00045/pdf/USCOURTS-ned-8_07-cr-00045-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00045; USA v. Evans; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00045-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-04-06</dateIssued>
+  <docketText>ORDER as to defendant Anthony D. Evans scheduling Rule 11 hearing for May 4, 2007, at 10:30 a.m. Additional time between April 6, 2007, and May 4, 2007, shall be deemed excludable under the requirement of the speedy trial act. Ordered by Judge Lyle E. Strom.(JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00045-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Evans</title>
+  <subTitle>ORDER granting 16 motion to continue as to Anthony D. Evans (1) - Change of Plea Hearing set for 5/17/2007 09:30 AM in Courtroom 5 (Omaha) before Senior Judge Lyle E. Strom. Ordered by Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00045-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181797f6f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-2</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00045_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00045/pdf/USCOURTS-ned-8_07-cr-00045-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00045; USA v. Evans; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00045-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-05-08</dateIssued>
+  <docketText>ORDER granting 16 motion to continue as to Anthony D. Evans (1) - Change of Plea Hearing set for 5/17/2007 09:30 AM in Courtroom 5 (Omaha) before Senior Judge Lyle E. Strom. Ordered by Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00045-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Evans</title>
+  <subTitle>STRICKEN - JUDGMENT as to Anthony D. Evans (1), Defendant plead guilty to Count I of the Indictment and is committed to the Bureau of Prisons for 60 months; 4 years supervised release with special conditions; $100 special assessment; defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons before 2:00 p.m. on March 17, 2008; Criminal Case Terminated as to defendant Anthony D. Evans. Ordered by Senior Judge Lyle E. Strom. (4 certified copies to USM)(CJP) Modified on 1/23/2008 to strike per order 37(CJP).</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00045-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181797f70</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-3</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00045_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00045/pdf/USCOURTS-ned-8_07-cr-00045-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00045; USA v. Evans; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00045-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-01-22</dateIssued>
+  <docketText>STRICKEN - JUDGMENT as to Anthony D. Evans (1), Defendant plead guilty to Count I of the Indictment and is committed to the Bureau of Prisons for 60 months; 4 years supervised release with special conditions; $100 special assessment; defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons before 2:00 p.m. on March 17, 2008; Criminal Case Terminated as to defendant Anthony D. Evans. Ordered by Senior Judge Lyle E. Strom. (4 certified copies to USM)(CJP) Modified on 1/23/2008 to strike per order 37(CJP).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00045-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Evans</title>
+  <subTitle>JUDGMENT as to Anthony D. Evans (1),Defendant plead guilty to Count I of the Indictment and is committed to the Bureau of Prisons for 60 months; 4 years supervised release with special conditions; $100 special assessment; defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons before 2:00 p.m. on March 17, 2008 as to defendant Anthony D. Evans. Ordered by Senior Judge Lyle E. Strom. (4 Certified copies to USM)(CJP)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00045-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181797f6e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-4</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00045_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00045/USCOURTS-ned-8_07-cr-00045-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00045/pdf/USCOURTS-ned-8_07-cr-00045-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00045; USA v. Evans; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00045-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-01-22</dateIssued>
+  <docketText>JUDGMENT as to Anthony D. Evans (1),Defendant plead guilty to Count I of the Indictment and is committed to the Bureau of Prisons for 60 months; 4 years supervised release with special conditions; $100 special assessment; defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons before 2:00 p.m. on March 17, 2008 as to defendant Anthony D. Evans. Ordered by Senior Judge Lyle E. Strom. (4 Certified copies to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+</mods>

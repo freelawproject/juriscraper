@@ -1,0 +1,236 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a1107ec">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-10-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01396</identifier>
+<identifier type="local">P0b002ee18a1107ec</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-01396</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01396</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01396</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:405 Review of HHS Decision (SSID)</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Jimmie" fullName="Jimmie L. Evans" lastName="Evans" middleName="L." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(SS) Evans v. Commissioner of Social Security</title>
+ <partNumber>2:13-cv-01396</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01396/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-01396;13-1396</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jimmie L. Evans</displayForm>
+ <namePart type="family">Evans</namePart>
+ <namePart type="given">Jimmie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01396</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01396</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:405 Review of HHS Decision (SSID)</cause>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Jimmie" fullName="Jimmie L. Evans" lastName="Evans" middleName="L." role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01396-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01396/USCOURTS-caed-2_13-cv-01396-0/mods.xml">
+ <titleInfo>
+  <title>(SS) Evans v. Commissioner of Social Security</title>
+  <subTitle>ORDER granting 4 Motion to Proceed IFP signed by Magistrate Judge Craig M. Kellison on 7/18/13. The Clerk is directed to serve on plaintiff the undersigned&apos;s scheduling order in social security cases. The Clerk is further directed to serve a copy of this order on the United States Marshal (USM). Within 15 days from the date of this order, plaintiff shall submit to the USM a completed summons and copies of the complaint and file a statement with the court that said documents have been submitted to the USM. The USM is directed to serve all process without prepayment of costs not later than 60 days from the date of this order. The USM shall also send a copy of the summons and complaint by registered or certified mail to the Commissioner of Social Security. (cc: USM) (Kastilahn, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01396/pdf/USCOURTS-caed-2_13-cv-01396-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a128fef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01396/USCOURTS-caed-2_13-cv-01396-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01396_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01396/USCOURTS-caed-2_13-cv-01396-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01396/pdf/USCOURTS-caed-2_13-cv-01396-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01396; (SS) Evans v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01396-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-07-19</dateIssued>
+  <docketText>ORDER granting 4 Motion to Proceed IFP signed by Magistrate Judge Craig M. Kellison on 7/18/13. The Clerk is directed to serve on plaintiff the undersigned&apos;s scheduling order in social security cases. The Clerk is further directed to serve a copy of this order on the United States Marshal (USM). Within 15 days from the date of this order, plaintiff shall submit to the USM a completed summons and copies of the complaint and file a statement with the court that said documents have been submitted to the USM. The USM is directed to serve all process without prepayment of costs not later than 60 days from the date of this order. The USM shall also send a copy of the summons and complaint by registered or certified mail to the Commissioner of Social Security. (cc: USM) (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01396-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01396/USCOURTS-caed-2_13-cv-01396-1/mods.xml">
+ <titleInfo>
+  <title>(SS) Evans v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION AND ORDER signed by Magistrate Judge Craig M. Kellison on 1/2/2014 GRANTING the plaintiff an extension of time, to include 3/3/2014, to file a Motion for Summary Judgment; ORDERING that all other deadlines set forth in the Case Management Order be extended accordingly. (Michel, G)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01396/pdf/USCOURTS-caed-2_13-cv-01396-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a128fee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01396/USCOURTS-caed-2_13-cv-01396-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01396_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01396/USCOURTS-caed-2_13-cv-01396-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01396/pdf/USCOURTS-caed-2_13-cv-01396-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01396; (SS) Evans v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01396-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Magistrate Judge Craig M. Kellison on 1/2/2014 GRANTING the plaintiff an extension of time, to include 3/3/2014, to file a Motion for Summary Judgment; ORDERING that all other deadlines set forth in the Case Management Order be extended accordingly. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01396-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01396/USCOURTS-caed-2_13-cv-01396-2/mods.xml">
+ <titleInfo>
+  <title>(SS) Evans v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER 16 to extend Briefing Schedule signed by Magistrate Judge Craig M. Kellison on 3/6/2014. Plaintiff has up to and includint 3/17/2014 in which to file Motion for Summary Judgment. (Marciel, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01396/pdf/USCOURTS-caed-2_13-cv-01396-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a128ff0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01396/USCOURTS-caed-2_13-cv-01396-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01396_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01396/USCOURTS-caed-2_13-cv-01396-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01396/pdf/USCOURTS-caed-2_13-cv-01396-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01396; (SS) Evans v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01396-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-03-06</dateIssued>
+  <docketText>STIPULATION and ORDER 16 to extend Briefing Schedule signed by Magistrate Judge Craig M. Kellison on 3/6/2014. Plaintiff has up to and includint 3/17/2014 in which to file Motion for Summary Judgment. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01396-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01396/USCOURTS-caed-2_13-cv-01396-3/mods.xml">
+ <titleInfo>
+  <title>(SS) Evans v. Commissioner of Social Security</title>
+  <subTitle>ORDER signed by Magistrate Judge Craig M. Kellison on 10/8/14 ORDERING that Plaintiff&apos;s motion for summary judgment (Doc. 18) is denied; Defendant&apos;s cross-motion for summary judgment (Doc. 19) is granted; and The Clerk of the Court is directed to enter judgment and close this file. (Becknal, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01396/pdf/USCOURTS-caed-2_13-cv-01396-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a128ff1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01396/USCOURTS-caed-2_13-cv-01396-3</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01396_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01396/USCOURTS-caed-2_13-cv-01396-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01396/pdf/USCOURTS-caed-2_13-cv-01396-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01396; (SS) Evans v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01396-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-10-08</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Craig M. Kellison on 10/8/14 ORDERING that Plaintiff&apos;s motion for summary judgment (Doc. 18) is denied; Defendant&apos;s cross-motion for summary judgment (Doc. 19) is granted; and The Clerk of the Court is directed to enter judgment and close this file. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

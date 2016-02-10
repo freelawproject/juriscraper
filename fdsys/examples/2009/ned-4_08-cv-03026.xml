@@ -1,0 +1,371 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a81ec">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03026</identifier>
+<identifier type="local">P0b002ee1817a81ec</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_08-cv-03026</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cv-03026</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cv-03026</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>480</natureSuitCode>
+ <natureSuit>Consumer Credit</natureSuit>
+ <cause>28:1441 Petition for Removal - Fair Credit Reporti</cause>
+ <party fullName="CSC Credit Service" lastName="CSC Credit Service" role="Defendant"></party>
+ <party fullName="Central Source LLC" lastName="Central Source LLC" role="Defendant"></party>
+ <party fullName="Does 1 through 100" lastName="Does 1 through 100" role="Defendant"></party>
+ <party fullName="Dunn and Bradstreet" lastName="Dunn and Bradstreet" role="Defendant"></party>
+ <party fullName="Equifax Credit Service" lastName="Equifax Credit Service" role="Defendant"></party>
+ <party fullName="Experian Credit Service" lastName="Experian Credit Service" role="Defendant"></party>
+ <party fullName="Experian Group Limited" lastName="Experian Group Limited" role="Defendant"></party>
+ <party fullName="First American Real Estate Solutions II, LLC" lastName="First American Real Estate Solutions II, LLC" role="Defendant"></party>
+ <party fullName="First American Real Estate Solutions, LLC" lastName="First American Real Estate Solutions, LLC" role="Defendant"></party>
+ <party firstName="Collee" fullName="Collee M. Lecher" lastName="Lecher" middleName="M." role="Plaintiff"></party>
+ <party fullName="New Management Services LLC" lastName="New Management Services LLC" role="Defendant"></party>
+ <party fullName="Online Data Exchange LLC" lastName="Online Data Exchange LLC" role="Defendant"></party>
+ <party fullName="Trans Union Corporation" lastName="Trans Union Corporation" role="Defendant"></party>
+ <party fullName="Transunion Credit Service" lastName="Transunion Credit Service" role="Defendant"></party>
+ <party fullName="VantageScore Solutions LLC" lastName="VantageScore Solutions LLC" role="Defendant"></party>
+ <party fullName="Vehicle Title, LLC" lastName="Vehicle Title, LLC" role="Defendant"></party>
+ <party firstName="John" fullName="John Lecher Zapata" lastName="Zapata" middleName="Lecher" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Zapata et al v. CSC Credit Service et al</title>
+ <partNumber>4:08-cv-03026</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03026/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:08-cv-03026;08-3026</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CSC Credit Service</displayForm>
+ <namePart type="family">CSC Credit Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Central Source LLC</displayForm>
+ <namePart type="family">Central Source LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Does 1 through 100</displayForm>
+ <namePart type="family">Does 1 through 100</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dunn and Bradstreet</displayForm>
+ <namePart type="family">Dunn and Bradstreet</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Equifax Credit Service</displayForm>
+ <namePart type="family">Equifax Credit Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Experian Credit Service</displayForm>
+ <namePart type="family">Experian Credit Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Experian Group Limited</displayForm>
+ <namePart type="family">Experian Group Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>First American Real Estate Solutions II, LLC</displayForm>
+ <namePart type="family">First American Real Estate Solutions II, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>First American Real Estate Solutions, LLC</displayForm>
+ <namePart type="family">First American Real Estate Solutions, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Collee M. Lecher</displayForm>
+ <namePart type="family">Lecher</namePart>
+ <namePart type="given">Collee</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>New Management Services LLC</displayForm>
+ <namePart type="family">New Management Services LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Online Data Exchange LLC</displayForm>
+ <namePart type="family">Online Data Exchange LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Trans Union Corporation</displayForm>
+ <namePart type="family">Trans Union Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Transunion Credit Service</displayForm>
+ <namePart type="family">Transunion Credit Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>VantageScore Solutions LLC</displayForm>
+ <namePart type="family">VantageScore Solutions LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vehicle Title, LLC</displayForm>
+ <namePart type="family">Vehicle Title, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Lecher Zapata</displayForm>
+ <namePart type="family">Zapata</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cv-03026</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cv-03026</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>480</natureSuitCode>
+ <natureSuit>Consumer Credit</natureSuit>
+ <cause>28:1441 Petition for Removal - Fair Credit Reporti</cause>
+ <party fullName="CSC Credit Service" lastName="CSC Credit Service" role="Defendant"></party>
+ <party fullName="Central Source LLC" lastName="Central Source LLC" role="Defendant"></party>
+ <party fullName="Does 1 through 100" lastName="Does 1 through 100" role="Defendant"></party>
+ <party fullName="Dunn and Bradstreet" lastName="Dunn and Bradstreet" role="Defendant"></party>
+ <party fullName="Equifax Credit Service" lastName="Equifax Credit Service" role="Defendant"></party>
+ <party fullName="Experian Credit Service" lastName="Experian Credit Service" role="Defendant"></party>
+ <party fullName="Experian Group Limited" lastName="Experian Group Limited" role="Defendant"></party>
+ <party fullName="First American Real Estate Solutions II, LLC" lastName="First American Real Estate Solutions II, LLC" role="Defendant"></party>
+ <party fullName="First American Real Estate Solutions, LLC" lastName="First American Real Estate Solutions, LLC" role="Defendant"></party>
+ <party firstName="Collee" fullName="Collee M. Lecher" lastName="Lecher" middleName="M." role="Plaintiff"></party>
+ <party fullName="New Management Services LLC" lastName="New Management Services LLC" role="Defendant"></party>
+ <party fullName="Online Data Exchange LLC" lastName="Online Data Exchange LLC" role="Defendant"></party>
+ <party fullName="Trans Union Corporation" lastName="Trans Union Corporation" role="Defendant"></party>
+ <party fullName="Transunion Credit Service" lastName="Transunion Credit Service" role="Defendant"></party>
+ <party fullName="VantageScore Solutions LLC" lastName="VantageScore Solutions LLC" role="Defendant"></party>
+ <party fullName="Vehicle Title, LLC" lastName="Vehicle Title, LLC" role="Defendant"></party>
+ <party firstName="John" fullName="John Lecher Zapata" lastName="Zapata" middleName="Lecher" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03026-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03026/USCOURTS-ned-4_08-cv-03026-0/mods.xml">
+ <titleInfo>
+  <title>Zapata et al v. CSC Credit Service et al</title>
+  <subTitle>REASSIGNMENT ORDER - that this case is reassigned to District Judge Joseph F. Bataillon for disposition and to Magistrate Judge David L. Piester for pro se docket supervision and processing of all pretrial matters.Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(TCL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03026-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181860f6d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03026/USCOURTS-ned-4_08-cv-03026-0</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03026_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03026/USCOURTS-ned-4_08-cv-03026-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03026/pdf/USCOURTS-ned-4_08-cv-03026-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03026; Zapata et al v. CSC Credit Service et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03026-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-02-12</dateIssued>
+  <docketText>REASSIGNMENT ORDER - that this case is reassigned to District Judge Joseph F. Bataillon for disposition and to Magistrate Judge David L. Piester for pro se docket supervision and processing of all pretrial matters.Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(TCL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03026-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03026/USCOURTS-ned-4_08-cv-03026-1/mods.xml">
+ <titleInfo>
+  <title>Zapata et al v. CSC Credit Service et al</title>
+  <subTitle>FINAL JUDGMENT is hereby entered, providing that: This matter is dismissed without prejudice; and this matter is remanded to the District Court of Lancaster County, Nebraska. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03026-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181860f70</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03026/USCOURTS-ned-4_08-cv-03026-1</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03026_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03026/USCOURTS-ned-4_08-cv-03026-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03026/pdf/USCOURTS-ned-4_08-cv-03026-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03026; Zapata et al v. CSC Credit Service et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03026-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-03-12</dateIssued>
+  <docketText>FINAL JUDGMENT is hereby entered, providing that: This matter is dismissed without prejudice; and this matter is remanded to the District Court of Lancaster County, Nebraska. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03026-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03026/USCOURTS-ned-4_08-cv-03026-2/mods.xml">
+ <titleInfo>
+  <title>Zapata et al v. CSC Credit Service et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Defendant Dunn and Bradstreet&apos;s Motion to Withdraw Notice of Removal 8 is granted. This matter is dismissed without prejudice and remanded back to the Lancaster County, Nebraska District Court. A separate judgment will be entered in accordance with this Memorandum and Order. Ordered by Chief Judge Joseph F. Bataillon.(Copy mailed to pro se party)(KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03026-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181860f6f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03026/USCOURTS-ned-4_08-cv-03026-2</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03026_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03026/USCOURTS-ned-4_08-cv-03026-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03026/pdf/USCOURTS-ned-4_08-cv-03026-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03026; Zapata et al v. CSC Credit Service et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03026-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-03-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Defendant Dunn and Bradstreet&apos;s Motion to Withdraw Notice of Removal 8 is granted. This matter is dismissed without prejudice and remanded back to the Lancaster County, Nebraska District Court. A separate judgment will be entered in accordance with this Memorandum and Order. Ordered by Chief Judge Joseph F. Bataillon.(Copy mailed to pro se party)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03026-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03026/USCOURTS-ned-4_08-cv-03026-3/mods.xml">
+ <titleInfo>
+  <title>Zapata et al v. CSC Credit Service et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiffs&apos; Motion to Dismiss Party (filing no. 26) is denied. The Clerk of the court shall forward a copy of this Memorandum and Order and Plaintiffs&apos; Motion to Dismiss Party (filing no. 26) to the Lancaster County, Nebraska District Court. Ordered by Chief Judge Joseph F. Bataillon. (Copies mailed as directed)(TCL )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03026-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181860f6e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03026/USCOURTS-ned-4_08-cv-03026-3</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03026_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03026/USCOURTS-ned-4_08-cv-03026-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03026/pdf/USCOURTS-ned-4_08-cv-03026-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03026; Zapata et al v. CSC Credit Service et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03026-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiffs&apos; Motion to Dismiss Party (filing no. 26) is denied. The Clerk of the court shall forward a copy of this Memorandum and Order and Plaintiffs&apos; Motion to Dismiss Party (filing no. 26) to the Lancaster County, Nebraska District Court. Ordered by Chief Judge Joseph F. Bataillon. (Copies mailed as directed)(TCL )</docketText>
+</extension>
+</relatedItem>
+</mods>

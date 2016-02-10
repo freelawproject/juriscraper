@@ -1,0 +1,350 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815b8538">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_08-cv-02656</identifier>
+<identifier type="local">P0b002ee1815b8538</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_08-cv-02656</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_08-cv-02656</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:08-cv-02656</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1331 Fed. Question: Personal Injury</cause>
+ <party firstName="Charanjit" fullName="Charanjit S. Ahluwalia" lastName="Ahluwalia" middleName="S." role="Defendant"></party>
+ <party fullName="Altria Client Services, Inc." lastName="Altria Client Services, Inc." role="Defendant"></party>
+ <party fullName="Attorneys for Private and State Entities" lastName="Attorneys for Private and State Entities" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher E. Avendano" lastName="Avendano" middleName="E." role="Defendant"></party>
+ <party firstName="Kamal" fullName="Kamal Chaban" lastName="Chaban" role="Defendant"></party>
+ <party firstName="Sathiskumar" fullName="Sathiskumar H. Culhath" lastName="Culhath" middleName="H." role="Defendant"></party>
+ <party fullName="Erie Metro Housing Authority" lastName="Erie Metro Housing Authority" role="Defendant"></party>
+ <party fullName="Feick Contractors" lastName="Feick Contractors" role="Defendant"></party>
+ <party fullName="Firelands Regional Medical Center" lastName="Firelands Regional Medical Center" role="Defendant"></party>
+ <party fullName="Gallaher Group" lastName="Gallaher Group" role="Defendant"></party>
+ <party fullName="Great Lakes Transitional Care" lastName="Great Lakes Transitional Care" role="Defendant"></party>
+ <party fullName="JT International" lastName="JT International" role="Defendant"></party>
+ <party fullName="Medicare&amp;Medicaid" lastName="Medicare&amp;Medicaid" role="Defendant"></party>
+ <party fullName="North Central Ohio Medical Services" lastName="North Central Ohio Medical Services" role="Defendant"></party>
+ <party fullName="Philip Morris, USA" lastName="Philip Morris, USA" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Edward Pryor" lastName="Pryor" middleName="Edward" role="Plaintiff"></party>
+ <party fullName="State Attorney General Offices within the United States" lastName="State Attorney General Offices within the United States" role="Defendant"></party>
+ <party fullName="State of Ohio" lastName="State of Ohio" role="Defendant"></party>
+ <party fullName="Stein Hospice" lastName="Stein Hospice" role="Defendant"></party>
+ <party fullName="U.S. Department of Agriculture" lastName="U.S. Department of Agriculture" role="Defendant"></party>
+ <party fullName="U.S. Department of Commerce" lastName="U.S. Department of Commerce" role="Defendant"></party>
+ <party fullName="U.S. Department of Housing and Urban Development" lastName="U.S. Department of Housing and Urban Development" role="Defendant"></party>
+ <party fullName="U.S. Department of Justice" lastName="U.S. Department of Justice" role="Defendant"></party>
+ <party fullName="United States Department of Health and Human Services" lastName="United States Department of Health and Human Services" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Pryor v. Philip Morris, USA et al</title>
+ <partNumber>3:08-cv-02656</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_08-cv-02656/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:08-cv-02656;08-2656</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Charanjit S. Ahluwalia</displayForm>
+ <namePart type="family">Ahluwalia</namePart>
+ <namePart type="given">Charanjit</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Altria Client Services, Inc.</displayForm>
+ <namePart type="family">Altria Client Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Attorneys for Private and State Entities</displayForm>
+ <namePart type="family">Attorneys for Private and State Entities</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher E. Avendano</displayForm>
+ <namePart type="family">Avendano</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kamal Chaban</displayForm>
+ <namePart type="family">Chaban</namePart>
+ <namePart type="given">Kamal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sathiskumar H. Culhath</displayForm>
+ <namePart type="family">Culhath</namePart>
+ <namePart type="given">Sathiskumar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Erie Metro Housing Authority</displayForm>
+ <namePart type="family">Erie Metro Housing Authority</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Feick Contractors</displayForm>
+ <namePart type="family">Feick Contractors</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Firelands Regional Medical Center</displayForm>
+ <namePart type="family">Firelands Regional Medical Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gallaher Group</displayForm>
+ <namePart type="family">Gallaher Group</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Great Lakes Transitional Care</displayForm>
+ <namePart type="family">Great Lakes Transitional Care</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JT International</displayForm>
+ <namePart type="family">JT International</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Medicare&amp;Medicaid</displayForm>
+ <namePart type="family">Medicare&amp;Medicaid</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>North Central Ohio Medical Services</displayForm>
+ <namePart type="family">North Central Ohio Medical Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Philip Morris, USA</displayForm>
+ <namePart type="family">Philip Morris, USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Edward Pryor</displayForm>
+ <namePart type="family">Pryor</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>State Attorney General Offices within the United States</displayForm>
+ <namePart type="family">State Attorney General Offices within the United States</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State of Ohio</displayForm>
+ <namePart type="family">State of Ohio</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stein Hospice</displayForm>
+ <namePart type="family">Stein Hospice</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Department of Agriculture</displayForm>
+ <namePart type="family">U.S. Department of Agriculture</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Department of Commerce</displayForm>
+ <namePart type="family">U.S. Department of Commerce</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Department of Housing and Urban Development</displayForm>
+ <namePart type="family">U.S. Department of Housing and Urban Development</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Department of Justice</displayForm>
+ <namePart type="family">U.S. Department of Justice</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States Department of Health and Human Services</displayForm>
+ <namePart type="family">United States Department of Health and Human Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_08-cv-02656</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:08-cv-02656</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1331 Fed. Question: Personal Injury</cause>
+ <party firstName="Charanjit" fullName="Charanjit S. Ahluwalia" lastName="Ahluwalia" middleName="S." role="Defendant"></party>
+ <party fullName="Altria Client Services, Inc." lastName="Altria Client Services, Inc." role="Defendant"></party>
+ <party fullName="Attorneys for Private and State Entities" lastName="Attorneys for Private and State Entities" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher E. Avendano" lastName="Avendano" middleName="E." role="Defendant"></party>
+ <party firstName="Kamal" fullName="Kamal Chaban" lastName="Chaban" role="Defendant"></party>
+ <party firstName="Sathiskumar" fullName="Sathiskumar H. Culhath" lastName="Culhath" middleName="H." role="Defendant"></party>
+ <party fullName="Erie Metro Housing Authority" lastName="Erie Metro Housing Authority" role="Defendant"></party>
+ <party fullName="Feick Contractors" lastName="Feick Contractors" role="Defendant"></party>
+ <party fullName="Firelands Regional Medical Center" lastName="Firelands Regional Medical Center" role="Defendant"></party>
+ <party fullName="Gallaher Group" lastName="Gallaher Group" role="Defendant"></party>
+ <party fullName="Great Lakes Transitional Care" lastName="Great Lakes Transitional Care" role="Defendant"></party>
+ <party fullName="JT International" lastName="JT International" role="Defendant"></party>
+ <party fullName="Medicare&amp;Medicaid" lastName="Medicare&amp;Medicaid" role="Defendant"></party>
+ <party fullName="North Central Ohio Medical Services" lastName="North Central Ohio Medical Services" role="Defendant"></party>
+ <party fullName="Philip Morris, USA" lastName="Philip Morris, USA" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Edward Pryor" lastName="Pryor" middleName="Edward" role="Plaintiff"></party>
+ <party fullName="State Attorney General Offices within the United States" lastName="State Attorney General Offices within the United States" role="Defendant"></party>
+ <party fullName="State of Ohio" lastName="State of Ohio" role="Defendant"></party>
+ <party fullName="Stein Hospice" lastName="Stein Hospice" role="Defendant"></party>
+ <party fullName="U.S. Department of Agriculture" lastName="U.S. Department of Agriculture" role="Defendant"></party>
+ <party fullName="U.S. Department of Commerce" lastName="U.S. Department of Commerce" role="Defendant"></party>
+ <party fullName="U.S. Department of Housing and Urban Development" lastName="U.S. Department of Housing and Urban Development" role="Defendant"></party>
+ <party fullName="U.S. Department of Justice" lastName="U.S. Department of Justice" role="Defendant"></party>
+ <party fullName="United States Department of Health and Human Services" lastName="United States Department of Health and Human Services" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_08-cv-02656-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_08-cv-02656/USCOURTS-ohnd-3_08-cv-02656-0/mods.xml">
+ <titleInfo>
+  <title>Pryor v. Philip Morris, USA et al</title>
+  <subTitle>Memorandum Opinion and Order Pltf&apos;s motion to proceed in forma pauperis (doc #5) is granted. This action is dismissed pursuant to 28 USC 1915(e). The Court certifies, pursuant to 28 USC 1915(a)(3), that an appeal from this decision could not be taken in good faith. Judge Jack Zouhary on 1/21/09. (B,CJ)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_08-cv-02656-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816808ce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_08-cv-02656/USCOURTS-ohnd-3_08-cv-02656-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_08-cv-02656_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_08-cv-02656/USCOURTS-ohnd-3_08-cv-02656-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_08-cv-02656/pdf/USCOURTS-ohnd-3_08-cv-02656-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:08-cv-02656; Pryor v. Philip Morris, USA et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_08-cv-02656-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-22</dateIssued>
+  <docketText>Memorandum Opinion and Order Pltf&apos;s motion to proceed in forma pauperis (doc #5) is granted. This action is dismissed pursuant to 28 USC 1915(e). The Court certifies, pursuant to 28 USC 1915(a)(3), that an appeal from this decision could not be taken in good faith. Judge Jack Zouhary on 1/21/09. (B,CJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

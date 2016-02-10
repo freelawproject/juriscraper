@@ -1,0 +1,161 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18153640f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-cv-01643</identifier>
+<identifier type="local">P0b002ee18153640f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_08-cv-01643</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_08-cv-01643</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:08-cv-01643</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:12131 Americans with Disabilities</cause>
+ <party fullName="Disabled Patriots of America, Inc." lastName="Disabled Patriots of America, Inc." role="Plaintiff"></party>
+ <party firstName="Bonnie" fullName="Bonnie Kramer" lastName="Kramer" role="Plaintiff"></party>
+ <party fullName="Solar Center Ltd." lastName="Solar Center Ltd." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Disabled Patriots of America, Inc. et al v. Solar Center Ltd.</title>
+ <partNumber>1:08-cv-01643</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-cv-01643/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-01643;08-1643</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Disabled Patriots of America, Inc.</displayForm>
+ <namePart type="family">Disabled Patriots of America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Bonnie Kramer</displayForm>
+ <namePart type="family">Kramer</namePart>
+ <namePart type="given">Bonnie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Solar Center Ltd.</displayForm>
+ <namePart type="family">Solar Center Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_08-cv-01643</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:08-cv-01643</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:12131 Americans with Disabilities</cause>
+ <party fullName="Disabled Patriots of America, Inc." lastName="Disabled Patriots of America, Inc." role="Plaintiff"></party>
+ <party firstName="Bonnie" fullName="Bonnie Kramer" lastName="Kramer" role="Plaintiff"></party>
+ <party fullName="Solar Center Ltd." lastName="Solar Center Ltd." role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_08-cv-01643-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-cv-01643/USCOURTS-ohnd-1_08-cv-01643-0/mods.xml">
+ <titleInfo>
+  <title>Disabled Patriots of America, Inc. et al v. Solar Center Ltd.</title>
+  <subTitle>Order of Case Dismissal. It is ordered this action is closed. It shall be marked settled and dismissed, with prejudice, each party to bear its own costs. Judge Christopher A. Boyko on 01/21/09. (M,M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_08-cv-01643-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815db226</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-cv-01643/USCOURTS-ohnd-1_08-cv-01643-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_08-cv-01643_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-cv-01643/USCOURTS-ohnd-1_08-cv-01643-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-cv-01643/pdf/USCOURTS-ohnd-1_08-cv-01643-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-01643; Disabled Patriots of America, Inc. et al v. Solar Center Ltd.; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_08-cv-01643-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-21</dateIssued>
+  <docketText>Order of Case Dismissal. It is ordered this action is closed. It shall be marked settled and dismissed, with prejudice, each party to bear its own costs. Judge Christopher A. Boyko on 01/21/09. (M,M)</docketText>
+</extension>
+</relatedItem>
+</mods>

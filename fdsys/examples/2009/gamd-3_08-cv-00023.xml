@@ -1,0 +1,377 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18128c33d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_08-cv-00023</identifier>
+<identifier type="local">P0b002ee18128c33d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-3_08-cv-00023</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-3_08-cv-00023</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>3:08-cv-00023</caseNumber>
+ <caseOffice>Athens</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party fullName="AMA Lighthouse Inc" lastName="AMA Lighthouse Inc" role="Defendant"></party>
+ <party fullName="Asset Management Advisors Charlotte LLC" lastName="Asset Management Advisors Charlotte LLC" role="Defendant"></party>
+ <party fullName="Asset Management Advisors of Greater Washington DC LLC" lastName="Asset Management Advisors of Greater Washington DC LLC" role="Defendant"></party>
+ <party firstName="Amy" fullName="Amy Coppedge" lastName="Coppedge" role="Plaintiff"></party>
+ <party fullName="GenSpring Family Offices LLC" lastName="GenSpring Family Offices LLC" role="Defendant"></party>
+ <party fullName="GenSpring Holdings, Inc." lastName="GenSpring Holdings, Inc." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Goodroe" lastName="Goodroe" role="Defendant"></party>
+ <party fullName="Inlign Wealth Management LLC" lastName="Inlign Wealth Management LLC" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Peacock" lastName="Peacock" role="Defendant"></party>
+ <party fullName="STI Investment Management (Collateral) Inc" lastName="STI Investment Management (Collateral) Inc" role="Defendant"></party>
+ <party fullName="STI Investment Management Inc" lastName="STI Investment Management Inc" role="Defendant"></party>
+ <party fullName="SUNTRUST BANKS INC" lastName="SUNTRUST BANKS INC" role="Defendant"></party>
+ <party fullName="SunTrust Bank" lastName="SunTrust Bank" role="Defendant"></party>
+ <party fullName="SunTrust Bank Holding Company" lastName="SunTrust Bank Holding Company" role="Defendant"></party>
+ <party fullName="SunTrust Capital I" lastName="SunTrust Capital I" role="Defendant"></party>
+ <party fullName="SunTrust Capital II" lastName="SunTrust Capital II" role="Defendant"></party>
+ <party fullName="SunTrust Capital III" lastName="SunTrust Capital III" role="Defendant"></party>
+ <party fullName="SunTrust Capital IV" lastName="SunTrust Capital IV" role="Defendant"></party>
+ <party fullName="SunTrust Capital V" lastName="SunTrust Capital V" role="Defendant"></party>
+ <party fullName="SunTrust Capital VI" lastName="SunTrust Capital VI" role="Defendant"></party>
+ <party fullName="SunTrust Capital VII" lastName="SunTrust Capital VII" role="Defendant"></party>
+ <party fullName="SunTrust Capital VIII" lastName="SunTrust Capital VIII" role="Defendant"></party>
+ <party fullName="TBK Investments Inc" lastName="TBK Investments Inc" role="Defendant"></party>
+ <party fullName="TTC&amp;Co LLC" lastName="TTC&amp;Co LLC" role="Defendant"></party>
+ <party fullName="Teton Trust Company" lastName="Teton Trust Company" role="Defendant"></party>
+ <party firstName="James" fullName="James M. Wells" lastName="Wells" middleName="M." role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Zwirn" lastName="Zwirn" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Coppedge v. SunTrust Banks, Inc. et al</title>
+ <partNumber>3:08-cv-00023</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_08-cv-00023/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:08-cv-00023;08-023</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Athens</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>AMA Lighthouse Inc</displayForm>
+ <namePart type="family">AMA Lighthouse Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Asset Management Advisors Charlotte LLC</displayForm>
+ <namePart type="family">Asset Management Advisors Charlotte LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Asset Management Advisors of Greater Washington DC LLC</displayForm>
+ <namePart type="family">Asset Management Advisors of Greater Washington DC LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Amy Coppedge</displayForm>
+ <namePart type="family">Coppedge</namePart>
+ <namePart type="given">Amy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>GenSpring Family Offices LLC</displayForm>
+ <namePart type="family">GenSpring Family Offices LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GenSpring Holdings, Inc.</displayForm>
+ <namePart type="family">GenSpring Holdings, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Goodroe</displayForm>
+ <namePart type="family">Goodroe</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Inlign Wealth Management LLC</displayForm>
+ <namePart type="family">Inlign Wealth Management LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Peacock</displayForm>
+ <namePart type="family">Peacock</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>STI Investment Management (Collateral) Inc</displayForm>
+ <namePart type="family">STI Investment Management (Collateral) Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>STI Investment Management Inc</displayForm>
+ <namePart type="family">STI Investment Management Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SUNTRUST BANKS INC</displayForm>
+ <namePart type="family">SUNTRUST BANKS INC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SunTrust Bank</displayForm>
+ <namePart type="family">SunTrust Bank</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SunTrust Bank Holding Company</displayForm>
+ <namePart type="family">SunTrust Bank Holding Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SunTrust Capital I</displayForm>
+ <namePart type="family">SunTrust Capital I</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SunTrust Capital II</displayForm>
+ <namePart type="family">SunTrust Capital II</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SunTrust Capital III</displayForm>
+ <namePart type="family">SunTrust Capital III</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SunTrust Capital IV</displayForm>
+ <namePart type="family">SunTrust Capital IV</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SunTrust Capital V</displayForm>
+ <namePart type="family">SunTrust Capital V</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SunTrust Capital VI</displayForm>
+ <namePart type="family">SunTrust Capital VI</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SunTrust Capital VII</displayForm>
+ <namePart type="family">SunTrust Capital VII</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SunTrust Capital VIII</displayForm>
+ <namePart type="family">SunTrust Capital VIII</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TBK Investments Inc</displayForm>
+ <namePart type="family">TBK Investments Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TTC&amp;Co LLC</displayForm>
+ <namePart type="family">TTC&amp;Co LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Teton Trust Company</displayForm>
+ <namePart type="family">Teton Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James M. Wells</displayForm>
+ <namePart type="family">Wells</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jennifer Zwirn</displayForm>
+ <namePart type="family">Zwirn</namePart>
+ <namePart type="given">Jennifer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-3_08-cv-00023</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>3:08-cv-00023</caseNumber>
+ <caseOffice>Athens</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party fullName="AMA Lighthouse Inc" lastName="AMA Lighthouse Inc" role="Defendant"></party>
+ <party fullName="Asset Management Advisors Charlotte LLC" lastName="Asset Management Advisors Charlotte LLC" role="Defendant"></party>
+ <party fullName="Asset Management Advisors of Greater Washington DC LLC" lastName="Asset Management Advisors of Greater Washington DC LLC" role="Defendant"></party>
+ <party firstName="Amy" fullName="Amy Coppedge" lastName="Coppedge" role="Plaintiff"></party>
+ <party fullName="GenSpring Family Offices LLC" lastName="GenSpring Family Offices LLC" role="Defendant"></party>
+ <party fullName="GenSpring Holdings, Inc." lastName="GenSpring Holdings, Inc." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Goodroe" lastName="Goodroe" role="Defendant"></party>
+ <party fullName="Inlign Wealth Management LLC" lastName="Inlign Wealth Management LLC" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Peacock" lastName="Peacock" role="Defendant"></party>
+ <party fullName="STI Investment Management (Collateral) Inc" lastName="STI Investment Management (Collateral) Inc" role="Defendant"></party>
+ <party fullName="STI Investment Management Inc" lastName="STI Investment Management Inc" role="Defendant"></party>
+ <party fullName="SUNTRUST BANKS INC" lastName="SUNTRUST BANKS INC" role="Defendant"></party>
+ <party fullName="SunTrust Bank" lastName="SunTrust Bank" role="Defendant"></party>
+ <party fullName="SunTrust Bank Holding Company" lastName="SunTrust Bank Holding Company" role="Defendant"></party>
+ <party fullName="SunTrust Capital I" lastName="SunTrust Capital I" role="Defendant"></party>
+ <party fullName="SunTrust Capital II" lastName="SunTrust Capital II" role="Defendant"></party>
+ <party fullName="SunTrust Capital III" lastName="SunTrust Capital III" role="Defendant"></party>
+ <party fullName="SunTrust Capital IV" lastName="SunTrust Capital IV" role="Defendant"></party>
+ <party fullName="SunTrust Capital V" lastName="SunTrust Capital V" role="Defendant"></party>
+ <party fullName="SunTrust Capital VI" lastName="SunTrust Capital VI" role="Defendant"></party>
+ <party fullName="SunTrust Capital VII" lastName="SunTrust Capital VII" role="Defendant"></party>
+ <party fullName="SunTrust Capital VIII" lastName="SunTrust Capital VIII" role="Defendant"></party>
+ <party fullName="TBK Investments Inc" lastName="TBK Investments Inc" role="Defendant"></party>
+ <party fullName="TTC&amp;Co LLC" lastName="TTC&amp;Co LLC" role="Defendant"></party>
+ <party fullName="Teton Trust Company" lastName="Teton Trust Company" role="Defendant"></party>
+ <party firstName="James" fullName="James M. Wells" lastName="Wells" middleName="M." role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Zwirn" lastName="Zwirn" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-3_08-cv-00023-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_08-cv-00023/USCOURTS-gamd-3_08-cv-00023-0/mods.xml">
+ <titleInfo>
+  <title>Coppedge v. SunTrust Banks, Inc. et al</title>
+  <subTitle>ORDER finding as moot 26 Motion for Hearing; granting 19 Motion for Summary Judgment. Ordered by Judge Hugh Lawson on 1/14/2008. (nbp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-3_08-cv-00023-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812b1616</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_08-cv-00023/USCOURTS-gamd-3_08-cv-00023-0</identifier>
+ <identifier type="former granule identifier">gamd-3_08-cv-00023_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_08-cv-00023/USCOURTS-gamd-3_08-cv-00023-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_08-cv-00023/pdf/USCOURTS-gamd-3_08-cv-00023-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:08-cv-00023; Coppedge v. SunTrust Banks, Inc. et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-3_08-cv-00023-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-14</dateIssued>
+  <docketText>ORDER finding as moot 26 Motion for Hearing; granting 19 Motion for Summary Judgment. Ordered by Judge Hugh Lawson on 1/14/2008. (nbp)</docketText>
+</extension>
+</relatedItem>
+</mods>

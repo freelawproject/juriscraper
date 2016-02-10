@@ -1,0 +1,207 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817ab2eb">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00192</identifier>
+<identifier type="local">P0b002ee1817ab2eb</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_10-cv-00192</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00192</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00192</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:451 Employment Discrimination</cause>
+ <party fullName="Holiday Inn Omaha" lastName="Holiday Inn Omaha" role="Defendant"></party>
+ <party fullName="Sage Client 307 LLC" lastName="Sage Client 307 LLC" role="Defendant"></party>
+ <party fullName="Sage Hospitality Resources, LLC" lastName="Sage Hospitality Resources, LLC" role="Defendant"></party>
+ <party firstName="Farhan" fullName="Farhan Siddiqui" lastName="Siddiqui" role="Plaintiff"></party>
+ <party fullName="WPH, Omaha, LLC" lastName="WPH, Omaha, LLC" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Siddiqui v. Sage Client 307 LLC</title>
+ <partNumber>8:10-cv-00192</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00192/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:10-cv-00192;10-192</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Holiday Inn Omaha</displayForm>
+ <namePart type="family">Holiday Inn Omaha</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sage Client 307 LLC</displayForm>
+ <namePart type="family">Sage Client 307 LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sage Hospitality Resources, LLC</displayForm>
+ <namePart type="family">Sage Hospitality Resources, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Farhan Siddiqui</displayForm>
+ <namePart type="family">Siddiqui</namePart>
+ <namePart type="given">Farhan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>WPH, Omaha, LLC</displayForm>
+ <namePart type="family">WPH, Omaha, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00192</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00192</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:451 Employment Discrimination</cause>
+ <party fullName="Holiday Inn Omaha" lastName="Holiday Inn Omaha" role="Defendant"></party>
+ <party fullName="Sage Client 307 LLC" lastName="Sage Client 307 LLC" role="Defendant"></party>
+ <party fullName="Sage Hospitality Resources, LLC" lastName="Sage Hospitality Resources, LLC" role="Defendant"></party>
+ <party firstName="Farhan" fullName="Farhan Siddiqui" lastName="Siddiqui" role="Plaintiff"></party>
+ <party fullName="WPH, Omaha, LLC" lastName="WPH, Omaha, LLC" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00192-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00192/USCOURTS-ned-8_10-cv-00192-0/mods.xml">
+ <titleInfo>
+  <title>Siddiqui v. Sage Client 307 LLC</title>
+  <subTitle>ORDER granting 2 Motion for Leave to Proceed in forma pauperis. The U.S. Marshal shall serve the summons and Complaint without payment of costs or fees. Service may be by certified mail pursuant to Fed. R. Civ. P. 4 and Nebraska law in the discretion of the U.S. Marshal. To obtain service of process on the defendant, the plaintiff must complete and return a summons form and a USM-285 form. Upon receipt of the completed forms, the Clerk of the court will sign the summons form, to be forwarded with copies of the Complaint to the U.S. Marshal for service of process. Ordered by Magistrate Judge Thomas D. Thalken. (GJG)(1 USM-285 sent via US Mail to Plaintiff&apos;s counsel)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00192-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181876cdb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00192/USCOURTS-ned-8_10-cv-00192-0</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00192_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00192/USCOURTS-ned-8_10-cv-00192-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00192/pdf/USCOURTS-ned-8_10-cv-00192-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00192; Siddiqui v. Sage Client 307 LLC; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00192-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-05-14</dateIssued>
+  <docketText>ORDER granting 2 Motion for Leave to Proceed in forma pauperis. The U.S. Marshal shall serve the summons and Complaint without payment of costs or fees. Service may be by certified mail pursuant to Fed. R. Civ. P. 4 and Nebraska law in the discretion of the U.S. Marshal. To obtain service of process on the defendant, the plaintiff must complete and return a summons form and a USM-285 form. Upon receipt of the completed forms, the Clerk of the court will sign the summons form, to be forwarded with copies of the Complaint to the U.S. Marshal for service of process. Ordered by Magistrate Judge Thomas D. Thalken. (GJG)(1 USM-285 sent via US Mail to Plaintiff&apos;s counsel)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00192-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00192/USCOURTS-ned-8_10-cv-00192-1/mods.xml">
+ <titleInfo>
+  <title>Siddiqui v. Sage Client 307 LLC</title>
+  <subTitle>ORDER OF DISMISSAL WITH PREJUDICE - In accordance with the parties&apos; stipulation, filing 22, this action is dismissed with prejudice, each party to bear its own fees and costs. Ordered by Chief Judge Joseph F. Bataillon. (GJG)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00192-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181876cda</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00192/USCOURTS-ned-8_10-cv-00192-1</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00192_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00192/USCOURTS-ned-8_10-cv-00192-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00192/pdf/USCOURTS-ned-8_10-cv-00192-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00192; Siddiqui v. Sage Client 307 LLC; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00192-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-05</dateIssued>
+  <docketText>ORDER OF DISMISSAL WITH PREJUDICE - In accordance with the parties&apos; stipulation, filing 22, this action is dismissed with prejudice, each party to bear its own fees and costs. Ordered by Chief Judge Joseph F. Bataillon. (GJG)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,319 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184154f03">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-04-11</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-04-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00136</identifier>
+<identifier type="local">P0b002ee184154f03</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-04-11</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-04-11</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-00136</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-00136</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-00136</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>28:1332 Diversity-Fraud</cause>
+ <party firstName="Pauline" fullName="Pauline E. Gima" lastName="Gima" middleName="E." role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald E. Hare" lastName="Hare" middleName="E." role="Defendant"></party>
+ <party firstName="Grayson" fullName="Grayson L. Hare Jr." generation="Jr." lastName="Hare" middleName="L." role="Plaintiff"></party>
+ <party firstName="Gilbert" fullName="Gilbert G. Malone" lastName="Malone" middleName="G." role="Defendant"></party>
+ <party firstName="Shirley" fullName="Shirley J. Simpson" lastName="Simpson" middleName="J." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PS) Hare v. Simpson et al</title>
+ <partNumber>2:12-cv-00136</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00136/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-00136;12-136</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Pauline E. Gima</displayForm>
+ <namePart type="family">Gima</namePart>
+ <namePart type="given">Pauline</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donald E. Hare</displayForm>
+ <namePart type="family">Hare</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Grayson L. Hare Jr.</displayForm>
+ <namePart type="family">Hare</namePart>
+ <namePart type="given">Grayson</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gilbert G. Malone</displayForm>
+ <namePart type="family">Malone</namePart>
+ <namePart type="given">Gilbert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shirley J. Simpson</displayForm>
+ <namePart type="family">Simpson</namePart>
+ <namePart type="given">Shirley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-00136</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-00136</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>28:1332 Diversity-Fraud</cause>
+ <party firstName="Pauline" fullName="Pauline E. Gima" lastName="Gima" middleName="E." role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald E. Hare" lastName="Hare" middleName="E." role="Defendant"></party>
+ <party firstName="Grayson" fullName="Grayson L. Hare Jr." generation="Jr." lastName="Hare" middleName="L." role="Plaintiff"></party>
+ <party firstName="Gilbert" fullName="Gilbert G. Malone" lastName="Malone" middleName="G." role="Defendant"></party>
+ <party firstName="Shirley" fullName="Shirley J. Simpson" lastName="Simpson" middleName="J." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00136-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-0/mods.xml">
+ <titleInfo>
+  <title>(PS) Hare v. Simpson et al</title>
+  <subTitle>ORDER and ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 3/6/12 GRANTING 2 Motion to Proceed IFP. Plaintiff shal SHOW CAUSE in writing within 21 days of the date of this order why this action should not be dismissed for lack of subject matter jurisdiction. (Donati, J)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00136-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184156427</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00136_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00136/pdf/USCOURTS-caed-2_12-cv-00136-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00136; (PS) Hare v. Simpson et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00136-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-03-06</dateIssued>
+  <docketText>ORDER and ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 3/6/12 GRANTING 2 Motion to Proceed IFP. Plaintiff shal SHOW CAUSE in writing within 21 days of the date of this order why this action should not be dismissed for lack of subject matter jurisdiction. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00136-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-1/mods.xml">
+ <titleInfo>
+  <title>(PS) Hare v. Simpson et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 4/30/12 ORDERING that Plaintiff&apos;s complaint is dismissed with leave to file an amended complaint within 28 days from the date of service of this Order.(Kastilahn, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00136-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184156424</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00136_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00136/pdf/USCOURTS-caed-2_12-cv-00136-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00136; (PS) Hare v. Simpson et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00136-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-05-01</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 4/30/12 ORDERING that Plaintiff&apos;s complaint is dismissed with leave to file an amended complaint within 28 days from the date of service of this Order.(Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00136-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-2/mods.xml">
+ <titleInfo>
+  <title>(PS) Hare v. Simpson et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 08/27/12 ORDERING that the 2 Motion to Proceed IFP is GRANTED; service is appropriate for defendants Simpson, Malone, Gima and Hare and the U.S. Marshal is directed to serve process; Clerk to send plaintiff one USM-285 form for each defendant, one summons, a copy of the complaint, an appropriate form for consent to trial by a magistrate judge, and this court&apos;s status order. Within 14 days, plaintiff is to supply the USM with all service documents and file a statement with the Court that said documents have been sumbitted to USM (cc: USM). (Benson, A.)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00136-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184156423</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00136_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00136/pdf/USCOURTS-caed-2_12-cv-00136-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00136; (PS) Hare v. Simpson et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00136-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-08-27</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 08/27/12 ORDERING that the 2 Motion to Proceed IFP is GRANTED; service is appropriate for defendants Simpson, Malone, Gima and Hare and the U.S. Marshal is directed to serve process; Clerk to send plaintiff one USM-285 form for each defendant, one summons, a copy of the complaint, an appropriate form for consent to trial by a magistrate judge, and this court&apos;s status order. Within 14 days, plaintiff is to supply the USM with all service documents and file a statement with the Court that said documents have been sumbitted to USM (cc: USM). (Benson, A.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00136-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-3/mods.xml">
+ <titleInfo>
+  <title>(PS) Hare v. Simpson et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/3/13 ORDERING that Plaintiff&apos;s MOTION to STRIKE 20 will be heard on 1/31/2013 at 10:00 AM. Plaintiff&apos;s Request for extension of time in which to respond to the Motion to dismiss, filed 12/20/12 20, is DENIED. Plaintiff shall file his opposition by 1/17/13. (Mena-Sanchez, L)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00136-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184156426</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00136_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00136/pdf/USCOURTS-caed-2_12-cv-00136-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00136; (PS) Hare v. Simpson et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00136-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/3/13 ORDERING that Plaintiff&apos;s MOTION to STRIKE 20 will be heard on 1/31/2013 at 10:00 AM. Plaintiff&apos;s Request for extension of time in which to respond to the Motion to dismiss, filed 12/20/12 20, is DENIED. Plaintiff shall file his opposition by 1/17/13. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00136-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-4/mods.xml">
+ <titleInfo>
+  <title>(PS) Hare v. Simpson et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/24/2013 ORDERING the hearing on re 20 Motion to Strike and 14 Motion to Dismiss are VACATED. The motions are SUBMITTED on the record. (Donati, J)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00136-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184156428</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00136_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00136/pdf/USCOURTS-caed-2_12-cv-00136-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00136; (PS) Hare v. Simpson et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00136-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-24</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/24/2013 ORDERING the hearing on re 20 Motion to Strike and 14 Motion to Dismiss are VACATED. The motions are SUBMITTED on the record. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00136-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-5/mods.xml">
+ <titleInfo>
+  <title>(PS) Hare v. Simpson et al</title>
+  <subTitle>ORDER and FINDINGS AND RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 4/10/2013 DENYING 20 Motion to Strike; RECOMMENDING that the 14 Motion to Dismiss be granted and that this action be dismissed for lack of personal jurisdiction. Motion referred to Judge Troy L. Nunley. Objections due within 14 days. (Michel, G)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00136-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184156425</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00136_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00136/USCOURTS-caed-2_12-cv-00136-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00136/pdf/USCOURTS-caed-2_12-cv-00136-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00136; (PS) Hare v. Simpson et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00136-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-04-10</dateIssued>
+  <docketText>ORDER and FINDINGS AND RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 4/10/2013 DENYING 20 Motion to Strike; RECOMMENDING that the 14 Motion to Dismiss be granted and that this action be dismissed for lack of personal jurisdiction. Motion referred to Judge Troy L. Nunley. Objections due within 14 days. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,308 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b77f4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00012</identifier>
+<identifier type="local">P0b002ee1817b77f4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cv-00012</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00012</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00012</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>49:11702(a)(4) Violations of Interstate Commerce A</cause>
+ <party fullName="Con-Way Freight" lastName="Con-Way Freight" role="Defendant"></party>
+ <party fullName="Con-Way Freight, Inc." lastName="Con-Way Freight, Inc." role="Plaintiff"></party>
+ <party fullName="Con-Way Truckload, Inc." lastName="Con-Way Truckload, Inc." role="Defendant"></party>
+ <party fullName="Con-Way, Inc." lastName="Con-Way, Inc." role="Defendant"></party>
+ <party fullName="Factory Mutual Insurance Company" lastName="Factory Mutual Insurance Company" role="Plaintiff"></party>
+ <party fullName="IDEXX Laboratories" lastName="IDEXX Laboratories" role="Plaintiff"></party>
+ <party fullName="Idexx Distribution" lastName="Idexx Distribution" role="Defendant"></party>
+ <party fullName="Menlo Worldwide Logistics" lastName="Menlo Worldwide Logistics" role="Defendant"></party>
+ <party fullName="Professional Veterinary Products" lastName="Professional Veterinary Products" role="Defendant"></party>
+ <party fullName="W. K. Webster (Overseas) Ltd." lastName="W. K. Webster (Overseas) Ltd." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>IDEXX Laboratories v. Con-Way Freight</title>
+ <partNumber>8:09-cv-00012</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00012/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cv-00012;09-012</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Con-Way Freight</displayForm>
+ <namePart type="family">Con-Way Freight</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Con-Way Freight, Inc.</displayForm>
+ <namePart type="family">Con-Way Freight, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Con-Way Truckload, Inc.</displayForm>
+ <namePart type="family">Con-Way Truckload, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Con-Way, Inc.</displayForm>
+ <namePart type="family">Con-Way, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Factory Mutual Insurance Company</displayForm>
+ <namePart type="family">Factory Mutual Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>IDEXX Laboratories</displayForm>
+ <namePart type="family">IDEXX Laboratories</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Idexx Distribution</displayForm>
+ <namePart type="family">Idexx Distribution</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Menlo Worldwide Logistics</displayForm>
+ <namePart type="family">Menlo Worldwide Logistics</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Professional Veterinary Products</displayForm>
+ <namePart type="family">Professional Veterinary Products</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>W. K. Webster (Overseas) Ltd.</displayForm>
+ <namePart type="family">W. K. Webster (Overseas) Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00012</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00012</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>49:11702(a)(4) Violations of Interstate Commerce A</cause>
+ <party fullName="Con-Way Freight" lastName="Con-Way Freight" role="Defendant"></party>
+ <party fullName="Con-Way Freight, Inc." lastName="Con-Way Freight, Inc." role="Plaintiff"></party>
+ <party fullName="Con-Way Truckload, Inc." lastName="Con-Way Truckload, Inc." role="Defendant"></party>
+ <party fullName="Con-Way, Inc." lastName="Con-Way, Inc." role="Defendant"></party>
+ <party fullName="Factory Mutual Insurance Company" lastName="Factory Mutual Insurance Company" role="Plaintiff"></party>
+ <party fullName="IDEXX Laboratories" lastName="IDEXX Laboratories" role="Plaintiff"></party>
+ <party fullName="Idexx Distribution" lastName="Idexx Distribution" role="Defendant"></party>
+ <party fullName="Menlo Worldwide Logistics" lastName="Menlo Worldwide Logistics" role="Defendant"></party>
+ <party fullName="Professional Veterinary Products" lastName="Professional Veterinary Products" role="Defendant"></party>
+ <party fullName="W. K. Webster (Overseas) Ltd." lastName="W. K. Webster (Overseas) Ltd." role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00012-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00012/USCOURTS-ned-8_09-cv-00012-0/mods.xml">
+ <titleInfo>
+  <title>IDEXX Laboratories v. Con-Way Freight</title>
+  <subTitle>ORDER for Conference and Disclosure of Interested Persons. Ordered by Judge Samuel B. Kent. (JAE).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00012-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cfd98</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00012/USCOURTS-ned-8_09-cv-00012-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00012_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00012/USCOURTS-ned-8_09-cv-00012-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00012/pdf/USCOURTS-ned-8_09-cv-00012-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00012; IDEXX Laboratories v. Con-Way Freight; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00012-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-09</dateIssued>
+  <docketText>ORDER for Conference and Disclosure of Interested Persons. Ordered by Judge Samuel B. Kent. (JAE).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00012-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00012/USCOURTS-ned-8_09-cv-00012-1/mods.xml">
+ <titleInfo>
+  <title>IDEXX Laboratories v. Con-Way Freight</title>
+  <subTitle>SCHEDULING ORDER. Ordered by Judge Samuel B. Kent. (JAE, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00012-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cfd97</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00012/USCOURTS-ned-8_09-cv-00012-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00012_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00012/USCOURTS-ned-8_09-cv-00012-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00012/pdf/USCOURTS-ned-8_09-cv-00012-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00012; IDEXX Laboratories v. Con-Way Freight; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00012-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-09</dateIssued>
+  <docketText>SCHEDULING ORDER. Ordered by Judge Samuel B. Kent. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00012-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00012/USCOURTS-ned-8_09-cv-00012-2/mods.xml">
+ <titleInfo>
+  <title>IDEXX Laboratories v. Con-Way Freight</title>
+  <subTitle>ORDER granting 9 Motion to Transfer Case to District of Nebraska. Ordered by Judge Samuel B. Kent.(JAE, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00012-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cfd9a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00012/USCOURTS-ned-8_09-cv-00012-2</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00012_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00012/USCOURTS-ned-8_09-cv-00012-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00012/pdf/USCOURTS-ned-8_09-cv-00012-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00012; IDEXX Laboratories v. Con-Way Freight; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00012-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-01-09</dateIssued>
+  <docketText>ORDER granting 9 Motion to Transfer Case to District of Nebraska. Ordered by Judge Samuel B. Kent.(JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00012-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00012/USCOURTS-ned-8_09-cv-00012-3/mods.xml">
+ <titleInfo>
+  <title>IDEXX Laboratories v. Con-Way Freight</title>
+  <subTitle>ORDER OF DISMISSAL approving 19 Stipulation - The parties&apos; Stipulation of Dismissal Filing No. 19 is approved, and the reliefrequested therein is granted; The Complaint and all claims in this action are dismissed with prejudice; and The parties shall pay their own costs and attorneys&apos; fees. Ordered by Judge Laurie Smith Camp. (TJS)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00012-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cfd99</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00012/USCOURTS-ned-8_09-cv-00012-3</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00012_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00012/USCOURTS-ned-8_09-cv-00012-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00012/pdf/USCOURTS-ned-8_09-cv-00012-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00012; IDEXX Laboratories v. Con-Way Freight; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00012-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-23</dateIssued>
+  <docketText>ORDER OF DISMISSAL approving 19 Stipulation - The parties&apos; Stipulation of Dismissal Filing No. 19 is approved, and the reliefrequested therein is granted; The Complaint and all claims in this action are dismissed with prejudice; and The parties shall pay their own costs and attorneys&apos; fees. Ordered by Judge Laurie Smith Camp. (TJS)</docketText>
+</extension>
+</relatedItem>
+</mods>

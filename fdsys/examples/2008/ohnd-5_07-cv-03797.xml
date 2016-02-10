@@ -1,0 +1,179 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815ca2a1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cv-03797</identifier>
+<identifier type="local">P0b002ee1815ca2a1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-5_07-cv-03797</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_07-cv-03797</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:07-cv-03797</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <cause>28:0158 Notice of Appeal re Bankruptcy Matter (BA</cause>
+ <party fullName="Chap. Hill, Inc." lastName="Chap. Hill, Inc." role="Appellant"></party>
+ <party fullName="Furniture&amp;Mattress Liquidators" lastName="Furniture&amp;Mattress Liquidators" role="Appellant"></party>
+ <party fullName="United States Trustee, Region 9" lastName="United States Trustee, Region 9" role="Appellee"></party>
+ <party firstName="Richard" fullName="Richard A. Wilson" lastName="Wilson" middleName="A." role="*** SELECTION REQUIRED"></party>
+ <party firstName="Richard" fullName="Richard A. Wilson" lastName="Wilson" middleName="A." role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Chap. Hill, Inc. v. United States Trustee, Region 9</title>
+ <partNumber>5:07-cv-03797</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cv-03797/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:07-cv-03797;07-3797</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Akron</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Chap. Hill, Inc.</displayForm>
+ <namePart type="family">Chap. Hill, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Furniture&amp;Mattress Liquidators</displayForm>
+ <namePart type="family">Furniture&amp;Mattress Liquidators</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>United States Trustee, Region 9</displayForm>
+ <namePart type="family">United States Trustee, Region 9</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Richard A. Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>*** SELECTION REQUIRED</description>
+</name>
+<name type="personal">
+ <displayForm>Richard A. Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_07-cv-03797</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:07-cv-03797</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <cause>28:0158 Notice of Appeal re Bankruptcy Matter (BA</cause>
+ <party fullName="Chap. Hill, Inc." lastName="Chap. Hill, Inc." role="Appellant"></party>
+ <party fullName="Furniture&amp;Mattress Liquidators" lastName="Furniture&amp;Mattress Liquidators" role="Appellant"></party>
+ <party fullName="United States Trustee, Region 9" lastName="United States Trustee, Region 9" role="Appellee"></party>
+ <party firstName="Richard" fullName="Richard A. Wilson" lastName="Wilson" middleName="A." role="*** SELECTION REQUIRED"></party>
+ <party firstName="Richard" fullName="Richard A. Wilson" lastName="Wilson" middleName="A." role="Interested Party"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_07-cv-03797-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03797/USCOURTS-ohnd-5_07-cv-03797-0/mods.xml">
+ <titleInfo>
+  <title>Chap. Hill, Inc. v. United States Trustee, Region 9</title>
+  <subTitle>Order the Court determines that the debtor cannot establish the four factors and hereby denies the motions of the debtor to Motion to stay the order of conversion pending appeal (Related Doc # 9); and denying Motion for a stay of further administration of Chapter 7 pending the appeal. (Related Doc # 14). The Court&apos;s prior order (Document #10) staying the sale of the property of the debtor is vacated. The Clerk is directed to deliver a copy of this order to the Bankruptcy Clerk in Akron forthwith. Signed by Judge David D. Dowd, Jr on 1/22/08.(P,G)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_07-cv-03797-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18169cff0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03797/USCOURTS-ohnd-5_07-cv-03797-0</identifier>
+ <identifier type="former granule identifier">ohnd-5_07-cv-03797_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_07-cv-03797/USCOURTS-ohnd-5_07-cv-03797-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_07-cv-03797/pdf/USCOURTS-ohnd-5_07-cv-03797-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-03797; Chap. Hill, Inc. v. United States Trustee, Region 9; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_07-cv-03797-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-22</dateIssued>
+  <docketText>Order the Court determines that the debtor cannot establish the four factors and hereby denies the motions of the debtor to Motion to stay the order of conversion pending appeal (Related Doc # 9); and denying Motion for a stay of further administration of Chapter 7 pending the appeal. (Related Doc # 14). The Court&apos;s prior order (Document #10) staying the sale of the property of the debtor is vacated. The Clerk is directed to deliver a copy of this order to the Bankruptcy Clerk in Akron forthwith. Signed by Judge David D. Dowd, Jr on 1/22/08.(P,G)</docketText>
+</extension>
+</relatedItem>
+</mods>

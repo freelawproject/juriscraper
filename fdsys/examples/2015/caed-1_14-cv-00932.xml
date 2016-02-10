@@ -1,0 +1,217 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c2219f4">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-04-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-04-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00932</identifier>
+<identifier type="local">P0b002ee18c2219f4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-04-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-04-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cv-00932</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00932</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00932</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="C." fullName="C. K. Chen" lastName="Chen" middleName="K." role="Defendant"></party>
+ <party firstName="George" fullName="George McClure" lastName="McClure" role="Plaintiff"></party>
+ <party firstName="L." fullName="L. D. Zamora" lastName="Zamora" middleName="D." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) McClure v. Chen, et al.</title>
+ <partNumber>1:14-cv-00932</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00932/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-00932;14-932</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>C. K. Chen</displayForm>
+ <namePart type="family">Chen</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George McClure</displayForm>
+ <namePart type="family">McClure</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>L. D. Zamora</displayForm>
+ <namePart type="family">Zamora</namePart>
+ <namePart type="given">L.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00932</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00932</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="C." fullName="C. K. Chen" lastName="Chen" middleName="K." role="Defendant"></party>
+ <party firstName="George" fullName="George McClure" lastName="McClure" role="Plaintiff"></party>
+ <party firstName="L." fullName="L. D. Zamora" lastName="Zamora" middleName="D." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00932-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00932/USCOURTS-caed-1_14-cv-00932-0/mods.xml">
+ <titleInfo>
+  <title>(PC) McClure v. Chen, et al.</title>
+  <subTitle>ORDER of INTRADISTRICT TRANSFER from Sacramento (2:14-cv-1355 CMK PC) to Fresno (1:14-cv-0932 SKO PC) signed by Magistrate Judge Craig M. Kellison on 6/17/2014. (Yin, K)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00932/pdf/USCOURTS-caed-1_14-cv-00932-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c23b448</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00932/USCOURTS-caed-1_14-cv-00932-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00932_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00932/USCOURTS-caed-1_14-cv-00932-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00932/pdf/USCOURTS-caed-1_14-cv-00932-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00932; (PC) McClure v. Chen, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00932-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-06-17</dateIssued>
+  <docketText>ORDER of INTRADISTRICT TRANSFER from Sacramento (2:14-cv-1355 CMK PC) to Fresno (1:14-cv-0932 SKO PC) signed by Magistrate Judge Craig M. Kellison on 6/17/2014. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00932-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00932/USCOURTS-caed-1_14-cv-00932-1/mods.xml">
+ <titleInfo>
+  <title>(PC) McClure v. Chen, et al.</title>
+  <subTitle>ORDER DISMISSING CASE WITH LEAVE TO AMEND signed by Magistrate Judge Sheila K. Oberto on 1/5/2015. First Amended Complaint due within thirty (30) days. (Attachments: # (1) Amended Complaint Form). (Jessen, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00932/pdf/USCOURTS-caed-1_14-cv-00932-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c23b445</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00932/USCOURTS-caed-1_14-cv-00932-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00932_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00932/USCOURTS-caed-1_14-cv-00932-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00932/pdf/USCOURTS-caed-1_14-cv-00932-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00932; (PC) McClure v. Chen, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00932-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER DISMISSING CASE WITH LEAVE TO AMEND signed by Magistrate Judge Sheila K. Oberto on 1/5/2015. First Amended Complaint due within thirty (30) days. (Attachments: # (1) Amended Complaint Form). (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00932-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00932/USCOURTS-caed-1_14-cv-00932-2/mods.xml">
+ <titleInfo>
+  <title>(PC) McClure v. Chen, et al.</title>
+  <subTitle>ORDER DENYING Motion for Appointment of Counsel 13, signed by Magistrate Judge Sheila K. Oberto on 4/24/15: Motion is DENIED without prejudice. (Hellings, J)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00932/pdf/USCOURTS-caed-1_14-cv-00932-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c23b447</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00932/USCOURTS-caed-1_14-cv-00932-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00932_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00932/USCOURTS-caed-1_14-cv-00932-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00932/pdf/USCOURTS-caed-1_14-cv-00932-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00932; (PC) McClure v. Chen, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00932-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-04-24</dateIssued>
+  <docketText>ORDER DENYING Motion for Appointment of Counsel 13, signed by Magistrate Judge Sheila K. Oberto on 4/24/15: Motion is DENIED without prejudice. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+</mods>

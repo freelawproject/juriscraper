@@ -1,0 +1,264 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18179c5cf">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00467</identifier>
+<identifier type="local">P0b002ee18179c5cf</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_04-cv-00467</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cv-00467</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cv-00467</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>330</natureSuitCode>
+ <natureSuit>Federal Employers&apos; Liability</natureSuit>
+ <cause>45:51 Railways: Fed. Employer&apos;s Liability Act</cause>
+ <party firstName="William" fullName="William E. Schultz" lastName="Schultz" middleName="E." role="Plaintiff"></party>
+ <party fullName="Union Pacific Railroad Company" lastName="Union Pacific Railroad Company" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Schultz v. Union Pacific Railroad Company</title>
+ <partNumber>8:04-cv-00467</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00467/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:04-cv-00467;04-467</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>William E. Schultz</displayForm>
+ <namePart type="family">Schultz</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Union Pacific Railroad Company</displayForm>
+ <namePart type="family">Union Pacific Railroad Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cv-00467</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cv-00467</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>330</natureSuitCode>
+ <natureSuit>Federal Employers&apos; Liability</natureSuit>
+ <cause>45:51 Railways: Fed. Employer&apos;s Liability Act</cause>
+ <party firstName="William" fullName="William E. Schultz" lastName="Schultz" middleName="E." role="Plaintiff"></party>
+ <party fullName="Union Pacific Railroad Company" lastName="Union Pacific Railroad Company" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00467-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-0/mods.xml">
+ <titleInfo>
+  <title>Schultz v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER that the plaintiff&apos;s unopposed motion for continuance of trial and to amend the progression schedule, filing 32, is granted and, a. A jury trial of this case is set to commence, at the court&apos;s call, January 30, 2006 in Omaha, Nebraska, before the undersigned Magistrate Judge. Unless otherwise ordered, jury selection shall be at the commencement of trial. b. The Final Pretrial Conference with the undersigned magistrate judge is set for January 19, 2006 at 11:30 a.m. in the chambers of the Special Proceedings Courtroom, Roman L. HruskaUnited States Courthouse, Omaha, Nebraska. c. The deposition deadline is continued to December 23, 2005, and other deadlines which use the deposition deadline as a point of reference are extended accordingly. d. All other provisions of the court&apos;s order setting this case for trial shall remain in effect. Signed by Magistrate Judge David L. Piester on 8/22/2005. (CS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00467-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180e856</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-0</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00467_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00467/pdf/USCOURTS-ned-8_04-cv-00467-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00467; Schultz v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00467-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-08-22</dateIssued>
+  <docketText>ORDER that the plaintiff&apos;s unopposed motion for continuance of trial and to amend the progression schedule, filing 32, is granted and, a. A jury trial of this case is set to commence, at the court&apos;s call, January 30, 2006 in Omaha, Nebraska, before the undersigned Magistrate Judge. Unless otherwise ordered, jury selection shall be at the commencement of trial. b. The Final Pretrial Conference with the undersigned magistrate judge is set for January 19, 2006 at 11:30 a.m. in the chambers of the Special Proceedings Courtroom, Roman L. HruskaUnited States Courthouse, Omaha, Nebraska. c. The deposition deadline is continued to December 23, 2005, and other deadlines which use the deposition deadline as a point of reference are extended accordingly. d. All other provisions of the court&apos;s order setting this case for trial shall remain in effect. Signed by Magistrate Judge David L. Piester on 8/22/2005. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00467-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-1/mods.xml">
+ <titleInfo>
+  <title>Schultz v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER denying as moot 50 Motion to Quash. Signed by Magistrate Judge David L. Piester on 12/6/2005. (JAR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00467-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180e855</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-1</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00467_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00467/pdf/USCOURTS-ned-8_04-cv-00467-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00467; Schultz v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00467-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-12-06</dateIssued>
+  <docketText>ORDER denying as moot 50 Motion to Quash. Signed by Magistrate Judge David L. Piester on 12/6/2005. (JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00467-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-2/mods.xml">
+ <titleInfo>
+  <title>Schultz v. Union Pacific Railroad Company</title>
+  <subTitle>ska. Pretrial Conference set for 1/20/2006 at 02:00 PM in Special Proceedings (Omaha) before Magistrate Judge David L. Piester. Signed by Magistrate Judge David L. Piester on 12/6/2005. (JAR)ORDER - On the court&apos;s own motion, IT IS ORDERED: The pretrial conference is rescheduled from January 19 to January 20, 2006 at 2:00 p.m. in the chambers of the Special Proceedings Courtroom, Roman L. Hruska United States Courthouse,Omaha, Nebra</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00467-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180e857</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-2</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00467_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00467/pdf/USCOURTS-ned-8_04-cv-00467-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00467; Schultz v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00467-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-12-06</dateIssued>
+  <docketText>ska. Pretrial Conference set for 1/20/2006 at 02:00 PM in Special Proceedings (Omaha) before Magistrate Judge David L. Piester. Signed by Magistrate Judge David L. Piester on 12/6/2005. (JAR)ORDER - On the court&apos;s own motion, IT IS ORDERED: The pretrial conference is rescheduled from January 19 to January 20, 2006 at 2:00 p.m. in the chambers of the Special Proceedings Courtroom, Roman L. Hruska United States Courthouse,Omaha, Nebra</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00467-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-3/mods.xml">
+ <titleInfo>
+  <title>Schultz v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER - Within thirty days of the date of this order the parties shall file a joint stipulation for dismissal (or other dispositive stipulation) with the clerk of the court and provide a draft order to the undersigned magistrate judge which will fully dispose of the case. Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without furthernotice. This case has been removed from the trial docket upon representation by the parties that the case has settled. Signed by Magistrate Judge David L. Piester on 12/16/2005. (GJG, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00467-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180e859</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-3</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00467_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00467/pdf/USCOURTS-ned-8_04-cv-00467-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00467; Schultz v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00467-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-12-16</dateIssued>
+  <docketText>ORDER - Within thirty days of the date of this order the parties shall file a joint stipulation for dismissal (or other dispositive stipulation) with the clerk of the court and provide a draft order to the undersigned magistrate judge which will fully dispose of the case. Absent compliance with this order, this case (including all counterclaims and the like) may be dismissed without furthernotice. This case has been removed from the trial docket upon representation by the parties that the case has settled. Signed by Magistrate Judge David L. Piester on 12/16/2005. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00467-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-4/mods.xml">
+ <titleInfo>
+  <title>Schultz v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER FOR DISMISSAL WITH PREJUDICE - This matter is before the Court on the stipulation 59 of the parties that the above-captioned action be dismissed. Accordingly, IT IS ORDERED that this action is dismissed, with prejudice, each party to pay their own costs and complete record waived. Signed by Magistrate Judge David L. Piester on 1/3/2006. (GJG, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00467-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180e858</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-4</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00467_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00467/USCOURTS-ned-8_04-cv-00467-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00467/pdf/USCOURTS-ned-8_04-cv-00467-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00467; Schultz v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00467-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-01-03</dateIssued>
+  <docketText>ORDER FOR DISMISSAL WITH PREJUDICE - This matter is before the Court on the stipulation 59 of the parties that the above-captioned action be dismissed. Accordingly, IT IS ORDERED that this action is dismissed, with prejudice, each party to pay their own costs and complete record waived. Signed by Magistrate Judge David L. Piester on 1/3/2006. (GJG, )</docketText>
+</extension>
+</relatedItem>
+</mods>

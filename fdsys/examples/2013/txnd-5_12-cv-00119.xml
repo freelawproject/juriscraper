@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a18b67">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-5_12-cv-00119</identifier>
+<identifier type="local">P0b002ee183a18b67</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-5_12-cv-00119</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-5_12-cv-00119</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>5:12-cv-00119</caseNumber>
+ <caseOffice>Lubbock</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="NFN" fullName="NFN Casey" lastName="Casey" role="Defendant"></party>
+ <party firstName="NFN" fullName="NFN Contreras" lastName="Contreras" role="Defendant"></party>
+ <party firstName="Glen" fullName="Glen Miller" lastName="Miller" role="Plaintiff"></party>
+ <party firstName="S" fullName="S Payne" lastName="Payne" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Miller v. Payne et al</title>
+ <partNumber>5:12-cv-00119</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-5_12-cv-00119/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:12-cv-00119;12-119</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Lubbock</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>NFN Casey</displayForm>
+ <namePart type="family">Casey</namePart>
+ <namePart type="given">NFN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>NFN Contreras</displayForm>
+ <namePart type="family">Contreras</namePart>
+ <namePart type="given">NFN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Glen Miller</displayForm>
+ <namePart type="family">Miller</namePart>
+ <namePart type="given">Glen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>S Payne</displayForm>
+ <namePart type="family">Payne</namePart>
+ <namePart type="given">S</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-5_12-cv-00119</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>5:12-cv-00119</caseNumber>
+ <caseOffice>Lubbock</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="NFN" fullName="NFN Casey" lastName="Casey" role="Defendant"></party>
+ <party firstName="NFN" fullName="NFN Contreras" lastName="Contreras" role="Defendant"></party>
+ <party firstName="Glen" fullName="Glen Miller" lastName="Miller" role="Plaintiff"></party>
+ <party firstName="S" fullName="S Payne" lastName="Payne" role="Defendant"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-5_12-cv-00119-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-5_12-cv-00119/USCOURTS-txnd-5_12-cv-00119-0/mods.xml">
+ <titleInfo>
+  <title>Miller v. Payne et al</title>
+  <subTitle>Report and Recommendations on re: 1 Complaint, filed by Glen Miller. District courts have inherent authority under Rule 41(b) of the Federal Rules of Civil Procedure to sua sponte dismiss an action for want of prosecution. Link v. Wabash R.R. Co., 370 U.S. 626, 630-33, 82 S. Ct. 1386, 8 L. Ed. 2d 734 (1962); Clofer v. Perego, 106 F.3d 678, 679 (5th Cir. 1997). It is, therefore, recommended that the United States District Court dismiss Miller&apos;s Complaint for want of prosecution. (Ordered by Magistrate Judge Nancy M Koenig on 10/30/2012) (lkw)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-5_12-cv-00119-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1e291</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-5_12-cv-00119/USCOURTS-txnd-5_12-cv-00119-0</identifier>
+ <identifier type="former granule identifier">txnd-5_12-cv-00119_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-5_12-cv-00119/USCOURTS-txnd-5_12-cv-00119-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-5_12-cv-00119/pdf/USCOURTS-txnd-5_12-cv-00119-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:12-cv-00119; Miller v. Payne et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-5_12-cv-00119-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-10-30</dateIssued>
+  <docketText>Report and Recommendations on re: 1 Complaint, filed by Glen Miller. District courts have inherent authority under Rule 41(b) of the Federal Rules of Civil Procedure to sua sponte dismiss an action for want of prosecution. Link v. Wabash R.R. Co., 370 U.S. 626, 630-33, 82 S. Ct. 1386, 8 L. Ed. 2d 734 (1962); Clofer v. Perego, 106 F.3d 678, 679 (5th Cir. 1997). It is, therefore, recommended that the United States District Court dismiss Miller&apos;s Complaint for want of prosecution. (Ordered by Magistrate Judge Nancy M Koenig on 10/30/2012) (lkw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-5_12-cv-00119-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-5_12-cv-00119/USCOURTS-txnd-5_12-cv-00119-1/mods.xml">
+ <titleInfo>
+  <title>Miller v. Payne et al</title>
+  <subTitle>Order: The Court accepts and adopts the findings, conclusions, and recommendation of the Magistrate Judge. It is, therefore, ORDERED: Plaintiff&apos;s complaint and all claims alleged therein are dismissed without prejudice for failure to prosecute pursuant to Federal Rule of Civil Procedure41(b). Any pending motions are denied. Plaintiff is admonished that if he re-files his civil rights complaint, he must either pay the full filing fee of $350.00 or file an application to proceed in forma pauperis and a certificate of his inmate trust account. Judgment shall be entered accordingly. re: 12 Findings and Recommendations on re: 1 Complaint, filed by Glen Miller. (Ordered by Judge Sam R Cummings on 1/4/2013) (lkw)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-5_12-cv-00119-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a1e50a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-5_12-cv-00119/USCOURTS-txnd-5_12-cv-00119-1</identifier>
+ <identifier type="former granule identifier">txnd-5_12-cv-00119_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-5_12-cv-00119/USCOURTS-txnd-5_12-cv-00119-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-5_12-cv-00119/pdf/USCOURTS-txnd-5_12-cv-00119-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:12-cv-00119; Miller v. Payne et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-5_12-cv-00119-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>Order: The Court accepts and adopts the findings, conclusions, and recommendation of the Magistrate Judge. It is, therefore, ORDERED: Plaintiff&apos;s complaint and all claims alleged therein are dismissed without prejudice for failure to prosecute pursuant to Federal Rule of Civil Procedure41(b). Any pending motions are denied. Plaintiff is admonished that if he re-files his civil rights complaint, he must either pay the full filing fee of $350.00 or file an application to proceed in forma pauperis and a certificate of his inmate trust account. Judgment shall be entered accordingly. re: 12 Findings and Recommendations on re: 1 Complaint, filed by Glen Miller. (Ordered by Judge Sam R Cummings on 1/4/2013) (lkw)</docketText>
+</extension>
+</relatedItem>
+</mods>

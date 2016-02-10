@@ -1,0 +1,342 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184103498">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-04-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-04-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00175</identifier>
+<identifier type="local">P0b002ee184103498</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-04-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-04-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cr-00175</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cr-00175</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cr-00175</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Elmer" fullName="Elmer A. Cigarroa" lastName="Cigarroa" middleName="A." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Cigarroa</title>
+ <partNumber>2:12-cr-00175</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00175/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cr-00175;12-175</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Elmer A. Cigarroa</displayForm>
+ <namePart type="family">Cigarroa</namePart>
+ <namePart type="given">Elmer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cr-00175</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cr-00175</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Elmer" fullName="Elmer A. Cigarroa" lastName="Cigarroa" middleName="A." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00175-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Cigarroa</title>
+  <subTitle>ORDER as to Elmer A. Cigarroa signed by Magistrate Judge Edmund F. Brennan on 6/21/12: Trial Confirmation Hearing RESET for 8/6/2012 at 02:00 PM in Courtroom 24 (EFB) before Magistrate Judge Edmund F. Brennan. Jury Trial RESET for 8/28/2012 at 09:30 AM in Courtroom 24 (EFB) before Magistrate Judge Edmund F. Brennan. Excludable started as to Elmer A. Cigarroa: T-4 Start: 6/21/12 Stop: 8/6/12. (Kaminski, H)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00175-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1841068f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00175_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00175/pdf/USCOURTS-caed-2_12-cr-00175-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00175; USA v. Cigarroa; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00175-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-06-21</dateIssued>
+  <docketText>ORDER as to Elmer A. Cigarroa signed by Magistrate Judge Edmund F. Brennan on 6/21/12: Trial Confirmation Hearing RESET for 8/6/2012 at 02:00 PM in Courtroom 24 (EFB) before Magistrate Judge Edmund F. Brennan. Jury Trial RESET for 8/28/2012 at 09:30 AM in Courtroom 24 (EFB) before Magistrate Judge Edmund F. Brennan. Excludable started as to Elmer A. Cigarroa: T-4 Start: 6/21/12 Stop: 8/6/12. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00175-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Cigarroa</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Edmund F. Brennan on 8/3/12 as to Elmer A. Cigarroa VACATING Trial Confirmation Hearing on 8/6/12 and Jury Trial on 8/28/12 and SETTING Change of Plea Hearing for 8/27/2012 at 10:00 AM in Courtroom 24 (EFB) before Magistrate Judge Edmund F. Brennan. Excludable started: XT-4 Start: 8/6/12 Stop: 8/27/12. (Meuleman, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00175-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184106963</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00175_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00175/pdf/USCOURTS-caed-2_12-cr-00175-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00175; USA v. Cigarroa; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00175-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-08-03</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Edmund F. Brennan on 8/3/12 as to Elmer A. Cigarroa VACATING Trial Confirmation Hearing on 8/6/12 and Jury Trial on 8/28/12 and SETTING Change of Plea Hearing for 8/27/2012 at 10:00 AM in Courtroom 24 (EFB) before Magistrate Judge Edmund F. Brennan. Excludable started: XT-4 Start: 8/6/12 Stop: 8/27/12. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00175-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Cigarroa</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 8/20/12 ORDERING that the Change of Plea Hearing scheduled for 8/27/12 is CONTINUED to 10/10/2012 at 02:00 PM. Time is EXCLUDED from today&apos;s date through 10/10/12 pursuant to Local Code T4. (Mena-Sanchez, L)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00175-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1841068f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00175_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00175/pdf/USCOURTS-caed-2_12-cr-00175-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00175; USA v. Cigarroa; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00175-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-08-21</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 8/20/12 ORDERING that the Change of Plea Hearing scheduled for 8/27/12 is CONTINUED to 10/10/2012 at 02:00 PM. Time is EXCLUDED from today&apos;s date through 10/10/12 pursuant to Local Code T4. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00175-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Cigarroa</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/9/2012 ORDERING 10 Change of Plea Hearing Reset for 11/26/2012 at 10:00 AM in Courtroom 24 (EFB) before Magistrate Judge Edmund F. Brennan. Excludable started as to Elmer A. Cigarroa: XT4 Start: 10/9/2012 Stop: 11/26/2012. (Reader, L)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00175-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1841068f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00175_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00175/pdf/USCOURTS-caed-2_12-cr-00175-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00175; USA v. Cigarroa; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00175-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-10-09</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/9/2012 ORDERING 10 Change of Plea Hearing Reset for 11/26/2012 at 10:00 AM in Courtroom 24 (EFB) before Magistrate Judge Edmund F. Brennan. Excludable started as to Elmer A. Cigarroa: XT4 Start: 10/9/2012 Stop: 11/26/2012. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00175-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Cigarroa</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 11/20/12 ORDERING that the Change of Plea Hearing is CONTINUED to 1/14/2013 at 10:00 AM in Courtroom 10 (GEB) before Magistrate Judge Edmund F. Brennan. Excludable started as to Elmer A. Cigarroa: XT4 Start: 11/20/12, Stop: 1/14/13. (Kastilahn, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00175-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184106962</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00175_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00175/pdf/USCOURTS-caed-2_12-cr-00175-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00175; USA v. Cigarroa; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00175-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-11-21</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 11/20/12 ORDERING that the Change of Plea Hearing is CONTINUED to 1/14/2013 at 10:00 AM in Courtroom 10 (GEB) before Magistrate Judge Edmund F. Brennan. Excludable started as to Elmer A. Cigarroa: XT4 Start: 11/20/12, Stop: 1/14/13. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00175-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Cigarroa</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/4/13 ORDERING that the Change of Plea Hearing as to Elmer A. Cigarroa is CONTINUED to 2/25/2013l. Time is excluded from today&apos;s date through 2/25/13, underLocal Code T4. (Mena-Sanchez, L)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00175-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1841068fa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00175_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00175/pdf/USCOURTS-caed-2_12-cr-00175-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00175; USA v. Cigarroa; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00175-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/4/13 ORDERING that the Change of Plea Hearing as to Elmer A. Cigarroa is CONTINUED to 2/25/2013l. Time is excluded from today&apos;s date through 2/25/13, underLocal Code T4. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00175-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Cigarroa</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Edmund F. Brennan on 2/21/13 ORDERING that the Change of Plea Hearing currently set for 2/25/13 is CONTINUED to 4/1/2013 at 10:00 AM before Magistrate Judge Edmund F. Brennan. The Court ORDERS that the time from the date of the parties&apos; stipulation, up to and including 4/1/13, shall be excluded pursuant to Local Code T4. (Mena-Sanchez, L)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00175-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1841068fb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00175_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00175/pdf/USCOURTS-caed-2_12-cr-00175-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00175; USA v. Cigarroa; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00175-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-02-22</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Edmund F. Brennan on 2/21/13 ORDERING that the Change of Plea Hearing currently set for 2/25/13 is CONTINUED to 4/1/2013 at 10:00 AM before Magistrate Judge Edmund F. Brennan. The Court ORDERS that the time from the date of the parties&apos; stipulation, up to and including 4/1/13, shall be excluded pursuant to Local Code T4. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00175-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Cigarroa</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Elmer A. Cigarroa signed by Magistrate Judge Edmund F. Brennan on 4/09/13. (Cannarozzi, N)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00175-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184106961</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00175_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00175/USCOURTS-caed-2_12-cr-00175-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00175/pdf/USCOURTS-caed-2_12-cr-00175-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00175; USA v. Cigarroa; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00175-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-04-09</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Elmer A. Cigarroa signed by Magistrate Judge Edmund F. Brennan on 4/09/13. (Cannarozzi, N)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,776 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d65cd10">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-08-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-08-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948</identifier>
+<identifier type="local">P0b002ee18d65cd10</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-08-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-08-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-01948</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01948</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01948</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="R." fullName="R. Borbon" lastName="Borbon" role="Defendant"></party>
+ <party fullName="Finegan" lastName="Finegan" role="Defendant"></party>
+ <party firstName="C." fullName="C. Lawless" lastName="Lawless" role="Defendant"></party>
+ <party firstName="James" fullName="James Pablo Patterson" lastName="Patterson" middleName="Pablo" role="Plaintiff"></party>
+ <party fullName="S. Corona" lastName="S. Corona" role="Defendant"></party>
+ <party fullName="Warden and Housing Supervisor" lastName="Warden and Housing Supervisor" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+ <partNumber>1:12-cv-01948</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-01948;12-1948</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>R. Borbon</displayForm>
+ <namePart type="family">Borbon</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Finegan</displayForm>
+ <namePart type="family">Finegan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Lawless</displayForm>
+ <namePart type="family">Lawless</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Pablo Patterson</displayForm>
+ <namePart type="family">Patterson</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>S. Corona</displayForm>
+ <namePart type="family">S. Corona</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Warden and Housing Supervisor</displayForm>
+ <namePart type="family">Warden and Housing Supervisor</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01948</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01948</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="R." fullName="R. Borbon" lastName="Borbon" role="Defendant"></party>
+ <party fullName="Finegan" lastName="Finegan" role="Defendant"></party>
+ <party firstName="C." fullName="C. Lawless" lastName="Lawless" role="Defendant"></party>
+ <party firstName="James" fullName="James Pablo Patterson" lastName="Patterson" middleName="Pablo" role="Plaintiff"></party>
+ <party fullName="S. Corona" lastName="S. Corona" role="Defendant"></party>
+ <party fullName="Warden and Housing Supervisor" lastName="Warden and Housing Supervisor" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER Denying 5 Motion to Appoint Counsel, signed by Magistrate Judge Jennifer L. Thurston on 12/7/12. (Verduzco, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f11b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-12-10</dateIssued>
+  <docketText>ORDER Denying 5 Motion to Appoint Counsel, signed by Magistrate Judge Jennifer L. Thurston on 12/7/12. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER Denying 4 Motion for Discovery, signed by Magistrate Judge Jennifer L. Thurston on 12/13/12. (Verduzco, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f169</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-12-13</dateIssued>
+  <docketText>ORDER Denying 4 Motion for Discovery, signed by Magistrate Judge Jennifer L. Thurston on 12/13/12. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER Granting 3 Motion to Proceed in Forma Pauperis, signed by Magistrate Judge Jennifer L. Thurston on 12/13/12. (Attachments: # (1) IFP Motion) (Verduzco, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f155</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-12-14</dateIssued>
+  <docketText>ORDER Granting 3 Motion to Proceed in Forma Pauperis, signed by Magistrate Judge Jennifer L. Thurston on 12/13/12. (Attachments: # (1) IFP Motion) (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER DISMISSING the Complaint WITH LEAVE TO AMEND 1, signed by Magistrate Judge Jennifer L. Thurston on 4/19/13: Twenty-One Day Deadline for filing Amended Complaint. (Attachments: # (1) Amended Complaint - blank form)(Hellings, J)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f168</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-04-19</dateIssued>
+  <docketText>ORDER DISMISSING the Complaint WITH LEAVE TO AMEND 1, signed by Magistrate Judge Jennifer L. Thurston on 4/19/13: Twenty-One Day Deadline for filing Amended Complaint. (Attachments: # (1) Amended Complaint - blank form)(Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER DISMISSING 14 FIRST AMENDED COMPLAINT WITH LEAVE TO AMEND signed by Magistrate Judge Jennifer L. Thurston on 7/22/2013. Second Amended Complaint due within twenty-one (21) days. (Attachments: # (1) Amended Complaint Form). (Jessen, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f16a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-07-22</dateIssued>
+  <docketText>ORDER DISMISSING 14 FIRST AMENDED COMPLAINT WITH LEAVE TO AMEND signed by Magistrate Judge Jennifer L. Thurston on 7/22/2013. Second Amended Complaint due within twenty-one (21) days. (Attachments: # (1) Amended Complaint Form). (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER Denying 18 Motion to Appoint Counsel signed by Magistrate Judge Jennifer L. Thurston on 09/27/2013. (Flores, E)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f152</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-09-27</dateIssued>
+  <docketText>ORDER Denying 18 Motion to Appoint Counsel signed by Magistrate Judge Jennifer L. Thurston on 09/27/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER Directing Action to Proceed on Eighth Amendment Claims Against Defendants C. Lawless, S. Corona, R. Borbon, and Finegan and Dismissing all Other Claims and Defendants signed by Magistrate Judge Jennifer L. Thurston on 10/17/2013. (Flores, E)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f11a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-10-18</dateIssued>
+  <docketText>ORDER Directing Action to Proceed on Eighth Amendment Claims Against Defendants C. Lawless, S. Corona, R. Borbon, and Finegan and Dismissing all Other Claims and Defendants signed by Magistrate Judge Jennifer L. Thurston on 10/17/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER denying 25, 26 Request for Entry of Default signed by Magistrate Judge Jennifer L. Thurston on 2/27/2014. (Lundstrom, T)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f115</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-02-27</dateIssued>
+  <docketText>ORDER denying 25, 26 Request for Entry of Default signed by Magistrate Judge Jennifer L. Thurston on 2/27/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>SECOND INFORMATIONAL ORDER - NOTICE AND WARNING OR REQUIREMENTS FOR OPPOSING 32 MOTION to DISMISS signed by Magistrate Judge Jennifer L. Thurston on 3/11/2014. (Lundstrom, T)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f14e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-8</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-03-11</dateIssued>
+  <docketText>SECOND INFORMATIONAL ORDER - NOTICE AND WARNING OR REQUIREMENTS FOR OPPOSING 32 MOTION to DISMISS signed by Magistrate Judge Jennifer L. Thurston on 3/11/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER STRIKING 32 Unenumerated 12(B) Motion and REQUIRING Defendants to File Responsive Pleading; Thirty Day Deadline signed by Magistrate Judge Jennifer L. Thurston on 4/9/2014. (Sant Agata, S)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f119</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-9</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-04-09</dateIssued>
+  <docketText>ORDER STRIKING 32 Unenumerated 12(B) Motion and REQUIRING Defendants to File Responsive Pleading; Thirty Day Deadline signed by Magistrate Judge Jennifer L. Thurston on 4/9/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s Motion for Early Discovery and to Compel Defendants to Provide Admissions, Interrogatories and Production 41, signed by Magistrate Judge Jennifer L. Thurston on 4/24/14: Motion is DENIED without prejudice. (Hellings, J)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f117</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-10</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-04-24</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s Motion for Early Discovery and to Compel Defendants to Provide Admissions, Interrogatories and Production 41, signed by Magistrate Judge Jennifer L. Thurston on 4/24/14: Motion is DENIED without prejudice. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>AMENDED SECOND INFORMATIONAL ORDER - Notice and Warning of Requirements for Opposing Defendants&apos; Motion for Summary Judgment, signed by Magistrate Judge Jennifer L. Thurston on 5/19/14. (Verduzco, M)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f14d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-11</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2014-05-20</dateIssued>
+  <docketText>AMENDED SECOND INFORMATIONAL ORDER - Notice and Warning of Requirements for Opposing Defendants&apos; Motion for Summary Judgment, signed by Magistrate Judge Jennifer L. Thurston on 5/19/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER to SHOW CAUSE why Defendants are not Required to File a Responsive Pleading, signed by Magistrate Judge Jennifer L. Thurston on 5/19/14. 10-Day Deadline. (Verduzco, M)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f151</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-12</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2014-05-20</dateIssued>
+  <docketText>ORDER to SHOW CAUSE why Defendants are not Required to File a Responsive Pleading, signed by Magistrate Judge Jennifer L. Thurston on 5/19/14. 10-Day Deadline. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER GRANTING Stay of Discovery Pending Resolution of Defendants&apos; Motion for Summary Judgment 53, signed by Magistrate Judge Jennifer L. Thurston on 7/9/14. (Hellings, J)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f14c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-13</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2014-07-09</dateIssued>
+  <docketText>ORDER GRANTING Stay of Discovery Pending Resolution of Defendants&apos; Motion for Summary Judgment 53, signed by Magistrate Judge Jennifer L. Thurston on 7/9/14. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER Denying 55 Motion for Appointment of Counsel, signed by Magistrate Judge Jennifer L. Thurston on 07/14/14. (Gonzalez, R)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f114</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-14</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2014-07-15</dateIssued>
+  <docketText>ORDER Denying 55 Motion for Appointment of Counsel, signed by Magistrate Judge Jennifer L. Thurston on 07/14/14. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>FINDINGS and RECOMMENDATION to Deny Defendants&apos; Motion for Summary Judgment 43, signed by Magistrate Judge Jennifer L. Thurston on 11/5/14: Motion referred to District Judge O&apos;Neill; Objections Due Within 30 Days. (Hellings, J)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f14f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-15</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-11-06</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATION to Deny Defendants&apos; Motion for Summary Judgment 43, signed by Magistrate Judge Jennifer L. Thurston on 11/5/14: Motion referred to District Judge O&apos;Neill; Objections Due Within 30 Days. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER ADOPTING FINDINGS AND RECOMMENDATION to DENY Defendants&apos; Motion for Summary Judgment 43, 57, signed by District Judge Lawrence J. O&apos;Neill on 12/31/14: The case is referred back to the Magistrate Judge for discovery and scheduling purposes. (Hellings, J)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f11c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-16</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER ADOPTING FINDINGS AND RECOMMENDATION to DENY Defendants&apos; Motion for Summary Judgment 43, 57, signed by District Judge Lawrence J. O&apos;Neill on 12/31/14: The case is referred back to the Magistrate Judge for discovery and scheduling purposes. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER Regarding Plaintiff&apos;s Motions for Issuance of Subpoena Duces Tecum 62, 63; ORDER DIRECTING Clerk of Court to Forward Copies of This Order to Inmate Robles (CDCR #G28561), signed by Magistrate Judge Jennifer L. Thurston on 5/6/15: 60-Day Deadline. (Hellings, J)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f116</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-17</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2015-05-06</dateIssued>
+  <docketText>ORDER Regarding Plaintiff&apos;s Motions for Issuance of Subpoena Duces Tecum 62, 63; ORDER DIRECTING Clerk of Court to Forward Copies of This Order to Inmate Robles (CDCR #G28561), signed by Magistrate Judge Jennifer L. Thurston on 5/6/15: 60-Day Deadline. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-18/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER MODIFYING Scheduling Order Extending Deadline for Amendment of Pleadings and GRANTING Leave to Defendants to File Amended Answers 76 &amp; 77, signed by Magistrate Judge Jennifer L. Thurston on 7/9/15: Amended Pleadings ddl 09/12/2015; Discovery Cut-Off ddl 11/13/2015; Dispositive Motion ddl 12/31/2015; Within 10 days of service of this order, Defendants to file statement as to Plaintiff&apos;s Motion 76. (Hellings, J)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f153</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-18</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2015-07-09</dateIssued>
+  <docketText>ORDER MODIFYING Scheduling Order Extending Deadline for Amendment of Pleadings and GRANTING Leave to Defendants to File Amended Answers 76 &amp; 77, signed by Magistrate Judge Jennifer L. Thurston on 7/9/15: Amended Pleadings ddl 09/12/2015; Discovery Cut-Off ddl 11/13/2015; Dispositive Motion ddl 12/31/2015; Within 10 days of service of this order, Defendants to file statement as to Plaintiff&apos;s Motion 76. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-19/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER Denying 76 Plaintiff&apos;s Motion for Settlement Conference, signed by Magistrate Judge Jennifer L. Thurston on 7/24/15. (Gonzalez, R)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f118</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-19</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2015-07-24</dateIssued>
+  <docketText>ORDER Denying 76 Plaintiff&apos;s Motion for Settlement Conference, signed by Magistrate Judge Jennifer L. Thurston on 7/24/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-20/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER Granting in Part and Denying in Part Plaintiff&apos;s 65 Motion to Compel Production / Inspection, signed by Magistrate Judge Jennifer L. Thurston on 8/20/15. (Verduzco, M)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f150</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-20</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2015-08-20</dateIssued>
+  <docketText>ORDER Granting in Part and Denying in Part Plaintiff&apos;s 65 Motion to Compel Production / Inspection, signed by Magistrate Judge Jennifer L. Thurston on 8/20/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01948-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-21/mods.xml">
+ <titleInfo>
+  <title>(PC) Patterson v. Warden and Housing Supervisor</title>
+  <subTitle>ORDER Clarifying Order Granting and Denying in Part Plaintiff&apos;s Motion to Compel 81, signed by Magistrate Judge Jennifer L. Thurston on 8/26/15. (Verduzco, M)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d66f154</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-21</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01948_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01948/USCOURTS-caed-1_12-cv-01948-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01948/pdf/USCOURTS-caed-1_12-cv-01948-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01948; (PC) Patterson v. Warden and Housing Supervisor; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01948-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2015-08-26</dateIssued>
+  <docketText>ORDER Clarifying Order Granting and Denying in Part Plaintiff&apos;s Motion to Compel 81, signed by Magistrate Judge Jennifer L. Thurston on 8/26/15. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

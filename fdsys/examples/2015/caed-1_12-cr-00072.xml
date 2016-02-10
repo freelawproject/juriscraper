@@ -1,0 +1,1854 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18ab7e4ec">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072</identifier>
+<identifier type="local">P0b002ee18ab7e4ec</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cr-00072</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cr-00072</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cr-00072</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Samuel" fullName="Samuel Stone" lastName="Stone" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Stone</title>
+ <partNumber>1:12-cr-00072</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cr-00072;12-072</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Samuel Stone</displayForm>
+ <namePart type="family">Stone</namePart>
+ <namePart type="given">Samuel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cr-00072</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cr-00072</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Samuel" fullName="Samuel Stone" lastName="Stone" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER and WRIT OF HABEAS CORPUS AD PROSEQUENDUM as to Samuel Stone (1), signed by Magistrate Judge Dennis L. Beck on 3/26/2012. Application 4 is GRANTED. (Fahrney, E)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86aee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-03-27</dateIssued>
+  <docketText>ORDER and WRIT OF HABEAS CORPUS AD PROSEQUENDUM as to Samuel Stone (1), signed by Magistrate Judge Dennis L. Beck on 3/26/2012. Application 4 is GRANTED. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>DETENTION ORDER as to Samuel Stone, signed by Magistrate Judge Barbara A. McAuliffe on 5/30/2012. (Herman, H)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b43</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-05-30</dateIssued>
+  <docketText>DETENTION ORDER as to Samuel Stone, signed by Magistrate Judge Barbara A. McAuliffe on 5/30/2012. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER signed by Magistrate Judge Dennis L. Beck on 8/12/2003 appointing the Federal Defender as counsel for Samuel Stone. (Lundstrom, T)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86aca</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-05-30</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dennis L. Beck on 8/12/2003 appointing the Federal Defender as counsel for Samuel Stone. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER Designating Case as COMPLEX as to Samuel Stone, signed by Magistrate Judge Barbara A. McAuliffe on 5/30/2012. (Herman, H)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab8693d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-05-31</dateIssued>
+  <docketText>ORDER Designating Case as COMPLEX as to Samuel Stone, signed by Magistrate Judge Barbara A. McAuliffe on 5/30/2012. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER Granting Pro Hac Vice Application 19, signed by Chief Judge Anthony W. Ishii on 8/3/12.(Verduzco, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b39</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-08-06</dateIssued>
+  <docketText>ORDER Granting Pro Hac Vice Application 19, signed by Chief Judge Anthony W. Ishii on 8/3/12.(Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>STIPULATION and ORDER to Exclude Time: STATUS CONFERENCE as to defendant Samuel Stone is continued from 8/13/12 to 9/13/2012 at 01:30 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck. Request made because the U.S. Marshal&apos;s has asked that the defendant not be transported to court on a Monday due to logistical issues. Excludable started as to Samuel Stone: XT Start: 8/13/2012 Stop: 9/13/2012. signed by Magistrate Judge Barbara A. McAuliffe on 8/3/2012. (Herman, H)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab8693e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-08-06</dateIssued>
+  <docketText>STIPULATION and ORDER to Exclude Time: STATUS CONFERENCE as to defendant Samuel Stone is continued from 8/13/12 to 9/13/2012 at 01:30 PM in Courtroom 9 (DLB) before Magistrate Judge Dennis L. Beck. Request made because the U.S. Marshal&apos;s has asked that the defendant not be transported to court on a Monday due to logistical issues. Excludable started as to Samuel Stone: XT Start: 8/13/2012 Stop: 9/13/2012. signed by Magistrate Judge Barbara A. McAuliffe on 8/3/2012. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER SETTING STATUS CONFERENCE as to Samuel Stone (1), Signed by Senior Judge John C. Coughenour on 9/26/2012. A Status Conference is set for 10/11/2012 at 10:00 AM in Courtroom 3 (Fresno Courthouse) before Senior Judge John C. Coughenour. (Arellano, S.)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b2b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-09-26</dateIssued>
+  <docketText>ORDER SETTING STATUS CONFERENCE as to Samuel Stone (1), Signed by Senior Judge John C. Coughenour on 9/26/2012. A Status Conference is set for 10/11/2012 at 10:00 AM in Courtroom 3 (Fresno Courthouse) before Senior Judge John C. Coughenour. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER Regarding Joint Scheduling Hearing as to Samuel Stone signed by Magistrate Judge Gary S. Austin on 10/25/2012. (Martinez, A)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86acb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-10-25</dateIssued>
+  <docketText>ORDER Regarding Joint Scheduling Hearing as to Samuel Stone signed by Magistrate Judge Gary S. Austin on 10/25/2012. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER EXCLUDING TIME Under Speedy Trial Act as to Samuel Stone (1), Signed by Senior Judge John C. Coughenour on 10/26/2012. XT Start: 10/11/2012, Stop: 9/15/2014. (Arellano, S.)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b27</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-8</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-10-26</dateIssued>
+  <docketText>ORDER EXCLUDING TIME Under Speedy Trial Act as to Samuel Stone (1), Signed by Senior Judge John C. Coughenour on 10/26/2012. XT Start: 10/11/2012, Stop: 9/15/2014. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER Resetting Date for Defendant&apos;s Reply to the Government&apos;s Response to Defendant&apos;s Motion to Compel Discovery signed by Magistrate Judge Gary S. Austin on 1/16/2013. (Martinez, A)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b06</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-9</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-01-16</dateIssued>
+  <docketText>ORDER Resetting Date for Defendant&apos;s Reply to the Government&apos;s Response to Defendant&apos;s Motion to Compel Discovery signed by Magistrate Judge Gary S. Austin on 1/16/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>SCHEDULING ORDER signed by Senior Judge John C. Coughenour on 2/22/2013. Motion Hearing re jury venire and jury selection process set for 6/2/2014 at 01:30 PM before Senior Judge John C. Coughenour; Pretrial Conference/Trial Confirmation Hearing set for 8/15/2014 at 01:30 PM before Senior Judge John C. Coughenour; Jury Trial set for 9/15/2014 at 8:30 AM before Senior Judge John C. Coughenour (courtroom to be determined). (Martinez, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86941</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-10</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-02-22</dateIssued>
+  <docketText>SCHEDULING ORDER signed by Senior Judge John C. Coughenour on 2/22/2013. Motion Hearing re jury venire and jury selection process set for 6/2/2014 at 01:30 PM before Senior Judge John C. Coughenour; Pretrial Conference/Trial Confirmation Hearing set for 8/15/2014 at 01:30 PM before Senior Judge John C. Coughenour; Jury Trial set for 9/15/2014 at 8:30 AM before Senior Judge John C. Coughenour (courtroom to be determined). (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER After Discovery Motion Hearing signed by Magistrate Judge Gary S. Austin on 2/22/2013. (Martinez, A)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b2d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-11</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-02-22</dateIssued>
+  <docketText>ORDER After Discovery Motion Hearing signed by Magistrate Judge Gary S. Austin on 2/22/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER Regarding 61 Proposed Protective Order as to Samuel Stone, signed by Magistrate Judge Gary S. Austin on 3/13/2013. (Gaumnitz, R)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86ac6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-12</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2013-03-13</dateIssued>
+  <docketText>ORDER Regarding 61 Proposed Protective Order as to Samuel Stone, signed by Magistrate Judge Gary S. Austin on 3/13/2013. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>STIPULATED PROTECTIVE ORDER as to Samuel Stone signed by Magistrate Judge Gary S. Austin on 4/4/2013. (Martinez, A)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b3c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-13</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2013-04-04</dateIssued>
+  <docketText>STIPULATED PROTECTIVE ORDER as to Samuel Stone signed by Magistrate Judge Gary S. Austin on 4/4/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>STIPULATED &quot;Attorneys Eyes Only&quot; PROTECTIVE ORDER signed by Magistrate Judge Gary S. Austin on 4/4/2013. (Martinez, A)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab8693c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-14</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2013-04-04</dateIssued>
+  <docketText>STIPULATED &quot;Attorneys Eyes Only&quot; PROTECTIVE ORDER signed by Magistrate Judge Gary S. Austin on 4/4/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER Extending Time to File Motion to Compel re 74 signed by Magistrate Judge Gary S. Austin on 4/9/2013. (Martinez, A)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b3a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-15</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2013-04-09</dateIssued>
+  <docketText>ORDER Extending Time to File Motion to Compel re 74 signed by Magistrate Judge Gary S. Austin on 4/9/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER REGARDING Scheduling Conflict (Doc. 68) as to Samuel Stone, Signed by Senior Judge John C. Coughenour on 5/15/2013. (Arellano, S.)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b40</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-16</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2013-05-15</dateIssued>
+  <docketText>ORDER REGARDING Scheduling Conflict (Doc. 68) as to Samuel Stone, Signed by Senior Judge John C. Coughenour on 5/15/2013. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER After Status Conference and Second Discovery Motion Hearing as to Samuel Stone signed by Magistrate Judge Gary S. Austin on 5/16/2013. Hearing on Motions to Compel set for 7/11/2013 at 10:00 AM in Courtroom 10 (GSA) before Magistrate Judge Gary S. Austin. (Martinez, A)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b2e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-17</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2013-05-16</dateIssued>
+  <docketText>ORDER After Status Conference and Second Discovery Motion Hearing as to Samuel Stone signed by Magistrate Judge Gary S. Austin on 5/16/2013. Hearing on Motions to Compel set for 7/11/2013 at 10:00 AM in Courtroom 10 (GSA) before Magistrate Judge Gary S. Austin. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER on Motion for Bill of Particulars (Doc. 66) as to Samuel Stone (1), Signed by Senior Judge John C. Coughenour on 5/16/2013. (Arellano, S.)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b03</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-18</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2013-05-16</dateIssued>
+  <docketText>ORDER on Motion for Bill of Particulars (Doc. 66) as to Samuel Stone (1), Signed by Senior Judge John C. Coughenour on 5/16/2013. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER RE: Revised Stipulation as to Resolved Discovery Requests as to Samuel Stone signed by Magistrate Judge Gary S. Austin on 6/11/2013. (Martinez, A)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86ace</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-19</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2013-06-11</dateIssued>
+  <docketText>ORDER RE: Revised Stipulation as to Resolved Discovery Requests as to Samuel Stone signed by Magistrate Judge Gary S. Austin on 6/11/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER RE: Revised Stipulation as to Unresolved Discovery Requests as to Samuel Stone signed by Magistrate Judge Gary S. Austin on 6/11/2013. (Martinez, A)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86af1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-20</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2013-06-11</dateIssued>
+  <docketText>ORDER RE: Revised Stipulation as to Unresolved Discovery Requests as to Samuel Stone signed by Magistrate Judge Gary S. Austin on 6/11/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-21/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER Granting Defendant&apos;s 34, 78, 95 Motions to Compel In Part; ORDER Setting Discovery Deadline signed by Magistrate Judge Gary S. Austin on 8/27/2013. (Martinez, A)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86ac9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-21</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2013-08-27</dateIssued>
+  <docketText>ORDER Granting Defendant&apos;s 34, 78, 95 Motions to Compel In Part; ORDER Setting Discovery Deadline signed by Magistrate Judge Gary S. Austin on 8/27/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-22/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER GRANTING 128 Defendant&apos;s Motion for Extension of Time to Reply to the Responses of the United States as to Samuel Stone, signed by Senior Judge John C. Coughenour on 10/21/2013. Replies due by 11/18/2013. (Jessen, A)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86ac7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-22</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2013-10-21</dateIssued>
+  <docketText>ORDER GRANTING 128 Defendant&apos;s Motion for Extension of Time to Reply to the Responses of the United States as to Samuel Stone, signed by Senior Judge John C. Coughenour on 10/21/2013. Replies due by 11/18/2013. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-23/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER denying 118 Motion for Reconsideration signed by Senior Judge John C. Coughenour on 11/5/2013. (Lundstrom, T)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86af7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-23</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2013-11-05</dateIssued>
+  <docketText>ORDER denying 118 Motion for Reconsideration signed by Senior Judge John C. Coughenour on 11/5/2013. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-24/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER signed by Senior Judge John C. Coughenour on 11/3/2013 granting 112 MOTION to STRIKE Paragraph in the Govenment&apos;s Notice of Intent to seek the death penalty. (Lundstrom, T)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b44</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-24</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2013-11-05</dateIssued>
+  <docketText>ORDER signed by Senior Judge John C. Coughenour on 11/3/2013 granting 112 MOTION to STRIKE Paragraph in the Govenment&apos;s Notice of Intent to seek the death penalty. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-25/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER RE: Government&apos;s 120 Motion for Reconsideration signed by Magistrate Judge Gary S. Austin on 11/8/2013. (Martinez, A)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86af5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-25</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2013-11-08</dateIssued>
+  <docketText>ORDER RE: Government&apos;s 120 Motion for Reconsideration signed by Magistrate Judge Gary S. Austin on 11/8/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-26/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>Supplemental Discovery ORDER signed by Magistrate Judge Gary S. Austin on 11/8/2013. (Martinez, A)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86af6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-26</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2013-11-08</dateIssued>
+  <docketText>Supplemental Discovery ORDER signed by Magistrate Judge Gary S. Austin on 11/8/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-27/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER GRANTING 137 Motion for Extension of Time as to Samuel Stone, signed by Senior Judge John C. Coughenour on 11/20/2013. Replies due by 11/27/2013. (Jessen, A)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-27.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86afe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-27</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2013-11-20</dateIssued>
+  <docketText>ORDER GRANTING 137 Motion for Extension of Time as to Samuel Stone, signed by Senior Judge John C. Coughenour on 11/20/2013. Replies due by 11/27/2013. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-28/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER RE: the United States of America&apos;s Compliance With This Court&apos;s Discovery Orders; ORDER Granting Motion to Accept Late Filing re 139, 140, and 141 signed by Magistrate Judge Gary S. Austin on 11/20/2013. (Martinez, A)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-28.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b30</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-28</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2013-11-20</dateIssued>
+  <docketText>ORDER RE: the United States of America&apos;s Compliance With This Court&apos;s Discovery Orders; ORDER Granting Motion to Accept Late Filing re 139, 140, and 141 signed by Magistrate Judge Gary S. Austin on 11/20/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-29/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER Denying Defendant&apos;s 113 Motion to Dismiss Count Two, as to Samuel Stone (1), signed by Senior Judge John C. Coughenour on 11/26/13. (Gonzalez, R)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-29.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b37</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-29</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2013-11-26</dateIssued>
+  <docketText>ORDER Denying Defendant&apos;s 113 Motion to Dismiss Count Two, as to Samuel Stone (1), signed by Senior Judge John C. Coughenour on 11/26/13. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-30/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER as to Samuel Stone, signed by Senior Judge John C. Coughenour on 12/12/13. (Hellings, J)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-30.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b3b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-30</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2013-12-13</dateIssued>
+  <docketText>ORDER as to Samuel Stone, signed by Senior Judge John C. Coughenour on 12/12/13. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-31/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER as to Samuel Stone, signed by Senior Judge John C. Coughenour on 12/12/13. (Attachments: # (1) Exhibit &apos;A&apos;) (Hellings, J)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-31.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b2f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-31</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2013-12-13</dateIssued>
+  <docketText>ORDER as to Samuel Stone, signed by Senior Judge John C. Coughenour on 12/12/13. (Attachments: # (1) Exhibit &apos;A&apos;) (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-32/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER DENYING 111 Motion to Strike Aggravating Factors as to Samuel Stone (1) signed by Senior Judge John C. Coughenour on 12/20/2013. (Jessen, A)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-32.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b07</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-32</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2013-12-20</dateIssued>
+  <docketText>ORDER DENYING 111 Motion to Strike Aggravating Factors as to Samuel Stone (1) signed by Senior Judge John C. Coughenour on 12/20/2013. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-33/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER RE: Defendant&apos;s 152 Motion for Reconsideration as to Samuel Stone (1) signed by Magistrate Judge Gary S. Austin on 12/20/2013. (Martinez, A)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-33.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b3e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-33</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2013-12-20</dateIssued>
+  <docketText>ORDER RE: Defendant&apos;s 152 Motion for Reconsideration as to Samuel Stone (1) signed by Magistrate Judge Gary S. Austin on 12/20/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-34/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER REGARDING Defendant Stone&apos;s Filing Attachment A Under Seal as to Samuel Stone (Docs. 176, 177), Signed by Magistrate Judge Gary S. Austin on 1/2/2014. (Arellano, S.)</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-34.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b46</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-34</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER REGARDING Defendant Stone&apos;s Filing Attachment A Under Seal as to Samuel Stone (Docs. 176, 177), Signed by Magistrate Judge Gary S. Austin on 1/2/2014. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-35" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-35/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER AFTER HEARING, Signed by Senior Judge John C. Coughenour on 1/8/2014. Defendants motion for clarification (Doc. 164) GRANTED; Defendants motion to dismiss will be due 2/28/2014; Government&apos;s response due 3/28/2014; Defendant&apos;s reply due 4/25/2014. The government&apos;s motion for an extension of time for its expert disclosures (Doc. 167) GRANTED. Defendant&apos;s request to file document(s) under seal (Docs. 165, 166) GRANTED. Defendant&apos;s proposed protective order ADOPTED with some modifications. The government&apos;s request for an extension of time to file a response to defendant&apos;s motion for two juries (Doc. 169) is GRANTED. The response date, previously set for 1/2/2014, is EXTENDED to 1/16/2014. Defendants similar motion for an extension of time to file responses to the governments motion (Doc. 174) is GRANTED. The response date, previously set for 1/2/2014, is EXTENDED to 1/16/2014. (Arellano, S.)</subTitle>
+  <partNumber>35</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-35.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab8693f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-35</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_35.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-35/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-35.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-35</accessId>
+  <sequenceNumber>35</sequenceNumber>
+  <dateIssued>2014-01-09</dateIssued>
+  <docketText>ORDER AFTER HEARING, Signed by Senior Judge John C. Coughenour on 1/8/2014. Defendants motion for clarification (Doc. 164) GRANTED; Defendants motion to dismiss will be due 2/28/2014; Government&apos;s response due 3/28/2014; Defendant&apos;s reply due 4/25/2014. The government&apos;s motion for an extension of time for its expert disclosures (Doc. 167) GRANTED. Defendant&apos;s request to file document(s) under seal (Docs. 165, 166) GRANTED. Defendant&apos;s proposed protective order ADOPTED with some modifications. The government&apos;s request for an extension of time to file a response to defendant&apos;s motion for two juries (Doc. 169) is GRANTED. The response date, previously set for 1/2/2014, is EXTENDED to 1/16/2014. Defendants similar motion for an extension of time to file responses to the governments motion (Doc. 174) is GRANTED. The response date, previously set for 1/2/2014, is EXTENDED to 1/16/2014. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-36" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-36/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>PROTECTIVE ORDER as to Samuel Stone, Signed by Senior Judge John C. Coughenour on 1/8/2014. (Arellano, S.)</subTitle>
+  <partNumber>36</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-36.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86af3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-36</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_36.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-36/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-36.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-36</accessId>
+  <sequenceNumber>36</sequenceNumber>
+  <dateIssued>2014-01-09</dateIssued>
+  <docketText>PROTECTIVE ORDER as to Samuel Stone, Signed by Senior Judge John C. Coughenour on 1/8/2014. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-37" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-37/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER After January 8, 2014 Status Conference Regarding Discovery signed by Magistrate Judge Gary S. Austin on 1/10/2014. (Martinez, A)</subTitle>
+  <partNumber>37</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-37.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86af4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-37</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_37.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-37/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-37.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-37</accessId>
+  <sequenceNumber>37</sequenceNumber>
+  <dateIssued>2014-01-10</dateIssued>
+  <docketText>ORDER After January 8, 2014 Status Conference Regarding Discovery signed by Magistrate Judge Gary S. Austin on 1/10/2014. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-38" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-38/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER as to Samuel Stone REGARDING DEFENDANT STONE&apos;S FILING EXHIBITS UNDER SEAL. Signed by Magistrate Judge Gary S. Austin on 2/13/14. (Robles, S)</subTitle>
+  <partNumber>38</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-38.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b45</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-38</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_38.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-38/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-38.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-38</accessId>
+  <sequenceNumber>38</sequenceNumber>
+  <dateIssued>2014-02-14</dateIssued>
+  <docketText>ORDER as to Samuel Stone REGARDING DEFENDANT STONE&apos;S FILING EXHIBITS UNDER SEAL. Signed by Magistrate Judge Gary S. Austin on 2/13/14. (Robles, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-39" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-39/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER DENYING 114, 115 Motions to Find Federal Death Penalty Unconstitutional as to Samuel Stone (1) signed by Senior Judge John C. Coughenour on 2/18/2014. (Jessen, A)</subTitle>
+  <partNumber>39</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-39.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86af0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-39</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_39.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-39/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-39.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-39</accessId>
+  <sequenceNumber>39</sequenceNumber>
+  <dateIssued>2014-02-18</dateIssued>
+  <docketText>ORDER DENYING 114, 115 Motions to Find Federal Death Penalty Unconstitutional as to Samuel Stone (1) signed by Senior Judge John C. Coughenour on 2/18/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-40" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-40/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER GRANTING defendant&apos;s 225 Request to file his reply to the government&apos;s response to defendant&apos;s motion for two juries under seal. Signed by Senior Judge John C. Coughenour on 2/21/14. (Robles, S)</subTitle>
+  <partNumber>40</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-40.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b2a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-40</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_40.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-40/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-40.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-40</accessId>
+  <sequenceNumber>40</sequenceNumber>
+  <dateIssued>2014-02-21</dateIssued>
+  <docketText>ORDER GRANTING defendant&apos;s 225 Request to file his reply to the government&apos;s response to defendant&apos;s motion for two juries under seal. Signed by Senior Judge John C. Coughenour on 2/21/14. (Robles, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-41" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-41/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER on 229 Motion for Extension of Time as to Samuel Stone signed by Senior Judge John C. Coughenour on 2/25/2014. The February 28, 2014 due date for the motions is hereby VACATED. The motions will be due ten days after the Court files an Order ruling on Defendants motion for a protective order. (Jessen, A)</subTitle>
+  <partNumber>41</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-41.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b28</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-41</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_41.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-41/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-41.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-41</accessId>
+  <sequenceNumber>41</sequenceNumber>
+  <dateIssued>2014-02-25</dateIssued>
+  <docketText>ORDER on 229 Motion for Extension of Time as to Samuel Stone signed by Senior Judge John C. Coughenour on 2/25/2014. The February 28, 2014 due date for the motions is hereby VACATED. The motions will be due ten days after the Court files an Order ruling on Defendants motion for a protective order. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-42" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-42/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER GRANTING 203 Defendant&apos;s Motion for Protective Order as to Samuel Stone (1) signed by Senior Judge John C. Coughenour on 2/25/2014. (Jessen, A)</subTitle>
+  <partNumber>42</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-42.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b29</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-42</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_42.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-42/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-42.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-42</accessId>
+  <sequenceNumber>42</sequenceNumber>
+  <dateIssued>2014-02-25</dateIssued>
+  <docketText>ORDER GRANTING 203 Defendant&apos;s Motion for Protective Order as to Samuel Stone (1) signed by Senior Judge John C. Coughenour on 2/25/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-43" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-43/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>PROTECTIVE ORDER as to Samuel Stone signed by Senior Judge John C. Coughenour on 2/26/2014. (Jessen, A)</subTitle>
+  <partNumber>43</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-43.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b3d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-43</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_43.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-43/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-43.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-43</accessId>
+  <sequenceNumber>43</sequenceNumber>
+  <dateIssued>2014-02-26</dateIssued>
+  <docketText>PROTECTIVE ORDER as to Samuel Stone signed by Senior Judge John C. Coughenour on 2/26/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-44" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-44/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER Granting Defendant Stone&apos;s Motion to File Exhibits C and D Attached to to Defendant&apos;s Reply Under Seal, signed by Magistrate Judge Gary S. Austin on 3/14/14. (Verduzco, M)</subTitle>
+  <partNumber>44</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-44.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86acc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-44</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_44.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-44/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-44.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-44</accessId>
+  <sequenceNumber>44</sequenceNumber>
+  <dateIssued>2014-03-17</dateIssued>
+  <docketText>ORDER Granting Defendant Stone&apos;s Motion to File Exhibits C and D Attached to to Defendant&apos;s Reply Under Seal, signed by Magistrate Judge Gary S. Austin on 3/14/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-45" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-45/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER re Docket Number 249, signed by Senior Judge John C. Coughenour on 3/25/14. (Verduzco, M)</subTitle>
+  <partNumber>45</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-45.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86aff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-45</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_45.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-45/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-45.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-45</accessId>
+  <sequenceNumber>45</sequenceNumber>
+  <dateIssued>2014-03-25</dateIssued>
+  <docketText>ORDER re Docket Number 249, signed by Senior Judge John C. Coughenour on 3/25/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-46" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-46/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>SEALING ORDER signed by Senior Judge John C. Coughenour on 3/25/14. (Verduzco, M)</subTitle>
+  <partNumber>46</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-46.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b3f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-46</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_46.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-46/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-46.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-46</accessId>
+  <sequenceNumber>46</sequenceNumber>
+  <dateIssued>2014-03-25</dateIssued>
+  <docketText>SEALING ORDER signed by Senior Judge John C. Coughenour on 3/25/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-47" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-47/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER GRANTING 263 Government&apos;s Motion for Extension of Time to File Response to Motion to Dismiss as to Samuel Stone (1) signed by Senior Judge John C. Coughenour on 4/4/2014. Government&apos;s response due by 4/21/2014. Defendant&apos;s reply due by 5/19/2014. (Jessen, A)</subTitle>
+  <partNumber>47</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-47.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b00</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-47</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_47.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-47/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-47.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-47</accessId>
+  <sequenceNumber>47</sequenceNumber>
+  <dateIssued>2014-04-04</dateIssued>
+  <docketText>ORDER GRANTING 263 Government&apos;s Motion for Extension of Time to File Response to Motion to Dismiss as to Samuel Stone (1) signed by Senior Judge John C. Coughenour on 4/4/2014. Government&apos;s response due by 4/21/2014. Defendant&apos;s reply due by 5/19/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-48" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-48/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER signed by Senior Judge John C. Coughenour on 4/8/2014.Defendant&apos;s Motions to Compel 176 &amp; 244 are GRANTED In Part and DENIED In Part. (Marrujo, C)</subTitle>
+  <partNumber>48</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-48.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b02</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-48</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_48.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-48/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-48.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-48</accessId>
+  <sequenceNumber>48</sequenceNumber>
+  <dateIssued>2014-04-08</dateIssued>
+  <docketText>ORDER signed by Senior Judge John C. Coughenour on 4/8/2014.Defendant&apos;s Motions to Compel 176 &amp; 244 are GRANTED In Part and DENIED In Part. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-49" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-49/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER signed by Senior Judge John C. Coughenour on 4/14/14. The trial date in this matter shall be continued to October 5, 2015. (Verduzco, M)</subTitle>
+  <partNumber>49</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-49.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86aef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-49</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_49.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-49/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-49.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-49</accessId>
+  <sequenceNumber>49</sequenceNumber>
+  <dateIssued>2014-04-14</dateIssued>
+  <docketText>ORDER signed by Senior Judge John C. Coughenour on 4/14/14. The trial date in this matter shall be continued to October 5, 2015. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-50" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-50/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER on Scheduling and Discovery as to Samuel Stone, signed by Senior Judge John C. Coughenour on 5/2/2014. Final Pretrial Conference tentatively set for 8/4/2015 at 01:30 PM in Courtroom 3 at the U.S. District Court in Fresno, CA. (Jessen, A)</subTitle>
+  <partNumber>50</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-50.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b2c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-50</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_50.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-50/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-50.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-50</accessId>
+  <sequenceNumber>50</sequenceNumber>
+  <dateIssued>2014-05-02</dateIssued>
+  <docketText>ORDER on Scheduling and Discovery as to Samuel Stone, signed by Senior Judge John C. Coughenour on 5/2/2014. Final Pretrial Conference tentatively set for 8/4/2015 at 01:30 PM in Courtroom 3 at the U.S. District Court in Fresno, CA. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-51" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-51/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER granting motion to seal re 282 Notice signed by Senior Judge John C. Coughenour on 5/14/2014. (Lundstrom, T)</subTitle>
+  <partNumber>51</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-51.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86ac8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-51</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_51.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-51/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-51.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-51</accessId>
+  <sequenceNumber>51</sequenceNumber>
+  <dateIssued>2014-05-15</dateIssued>
+  <docketText>ORDER granting motion to seal re 282 Notice signed by Senior Judge John C. Coughenour on 5/14/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-52" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-52/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER signed by Senior Judge John C. Coughenour on 5/14/2014 denying Motion to file sur-reply 265 and staying Motion to preclude witness 201 pending the hearing on August 4 and 5, 2014. (Lundstrom, T)</subTitle>
+  <partNumber>52</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-52.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b05</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-52</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_52.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-52/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-52.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-52</accessId>
+  <sequenceNumber>52</sequenceNumber>
+  <dateIssued>2014-05-15</dateIssued>
+  <docketText>ORDER signed by Senior Judge John C. Coughenour on 5/14/2014 denying Motion to file sur-reply 265 and staying Motion to preclude witness 201 pending the hearing on August 4 and 5, 2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-53" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-53/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER DENYING 235 Defendant&apos;s Motion to Exclude the Government&apos;s Expert Testimony as to Samuel Stone signed by Senior Judge John C. Coughenour on 5/29/2014. (Jessen, A)</subTitle>
+  <partNumber>53</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-53.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b01</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-53</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_53.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-53/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-53.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-53</accessId>
+  <sequenceNumber>53</sequenceNumber>
+  <dateIssued>2014-05-29</dateIssued>
+  <docketText>ORDER DENYING 235 Defendant&apos;s Motion to Exclude the Government&apos;s Expert Testimony as to Samuel Stone signed by Senior Judge John C. Coughenour on 5/29/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-54" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-54/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER GRANTING 292 Defendants Motion to file documents under seal as to Samuel Stone signed by Senior Judge John C. Coughenour on 7/7/14. (Robles, S)</subTitle>
+  <partNumber>54</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-54.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b38</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-54</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_54.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-54/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-54.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-54</accessId>
+  <sequenceNumber>54</sequenceNumber>
+  <dateIssued>2014-07-07</dateIssued>
+  <docketText>ORDER GRANTING 292 Defendants Motion to file documents under seal as to Samuel Stone signed by Senior Judge John C. Coughenour on 7/7/14. (Robles, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-55" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-55/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER VACATING HEARING Set for August 4-5, 2014 and ORDER Directing Parties to File Joint Status Report by 9/12/2014 as to Samuel Stone signed by Senior Judge John C. Coughenour on 7/10/2014. (Jessen, A)</subTitle>
+  <partNumber>55</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-55.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86ac5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-55</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_55.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-55/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-55.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-55</accessId>
+  <sequenceNumber>55</sequenceNumber>
+  <dateIssued>2014-07-10</dateIssued>
+  <docketText>ORDER VACATING HEARING Set for August 4-5, 2014 and ORDER Directing Parties to File Joint Status Report by 9/12/2014 as to Samuel Stone signed by Senior Judge John C. Coughenour on 7/10/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-56" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-56/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER GRANTING 299 Motion to Withdraw as to Samuel Stone (1) signed by Senior Judge John C. Coughenour on 7/29/2014. Attorney Jacabed Rodriguez-Coss terminated. (Jessen, A)</subTitle>
+  <partNumber>56</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-56.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b47</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-56</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_56.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-56/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-56.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-56</accessId>
+  <sequenceNumber>56</sequenceNumber>
+  <dateIssued>2014-07-30</dateIssued>
+  <docketText>ORDER GRANTING 299 Motion to Withdraw as to Samuel Stone (1) signed by Senior Judge John C. Coughenour on 7/29/2014. Attorney Jacabed Rodriguez-Coss terminated. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-57" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-57/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER DENYING 301 Defendant&apos;s Request as to Samuel Stone signed by Senior Judge John C. Coughenour on 8/7/2014. (Jessen, A)</subTitle>
+  <partNumber>57</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-57.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86af2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-57</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_57.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-57/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-57.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-57</accessId>
+  <sequenceNumber>57</sequenceNumber>
+  <dateIssued>2014-08-07</dateIssued>
+  <docketText>ORDER DENYING 301 Defendant&apos;s Request as to Samuel Stone signed by Senior Judge John C. Coughenour on 8/7/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-58" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-58/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER signed by Senior Judge John C. Coughenour on 11/4/2014. (Lundstrom, T)</subTitle>
+  <partNumber>58</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-58.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86940</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-58</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_58.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-58/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-58.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-58</accessId>
+  <sequenceNumber>58</sequenceNumber>
+  <dateIssued>2014-11-05</dateIssued>
+  <docketText>ORDER signed by Senior Judge John C. Coughenour on 11/4/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-59" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-59/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER vacating Evidentiary Hearing and ordering parties to provide a Joint Status Report signed by Senior Judge John C. Coughenour on 11/7/2014. (Case Management Deadline: 12/19/2014) (Lundstrom, T)</subTitle>
+  <partNumber>59</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-59.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b42</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-59</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_59.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-59/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-59.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-59</accessId>
+  <sequenceNumber>59</sequenceNumber>
+  <dateIssued>2014-11-07</dateIssued>
+  <docketText>ORDER vacating Evidentiary Hearing and ordering parties to provide a Joint Status Report signed by Senior Judge John C. Coughenour on 11/7/2014. (Case Management Deadline: 12/19/2014) (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-60" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-60/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>ORDER and WRIT OF HABEAS CORPUS AD PROSEQUENDUM as to Samuel Stone (1) signed by Magistrate Judge Gary S. Austin on 1/6/2015. Application 319 is GRANTED. (Jessen, A)</subTitle>
+  <partNumber>60</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-60.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86b04</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-60</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_60.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-60/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-60.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-60</accessId>
+  <sequenceNumber>60</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER and WRIT OF HABEAS CORPUS AD PROSEQUENDUM as to Samuel Stone (1) signed by Magistrate Judge Gary S. Austin on 1/6/2015. Application 319 is GRANTED. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00072-61" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-61/mods.xml">
+ <titleInfo>
+  <title>USA v. Stone</title>
+  <subTitle>JUDGMENT and COMMITMENT signed by Senior Judge John C. Coughenour on 1/13/2015 as to Samuel Stone. (Kusamura, W)</subTitle>
+  <partNumber>61</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-61.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab86acd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-61</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00072_61.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00072/USCOURTS-caed-1_12-cr-00072-61/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00072/pdf/USCOURTS-caed-1_12-cr-00072-61.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00072; USA v. Stone; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00072-61</accessId>
+  <sequenceNumber>61</sequenceNumber>
+  <dateIssued>2015-01-21</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT signed by Senior Judge John C. Coughenour on 1/13/2015 as to Samuel Stone. (Kusamura, W)</docketText>
+</extension>
+</relatedItem>
+</mods>

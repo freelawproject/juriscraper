@@ -1,0 +1,254 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18b69389c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Eastern District of North Carolina</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-03-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_12-ap-00230</identifier>
+<identifier type="local">P0b002ee18b69389c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-03-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-03-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nceb-8_12-ap-00230</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nceb-8_12-ap-00230</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nceb</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>North Carolina</courtState>
+ <courtSortOrder>3361</courtSortOrder>
+ <caseNumber>8:12-ap-00230</caseNumber>
+ <caseOffice>Wilson</caseOffice>
+ <party fullName="Virginia Brands, L.L.C." lastName="Virginia Brands, L.L.C." role="Plaintiff"></party>
+ <party fullName="Kingston Tobacco Company, Inc." lastName="Kingston Tobacco Company, Inc." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Nanney" lastName="Nanney" role="Interested Party"></party>
+ <party firstName="Amanda" fullName="Amanda Heath" lastName="Heath" role="Interested Party"></party>
+ <party firstName="Kenneth" fullName="Kenneth Scott" lastName="Scott" role="Interested Party"></party>
+ <party firstName="Ronald" fullName="Ronald Riggs" lastName="Riggs" role="Interested Party"></party>
+ <party firstName="Randy" fullName="Randy Riggs" lastName="Riggs" role="Interested Party"></party>
+ <party fullName="Virginia Brands, L.L.C." lastName="Virginia Brands, L.L.C." role="Creditor"></party>
+</extension>
+<titleInfo>
+ <title>Virginia Brands, L.L.C. v. Kingston Tobacco Company, Inc.</title>
+ <partNumber>8:12-ap-00230</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_12-ap-00230/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">8:12-ap-00230;12-230</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Eastern District of North Carolina</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Wilson</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Virginia Brands, L.L.C.</displayForm>
+ <namePart type="family">Virginia Brands, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kingston Tobacco Company, Inc.</displayForm>
+ <namePart type="family">Kingston Tobacco Company, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Nanney</displayForm>
+ <namePart type="family">Nanney</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Amanda Heath</displayForm>
+ <namePart type="family">Heath</namePart>
+ <namePart type="given">Amanda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Scott</displayForm>
+ <namePart type="family">Scott</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Riggs</displayForm>
+ <namePart type="family">Riggs</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Randy Riggs</displayForm>
+ <namePart type="family">Riggs</namePart>
+ <namePart type="given">Randy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Virginia Brands, L.L.C.</displayForm>
+ <namePart type="family">Virginia Brands, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nceb-8_12-ap-00230</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nceb</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>North Carolina</courtState>
+ <courtSortOrder>3361</courtSortOrder>
+ <caseNumber>8:12-ap-00230</caseNumber>
+ <caseOffice>Wilson</caseOffice>
+ <party fullName="Virginia Brands, L.L.C." lastName="Virginia Brands, L.L.C." role="Plaintiff"></party>
+ <party fullName="Kingston Tobacco Company, Inc." lastName="Kingston Tobacco Company, Inc." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Nanney" lastName="Nanney" role="Interested Party"></party>
+ <party firstName="Amanda" fullName="Amanda Heath" lastName="Heath" role="Interested Party"></party>
+ <party firstName="Kenneth" fullName="Kenneth Scott" lastName="Scott" role="Interested Party"></party>
+ <party firstName="Ronald" fullName="Ronald Riggs" lastName="Riggs" role="Interested Party"></party>
+ <party firstName="Randy" fullName="Randy Riggs" lastName="Riggs" role="Interested Party"></party>
+ <party fullName="Virginia Brands, L.L.C." lastName="Virginia Brands, L.L.C." role="Creditor"></party>
+ <state>North Carolina</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nceb-8_12-ap-00230-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_12-ap-00230/USCOURTS-nceb-8_12-ap-00230-0/mods.xml">
+ <titleInfo>
+  <title>Virginia Brands, L.L.C. v. Kingston Tobacco Company, Inc.</title>
+  <subTitle>Order Granting. Judge Entering Opinion: RDD (RE: related document(s)7 Motion For Remand filed by Creditor Virginia Brands, L.L.C., Plaintiff Virginia Brands, L.L.C.). Appeal time due 1/4/2013. (Barnes, Dawn)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_12-ap-00230/pdf/USCOURTS-nceb-8_12-ap-00230-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b69cc26</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_12-ap-00230/USCOURTS-nceb-8_12-ap-00230-0</identifier>
+ <identifier type="former granule identifier">nceb-8_12-ap-00230_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_12-ap-00230/USCOURTS-nceb-8_12-ap-00230-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_12-ap-00230/pdf/USCOURTS-nceb-8_12-ap-00230-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-ap-00230; Virginia Brands, L.L.C. v. Kingston Tobacco Company, Inc.; </searchTitle>
+  <courtName>United States Bankruptcy Court Eastern District of North Carolina</courtName>
+  <state>North Carolina</state>
+  <accessId>USCOURTS-nceb-8_12-ap-00230-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-12-21</dateIssued>
+  <docketText>Order Granting. Judge Entering Opinion: RDD (RE: related document(s)7 Motion For Remand filed by Creditor Virginia Brands, L.L.C., Plaintiff Virginia Brands, L.L.C.). Appeal time due 1/4/2013. (Barnes, Dawn)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nceb-8_12-ap-00230-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_12-ap-00230/USCOURTS-nceb-8_12-ap-00230-1/mods.xml">
+ <titleInfo>
+  <title>Virginia Brands, L.L.C. v. Kingston Tobacco Company, Inc.</title>
+  <subTitle>Order Ruling Western District of Virginia Is Appropriate Court To Consider Motion To Intervene As To Plaintiff&apos;s Motion To Enter Order Regarding Appropriate Sanctions Againt The Individuals. Judge Entering Opinion: RDD (RE: related document(s)16 Motion To Intervene filed by Interested Party Randy Riggs, Interested Party Ronald Riggs, Interested Party Kenneth Scott, Interested Party Amanda Heath, Interested Party Joseph Nanney). Appeal time due 1/10/2013. (King, Donna) **Amended By Docket Entry 27**</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_12-ap-00230/pdf/USCOURTS-nceb-8_12-ap-00230-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b69cc28</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_12-ap-00230/USCOURTS-nceb-8_12-ap-00230-1</identifier>
+ <identifier type="former granule identifier">nceb-8_12-ap-00230_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_12-ap-00230/USCOURTS-nceb-8_12-ap-00230-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_12-ap-00230/pdf/USCOURTS-nceb-8_12-ap-00230-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-ap-00230; Virginia Brands, L.L.C. v. Kingston Tobacco Company, Inc.; </searchTitle>
+  <courtName>United States Bankruptcy Court Eastern District of North Carolina</courtName>
+  <state>North Carolina</state>
+  <accessId>USCOURTS-nceb-8_12-ap-00230-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-12-27</dateIssued>
+  <docketText>Order Ruling Western District of Virginia Is Appropriate Court To Consider Motion To Intervene As To Plaintiff&apos;s Motion To Enter Order Regarding Appropriate Sanctions Againt The Individuals. Judge Entering Opinion: RDD (RE: related document(s)16 Motion To Intervene filed by Interested Party Randy Riggs, Interested Party Ronald Riggs, Interested Party Kenneth Scott, Interested Party Amanda Heath, Interested Party Joseph Nanney). Appeal time due 1/10/2013. (King, Donna) **Amended By Docket Entry 27**</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nceb-8_12-ap-00230-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_12-ap-00230/USCOURTS-nceb-8_12-ap-00230-2/mods.xml">
+ <titleInfo>
+  <title>Virginia Brands, L.L.C. v. Kingston Tobacco Company, Inc.</title>
+  <subTitle>Amended Order Ruling Western District of Virginia Is Appropriate Court To Consider Motion To Intervene As To Plaintiff&apos;s Motion To Enter Order Regarding Appropriate Sanctions Againt The Individuals. Judge Entering Opinion: RDD (RE: related document(s)24 Order). Appeal time due 1/17/2013. (Brock, Anna)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_12-ap-00230/pdf/USCOURTS-nceb-8_12-ap-00230-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b69cc27</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_12-ap-00230/USCOURTS-nceb-8_12-ap-00230-2</identifier>
+ <identifier type="former granule identifier">nceb-8_12-ap-00230_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_12-ap-00230/USCOURTS-nceb-8_12-ap-00230-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_12-ap-00230/pdf/USCOURTS-nceb-8_12-ap-00230-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:12-ap-00230; Virginia Brands, L.L.C. v. Kingston Tobacco Company, Inc.; </searchTitle>
+  <courtName>United States Bankruptcy Court Eastern District of North Carolina</courtName>
+  <state>North Carolina</state>
+  <accessId>USCOURTS-nceb-8_12-ap-00230-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>Amended Order Ruling Western District of Virginia Is Appropriate Court To Consider Motion To Intervene As To Plaintiff&apos;s Motion To Enter Order Regarding Appropriate Sanctions Againt The Individuals. Judge Entering Opinion: RDD (RE: related document(s)24 Order). Appeal time due 1/17/2013. (Brock, Anna)</docketText>
+</extension>
+</relatedItem>
+</mods>

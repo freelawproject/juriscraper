@@ -1,0 +1,889 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1898f4afe">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-07-23</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-07-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980</identifier>
+<identifier type="local">P0b002ee1898f4afe</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-07-23</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-07-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_09-cv-01980</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_09-cv-01980</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:09-cv-01980</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="J." fullName="J. Hernandez" lastName="Hernandez" role="Defendant"></party>
+ <party firstName="Vahan" fullName="Vahan Jaladian" lastName="Jaladian" role="Plaintiff"></party>
+ <party firstName="C." fullName="C. Nevarez" lastName="Nevarez" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Jaladian v. Hernandez et al</title>
+ <partNumber>1:09-cv-01980</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cv-01980;09-1980</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>J. Hernandez</displayForm>
+ <namePart type="family">Hernandez</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vahan Jaladian</displayForm>
+ <namePart type="family">Jaladian</namePart>
+ <namePart type="given">Vahan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>C. Nevarez</displayForm>
+ <namePart type="family">Nevarez</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_09-cv-01980</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:09-cv-01980</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="J." fullName="J. Hernandez" lastName="Hernandez" role="Defendant"></party>
+ <party firstName="Vahan" fullName="Vahan Jaladian" lastName="Jaladian" role="Plaintiff"></party>
+ <party firstName="C." fullName="C. Nevarez" lastName="Nevarez" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER TO SUBMIT Application to Proceed In Forma Pauperis OR Pay Filing Fee Within 45 Days, signed by Magistrate Judge Sandra M. Snyder on 11/13/2009. Motion for IFP or Fee due by 12/30/2009. (Attachments: # (1) IFP Application). (Jessen, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f8c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-0</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-11-13</dateIssued>
+  <docketText>ORDER TO SUBMIT Application to Proceed In Forma Pauperis OR Pay Filing Fee Within 45 Days, signed by Magistrate Judge Sandra M. Snyder on 11/13/2009. Motion for IFP or Fee due by 12/30/2009. (Attachments: # (1) IFP Application). (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Granting Defendant&apos;s Ex Parte Application for Leave to Depose Plaintiff 24, signed by Magistrate Judge Michael J. Seng on 8/26/11. (Gonzalez, R)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f38</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-1</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-08-26</dateIssued>
+  <docketText>ORDER Granting Defendant&apos;s Ex Parte Application for Leave to Depose Plaintiff 24, signed by Magistrate Judge Michael J. Seng on 8/26/11. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Denying Motion For Appointment Of Counsel (ECF NO. 27), signed by Magistrate Judge Michael J. Seng on 9/7/2011. (Fahrney, E)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f97</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-2</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-09-08</dateIssued>
+  <docketText>ORDER Denying Motion For Appointment Of Counsel (ECF NO. 27), signed by Magistrate Judge Michael J. Seng on 9/7/2011. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER For Dismissal Of Certain Of Plaintiff&apos;s Claims And Defendants (ECF Nos. 6 and 9), signed by Magistrate Judge Michael J. Seng on 2/14/2012. It is ORDERED that: All claims in Plaintiff&apos;s Complaint except his Eighth Amendment claim against Defendants Hernandez and John/Jane Doe #1 be DISMISSED without prejudice. Defendant Nevarez be DISMISSED from this action; and Plaintiff be permitted to proceed on his Eighth Amendment claim against Defendants Hernandez and John/Jane Doe #1. C. Nevarez terminated.(Fahrney, E)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f93</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-3</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-02-15</dateIssued>
+  <docketText>ORDER For Dismissal Of Certain Of Plaintiff&apos;s Claims And Defendants (ECF Nos. 6 and 9), signed by Magistrate Judge Michael J. Seng on 2/14/2012. It is ORDERED that: All claims in Plaintiff&apos;s Complaint except his Eighth Amendment claim against Defendants Hernandez and John/Jane Doe #1 be DISMISSED without prejudice. Defendant Nevarez be DISMISSED from this action; and Plaintiff be permitted to proceed on his Eighth Amendment claim against Defendants Hernandez and John/Jane Doe #1. C. Nevarez terminated.(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Granting Plaintiff&apos;s Motion For Court Documents (ECF No. 30), signed by Magistrate Judge Michael J. Seng on 2/15/2012. It is ORDERED that, upon Plaintiffs remitting to the Court Clerk a money order in the sum of sixty-eight dollars ($68.00), the Courts scheduled copying charge ($0.50/page for 136 pages), the Clerk shall mail one copy of documents filed in the docket to the Plaintiff at his address of record. As stated above, Plaintiffs Motion for Court Records, and Court Issued Documents and Declarations, (ECF No. 30), is GRANTED.(Fahrney, E)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f9b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-4</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-02-16</dateIssued>
+  <docketText>ORDER Granting Plaintiff&apos;s Motion For Court Documents (ECF No. 30), signed by Magistrate Judge Michael J. Seng on 2/15/2012. It is ORDERED that, upon Plaintiffs remitting to the Court Clerk a money order in the sum of sixty-eight dollars ($68.00), the Courts scheduled copying charge ($0.50/page for 136 pages), the Clerk shall mail one copy of documents filed in the docket to the Plaintiff at his address of record. As stated above, Plaintiffs Motion for Court Records, and Court Issued Documents and Declarations, (ECF No. 30), is GRANTED.(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER That Plaintiff Provide Current Address by March 12, 2012, signed by Magistrate Judge Michael J. Seng on 2/26/12. (Gonzalez, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f33</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-5</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-02-27</dateIssued>
+  <docketText>ORDER That Plaintiff Provide Current Address by March 12, 2012, signed by Magistrate Judge Michael J. Seng on 2/26/12. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>***DISCHARGED PER 40***ORDER to SHOW CAUSE Why This Action Should Not Be Dismissed for Failure to Comply With Court Order for Current Address 37; Plaintiff Must Show Cause or Provide Current Address by April 30, 2012, signed by Magistrate Judge Michael J. Seng on 3/20/12. (Gonzalez, R)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f9d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-6</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-03-21</dateIssued>
+  <docketText>***DISCHARGED PER 40***ORDER to SHOW CAUSE Why This Action Should Not Be Dismissed for Failure to Comply With Court Order for Current Address 37; Plaintiff Must Show Cause or Provide Current Address by April 30, 2012, signed by Magistrate Judge Michael J. Seng on 3/20/12. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER DISCHARGING 38 Order to Show Cause; ORDER GRANTING 17 and 36 Motion to Vacate Discovery and Dispositive Motion Deadlines and Amending Discovery and Scheduling Order, signed by Magistrate Judge Michael J. Seng on 05/02/2012. (Discovery Cut-Off: June 29, 2012; Dispositive Motion Deadline: September 13, 2012) (Martin-Gill, S)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f31</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-7</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-05-03</dateIssued>
+  <docketText>ORDER DISCHARGING 38 Order to Show Cause; ORDER GRANTING 17 and 36 Motion to Vacate Discovery and Dispositive Motion Deadlines and Amending Discovery and Scheduling Order, signed by Magistrate Judge Michael J. Seng on 05/02/2012. (Discovery Cut-Off: June 29, 2012; Dispositive Motion Deadline: September 13, 2012) (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Motions For Appointment of Counsel 32 and For Extension of Time 39, signed by Magistrate Judge Michael J. Seng on 5/3/12. (Gonzalez, R)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f95</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-8</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-05-04</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Motions For Appointment of Counsel 32 and For Extension of Time 39, signed by Magistrate Judge Michael J. Seng on 5/3/12. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Objection To Denial Of Motions For Appointment Of Counsel And Extension Of Time (ECF No.42), Clerks&apos; Office To Provide Plaintiff A Copy Of The Docket Sheet In This Action, signed by Magistrate Judge Michael J. Seng on 6/2/2012. (Fahrney, E)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f34</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-9</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-06-04</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Objection To Denial Of Motions For Appointment Of Counsel And Extension Of Time (ECF No.42), Clerks&apos; Office To Provide Plaintiff A Copy Of The Docket Sheet In This Action, signed by Magistrate Judge Michael J. Seng on 6/2/2012. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Granting Defendant&apos;s Ex Parte Application to Continue Discovery Cut-Off 44, signed by Magistrate Judge Michael J. Seng on 6/27/12. Discovery Cut-Off Date: 9/28/2012; Dispositive Motions Deadline: 12/13/2012. (Gonzalez, R)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f36</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-10</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-06-28</dateIssued>
+  <docketText>ORDER Granting Defendant&apos;s Ex Parte Application to Continue Discovery Cut-Off 44, signed by Magistrate Judge Michael J. Seng on 6/27/12. Discovery Cut-Off Date: 9/28/2012; Dispositive Motions Deadline: 12/13/2012. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s 48 Motion that Court not Send him Mail signed by Magistrate Judge Michael J. Seng on 8/8/2012. (Sant Agata, S)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f37</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-11</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-08-09</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s 48 Motion that Court not Send him Mail signed by Magistrate Judge Michael J. Seng on 8/8/2012. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s 46 Motion Requesting Overturn of Defendants Previously Granted Motion and Pleadings signed by Magistrate Judge Michael J. Seng on 8/8/2012. (Sant Agata, S)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f98</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-12</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-08-09</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s 46 Motion Requesting Overturn of Defendants Previously Granted Motion and Pleadings signed by Magistrate Judge Michael J. Seng on 8/8/2012. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER GRANTING IN PART and DENYING IN PART Plaintiff&apos;s 47 Motion for Court Documents signed by Magistrate Judge Michael J. Seng on 8/8/2012. (Sant Agata, S)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f92</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-13</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2012-08-09</dateIssued>
+  <docketText>ORDER GRANTING IN PART and DENYING IN PART Plaintiff&apos;s 47 Motion for Court Documents signed by Magistrate Judge Michael J. Seng on 8/8/2012. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Granting Defendant&apos;s Ex Parte Application To Vacate Discovery And Dispositive Motion Deadlines (ECF No.52), ORDER Continuing Discovery And Dispositive Motion Deadlines, Discovery Cut-Off Date- 11/30/2012, Dispositive Motion Deadline- 2/14/2013, signed by Magistrate Judge Michael J. Seng on 9/26/2012. (Fahrney, E)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f91</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-14</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-09-27</dateIssued>
+  <docketText>ORDER Granting Defendant&apos;s Ex Parte Application To Vacate Discovery And Dispositive Motion Deadlines (ECF No.52), ORDER Continuing Discovery And Dispositive Motion Deadlines, Discovery Cut-Off Date- 11/30/2012, Dispositive Motion Deadline- 2/14/2013, signed by Magistrate Judge Michael J. Seng on 9/26/2012. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>***DISCHARGED Per Order 58*** ORDER To SHOW CAUSE Why Action Should Not Be Dismissed For Failure To Prosecute, Fourteen (14) Day Deadline, signed by Magistrate Judge Michael J. Seng on 11/14/2012. Show Cause Response due by 12/10/2012.(Fahrney, E)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f8d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-15</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-11-15</dateIssued>
+  <docketText>***DISCHARGED Per Order 58*** ORDER To SHOW CAUSE Why Action Should Not Be Dismissed For Failure To Prosecute, Fourteen (14) Day Deadline, signed by Magistrate Judge Michael J. Seng on 11/14/2012. Show Cause Response due by 12/10/2012.(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Granting 55 Defendant&apos;s Second ExParte Application to Vacate Discovery Deadline; ORDER Continuing Discovery and Dispositive Motion Deadlines, signed by Magistrate Judge Michael J. Seng on 12/3/12. Discovery Cut-Off Date: 1/15/2013, Dispositive Motions Deadline: 4/4/2013 (Gonzalez, R)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f99</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-16</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2012-12-04</dateIssued>
+  <docketText>ORDER Granting 55 Defendant&apos;s Second ExParte Application to Vacate Discovery Deadline; ORDER Continuing Discovery and Dispositive Motion Deadlines, signed by Magistrate Judge Michael J. Seng on 12/3/12. Discovery Cut-Off Date: 1/15/2013, Dispositive Motions Deadline: 4/4/2013 (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER DISCHARGING 54 Order to Show Cause re Dismissal, signed by Magistrate Judge Michael J. Seng on 12/4/2012. (Marrujo, C)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f90</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-17</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2012-12-05</dateIssued>
+  <docketText>ORDER DISCHARGING 54 Order to Show Cause re Dismissal, signed by Magistrate Judge Michael J. Seng on 12/4/2012. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-18/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Granting Defendant&apos;s Ex Parte Application to Continue Dispositive Motion Deadline, signed by Magistrate Judge Michael J. Seng on 4/3/13. Dispositive Motions Deadline: 5/4/2013. (Gonzalez, R)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f9a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-18</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2013-04-03</dateIssued>
+  <docketText>ORDER Granting Defendant&apos;s Ex Parte Application to Continue Dispositive Motion Deadline, signed by Magistrate Judge Michael J. Seng on 4/3/13. Dispositive Motions Deadline: 5/4/2013. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-19/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Granting Joint Stipulation to Extend Date by Which Plaintiff is to File Opposition to Defendant&apos;s Motion for Summary Judgment re 63, signed by Magistrate Judge Michael J. Seng on 5/22/13. Opposition Due by July 23, 2013. (Gonzalez, R)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f9c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-19</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2013-05-22</dateIssued>
+  <docketText>ORDER Granting Joint Stipulation to Extend Date by Which Plaintiff is to File Opposition to Defendant&apos;s Motion for Summary Judgment re 63, signed by Magistrate Judge Michael J. Seng on 5/22/13. Opposition Due by July 23, 2013. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-20/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Denying Defendant Hernandez&apos;s 61 Motion for Summary Judgment; Fourteen (14) Day Objection Deadline signed by Magistrate Judge Michael J. Seng on 12/4/2013. Referred to Judge Anthony W. Ishii. Objections to F&amp;R due by 12/23/2013. (Sant Agata, S)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f8e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-20</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2013-12-04</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Denying Defendant Hernandez&apos;s 61 Motion for Summary Judgment; Fourteen (14) Day Objection Deadline signed by Magistrate Judge Michael J. Seng on 12/4/2013. Referred to Judge Anthony W. Ishii. Objections to F&amp;R due by 12/23/2013. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-21/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER ADOPTING 68 Findings and Recommendations DENYING Defendant Hernandez&apos;s 61 Motion for Summary Judgment, signed by District Judge Anthony W. Ishii on 1/2/2014. (Marrujo, C)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f39</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-21</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER ADOPTING 68 Findings and Recommendations DENYING Defendant Hernandez&apos;s 61 Motion for Summary Judgment, signed by District Judge Anthony W. Ishii on 1/2/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-22/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>SECOND SCHEDULING ORDER; ORDER DIRECTING Clerk&apos;s Office to Send Local Rule 281 to Plaintiff and Consent Forms to Parties, signed by Magistrate Judge Michael J. Seng on 1/12/14: Telephonic Trial Confirmation Hearing set for 6/2/2014 at 03:00 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii; Jury Trial set for 7/8/2014 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Attachments: # (1) Local Rule 281)(Hellings, J)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f32</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-22</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2014-01-13</dateIssued>
+  <docketText>SECOND SCHEDULING ORDER; ORDER DIRECTING Clerk&apos;s Office to Send Local Rule 281 to Plaintiff and Consent Forms to Parties, signed by Magistrate Judge Michael J. Seng on 1/12/14: Telephonic Trial Confirmation Hearing set for 6/2/2014 at 03:00 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii; Jury Trial set for 7/8/2014 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Attachments: # (1) Local Rule 281)(Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-23/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Setting Settlement Conference, signed by Magistrate Judge Michael J. Seng on 04/30/14. Settlement Conference set for 6/10/2014 at 02:00 PM in Courtroom 6 (MJS) before Magistrate Judge Michael J. Seng. (Gonzalez, R)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f96</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-23</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2014-05-01</dateIssued>
+  <docketText>ORDER Setting Settlement Conference, signed by Magistrate Judge Michael J. Seng on 04/30/14. Settlement Conference set for 6/10/2014 at 02:00 PM in Courtroom 6 (MJS) before Magistrate Judge Michael J. Seng. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-24/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Amending Second Scheduling Order, signed by Magistrate Judge Michael J. Seng on 05/18/14. Jury Trial set for 9/30/2014 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii; Telephonic Trial Confirmation Hearing set for 8/11/2014 at 03:00 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Gonzalez, R)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f8f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-24</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2014-05-19</dateIssued>
+  <docketText>ORDER Amending Second Scheduling Order, signed by Magistrate Judge Michael J. Seng on 05/18/14. Jury Trial set for 9/30/2014 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii; Telephonic Trial Confirmation Hearing set for 8/11/2014 at 03:00 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-25/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>ORDER Directing that Dispositional Documents Upon Settlement be Filed Within Thirty Days; ORDER Vacating Scheduled Dates, signed by Magistrate Judge Michael J. Seng on 07/12/14. (Gonzalez, R)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f35</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-25</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2014-07-14</dateIssued>
+  <docketText>ORDER Directing that Dispositional Documents Upon Settlement be Filed Within Thirty Days; ORDER Vacating Scheduled Dates, signed by Magistrate Judge Michael J. Seng on 07/12/14. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_09-cv-01980-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-26/mods.xml">
+ <titleInfo>
+  <title>(PC) Jaladian v. Hernandez et al</title>
+  <subTitle>VOLUNTARY DISMISSAL of Action, signed by Magistrate Judge Michael J. Seng on 7/21/14. CASE CLOSED(Martin-Gill, S)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189901f94</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-26</identifier>
+ <identifier type="former granule identifier">caed-1_09-cv-01980_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_09-cv-01980/USCOURTS-caed-1_09-cv-01980-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_09-cv-01980/pdf/USCOURTS-caed-1_09-cv-01980-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-01980; (PC) Jaladian v. Hernandez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_09-cv-01980-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2014-07-22</dateIssued>
+  <docketText>VOLUNTARY DISMISSAL of Action, signed by Magistrate Judge Michael J. Seng on 7/21/14. CASE CLOSED(Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

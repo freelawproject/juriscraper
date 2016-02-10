@@ -1,0 +1,851 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b1ad6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238</identifier>
+<identifier type="local">P0b002ee1817b1ad6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_02-cr-00238</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_02-cr-00238</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:02-cr-00238</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="Alcon Ophthalmic" lastName="Alcon Ophthalmic" role="Interested Party"></party>
+ <party fullName="Allergan" lastName="Allergan" role="Interested Party"></party>
+ <party firstName="Donald" fullName="Donald H. Asay" lastName="Asay" middleName="H." role="Defendant"></party>
+ <party fullName="Aventis Pharmaceuticals" lastName="Aventis Pharmaceuticals" role="Interested Party"></party>
+ <party fullName="Bayer" lastName="Bayer" role="Interested Party"></party>
+ <party firstName="Gregory" fullName="Gregory W. Enger" lastName="Enger" middleName="W." role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald A. Heiden" lastName="Heiden" middleName="A." role="Defendant"></party>
+ <party fullName="Novartis Pharmaceuticals Corporation" lastName="Novartis Pharmaceuticals Corporation" role="Interested Party"></party>
+ <party fullName="Novo Nordisk Pharmaceuticals" lastName="Novo Nordisk Pharmaceuticals" role="Interested Party"></party>
+ <party fullName="Ovation Pharmacy" lastName="Ovation Pharmacy" role="Defendant"></party>
+ <party fullName="Parke-Davis" lastName="Parke-Davis" role="Interested Party"></party>
+ <party fullName="Pfizer Inc." lastName="Pfizer Inc." role="Interested Party"></party>
+ <party fullName="Pointline Corporation" lastName="Pointline Corporation" role="Defendant"></party>
+ <party firstName="Terri" fullName="Terri J. Samowitz" lastName="Samowitz" middleName="J." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Asay et al</title>
+ <partNumber>8:02-cr-00238</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:02-cr-00238;02-238</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Alcon Ophthalmic</displayForm>
+ <namePart type="family">Alcon Ophthalmic</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Allergan</displayForm>
+ <namePart type="family">Allergan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Donald H. Asay</displayForm>
+ <namePart type="family">Asay</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Aventis Pharmaceuticals</displayForm>
+ <namePart type="family">Aventis Pharmaceuticals</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Bayer</displayForm>
+ <namePart type="family">Bayer</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Gregory W. Enger</displayForm>
+ <namePart type="family">Enger</namePart>
+ <namePart type="given">Gregory</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donald A. Heiden</displayForm>
+ <namePart type="family">Heiden</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Novartis Pharmaceuticals Corporation</displayForm>
+ <namePart type="family">Novartis Pharmaceuticals Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Novo Nordisk Pharmaceuticals</displayForm>
+ <namePart type="family">Novo Nordisk Pharmaceuticals</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Ovation Pharmacy</displayForm>
+ <namePart type="family">Ovation Pharmacy</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Parke-Davis</displayForm>
+ <namePart type="family">Parke-Davis</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Pfizer Inc.</displayForm>
+ <namePart type="family">Pfizer Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Pointline Corporation</displayForm>
+ <namePart type="family">Pointline Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terri J. Samowitz</displayForm>
+ <namePart type="family">Samowitz</namePart>
+ <namePart type="given">Terri</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_02-cr-00238</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:02-cr-00238</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="Alcon Ophthalmic" lastName="Alcon Ophthalmic" role="Interested Party"></party>
+ <party fullName="Allergan" lastName="Allergan" role="Interested Party"></party>
+ <party firstName="Donald" fullName="Donald H. Asay" lastName="Asay" middleName="H." role="Defendant"></party>
+ <party fullName="Aventis Pharmaceuticals" lastName="Aventis Pharmaceuticals" role="Interested Party"></party>
+ <party fullName="Bayer" lastName="Bayer" role="Interested Party"></party>
+ <party firstName="Gregory" fullName="Gregory W. Enger" lastName="Enger" middleName="W." role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald A. Heiden" lastName="Heiden" middleName="A." role="Defendant"></party>
+ <party fullName="Novartis Pharmaceuticals Corporation" lastName="Novartis Pharmaceuticals Corporation" role="Interested Party"></party>
+ <party fullName="Novo Nordisk Pharmaceuticals" lastName="Novo Nordisk Pharmaceuticals" role="Interested Party"></party>
+ <party fullName="Ovation Pharmacy" lastName="Ovation Pharmacy" role="Defendant"></party>
+ <party fullName="Parke-Davis" lastName="Parke-Davis" role="Interested Party"></party>
+ <party fullName="Pfizer Inc." lastName="Pfizer Inc." role="Interested Party"></party>
+ <party fullName="Pointline Corporation" lastName="Pointline Corporation" role="Defendant"></party>
+ <party firstName="Terri" fullName="Terri J. Samowitz" lastName="Samowitz" middleName="J." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>REPORT AND RECOMMENDATION that MOTION to Dismiss Criminal Case 259 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )REPORT AND RECOMMENDATION that MOTION to Dismiss Criminal Case 259 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )REPORT AND RECOMMENDATION that MOTION to Dismiss Criminal Case 259 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )REPORT AND RECOMMENDATION that MOTION to Dismiss Criminal Case 259 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a484f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-0</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-06-10</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION that MOTION to Dismiss Criminal Case 259 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )REPORT AND RECOMMENDATION that MOTION to Dismiss Criminal Case 259 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )REPORT AND RECOMMENDATION that MOTION to Dismiss Criminal Case 259 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )REPORT AND RECOMMENDATION that MOTION to Dismiss Criminal Case 259 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER denying 263 Motion for Bill of Particulars as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4); denying 265 Motion to depose plaintiff&apos;s expert as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )ORDER denying 263 Motion for Bill of Particulars as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4); denying 265 Motion to depose plaintiff&apos;s expert as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )ORDER denying 263 Motion for Bill of Particulars as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4); denying 265 Motion to depose plaintiff&apos;s expert as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )ORDER denying 263 Motion for Bill of Particulars as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4); denying 265 Motion to depose plaintiff&apos;s expert as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4859</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-1</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-06-10</dateIssued>
+  <docketText>ORDER denying 263 Motion for Bill of Particulars as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4); denying 265 Motion to depose plaintiff&apos;s expert as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )ORDER denying 263 Motion for Bill of Particulars as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4); denying 265 Motion to depose plaintiff&apos;s expert as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )ORDER denying 263 Motion for Bill of Particulars as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4); denying 265 Motion to depose plaintiff&apos;s expert as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )ORDER denying 263 Motion for Bill of Particulars as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4); denying 265 Motion to depose plaintiff&apos;s expert as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Magistrate Judge Thomas D. Thalken on 6/10/2005. (PAV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER denying 267 Motion to Sever as to Donald H. Asay (1), Terri J. Samowitz (2). Signed by Magistrate Judge Thomas D. Thalken on 6/17/2005. (PAV, )ORDER denying 267 Motion to Sever as to Donald H. Asay (1), Terri J. Samowitz (2). Signed by Magistrate Judge Thomas D. Thalken on 6/17/2005. (PAV, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4850</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-2</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-06-17</dateIssued>
+  <docketText>ORDER denying 267 Motion to Sever as to Donald H. Asay (1), Terri J. Samowitz (2). Signed by Magistrate Judge Thomas D. Thalken on 6/17/2005. (PAV, )ORDER denying 267 Motion to Sever as to Donald H. Asay (1), Terri J. Samowitz (2). Signed by Magistrate Judge Thomas D. Thalken on 6/17/2005. (PAV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>REPORT AND RECOMMENDATION that defendants&apos; MOTION to Strike 261, and defendants&apos; MOTION to Dismiss Criminal Case 255 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Any objection to this Report and Recommendation shallbe filed with the Clerk 10 days after being served with a copy ofthis Report and Recommendation. Signed by Magistrate Judge Thomas D. Thalken on 6/21/2005. (JAE, )REPORT AND RECOMMENDATION that defendants&apos; MOTION to Strike 261, and defendants&apos; MOTION to Dismiss Criminal Case 255 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Any objection to this Report and Recommendation shallbe filed with the Clerk 10 days after being served with a copy ofthis Report and Recommendation. Signed by Magistrate Judge Thomas D. Thalken on 6/21/2005. (JAE, )REPORT AND RECOMMENDATION that defendants&apos; MOTION to Strike 261, and defendants&apos; MOTION to Dismiss Criminal Case 255 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Any objection to this Report and Recommendation shallbe filed with the Clerk 10 days after being served with a copy ofthis Report and Recommendation. Signed by Magistrate Judge Thomas D. Thalken on 6/21/2005. (JAE, )REPORT AND RECOMMENDATION that defendants&apos; MOTION to Strike 261, and defendants&apos; MOTION to Dismiss Criminal Case 255 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Any objection to this Report and Recommendation shallbe filed with the Clerk 10 days after being served with a copy ofthis Report and Recommendation. Signed by Magistrate Judge Thomas D. Thalken on 6/21/2005. (JAE, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4809</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-3</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-06-21</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION that defendants&apos; MOTION to Strike 261, and defendants&apos; MOTION to Dismiss Criminal Case 255 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Any objection to this Report and Recommendation shallbe filed with the Clerk 10 days after being served with a copy ofthis Report and Recommendation. Signed by Magistrate Judge Thomas D. Thalken on 6/21/2005. (JAE, )REPORT AND RECOMMENDATION that defendants&apos; MOTION to Strike 261, and defendants&apos; MOTION to Dismiss Criminal Case 255 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Any objection to this Report and Recommendation shallbe filed with the Clerk 10 days after being served with a copy ofthis Report and Recommendation. Signed by Magistrate Judge Thomas D. Thalken on 6/21/2005. (JAE, )REPORT AND RECOMMENDATION that defendants&apos; MOTION to Strike 261, and defendants&apos; MOTION to Dismiss Criminal Case 255 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Any objection to this Report and Recommendation shallbe filed with the Clerk 10 days after being served with a copy ofthis Report and Recommendation. Signed by Magistrate Judge Thomas D. Thalken on 6/21/2005. (JAE, )REPORT AND RECOMMENDATION that defendants&apos; MOTION to Strike 261, and defendants&apos; MOTION to Dismiss Criminal Case 255 be denied as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Any objection to this Report and Recommendation shallbe filed with the Clerk 10 days after being served with a copy ofthis Report and Recommendation. Signed by Magistrate Judge Thomas D. Thalken on 6/21/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 259 Motion to Dismiss Indictment; adopting 296 Report and Recommendation of Magistrate Judge as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/1/2005. (SMS, )MEMORANDUM AND ORDER denying 259 Motion to Dismiss Indictment; adopting 296 Report and Recommendation of Magistrate Judge as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/1/2005. (SMS, )MEMORANDUM AND ORDER denying 259 Motion to Dismiss Indictment; adopting 296 Report and Recommendation of Magistrate Judge as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/1/2005. (SMS, )MEMORANDUM AND ORDER denying 259 Motion to Dismiss Indictment; adopting 296 Report and Recommendation of Magistrate Judge as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/1/2005. (SMS, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a480b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-4</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-07-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 259 Motion to Dismiss Indictment; adopting 296 Report and Recommendation of Magistrate Judge as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/1/2005. (SMS, )MEMORANDUM AND ORDER denying 259 Motion to Dismiss Indictment; adopting 296 Report and Recommendation of Magistrate Judge as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/1/2005. (SMS, )MEMORANDUM AND ORDER denying 259 Motion to Dismiss Indictment; adopting 296 Report and Recommendation of Magistrate Judge as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/1/2005. (SMS, )MEMORANDUM AND ORDER denying 259 Motion to Dismiss Indictment; adopting 296 Report and Recommendation of Magistrate Judge as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/1/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER scheduling Change of Plea Hearing on 7/14/2005 10:00 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillonas to defendant(s) Terri J. Samowitz. Signed by Judge Joseph F. Bataillon on 7/5/2005. (SMS, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a485e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-5</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2005-07-05</dateIssued>
+  <docketText>ORDER scheduling Change of Plea Hearing on 7/14/2005 10:00 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillonas to defendant(s) Terri J. Samowitz. Signed by Judge Joseph F. Bataillon on 7/5/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER scheduling Change of Plea Hearing on 8/11/2005 02:00 PM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillonas to defendant(s) Donald A. Heiden. Signed by Judge Joseph F. Bataillon on 7/8/2005. (SMS, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4857</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-6</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2005-07-08</dateIssued>
+  <docketText>ORDER scheduling Change of Plea Hearing on 8/11/2005 02:00 PM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillonas to defendant(s) Donald A. Heiden. Signed by Judge Joseph F. Bataillon on 7/8/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 255 Motion to Dismiss Criminal Case; denying 261 Motion to Strike ; adopting 302 Magistrate&apos;s Report and Recommendation as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/8/2005. (SMS, )MEMORANDUM AND ORDER denying 255 Motion to Dismiss Criminal Case; denying 261 Motion to Strike ; adopting 302 Magistrate&apos;s Report and Recommendation as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/8/2005. (SMS, )MEMORANDUM AND ORDER denying 255 Motion to Dismiss Criminal Case; denying 261 Motion to Strike ; adopting 302 Magistrate&apos;s Report and Recommendation as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/8/2005. (SMS, )MEMORANDUM AND ORDER denying 255 Motion to Dismiss Criminal Case; denying 261 Motion to Strike ; adopting 302 Magistrate&apos;s Report and Recommendation as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/8/2005. (SMS, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a484e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-7</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2005-07-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 255 Motion to Dismiss Criminal Case; denying 261 Motion to Strike ; adopting 302 Magistrate&apos;s Report and Recommendation as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/8/2005. (SMS, )MEMORANDUM AND ORDER denying 255 Motion to Dismiss Criminal Case; denying 261 Motion to Strike ; adopting 302 Magistrate&apos;s Report and Recommendation as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/8/2005. (SMS, )MEMORANDUM AND ORDER denying 255 Motion to Dismiss Criminal Case; denying 261 Motion to Strike ; adopting 302 Magistrate&apos;s Report and Recommendation as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/8/2005. (SMS, )MEMORANDUM AND ORDER denying 255 Motion to Dismiss Criminal Case; denying 261 Motion to Strike ; adopting 302 Magistrate&apos;s Report and Recommendation as to Donald H. Asay (1), Terri J. Samowitz (2), Gregory W. Enger (3), Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 7/8/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER scheduling Change of Plea Hearing on 8/17/2005 01:00 PM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillonas to defendant(s) Gregory W. Enger. Signed by Judge Joseph F. Bataillon on 7/8/2005. (SMS, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4856</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-8</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2005-07-08</dateIssued>
+  <docketText>ORDER scheduling Change of Plea Hearing on 8/17/2005 01:00 PM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillonas to defendant(s) Gregory W. Enger. Signed by Judge Joseph F. Bataillon on 7/8/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER scheduling Change of Plea Hearing on 8/15/2005 01:00 PM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillonas to defendant(s) Donald H. Asay. Signed by Judge Joseph F. Bataillon on 7/11/2005. (SMS, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a485f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-9</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2005-07-11</dateIssued>
+  <docketText>ORDER scheduling Change of Plea Hearing on 8/15/2005 01:00 PM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillonas to defendant(s) Donald H. Asay. Signed by Judge Joseph F. Bataillon on 7/11/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER - This matter is before the court on the response of Allergan, Inc., to the court&apos;s order to show cause Filing Nos. 316 and 317. Counsel for defendant Samowitz shall file a reply to Allergan&apos;s response on or before July 25, 2005 as to defendant Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/12/2005. (TJS)ORDER - This matter is before the court on the response of Allergan, Inc., to the court&apos;s order to show cause Filing Nos. 316 and 317. Counsel for defendant Samowitz shall file a reply to Allergan&apos;s response on or before July 25, 2005 as to defendant Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/12/2005. (TJS)ORDER - This matter is before the court on the response of Allergan, Inc., to the court&apos;s order to show cause Filing Nos. 316 and 317. Counsel for defendant Samowitz shall file a reply to Allergan&apos;s response on or before July 25, 2005 as to defendant Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/12/2005. (TJS)ORDER - This matter is before the court on the response of Allergan, Inc., to the court&apos;s order to show cause Filing Nos. 316 and 317. Counsel for defendant Samowitz shall file a reply to Allergan&apos;s response on or before July 25, 2005 as to defendant Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/12/2005. (TJS)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4852</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-10</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2005-07-12</dateIssued>
+  <docketText>ORDER - This matter is before the court on the response of Allergan, Inc., to the court&apos;s order to show cause Filing Nos. 316 and 317. Counsel for defendant Samowitz shall file a reply to Allergan&apos;s response on or before July 25, 2005 as to defendant Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/12/2005. (TJS)ORDER - This matter is before the court on the response of Allergan, Inc., to the court&apos;s order to show cause Filing Nos. 316 and 317. Counsel for defendant Samowitz shall file a reply to Allergan&apos;s response on or before July 25, 2005 as to defendant Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/12/2005. (TJS)ORDER - This matter is before the court on the response of Allergan, Inc., to the court&apos;s order to show cause Filing Nos. 316 and 317. Counsel for defendant Samowitz shall file a reply to Allergan&apos;s response on or before July 25, 2005 as to defendant Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/12/2005. (TJS)ORDER - This matter is before the court on the response of Allergan, Inc., to the court&apos;s order to show cause Filing Nos. 316 and 317. Counsel for defendant Samowitz shall file a reply to Allergan&apos;s response on or before July 25, 2005 as to defendant Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/12/2005. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER- This matter is before the court following the court&apos;s order to show cause Filing No. 300. Having been provided with responses by the parties and having found the documents are no longer needed for the trial of this matter, the court finds the matter is now moot. Accordingly, Purchase Connection, Custodian of Records, 21540 Plummer Street, Chatsworth, CA 91311, and Allergan, Inc., Custodian of Records, P.O. Box 19534, Irvine, CA 92612, are relieved of any further obligation under the court&apos;s order to show cause. The clerk shall notify counsel for Purchase Connection and Allergan, Inc., of this order. IT IS SO ORDERED. IT IS FURTHER ORDERED:Following the transmittal of this order, the clerk shall terminate all Interested Parties onthe docket in this case and cease any further notices to counsel for such parties as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/26/2005. (TJS)ORDER- This matter is before the court following the court&apos;s order to show cause Filing No. 300. Having been provided with responses by the parties and having found the documents are no longer needed for the trial of this matter, the court finds the matter is now moot. Accordingly, Purchase Connection, Custodian of Records, 21540 Plummer Street, Chatsworth, CA 91311, and Allergan, Inc., Custodian of Records, P.O. Box 19534, Irvine, CA 92612, are relieved of any further obligation under the court&apos;s order to show cause. The clerk shall notify counsel for Purchase Connection and Allergan, Inc., of this order. IT IS SO ORDERED. IT IS FURTHER ORDERED:Following the transmittal of this order, the clerk shall terminate all Interested Parties onthe docket in this case and cease any further notices to counsel for such parties as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/26/2005. (TJS)ORDER- This matter is before the court following the court&apos;s order to show cause Filing No. 300. Having been provided with responses by the parties and having found the documents are no longer needed for the trial of this matter, the court finds the matter is now moot. Accordingly, Purchase Connection, Custodian of Records, 21540 Plummer Street, Chatsworth, CA 91311, and Allergan, Inc., Custodian of Records, P.O. Box 19534, Irvine, CA 92612, are relieved of any further obligation under the court&apos;s order to show cause. The clerk shall notify counsel for Purchase Connection and Allergan, Inc., of this order. IT IS SO ORDERED. IT IS FURTHER ORDERED:Following the transmittal of this order, the clerk shall terminate all Interested Parties onthe docket in this case and cease any further notices to counsel for such parties as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/26/2005. (TJS)ORDER- This matter is before the court following the court&apos;s order to show cause Filing No. 300. Having been provided with responses by the parties and having found the documents are no longer needed for the trial of this matter, the court finds the matter is now moot. Accordingly, Purchase Connection, Custodian of Records, 21540 Plummer Street, Chatsworth, CA 91311, and Allergan, Inc., Custodian of Records, P.O. Box 19534, Irvine, CA 92612, are relieved of any further obligation under the court&apos;s order to show cause. The clerk shall notify counsel for Purchase Connection and Allergan, Inc., of this order. IT IS SO ORDERED. IT IS FURTHER ORDERED:Following the transmittal of this order, the clerk shall terminate all Interested Parties onthe docket in this case and cease any further notices to counsel for such parties as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/26/2005. (TJS)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a480a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-11</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2005-07-26</dateIssued>
+  <docketText>ORDER- This matter is before the court following the court&apos;s order to show cause Filing No. 300. Having been provided with responses by the parties and having found the documents are no longer needed for the trial of this matter, the court finds the matter is now moot. Accordingly, Purchase Connection, Custodian of Records, 21540 Plummer Street, Chatsworth, CA 91311, and Allergan, Inc., Custodian of Records, P.O. Box 19534, Irvine, CA 92612, are relieved of any further obligation under the court&apos;s order to show cause. The clerk shall notify counsel for Purchase Connection and Allergan, Inc., of this order. IT IS SO ORDERED. IT IS FURTHER ORDERED:Following the transmittal of this order, the clerk shall terminate all Interested Parties onthe docket in this case and cease any further notices to counsel for such parties as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/26/2005. (TJS)ORDER- This matter is before the court following the court&apos;s order to show cause Filing No. 300. Having been provided with responses by the parties and having found the documents are no longer needed for the trial of this matter, the court finds the matter is now moot. Accordingly, Purchase Connection, Custodian of Records, 21540 Plummer Street, Chatsworth, CA 91311, and Allergan, Inc., Custodian of Records, P.O. Box 19534, Irvine, CA 92612, are relieved of any further obligation under the court&apos;s order to show cause. The clerk shall notify counsel for Purchase Connection and Allergan, Inc., of this order. IT IS SO ORDERED. IT IS FURTHER ORDERED:Following the transmittal of this order, the clerk shall terminate all Interested Parties onthe docket in this case and cease any further notices to counsel for such parties as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/26/2005. (TJS)ORDER- This matter is before the court following the court&apos;s order to show cause Filing No. 300. Having been provided with responses by the parties and having found the documents are no longer needed for the trial of this matter, the court finds the matter is now moot. Accordingly, Purchase Connection, Custodian of Records, 21540 Plummer Street, Chatsworth, CA 91311, and Allergan, Inc., Custodian of Records, P.O. Box 19534, Irvine, CA 92612, are relieved of any further obligation under the court&apos;s order to show cause. The clerk shall notify counsel for Purchase Connection and Allergan, Inc., of this order. IT IS SO ORDERED. IT IS FURTHER ORDERED:Following the transmittal of this order, the clerk shall terminate all Interested Parties onthe docket in this case and cease any further notices to counsel for such parties as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/26/2005. (TJS)ORDER- This matter is before the court following the court&apos;s order to show cause Filing No. 300. Having been provided with responses by the parties and having found the documents are no longer needed for the trial of this matter, the court finds the matter is now moot. Accordingly, Purchase Connection, Custodian of Records, 21540 Plummer Street, Chatsworth, CA 91311, and Allergan, Inc., Custodian of Records, P.O. Box 19534, Irvine, CA 92612, are relieved of any further obligation under the court&apos;s order to show cause. The clerk shall notify counsel for Purchase Connection and Allergan, Inc., of this order. IT IS SO ORDERED. IT IS FURTHER ORDERED:Following the transmittal of this order, the clerk shall terminate all Interested Parties onthe docket in this case and cease any further notices to counsel for such parties as to defendants Donald H. Asay, Terri J. Samowitz, Gregory W. Enger, Donald A. Heiden. Signed by Magistrate Judge Thomas D. Thalken on 7/26/2005. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>JUDGMENT as to Terri J. Samowitz (2) The Indictment and Superseding Indictment are dismissed on the motion of the United States as to this defendant only; The defendant plead guilty to count I of the Information and is sentenced to Probation for a term of 3 years commencing October 11, 2005 with special conditions; $25.00 Special Assessment (paid in full on October 11, 2005, receipt # 827012), Terri J. Samowitz dismissed as to defendant Terri J. Samowitz. Signed by Judge Joseph F. Bataillon on 10/14/2005. 4 cert to USM (MKR, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4853</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-12</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2005-10-14</dateIssued>
+  <docketText>JUDGMENT as to Terri J. Samowitz (2) The Indictment and Superseding Indictment are dismissed on the motion of the United States as to this defendant only; The defendant plead guilty to count I of the Information and is sentenced to Probation for a term of 3 years commencing October 11, 2005 with special conditions; $25.00 Special Assessment (paid in full on October 11, 2005, receipt # 827012), Terri J. Samowitz dismissed as to defendant Terri J. Samowitz. Signed by Judge Joseph F. Bataillon on 10/14/2005. 4 cert to USM (MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>CONSENT TO MODIFY CONDITIONS OF RELEASE as to defendant Gregory W. Enger. Signed by Judge Joseph F. Bataillon on 10/25/2005. (KBJ)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a480c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-13</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2005-10-25</dateIssued>
+  <docketText>CONSENT TO MODIFY CONDITIONS OF RELEASE as to defendant Gregory W. Enger. Signed by Judge Joseph F. Bataillon on 10/25/2005. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER granting 362 Unopposed Motion to Continue; sentencing continued to 1/6/2006 at 11:30 a.m., Courtroom 3 (Omaha) as to Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 10/27/2005. (SMS, )</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4855</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-14</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2005-10-27</dateIssued>
+  <docketText>ORDER granting 362 Unopposed Motion to Continue; sentencing continued to 1/6/2006 at 11:30 a.m., Courtroom 3 (Omaha) as to Donald A. Heiden (4). Signed by Judge Joseph F. Bataillon on 10/27/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>JUDGMENT as to Donald H. Asay (1) - The defendant pleaded guilty to count XVI of the Superseding Indictment and is sentenced to probation, with special conditions, for a term of 3 years commencing 11/21/05; $100 special assessment. The defendant shall pay for the cost of prosecution in the amount of $20,000.00. The Indictment and counts I through XV and XVII and XVIII of the superseding indictment are dismissed on the motion of the United States as to this defendant only, as to defendant Donald H. Asay. Signed by Judge Joseph F. Bataillon on 11/30/2005. 4 certified copies USM (JAE, ) Modified on 11/30/2005 to add the cost of prosecution. (JAE, ).</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a485c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-15</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2005-11-30</dateIssued>
+  <docketText>JUDGMENT as to Donald H. Asay (1) - The defendant pleaded guilty to count XVI of the Superseding Indictment and is sentenced to probation, with special conditions, for a term of 3 years commencing 11/21/05; $100 special assessment. The defendant shall pay for the cost of prosecution in the amount of $20,000.00. The Indictment and counts I through XV and XVII and XVIII of the superseding indictment are dismissed on the motion of the United States as to this defendant only, as to defendant Donald H. Asay. Signed by Judge Joseph F. Bataillon on 11/30/2005. 4 certified copies USM (JAE, ) Modified on 11/30/2005 to add the cost of prosecution. (JAE, ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>JUDGMENT as to Gregory W. Enger. The defendant plead guilty to Count 1ss of the Information and is sentenced to probation for a term of 3 years commencing on 12/2/05 with special conditions; Special Assessment in the amount of $500.00 due and payable immediately ($100.00 on behalf of defendant, $400.00 on behalf of Pointline Corp.). The Indictment and the Superseding Indictment are dismissed on the motion of the Government as to this defendant only as to defendant Gregory W. Enger. Signed by Judge Joseph F. Bataillon on 12/7/2005. - (4 cc to USM)(KBJ)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a485a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-16</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2005-12-07</dateIssued>
+  <docketText>JUDGMENT as to Gregory W. Enger. The defendant plead guilty to Count 1ss of the Information and is sentenced to probation for a term of 3 years commencing on 12/2/05 with special conditions; Special Assessment in the amount of $500.00 due and payable immediately ($100.00 on behalf of defendant, $400.00 on behalf of Pointline Corp.). The Indictment and the Superseding Indictment are dismissed on the motion of the Government as to this defendant only as to defendant Gregory W. Enger. Signed by Judge Joseph F. Bataillon on 12/7/2005. - (4 cc to USM)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>JUDGMENT as to Donald A. Heiden (4): Defendant pleaded guilty to Count XV of the Superseding Indictment and is sentenced to a term of 3 years probation with special conditions; 150 community service hours; $100.00 special assessment; $10,000.00 cost of prosecution. The Indictment and counts I through XIV and counts XVI, XVII and XVIII of the Superseding Indictment are dismissed on the motion of the United States as to this defendant only, as to defendant Donald A. Heiden. Signed by Judge Joseph F. Bataillon on 1/12/2006. 4 certified copies USM (JAE, )</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4851</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-17</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2006-01-12</dateIssued>
+  <docketText>JUDGMENT as to Donald A. Heiden (4): Defendant pleaded guilty to Count XV of the Superseding Indictment and is sentenced to a term of 3 years probation with special conditions; 150 community service hours; $100.00 special assessment; $10,000.00 cost of prosecution. The Indictment and counts I through XIV and counts XVI, XVII and XVIII of the Superseding Indictment are dismissed on the motion of the United States as to this defendant only, as to defendant Donald A. Heiden. Signed by Judge Joseph F. Bataillon on 1/12/2006. 4 certified copies USM (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER discharging the defendant from supervision as to defendant(s) Terri J. Samowitz Ordered by Judge Joseph F. Bataillon.(PCV, )</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a485b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-18</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2007-03-06</dateIssued>
+  <docketText>ORDER discharging the defendant from supervision as to defendant(s) Terri J. Samowitz Ordered by Judge Joseph F. Bataillon.(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS SHOULD NOT BE DESTROYED as to defendant Donald H. Asay. Ordered by Judge Joseph F. Bataillon.(CJP)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4808</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-19</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2007-05-23</dateIssued>
+  <docketText>ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS SHOULD NOT BE DESTROYED as to defendant Donald H. Asay. Ordered by Judge Joseph F. Bataillon.(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER - This matter is on the Court&apos;s own motion: IT IS HEREBY ORDERED that government&apos;s exhibits in this case are to be returned to the United States Attorney for appropriate disposition as to defendant(s) Donald H. Asay Ordered by Judge Joseph F. Bataillon.(PCV, )</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a4854</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-20</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2007-05-24</dateIssued>
+  <docketText>ORDER - This matter is on the Court&apos;s own motion: IT IS HEREBY ORDERED that government&apos;s exhibits in this case are to be returned to the United States Attorney for appropriate disposition as to defendant(s) Donald H. Asay Ordered by Judge Joseph F. Bataillon.(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_02-cr-00238-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-21/mods.xml">
+ <titleInfo>
+  <title>USA v. Asay et al</title>
+  <subTitle>ORDER - Pursuant to the probation report, it is ordered that the probationer/supervised releasee be discharged from supervision and that the proceedings in this case be terminated as to defendant(s) Donald A. Heiden Ordered by Chief Judge Joseph F. Bataillon. (PCV, )</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_02-cr-00238-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a485d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-21</identifier>
+ <identifier type="former granule identifier">ned-8_02-cr-00238_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_02-cr-00238/USCOURTS-ned-8_02-cr-00238-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_02-cr-00238/pdf/USCOURTS-ned-8_02-cr-00238-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:02-cr-00238; USA v. Asay et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_02-cr-00238-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2008-01-31</dateIssued>
+  <docketText>ORDER - Pursuant to the probation report, it is ordered that the probationer/supervised releasee be discharged from supervision and that the proceedings in this case be terminated as to defendant(s) Donald A. Heiden Ordered by Chief Judge Joseph F. Bataillon. (PCV, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,380 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815cd904">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_02-cr-00707</identifier>
+<identifier type="local">P0b002ee1815cd904</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_02-cr-00707</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_02-cr-00707</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:02-cr-00707</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="Alpha Capital Group, LLC" lastName="Alpha Capital Group, LLC" role="Petitioner"></party>
+ <party fullName="Ardan Group, Ltd., The" lastName="Ardan Group, Ltd., The" role="Claimant"></party>
+ <party firstName="Teddy" fullName="Teddy Brindle" lastName="Brindle" role="Defendant"></party>
+ <party firstName="I" fullName="I B Butler" lastName="Butler" middleName="B" role="Defendant"></party>
+ <party firstName="James" fullName="James A Capwill" lastName="Capwill" middleName="A" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Filippone" lastName="Filippone" role="Defendant"></party>
+ <party fullName="Floralandscape, Inc." lastName="Floralandscape, Inc." role="Petitioner"></party>
+ <party firstName="James" fullName="James Gormley" lastName="Gormley" role="Claimant"></party>
+ <party firstName="Scott" fullName="Scott Jackson" lastName="Jackson" role="Defendant"></party>
+ <party firstName="Laura" fullName="Laura L Jamieson" lastName="Jamieson" middleName="L" role="Claimant"></party>
+ <party firstName="John" fullName="John Richard Jamieson" lastName="Jamieson" middleName="Richard" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Kasten" lastName="Kasten" role="Defendant"></party>
+ <party firstName="Jaeson" fullName="Jaeson Krug" lastName="Krug" role="Defendant"></party>
+ <party firstName="Darlene" fullName="Darlene Lauderdale" lastName="Lauderdale" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Leonberger" lastName="Leonberger" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald Meshey" lastName="Meshey" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Nelson" lastName="Nelson" role="Defendant"></party>
+ <party fullName="Ohio, State of" lastName="Ohio, State of" role="Claimant"></party>
+ <party fullName="Ottawa Hills, Village of" lastName="Ottawa Hills, Village of" role="Petitioner"></party>
+ <party firstName="Trevor" fullName="Trevor Palmer" lastName="Palmer" role="Defendant"></party>
+ <party fullName="Renhill Staffing Services" lastName="Renhill Staffing Services" role="Petitioner"></party>
+ <party firstName="Orrett" fullName="Orrett Ricketts" lastName="Ricketts" role="Defendant"></party>
+ <party firstName="Linsey" fullName="Linsey Savage" lastName="Savage" role="Defendant"></party>
+ <party firstName="William" fullName="William Schade" lastName="Schade" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Sisson" lastName="Sisson" role="Defendant"></party>
+ <party fullName="Stark&amp;Knoll Co., L.P.A." lastName="Stark&amp;Knoll Co., L.P.A." role="Claimant"></party>
+ <party fullName="Sylvania, City of" lastName="Sylvania, City of" role="Petitioner"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Jamieson, et al</title>
+ <partNumber>3:02-cr-00707</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_02-cr-00707/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:02-cr-00707;02-707</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Alpha Capital Group, LLC</displayForm>
+ <namePart type="family">Alpha Capital Group, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Ardan Group, Ltd., The</displayForm>
+ <namePart type="family">Ardan Group, Ltd., The</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Teddy Brindle</displayForm>
+ <namePart type="family">Brindle</namePart>
+ <namePart type="given">Teddy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>I B Butler</displayForm>
+ <namePart type="family">Butler</namePart>
+ <namePart type="given">I</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James A Capwill</displayForm>
+ <namePart type="family">Capwill</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Filippone</displayForm>
+ <namePart type="family">Filippone</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Floralandscape, Inc.</displayForm>
+ <namePart type="family">Floralandscape, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>James Gormley</displayForm>
+ <namePart type="family">Gormley</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Jackson</displayForm>
+ <namePart type="family">Jackson</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Laura L Jamieson</displayForm>
+ <namePart type="family">Jamieson</namePart>
+ <namePart type="given">Laura</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>John Richard Jamieson</displayForm>
+ <namePart type="family">Jamieson</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Kasten</displayForm>
+ <namePart type="family">Kasten</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jaeson Krug</displayForm>
+ <namePart type="family">Krug</namePart>
+ <namePart type="given">Jaeson</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Darlene Lauderdale</displayForm>
+ <namePart type="family">Lauderdale</namePart>
+ <namePart type="given">Darlene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Leonberger</displayForm>
+ <namePart type="family">Leonberger</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Meshey</displayForm>
+ <namePart type="family">Meshey</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Nelson</displayForm>
+ <namePart type="family">Nelson</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ohio, State of</displayForm>
+ <namePart type="family">Ohio, State of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Ottawa Hills, Village of</displayForm>
+ <namePart type="family">Ottawa Hills, Village of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Trevor Palmer</displayForm>
+ <namePart type="family">Palmer</namePart>
+ <namePart type="given">Trevor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Renhill Staffing Services</displayForm>
+ <namePart type="family">Renhill Staffing Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Orrett Ricketts</displayForm>
+ <namePart type="family">Ricketts</namePart>
+ <namePart type="given">Orrett</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Linsey Savage</displayForm>
+ <namePart type="family">Savage</namePart>
+ <namePart type="given">Linsey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Schade</displayForm>
+ <namePart type="family">Schade</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Sisson</displayForm>
+ <namePart type="family">Sisson</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stark&amp;Knoll Co., L.P.A.</displayForm>
+ <namePart type="family">Stark&amp;Knoll Co., L.P.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Sylvania, City of</displayForm>
+ <namePart type="family">Sylvania, City of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_02-cr-00707</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:02-cr-00707</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="Alpha Capital Group, LLC" lastName="Alpha Capital Group, LLC" role="Petitioner"></party>
+ <party fullName="Ardan Group, Ltd., The" lastName="Ardan Group, Ltd., The" role="Claimant"></party>
+ <party firstName="Teddy" fullName="Teddy Brindle" lastName="Brindle" role="Defendant"></party>
+ <party firstName="I" fullName="I B Butler" lastName="Butler" middleName="B" role="Defendant"></party>
+ <party firstName="James" fullName="James A Capwill" lastName="Capwill" middleName="A" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Filippone" lastName="Filippone" role="Defendant"></party>
+ <party fullName="Floralandscape, Inc." lastName="Floralandscape, Inc." role="Petitioner"></party>
+ <party firstName="James" fullName="James Gormley" lastName="Gormley" role="Claimant"></party>
+ <party firstName="Scott" fullName="Scott Jackson" lastName="Jackson" role="Defendant"></party>
+ <party firstName="Laura" fullName="Laura L Jamieson" lastName="Jamieson" middleName="L" role="Claimant"></party>
+ <party firstName="John" fullName="John Richard Jamieson" lastName="Jamieson" middleName="Richard" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Kasten" lastName="Kasten" role="Defendant"></party>
+ <party firstName="Jaeson" fullName="Jaeson Krug" lastName="Krug" role="Defendant"></party>
+ <party firstName="Darlene" fullName="Darlene Lauderdale" lastName="Lauderdale" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Leonberger" lastName="Leonberger" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald Meshey" lastName="Meshey" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Nelson" lastName="Nelson" role="Defendant"></party>
+ <party fullName="Ohio, State of" lastName="Ohio, State of" role="Claimant"></party>
+ <party fullName="Ottawa Hills, Village of" lastName="Ottawa Hills, Village of" role="Petitioner"></party>
+ <party firstName="Trevor" fullName="Trevor Palmer" lastName="Palmer" role="Defendant"></party>
+ <party fullName="Renhill Staffing Services" lastName="Renhill Staffing Services" role="Petitioner"></party>
+ <party firstName="Orrett" fullName="Orrett Ricketts" lastName="Ricketts" role="Defendant"></party>
+ <party firstName="Linsey" fullName="Linsey Savage" lastName="Savage" role="Defendant"></party>
+ <party firstName="William" fullName="William Schade" lastName="Schade" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Sisson" lastName="Sisson" role="Defendant"></party>
+ <party fullName="Stark&amp;Knoll Co., L.P.A." lastName="Stark&amp;Knoll Co., L.P.A." role="Claimant"></party>
+ <party fullName="Sylvania, City of" lastName="Sylvania, City of" role="Petitioner"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_02-cr-00707-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_02-cr-00707/USCOURTS-ohnd-3_02-cr-00707-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Jamieson, et al</title>
+  <subTitle>Memorandum Opinion as to John Richard Jamieson. Petitions of Laura L. Jamieson 776 and 823 are denied as to real estate and the $20,000 contribution, but granted as to the jewelry; petition of the Village of Ottawa Hills 731 is denied; petition of Floralandscape, Inc. 755 is denied; government&apos;s motion to dismiss 867 is granted, and government&apos;s motion for partial summary judgment 887 is granted.. Signed by Judge David A. Katz on 1/26/2007. (R,Ci)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_02-cr-00707-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816b8af2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_02-cr-00707/USCOURTS-ohnd-3_02-cr-00707-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_02-cr-00707_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_02-cr-00707/USCOURTS-ohnd-3_02-cr-00707-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_02-cr-00707/pdf/USCOURTS-ohnd-3_02-cr-00707-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:02-cr-00707; USA v. Jamieson, et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_02-cr-00707-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-26</dateIssued>
+  <docketText>Memorandum Opinion as to John Richard Jamieson. Petitions of Laura L. Jamieson 776 and 823 are denied as to real estate and the $20,000 contribution, but granted as to the jewelry; petition of the Village of Ottawa Hills 731 is denied; petition of Floralandscape, Inc. 755 is denied; government&apos;s motion to dismiss 867 is granted, and government&apos;s motion for partial summary judgment 887 is granted.. Signed by Judge David A. Katz on 1/26/2007. (R,Ci)</docketText>
+</extension>
+</relatedItem>
+</mods>

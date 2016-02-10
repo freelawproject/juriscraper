@@ -1,0 +1,375 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a3c30">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03111</identifier>
+<identifier type="local">P0b002ee1817a3c30</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_09-cv-03111</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_09-cv-03111</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:09-cv-03111</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>610</natureSuitCode>
+ <natureSuit>Forfeiture and Penalty - Agricultural Acts</natureSuit>
+ <cause>07:2023 Food Stamp Program</cause>
+ <party fullName="Barika African Market, Inc." lastName="Barika African Market, Inc." role="Plaintiff"></party>
+ <party firstName="Sampson" fullName="Sampson Npimnee" lastName="Npimnee" role="Plaintiff"></party>
+ <party firstName="Veronica" fullName="Veronica Npimnee" lastName="Npimnee" role="Plaintiff"></party>
+ <party fullName="United States Department of Agriculture" lastName="United States Department of Agriculture" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Barika African Market, Inc. et al v. United States of America</title>
+ <partNumber>4:09-cv-03111</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03111/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:09-cv-03111;09-3111</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Barika African Market, Inc.</displayForm>
+ <namePart type="family">Barika African Market, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sampson Npimnee</displayForm>
+ <namePart type="family">Npimnee</namePart>
+ <namePart type="given">Sampson</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Veronica Npimnee</displayForm>
+ <namePart type="family">Npimnee</namePart>
+ <namePart type="given">Veronica</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>United States Department of Agriculture</displayForm>
+ <namePart type="family">United States Department of Agriculture</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_09-cv-03111</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:09-cv-03111</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>610</natureSuitCode>
+ <natureSuit>Forfeiture and Penalty - Agricultural Acts</natureSuit>
+ <cause>07:2023 Food Stamp Program</cause>
+ <party fullName="Barika African Market, Inc." lastName="Barika African Market, Inc." role="Plaintiff"></party>
+ <party firstName="Sampson" fullName="Sampson Npimnee" lastName="Npimnee" role="Plaintiff"></party>
+ <party firstName="Veronica" fullName="Veronica Npimnee" lastName="Npimnee" role="Plaintiff"></party>
+ <party fullName="United States Department of Agriculture" lastName="United States Department of Agriculture" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03111-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-0/mods.xml">
+ <titleInfo>
+  <title>Barika African Market, Inc. et al v. United States of America</title>
+  <subTitle>MEMORANDUM AND ORDER regarding Notice Regarding Corporate Disclosure Statement, 7. Counsel for plaintiff Barika African Market, Inc. shall file the Corporate Disclosure Statement on or before July 16, 2009 or show cause why they cannot comply with the rules of the court. ( Show Cause Deadline set for 7/16/2009.) Ordered by Judge Richard G. Kopf. (GJG)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03111-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181843261</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-0</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03111_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03111/pdf/USCOURTS-ned-4_09-cv-03111-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03111; Barika African Market, Inc. et al v. United States of America; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03111-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-07-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding Notice Regarding Corporate Disclosure Statement, 7. Counsel for plaintiff Barika African Market, Inc. shall file the Corporate Disclosure Statement on or before July 16, 2009 or show cause why they cannot comply with the rules of the court. ( Show Cause Deadline set for 7/16/2009.) Ordered by Judge Richard G. Kopf. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03111-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-1/mods.xml">
+ <titleInfo>
+  <title>Barika African Market, Inc. et al v. United States of America</title>
+  <subTitle>MEMORANDUM AND ORDER granting 17 Joint Motion to Dismiss Party. The Clerk of the United States District Court for the District of Nebraska shall amend the caption of this case to reflect that the United States of America is the only named defendant. The parties&apos; future filings in this case shall contain the amended caption. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03111-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181843263</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-1</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03111_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03111/pdf/USCOURTS-ned-4_09-cv-03111-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03111; Barika African Market, Inc. et al v. United States of America; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03111-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-10-14</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 17 Joint Motion to Dismiss Party. The Clerk of the United States District Court for the District of Nebraska shall amend the caption of this case to reflect that the United States of America is the only named defendant. The parties&apos; future filings in this case shall contain the amended caption. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03111-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-2/mods.xml">
+ <titleInfo>
+  <title>Barika African Market, Inc. et al v. United States of America</title>
+  <subTitle>ORDER. It is ordered that: (1)The following matter previously scheduled before the undersigned is herewith referred to Judge Zwart, to wit,(A)Nature of hearing:Pretrial conference.(B)Date and time of hearing: Thursday, July 1, 2010, at 10:00 a.m.(C)Place of hearing: Judge Zwart&apos;s chambers, Room 566, United States Courthouse and Federal Building, 100 Centennial Mall, North, Lincoln, Nebraska.(2)Judge Zwart will issue a report and recommendation or order as is appropriate. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03111-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818431d5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-2</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03111_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03111/pdf/USCOURTS-ned-4_09-cv-03111-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03111; Barika African Market, Inc. et al v. United States of America; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03111-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-01-21</dateIssued>
+  <docketText>ORDER. It is ordered that: (1)The following matter previously scheduled before the undersigned is herewith referred to Judge Zwart, to wit,(A)Nature of hearing:Pretrial conference.(B)Date and time of hearing: Thursday, July 1, 2010, at 10:00 a.m.(C)Place of hearing: Judge Zwart&apos;s chambers, Room 566, United States Courthouse and Federal Building, 100 Centennial Mall, North, Lincoln, Nebraska.(2)Judge Zwart will issue a report and recommendation or order as is appropriate. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03111-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-3/mods.xml">
+ <titleInfo>
+  <title>Barika African Market, Inc. et al v. United States of America</title>
+  <subTitle>MEMORANDUM AND ORDER that the joint motion for extension of the final progression order 30 is granted and the court&apos;s prior progression order 19 is amended as follows: a non-jury trial is set to commence on January 10, 2011; no more than three days are allocated to the trial of this case and counsel shall plan accordingly; this case is subject to the prior trial of criminal cases and such other civil cases as may be scheduled for trial before this one; the pretrial conference will be held before the undersigned magistrate judge on December 16, 2010 at 10:00 a.m.; the deadline for disclosure of experts and, unless otherwise agreed, the deadline for the provision of expert reports is July 30, 2010; the discovery and deposition deadline is August 31, 2010. Motions to compel discovery must be filed at least 15 days prior to the discovery and deposition deadline; the deadline for filing motions to dismiss, motions for summary judgment or motions to exclude expert testimony on Daubert and related grounds is September 15, 2010. Ordered by Magistrate Judge Cheryl R. Zwart. (CJP)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03111-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181843260</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-3</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03111_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03111/pdf/USCOURTS-ned-4_09-cv-03111-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03111; Barika African Market, Inc. et al v. United States of America; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03111-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-05-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the joint motion for extension of the final progression order 30 is granted and the court&apos;s prior progression order 19 is amended as follows: a non-jury trial is set to commence on January 10, 2011; no more than three days are allocated to the trial of this case and counsel shall plan accordingly; this case is subject to the prior trial of criminal cases and such other civil cases as may be scheduled for trial before this one; the pretrial conference will be held before the undersigned magistrate judge on December 16, 2010 at 10:00 a.m.; the deadline for disclosure of experts and, unless otherwise agreed, the deadline for the provision of expert reports is July 30, 2010; the discovery and deposition deadline is August 31, 2010. Motions to compel discovery must be filed at least 15 days prior to the discovery and deposition deadline; the deadline for filing motions to dismiss, motions for summary judgment or motions to exclude expert testimony on Daubert and related grounds is September 15, 2010. Ordered by Magistrate Judge Cheryl R. Zwart. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03111-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-4/mods.xml">
+ <titleInfo>
+  <title>Barika African Market, Inc. et al v. United States of America</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 40 Joint Motion to Continue. The progression schedule for this case is stayed pending further order of the court. Plaintiffs&apos; current counsel, Jeffery R. Kirkpatrick, shall file his motion to withdraw on or before September 30, 2010. On or before October 21, 2010, plaintiff Barika African Market, Inc., shall obtain the services of substitute counsel and have that attorney file an appearance on its behalf, and plaintiffs Sampson Npimnee and Veronica Npimnee shall either: (1) obtain the services of substitute counsel and have that attorney file an appearance on their behalf; or (2) file a statement notifying the court of their intent to litigate this case without counsel. Within ten days after the plaintiffs representation issues are resolved, (see paragraph 3 of this order), the parties shall contact my chambers to schedule a telephonic conference to discuss the progression schedule for this case. Plaintiffs&apos; current counsel, Jeffery R. Kirkpatrick, shall promptly provide a copy of this memorandum and order to the plaintiffs, and shall file a certificate of service (which includes the plaintiffs&apos; addresses along with the date and method of service) stating he has done so. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03111-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181843262</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-4</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03111_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03111/pdf/USCOURTS-ned-4_09-cv-03111-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03111; Barika African Market, Inc. et al v. United States of America; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03111-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-09-28</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 40 Joint Motion to Continue. The progression schedule for this case is stayed pending further order of the court. Plaintiffs&apos; current counsel, Jeffery R. Kirkpatrick, shall file his motion to withdraw on or before September 30, 2010. On or before October 21, 2010, plaintiff Barika African Market, Inc., shall obtain the services of substitute counsel and have that attorney file an appearance on its behalf, and plaintiffs Sampson Npimnee and Veronica Npimnee shall either: (1) obtain the services of substitute counsel and have that attorney file an appearance on their behalf; or (2) file a statement notifying the court of their intent to litigate this case without counsel. Within ten days after the plaintiffs representation issues are resolved, (see paragraph 3 of this order), the parties shall contact my chambers to schedule a telephonic conference to discuss the progression schedule for this case. Plaintiffs&apos; current counsel, Jeffery R. Kirkpatrick, shall promptly provide a copy of this memorandum and order to the plaintiffs, and shall file a certificate of service (which includes the plaintiffs&apos; addresses along with the date and method of service) stating he has done so. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03111-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-5/mods.xml">
+ <titleInfo>
+  <title>Barika African Market, Inc. et al v. United States of America</title>
+  <subTitle>ORDER granting 44 Motion to Withdraw filed by Jeffery R. Kirkpatrick, counsel of record for plaintiffs Barika African Market, Inc., Sampson Npimnee, Veronica Npimnee. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03111-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181843265</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-5</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03111_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03111/pdf/USCOURTS-ned-4_09-cv-03111-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03111; Barika African Market, Inc. et al v. United States of America; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03111-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-10-06</dateIssued>
+  <docketText>ORDER granting 44 Motion to Withdraw filed by Jeffery R. Kirkpatrick, counsel of record for plaintiffs Barika African Market, Inc., Sampson Npimnee, Veronica Npimnee. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03111-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-6/mods.xml">
+ <titleInfo>
+  <title>Barika African Market, Inc. et al v. United States of America</title>
+  <subTitle>ORDER granting 49 Motion to Extend. The deadline for filing a summary judgment motion is extended to January 12, 2011. Ordered by Judge Richard G. Kopf. (ADB, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03111-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18184325f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-6</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03111_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03111/pdf/USCOURTS-ned-4_09-cv-03111-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03111; Barika African Market, Inc. et al v. United States of America; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03111-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-01-07</dateIssued>
+  <docketText>ORDER granting 49 Motion to Extend. The deadline for filing a summary judgment motion is extended to January 12, 2011. Ordered by Judge Richard G. Kopf. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03111-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-7/mods.xml">
+ <titleInfo>
+  <title>Barika African Market, Inc. et al v. United States of America</title>
+  <subTitle>MEMORANDUM AND ORDER - After conferring with the parties, and upon their joint oral motion, (filing no. 59), the court&apos;s prior progression order, (filing no. 48) is amended. The deadline for the plaintiffs&apos; response to the defendant&apos;s motion for summary judgment, (filing no. 51), is February 25, 2011. The deadline for the defendant&apos;s reply is March 14, 2011. 3-day Non-Jury Trial set for 6/27/2011 at 09:00 AM in Courtroom 1, Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf. Pretrial Conference set for 6/16/2011 at 11:00 AM in Chambers before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03111-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181843264</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-7</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03111_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03111/USCOURTS-ned-4_09-cv-03111-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03111/pdf/USCOURTS-ned-4_09-cv-03111-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03111; Barika African Market, Inc. et al v. United States of America; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03111-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-01-28</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - After conferring with the parties, and upon their joint oral motion, (filing no. 59), the court&apos;s prior progression order, (filing no. 48) is amended. The deadline for the plaintiffs&apos; response to the defendant&apos;s motion for summary judgment, (filing no. 51), is February 25, 2011. The deadline for the defendant&apos;s reply is March 14, 2011. 3-day Non-Jury Trial set for 6/27/2011 at 09:00 AM in Courtroom 1, Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf. Pretrial Conference set for 6/16/2011 at 11:00 AM in Chambers before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+</mods>

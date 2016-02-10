@@ -1,0 +1,342 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a8c7a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00268</identifier>
+<identifier type="local">P0b002ee1817a8c7a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cr-00268</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00268</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00268</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Oscar" fullName="Oscar Alvarez" lastName="Alvarez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Alvarez</title>
+ <partNumber>8:05-cr-00268</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00268/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cr-00268;05-268</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Oscar Alvarez</displayForm>
+ <namePart type="family">Alvarez</namePart>
+ <namePart type="given">Oscar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00268</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00268</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Oscar" fullName="Oscar Alvarez" lastName="Alvarez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00268-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Alvarez</title>
+  <subTitle>ORDER APPOINTING COUNSEL - as to defendant Oscar Alvarez - Wesley S. Dodge is appointed to represent the defendant signed by Magistrate Judge Thomas D. Thalken on 7/27/2005. (MBB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00268-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181865788</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00268_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00268/pdf/USCOURTS-ned-8_05-cr-00268-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00268; USA v. Alvarez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00268-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-07-27</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - as to defendant Oscar Alvarez - Wesley S. Dodge is appointed to represent the defendant signed by Magistrate Judge Thomas D. Thalken on 7/27/2005. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00268-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Alvarez</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Oscar Alvarez. Signed by Magistrate Judge Thomas D. Thalken on 7/27/2005. (JAE, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00268-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18186578b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00268_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00268/pdf/USCOURTS-ned-8_05-cr-00268-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00268; USA v. Alvarez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00268-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-07-27</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Oscar Alvarez. Signed by Magistrate Judge Thomas D. Thalken on 7/27/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00268-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Alvarez</title>
+  <subTitle>ORDER scheduling Change of Plea Hearing on 10/5/2005 08:30 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 9/19/2005 and 10/5/2005 is excluded in the interest of justiceas to defendant(s) Oscar Alvarez. Signed by Judge Joseph F. Bataillon on 9/8/2005. (SMS, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00268-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181865787</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00268_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00268/pdf/USCOURTS-ned-8_05-cr-00268-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00268; USA v. Alvarez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00268-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-09-08</dateIssued>
+  <docketText>ORDER scheduling Change of Plea Hearing on 10/5/2005 08:30 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 9/19/2005 and 10/5/2005 is excluded in the interest of justiceas to defendant(s) Oscar Alvarez. Signed by Judge Joseph F. Bataillon on 9/8/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00268-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Alvarez</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 18 is hereby sustained. The U.S. Marshal is hereby authorized to seize the following described property: $1,247.00 in United States currency. The Defendant&apos;s interest in said property is hereby forfeited to the United States of America for disposition in accordance with the law, subject to the provisions of 21 U.S.C. 853(n)(1). The aforementioned forfeited property is to be held by the Marshal in his secure custodyand control. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. 853(n), in which all interests will be addressed, as to Oscar Alvarez (1). Signed by Judge Joseph F. Bataillon on 10/6/2005. Certified copy USM (JAE, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00268-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181865789</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00268_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00268/pdf/USCOURTS-ned-8_05-cr-00268-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00268; USA v. Alvarez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00268-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-10-06</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 18 is hereby sustained. The U.S. Marshal is hereby authorized to seize the following described property: $1,247.00 in United States currency. The Defendant&apos;s interest in said property is hereby forfeited to the United States of America for disposition in accordance with the law, subject to the provisions of 21 U.S.C. 853(n)(1). The aforementioned forfeited property is to be held by the Marshal in his secure custodyand control. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. 853(n), in which all interests will be addressed, as to Oscar Alvarez (1). Signed by Judge Joseph F. Bataillon on 10/6/2005. Certified copy USM (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00268-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Alvarez</title>
+  <subTitle>FINAL ORDER OF FORFEITURE - The Plaintiff&apos;s Motion for Final Order of Forfeiture 21 is hereby sustained. All right, title and interest in and to the subject property: $1,247.00 in US currency, held by any person or entity, is hereby forever barred and foreclosed. The subject property, $1,247.00 in United States currency, be, and the same hereby is, forfeited to the United States of America. The US Marshal for the District of Nebraska is directed to dispose of saidproperty in accordance with law as to defendant Oscar Alvarez. Signed by Judge Joseph F. Bataillon on 12/2/2005. (KBJ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00268-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18186578c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00268_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00268/pdf/USCOURTS-ned-8_05-cr-00268-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00268; USA v. Alvarez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00268-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-12-02</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE - The Plaintiff&apos;s Motion for Final Order of Forfeiture 21 is hereby sustained. All right, title and interest in and to the subject property: $1,247.00 in US currency, held by any person or entity, is hereby forever barred and foreclosed. The subject property, $1,247.00 in United States currency, be, and the same hereby is, forfeited to the United States of America. The US Marshal for the District of Nebraska is directed to dispose of saidproperty in accordance with law as to defendant Oscar Alvarez. Signed by Judge Joseph F. Bataillon on 12/2/2005. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00268-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Alvarez</title>
+  <subTitle>JUDGMENT as to Oscar Alvarez (1) - Defendant pleaded guilty to counts III, IV and V of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 60 months on counts III and IV to be served concurrently; supervised release with special conditions for 3 years on count III and 4 years on count IV said terms to run concurrently; $200.00 special assessment. Counts I and II of the Indictment are dismissed on the motion of the United States as to this defendant only, as to defendant Oscar Alvarez. Signed by Judge Joseph F. Bataillon on 1/12/2006. 4 certified copies USM (JAE, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00268-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18186578a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-5</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00268_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00268/pdf/USCOURTS-ned-8_05-cr-00268-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00268; USA v. Alvarez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00268-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-01-12</dateIssued>
+  <docketText>JUDGMENT as to Oscar Alvarez (1) - Defendant pleaded guilty to counts III, IV and V of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 60 months on counts III and IV to be served concurrently; supervised release with special conditions for 3 years on count III and 4 years on count IV said terms to run concurrently; $200.00 special assessment. Counts I and II of the Indictment are dismissed on the motion of the United States as to this defendant only, as to defendant Oscar Alvarez. Signed by Judge Joseph F. Bataillon on 1/12/2006. 4 certified copies USM (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00268-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Alvarez</title>
+  <subTitle>ORDER - A Rule 35 hearing is scheduled before the undersigned on January 30, 2007, at 1:30 p.m., in Courtroom No. 3, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. At the request of the defendant through his counsel, and with the agreement of the government, the defendant may be absent from the hearing on the Rule 35 motion; The Marshal is directed not to return the defendant to the district; and the defendant is held to have waived his right to be present. Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35(b) motion as to defendant Oscar Alvarez. Ordered by Judge Joseph F. Bataillon.(TJS)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00268-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181865786</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-6</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00268_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00268/pdf/USCOURTS-ned-8_05-cr-00268-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00268; USA v. Alvarez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00268-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-01-12</dateIssued>
+  <docketText>ORDER - A Rule 35 hearing is scheduled before the undersigned on January 30, 2007, at 1:30 p.m., in Courtroom No. 3, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. At the request of the defendant through his counsel, and with the agreement of the government, the defendant may be absent from the hearing on the Rule 35 motion; The Marshal is directed not to return the defendant to the district; and the defendant is held to have waived his right to be present. Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35(b) motion as to defendant Oscar Alvarez. Ordered by Judge Joseph F. Bataillon.(TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00268-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Alvarez</title>
+  <subTitle>AMENDED JUDGMENT (For Reduction of Sentence) as to Oscar Alvarez - Count I and II of the Indictment are dismissed on the motion of the United States as to this defendant only; Defendant pleaded guilty to counts III, IV and V of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 40 months on counts III and IV to be served concurrently followed by a term of 3 years on count III and 4 years on count IV said terms to run concurrently; $200 Special Assessment of which a $100.00 balance remains due and payable. The defendant shall forfeit the defendant&apos;s interest in the following property to the United States: $1,247.00 in United States Currency. as to defendant(s) Oscar Alvarez Ordered by Judge Joseph F. Bataillon.(PCV, ) (4 cc to USM)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00268-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18186578d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-7</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00268_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00268/USCOURTS-ned-8_05-cr-00268-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00268/pdf/USCOURTS-ned-8_05-cr-00268-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00268; USA v. Alvarez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00268-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2007-01-31</dateIssued>
+  <docketText>AMENDED JUDGMENT (For Reduction of Sentence) as to Oscar Alvarez - Count I and II of the Indictment are dismissed on the motion of the United States as to this defendant only; Defendant pleaded guilty to counts III, IV and V of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 40 months on counts III and IV to be served concurrently followed by a term of 3 years on count III and 4 years on count IV said terms to run concurrently; $200 Special Assessment of which a $100.00 balance remains due and payable. The defendant shall forfeit the defendant&apos;s interest in the following property to the United States: $1,247.00 in United States Currency. as to defendant(s) Oscar Alvarez Ordered by Judge Joseph F. Bataillon.(PCV, ) (4 cc to USM)</docketText>
+</extension>
+</relatedItem>
+</mods>

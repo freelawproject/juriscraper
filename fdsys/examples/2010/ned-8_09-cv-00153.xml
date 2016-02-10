@@ -1,0 +1,197 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181789561">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00153</identifier>
+<identifier type="local">P0b002ee181789561</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cv-00153</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00153</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00153</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party fullName="ACO Brokerage Holdings Corporation" lastName="ACO Brokerage Holdings Corporation" role="Defendant"></party>
+ <party firstName="Keith" fullName="Keith Burkhardt" lastName="Burkhardt" role="Defendant"></party>
+ <party firstName="Wayne" fullName="Wayne H. McDermott" lastName="McDermott" middleName="H." role="Plaintiff"></party>
+ <party firstName="Gina" fullName="Gina Samland" lastName="Samland" role="Defendant"></party>
+ <party fullName="Wells Fargo&amp;Company" lastName="Wells Fargo&amp;Company" role="Defendant"></party>
+ <party fullName="Wells Fargo Insurance Services of Minnesota" lastName="Wells Fargo Insurance Services of Minnesota" role="Defendant"></party>
+ <party fullName="Wells Fargo Insurance Services, Inc." lastName="Wells Fargo Insurance Services, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>McDermott v. Wells Fargo Insurance Services of Minnesota et al</title>
+ <partNumber>8:09-cv-00153</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00153/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cv-00153;09-153</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ACO Brokerage Holdings Corporation</displayForm>
+ <namePart type="family">ACO Brokerage Holdings Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Keith Burkhardt</displayForm>
+ <namePart type="family">Burkhardt</namePart>
+ <namePart type="given">Keith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne H. McDermott</displayForm>
+ <namePart type="family">McDermott</namePart>
+ <namePart type="given">Wayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gina Samland</displayForm>
+ <namePart type="family">Samland</namePart>
+ <namePart type="given">Gina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wells Fargo&amp;Company</displayForm>
+ <namePart type="family">Wells Fargo&amp;Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wells Fargo Insurance Services of Minnesota</displayForm>
+ <namePart type="family">Wells Fargo Insurance Services of Minnesota</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wells Fargo Insurance Services, Inc.</displayForm>
+ <namePart type="family">Wells Fargo Insurance Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00153</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00153</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party fullName="ACO Brokerage Holdings Corporation" lastName="ACO Brokerage Holdings Corporation" role="Defendant"></party>
+ <party firstName="Keith" fullName="Keith Burkhardt" lastName="Burkhardt" role="Defendant"></party>
+ <party firstName="Wayne" fullName="Wayne H. McDermott" lastName="McDermott" middleName="H." role="Plaintiff"></party>
+ <party firstName="Gina" fullName="Gina Samland" lastName="Samland" role="Defendant"></party>
+ <party fullName="Wells Fargo&amp;Company" lastName="Wells Fargo&amp;Company" role="Defendant"></party>
+ <party fullName="Wells Fargo Insurance Services of Minnesota" lastName="Wells Fargo Insurance Services of Minnesota" role="Defendant"></party>
+ <party fullName="Wells Fargo Insurance Services, Inc." lastName="Wells Fargo Insurance Services, Inc." role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00153-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00153/USCOURTS-ned-8_09-cv-00153-0/mods.xml">
+ <titleInfo>
+  <title>McDermott v. Wells Fargo Insurance Services of Minnesota et al</title>
+  <subTitle>ORDER OF DISMISSAL regarding 17 Stipulation for Dismissal and 19 Stipulation for Dismissal; this Court finds the Stipulation should be approved; IT IS THEREFORE ORDERED, ADJUDGED AND DECREED that this matter be and hereby is dismissed, with prejudice, each side to bear his, her, or its own attorney fees and costs. Ordered by Chief Judge Joseph F. Bataillon. (ADB, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00153-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817eafde</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00153/USCOURTS-ned-8_09-cv-00153-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00153_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00153/USCOURTS-ned-8_09-cv-00153-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00153/pdf/USCOURTS-ned-8_09-cv-00153-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00153; McDermott v. Wells Fargo Insurance Services of Minnesota et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00153-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-15</dateIssued>
+  <docketText>ORDER OF DISMISSAL regarding 17 Stipulation for Dismissal and 19 Stipulation for Dismissal; this Court finds the Stipulation should be approved; IT IS THEREFORE ORDERED, ADJUDGED AND DECREED that this matter be and hereby is dismissed, with prejudice, each side to bear his, her, or its own attorney fees and costs. Ordered by Chief Judge Joseph F. Bataillon. (ADB, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18179dff2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03082</identifier>
+<identifier type="local">P0b002ee18179dff2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_06-cv-03082</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_06-cv-03082</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:06-cv-03082</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1442 Petition for Removal</cause>
+ <party fullName="Corporation for National and Community Service" lastName="Corporation for National and Community Service" role="Defendant"></party>
+ <party firstName="Raymond" fullName="Raymond Walls" lastName="Walls" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Walls v. Corporation for National and Community Service</title>
+ <partNumber>4:06-cv-03082</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03082/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:06-cv-03082;06-3082</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Corporation for National and Community Service</displayForm>
+ <namePart type="family">Corporation for National and Community Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Raymond Walls</displayForm>
+ <namePart type="family">Walls</namePart>
+ <namePart type="given">Raymond</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_06-cv-03082</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:06-cv-03082</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1442 Petition for Removal</cause>
+ <party fullName="Corporation for National and Community Service" lastName="Corporation for National and Community Service" role="Defendant"></party>
+ <party firstName="Raymond" fullName="Raymond Walls" lastName="Walls" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03082-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03082/USCOURTS-ned-4_06-cv-03082-0/mods.xml">
+ <titleInfo>
+  <title>Walls v. Corporation for National and Community Service</title>
+  <subTitle>5, 2006. The defendant shall answer or otherwise respond to the complaint within the 60-day period prescribed by Fed. R. Civ. P. 12(a)(3). Signed by Judge Joseph F. Bataillon on 7/12/2006. - (Clerk has done as directed) (KBJ)ORDER - The defendant&apos;s motion to dismiss 6 is denied without prejudice. The Clerk of Court shall send a copy of this order together with three summons forms and a complaint form to be completed by plaintiff and filed with the court by July 2</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03082-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181c913</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03082/USCOURTS-ned-4_06-cv-03082-0</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03082_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03082/USCOURTS-ned-4_06-cv-03082-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03082/pdf/USCOURTS-ned-4_06-cv-03082-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03082; Walls v. Corporation for National and Community Service; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03082-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-07-12</dateIssued>
+  <docketText>5, 2006. The defendant shall answer or otherwise respond to the complaint within the 60-day period prescribed by Fed. R. Civ. P. 12(a)(3). Signed by Judge Joseph F. Bataillon on 7/12/2006. - (Clerk has done as directed) (KBJ)ORDER - The defendant&apos;s motion to dismiss 6 is denied without prejudice. The Clerk of Court shall send a copy of this order together with three summons forms and a complaint form to be completed by plaintiff and filed with the court by July 2</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03082-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03082/USCOURTS-ned-4_06-cv-03082-1/mods.xml">
+ <titleInfo>
+  <title>Walls v. Corporation for National and Community Service</title>
+  <subTitle>ORDER ON INITIAL REVIEW - The plaintiff&apos;s Motion (Application) for Leave to Proceed IFP 15, and the Motion that the Marshal Serve Summons 16 are both granted. The Clerk of Court shall send the plaintiff a copy of filing no. 12 and this order, as well as 3 Form USM-285s, to be completed in accordance with FRCP 4(i). Upon receipt of the summons and 285 forms, the clerk shall forward the forms, together with copies of the Amended Complaint to the US Marshal. The defendant shall answer or otherwise respond to the Amended Complaint within the appropriate period. Signed by Magistrate Judge F. A. Gossett on 7/21/2006. (Order (filing 12), 3 blank summons and 285 Forms sent as directed)(KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03082-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181c4b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03082/USCOURTS-ned-4_06-cv-03082-1</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03082_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03082/USCOURTS-ned-4_06-cv-03082-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03082/pdf/USCOURTS-ned-4_06-cv-03082-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03082; Walls v. Corporation for National and Community Service; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03082-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-07-21</dateIssued>
+  <docketText>ORDER ON INITIAL REVIEW - The plaintiff&apos;s Motion (Application) for Leave to Proceed IFP 15, and the Motion that the Marshal Serve Summons 16 are both granted. The Clerk of Court shall send the plaintiff a copy of filing no. 12 and this order, as well as 3 Form USM-285s, to be completed in accordance with FRCP 4(i). Upon receipt of the summons and 285 forms, the clerk shall forward the forms, together with copies of the Amended Complaint to the US Marshal. The defendant shall answer or otherwise respond to the Amended Complaint within the appropriate period. Signed by Magistrate Judge F. A. Gossett on 7/21/2006. (Order (filing 12), 3 blank summons and 285 Forms sent as directed)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cv-03082-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03082/USCOURTS-ned-4_06-cv-03082-2/mods.xml">
+ <titleInfo>
+  <title>Walls v. Corporation for National and Community Service</title>
+  <subTitle>MEMORANDUM AND ORDER - Defendant&apos;s motion to dismiss 22 is granted; and a separate Judgment will be entered. Ordered by Judge Joseph F. Bataillon. (KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cv-03082-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18181c914</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03082/USCOURTS-ned-4_06-cv-03082-2</identifier>
+ <identifier type="former granule identifier">ned-4_06-cv-03082_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cv-03082/USCOURTS-ned-4_06-cv-03082-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cv-03082/pdf/USCOURTS-ned-4_06-cv-03082-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cv-03082; Walls v. Corporation for National and Community Service; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cv-03082-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Defendant&apos;s motion to dismiss 22 is granted; and a separate Judgment will be entered. Ordered by Judge Joseph F. Bataillon. (KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,264 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183d52070">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-10-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-12155</identifier>
+<identifier type="local">P0b002ee183d52070</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_10-cv-12155</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_10-cv-12155</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:10-cv-12155</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2003 Job Discrimination</cause>
+ <party firstName="Ariel" fullName="Ariel Ayanna" lastName="Ayanna" role="Plaintiff"></party>
+ <party fullName="Dechert LLP" lastName="Dechert LLP" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Ayanna v. Dechert LLP</title>
+ <partNumber>1:10-cv-12155</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-12155/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-12155;10-12155</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ariel Ayanna</displayForm>
+ <namePart type="family">Ayanna</namePart>
+ <namePart type="given">Ariel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dechert LLP</displayForm>
+ <namePart type="family">Dechert LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_10-cv-12155</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:10-cv-12155</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2003 Job Discrimination</cause>
+ <party firstName="Ariel" fullName="Ariel Ayanna" lastName="Ayanna" role="Plaintiff"></party>
+ <party fullName="Dechert LLP" lastName="Dechert LLP" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_10-cv-12155-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-0/mods.xml">
+ <titleInfo>
+  <title>Ayanna v. Dechert LLP</title>
+  <subTitle>Magistrate Judge Leo T. Sorokin: ORDER entered granting in part and denying in part 25 Motion to Compel; the Motion to Compel is ALLOWED except that the request for sanction is DENIED. Plaintiff shall supplement his disclosure within ten days of this Order.</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_10-cv-12155-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d70cfc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-0</identifier>
+ <identifier type="former granule identifier">mad-1_10-cv-12155_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-12155/pdf/USCOURTS-mad-1_10-cv-12155-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-12155; Ayanna v. Dechert LLP; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_10-cv-12155-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-10-20</dateIssued>
+  <docketText>Magistrate Judge Leo T. Sorokin: ORDER entered granting in part and denying in part 25 Motion to Compel; the Motion to Compel is ALLOWED except that the request for sanction is DENIED. Plaintiff shall supplement his disclosure within ten days of this Order.</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_10-cv-12155-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-1/mods.xml">
+ <titleInfo>
+  <title>Ayanna v. Dechert LLP</title>
+  <subTitle>Magistrate Judge Leo T. Sorokin: ORDER entered granting in part and denying in part Plaintiff&apos;s Motion to Compel the Production of Documents (docket #38); granting in part and denying in part Plaintiff&apos;s Motion to Compel Answers to Interrogatories (docket #40); and granting Defendant&apos;s Request for Discovery (docket #37). (King, Kristin) Modified on 12/20/2011 to include document links(Moore, Kellyann).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_10-cv-12155-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d70cfb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-1</identifier>
+ <identifier type="former granule identifier">mad-1_10-cv-12155_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-12155/pdf/USCOURTS-mad-1_10-cv-12155-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-12155; Ayanna v. Dechert LLP; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_10-cv-12155-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-12-19</dateIssued>
+  <docketText>Magistrate Judge Leo T. Sorokin: ORDER entered granting in part and denying in part Plaintiff&apos;s Motion to Compel the Production of Documents (docket #38); granting in part and denying in part Plaintiff&apos;s Motion to Compel Answers to Interrogatories (docket #40); and granting Defendant&apos;s Request for Discovery (docket #37). (King, Kristin) Modified on 12/20/2011 to include document links(Moore, Kellyann).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_10-cv-12155-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-2/mods.xml">
+ <titleInfo>
+  <title>Ayanna v. Dechert LLP</title>
+  <subTitle>Judge Nathaniel M. Gorton: ORDER entered. MEMORANDUM AND ORDER: &quot;In accordance with the foregoing, defendant&apos;s Motion to Dismiss Count III of the Amended Complaint (Docket No. 19) is ALLOWED. So ordered.&quot; (Moore, Kellyann)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_10-cv-12155-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d70cfe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-2</identifier>
+ <identifier type="former granule identifier">mad-1_10-cv-12155_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-12155/pdf/USCOURTS-mad-1_10-cv-12155-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-12155; Ayanna v. Dechert LLP; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_10-cv-12155-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>Judge Nathaniel M. Gorton: ORDER entered. MEMORANDUM AND ORDER: &quot;In accordance with the foregoing, defendant&apos;s Motion to Dismiss Count III of the Amended Complaint (Docket No. 19) is ALLOWED. So ordered.&quot; (Moore, Kellyann)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_10-cv-12155-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-3/mods.xml">
+ <titleInfo>
+  <title>Ayanna v. Dechert LLP</title>
+  <subTitle>Ch. Magistrate Judge Leo T. Sorokin: ORDER entered denying 55 Motion for Reconsideration (King, Kristin)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_10-cv-12155-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d70cfd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-3</identifier>
+ <identifier type="former granule identifier">mad-1_10-cv-12155_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-12155/pdf/USCOURTS-mad-1_10-cv-12155-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-12155; Ayanna v. Dechert LLP; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_10-cv-12155-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-02-06</dateIssued>
+  <docketText>Ch. Magistrate Judge Leo T. Sorokin: ORDER entered denying 55 Motion for Reconsideration (King, Kristin)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_10-cv-12155-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-4/mods.xml">
+ <titleInfo>
+  <title>Ayanna v. Dechert LLP</title>
+  <subTitle>Judge Nathaniel M. Gorton: ORDER entered. MEMORANDUM AND ORDER: &quot; In accordance with the foregoing, the defendant&apos;s motion for summary judgement (Docket No. 67) is, with respect to Count I, DENIED, and is, with respect to Count II, ALLOWED. Accordingly, Count II is DISMISSED. So ordered.&quot;(Moore, Kellyann)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_10-cv-12155-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d71145</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-4</identifier>
+ <identifier type="former granule identifier">mad-1_10-cv-12155_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_10-cv-12155/USCOURTS-mad-1_10-cv-12155-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_10-cv-12155/pdf/USCOURTS-mad-1_10-cv-12155-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-12155; Ayanna v. Dechert LLP; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_10-cv-12155-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-10-17</dateIssued>
+  <docketText>Judge Nathaniel M. Gorton: ORDER entered. MEMORANDUM AND ORDER: &quot; In accordance with the foregoing, the defendant&apos;s motion for summary judgement (Docket No. 67) is, with respect to Count I, DENIED, and is, with respect to Count II, ALLOWED. Accordingly, Count II is DISMISSED. So ordered.&quot;(Moore, Kellyann)</docketText>
+</extension>
+</relatedItem>
+</mods>

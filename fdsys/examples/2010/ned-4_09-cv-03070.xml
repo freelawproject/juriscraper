@@ -1,0 +1,366 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a0609">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03070</identifier>
+<identifier type="local">P0b002ee1817a0609</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_09-cv-03070</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_09-cv-03070</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:09-cv-03070</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Fred" fullName="Fred Britten" lastName="Britten" role="Respondent"></party>
+ <party firstName="Michael" fullName="Michael Anton Hernandez" lastName="Hernandez" middleName="Anton" role="Petitioner"></party>
+ <party firstName="Robert" fullName="Robert P. Houston" lastName="Houston" middleName="P." role="Respondent"></party>
+ <party fullName="Nebraska Attorney General" lastName="Nebraska Attorney General" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Hernandez v. Houston et al</title>
+ <partNumber>4:09-cv-03070</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03070/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:09-cv-03070;09-3070</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Fred Britten</displayForm>
+ <namePart type="family">Britten</namePart>
+ <namePart type="given">Fred</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Anton Hernandez</displayForm>
+ <namePart type="family">Hernandez</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Robert P. Houston</displayForm>
+ <namePart type="family">Houston</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Nebraska Attorney General</displayForm>
+ <namePart type="family">Nebraska Attorney General</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_09-cv-03070</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:09-cv-03070</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Fred" fullName="Fred Britten" lastName="Britten" role="Respondent"></party>
+ <party firstName="Michael" fullName="Michael Anton Hernandez" lastName="Hernandez" middleName="Anton" role="Petitioner"></party>
+ <party firstName="Robert" fullName="Robert P. Houston" lastName="Houston" middleName="P." role="Respondent"></party>
+ <party fullName="Nebraska Attorney General" lastName="Nebraska Attorney General" role="Interested Party"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03070-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-0/mods.xml">
+ <titleInfo>
+  <title>Hernandez v. Houston et al</title>
+  <subTitle>MEMORANDUM AND ORDER - The Motion for Leave to Proceed in Forma Pauperis 2 is provisionally granted and Petitioner will not be required to pay the $5.00 fee at this time. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(KBJ)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03070-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187e07d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-0</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03070_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03070/pdf/USCOURTS-ned-4_09-cv-03070-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03070; Hernandez v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03070-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-04-24</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The Motion for Leave to Proceed in Forma Pauperis 2 is provisionally granted and Petitioner will not be required to pay the $5.00 fee at this time. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03070-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-1/mods.xml">
+ <titleInfo>
+  <title>Hernandez v. Houston et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Upon initial review of the Petition for Writ of Habeas Corpus 1, the court preliminarily determines that all fourteen of Petitioner&apos;s claims are potentially cognizable in federal court. Petitioner&apos;s request for the appointment of counsel 6 is denied without prejudice to reassertion. The Clerk of the court is directed to mail copies of this Memorandum and Order and Petitioner&apos;s Petition for Writ of Habeas Corpus 1 to Respondent and the Nebraska Attorney General by regular first-class mail. By June 27, 2009, Respondent shall file a motion for summary judgment or state court records in support of an answer. The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: June 27, 2009: deadline for Respondent to file state court records in support of answer or motion for summary judgment. The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: July 27, 2009: check for Respondent to file answer and separate brief. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party and as directed to Respondents and Attorney General) (KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-05-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03070-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187e07c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-1</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03070_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03070/pdf/USCOURTS-ned-4_09-cv-03070-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03070; Hernandez v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03070-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-05-14</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Upon initial review of the Petition for Writ of Habeas Corpus 1, the court preliminarily determines that all fourteen of Petitioner&apos;s claims are potentially cognizable in federal court. Petitioner&apos;s request for the appointment of counsel 6 is denied without prejudice to reassertion. The Clerk of the court is directed to mail copies of this Memorandum and Order and Petitioner&apos;s Petition for Writ of Habeas Corpus 1 to Respondent and the Nebraska Attorney General by regular first-class mail. By June 27, 2009, Respondent shall file a motion for summary judgment or state court records in support of an answer. The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: June 27, 2009: deadline for Respondent to file state court records in support of answer or motion for summary judgment. The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: July 27, 2009: check for Respondent to file answer and separate brief. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party and as directed to Respondents and Attorney General) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03070-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-2/mods.xml">
+ <titleInfo>
+  <title>Hernandez v. Houston et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Petitioner&apos;s Motion for Preliminary Injunction 9 is denied for the reasons set forth in this Memorandum and Order. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03070-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187e07e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-2</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03070_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03070/pdf/USCOURTS-ned-4_09-cv-03070-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03070; Hernandez v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03070-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-06-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Petitioner&apos;s Motion for Preliminary Injunction 9 is denied for the reasons set forth in this Memorandum and Order. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03070-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-3/mods.xml">
+ <titleInfo>
+  <title>Hernandez v. Houston et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Petitioner&apos;s Motion for Default Judgment 14 is denied. Petitioner&apos;s Motion for Relief from the State Judgment 15 is denied. Petitioner&apos;s Motion to Compel 16 is granted. The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: 08/30/09: deadline for Respondents to provide copies of the designation of State Court Records filed June 29, 2009, to Petitioner regarding the Motion to Request additional documents 17. Petitioner&apos;s Objection to Brief 21 is denied. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (KBJ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-08-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03070-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187e07f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-3</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03070_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03070/pdf/USCOURTS-ned-4_09-cv-03070-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03070; Hernandez v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03070-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-08-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Petitioner&apos;s Motion for Default Judgment 14 is denied. Petitioner&apos;s Motion for Relief from the State Judgment 15 is denied. Petitioner&apos;s Motion to Compel 16 is granted. The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: 08/30/09: deadline for Respondents to provide copies of the designation of State Court Records filed June 29, 2009, to Petitioner regarding the Motion to Request additional documents 17. Petitioner&apos;s Objection to Brief 21 is denied. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03070-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-4/mods.xml">
+ <titleInfo>
+  <title>Hernandez v. Houston et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Petitioner&apos;s Motion for Appointment of Counsel 33 is denied. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(KBJ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03070-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187e081</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-4</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03070_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03070/pdf/USCOURTS-ned-4_09-cv-03070-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03070; Hernandez v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03070-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-10-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Petitioner&apos;s Motion for Appointment of Counsel 33 is denied. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03070-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-5/mods.xml">
+ <titleInfo>
+  <title>Hernandez v. Houston et al</title>
+  <subTitle>MEMORANDUM AND ORDER dismissing with prejudice 1 Petitioner&apos;s Petition for Writ of Habeas Corpus. All pending motions are dismissed. A separate judgment will be entered in accordance with this Memorandum and Order. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03070-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187e07b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-5</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03070_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03070/pdf/USCOURTS-ned-4_09-cv-03070-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03070; Hernandez v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03070-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-12-22</dateIssued>
+  <docketText>MEMORANDUM AND ORDER dismissing with prejudice 1 Petitioner&apos;s Petition for Writ of Habeas Corpus. All pending motions are dismissed. A separate judgment will be entered in accordance with this Memorandum and Order. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03070-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-6/mods.xml">
+ <titleInfo>
+  <title>Hernandez v. Houston et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Petitioner&apos;s Motion for Reconsideration 50 and Supplemental Motion for Reconsideration 52 are denied. Accordingly, Petitioner&apos;s Motion for Bail 49 is denied as moot. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(KBJ)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03070-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187e080</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-6</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03070_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03070/pdf/USCOURTS-ned-4_09-cv-03070-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03070; Hernandez v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03070-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-01-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Petitioner&apos;s Motion for Reconsideration 50 and Supplemental Motion for Reconsideration 52 are denied. Accordingly, Petitioner&apos;s Motion for Bail 49 is denied as moot. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cv-03070-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-7/mods.xml">
+ <titleInfo>
+  <title>Hernandez v. Houston et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Petitioner&apos;s Motion for Leave to Appeal in Forma Pauperis 57 is granted. Petitioner&apos;s Motion for Certificate of Appealability 55 is denied without prejudice to reassertion before the Eighth Circuit. Petitioner&apos;s Motion for Copies 62 is denied. The Clerk of the court shall provide the Court of Appeals a copy of this Memorandum and Order. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (KBJ)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cv-03070-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187e566</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-7</identifier>
+ <identifier type="former granule identifier">ned-4_09-cv-03070_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cv-03070/USCOURTS-ned-4_09-cv-03070-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cv-03070/pdf/USCOURTS-ned-4_09-cv-03070-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-03070; Hernandez v. Houston et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cv-03070-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-01-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Petitioner&apos;s Motion for Leave to Appeal in Forma Pauperis 57 is granted. Petitioner&apos;s Motion for Certificate of Appealability 55 is denied without prejudice to reassertion before the Eighth Circuit. Petitioner&apos;s Motion for Copies 62 is denied. The Clerk of the court shall provide the Court of Appeals a copy of this Memorandum and Order. Ordered by Chief Judge Joseph F. Bataillon. (Copy mailed to pro se party) (KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

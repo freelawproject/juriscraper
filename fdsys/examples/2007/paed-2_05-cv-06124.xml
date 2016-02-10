@@ -1,0 +1,285 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813d452b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-06124</identifier>
+<identifier type="local">P0b002ee1813d452b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_05-cv-06124</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_05-cv-06124</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:05-cv-06124</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="KEVIN" fullName="KEVIN BOOKER" lastName="BOOKER" role="Defendant"></party>
+ <party firstName="HOWARD" fullName="HOWARD DARBY" lastName="DARBY" role="Defendant"></party>
+ <party fullName="DEPARTMENT OF HUMAN SERVICES" lastName="DEPARTMENT OF HUMAN SERVICES" role="Defendant"></party>
+ <party fullName="FAMILY SERVICES PLAN" lastName="FAMILY SERVICES PLAN" role="Defendant"></party>
+ <party fullName="GLENN" lastName="GLENN" role="Defendant"></party>
+ <party firstName="ELEANOR" fullName="ELEANOR LAWS JOHNSON" lastName="JOHNSON" middleName="LAWS" role="Defendant"></party>
+ <party firstName="ALBA" fullName="ALBA E. MARTINEZ" lastName="MARTINEZ" middleName="E." role="Defendant"></party>
+ <party firstName="ROSEMARY" fullName="ROSEMARY MCNICOLL" lastName="MCNICOLL" role="Defendant"></party>
+ <party firstName="WILLIE" fullName="WILLIE MURPHY" lastName="MURPHY" role="Plaintiff"></party>
+ <party fullName="PSI SERVICE II, INC." lastName="PSI SERVICE II, INC." role="Defendant"></party>
+ <party firstName="CHERLY" fullName="CHERLY RANSON-GARNER" lastName="RANSON-GARNER" role="Defendant"></party>
+ <party firstName="HELEN" fullName="HELEN REYNOLD" lastName="REYNOLD" role="Defendant"></party>
+ <party firstName="SUSSIE" fullName="SUSSIE REYNOLD" lastName="REYNOLD" role="Defendant"></party>
+ <party firstName="RONALD" fullName="RONALD ROUSE" lastName="ROUSE" role="Defendant"></party>
+ <party firstName="NANCY" fullName="NANCY RYAN" lastName="RYAN" role="Defendant"></party>
+ <party firstName="LYNN" fullName="LYNN SOBOLESKI" lastName="SOBOLESKI" role="Defendant"></party>
+ <party firstName="STEPHANIE" fullName="STEPHANIE TURNER" lastName="TURNER" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>MURPHY v. DEPARTMENT OF HUMAN SERVICES et al</title>
+ <partNumber>2:05-cv-06124</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-06124/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-06124;05-6124</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>KEVIN BOOKER</displayForm>
+ <namePart type="family">BOOKER</namePart>
+ <namePart type="given">KEVIN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>HOWARD DARBY</displayForm>
+ <namePart type="family">DARBY</namePart>
+ <namePart type="given">HOWARD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DEPARTMENT OF HUMAN SERVICES</displayForm>
+ <namePart type="family">DEPARTMENT OF HUMAN SERVICES</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>FAMILY SERVICES PLAN</displayForm>
+ <namePart type="family">FAMILY SERVICES PLAN</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GLENN</displayForm>
+ <namePart type="family">GLENN</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ELEANOR LAWS JOHNSON</displayForm>
+ <namePart type="family">JOHNSON</namePart>
+ <namePart type="given">ELEANOR</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ALBA E. MARTINEZ</displayForm>
+ <namePart type="family">MARTINEZ</namePart>
+ <namePart type="given">ALBA</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ROSEMARY MCNICOLL</displayForm>
+ <namePart type="family">MCNICOLL</namePart>
+ <namePart type="given">ROSEMARY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>WILLIE MURPHY</displayForm>
+ <namePart type="family">MURPHY</namePart>
+ <namePart type="given">WILLIE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>PSI SERVICE II, INC.</displayForm>
+ <namePart type="family">PSI SERVICE II, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CHERLY RANSON-GARNER</displayForm>
+ <namePart type="family">RANSON-GARNER</namePart>
+ <namePart type="given">CHERLY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>HELEN REYNOLD</displayForm>
+ <namePart type="family">REYNOLD</namePart>
+ <namePart type="given">HELEN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SUSSIE REYNOLD</displayForm>
+ <namePart type="family">REYNOLD</namePart>
+ <namePart type="given">SUSSIE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RONALD ROUSE</displayForm>
+ <namePart type="family">ROUSE</namePart>
+ <namePart type="given">RONALD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>NANCY RYAN</displayForm>
+ <namePart type="family">RYAN</namePart>
+ <namePart type="given">NANCY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LYNN SOBOLESKI</displayForm>
+ <namePart type="family">SOBOLESKI</namePart>
+ <namePart type="given">LYNN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>STEPHANIE TURNER</displayForm>
+ <namePart type="family">TURNER</namePart>
+ <namePart type="given">STEPHANIE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_05-cv-06124</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:05-cv-06124</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="KEVIN" fullName="KEVIN BOOKER" lastName="BOOKER" role="Defendant"></party>
+ <party firstName="HOWARD" fullName="HOWARD DARBY" lastName="DARBY" role="Defendant"></party>
+ <party fullName="DEPARTMENT OF HUMAN SERVICES" lastName="DEPARTMENT OF HUMAN SERVICES" role="Defendant"></party>
+ <party fullName="FAMILY SERVICES PLAN" lastName="FAMILY SERVICES PLAN" role="Defendant"></party>
+ <party fullName="GLENN" lastName="GLENN" role="Defendant"></party>
+ <party firstName="ELEANOR" fullName="ELEANOR LAWS JOHNSON" lastName="JOHNSON" middleName="LAWS" role="Defendant"></party>
+ <party firstName="ALBA" fullName="ALBA E. MARTINEZ" lastName="MARTINEZ" middleName="E." role="Defendant"></party>
+ <party firstName="ROSEMARY" fullName="ROSEMARY MCNICOLL" lastName="MCNICOLL" role="Defendant"></party>
+ <party firstName="WILLIE" fullName="WILLIE MURPHY" lastName="MURPHY" role="Plaintiff"></party>
+ <party fullName="PSI SERVICE II, INC." lastName="PSI SERVICE II, INC." role="Defendant"></party>
+ <party firstName="CHERLY" fullName="CHERLY RANSON-GARNER" lastName="RANSON-GARNER" role="Defendant"></party>
+ <party firstName="HELEN" fullName="HELEN REYNOLD" lastName="REYNOLD" role="Defendant"></party>
+ <party firstName="SUSSIE" fullName="SUSSIE REYNOLD" lastName="REYNOLD" role="Defendant"></party>
+ <party firstName="RONALD" fullName="RONALD ROUSE" lastName="ROUSE" role="Defendant"></party>
+ <party firstName="NANCY" fullName="NANCY RYAN" lastName="RYAN" role="Defendant"></party>
+ <party firstName="LYNN" fullName="LYNN SOBOLESKI" lastName="SOBOLESKI" role="Defendant"></party>
+ <party firstName="STEPHANIE" fullName="STEPHANIE TURNER" lastName="TURNER" role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_05-cv-06124-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-06124/USCOURTS-paed-2_05-cv-06124-0/mods.xml">
+ <titleInfo>
+  <title>MURPHY v. DEPARTMENT OF HUMAN SERVICES et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT DEFENDANTS&apos; MOTION TO DISMISS PLAINTIFF&apos;S COMPLAINT (#27) IS GRANTED. DEFENDANTS&apos; MOTION TO DISMISS PLAINTIFF&apos;S COMPLAINT (#33) IS GRANTED. DEFENDANTS&apos; MOTION TO DISMISS PLAINTIFF&apos;S COMPLAINT (#37) IS GRANTED. THE COMPLAINT OF WILLIE MURPHY IS DISMISSED WITH PREJUDICE. SIGNED BY JUDGE JOHN R. PADOVA ON 1/5/07. 1/8/07 ENTERED AND COPIES MAILED, E-MAILED.(fdc)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_05-cv-06124-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814d6597</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-06124/USCOURTS-paed-2_05-cv-06124-0</identifier>
+ <identifier type="former granule identifier">paed-2_05-cv-06124_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_05-cv-06124/USCOURTS-paed-2_05-cv-06124-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_05-cv-06124/pdf/USCOURTS-paed-2_05-cv-06124-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-06124; MURPHY v. DEPARTMENT OF HUMAN SERVICES et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_05-cv-06124-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT DEFENDANTS&apos; MOTION TO DISMISS PLAINTIFF&apos;S COMPLAINT (#27) IS GRANTED. DEFENDANTS&apos; MOTION TO DISMISS PLAINTIFF&apos;S COMPLAINT (#33) IS GRANTED. DEFENDANTS&apos; MOTION TO DISMISS PLAINTIFF&apos;S COMPLAINT (#37) IS GRANTED. THE COMPLAINT OF WILLIE MURPHY IS DISMISSED WITH PREJUDICE. SIGNED BY JUDGE JOHN R. PADOVA ON 1/5/07. 1/8/07 ENTERED AND COPIES MAILED, E-MAILED.(fdc)</docketText>
+</extension>
+</relatedItem>
+</mods>

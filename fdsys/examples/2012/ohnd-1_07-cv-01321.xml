@@ -1,0 +1,226 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818ea0f3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-01321</identifier>
+<identifier type="local">P0b002ee1818ea0f3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_07-cv-01321</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_07-cv-01321</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:07-cv-01321</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-(Citizenship)</cause>
+ <party fullName="A&amp;H Management Services, Inc." lastName="A&amp;H Management Services, Inc." role="Plaintiff"></party>
+ <party fullName="Chafflose Corporation" lastName="Chafflose Corporation" role="Defendant"></party>
+ <party fullName="McGuireWoods LLP" lastName="McGuireWoods LLP" role="Attorney"></party>
+ <party fullName="Taft Stettinius&amp;Hollister LLP" lastName="Taft Stettinius&amp;Hollister LLP" role="Intervenor"></party>
+</extension>
+<titleInfo>
+ <title>A&amp;H Management Services, Inc. v. Chafflose Corporation</title>
+ <partNumber>1:07-cv-01321</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-01321/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:07-cv-01321;07-1321</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>A&amp;H Management Services, Inc.</displayForm>
+ <namePart type="family">A&amp;H Management Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Chafflose Corporation</displayForm>
+ <namePart type="family">Chafflose Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>McGuireWoods LLP</displayForm>
+ <namePart type="family">McGuireWoods LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Attorney</description>
+</name>
+<name type="personal">
+ <displayForm>Taft Stettinius&amp;Hollister LLP</displayForm>
+ <namePart type="family">Taft Stettinius&amp;Hollister LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_07-cv-01321</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:07-cv-01321</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-(Citizenship)</cause>
+ <party fullName="A&amp;H Management Services, Inc." lastName="A&amp;H Management Services, Inc." role="Plaintiff"></party>
+ <party fullName="Chafflose Corporation" lastName="Chafflose Corporation" role="Defendant"></party>
+ <party fullName="McGuireWoods LLP" lastName="McGuireWoods LLP" role="Attorney"></party>
+ <party fullName="Taft Stettinius&amp;Hollister LLP" lastName="Taft Stettinius&amp;Hollister LLP" role="Intervenor"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_07-cv-01321-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01321/USCOURTS-ohnd-1_07-cv-01321-0/mods.xml">
+ <titleInfo>
+  <title>A&amp;H Management Services, Inc. v. Chafflose Corporation</title>
+  <subTitle>Memorandum Opinion and Order re 20 Motion for Order to Compel Specific Performance of Settlement Agreement, determining that a valid settlement agreement exists and Granting Plaintiff&apos;s motion for an Order compeling specific performance of the settlement agreement; Defendant is Ordered to comply with the terms of the final settlement Agreement and this case is terminated. Signed by Judge Donald C. Nugent on 6/16/08. (C,B) Modified docket text on 6/19/2008 (R,N).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_07-cv-01321-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818f5eab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01321/USCOURTS-ohnd-1_07-cv-01321-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_07-cv-01321_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01321/USCOURTS-ohnd-1_07-cv-01321-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-01321/pdf/USCOURTS-ohnd-1_07-cv-01321-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-01321; A&amp;H Management Services, Inc. v. Chafflose Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_07-cv-01321-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-06-16</dateIssued>
+  <docketText>Memorandum Opinion and Order re 20 Motion for Order to Compel Specific Performance of Settlement Agreement, determining that a valid settlement agreement exists and Granting Plaintiff&apos;s motion for an Order compeling specific performance of the settlement agreement; Defendant is Ordered to comply with the terms of the final settlement Agreement and this case is terminated. Signed by Judge Donald C. Nugent on 6/16/08. (C,B) Modified docket text on 6/19/2008 (R,N).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_07-cv-01321-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01321/USCOURTS-ohnd-1_07-cv-01321-1/mods.xml">
+ <titleInfo>
+  <title>A&amp;H Management Services, Inc. v. Chafflose Corporation</title>
+  <subTitle>Memorandum Opinion and Order denying McGuire Woods&apos; Motion to enforce attorney lien (Related Doc # 133). Judge Donald C. Nugent(C,KA)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_07-cv-01321-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818f5eac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01321/USCOURTS-ohnd-1_07-cv-01321-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_07-cv-01321_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01321/USCOURTS-ohnd-1_07-cv-01321-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-01321/pdf/USCOURTS-ohnd-1_07-cv-01321-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-01321; A&amp;H Management Services, Inc. v. Chafflose Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_07-cv-01321-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>Memorandum Opinion and Order denying McGuire Woods&apos; Motion to enforce attorney lien (Related Doc # 133). Judge Donald C. Nugent(C,KA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_07-cv-01321-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01321/USCOURTS-ohnd-1_07-cv-01321-2/mods.xml">
+ <titleInfo>
+  <title>A&amp;H Management Services, Inc. v. Chafflose Corporation</title>
+  <subTitle>o Defendant Chafflose prior to February 4, 2008 in the amount of $285,902.87. Moreover, the Court finds that Taft has a valid attorney lien for $285,902.87 upon the settlement proceeds of $800,000 that Chafflose will receive from A&amp;H and is entitled to judgment on that lien. Accordingly, A&amp;H is ordered to deduct $285,902.87 from the settlement payment and pay said amount directly to Taft in satisfaction of Tafts attorney lien and the judgment thereon. Judge Donald C. Nugent(C,KA) Modified text 1/13/2012 (C,KA).VACATED in part, see 142 Memorandum Opinion granting Taft Stettinius&amp;Hollister&apos;s Motion for summary judgment (Related Doc # 129). Taft is entitled to summary judgment on its claim for payment for the legal services it tendered t</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_07-cv-01321-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818f5eaa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01321/USCOURTS-ohnd-1_07-cv-01321-2</identifier>
+ <identifier type="former granule identifier">ohnd-1_07-cv-01321_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_07-cv-01321/USCOURTS-ohnd-1_07-cv-01321-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_07-cv-01321/pdf/USCOURTS-ohnd-1_07-cv-01321-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-01321; A&amp;H Management Services, Inc. v. Chafflose Corporation; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_07-cv-01321-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>o Defendant Chafflose prior to February 4, 2008 in the amount of $285,902.87. Moreover, the Court finds that Taft has a valid attorney lien for $285,902.87 upon the settlement proceeds of $800,000 that Chafflose will receive from A&amp;H and is entitled to judgment on that lien. Accordingly, A&amp;H is ordered to deduct $285,902.87 from the settlement payment and pay said amount directly to Taft in satisfaction of Tafts attorney lien and the judgment thereon. Judge Donald C. Nugent(C,KA) Modified text 1/13/2012 (C,KA).VACATED in part, see 142 Memorandum Opinion granting Taft Stettinius&amp;Hollister&apos;s Motion for summary judgment (Related Doc # 129). Taft is entitled to summary judgment on its claim for payment for the legal services it tendered t</docketText>
+</extension>
+</relatedItem>
+</mods>

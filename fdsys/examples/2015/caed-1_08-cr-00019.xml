@@ -1,0 +1,230 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18dcf6d77">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-10-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-10-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cr-00019</identifier>
+<identifier type="local">P0b002ee18dcf6d77</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-10-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-10-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_08-cr-00019</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_08-cr-00019</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:08-cr-00019</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Bret" fullName="Bret Lewis Richardson" lastName="Richardson" middleName="Lewis" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Richardson</title>
+ <partNumber>1:08-cr-00019</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cr-00019/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cr-00019;08-019</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bret Lewis Richardson</displayForm>
+ <namePart type="family">Richardson</namePart>
+ <namePart type="given">Bret</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_08-cr-00019</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:08-cr-00019</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Bret" fullName="Bret Lewis Richardson" lastName="Richardson" middleName="Lewis" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cr-00019-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cr-00019/USCOURTS-caed-1_08-cr-00019-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Richardson</title>
+  <subTitle>DETENTION ORDER as to Bret Lewis Richardson signed by Magistrate Judge Theresa A. Goldner on 1/28/2008. (Leon Guerrero, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cr-00019/pdf/USCOURTS-caed-1_08-cr-00019-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd060ec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cr-00019/USCOURTS-caed-1_08-cr-00019-0</identifier>
+ <identifier type="former granule identifier">caed-1_08-cr-00019_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cr-00019/USCOURTS-caed-1_08-cr-00019-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cr-00019/pdf/USCOURTS-caed-1_08-cr-00019-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cr-00019; USA v. Richardson; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cr-00019-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-28</dateIssued>
+  <docketText>DETENTION ORDER as to Bret Lewis Richardson signed by Magistrate Judge Theresa A. Goldner on 1/28/2008. (Leon Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cr-00019-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cr-00019/USCOURTS-caed-1_08-cr-00019-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Richardson</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Bret Lewis Richardson signed by Judge Oliver W. Wanger on 6/5/2008. (Timken, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cr-00019/pdf/USCOURTS-caed-1_08-cr-00019-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd060a5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cr-00019/USCOURTS-caed-1_08-cr-00019-1</identifier>
+ <identifier type="former granule identifier">caed-1_08-cr-00019_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cr-00019/USCOURTS-caed-1_08-cr-00019-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cr-00019/pdf/USCOURTS-caed-1_08-cr-00019-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cr-00019; USA v. Richardson; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cr-00019-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-06-05</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Bret Lewis Richardson signed by Judge Oliver W. Wanger on 6/5/2008. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cr-00019-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cr-00019/USCOURTS-caed-1_08-cr-00019-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Richardson</title>
+  <subTitle>JUDGMENT and COMMITMENT For REVOCATION of SUPERVISED RELEASE as to Bret Lewis Richardson, signed by District Judge Anthony W. Ishii on 1/6/2015. (Gaumnitz, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cr-00019/pdf/USCOURTS-caed-1_08-cr-00019-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd060a6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cr-00019/USCOURTS-caed-1_08-cr-00019-2</identifier>
+ <identifier type="former granule identifier">caed-1_08-cr-00019_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cr-00019/USCOURTS-caed-1_08-cr-00019-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cr-00019/pdf/USCOURTS-caed-1_08-cr-00019-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cr-00019; USA v. Richardson; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cr-00019-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT For REVOCATION of SUPERVISED RELEASE as to Bret Lewis Richardson, signed by District Judge Anthony W. Ishii on 1/6/2015. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_08-cr-00019-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cr-00019/USCOURTS-caed-1_08-cr-00019-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Richardson</title>
+  <subTitle>SECOND REVOCATION JUDGMENT and COMMITMENT, as to Bret Lewis Richardson (1), signed by District Judge Anthony W. Ishii on 10/26/2015. (Rosales, O)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cr-00019/pdf/USCOURTS-caed-1_08-cr-00019-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18dd060ed</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cr-00019/USCOURTS-caed-1_08-cr-00019-3</identifier>
+ <identifier type="former granule identifier">caed-1_08-cr-00019_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_08-cr-00019/USCOURTS-caed-1_08-cr-00019-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_08-cr-00019/pdf/USCOURTS-caed-1_08-cr-00019-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cr-00019; USA v. Richardson; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_08-cr-00019-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-10-26</dateIssued>
+  <docketText>SECOND REVOCATION JUDGMENT and COMMITMENT, as to Bret Lewis Richardson (1), signed by District Judge Anthony W. Ishii on 10/26/2015. (Rosales, O)</docketText>
+</extension>
+</relatedItem>
+</mods>

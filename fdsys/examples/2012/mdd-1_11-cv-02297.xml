@@ -1,0 +1,330 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818e9f1b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_11-cv-02297</identifier>
+<identifier type="local">P0b002ee1818e9f1b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-1_11-cv-02297</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_11-cv-02297</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:11-cv-02297</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party fullName="Allstate Insurance Company" lastName="Allstate Insurance Company" role="Defendant"></party>
+ <party fullName="Con-Way Truckload" lastName="Con-Way Truckload" role="Cross Defendant"></party>
+ <party fullName="Con-Way Truckload" lastName="Con-Way Truckload" role="Defendant"></party>
+ <party fullName="Long Fence Company Inc." lastName="Long Fence Company Inc." role="Cross Defendant"></party>
+ <party fullName="Long Fence Company Inc." lastName="Long Fence Company Inc." role="Defendant"></party>
+ <party firstName="Joyce" fullName="Joyce M. Lookabaugh" lastName="Lookabaugh" middleName="M." role="Cross Defendant"></party>
+ <party firstName="Joyce" fullName="Joyce M. Lookabaugh" lastName="Lookabaugh" middleName="M." role="Defendant"></party>
+ <party fullName="Maryland State Highway Administration" lastName="Maryland State Highway Administration" role="Cross Defendant"></party>
+ <party fullName="Maryland State Highway Administration" lastName="Maryland State Highway Administration" role="Defendant"></party>
+ <party fullName="Omega US Insurance, Inc." lastName="Omega US Insurance, Inc." role="Counter Defendant"></party>
+ <party fullName="Omega US Insurance, Inc." lastName="Omega US Insurance, Inc." role="Plaintiff"></party>
+ <party fullName="Penn National Insurance" lastName="Penn National Insurance" role="Defendant"></party>
+ <party fullName="Pennsylvania National Mutual Casualty Insurance Company" lastName="Pennsylvania National Mutual Casualty Insurance Company" role="Cross Defendant"></party>
+ <party fullName="Pennsylvania National Mutual Casualty Insurance Company" lastName="Pennsylvania National Mutual Casualty Insurance Company" role="Defendant"></party>
+ <party fullName="RN&apos;G Construction, Inc." lastName="RN&apos;G Construction, Inc." role="Counter Claimant"></party>
+ <party fullName="RN&apos;G Construction, Inc." lastName="RN&apos;G Construction, Inc." role="Cross Claimant"></party>
+ <party fullName="RN&apos;G Construction, Inc." lastName="RN&apos;G Construction, Inc." role="Cross Defendant"></party>
+ <party fullName="RN&apos;G Construction, Inc." lastName="RN&apos;G Construction, Inc." role="Defendant"></party>
+ <party firstName="Evonne" fullName="Evonne J. Whalen" lastName="Whalen" middleName="J." role="Cross Defendant"></party>
+ <party firstName="Evonne" fullName="Evonne J. Whalen" lastName="Whalen" middleName="J." role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy W. Whalen" lastName="Whalen" middleName="W." role="Cross Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy W. Whalen" lastName="Whalen" middleName="W." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Omega US Insurance, Inc. v. Pennsylvania National Mutual Casualty Insurance Company et al</title>
+ <partNumber>1:11-cv-02297</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_11-cv-02297/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-02297;11-2297</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Baltimore</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Allstate Insurance Company</displayForm>
+ <namePart type="family">Allstate Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Con-Way Truckload</displayForm>
+ <namePart type="family">Con-Way Truckload</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Con-Way Truckload</displayForm>
+ <namePart type="family">Con-Way Truckload</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Long Fence Company Inc.</displayForm>
+ <namePart type="family">Long Fence Company Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Long Fence Company Inc.</displayForm>
+ <namePart type="family">Long Fence Company Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joyce M. Lookabaugh</displayForm>
+ <namePart type="family">Lookabaugh</namePart>
+ <namePart type="given">Joyce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joyce M. Lookabaugh</displayForm>
+ <namePart type="family">Lookabaugh</namePart>
+ <namePart type="given">Joyce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maryland State Highway Administration</displayForm>
+ <namePart type="family">Maryland State Highway Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maryland State Highway Administration</displayForm>
+ <namePart type="family">Maryland State Highway Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Omega US Insurance, Inc.</displayForm>
+ <namePart type="family">Omega US Insurance, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Omega US Insurance, Inc.</displayForm>
+ <namePart type="family">Omega US Insurance, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Penn National Insurance</displayForm>
+ <namePart type="family">Penn National Insurance</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pennsylvania National Mutual Casualty Insurance Company</displayForm>
+ <namePart type="family">Pennsylvania National Mutual Casualty Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pennsylvania National Mutual Casualty Insurance Company</displayForm>
+ <namePart type="family">Pennsylvania National Mutual Casualty Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RN&apos;G Construction, Inc.</displayForm>
+ <namePart type="family">RN&apos;G Construction, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>RN&apos;G Construction, Inc.</displayForm>
+ <namePart type="family">RN&apos;G Construction, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>RN&apos;G Construction, Inc.</displayForm>
+ <namePart type="family">RN&apos;G Construction, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RN&apos;G Construction, Inc.</displayForm>
+ <namePart type="family">RN&apos;G Construction, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Evonne J. Whalen</displayForm>
+ <namePart type="family">Whalen</namePart>
+ <namePart type="given">Evonne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Evonne J. Whalen</displayForm>
+ <namePart type="family">Whalen</namePart>
+ <namePart type="given">Evonne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy W. Whalen</displayForm>
+ <namePart type="family">Whalen</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy W. Whalen</displayForm>
+ <namePart type="family">Whalen</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_11-cv-02297</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:11-cv-02297</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party fullName="Allstate Insurance Company" lastName="Allstate Insurance Company" role="Defendant"></party>
+ <party fullName="Con-Way Truckload" lastName="Con-Way Truckload" role="Cross Defendant"></party>
+ <party fullName="Con-Way Truckload" lastName="Con-Way Truckload" role="Defendant"></party>
+ <party fullName="Long Fence Company Inc." lastName="Long Fence Company Inc." role="Cross Defendant"></party>
+ <party fullName="Long Fence Company Inc." lastName="Long Fence Company Inc." role="Defendant"></party>
+ <party firstName="Joyce" fullName="Joyce M. Lookabaugh" lastName="Lookabaugh" middleName="M." role="Cross Defendant"></party>
+ <party firstName="Joyce" fullName="Joyce M. Lookabaugh" lastName="Lookabaugh" middleName="M." role="Defendant"></party>
+ <party fullName="Maryland State Highway Administration" lastName="Maryland State Highway Administration" role="Cross Defendant"></party>
+ <party fullName="Maryland State Highway Administration" lastName="Maryland State Highway Administration" role="Defendant"></party>
+ <party fullName="Omega US Insurance, Inc." lastName="Omega US Insurance, Inc." role="Counter Defendant"></party>
+ <party fullName="Omega US Insurance, Inc." lastName="Omega US Insurance, Inc." role="Plaintiff"></party>
+ <party fullName="Penn National Insurance" lastName="Penn National Insurance" role="Defendant"></party>
+ <party fullName="Pennsylvania National Mutual Casualty Insurance Company" lastName="Pennsylvania National Mutual Casualty Insurance Company" role="Cross Defendant"></party>
+ <party fullName="Pennsylvania National Mutual Casualty Insurance Company" lastName="Pennsylvania National Mutual Casualty Insurance Company" role="Defendant"></party>
+ <party fullName="RN&apos;G Construction, Inc." lastName="RN&apos;G Construction, Inc." role="Counter Claimant"></party>
+ <party fullName="RN&apos;G Construction, Inc." lastName="RN&apos;G Construction, Inc." role="Cross Claimant"></party>
+ <party fullName="RN&apos;G Construction, Inc." lastName="RN&apos;G Construction, Inc." role="Cross Defendant"></party>
+ <party fullName="RN&apos;G Construction, Inc." lastName="RN&apos;G Construction, Inc." role="Defendant"></party>
+ <party firstName="Evonne" fullName="Evonne J. Whalen" lastName="Whalen" middleName="J." role="Cross Defendant"></party>
+ <party firstName="Evonne" fullName="Evonne J. Whalen" lastName="Whalen" middleName="J." role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy W. Whalen" lastName="Whalen" middleName="W." role="Cross Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy W. Whalen" lastName="Whalen" middleName="W." role="Defendant"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-1_11-cv-02297-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_11-cv-02297/USCOURTS-mdd-1_11-cv-02297-0/mods.xml">
+ <titleInfo>
+  <title>Omega US Insurance, Inc. v. Pennsylvania National Mutual Casualty Insurance Company et al</title>
+  <subTitle>MEMORANDUM. Signed by Judge Ellen L. Hollander on 1/13/2012. (aos, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-1_11-cv-02297-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818f570c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_11-cv-02297/USCOURTS-mdd-1_11-cv-02297-0</identifier>
+ <identifier type="former granule identifier">mdd-1_11-cv-02297_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_11-cv-02297/USCOURTS-mdd-1_11-cv-02297-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_11-cv-02297/pdf/USCOURTS-mdd-1_11-cv-02297-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-02297; Omega US Insurance, Inc. v. Pennsylvania National Mutual Casualty Insurance Company et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-1_11-cv-02297-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-13</dateIssued>
+  <docketText>MEMORANDUM. Signed by Judge Ellen L. Hollander on 1/13/2012. (aos, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

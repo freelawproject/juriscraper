@@ -1,0 +1,216 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c32b6e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-2_12-cv-02230</identifier>
+<identifier type="local">P0b002ee186c32b6e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alnd-2_12-cv-02230</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alnd-2_12-cv-02230</accessId>
+ <courtType>District</courtType>
+ <courtCode>alnd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2012</courtSortOrder>
+ <caseNumber>2:12-cv-02230</caseNumber>
+ <caseOffice>Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Loyd" fullName="Loyd Arrington" lastName="Arrington" role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Hawkins" lastName="Hawkins" role="Defendant"></party>
+ <party firstName="Ken" fullName="Ken Mullins" lastName="Mullins" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Edward Persall" lastName="Persall" middleName="Edward" role="Plaintiff"></party>
+ <party fullName="staff attorney" lastName="staff attorney" role="Miscellaneous"></party>
+ <party fullName="staff attorney 1" lastName="staff attorney 1" role="Miscellaneous"></party>
+</extension>
+<titleInfo>
+ <title>Persall v. Arrington et al</title>
+ <partNumber>2:12-cv-02230</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-2_12-cv-02230/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02230;12-2230</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Southern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Loyd Arrington</displayForm>
+ <namePart type="family">Arrington</namePart>
+ <namePart type="given">Loyd</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jennifer Hawkins</displayForm>
+ <namePart type="family">Hawkins</namePart>
+ <namePart type="given">Jennifer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ken Mullins</displayForm>
+ <namePart type="family">Mullins</namePart>
+ <namePart type="given">Ken</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher Edward Persall</displayForm>
+ <namePart type="family">Persall</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>staff attorney</displayForm>
+ <namePart type="family">staff attorney</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Miscellaneous</description>
+</name>
+<name type="personal">
+ <displayForm>staff attorney 1</displayForm>
+ <namePart type="family">staff attorney 1</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Miscellaneous</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alnd-2_12-cv-02230</accessId>
+ <courtType>District</courtType>
+ <courtCode>alnd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2012</courtSortOrder>
+ <caseNumber>2:12-cv-02230</caseNumber>
+ <caseOffice>Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Loyd" fullName="Loyd Arrington" lastName="Arrington" role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Hawkins" lastName="Hawkins" role="Defendant"></party>
+ <party firstName="Ken" fullName="Ken Mullins" lastName="Mullins" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Edward Persall" lastName="Persall" middleName="Edward" role="Plaintiff"></party>
+ <party fullName="staff attorney" lastName="staff attorney" role="Miscellaneous"></party>
+ <party fullName="staff attorney 1" lastName="staff attorney 1" role="Miscellaneous"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-2_12-cv-02230-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-2_12-cv-02230/USCOURTS-alnd-2_12-cv-02230-0/mods.xml">
+ <titleInfo>
+  <title>Persall v. Arrington et al</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge Abdul K Kallon on 1/3/14. (ASL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-2_12-cv-02230-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4ebb2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-2_12-cv-02230/USCOURTS-alnd-2_12-cv-02230-0</identifier>
+ <identifier type="former granule identifier">alnd-2_12-cv-02230_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-2_12-cv-02230/USCOURTS-alnd-2_12-cv-02230-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-2_12-cv-02230/pdf/USCOURTS-alnd-2_12-cv-02230-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02230; Persall v. Arrington et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-2_12-cv-02230-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge Abdul K Kallon on 1/3/14. (ASL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-2_12-cv-02230-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-2_12-cv-02230/USCOURTS-alnd-2_12-cv-02230-1/mods.xml">
+ <titleInfo>
+  <title>Persall v. Arrington et al</title>
+  <subTitle>FINAL JUDGMENT in accordance with memorandum opinion, pla&apos;s claims in this action are dismissed for failing to state a claim upon which relief may be granted pursuant to 28:1915A(b); pla is put on notice that dismissal of this action is countable for purposes of 28:1915(g); costs are taxed to pla. Signed by Judge Abdul K Kallon on 1/3/14. (ASL)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-2_12-cv-02230-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4ebb3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-2_12-cv-02230/USCOURTS-alnd-2_12-cv-02230-1</identifier>
+ <identifier type="former granule identifier">alnd-2_12-cv-02230_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-2_12-cv-02230/USCOURTS-alnd-2_12-cv-02230-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-2_12-cv-02230/pdf/USCOURTS-alnd-2_12-cv-02230-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02230; Persall v. Arrington et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-2_12-cv-02230-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>FINAL JUDGMENT in accordance with memorandum opinion, pla&apos;s claims in this action are dismissed for failing to state a claim upon which relief may be granted pursuant to 28:1915A(b); pla is put on notice that dismissal of this action is countable for purposes of 28:1915(g); costs are taxed to pla. Signed by Judge Abdul K Kallon on 1/3/14. (ASL)</docketText>
+</extension>
+</relatedItem>
+</mods>

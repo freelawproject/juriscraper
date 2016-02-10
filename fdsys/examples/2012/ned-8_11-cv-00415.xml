@@ -1,0 +1,364 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1834d0339">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-09-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-09-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00415</identifier>
+<identifier type="local">P0b002ee1834d0339</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-09-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-09-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cv-00415</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00415</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00415</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>15:1126 Patent Infringement</cause>
+ <party fullName="Board of Regents of the University of Idaho" lastName="Board of Regents of the University of Idaho" role="Counter Defendant"></party>
+ <party fullName="Board of Regents of the University of Idaho" lastName="Board of Regents of the University of Idaho" role="Plaintiff"></party>
+ <party fullName="Farmscan AG Pty Ltd." lastName="Farmscan AG Pty Ltd." role="Counter Defendant"></party>
+ <party fullName="Farmscan AG Pty Ltd." lastName="Farmscan AG Pty Ltd." role="Plaintiff"></party>
+ <party fullName="Lindsay Corporation" lastName="Lindsay Corporation" role="Counter Claimant"></party>
+ <party fullName="Lindsay Corporation" lastName="Lindsay Corporation" role="Defendant"></party>
+ <party fullName="Neuberger Berman Management, LLC" lastName="Neuberger Berman Management, LLC" role="Counter Claimant"></party>
+ <party fullName="Neuberger Berman Management, LLC" lastName="Neuberger Berman Management, LLC" role="Defendant"></party>
+ <party fullName="Valmont Industries, Inc." lastName="Valmont Industries, Inc." role="Counter Defendant"></party>
+ <party fullName="Valmont Industries, Inc." lastName="Valmont Industries, Inc." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Valmont Industries, Inc. v. Lindsay Corporation et al</title>
+ <partNumber>8:11-cv-00415</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00415/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cv-00415;11-415</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Board of Regents of the University of Idaho</displayForm>
+ <namePart type="family">Board of Regents of the University of Idaho</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Board of Regents of the University of Idaho</displayForm>
+ <namePart type="family">Board of Regents of the University of Idaho</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Farmscan AG Pty Ltd.</displayForm>
+ <namePart type="family">Farmscan AG Pty Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Farmscan AG Pty Ltd.</displayForm>
+ <namePart type="family">Farmscan AG Pty Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lindsay Corporation</displayForm>
+ <namePart type="family">Lindsay Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Lindsay Corporation</displayForm>
+ <namePart type="family">Lindsay Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Neuberger Berman Management, LLC</displayForm>
+ <namePart type="family">Neuberger Berman Management, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Neuberger Berman Management, LLC</displayForm>
+ <namePart type="family">Neuberger Berman Management, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Valmont Industries, Inc.</displayForm>
+ <namePart type="family">Valmont Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Valmont Industries, Inc.</displayForm>
+ <namePart type="family">Valmont Industries, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00415</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00415</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>830</natureSuitCode>
+ <natureSuit>Patent</natureSuit>
+ <cause>15:1126 Patent Infringement</cause>
+ <party fullName="Board of Regents of the University of Idaho" lastName="Board of Regents of the University of Idaho" role="Counter Defendant"></party>
+ <party fullName="Board of Regents of the University of Idaho" lastName="Board of Regents of the University of Idaho" role="Plaintiff"></party>
+ <party fullName="Farmscan AG Pty Ltd." lastName="Farmscan AG Pty Ltd." role="Counter Defendant"></party>
+ <party fullName="Farmscan AG Pty Ltd." lastName="Farmscan AG Pty Ltd." role="Plaintiff"></party>
+ <party fullName="Lindsay Corporation" lastName="Lindsay Corporation" role="Counter Claimant"></party>
+ <party fullName="Lindsay Corporation" lastName="Lindsay Corporation" role="Defendant"></party>
+ <party fullName="Neuberger Berman Management, LLC" lastName="Neuberger Berman Management, LLC" role="Counter Claimant"></party>
+ <party fullName="Neuberger Berman Management, LLC" lastName="Neuberger Berman Management, LLC" role="Defendant"></party>
+ <party fullName="Valmont Industries, Inc." lastName="Valmont Industries, Inc." role="Counter Defendant"></party>
+ <party fullName="Valmont Industries, Inc." lastName="Valmont Industries, Inc." role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00415-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-0/mods.xml">
+ <titleInfo>
+  <title>Valmont Industries, Inc. v. Lindsay Corporation et al</title>
+  <subTitle>ORDER granting 41 Motion to Withdraw as Attorney. Gregory P. Love and the law firm of Stevens Love Hill&amp;Hold, PLLC, is deemed withdrwn as counsel for Lindsay Corporation. Ordered by Senior Judge Lyle E. Strom. (MKR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00415-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834d1cd0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00415_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00415/pdf/USCOURTS-ned-8_11-cv-00415-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00415; Valmont Industries, Inc. v. Lindsay Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00415-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>ORDER granting 41 Motion to Withdraw as Attorney. Gregory P. Love and the law firm of Stevens Love Hill&amp;Hold, PLLC, is deemed withdrwn as counsel for Lindsay Corporation. Ordered by Senior Judge Lyle E. Strom. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00415-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-1/mods.xml">
+ <titleInfo>
+  <title>Valmont Industries, Inc. v. Lindsay Corporation et al</title>
+  <subTitle>ORDER granting Plaintiff&apos;s 44 Motion for Leave to file second amended complaint. Plaintiff&apos;s shall have until January 31, 2012, to file their second amended complaint. Defendant shall have rule time to respond. Amended Complaint due by 1/31/2012. Ordered by Senior Judge Lyle E. Strom. (copy mailed) (MKR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00415-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834d1cce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00415_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00415/pdf/USCOURTS-ned-8_11-cv-00415-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00415; Valmont Industries, Inc. v. Lindsay Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00415-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-24</dateIssued>
+  <docketText>ORDER granting Plaintiff&apos;s 44 Motion for Leave to file second amended complaint. Plaintiff&apos;s shall have until January 31, 2012, to file their second amended complaint. Defendant shall have rule time to respond. Amended Complaint due by 1/31/2012. Ordered by Senior Judge Lyle E. Strom. (copy mailed) (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00415-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-2/mods.xml">
+ <titleInfo>
+  <title>Valmont Industries, Inc. v. Lindsay Corporation et al</title>
+  <subTitle>ORDER - Scheduling Conference set for 2/22/2012 08:15 AM in Chambers before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (TCL )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00415-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834d1cd1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00415_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00415/pdf/USCOURTS-ned-8_11-cv-00415-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00415; Valmont Industries, Inc. v. Lindsay Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00415-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-02-03</dateIssued>
+  <docketText>ORDER - Scheduling Conference set for 2/22/2012 08:15 AM in Chambers before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00415-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-3/mods.xml">
+ <titleInfo>
+  <title>Valmont Industries, Inc. v. Lindsay Corporation et al</title>
+  <subTitle>PROTECTIVE ORDER - Pursuant to Federal Rule of Civil Procedure 26(c), the parties agree to the entry of this Protective Order (this &quot;Order&quot;) to facilitate and expedite discovery in this action. Ordered by Senior Judge Lyle E. Strom. (GJG)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00415-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834d1c42</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00415_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00415/pdf/USCOURTS-ned-8_11-cv-00415-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00415; Valmont Industries, Inc. v. Lindsay Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00415-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-05-01</dateIssued>
+  <docketText>PROTECTIVE ORDER - Pursuant to Federal Rule of Civil Procedure 26(c), the parties agree to the entry of this Protective Order (this &quot;Order&quot;) to facilitate and expedite discovery in this action. Ordered by Senior Judge Lyle E. Strom. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00415-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-4/mods.xml">
+ <titleInfo>
+  <title>Valmont Industries, Inc. v. Lindsay Corporation et al</title>
+  <subTitle>ORDER adopting the 62 Joint Stipulation of the parties. The parties shall exchange a list of claim terms, phrases or clauses that the party contends should be construed by the Court, and must identify any claim element that the party contends should be governed by the sixth paragraph of 35 U.S.C. § 112, to be interpreted on or before May 21, 2012. The parties shall exchange proposed construction of each claim term, phrase, or clause which the parties have collectively identified for claim construction purposes and identify intrinsic evidence, as set forth in Patent Rule 4-2 on or before June 18, 2012. The parties shall complete and file a joint claim construction and prehearing statement on or before July 9, 2012. All other dates in the Courts scheduling order (Filing No. 53) remain unchanged. Ordered by Senior Judge Lyle E. Strom. (MKR, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00415-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834d1ccf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-4</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00415_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00415/pdf/USCOURTS-ned-8_11-cv-00415-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00415; Valmont Industries, Inc. v. Lindsay Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00415-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-05-14</dateIssued>
+  <docketText>ORDER adopting the 62 Joint Stipulation of the parties. The parties shall exchange a list of claim terms, phrases or clauses that the party contends should be construed by the Court, and must identify any claim element that the party contends should be governed by the sixth paragraph of 35 U.S.C. § 112, to be interpreted on or before May 21, 2012. The parties shall exchange proposed construction of each claim term, phrase, or clause which the parties have collectively identified for claim construction purposes and identify intrinsic evidence, as set forth in Patent Rule 4-2 on or before June 18, 2012. The parties shall complete and file a joint claim construction and prehearing statement on or before July 9, 2012. All other dates in the Courts scheduling order (Filing No. 53) remain unchanged. Ordered by Senior Judge Lyle E. Strom. (MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00415-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-5/mods.xml">
+ <titleInfo>
+  <title>Valmont Industries, Inc. v. Lindsay Corporation et al</title>
+  <subTitle>ORDER approving and adopting the 68 Stipulation for Dismissal. All causes of action filed herein by and betweenplaintiffs Valmont Industries, Inc., Farmscan AG PTY LTD and Board of Regents of the University of Idaho, and defendant Lindsay Corporation, are dismissed with prejudice, each party to pay its own costs and attorneys fees. Ordered by Senior Judge Lyle E. Strom. (MKR)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00415-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1834d1ccd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-5</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00415_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00415/USCOURTS-ned-8_11-cv-00415-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00415/pdf/USCOURTS-ned-8_11-cv-00415-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00415; Valmont Industries, Inc. v. Lindsay Corporation et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00415-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-09-06</dateIssued>
+  <docketText>ORDER approving and adopting the 68 Stipulation for Dismissal. All causes of action filed herein by and betweenplaintiffs Valmont Industries, Inc., Farmscan AG PTY LTD and Board of Regents of the University of Idaho, and defendant Lindsay Corporation, are dismissed with prejudice, each party to pay its own costs and attorneys fees. Ordered by Senior Judge Lyle E. Strom. (MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,230 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a0757f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00227</identifier>
+<identifier type="local">P0b002ee183a0757f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_10-cr-00227</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_10-cr-00227</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:10-cr-00227</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Shawn" fullName="Shawn Victor Webber" lastName="Webber" middleName="Victor" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Webber</title>
+ <partNumber>2:10-cr-00227</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00227/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cr-00227;10-227</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Shawn Victor Webber</displayForm>
+ <namePart type="family">Webber</namePart>
+ <namePart type="given">Shawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_10-cr-00227</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:10-cr-00227</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Shawn" fullName="Shawn Victor Webber" lastName="Webber" middleName="Victor" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00227-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00227/USCOURTS-caed-2_10-cr-00227-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Webber</title>
+  <subTitle>WRIT of HABEAS CORPUS AD PROSEQUENDUM as to Shawn Victor Webber signed by Magistrate Judge Edmund F. Brennan on 5/17/10 ORDERING the above-named custodian, as well as the United States Marshal&apos;s Service for this district, is hereby ORDERED to produce the named detainee, FORTHWITH, and any further proceedings to be had in this cause, and at the conclusion of said proceedings to return said detainee to the above-named custodian. (Becknal, R)[2:10-mj-00099-EFB]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_10-cr-00227-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a08f54</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00227/USCOURTS-caed-2_10-cr-00227-0</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00227_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00227/USCOURTS-caed-2_10-cr-00227-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00227/pdf/USCOURTS-caed-2_10-cr-00227-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00227; USA v. Webber; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00227-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-05-19</dateIssued>
+  <docketText>WRIT of HABEAS CORPUS AD PROSEQUENDUM as to Shawn Victor Webber signed by Magistrate Judge Edmund F. Brennan on 5/17/10 ORDERING the above-named custodian, as well as the United States Marshal&apos;s Service for this district, is hereby ORDERED to produce the named detainee, FORTHWITH, and any further proceedings to be had in this cause, and at the conclusion of said proceedings to return said detainee to the above-named custodian. (Becknal, R)[2:10-mj-00099-EFB]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00227-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00227/USCOURTS-caed-2_10-cr-00227-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Webber</title>
+  <subTitle>DETENTION ORDER as to Shawn Victor Webber signed by Magistrate Judge Dale A. Drozd on 06/02/10. (Williams, D)[2:10-mj-00099-EFB]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_10-cr-00227-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a08f55</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00227/USCOURTS-caed-2_10-cr-00227-1</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00227_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00227/USCOURTS-caed-2_10-cr-00227-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00227/pdf/USCOURTS-caed-2_10-cr-00227-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00227; USA v. Webber; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00227-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-06-02</dateIssued>
+  <docketText>DETENTION ORDER as to Shawn Victor Webber signed by Magistrate Judge Dale A. Drozd on 06/02/10. (Williams, D)[2:10-mj-00099-EFB]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00227-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00227/USCOURTS-caed-2_10-cr-00227-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Webber</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Shawn Victor Webber signed by Judge Frank C. Damrell, Jr on 12/9/2010. (Krueger, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_10-cr-00227-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a08f57</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00227/USCOURTS-caed-2_10-cr-00227-2</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00227_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00227/USCOURTS-caed-2_10-cr-00227-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00227/pdf/USCOURTS-caed-2_10-cr-00227-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00227; USA v. Webber; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00227-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-12-09</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Shawn Victor Webber signed by Judge Frank C. Damrell, Jr on 12/9/2010. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00227-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00227/USCOURTS-caed-2_10-cr-00227-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Webber</title>
+  <subTitle>STIPULATION and ORDER signed by Chief Judge Morrison C. England, Jr. on 1/2/2013 ORDERING that the 11/22/2010, sentence of SHAWN WEBBER, in Case Number 2:10-cr-00227, is hereby AMENDED to read as follows: The defendant is hereby committed to the custody of the United States Bureau of Prisons to be imprisoned for a total term of 49 months, on each of Counts 1, 2, 3, and 4, to be served concurrently to one another, for a total term of 49 months. The sentence shall run concurrently to Butte County Superior Court Case #CM32553. (Zignago, K.)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_10-cr-00227-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a08f56</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00227/USCOURTS-caed-2_10-cr-00227-3</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00227_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00227/USCOURTS-caed-2_10-cr-00227-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00227/pdf/USCOURTS-caed-2_10-cr-00227-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00227; USA v. Webber; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00227-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Chief Judge Morrison C. England, Jr. on 1/2/2013 ORDERING that the 11/22/2010, sentence of SHAWN WEBBER, in Case Number 2:10-cr-00227, is hereby AMENDED to read as follows: The defendant is hereby committed to the custody of the United States Bureau of Prisons to be imprisoned for a total term of 49 months, on each of Counts 1, 2, 3, and 4, to be served concurrently to one another, for a total term of 49 months. The sentence shall run concurrently to Butte County Superior Court Case #CM32553. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183e918f9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-03-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-03-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01940</identifier>
+<identifier type="local">P0b002ee183e918f9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-03-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-03-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-01940</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01940</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01940</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party firstName="Ron" fullName="Ron Fekrat" lastName="Fekrat" role="Plaintiff"></party>
+ <party fullName="Management&amp;Training Corporation (MTC)" lastName="Management&amp;Training Corporation (MTC)" role="Defendant"></party>
+ <party fullName="The GEO Group, Inc." lastName="The GEO Group, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Fekrat v. The GEO Group, Inc. et al</title>
+ <partNumber>1:12-cv-01940</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01940/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-01940;12-1940</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ron Fekrat</displayForm>
+ <namePart type="family">Fekrat</namePart>
+ <namePart type="given">Ron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Management&amp;Training Corporation (MTC)</displayForm>
+ <namePart type="family">Management&amp;Training Corporation (MTC)</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The GEO Group, Inc.</displayForm>
+ <namePart type="family">The GEO Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-01940</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-01940</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party firstName="Ron" fullName="Ron Fekrat" lastName="Fekrat" role="Plaintiff"></party>
+ <party fullName="Management&amp;Training Corporation (MTC)" lastName="Management&amp;Training Corporation (MTC)" role="Defendant"></party>
+ <party fullName="The GEO Group, Inc." lastName="The GEO Group, Inc." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01940-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01940/USCOURTS-caed-1_12-cv-01940-0/mods.xml">
+ <titleInfo>
+  <title>Fekrat v. The GEO Group, Inc. et al</title>
+  <subTitle>ORDER signed by District Judge Anthony W. Ishii on 1/3/2013 vacating 1/7/2013 hearing and referring pending 6 MOTION to DISMISS to Magistrate Judge Michael J. Seng.(Lundstrom, T)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01940-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183e988a5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01940/USCOURTS-caed-1_12-cv-01940-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01940_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01940/USCOURTS-caed-1_12-cv-01940-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01940/pdf/USCOURTS-caed-1_12-cv-01940-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01940; Fekrat v. The GEO Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01940-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER signed by District Judge Anthony W. Ishii on 1/3/2013 vacating 1/7/2013 hearing and referring pending 6 MOTION to DISMISS to Magistrate Judge Michael J. Seng.(Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01940-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01940/USCOURTS-caed-1_12-cv-01940-1/mods.xml">
+ <titleInfo>
+  <title>Fekrat v. The GEO Group, Inc. et al</title>
+  <subTitle>ORDER REASSIGNING ACTION; New case number is: 1:12-cv-1940 AWI JLT, signed by Magistrate Judge Michael J. Seng on 2/4/13. (Martin-Gill, S)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01940-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183e988a7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01940/USCOURTS-caed-1_12-cv-01940-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01940_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01940/USCOURTS-caed-1_12-cv-01940-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01940/pdf/USCOURTS-caed-1_12-cv-01940-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01940; Fekrat v. The GEO Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01940-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-02-05</dateIssued>
+  <docketText>ORDER REASSIGNING ACTION; New case number is: 1:12-cv-1940 AWI JLT, signed by Magistrate Judge Michael J. Seng on 2/4/13. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01940-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01940/USCOURTS-caed-1_12-cv-01940-2/mods.xml">
+ <titleInfo>
+  <title>Fekrat v. The GEO Group, Inc. et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Denying Defendant&apos;s Motion to Dismiss Action for Failure to Exhaust Administrative Remedies and Failure to State a Claim ECF [6 and 12. Matter is referred to District Judge Anthony W. Ishii; Objections to F&amp;R due within 14 days, signed by Magistrate Judge Michael J. Seng on 2/5/2013. (Yu, L)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01940-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183e988a6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01940/USCOURTS-caed-1_12-cv-01940-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01940_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01940/USCOURTS-caed-1_12-cv-01940-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01940/pdf/USCOURTS-caed-1_12-cv-01940-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01940; Fekrat v. The GEO Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01940-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-02-05</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Denying Defendant&apos;s Motion to Dismiss Action for Failure to Exhaust Administrative Remedies and Failure to State a Claim ECF [6 and 12. Matter is referred to District Judge Anthony W. Ishii; Objections to F&amp;R due within 14 days, signed by Magistrate Judge Michael J. Seng on 2/5/2013. (Yu, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-01940-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01940/USCOURTS-caed-1_12-cv-01940-3/mods.xml">
+ <titleInfo>
+  <title>Fekrat v. The GEO Group, Inc. et al</title>
+  <subTitle>ORDER DISMISSING CASE signed by District Judge Anthony W. Ishii on 3/15/2013. CASE CLOSED. (Jessen, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-01940-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183e988a8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01940/USCOURTS-caed-1_12-cv-01940-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-01940_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-01940/USCOURTS-caed-1_12-cv-01940-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-01940/pdf/USCOURTS-caed-1_12-cv-01940-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01940; Fekrat v. The GEO Group, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-01940-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-03-15</dateIssued>
+  <docketText>ORDER DISMISSING CASE signed by District Judge Anthony W. Ishii on 3/15/2013. CASE CLOSED. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

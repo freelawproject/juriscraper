@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18172a453">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-00119</identifier>
+<identifier type="local">P0b002ee18172a453</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_01-cr-00119</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_01-cr-00119</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:01-cr-00119</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Randall" fullName="Randall D. Herring" lastName="Herring" middleName="D." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Herring</title>
+ <partNumber>4:01-cr-00119</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-00119/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:01-cr-00119;01-119</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Randall D. Herring</displayForm>
+ <namePart type="family">Herring</namePart>
+ <namePart type="given">Randall</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_01-cr-00119</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:01-cr-00119</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Randall" fullName="Randall D. Herring" lastName="Herring" middleName="D." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-00119-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Herring</title>
+  <subTitle>ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS SHOULD NOT BE DESTROYED - Pursuant to NECivR 79.1(f) or NECrimR 55.1(g), counsel for Defendant, shall either 1) withdraw the following sealed exhibits, previously submitted in this matter within 15 calendar days of the date of this order, or 2) show cause why the exhibits should not be destroyed as to defendant Randall D. Herring. Ordered by Judge Richard G. Kopf.(CS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-00119-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817518bb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-0</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-00119_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-00119/pdf/USCOURTS-ned-4_01-cr-00119-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-00119; USA v. Herring; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-00119-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-05-15</dateIssued>
+  <docketText>ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS SHOULD NOT BE DESTROYED - Pursuant to NECivR 79.1(f) or NECrimR 55.1(g), counsel for Defendant, shall either 1) withdraw the following sealed exhibits, previously submitted in this matter within 15 calendar days of the date of this order, or 2) show cause why the exhibits should not be destroyed as to defendant Randall D. Herring. Ordered by Judge Richard G. Kopf.(CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-00119-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Herring</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Timothy L. Ashford appointed as counsel as to defendant Randall D. Herring as ordered by Magistrate Judge David L. Piester. (SED)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-00119-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817518ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-1</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-00119_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-00119/pdf/USCOURTS-ned-4_01-cr-00119-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-00119; USA v. Herring; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-00119-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-03-09</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Timothy L. Ashford appointed as counsel as to defendant Randall D. Herring as ordered by Magistrate Judge David L. Piester. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-00119-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Herring</title>
+  <subTitle>ORDER as to Randall D. Herring.It is ordered that: (1)The defendant&apos;s motion to continue 62 is granted.(2)Defendant Herring&apos;s revocation hearing is rescheduled to Wednesday, October 21, 2009, at 1:00 p.m., before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court.Ordered by Judge Richard G. Kopf. ( KLL, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-00119-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817518bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-2</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-00119_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-00119/pdf/USCOURTS-ned-4_01-cr-00119-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-00119; USA v. Herring; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-00119-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-07-28</dateIssued>
+  <docketText>ORDER as to Randall D. Herring.It is ordered that: (1)The defendant&apos;s motion to continue 62 is granted.(2)Defendant Herring&apos;s revocation hearing is rescheduled to Wednesday, October 21, 2009, at 1:00 p.m., before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court.Ordered by Judge Richard G. Kopf. ( KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-00119-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Herring</title>
+  <subTitle>ORDER as to defendant Randall D. Herring. It is ordered that: (1)The government&apos;s unopposed motion to continue 64 is granted.(2)Defendant Herring&apos;s revocation hearing is rescheduled to Friday, December 11, 2009, from 11:00 a.m. to 12:00 noon, before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-00119-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181751d35</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-3</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-00119_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-00119/pdf/USCOURTS-ned-4_01-cr-00119-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-00119; USA v. Herring; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-00119-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-10-21</dateIssued>
+  <docketText>ORDER as to defendant Randall D. Herring. It is ordered that: (1)The government&apos;s unopposed motion to continue 64 is granted.(2)Defendant Herring&apos;s revocation hearing is rescheduled to Friday, December 11, 2009, from 11:00 a.m. to 12:00 noon, before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-00119-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Herring</title>
+  <subTitle>ORDER as to defendant Randall D. Herring. It is ordered that Defendant Herring&apos;s revocation hearing is rescheduled to 12/15/2009 at 04:30 PM in Courtroom 1, Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-00119-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817518b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-4</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-00119_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-00119/pdf/USCOURTS-ned-4_01-cr-00119-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-00119; USA v. Herring; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-00119-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-10-22</dateIssued>
+  <docketText>ORDER as to defendant Randall D. Herring. It is ordered that Defendant Herring&apos;s revocation hearing is rescheduled to 12/15/2009 at 04:30 PM in Courtroom 1, Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_01-cr-00119-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Herring</title>
+  <subTitle>ORDER as to defendant Randall D. Herring. At the request of the United States Marshal Service, and without objection by the parties, IT IS ORDERED that Defendant Herring&apos;s revocation hearing is rescheduled to Thursday, January 28, 2010, at 12:00 noon, before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_01-cr-00119-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817518b9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-5</identifier>
+ <identifier type="former granule identifier">ned-4_01-cr-00119_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_01-cr-00119/USCOURTS-ned-4_01-cr-00119-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_01-cr-00119/pdf/USCOURTS-ned-4_01-cr-00119-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:01-cr-00119; USA v. Herring; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_01-cr-00119-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-01-19</dateIssued>
+  <docketText>ORDER as to defendant Randall D. Herring. At the request of the United States Marshal Service, and without objection by the parties, IT IS ORDERED that Defendant Herring&apos;s revocation hearing is rescheduled to Thursday, January 28, 2010, at 12:00 noon, before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+</mods>

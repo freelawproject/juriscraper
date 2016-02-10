@@ -1,0 +1,214 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118a8ee">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_08-cv-01332</identifier>
+<identifier type="local">P0b002ee18118a8ee</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-5_08-cv-01332</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_08-cv-01332</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:08-cv-01332</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="Bank of America Corporation" lastName="Bank of America Corporation" role="Defendant"></party>
+ <party fullName="First Franklin Loan Services, Inc." lastName="First Franklin Loan Services, Inc." role="Defendant"></party>
+ <party fullName="Home Loan Services, Inc." lastName="Home Loan Services, Inc." role="Defendant"></party>
+ <party fullName="Merrill Lynch&amp;Co. Inc." lastName="Merrill Lynch&amp;Co. Inc." role="Defendant"></party>
+ <party fullName="Merrill Lynch&amp;Co., Inc." lastName="Merrill Lynch&amp;Co., Inc." role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul C. Meyer" lastName="Meyer" middleName="C." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Meyer v. First Franklin Loan Services, Inc. et al</title>
+ <partNumber>5:08-cv-01332</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_08-cv-01332/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:08-cv-01332;08-1332</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Syracuse</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bank of America Corporation</displayForm>
+ <namePart type="family">Bank of America Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>First Franklin Loan Services, Inc.</displayForm>
+ <namePart type="family">First Franklin Loan Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Home Loan Services, Inc.</displayForm>
+ <namePart type="family">Home Loan Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Merrill Lynch&amp;Co. Inc.</displayForm>
+ <namePart type="family">Merrill Lynch&amp;Co. Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Merrill Lynch&amp;Co., Inc.</displayForm>
+ <namePart type="family">Merrill Lynch&amp;Co., Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul C. Meyer</displayForm>
+ <namePart type="family">Meyer</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_08-cv-01332</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:08-cv-01332</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="Bank of America Corporation" lastName="Bank of America Corporation" role="Defendant"></party>
+ <party fullName="First Franklin Loan Services, Inc." lastName="First Franklin Loan Services, Inc." role="Defendant"></party>
+ <party fullName="Home Loan Services, Inc." lastName="Home Loan Services, Inc." role="Defendant"></party>
+ <party fullName="Merrill Lynch&amp;Co. Inc." lastName="Merrill Lynch&amp;Co. Inc." role="Defendant"></party>
+ <party fullName="Merrill Lynch&amp;Co., Inc." lastName="Merrill Lynch&amp;Co., Inc." role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul C. Meyer" lastName="Meyer" middleName="C." role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_08-cv-01332-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_08-cv-01332/USCOURTS-nynd-5_08-cv-01332-0/mods.xml">
+ <titleInfo>
+  <title>Meyer v. First Franklin Loan Services, Inc. et al</title>
+  <subTitle>JUDGMENT DISMISSING ACTION BY REASON OF SETTLEMENT: this action is DISMISSED in its entirety without prejudice to the right of the parties to secure reinstatement of the case within thirty (30) days after the date of this judgment by making a showing that the settlement was not, in fact, consummated; and in the event that no request is made for reinstatement within thirty (30) days of the date of this judgment, the dismissal of this case shall thereafter be with prejudice. (lmw) (Copy served upon pro se plaintiff via regular mail)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_08-cv-01332-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181414f18</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_08-cv-01332/USCOURTS-nynd-5_08-cv-01332-0</identifier>
+ <identifier type="former granule identifier">nynd-5_08-cv-01332_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_08-cv-01332/USCOURTS-nynd-5_08-cv-01332-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_08-cv-01332/pdf/USCOURTS-nynd-5_08-cv-01332-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-01332; Meyer v. First Franklin Loan Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_08-cv-01332-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-06-15</dateIssued>
+  <docketText>JUDGMENT DISMISSING ACTION BY REASON OF SETTLEMENT: this action is DISMISSED in its entirety without prejudice to the right of the parties to secure reinstatement of the case within thirty (30) days after the date of this judgment by making a showing that the settlement was not, in fact, consummated; and in the event that no request is made for reinstatement within thirty (30) days of the date of this judgment, the dismissal of this case shall thereafter be with prejudice. (lmw) (Copy served upon pro se plaintiff via regular mail)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_08-cv-01332-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_08-cv-01332/USCOURTS-nynd-5_08-cv-01332-1/mods.xml">
+ <titleInfo>
+  <title>Meyer v. First Franklin Loan Services, Inc. et al</title>
+  <subTitle>MEMORANDUM-DECISION AND ORDER denying Pltfs&apos; 33 Cross-Motion to Amend his complaint; granting Pltf&apos;s 33 Cross-Motion for an Order voluntarily dismissing his complaint w/prejudice; dismissing Pltf&apos;s complaint w/prejudice; directing the clerk to terminate the 31 and 40 motions. Signed by Judge Glenn T. Suddaby on 1/19/2010. (amt) [Pltf served via reg. mail]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_08-cv-01332-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181414f17</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_08-cv-01332/USCOURTS-nynd-5_08-cv-01332-1</identifier>
+ <identifier type="former granule identifier">nynd-5_08-cv-01332_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_08-cv-01332/USCOURTS-nynd-5_08-cv-01332-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_08-cv-01332/pdf/USCOURTS-nynd-5_08-cv-01332-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-01332; Meyer v. First Franklin Loan Services, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_08-cv-01332-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-19</dateIssued>
+  <docketText>MEMORANDUM-DECISION AND ORDER denying Pltfs&apos; 33 Cross-Motion to Amend his complaint; granting Pltf&apos;s 33 Cross-Motion for an Order voluntarily dismissing his complaint w/prejudice; dismissing Pltf&apos;s complaint w/prejudice; directing the clerk to terminate the 31 and 40 motions. Signed by Judge Glenn T. Suddaby on 1/19/2010. (amt) [Pltf served via reg. mail]</docketText>
+</extension>
+</relatedItem>
+</mods>

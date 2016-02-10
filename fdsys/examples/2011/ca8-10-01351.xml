@@ -1,0 +1,169 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e5f88f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-10-01351</identifier>
+<identifier type="local">P0b002ee180e5f88f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-10-01351</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-10-01351</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>10-01351</caseNumber>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party fullName="City of Red Wing" lastName="City of Red Wing" role="Appellee"></party>
+ <party firstName="Daniel" fullName="Daniel Hemmah" lastName="Hemmah" role="Appellant"></party>
+ <party firstName="Kay" fullName="Kay Kuhlmann" lastName="Kuhlmann" role="Appellee"></party>
+ <party firstName="Roger" fullName="Roger Seymour" lastName="Seymour" role="Appellee"></party>
+ <party firstName="Dennis" fullName="Dennis Tebbe" lastName="Tebbe" role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>Daniel Hemmah v. City of Red Wing, et al</title>
+ <partNumber>10-01351</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-10-01351/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">10-01351;10-1351</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>City of Red Wing</displayForm>
+ <namePart type="family">City of Red Wing</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Hemmah</displayForm>
+ <namePart type="family">Hemmah</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Kay Kuhlmann</displayForm>
+ <namePart type="family">Kuhlmann</namePart>
+ <namePart type="given">Kay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Roger Seymour</displayForm>
+ <namePart type="family">Seymour</namePart>
+ <namePart type="given">Roger</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Tebbe</displayForm>
+ <namePart type="family">Tebbe</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-10-01351</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>10-01351</caseNumber>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party fullName="City of Red Wing" lastName="City of Red Wing" role="Appellee"></party>
+ <party firstName="Daniel" fullName="Daniel Hemmah" lastName="Hemmah" role="Appellant"></party>
+ <party firstName="Kay" fullName="Kay Kuhlmann" lastName="Kuhlmann" role="Appellee"></party>
+ <party firstName="Roger" fullName="Roger Seymour" lastName="Seymour" role="Appellee"></party>
+ <party firstName="Dennis" fullName="Dennis Tebbe" lastName="Tebbe" role="Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-10-01351-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-10-01351/USCOURTS-ca8-10-01351-0/mods.xml">
+ <titleInfo>
+  <title>Daniel Hemmah v. City of Red Wing, et al</title>
+  <subTitle>PER CURIAM OPINION FILED - THE COURT: DIANA E. MURPHY, LAVENSKI R. SMITH and DUANE BENTON (UNPUBLISHED) [3741758] [10-1351]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-10-01351-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e6f80f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-10-01351/USCOURTS-ca8-10-01351-0</identifier>
+ <identifier type="former granule identifier">ca8-10-01351_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-10-01351/USCOURTS-ca8-10-01351-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-10-01351/pdf/USCOURTS-ca8-10-01351-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 10-01351; Daniel Hemmah v. City of Red Wing, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-10-01351-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-06</dateIssued>
+  <docketText>PER CURIAM OPINION FILED - THE COURT: DIANA E. MURPHY, LAVENSKI R. SMITH and DUANE BENTON (UNPUBLISHED) [3741758] [10-1351]</docketText>
+</extension>
+</relatedItem>
+</mods>

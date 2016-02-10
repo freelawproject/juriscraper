@@ -1,0 +1,665 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b24e3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507</identifier>
+<identifier type="local">P0b002ee1817b24e3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cv-00507</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00507</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00507</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>330</natureSuitCode>
+ <natureSuit>Federal Employers&apos; Liability</natureSuit>
+ <cause>45:51 Railways: Fed. Employer&apos;s Liability Act</cause>
+ <party fullName="Union Pacific Corporation" lastName="Union Pacific Corporation" role="Defendant"></party>
+ <party fullName="Union Pacific Railroad Company" lastName="Union Pacific Railroad Company" role="Defendant"></party>
+ <party firstName="Willis" fullName="Willis Allen York" lastName="York" middleName="Allen" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>York v. Union Pacific Railroad Company</title>
+ <partNumber>8:08-cv-00507</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cv-00507;08-507</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Union Pacific Corporation</displayForm>
+ <namePart type="family">Union Pacific Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Union Pacific Railroad Company</displayForm>
+ <namePart type="family">Union Pacific Railroad Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Willis Allen York</displayForm>
+ <namePart type="family">York</namePart>
+ <namePart type="given">Willis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cv-00507</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cv-00507</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>330</natureSuitCode>
+ <natureSuit>Federal Employers&apos; Liability</natureSuit>
+ <cause>45:51 Railways: Fed. Employer&apos;s Liability Act</cause>
+ <party fullName="Union Pacific Corporation" lastName="Union Pacific Corporation" role="Defendant"></party>
+ <party fullName="Union Pacific Railroad Company" lastName="Union Pacific Railroad Company" role="Defendant"></party>
+ <party firstName="Willis" fullName="Willis Allen York" lastName="York" middleName="Allen" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-0/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER OF TRANSFER - The above-listed case is hereby transferred to the docket of the Honorable Thad Hearfield. Ordered by Judge Ron Clark. (PCV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>ORDER OF TRANSFER - The above-listed case is hereby transferred to the docket of the Honorable Thad Hearfield. Ordered by Judge Ron Clark. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-1/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER - Referring all Pretrial Matters to United States Magistrate Judge Judith Guthrie.Ordered by Judge Thad Heartfield. (PCV, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88b9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>ORDER - Referring all Pretrial Matters to United States Magistrate Judge Judith Guthrie.Ordered by Judge Thad Heartfield. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-2/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>SCHEDULING ORDER - NOTICE OF SCHEDULING CONFERENCE, PROPOSED DEADLINES FOR DOCKET CONTROL ORDER AND PROPOSED DISCOVERY ORDER Ordered by Magistrate Judge Judith K. Guthrie (PCV, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a882c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>SCHEDULING ORDER - NOTICE OF SCHEDULING CONFERENCE, PROPOSED DEADLINES FOR DOCKET CONTROL ORDER AND PROPOSED DISCOVERY ORDER Ordered by Magistrate Judge Judith K. Guthrie (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-3/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>SCHEDULING ORDER Ordered by Magistrate Judge Judith K. Guthrie(PCV, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a8829</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-3</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>SCHEDULING ORDER Ordered by Magistrate Judge Judith K. Guthrie(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-4/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>AMENDED SCHEDULING ORDER Ordered by Magistrate Judge Judith K. Guthrie (PCV, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-4</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>AMENDED SCHEDULING ORDER Ordered by Magistrate Judge Judith K. Guthrie (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-5/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER REFERRING CASE to mediator. Ordered by Magistrate Judge Judith K. Guthrie(PCV, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88c0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-5</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>ORDER REFERRING CASE to mediator. Ordered by Magistrate Judge Judith K. Guthrie(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-6/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER denying 19 Motion to Consolidate Cases Ordered by Magistrate Judge Judith K. Guthrie(PCV, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88bd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-6</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>ORDER denying 19 Motion to Consolidate Cases Ordered by Magistrate Judge Judith K. Guthrie(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-7/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER granting 30 Motion to Modify Scheduling Order Ordered by Magistrate Judge Judith K. Guthrie(PCV, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88d6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-7</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>ORDER granting 30 Motion to Modify Scheduling Order Ordered by Magistrate Judge Judith K. Guthrie(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-8/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER granting 27 Second Motion for Independent Examination of Plaintiff. Ordered by Magistrate Judge Judith K. Guthrie (PCV, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88be</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-8</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>ORDER granting 27 Second Motion for Independent Examination of Plaintiff. Ordered by Magistrate Judge Judith K. Guthrie (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-9/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER denying 36 Motion for Reconsideration Ordered by Magistrate Judge Judith K. Guthrie (PCV, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a882b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-9</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>ORDER denying 36 Motion for Reconsideration Ordered by Magistrate Judge Judith K. Guthrie (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-10/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER granting 35 Motion to Change Venue and the case is hereby transferred to the District of USDC-Nebraska pursuant to 28 U.S.C. 1404(a). Ordered by Magistrate Judge Judith K. Guthrie (PCV, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a8828</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-10</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>ORDER granting 35 Motion to Change Venue and the case is hereby transferred to the District of USDC-Nebraska pursuant to 28 U.S.C. 1404(a). Ordered by Magistrate Judge Judith K. Guthrie (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-11/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDERED that the above-styled case, including the Order to Transfer, is STAYED,pending the en banc decision of the Fifth Circuit in the matter of In Re Volkswagen.Ordered by Magistrate Judge Judith K. Guthrie (PCV, )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-11</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>ORDERED that the above-styled case, including the Order to Transfer, is STAYED,pending the en banc decision of the Fifth Circuit in the matter of In Re Volkswagen.Ordered by Magistrate Judge Judith K. Guthrie (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-12/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDERED that the STAY imposed in this case is LIFTED. It is further ORDERED that Plaintiff&apos;s Motion for Reconsideration of Magistrate Judge&apos;s Order is OVERRULED. The case is hereby TRANSFERRED to the District of Nebraska pursuant to 28 U.S.C. 1404(a). Overruling 45 Motion for Reconsideration Ordered by Judge Thad Hearfield(PCV, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88bb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-12</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>ORDERED that the STAY imposed in this case is LIFTED. It is further ORDERED that Plaintiff&apos;s Motion for Reconsideration of Magistrate Judge&apos;s Order is OVERRULED. The case is hereby TRANSFERRED to the District of Nebraska pursuant to 28 U.S.C. 1404(a). Overruling 45 Motion for Reconsideration Ordered by Judge Thad Hearfield(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-13/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER granting 64 Motion to Withdraw as Attorney. George E. Chandler is deemed withdrawn as counsel for plaintiff. Ordered by Senior Judge Lyle E. Strom. (PCV, )</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88bf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-13</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2008-12-12</dateIssued>
+  <docketText>ORDER granting 64 Motion to Withdraw as Attorney. George E. Chandler is deemed withdrawn as counsel for plaintiff. Ordered by Senior Judge Lyle E. Strom. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-14/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER granting 70 Motion for Leave to withdraw as counsel of record for defendant. Mainess Gibson and Amy Nilsen of Connelly, Baker, Wotring, LLP, are deemed withdrawn as counsel for defendant. Ordered by Senior Judge Lyle E. Strom. (copies mailed) (MKR)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a882a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-14</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2009-01-05</dateIssued>
+  <docketText>ORDER granting 70 Motion for Leave to withdraw as counsel of record for defendant. Mainess Gibson and Amy Nilsen of Connelly, Baker, Wotring, LLP, are deemed withdrawn as counsel for defendant. Ordered by Senior Judge Lyle E. Strom. (copies mailed) (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-15/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER - Scheduling Conference set for 2/4/2009 at 01:30 PM before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (CJP)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-15</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2009-01-21</dateIssued>
+  <docketText>ORDER - Scheduling Conference set for 2/4/2009 at 01:30 PM before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-16/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER denying 61 motion to change place of trial. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-16</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2009-03-05</dateIssued>
+  <docketText>ORDER denying 61 motion to change place of trial. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-17/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>ORDER granting in part and denying in part 84 Motion for Leave to Conduct Supplemental Deposition and for Rule 35 Examinations. Union Pacific&apos;s request for leave to conduct a second deposition of plaintiff regarding plaintiff&apos;s alleged left hip injury is granted to the extent consistent with this order. Union Pacific&apos;s request for an order requiring plaintiff to undergo a Rule 35 orthopedic examination by Dr. Mercier is granted to the extent consistent with this order, and plaintiff shall appear for the examination at the date and time to be determined by the parties. Union Pacific&apos;s request for a Rule 35 vocational examination by Dr. Greene is denied. Ordered by Senior Judge Lyle E. Strom. (PCV, )</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88b7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-17</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2009-10-30</dateIssued>
+  <docketText>ORDER granting in part and denying in part 84 Motion for Leave to Conduct Supplemental Deposition and for Rule 35 Examinations. Union Pacific&apos;s request for leave to conduct a second deposition of plaintiff regarding plaintiff&apos;s alleged left hip injury is granted to the extent consistent with this order. Union Pacific&apos;s request for an order requiring plaintiff to undergo a Rule 35 orthopedic examination by Dr. Mercier is granted to the extent consistent with this order, and plaintiff shall appear for the examination at the date and time to be determined by the parties. Union Pacific&apos;s request for a Rule 35 vocational examination by Dr. Greene is denied. Ordered by Senior Judge Lyle E. Strom. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cv-00507-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-18/mods.xml">
+ <titleInfo>
+  <title>York v. Union Pacific Railroad Company</title>
+  <subTitle>MEMORANDUM OPINION - Plaintiff&apos;s motion to continue 93 the trial date and amend order setting schedule for progression of a civil case is denied. Defendant&apos;s motion for summary judgment 96 is granted. A separate order will be entered in accordance with this memorandum opinion. Ordered by Senior Judge Lyle E. Strom. (JAE)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cv-00507-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a88bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-18</identifier>
+ <identifier type="former granule identifier">ned-8_08-cv-00507_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cv-00507/USCOURTS-ned-8_08-cv-00507-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cv-00507/pdf/USCOURTS-ned-8_08-cv-00507-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cv-00507; York v. Union Pacific Railroad Company; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cv-00507-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2010-01-15</dateIssued>
+  <docketText>MEMORANDUM OPINION - Plaintiff&apos;s motion to continue 93 the trial date and amend order setting schedule for progression of a civil case is denied. Defendant&apos;s motion for summary judgment 96 is granted. A separate order will be entered in accordance with this memorandum opinion. Ordered by Senior Judge Lyle E. Strom. (JAE)</docketText>
+</extension>
+</relatedItem>
+</mods>

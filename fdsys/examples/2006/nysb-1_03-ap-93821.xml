@@ -1,0 +1,153 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180eb341b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Southern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-26</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-1_03-ap-93821</identifier>
+<identifier type="local">P0b002ee180eb341b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-26</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nysb-1_03-ap-93821</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nysb-1_03-ap-93821</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nysb</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>3353</courtSortOrder>
+ <caseNumber>1:03-ap-93821</caseNumber>
+ <caseOffice>Manhattan</caseOffice>
+ <party fullName="United Nations Federal Credit Union" lastName="United Nations Federal Credit Union" role="Plaintiff"></party>
+ <party firstName="Mohamed" fullName="Mohamed Z. Ashri" lastName="Ashri" middleName="Z." role="Defendant"></party>
+ <party fullName="Clerk&apos;s Office of the U.S. Bankruptcy Court" lastName="Clerk&apos;s Office of the U.S. Bankruptcy Court" role="Unknown"></party>
+</extension>
+<titleInfo>
+ <title>United Nations Federal Credit Union v. Ashri</title>
+ <partNumber>1:03-ap-93821</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-1_03-ap-93821/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">1:03-ap-93821;03-93821</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Southern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Manhattan</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>United Nations Federal Credit Union</displayForm>
+ <namePart type="family">United Nations Federal Credit Union</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mohamed Z. Ashri</displayForm>
+ <namePart type="family">Ashri</namePart>
+ <namePart type="given">Mohamed</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Clerk&apos;s Office of the U.S. Bankruptcy Court</displayForm>
+ <namePart type="family">Clerk&apos;s Office of the U.S. Bankruptcy Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Unknown</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nysb-1_03-ap-93821</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nysb</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>3353</courtSortOrder>
+ <caseNumber>1:03-ap-93821</caseNumber>
+ <caseOffice>Manhattan</caseOffice>
+ <party fullName="United Nations Federal Credit Union" lastName="United Nations Federal Credit Union" role="Plaintiff"></party>
+ <party firstName="Mohamed" fullName="Mohamed Z. Ashri" lastName="Ashri" middleName="Z." role="Defendant"></party>
+ <party fullName="Clerk&apos;s Office of the U.S. Bankruptcy Court" lastName="Clerk&apos;s Office of the U.S. Bankruptcy Court" role="Unknown"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nysb-1_03-ap-93821-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-1_03-ap-93821/USCOURTS-nysb-1_03-ap-93821-0/mods.xml">
+ <titleInfo>
+  <title>United Nations Federal Credit Union v. Ashri</title>
+  <subTitle>Order signed on 1/5/2006 granting partial summary judgment regarding objection to dischargeability of debt under 11 U.S.C. Section 523(a)(2)(A) regarding second cause of action. (related document(s)7) (Nulty, Lynda)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nysb-1_03-ap-93821-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813c5af9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-1_03-ap-93821/USCOURTS-nysb-1_03-ap-93821-0</identifier>
+ <identifier type="former granule identifier">nysb-1_03-ap-93821_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nysb-1_03-ap-93821/USCOURTS-nysb-1_03-ap-93821-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nysb-1_03-ap-93821/pdf/USCOURTS-nysb-1_03-ap-93821-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:03-ap-93821; United Nations Federal Credit Union v. Ashri; </searchTitle>
+  <courtName>United States Bankruptcy Court Southern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nysb-1_03-ap-93821-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-05</dateIssued>
+  <docketText>Order signed on 1/5/2006 granting partial summary judgment regarding objection to dischargeability of debt under 11 U.S.C. Section 523(a)(2)(A) regarding second cause of action. (related document(s)7) (Nulty, Lynda)</docketText>
+</extension>
+</relatedItem>
+</mods>

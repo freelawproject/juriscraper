@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181b66c88">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-23</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_10-cv-01548</identifier>
+<identifier type="local">P0b002ee181b66c88</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-23</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_10-cv-01548</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_10-cv-01548</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:10-cv-01548</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party fullName="Heza Seal, LLC" lastName="Heza Seal, LLC" role="Defendant"></party>
+ <party fullName="SKF USA Inc." lastName="SKF USA Inc." role="Plaintiff"></party>
+ <party firstName="Helmut" fullName="Helmut Zarwasch-Weiss" lastName="Zarwasch-Weiss" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>SKF USA Inc. v. Zarwasch-Weiss et al</title>
+ <partNumber>1:10-cv-01548</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_10-cv-01548/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-01548;10-1548</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Heza Seal, LLC</displayForm>
+ <namePart type="family">Heza Seal, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SKF USA Inc.</displayForm>
+ <namePart type="family">SKF USA Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Helmut Zarwasch-Weiss</displayForm>
+ <namePart type="family">Zarwasch-Weiss</namePart>
+ <namePart type="given">Helmut</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_10-cv-01548</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:10-cv-01548</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party fullName="Heza Seal, LLC" lastName="Heza Seal, LLC" role="Defendant"></party>
+ <party fullName="SKF USA Inc." lastName="SKF USA Inc." role="Plaintiff"></party>
+ <party firstName="Helmut" fullName="Helmut Zarwasch-Weiss" lastName="Zarwasch-Weiss" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_10-cv-01548-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-01548/USCOURTS-ohnd-1_10-cv-01548-0/mods.xml">
+ <titleInfo>
+  <title>SKF USA Inc. v. Zarwasch-Weiss et al</title>
+  <subTitle>1327-NAV(G,W)Memorandum Opinion and Order. Defendants are prohibited from both selling to and buying from any entity on the SKF Economos customer list. Magistrate Judge Nancy A. Vecchiarelli on 4/19/2011. Associated Cases: 1:10-cv-01548-NAV, 1:10-cv-0</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_10-cv-01548-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b9199b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-01548/USCOURTS-ohnd-1_10-cv-01548-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_10-cv-01548_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-01548/USCOURTS-ohnd-1_10-cv-01548-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_10-cv-01548/pdf/USCOURTS-ohnd-1_10-cv-01548-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01548; SKF USA Inc. v. Zarwasch-Weiss et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_10-cv-01548-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-04-19</dateIssued>
+  <docketText>1327-NAV(G,W)Memorandum Opinion and Order. Defendants are prohibited from both selling to and buying from any entity on the SKF Economos customer list. Magistrate Judge Nancy A. Vecchiarelli on 4/19/2011. Associated Cases: 1:10-cv-01548-NAV, 1:10-cv-0</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_10-cv-01548-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-01548/USCOURTS-ohnd-1_10-cv-01548-1/mods.xml">
+ <titleInfo>
+  <title>SKF USA Inc. v. Zarwasch-Weiss et al</title>
+  <subTitle>Findings of Fact&amp;Conclusions of Law. The court awards plaintiff $125,878 in compensatory damages, $377,634 in punitive damages, and reasonable attorney&apos;s fees, costs, and expenses in an amount yet to be determined. Plaintiff&apos;s application for an award due within 30 days of this order. Defendant shall have 30 days from the filing of plaintiff&apos;s application to conduct discovery. Defendant&apos;s response due within 30 days after the close of discovery. Magistrate Judge Nancy A. Vecchiarelli on 10/3/2011. Associated Cases: 1:10-cv-01548-NAV, 1:10-cv-01327-NAV (G,W)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_10-cv-01548-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b91a96</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-01548/USCOURTS-ohnd-1_10-cv-01548-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_10-cv-01548_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-01548/USCOURTS-ohnd-1_10-cv-01548-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_10-cv-01548/pdf/USCOURTS-ohnd-1_10-cv-01548-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01548; SKF USA Inc. v. Zarwasch-Weiss et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_10-cv-01548-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-10-03</dateIssued>
+  <docketText>Findings of Fact&amp;Conclusions of Law. The court awards plaintiff $125,878 in compensatory damages, $377,634 in punitive damages, and reasonable attorney&apos;s fees, costs, and expenses in an amount yet to be determined. Plaintiff&apos;s application for an award due within 30 days of this order. Defendant shall have 30 days from the filing of plaintiff&apos;s application to conduct discovery. Defendant&apos;s response due within 30 days after the close of discovery. Magistrate Judge Nancy A. Vecchiarelli on 10/3/2011. Associated Cases: 1:10-cv-01548-NAV, 1:10-cv-01327-NAV (G,W)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_10-cv-01548-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-01548/USCOURTS-ohnd-1_10-cv-01548-2/mods.xml">
+ <titleInfo>
+  <title>SKF USA Inc. v. Zarwasch-Weiss et al</title>
+  <subTitle>Order granting 101 Defendants&apos; motion for summary judgment. Magistrate Judge Nancy A. Vecchiarelli on 1/12/2012. (Related Doc # (101)) in case 1:10-cv-01327-NAV; Associated Cases: 1:10-cv-01327-NAV, 1:10-cv-01548-NAV (G,W) Modified text on 1/12/2012 (K,V).</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_10-cv-01548-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b9199a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-01548/USCOURTS-ohnd-1_10-cv-01548-2</identifier>
+ <identifier type="former granule identifier">ohnd-1_10-cv-01548_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-01548/USCOURTS-ohnd-1_10-cv-01548-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_10-cv-01548/pdf/USCOURTS-ohnd-1_10-cv-01548-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01548; SKF USA Inc. v. Zarwasch-Weiss et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_10-cv-01548-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>Order granting 101 Defendants&apos; motion for summary judgment. Magistrate Judge Nancy A. Vecchiarelli on 1/12/2012. (Related Doc # (101)) in case 1:10-cv-01327-NAV; Associated Cases: 1:10-cv-01327-NAV, 1:10-cv-01548-NAV (G,W) Modified text on 1/12/2012 (K,V).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_10-cv-01548-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-01548/USCOURTS-ohnd-1_10-cv-01548-3/mods.xml">
+ <titleInfo>
+  <title>SKF USA Inc. v. Zarwasch-Weiss et al</title>
+  <subTitle>Order granting Motion of SKF USA for fees costs with modifications, awarding attorney&apos;s fees and costs in the amount of $157,374.48 pursuant to the Ohio Uniform Trade Secrets Act and $40,006.95 pursuant to 28 U.S.C. Section 1920. The court awards SKF USA and assesses against Zarwasch and Heza pursuant to the OUTSA attorney&apos;s fees and costs in the amount of $157,374.48. The court also awards SKF USA and assesses against Zarwasch and Heza pursuant to Section 1920 costs in the amount of $40,006.95 (Related Doc # (111)) in case 1:10-cv-01327-NAV; (Related Doc # (165)) in case 1:10-cv-01548-NAV. Magistrate Judge Nancy A. Vecchiarelli on 1/20/2012.Associated Cases: 1:10-cv-01327-NAV, 1:10-cv-01548-NAV(W,G)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_10-cv-01548-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b91a95</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-01548/USCOURTS-ohnd-1_10-cv-01548-3</identifier>
+ <identifier type="former granule identifier">ohnd-1_10-cv-01548_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-01548/USCOURTS-ohnd-1_10-cv-01548-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_10-cv-01548/pdf/USCOURTS-ohnd-1_10-cv-01548-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01548; SKF USA Inc. v. Zarwasch-Weiss et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_10-cv-01548-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-20</dateIssued>
+  <docketText>Order granting Motion of SKF USA for fees costs with modifications, awarding attorney&apos;s fees and costs in the amount of $157,374.48 pursuant to the Ohio Uniform Trade Secrets Act and $40,006.95 pursuant to 28 U.S.C. Section 1920. The court awards SKF USA and assesses against Zarwasch and Heza pursuant to the OUTSA attorney&apos;s fees and costs in the amount of $157,374.48. The court also awards SKF USA and assesses against Zarwasch and Heza pursuant to Section 1920 costs in the amount of $40,006.95 (Related Doc # (111)) in case 1:10-cv-01327-NAV; (Related Doc # (165)) in case 1:10-cv-01548-NAV. Magistrate Judge Nancy A. Vecchiarelli on 1/20/2012.Associated Cases: 1:10-cv-01327-NAV, 1:10-cv-01548-NAV(W,G)</docketText>
+</extension>
+</relatedItem>
+</mods>

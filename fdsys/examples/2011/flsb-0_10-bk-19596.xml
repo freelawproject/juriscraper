@@ -1,0 +1,190 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180ea0400">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Southern District of Florida</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-0_10-bk-19596</identifier>
+<identifier type="local">P0b002ee180ea0400</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-09-26</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-flsb-0_10-bk-19596</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-flsb-0_10-bk-19596</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>flsb</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Florida</courtState>
+ <courtSortOrder>3113</courtSortOrder>
+ <caseNumber>0:10-bk-19596</caseNumber>
+ <caseOffice>Fort Lauderdale</caseOffice>
+ <party firstName="Lillian" fullName="Lillian Ana DiStefano" lastName="DiStefano" middleName="Ana" role="Debtor"></party>
+ <party firstName="Lillian" fullName="Lillian Ana Vallejo" lastName="Vallejo" middleName="Ana" role="Debtor"></party>
+ <party fullName="Office of the US Trustee" lastName="Office of the US Trustee" role="U.S. Trustee"></party>
+ <party firstName="Kenneth" fullName="Kenneth A Welt" lastName="Welt" middleName="A" role="Trustee"></party>
+</extension>
+<titleInfo>
+ <title>Lillian Ana DiStefano</title>
+ <partNumber>0:10-bk-19596</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-0_10-bk-19596/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">0:10-bk-19596;10-19596</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Southern District of Florida</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Fort Lauderdale</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Lillian Ana DiStefano</displayForm>
+ <namePart type="family">DiStefano</namePart>
+ <namePart type="given">Lillian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Lillian Ana Vallejo</displayForm>
+ <namePart type="family">Vallejo</namePart>
+ <namePart type="given">Lillian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Office of the US Trustee</displayForm>
+ <namePart type="family">Office of the US Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>U.S. Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth A Welt</displayForm>
+ <namePart type="family">Welt</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-flsb-0_10-bk-19596</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>flsb</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Florida</courtState>
+ <courtSortOrder>3113</courtSortOrder>
+ <caseNumber>0:10-bk-19596</caseNumber>
+ <caseOffice>Fort Lauderdale</caseOffice>
+ <party firstName="Lillian" fullName="Lillian Ana DiStefano" lastName="DiStefano" middleName="Ana" role="Debtor"></party>
+ <party firstName="Lillian" fullName="Lillian Ana Vallejo" lastName="Vallejo" middleName="Ana" role="Debtor"></party>
+ <party fullName="Office of the US Trustee" lastName="Office of the US Trustee" role="U.S. Trustee"></party>
+ <party firstName="Kenneth" fullName="Kenneth A Welt" lastName="Welt" middleName="A" role="Trustee"></party>
+ <state>Florida</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-flsb-0_10-bk-19596-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-0_10-bk-19596/USCOURTS-flsb-0_10-bk-19596-0/mods.xml">
+ <titleInfo>
+  <title>Lillian Ana DiStefano</title>
+  <subTitle>Order Sustaining Objection to Debtor Claim of Exemption ,(Re: # 14). (Romano, Susan) Modified on 10/16/2011 To Reflect as a Tagged Opinion (Cervino, Maria).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-0_10-bk-19596/pdf/USCOURTS-flsb-0_10-bk-19596-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189cefbc4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-0_10-bk-19596/USCOURTS-flsb-0_10-bk-19596-0</identifier>
+ <identifier type="former granule identifier">flsb-0_10-bk-19596_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-0_10-bk-19596/USCOURTS-flsb-0_10-bk-19596-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-0_10-bk-19596/pdf/USCOURTS-flsb-0_10-bk-19596-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 0:10-bk-19596; Lillian Ana DiStefano; </searchTitle>
+  <courtName>United States Bankruptcy Court Southern District of Florida</courtName>
+  <state>Florida</state>
+  <accessId>USCOURTS-flsb-0_10-bk-19596-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-12-22</dateIssued>
+  <docketText>Order Sustaining Objection to Debtor Claim of Exemption ,(Re: # 14). (Romano, Susan) Modified on 10/16/2011 To Reflect as a Tagged Opinion (Cervino, Maria).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-flsb-0_10-bk-19596-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-0_10-bk-19596/USCOURTS-flsb-0_10-bk-19596-1/mods.xml">
+ <titleInfo>
+  <title>Lillian Ana DiStefano</title>
+  <subTitle>Order Denying Motion To Reconsider # 36 (Grooms, Desiree) Modified on 10/16/2011 To Reflect as a Tagged Opinion (Cervino, Maria).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-0_10-bk-19596/pdf/USCOURTS-flsb-0_10-bk-19596-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189cefcfe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-0_10-bk-19596/USCOURTS-flsb-0_10-bk-19596-1</identifier>
+ <identifier type="former granule identifier">flsb-0_10-bk-19596_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-0_10-bk-19596/USCOURTS-flsb-0_10-bk-19596-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-0_10-bk-19596/pdf/USCOURTS-flsb-0_10-bk-19596-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 0:10-bk-19596; Lillian Ana DiStefano; </searchTitle>
+  <courtName>United States Bankruptcy Court Southern District of Florida</courtName>
+  <state>Florida</state>
+  <accessId>USCOURTS-flsb-0_10-bk-19596-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-06</dateIssued>
+  <docketText>Order Denying Motion To Reconsider # 36 (Grooms, Desiree) Modified on 10/16/2011 To Reflect as a Tagged Opinion (Cervino, Maria).</docketText>
+</extension>
+</relatedItem>
+</mods>

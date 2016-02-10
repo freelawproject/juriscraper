@@ -1,0 +1,398 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1834808a8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-08-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-08-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03122</identifier>
+<identifier type="local">P0b002ee1834808a8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-08-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-08-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_11-cr-03122</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cr-03122</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cr-03122</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jeremy" fullName="Jeremy Tyrell Gully" lastName="Gully" middleName="Tyrell" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Gully</title>
+ <partNumber>4:11-cr-03122</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03122/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:11-cr-03122;11-3122</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jeremy Tyrell Gully</displayForm>
+ <namePart type="family">Gully</namePart>
+ <namePart type="given">Jeremy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cr-03122</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cr-03122</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jeremy" fullName="Jeremy Tyrell Gully" lastName="Gully" middleName="Tyrell" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03122-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Gully</title>
+  <subTitle>ORDER authorizing Michael Khalili, as a Criminal Justice Act Training Panel Member, to assist in the defense of defendant Jeremy Tyrell Gully. Mr. Khalili shall not be eligible to receive compensation for his services in this case. The Federal Public Defender shall continue to be primary counsel on behalf of the defendant Jeremy Tyrell Gully. Ordered by Magistrate Judge Cheryl R. Zwart. (GJG)[4:11-mj-03053-CRZ]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03122-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183482003</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-0</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03122_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03122/pdf/USCOURTS-ned-4_11-cr-03122-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03122; USA v. Gully; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03122-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-11-10</dateIssued>
+  <docketText>ORDER authorizing Michael Khalili, as a Criminal Justice Act Training Panel Member, to assist in the defense of defendant Jeremy Tyrell Gully. Mr. Khalili shall not be eligible to receive compensation for his services in this case. The Federal Public Defender shall continue to be primary counsel on behalf of the defendant Jeremy Tyrell Gully. Ordered by Magistrate Judge Cheryl R. Zwart. (GJG)[4:11-mj-03053-CRZ]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03122-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Gully</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Jeremy Tyrell Gully. The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)[4:11-mj-03053-CRZ]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03122-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18348206d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-1</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03122_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03122/pdf/USCOURTS-ned-4_11-cr-03122-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03122; USA v. Gully; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03122-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-11-10</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Jeremy Tyrell Gully. The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)[4:11-mj-03053-CRZ]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03122-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Gully</title>
+  <subTitle>ORDER of Detention pending trial. Preliminary Hearing set for 11/18/2011 at 10:30 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)[4:11-mj-03053-CRZ]</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03122-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183482068</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-2</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03122_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03122/pdf/USCOURTS-ned-4_11-cr-03122-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03122; USA v. Gully; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03122-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-11-14</dateIssued>
+  <docketText>ORDER of Detention pending trial. Preliminary Hearing set for 11/18/2011 at 10:30 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)[4:11-mj-03053-CRZ]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03122-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Gully</title>
+  <subTitle>ORDER granting 27 Motion to Continue as to Jeremy Tyrell Gully. Jury Trial set for 3/5/2012 at 09:00 AM before Senior Judge Richard G. Kopf. Pretrial Motion Deadline set for 1/17/2012. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03122-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18348206a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-3</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03122_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03122/pdf/USCOURTS-ned-4_11-cr-03122-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03122; USA v. Gully; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03122-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-12-01</dateIssued>
+  <docketText>ORDER granting 27 Motion to Continue as to Jeremy Tyrell Gully. Jury Trial set for 3/5/2012 at 09:00 AM before Senior Judge Richard G. Kopf. Pretrial Motion Deadline set for 1/17/2012. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03122-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Gully</title>
+  <subTitle>ORDER granting 30 Motion for Release as to Jeremy Tyrell Gully. Ordered by Magistrate Judge Cheryl R. Zwart. (E-mailed to Marshal)(CRZ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03122-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183482069</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-4</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03122_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03122/pdf/USCOURTS-ned-4_11-cr-03122-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03122; USA v. Gully; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03122-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>ORDER granting 30 Motion for Release as to Jeremy Tyrell Gully. Ordered by Magistrate Judge Cheryl R. Zwart. (E-mailed to Marshal)(CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03122-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Gully</title>
+  <subTitle>ORDER - The appeal of the order denying review of detention (filing no. 36) is denied as to Jeremy Tyrell Gully (1). Ordered by Senior Judge Richard G. Kopf. (AOA)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03122-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18348206f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-5</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03122_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03122/pdf/USCOURTS-ned-4_11-cr-03122-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03122; USA v. Gully; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03122-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-01-31</dateIssued>
+  <docketText>ORDER - The appeal of the order denying review of detention (filing no. 36) is denied as to Jeremy Tyrell Gully (1). Ordered by Senior Judge Richard G. Kopf. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03122-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Gully</title>
+  <subTitle>MEMORANDUM AND ORDER granting 39 Motion to Continue Trial as to Jeremy Tyrell Gully (1). 3-day Jury Trial continued to 5/7/2012 at 09:00 AM before Senior Judge Richard G. Kopf. The Lincoln courtroom that will be used for trials before Judge Kopf will be determined at a later date. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03122-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18348206e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-6</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03122_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03122/pdf/USCOURTS-ned-4_11-cr-03122-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03122; USA v. Gully; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03122-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-02-28</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 39 Motion to Continue Trial as to Jeremy Tyrell Gully (1). 3-day Jury Trial continued to 5/7/2012 at 09:00 AM before Senior Judge Richard G. Kopf. The Lincoln courtroom that will be used for trials before Judge Kopf will be determined at a later date. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03122-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Gully</title>
+  <subTitle>MEMORANDUM AND ORDER regarding defendant&apos;s oral motion44 as to defendant Jeremy Tyrell Gully. Court appoints standby counsel to assist the defendant and the court in determining whether new counsel should be appointed to represent the defendant in this case. A hearing on the defense counsel&apos;s motion to withdraw, (filing no. 44), will be held before the undersigned on May 31, 2012 beginning at 10:00 a.m. The time between today&apos;s date and May 31, 2012, shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge Cheryl R. Zwart. (E-mailed to Karen Burks)(JAB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03122-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18348206b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-7</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03122_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03122/pdf/USCOURTS-ned-4_11-cr-03122-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03122; USA v. Gully; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03122-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-05-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding defendant&apos;s oral motion44 as to defendant Jeremy Tyrell Gully. Court appoints standby counsel to assist the defendant and the court in determining whether new counsel should be appointed to represent the defendant in this case. A hearing on the defense counsel&apos;s motion to withdraw, (filing no. 44), will be held before the undersigned on May 31, 2012 beginning at 10:00 a.m. The time between today&apos;s date and May 31, 2012, shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge Cheryl R. Zwart. (E-mailed to Karen Burks)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03122-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Gully</title>
+  <subTitle>MEMORANDUM AND ORDER granting 48 defendant&apos;s Motion to Continue as to Jeremy Tyrell Gully (1). The hearing on defense counsel&apos;s motion to withdraw, (filing no. 44) is continued to 6/8/2012 at 10:30 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. For the reasons set forth in the court&apos;s prior order, (filing no. 47), the time between today&apos;s date and June 8, 2012, shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03122-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183482002</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-8</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03122_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03122/pdf/USCOURTS-ned-4_11-cr-03122-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03122; USA v. Gully; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03122-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-05-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 48 defendant&apos;s Motion to Continue as to Jeremy Tyrell Gully (1). The hearing on defense counsel&apos;s motion to withdraw, (filing no. 44) is continued to 6/8/2012 at 10:30 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. For the reasons set forth in the court&apos;s prior order, (filing no. 47), the time between today&apos;s date and June 8, 2012, shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cr-03122-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Gully</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Jeremy Tyrell Gully. It is ordered that:... (2)There were no objections or motions that require resolution at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Senior Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cr-03122-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18348206c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-9</identifier>
+ <identifier type="former granule identifier">ned-4_11-cr-03122_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cr-03122/USCOURTS-ned-4_11-cr-03122-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cr-03122/pdf/USCOURTS-ned-4_11-cr-03122-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cr-03122; USA v. Gully; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cr-03122-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-08-28</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Jeremy Tyrell Gully. It is ordered that:... (2)There were no objections or motions that require resolution at sentencing.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Senior Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,253 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bd969">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02574</identifier>
+<identifier type="local">P0b002ee18a8bd969</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_14-cv-02574</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-02574</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-02574</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1442 Petition for Removal</cause>
+ <party firstName="Michael" fullName="Michael A. Fazio" lastName="Fazio" middleName="A." role="Plaintiff"></party>
+ <party firstName="Kim" fullName="Kim Marie Fazio" lastName="Fazio" middleName="Marie" role="Plaintiff"></party>
+ <party fullName="Federal Home Loan Mortgage Corporation" lastName="Federal Home Loan Mortgage Corporation" role="Defendant"></party>
+ <party fullName="JPMorgan Chase Bank, National Association" lastName="JPMorgan Chase Bank, National Association" role="Defendant"></party>
+ <party fullName="MTC Financial" lastName="MTC Financial" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph V. Quattrocchi" lastName="Quattrocchi" middleName="V." role="Defendant"></party>
+ <party fullName="Trustee Corps" lastName="Trustee Corps" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Fazio, et al. v. Federal Home Loan Mortgage Corporation, et al.</title>
+ <partNumber>2:14-cv-02574</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02574/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-02574;14-2574</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Michael A. Fazio</displayForm>
+ <namePart type="family">Fazio</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kim Marie Fazio</displayForm>
+ <namePart type="family">Fazio</namePart>
+ <namePart type="given">Kim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Federal Home Loan Mortgage Corporation</displayForm>
+ <namePart type="family">Federal Home Loan Mortgage Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JPMorgan Chase Bank, National Association</displayForm>
+ <namePart type="family">JPMorgan Chase Bank, National Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MTC Financial</displayForm>
+ <namePart type="family">MTC Financial</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph V. Quattrocchi</displayForm>
+ <namePart type="family">Quattrocchi</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Trustee Corps</displayForm>
+ <namePart type="family">Trustee Corps</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-02574</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-02574</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1442 Petition for Removal</cause>
+ <party firstName="Michael" fullName="Michael A. Fazio" lastName="Fazio" middleName="A." role="Plaintiff"></party>
+ <party firstName="Kim" fullName="Kim Marie Fazio" lastName="Fazio" middleName="Marie" role="Plaintiff"></party>
+ <party fullName="Federal Home Loan Mortgage Corporation" lastName="Federal Home Loan Mortgage Corporation" role="Defendant"></party>
+ <party fullName="JPMorgan Chase Bank, National Association" lastName="JPMorgan Chase Bank, National Association" role="Defendant"></party>
+ <party fullName="MTC Financial" lastName="MTC Financial" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph V. Quattrocchi" lastName="Quattrocchi" middleName="V." role="Defendant"></party>
+ <party fullName="Trustee Corps" lastName="Trustee Corps" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02574-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02574/USCOURTS-caed-2_14-cv-02574-0/mods.xml">
+ <titleInfo>
+  <title>Fazio, et al. v. Federal Home Loan Mortgage Corporation, et al.</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 11/25/14: Plaintiff&apos;s ex parte application to stay proceedings 25 is DENIED. HEARING as to 10 MOTION to DISMISS RESET for 1/15/2015 at 10:00 AM in Courtroom 25 (KJN) before Magistrate Judge Kendall J. Newman. (Kaminski, H)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02574/pdf/USCOURTS-caed-2_14-cv-02574-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c68e9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02574/USCOURTS-caed-2_14-cv-02574-0</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02574_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02574/USCOURTS-caed-2_14-cv-02574-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02574/pdf/USCOURTS-caed-2_14-cv-02574-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02574; Fazio, et al. v. Federal Home Loan Mortgage Corporation, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02574-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-11-25</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 11/25/14: Plaintiff&apos;s ex parte application to stay proceedings 25 is DENIED. HEARING as to 10 MOTION to DISMISS RESET for 1/15/2015 at 10:00 AM in Courtroom 25 (KJN) before Magistrate Judge Kendall J. Newman. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02574-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02574/USCOURTS-caed-2_14-cv-02574-1/mods.xml">
+ <titleInfo>
+  <title>Fazio, et al. v. Federal Home Loan Mortgage Corporation, et al.</title>
+  <subTitle>ORDER signed by Magistrate Judge Kendall J. Newman on 1/6/2015 APPROVING 39 Substitution of Attorney; ADDING Attorney Russell Henry Townsend for Kim Marie Fazio, Michael A. Fazio; REFERRING this matter, including the pending 10, 18, 27 Motions to Dismiss, 24 Motion to Remand, 30 Motion to Set Aside the State Court Clerk&apos;s Entry of Default, and 31, 36, 38 Motions to Disqualify the Magistrate Judge, to Judge Troy L. Nunley pursuant to Local Rule 302(c)(21); VACATING all dates currently set before Magistrate Judge Kendall J. Newman; ORDERING all parties to contact the Courtroom Deputy for Judge Nunley to select hearing dates for their respective pending motions; ORDERING that the caption on all documents filed in this action be 2:14-cv-2574 TLN KJN. (Michel, G)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02574/pdf/USCOURTS-caed-2_14-cv-02574-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c68ea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02574/USCOURTS-caed-2_14-cv-02574-1</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02574_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02574/USCOURTS-caed-2_14-cv-02574-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02574/pdf/USCOURTS-caed-2_14-cv-02574-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02574; Fazio, et al. v. Federal Home Loan Mortgage Corporation, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02574-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Kendall J. Newman on 1/6/2015 APPROVING 39 Substitution of Attorney; ADDING Attorney Russell Henry Townsend for Kim Marie Fazio, Michael A. Fazio; REFERRING this matter, including the pending 10, 18, 27 Motions to Dismiss, 24 Motion to Remand, 30 Motion to Set Aside the State Court Clerk&apos;s Entry of Default, and 31, 36, 38 Motions to Disqualify the Magistrate Judge, to Judge Troy L. Nunley pursuant to Local Rule 302(c)(21); VACATING all dates currently set before Magistrate Judge Kendall J. Newman; ORDERING all parties to contact the Courtroom Deputy for Judge Nunley to select hearing dates for their respective pending motions; ORDERING that the caption on all documents filed in this action be 2:14-cv-2574 TLN KJN. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-02574-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02574/USCOURTS-caed-2_14-cv-02574-2/mods.xml">
+ <titleInfo>
+  <title>Fazio, et al. v. Federal Home Loan Mortgage Corporation, et al.</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr on 1/6/2015 re Notice of Related Case ORDERING that this action will not be reassigned because it has not been shown that re-assignment is likely to effect a substantial saving of judicial effort. (Donati, J)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02574/pdf/USCOURTS-caed-2_14-cv-02574-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6983</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02574/USCOURTS-caed-2_14-cv-02574-2</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-02574_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-02574/USCOURTS-caed-2_14-cv-02574-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-02574/pdf/USCOURTS-caed-2_14-cv-02574-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-02574; Fazio, et al. v. Federal Home Loan Mortgage Corporation, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-02574-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr on 1/6/2015 re Notice of Related Case ORDERING that this action will not be reassigned because it has not been shown that re-assignment is likely to effect a substantial saving of judicial effort. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+</mods>

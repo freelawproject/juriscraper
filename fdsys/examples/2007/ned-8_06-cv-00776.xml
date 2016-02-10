@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b5c55">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00776</identifier>
+<identifier type="local">P0b002ee1817b5c55</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cv-00776</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00776</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00776</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2241 Petition for Writ of Habeas Corpus (federa</cause>
+ <party fullName="12 Unknown Corrections Officers" lastName="12 Unknown Corrections Officers" role="Respondent"></party>
+ <party firstName="Tim" fullName="Tim Dunning" lastName="Dunning" role="Respondent"></party>
+ <party firstName="Miguel" fullName="Miguel Lopez Estrada" lastName="Lopez Estrada" role="Petitioner"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey L. Newton" lastName="Newton" middleName="L." role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Lopez Estrada v. Newton et al</title>
+ <partNumber>8:06-cv-00776</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00776/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cv-00776;06-776</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>12 Unknown Corrections Officers</displayForm>
+ <namePart type="family">12 Unknown Corrections Officers</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Tim Dunning</displayForm>
+ <namePart type="family">Dunning</namePart>
+ <namePart type="given">Tim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Miguel Lopez Estrada</displayForm>
+ <namePart type="family">Lopez Estrada</namePart>
+ <namePart type="given">Miguel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey L. Newton</displayForm>
+ <namePart type="family">Newton</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00776</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00776</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2241 Petition for Writ of Habeas Corpus (federa</cause>
+ <party fullName="12 Unknown Corrections Officers" lastName="12 Unknown Corrections Officers" role="Respondent"></party>
+ <party firstName="Tim" fullName="Tim Dunning" lastName="Dunning" role="Respondent"></party>
+ <party firstName="Miguel" fullName="Miguel Lopez Estrada" lastName="Lopez Estrada" role="Petitioner"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey L. Newton" lastName="Newton" middleName="L." role="Respondent"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00776-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00776/USCOURTS-ned-8_06-cv-00776-0/mods.xml">
+ <titleInfo>
+  <title>Lopez Estrada v. Newton et al</title>
+  <subTitle>ORDER regarding Petition for Writ of Habeas Corpus 1 filed by Miguel Lopez Estrada. In Court Hearing set for 1/3/2007 at 01:30 PM before Senior Judge Lyle E. Strom. A writ of habeas corpus shall be issued to transportpetitioner from the Douglas County Jail, Omaha, Nebraska, forsaid hearing.Ordered by Judge Lyle E. Strom. (ETC)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00776-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c8ba5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00776/USCOURTS-ned-8_06-cv-00776-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00776_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00776/USCOURTS-ned-8_06-cv-00776-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00776/pdf/USCOURTS-ned-8_06-cv-00776-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00776; Lopez Estrada v. Newton et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00776-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-12-29</dateIssued>
+  <docketText>ORDER regarding Petition for Writ of Habeas Corpus 1 filed by Miguel Lopez Estrada. In Court Hearing set for 1/3/2007 at 01:30 PM before Senior Judge Lyle E. Strom. A writ of habeas corpus shall be issued to transportpetitioner from the Douglas County Jail, Omaha, Nebraska, forsaid hearing.Ordered by Judge Lyle E. Strom. (ETC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00776-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00776/USCOURTS-ned-8_06-cv-00776-1/mods.xml">
+ <titleInfo>
+  <title>Lopez Estrada v. Newton et al</title>
+  <subTitle>ORDER - This matter is before the Court after a hearing was held on petitioner&apos;s petition for writ of habeas corpus 1. Petitioner advised the Court that the petition is moot. This action is dismissed without prejudice. Ordered by Judge Lyle E. Strom. (JAE, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00776-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818c8ba4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00776/USCOURTS-ned-8_06-cv-00776-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00776_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00776/USCOURTS-ned-8_06-cv-00776-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00776/pdf/USCOURTS-ned-8_06-cv-00776-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00776; Lopez Estrada v. Newton et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00776-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-03</dateIssued>
+  <docketText>ORDER - This matter is before the Court after a hearing was held on petitioner&apos;s petition for writ of habeas corpus 1. Petitioner advised the Court that the petition is moot. This action is dismissed without prejudice. Ordered by Judge Lyle E. Strom. (JAE, )</docketText>
+</extension>
+</relatedItem>
+</mods>

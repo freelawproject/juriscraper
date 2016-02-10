@@ -1,0 +1,379 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181726bee">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00069</identifier>
+<identifier type="local">P0b002ee181726bee</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_98-cr-00069</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_98-cr-00069</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:98-cr-00069</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Kimberly" fullName="Kimberly Smalls" lastName="Smalls" role="Defendant"></party>
+ <party firstName="Tommie" fullName="Tommie Thompson" lastName="Thompson" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Smalls et al</title>
+ <partNumber>8:98-cr-00069</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00069/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:98-cr-00069;98-069</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kimberly Smalls</displayForm>
+ <namePart type="family">Smalls</namePart>
+ <namePart type="given">Kimberly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tommie Thompson</displayForm>
+ <namePart type="family">Thompson</namePart>
+ <namePart type="given">Tommie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_98-cr-00069</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:98-cr-00069</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Kimberly" fullName="Kimberly Smalls" lastName="Smalls" role="Defendant"></party>
+ <party firstName="Tommie" fullName="Tommie Thompson" lastName="Thompson" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_98-cr-00069-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Smalls et al</title>
+  <subTitle>ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS SHOULD NOT BE DESTROYED as to defendant Kimberly Smalls, Tommie Thompson. Ordered by Judge Joseph F. Bataillon.(CJP)ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS SHOULD NOT BE DESTROYED as to defendant Kimberly Smalls, Tommie Thompson. Ordered by Judge Joseph F. Bataillon.(CJP)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_98-cr-00069-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a1d6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-0</identifier>
+ <identifier type="former granule identifier">ned-8_98-cr-00069_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00069/pdf/USCOURTS-ned-8_98-cr-00069-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:98-cr-00069; United States of America v. Smalls et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_98-cr-00069-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-06-06</dateIssued>
+  <docketText>ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS SHOULD NOT BE DESTROYED as to defendant Kimberly Smalls, Tommie Thompson. Ordered by Judge Joseph F. Bataillon.(CJP)ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS SHOULD NOT BE DESTROYED as to defendant Kimberly Smalls, Tommie Thompson. Ordered by Judge Joseph F. Bataillon.(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_98-cr-00069-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Smalls et al</title>
+  <subTitle>ORDER - Observing that no substantive motion or petition has been filed, IT IS ORDERED that the defendant&apos;s motion to appoint counsel (filing 150) and motion for leave to proceed in forma pauperis (filing 151) are denied. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party) (JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_98-cr-00069-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a121</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-1</identifier>
+ <identifier type="former granule identifier">ned-8_98-cr-00069_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00069/pdf/USCOURTS-ned-8_98-cr-00069-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:98-cr-00069; United States of America v. Smalls et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_98-cr-00069-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-10-23</dateIssued>
+  <docketText>ORDER - Observing that no substantive motion or petition has been filed, IT IS ORDERED that the defendant&apos;s motion to appoint counsel (filing 150) and motion for leave to proceed in forma pauperis (filing 151) are denied. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party) (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_98-cr-00069-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Smalls et al</title>
+  <subTitle>MEMORANDUM AND ORDER as to defendant Tommie Thompson (2). The defendant has filed or tendered for filing a motion (filing 153) that I construe as seeking a reduction of sentence pursuant to the retroactive amendments to the &quot;crack&quot; Guidelines. The Federal Public Defender is herewith appointed to represent the defendant. No later than December 31, 2009, the probation office shall provide the undersigned and counsel of record with a &quot;Retroactive Sentencing Worksheet.&quot; No later than January 15, 2010, counsel of record shall confer. The application to proceed in forma pauperis (filing 155) is granted. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party and provided to Probation)(JAB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_98-cr-00069-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a122</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-2</identifier>
+ <identifier type="former granule identifier">ned-8_98-cr-00069_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00069/pdf/USCOURTS-ned-8_98-cr-00069-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:98-cr-00069; United States of America v. Smalls et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_98-cr-00069-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-11-16</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to defendant Tommie Thompson (2). The defendant has filed or tendered for filing a motion (filing 153) that I construe as seeking a reduction of sentence pursuant to the retroactive amendments to the &quot;crack&quot; Guidelines. The Federal Public Defender is herewith appointed to represent the defendant. No later than December 31, 2009, the probation office shall provide the undersigned and counsel of record with a &quot;Retroactive Sentencing Worksheet.&quot; No later than January 15, 2010, counsel of record shall confer. The application to proceed in forma pauperis (filing 155) is granted. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party and provided to Probation)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_98-cr-00069-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Smalls et al</title>
+  <subTitle>ORDER REGARDING MOTION FOR SENTENCE REDUCTION PURSUANT TO 18:3582(c)(2) as to defendant Tommie Thompson (2). Motion153 of the defendant is granted and the defendant&apos;s previously imposed sentence of imprisonment (as reflected in the judgment issued 7/29/1999) of 292 months is reduced to 235 months. Except as provided above, all provisions of the judgment dated 7/29/1999 shall remain in effect. Effective date: 12/3/2009. Joint stipulation (filing 159) is granted as provided herein but otherwise denied. Ordered by Judge Richard G. Kopf. (1 certified copy to USM)(JAB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_98-cr-00069-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a123</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-3</identifier>
+ <identifier type="former granule identifier">ned-8_98-cr-00069_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00069/pdf/USCOURTS-ned-8_98-cr-00069-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:98-cr-00069; United States of America v. Smalls et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_98-cr-00069-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-12-03</dateIssued>
+  <docketText>ORDER REGARDING MOTION FOR SENTENCE REDUCTION PURSUANT TO 18:3582(c)(2) as to defendant Tommie Thompson (2). Motion153 of the defendant is granted and the defendant&apos;s previously imposed sentence of imprisonment (as reflected in the judgment issued 7/29/1999) of 292 months is reduced to 235 months. Except as provided above, all provisions of the judgment dated 7/29/1999 shall remain in effect. Effective date: 12/3/2009. Joint stipulation (filing 159) is granted as provided herein but otherwise denied. Ordered by Judge Richard G. Kopf. (1 certified copy to USM)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_98-cr-00069-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-4/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Smalls et al</title>
+  <subTitle>ORDER granting 166 Motion to Extend as to Tommie Thompson (2). The defendant&apos;s motion for extension of time to permit appeal (filing 166) is granted. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_98-cr-00069-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a120</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-4</identifier>
+ <identifier type="former granule identifier">ned-8_98-cr-00069_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00069/pdf/USCOURTS-ned-8_98-cr-00069-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:98-cr-00069; United States of America v. Smalls et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_98-cr-00069-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-01-04</dateIssued>
+  <docketText>ORDER granting 166 Motion to Extend as to Tommie Thompson (2). The defendant&apos;s motion for extension of time to permit appeal (filing 166) is granted. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_98-cr-00069-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-5/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Smalls et al</title>
+  <subTitle>ORDER granting 167 Motion for Leave to Proceed In Forma Pauperis on appeal as to defendant Tommie Thompson (2). Ordered by Judge Richard G. Kopf. (Copy mailed to defendant) (JAB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_98-cr-00069-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a125</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-5</identifier>
+ <identifier type="former granule identifier">ned-8_98-cr-00069_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00069/pdf/USCOURTS-ned-8_98-cr-00069-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:98-cr-00069; United States of America v. Smalls et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_98-cr-00069-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-01-20</dateIssued>
+  <docketText>ORDER granting 167 Motion for Leave to Proceed In Forma Pauperis on appeal as to defendant Tommie Thompson (2). Ordered by Judge Richard G. Kopf. (Copy mailed to defendant) (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_98-cr-00069-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-6/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Smalls et al</title>
+  <subTitle>ORDER - IT IS ORDERED that the defendant&apos;s motion (filing 178) is denied as to defendant Tommie Thompson. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)( TCL )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_98-cr-00069-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a1d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-6</identifier>
+ <identifier type="former granule identifier">ned-8_98-cr-00069_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00069/pdf/USCOURTS-ned-8_98-cr-00069-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:98-cr-00069; United States of America v. Smalls et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_98-cr-00069-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-12-21</dateIssued>
+  <docketText>ORDER - IT IS ORDERED that the defendant&apos;s motion (filing 178) is denied as to defendant Tommie Thompson. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)( TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_98-cr-00069-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-7/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Smalls et al</title>
+  <subTitle>MEMORANDUM AND ORDER REGARDING MOTION TO REDUCE SENTENCE UNDER 2011 CRACK COCAINE GUIDELINE AMENDMENT - denying 180 motion to reduce sentence under 2011 Crack Cocaine guideline amendment as to Tommie Thompson. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)( TCL )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_98-cr-00069-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a1d5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-7</identifier>
+ <identifier type="former granule identifier">ned-8_98-cr-00069_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00069/pdf/USCOURTS-ned-8_98-cr-00069-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:98-cr-00069; United States of America v. Smalls et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_98-cr-00069-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-08-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER REGARDING MOTION TO REDUCE SENTENCE UNDER 2011 CRACK COCAINE GUIDELINE AMENDMENT - denying 180 motion to reduce sentence under 2011 Crack Cocaine guideline amendment as to Tommie Thompson. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)( TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_98-cr-00069-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-8/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Smalls et al</title>
+  <subTitle>ORDER permitting the defendant to proceed on appeal in forma pauperis as to defendant Tommie Thompson. Ordered by Senior Judge Richard G. Kopf. (Copy mailed to pro se party)(TCL )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_98-cr-00069-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18178a124</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-8</identifier>
+ <identifier type="former granule identifier">ned-8_98-cr-00069_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00069/USCOURTS-ned-8_98-cr-00069-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00069/pdf/USCOURTS-ned-8_98-cr-00069-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:98-cr-00069; United States of America v. Smalls et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_98-cr-00069-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>ORDER permitting the defendant to proceed on appeal in forma pauperis as to defendant Tommie Thompson. Ordered by Senior Judge Richard G. Kopf. (Copy mailed to pro se party)(TCL )</docketText>
+</extension>
+</relatedItem>
+</mods>

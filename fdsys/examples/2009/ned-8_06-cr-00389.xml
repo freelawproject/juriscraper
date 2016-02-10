@@ -1,0 +1,547 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181725ccb">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389</identifier>
+<identifier type="local">P0b002ee181725ccb</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cr-00389</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00389</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00389</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Francisco" fullName="Francisco Javier Cruz-Guzman" lastName="Cruz-Guzman" middleName="Javier" role="Defendant"></party>
+ <party firstName="Luis" fullName="Luis Jacola-Echeverria" lastName="Jacola-Echeverria" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Cruz-Guzman et al</title>
+ <partNumber>8:06-cr-00389</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cr-00389;06-389</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Francisco Javier Cruz-Guzman</displayForm>
+ <namePart type="family">Cruz-Guzman</namePart>
+ <namePart type="given">Francisco</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Luis Jacola-Echeverria</displayForm>
+ <namePart type="family">Jacola-Echeverria</namePart>
+ <namePart type="given">Luis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00389</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00389</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Francisco" fullName="Francisco Javier Cruz-Guzman" lastName="Cruz-Guzman" middleName="Javier" role="Defendant"></party>
+ <party firstName="Luis" fullName="Luis Jacola-Echeverria" lastName="Jacola-Echeverria" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - That the Federal Public Defender is appointed as counsel as to defendant Luis Jacola-Echeverria. Ordered by Magistrate Judge F. A. Gossett.(DKM, )[8:06-mj-00140-FG3]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a3b6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-11-22</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - That the Federal Public Defender is appointed as counsel as to defendant Luis Jacola-Echeverria. Ordered by Magistrate Judge F. A. Gossett.(DKM, )[8:06-mj-00140-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Luis Jacola-Echeverria Ordered by Magistrate Judge F. A. Gossett. 1 certified copy to USM. (DKM, )[8:06-mj-00140-FG3]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a30b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-11-22</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Luis Jacola-Echeverria Ordered by Magistrate Judge F. A. Gossett. 1 certified copy to USM. (DKM, )[8:06-mj-00140-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER as to defendants Francisco Javier Cruz-Guzman and Luis Jacola-Echeverria. Initial Appearance/Arraignment set for 12/21/2006 at 9:00 AM before Magistrate Judge F. A. Gossett. Ordered by Magistrate Judge F. A. Gossett.(MLF, )ORDER as to defendants Francisco Javier Cruz-Guzman and Luis Jacola-Echeverria. Initial Appearance/Arraignment set for 12/21/2006 at 9:00 AM before Magistrate Judge F. A. Gossett. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a30e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-12-19</dateIssued>
+  <docketText>ORDER as to defendants Francisco Javier Cruz-Guzman and Luis Jacola-Echeverria. Initial Appearance/Arraignment set for 12/21/2006 at 9:00 AM before Magistrate Judge F. A. Gossett. Ordered by Magistrate Judge F. A. Gossett.(MLF, )ORDER as to defendants Francisco Javier Cruz-Guzman and Luis Jacola-Echeverria. Initial Appearance/Arraignment set for 12/21/2006 at 9:00 AM before Magistrate Judge F. A. Gossett. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER granting the defendant&apos;s Motion to file under seal 23; The defendant&apos;s motion to dismiss and supporting brief shall be filed under seal as to defendant Luis Jacola-Echeverria. Ordered by Judge Laurie Smith Camp.(MKR )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a3b7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-3</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-01-10</dateIssued>
+  <docketText>ORDER granting the defendant&apos;s Motion to file under seal 23; The defendant&apos;s motion to dismiss and supporting brief shall be filed under seal as to defendant Luis Jacola-Echeverria. Ordered by Judge Laurie Smith Camp.(MKR )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER granting in part 31 Motion to Extend Deadline as to Francisco Javier Cruz-Guzman (1). Pretrial Motion Deadline extended to 1/30/2007. The time between 1/10/2007 and 1/30/2007 is excluded under the Speedy Trial Act. Ordered by Magistrate Judge F. A. Gossett.(CLS, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a3ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-4</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-01-12</dateIssued>
+  <docketText>ORDER granting in part 31 Motion to Extend Deadline as to Francisco Javier Cruz-Guzman (1). Pretrial Motion Deadline extended to 1/30/2007. The time between 1/10/2007 and 1/30/2007 is excluded under the Speedy Trial Act. Ordered by Magistrate Judge F. A. Gossett.(CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER granting 33 Motion for Additional Time to Submit Response as to Luis Jacola-Echeverria. The government&apos;s response brief shall be due on or before January 22, 2007. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a3bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-5</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-01-16</dateIssued>
+  <docketText>ORDER granting 33 Motion for Additional Time to Submit Response as to Luis Jacola-Echeverria. The government&apos;s response brief shall be due on or before January 22, 2007. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER granting 39 Motion to Withdraw as Attorney as to Luis Jacola-Echeverria. Jeffrey L. Thomas shall be deemed withdrawn as attorney of record and shall forthwith provide Glenn A. Shapiro with the discovery materials provided the defendant by the government and such other materials obtained by Mr. Thomas which are material to the defendant&apos;s defense. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a30d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-6</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-01-22</dateIssued>
+  <docketText>ORDER granting 39 Motion to Withdraw as Attorney as to Luis Jacola-Echeverria. Jeffrey L. Thomas shall be deemed withdrawn as attorney of record and shall forthwith provide Glenn A. Shapiro with the discovery materials provided the defendant by the government and such other materials obtained by Mr. Thomas which are material to the defendant&apos;s defense. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER granting 43 Motion To Expand Time to File Pre-Trial Motions as to Francisco Javier Cruz-Guzman. Pretrial motions shall be filed on or before February 6, 2007. The time between January 30, 2007 and February 6, 2007, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a3b9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-7</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2007-01-31</dateIssued>
+  <docketText>ORDER granting 43 Motion To Expand Time to File Pre-Trial Motions as to Francisco Javier Cruz-Guzman. Pretrial motions shall be filed on or before February 6, 2007. The time between January 30, 2007 and February 6, 2007, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER regarding 47 Motion to Suppress as to Francisco Javier Cruz-Guzman. The motion is set for hearing on March 23, 2007 at 9:00 a.m. before Magistrate Judge F.A. Gossett. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-02-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a3b5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-8</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2007-02-08</dateIssued>
+  <docketText>ORDER regarding 47 Motion to Suppress as to Francisco Javier Cruz-Guzman. The motion is set for hearing on March 23, 2007 at 9:00 a.m. before Magistrate Judge F.A. Gossett. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER granting 51 Motion to Continue Hearing as to Luis Jacola-Echeverria. The evidentiary hearing on the Sealed Motion is continued to March 15, 2007 at 1:30 p.m. before Magistrate Judge F.A. Gossett. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-02-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a309</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-9</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2007-02-13</dateIssued>
+  <docketText>ORDER granting 51 Motion to Continue Hearing as to Luis Jacola-Echeverria. The evidentiary hearing on the Sealed Motion is continued to March 15, 2007 at 1:30 p.m. before Magistrate Judge F.A. Gossett. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER as to defendant Francisco Javier Cruz-Guzman. The case is removed from the trial docket based upon the request of the defendant. A Change of Plea Hearing is set for 4/10/2007 at 3:00 PM before Magistrate Judge F. A. Gossett. Te time between 3/19/07 and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a3b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-10</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2007-03-19</dateIssued>
+  <docketText>ORDER as to defendant Francisco Javier Cruz-Guzman. The case is removed from the trial docket based upon the request of the defendant. A Change of Plea Hearing is set for 4/10/2007 at 3:00 PM before Magistrate Judge F. A. Gossett. Te time between 3/19/07 and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. Ordered by Magistrate Judge F. A. Gossett.(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER granting 54 Motion to Dismiss Criminal Case as to Luis Jacola-Echeverria (2). Ordered by Judge Laurie Smith Camp.(JSF)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a3b4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-11</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2007-03-20</dateIssued>
+  <docketText>ORDER granting 54 Motion to Dismiss Criminal Case as to Luis Jacola-Echeverria (2). Ordered by Judge Laurie Smith Camp.(JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER as to defendant Francisco Javier Cruz-Guzman. On the court&apos;s own motion, the Change of Plea Hearing is rescheduled April 17, 2007 at 9:00 AM before Magistrate Judge Thomas D. Thalken. The time between March 29, 2007 and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (MLF, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a30c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-12</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2007-03-29</dateIssued>
+  <docketText>ORDER as to defendant Francisco Javier Cruz-Guzman. On the court&apos;s own motion, the Change of Plea Hearing is rescheduled April 17, 2007 at 9:00 AM before Magistrate Judge Thomas D. Thalken. The time between March 29, 2007 and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>REPORT AND RECOMMENDATION that MOTION to Suppress47 be denied without prejudice, as to defendant Francisco Javier Cruz-Guzman. A party may object to this Report and Recommendation by filing a &quot;Statement of Objection to Magistrate Judge&apos;s Recommendation&quot; within 10 business days after being served with the recommendation. Ordered by Magistrate Judge F. A. Gossett. (JAE, )</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a3bb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-13</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2008-11-19</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION that MOTION to Suppress47 be denied without prejudice, as to defendant Francisco Javier Cruz-Guzman. A party may object to this Report and Recommendation by filing a &quot;Statement of Objection to Magistrate Judge&apos;s Recommendation&quot; within 10 business days after being served with the recommendation. Ordered by Magistrate Judge F. A. Gossett. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00389-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Cruz-Guzman et al</title>
+  <subTitle>ORDER adopting 63 the Magistrate Judge&apos;s Report and Recommendation in its entirety; and denying without prejudice 47 the Defendant&apos;s motion to suppress as to Francisco Javier Cruz-Guzman (1). Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00389-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173a30a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-14</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00389_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00389/USCOURTS-ned-8_06-cr-00389-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00389/pdf/USCOURTS-ned-8_06-cr-00389-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00389; USA v. Cruz-Guzman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00389-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2009-01-14</dateIssued>
+  <docketText>ORDER adopting 63 the Magistrate Judge&apos;s Report and Recommendation in its entirety; and denying without prejudice 47 the Defendant&apos;s motion to suppress as to Francisco Javier Cruz-Guzman (1). Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+</mods>

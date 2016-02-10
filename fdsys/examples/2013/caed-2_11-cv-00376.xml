@@ -1,0 +1,217 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183b599d0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00376</identifier>
+<identifier type="local">P0b002ee183b599d0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-00376</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-00376</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-00376</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party fullName="Cornell Properties, LTD., L.P." lastName="Cornell Properties, LTD., L.P." role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott N. Johnson" lastName="Johnson" middleName="N." role="Plaintiff"></party>
+ <party fullName="Zartosht, Inc." lastName="Zartosht, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Johnson v. Zartosht, Inc. et al</title>
+ <partNumber>2:11-cv-00376</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00376/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-00376;11-376</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Cornell Properties, LTD., L.P.</displayForm>
+ <namePart type="family">Cornell Properties, LTD., L.P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott N. Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Zartosht, Inc.</displayForm>
+ <namePart type="family">Zartosht, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-00376</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-00376</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>446</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Other</natureSuit>
+ <cause>42:12101 Americans with Disabilities Act</cause>
+ <party fullName="Cornell Properties, LTD., L.P." lastName="Cornell Properties, LTD., L.P." role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott N. Johnson" lastName="Johnson" middleName="N." role="Plaintiff"></party>
+ <party fullName="Zartosht, Inc." lastName="Zartosht, Inc." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00376-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00376/USCOURTS-caed-2_11-cv-00376-0/mods.xml">
+ <titleInfo>
+  <title>Johnson v. Zartosht, Inc. et al</title>
+  <subTitle>NG parties to file a Joint Pretrial Statement 7 days prior to the Final Pretrial Conference. (Michel, G)ORDER signed by Judge Garland E. Burrell, Jr. on 12/5/2012 ORDERING that Dispositional Documents be filed by 12/26/2012; CONTINUING the Final Pretrial Conference to 2/4/2013 at 2:30 PM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.; ORDERI</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00376-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5ebd5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00376/USCOURTS-caed-2_11-cv-00376-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00376_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00376/USCOURTS-caed-2_11-cv-00376-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00376/pdf/USCOURTS-caed-2_11-cv-00376-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00376; Johnson v. Zartosht, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00376-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-12-05</dateIssued>
+  <docketText>NG parties to file a Joint Pretrial Statement 7 days prior to the Final Pretrial Conference. (Michel, G)ORDER signed by Judge Garland E. Burrell, Jr. on 12/5/2012 ORDERING that Dispositional Documents be filed by 12/26/2012; CONTINUING the Final Pretrial Conference to 2/4/2013 at 2:30 PM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.; ORDERI</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00376-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00376/USCOURTS-caed-2_11-cv-00376-1/mods.xml">
+ <titleInfo>
+  <title>Johnson v. Zartosht, Inc. et al</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr on 1/2/13; Pursuant to the parties&apos; request for the due date on which a dispositional document shall be filed, said document shall be filed no later than January 22, 2013.(Matson, R)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00376-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5ebde</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00376/USCOURTS-caed-2_11-cv-00376-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00376_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00376/USCOURTS-caed-2_11-cv-00376-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00376/pdf/USCOURTS-caed-2_11-cv-00376-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00376; Johnson v. Zartosht, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00376-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr on 1/2/13; Pursuant to the parties&apos; request for the due date on which a dispositional document shall be filed, said document shall be filed no later than January 22, 2013.(Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00376-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00376/USCOURTS-caed-2_11-cv-00376-2/mods.xml">
+ <titleInfo>
+  <title>Johnson v. Zartosht, Inc. et al</title>
+  <subTitle>ORDER OF DISMISSAL signed by Judge Garland E. Burrell, Jr., on 1/24/13 ORDERING that this action is DISMISSED without prejudice. CASE CLOSED (Kastilahn, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00376-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183b5ebdd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00376/USCOURTS-caed-2_11-cv-00376-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00376_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00376/USCOURTS-caed-2_11-cv-00376-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00376/pdf/USCOURTS-caed-2_11-cv-00376-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00376; Johnson v. Zartosht, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00376-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-24</dateIssued>
+  <docketText>ORDER OF DISMISSAL signed by Judge Garland E. Burrell, Jr., on 1/24/13 ORDERING that this action is DISMISSED without prejudice. CASE CLOSED (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+</mods>
