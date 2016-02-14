@@ -10,6 +10,3 @@ class Site(scotus_chambers.Site):
 
     def _get_precedential_statuses(self):
         return ['Relating-to'] * len(self.case_names)
-
-    def _get_summaries(self):
-        return None
