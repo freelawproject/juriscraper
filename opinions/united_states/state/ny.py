@@ -10,15 +10,19 @@ History:
 from lxml import html
 from lxml.html import html5parser, fromstring, tostring
 import re
-from datetime import date, datetime
+from datetime import date
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
+    DOWNLOAD_URL_SUB_PATH = "td[2]//@href[not(contains(., 'DecisionList'))]"
+    FOUR_CELLS_SUB_PATH = '//*[count(td)=4'
+
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.crawl_date = date.today()
-        # http://www.nycourts.gov/ctapps/Decisions/2014/Jul14/Jul14.html
+        # https://www.nycourts.gov/ctapps/Decisions/2015/Dec15/Dec15.html
         self.url = 'http://www.nycourts.gov/ctapps/Decisions/{year}/{mon}{yr}/{mon}{yr}.html'.format(
             year=self.crawl_date.year,
             yr=self.crawl_date.strftime("%y"),
@@ -31,7 +35,7 @@ class Site(OpinionSite):
         return html_tree
 
     def _get_case_names(self):
-        path = '''//*[count(td)=4 and td[2]//@href[not(contains(., 'DecisionList'))]]'''  # Any element with four td's
+        path = '%s and %s]' % (self.FOUR_CELLS_SUB_PATH, self.DOWNLOAD_URL_SUB_PATH)
         case_names = []
         for element in self.html.xpath(path):
             case_name_parts = []
@@ -48,33 +52,38 @@ class Site(OpinionSite):
         return case_names
 
     def _get_download_urls(self):
-        path = '''//*[count(td)=4]/td[2]//@href[not(contains(., 'DecisionList'))]'''
-        return self.html.xpath(path)
+        return self.html.xpath('%s]/%s' % (self.FOUR_CELLS_SUB_PATH, self.DOWNLOAD_URL_SUB_PATH))
 
     def _get_case_dates(self):
-        path = '//tr[not(.//table)]'
         case_dates = []
-        for tr_elem in self.html.xpath(path):
-            if tr_elem.xpath('''td/font[@size = '+1']'''):
-                # If it's a date row...
-                d_string = html.tostring(tr_elem, method='text', encoding='unicode')
-                d = datetime.strptime(d_string.strip(), '%B %d, %Y').date()
-            else:
-                # See if it's a row with an opinion
-                if tr_elem.xpath('./td[4]') and \
-                        tr_elem.xpath('''./td[2]//@href[not(contains(., 'DecisionList'))]'''):
-                    case_dates.append(d)
+        for row in self.html.xpath('//tr[not(.//table)]'):
+            # self.date gets set when below condition fails
+            if not self._row_contains_date(row):
+                if self._row_contains_opinion(row):
+                    case_dates.append(self.date)
         return case_dates
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = '''//*[count(td)=4]/td[1]'''
         docket_numbers = []
-        for elem in self.html.xpath(path):
-            text_nodes = elem.xpath('.//text()')
-            t = ', '.join(text_nodes)
-            if re.search(r'No\.', t):
-                docket_numbers.append(t)
+        for cell in self.html.xpath('%s]/td[1]' % self.FOUR_CELLS_SUB_PATH):
+            text_node_strings = ', '.join(cell.xpath('.//text()'))
+            if re.search(r'No\.', text_node_strings):
+                docket_numbers.append(text_node_strings)
         return docket_numbers
+
+    def _row_contains_date(self, row):
+        try:
+            self.date = convert_date_string(self._date_row_data_to_string(row))
+        except ValueError:
+            return False
+        return True
+
+    def _row_contains_opinion(self, row):
+        return row.xpath('./td[4]') and row.xpath('./%s' % self.DOWNLOAD_URL_SUB_PATH)
+
+    def _date_row_data_to_string(self, row):
+        return html.tostring(row, method='text', encoding='unicode').strip()
+
