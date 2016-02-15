@@ -1,5 +1,4 @@
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.string_utils import convert_date_string
 
@@ -23,12 +22,12 @@ class Site(OpinionSite):
     def _get_case_names(self):
         cell_sub_path = 'td[%d]/a/text()' % self.CELLS['name']
         case_names_path = '%s/%s' % (self.BASE_TABLE_ROW_PATH, cell_sub_path)
-        case_names = [titlecase(case_name) for case_name in self.html.xpath(case_names_path)]
+        case_names = self.html.xpath(case_names_path)
 
         # Append case name for revised opinion records
         for row in self._get_table_rows():
             if self._row_has_revision(row):
-                case_names.append(titlecase(row.xpath(cell_sub_path)[0]))
+                case_names.append(row.xpath(cell_sub_path)[0])
 
         return case_names
 
