@@ -5,10 +5,9 @@
 #   2014-07-04: Created by Andrei Chelaru
 #   2014-07-05: Reviewed by mlr
 #   2014-12-15: Updated to fix regex and insanity errors.
+#   2016-02-17: Updated by arderyp, regex was breaking due to new page section.
 
-import re
 from datetime import date
-
 from dateutil.relativedelta import relativedelta, TH
 from juriscraper.OpinionSite import OpinionSite
 
@@ -16,6 +15,7 @@ from juriscraper.OpinionSite import OpinionSite
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
+        self.court_id = self.__module__
         # Last thursday, this court publishes weekly
         self.crawl_date = date.today() + relativedelta(weekday=TH(-1))
         self.url = 'http://decisions.courts.state.ny.us/ad3/CalendarPages/nc{month_nr}{day_nr}{year}.htm'.format(
@@ -23,38 +23,31 @@ class Site(OpinionSite):
             day_nr=self.crawl_date.strftime("%d"),
             year=self.crawl_date.year
         )
-        # self.url = 'http://decisions.courts.state.ny.us/ad3/CalendarPages/nc07032014.htm'
-        self.court_id = self.__module__
+        self.LINK_PATH = "//td[2]//a[contains(./@href, 'Decisions')]"
+        self.LINK_TEXT_PATH = '%s/text()' % self.LINK_PATH
+        self.LINK_HREF_PATH = '%s/@href' % self.LINK_PATH
 
     def _get_case_names(self):
-        path = '''//td[2]//a[contains(./@href, 'Decisions')]/text()'''
         case_names = []
-        for text in self.html.xpath(path):
-            # Uses a negative look ahead (assert that something is not followed
-            # by something else) to make sure to get the last occurrence of a
-            # docket number.
-            text = ' '.join(text.split())
-            if text.strip():
-                match_case_name = re.search('(\d{6}(?!.*\d{6})|.-\d{2}-\d{2})\s*(.*)', text)
-                case_names.append(match_case_name.group(2))
+        for link_text in self.html.xpath(self.LINK_TEXT_PATH):
+            text = link_text.strip()
+            if text:
+                case_names.append(text.split(None, 1)[1])
         return case_names
 
     def _get_download_urls(self):
-        path = '''//td[2]//a[contains(./@href, 'Decisions')]/@href'''
-        return list(self.html.xpath(path))
+        return list(self.html.xpath(self.LINK_HREF_PATH))
 
     def _get_case_dates(self):
-        path = "count(//td[2]//a[contains(./@href, 'Decisions')]/@href)"
-        return [self.crawl_date] * int(self.html.xpath(path))
+        return [self.crawl_date] * len(self.html.xpath(self.LINK_HREF_PATH))
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = '''//td[2]//a[contains(./@href, 'Decisions')]/text()'''
         docket_numbers = []
-        for text in self.html.xpath(path):
-            if text.strip():
-                match_docket_nr = re.search('(.*\d{6}|.-\d{2}-\d{2})\s*(.*)', text)
-                docket_numbers.append(match_docket_nr.group(1))
+        for link_text in self.html.xpath(self.LINK_TEXT_PATH):
+            text = link_text.strip()
+            if text:
+                docket_numbers.append(text.split()[0])
         return docket_numbers
