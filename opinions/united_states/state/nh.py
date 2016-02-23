@@ -40,7 +40,7 @@ class Site(OpinionSite):
                 name_raw = self.link_text_regex.search(text).group(2)
                 if name_raw:
                     link_names.append(' '.join(name_raw.split()))
-            case_names.append(' '.join(link_names))
+            case_names.append(' and '.join(link_names))
         return case_names
 
     def _get_download_urls(self):
@@ -69,11 +69,11 @@ class Site(OpinionSite):
         for link in self.html.xpath(self.link_path):
             # Text of some links includes info for multiple cases split by <br> so we'll
             # iterate over each, extract the docket number, then glue the numbers together
-            # to create a single "xxx,yyy" docket number. (Example: Feb2016)
+            # to create a single "xx,yy" docket number. (Example: Feb2016)
             case_dockets = []
             for text in link.xpath('text()'):
                 docket = self.link_text_regex.search(text).group(1)
                 if docket:
                     case_dockets.append(docket)
-            docket_numbers.append(','.join(case_dockets))
+            docket_numbers.append(', '.join(case_dockets))
         return docket_numbers
