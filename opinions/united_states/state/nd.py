@@ -35,7 +35,7 @@ class Site(OpinionSite):
             # Exit early for months with no cases (January 2009)
             return cases
         case_date = None
-        pattern = '^.{0,5}(\d{4} ND (?:App )?\d{1,4})'
+        citation_pattern = '^.{0,5}(\d{4} ND (?:App )?\d{1,4})'
         for element in self.html.xpath('//body/a|//body/font|//body/text()'):
             if hasattr(element, 'tag'):
                 if element.tag == 'font' and element.text:
@@ -45,7 +45,11 @@ class Site(OpinionSite):
                     url = element.xpath('@href')[0]
                     docket = url.split('/')[-1].split('.')[0]
             else:
-                found_citation = re.search(pattern, element.strip(), re.MULTILINE)
+                # Clean up text to make sure only single spaces between words
+                # to ensure that regex pattern works even if clerk accidentally
+                # types a tab or multiple spaces
+                text = ' '.join(element.strip().split())
+                found_citation = re.search(citation_pattern, text, re.MULTILINE)
                 if found_citation and found_citation.group(1):
                     citation = found_citation.group(1)
                     if self._should_scrape_case(citation) and name and case_date and docket:
@@ -59,7 +63,7 @@ class Site(OpinionSite):
         return cases
 
     def _is_appellate_citation(self, citation):
-        return 'ND App' in citation
+        return ' App ' in citation
 
     def _should_scrape_case(self, citation):
         return not self._is_appellate_citation(citation)
