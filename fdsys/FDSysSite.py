@@ -1,16 +1,21 @@
 # -*- coding: utf-8 -*-
 import glob
 import json
+import hashlib
 from collections import defaultdict
 from pprint import pprint
 
 import re
-import requests
-from juriscraper.AbstractSite import AbstractSite
 from datetime import date
 
 from lxml import etree
+import requests
 from requests.exceptions import MissingSchema
+from requests.adapters import HTTPAdapter
+
+
+from juriscraper.AbstractSite import AbstractSite
+
 
 
 def get_tree(url):
@@ -45,9 +50,13 @@ class FDSysModsContent(object):
             'court_location',
             'parties',
             'case_name',
-            'documents'
+            'documents',
         ]
+        self.cookies = {}
+        self.url = url
         self.tree = None
+        self.hash = None
+        self.method = 'GET'
         mods_url = self._get_mods_file_url(url)
         self.parse(mods_url)
 
@@ -65,6 +74,13 @@ class FDSysModsContent(object):
 
         for attr in self._all_attrs:
             self.__setattr__(attr, getattr(self, '_get_%s' % attr)())
+        self._make_hash()
+
+    def _make_hash(self):
+        """Make a unique ID. ETag and Last-Modified from courts cannot be
+        trusted
+        """
+        self.hash = hashlib.sha1(str(self.documents)).hexdigest()
 
     def _get_download_url(self):
         return ''.join(xpath(self.tree, "(//m:identifier[@type='uri'])[1]/text()")).strip()
@@ -124,6 +140,9 @@ class FDSysModsContent(object):
         """replaces content-detail.html with mods.xml"""
         return url.replace('content-detail.html', 'mods.xml')
 
+    def _get_adapter_instance(self):
+        return HTTPAdapter()
+
     # def _get_document_type(self, description):
     #     # get the first 5 words
     #     return ''
@@ -149,11 +168,11 @@ class FDSysSite(AbstractSite):
         for i, url in enumerate(xpath(self.html, "//s:loc/text()")):
             self.save_mods_file(url)
             mods_file = FDSysModsContent(url)
-            yield mods_file.get_content()
+            yield mods_file
 
     def __getitem__(self, i):
         mods_file = FDSysModsContent(xpath(self.html, "//s:loc/text()")[i])
-        return mods_file.get_content()
+        return mods_file
 
     def __len__(self):
         return len(xpath(self.html, "//s:loc/text()"))
