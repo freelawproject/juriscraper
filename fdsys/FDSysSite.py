@@ -13,9 +13,7 @@ import requests
 from requests.exceptions import MissingSchema
 from requests.adapters import HTTPAdapter
 
-
 from juriscraper.AbstractSite import AbstractSite
-
 
 
 def get_tree(url):
@@ -39,24 +37,23 @@ def xpath(tree, query):
 
 
 class FDSysModsContent(object):
-
     def __init__(self, url):
 
         self._all_attrs = [
-            'download_url',
-            'fdsys_id',
-            'court_id',
-            'docket_number',
-            'court_location',
-            'parties',
-            'case_name',
+            'download_url',  # used in get_binary_content
+            'fdsys_id',  # used in Docket.pacer_case_id
+            'court_id',  # used in Count.id
+            'docket_number',  # used in Docket.docket_number
+            'court_location',  # todo not sure where to use it
+            'parties',  # todo not sure where to use it
+            'case_name',  # used to get the case_name_short and Docket.case_name
             'documents',
         ]
-        self.cookies = {}
+        self.cookies = {}  # used in get_binary_content
         self.url = url
         self.tree = None
-        self.hash = None
-        self.method = 'GET'
+        self.hash = None  # used by DupChecker
+        self.method = 'GET'  # used by get_binary_content
         mods_url = self._get_mods_file_url(url)
         self.parse(mods_url)
 
@@ -123,16 +120,16 @@ class FDSysModsContent(object):
         return map(self._get_document, document_nodes)
 
     def _get_document(self, document_node):
-        desription = ' '.join(''.join(
-                            xpath(document_node, './/m:subTitle/text()')
-                    ).split()
+        description = ' '.join(''.join(
+            xpath(document_node, './/m:subTitle/text()')
+        ).split()
                               )
         return {
             'download_url': ''.join(xpath(document_node, './m:relatedItem/@xlink:href')).strip(),
-            'description': desription,
+            'description': description,
             'date_filed': ''.join(xpath(document_node, './m:originInfo/m:dateIssued/text()')),
-            # 'type': self._get_document_type(desription),
-            'number': ''.join(xpath(document_node, './/m:partNumber/text()')),
+            # 'type': self._get_document_type(description),
+            'number': ''.join(xpath(document_node, './/m:partNumber/text()')),  # todo not sure where to use it, because it differs from the one in pacer
         }
 
     @staticmethod
@@ -143,9 +140,9 @@ class FDSysModsContent(object):
     def _get_adapter_instance(self):
         return HTTPAdapter()
 
-    # def _get_document_type(self, description):
-    #     # get the first 5 words
-    #     return ''
+        # def _get_document_type(self, description):
+        #     # get the first 5 words
+        #     return ''
 
 
 class FDSysSite(AbstractSite):
@@ -278,4 +275,3 @@ if __name__ == '__main__':
     # for i in f:
     #     print i
     # #     pprint(i)0
-
