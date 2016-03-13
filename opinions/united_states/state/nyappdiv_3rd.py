@@ -31,7 +31,10 @@ class Site(OpinionSite):
         self.LINK_PATH = "//td[2]//a[contains(./@href, 'Decisions')]"
         self.LINK_TEXT_PATH = '%s/text()' % self.LINK_PATH
         self.LINK_HREF_PATH = '%s/@href' % self.LINK_PATH
-        self.LINK_TEXT_PATTERN = r'^(\d+(/\d+)?)(/)?(.+)'
+        self.LINK_TEXT_PATTERN_MEMORANDUM = (r'(?P<docket_number>^\d+(/\d+)?)(/)?'
+                                             r'(?P<case_name>.+)')
+        self.LINK_TEXT_PATTERN_ATTORNEY = (r'(?P<docket_number>^\w{1}-\d+-\d+)'
+                                          r'(?P<case_name>.+)')
 
     def _get_case_names(self):
         case_names = []
@@ -59,32 +62,15 @@ class Site(OpinionSite):
         return docket_numbers
 
     def _get_docket_and_name_from_text(self, text):
-        """Parse docket number and name from link text
-
-        There are multiple docket number formats, and there are also
-        instances of human typos that were breaking "logical" approaches
-        to parsing this data.  This is a loose approach that will fall
-        back on accepting the first space delimited element as the docket,
-        and will handle instances of human typos we've seen where a clerk
-        entered "######/Case name" instead of "###### Case name" or
-        "######/###### Case name".
-        """
-
         text = text.strip()
         if not text:
             return False, False
-        data = re.search(self.LINK_TEXT_PATTERN, text)
-        if data and data.group(1) and data.group(4):
-            # Docket is a standard xxxxxx or xxxxxx/yyyyyy number
-            docket = data.group(1)
-            name = ' '.join(data.group(4).split())
+
+        if text.split()[0].count('-') == 2:
+            data = re.search(self.LINK_TEXT_PATTERN_ATTORNEY, text)
         else:
-            # For most flexibility, assume docket is first substring in text
-            parts = text.split(None, 1)
-            docket = parts[0]
-            name = parts[1]
+            data = re.search(self.LINK_TEXT_PATTERN_MEMORANDUM, text)
+
+        docket = data.group('docket_number')
+        name = ' '.join(data.group('case_name').split())
         return docket, name
-
-
-
-

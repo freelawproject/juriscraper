@@ -1,6 +1,8 @@
-from juriscraper.OpinionSite import OpinionSite
-from datetime import datetime, timedelta, date
+from datetime import timedelta, date
 from dateutil.rrule import rrule, MONTHLY
+
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -42,10 +44,7 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         path = "{base}/td[1]/text()".format(base=self.base)
-        dates = []
-        for date_string in self.html.xpath(path):
-            dates.append(datetime.strptime(date_string.strip(), '%b. %d, %Y').date())
-        return dates
+        return [convert_date_string(date.strip()) for date in self.html.xpath(path) if date.strip()]
 
     def _get_download_urls(self):
         path = "{base}/td[2]/a[2]/@href".format(base=self.base)
