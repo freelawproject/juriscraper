@@ -7,14 +7,15 @@ Reviewer: mlr
 Date created: 2014-07-11
 """
 
-from datetime import date, datetime
-
+import re
 import certifi
+import requests
+from lxml import html
+from datetime import date
+
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
-from lxml import html
-import re
-import requests
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -24,7 +25,9 @@ class Site(OpinionSite):
         # For testing
         #self.url = 'http://www.cobar.org/opinions/opinionlist.cfm?casedate=6/30/2014&courtid=2'
         self.court_id = self.__module__
-        self.title_regex = re.compile(r'(?P<neutral_citations>.*?)\. (?P<docket_numbers>(?:Nos?\.)?.*\d{1,2})\. (?P<case_names>.*)\.')
+        self.title_regex = re.compile(r'(?P<neutral_citations>.*?)\. '
+                                      r'(?P<docket_numbers>(?:Nos?\.)?.*\d{1,2})(\.)? '
+                                      r'(?P<case_names>.*)\.')
         self.path = "//table//td[1]/ul/li[position() <= 5]/strong/a"
         # dummy sequence to force one call to _download_backwards
         self.back_scrape_iterable = ['dummy']
@@ -45,7 +48,7 @@ class Site(OpinionSite):
             for ahref in html_l.xpath(self.path):
                 text = ahref.xpath("./text()")[0]
                 url = ahref.xpath("./@href")[0]
-                parsed_date = datetime.strptime(text, "%B %d, %Y").date()
+                parsed_date = convert_date_string(text)
                 logger.info("Getting sub-url: %s" % url)
                 r = s.get(
                     url,
@@ -157,6 +160,12 @@ class Site(OpinionSite):
             for title in tree.xpath(path):
                 title = ' '.join(title.split())
                 value = self.title_regex.search(title).group(group_name)
+                if group_name == 'docket_numbers':
+                    # Dual docket numbers should be comma delimited, not ampersand
+                    value = value.replace(' & ', ', ')
+                    #Clean up typos where clerk forgot space between period and number
+                    if '.' in value and '. ' not in value:
+                        value = value.replace('.', '. ')
                 meta_data.append(value)
         return meta_data
 
