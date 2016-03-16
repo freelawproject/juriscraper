@@ -432,6 +432,7 @@ def trunc(s, length, ellipsis=None):
             s = u'%s%s' % (s, ellipsis)
         return s
 
+
 def convert_date_string(date_string):
     """Convert date string into standard date object"""
     return parser.parse(date_string).date()

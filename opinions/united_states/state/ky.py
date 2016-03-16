@@ -78,13 +78,17 @@ class Site(OpinionSite):
         def fetcher(elem):
             """This reaches out to a secondary system and scrapes the correct
              info.
-             """
+
+            You can find the front end of this system here:
+              - http://162.114.92.78/dockets/SearchbyCaseNumber.htm and
+              - http://162.114.92.78/dockets/
+            """
             if self.method == 'LOCAL':
                 return "No case names fetched during tests."
             else:
                 ip_addresses = ['162.114.92.72', '162.114.92.78']
                 for ip_address in ip_addresses:
-                    last_item = ip_addresses.index(ip_address) == len(ip_addresses) - 1
+                    last_item = (ip_addresses.index(ip_address) == len(ip_addresses) - 1)
                     url = 'http://%s/dockets/SearchCaseDetail.asp' % ip_address
                     anchor_text = html.tostring(elem, method='text', encoding='unicode')
                     m = self.docket_number_regex.search(anchor_text)
