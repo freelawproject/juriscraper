@@ -9,16 +9,16 @@ History:
  - 2014-08-05, mlr: Updated.
  - 2014-08-06, mlr: Updated.
  - 2014-09-18, mlr: Updated date parsing code to handle Sept.
+ - 2016-03-16, arderyp: Updated to return proper absolute pdf url paths, simplify date logic
 """
 
-from datetime import date
-import time
-
-import certifi
 import re
+import certifi
 import requests
 from lxml import html
+
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -53,7 +53,7 @@ class Site(OpinionSite):
             # Grab the content
             text = self._clean_text(r.text)
             html_tree = html.fromstring(text)
-            html_tree.rewrite_links(self._link_repl)
+            html_tree.make_links_absolute(url)
 
             # This district has some nasty HTML that occasionally breaks one case name across two anchors.
             # For example (http://www.5dca.org/Opinions/Opin2014/072114/filings%20072114.html):
@@ -109,19 +109,11 @@ class Site(OpinionSite):
 
     def _return_dates(self, html_tree):
         path = "//*[starts-with(., 'Opinions')]/text()"
-        dates = []
         text = html_tree.xpath(path)[0]
-        text = re.search('.* Week of (.*)', text).group(1).strip()
-        for date_fmt in ['%B %d, %Y', '%b. %d, %Y']:
-            text = re.sub('Sept', 'Sep', text)
-            try:
-                case_date = date.fromtimestamp(
-                    time.mktime(time.strptime(text, date_fmt)))
-                break
-            except ValueError:
-                continue
-        dates.extend([case_date] * int(html_tree.xpath("count({base})".format(base=self.base_path))))
-        return dates
+        date_string = re.search('.* Week of (.*)', text).group(1).strip()
+        case_date = convert_date_string(date_string)
+        count = int(html_tree.xpath("count({base})".format(base=self.base_path)))
+        return [case_date for i in range(count) ]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_dates)
