@@ -5,6 +5,7 @@ Author: Jon Andersen
 Reviewer: mlr
 History:
     2014-09-11: Created by Jon Andersen
+    2016-03-17: Website and phone are dead. Scraper disabled in __init__.py.
 """
 
 from datetime import datetime
