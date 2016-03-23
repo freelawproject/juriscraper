@@ -165,7 +165,7 @@ class FDSysSite(AbstractSite):
 
     def __iter__(self):
         for i, url in enumerate(xpath(self.html, "//s:loc/text()")):
-            self.save_mods_file(url)
+            # self.save_mods_file(url)
             mods_file = FDSysModsContent(url)
             yield mods_file
 
@@ -266,14 +266,14 @@ def get_the_first_5_words():
 
 if __name__ == '__main__':
     # get_court_locations_list()
-    get_the_first_5_words()
+    # get_the_first_5_words()
     # for f in glob.glob('./examples/*/*.xml'):
     #     fm = FDSysModsContent(f)
     #
     #     pprint(fm.get_content())
-    # f = FDSysSite()
+    f = FDSysSite()
     # f.url = "./sitemaps_examples/2006_USCOURTS_sitemap.xml"
-    # f.parse()
+    f.parse()
     # for i in f:
     #     print i
     # #     pprint(i)0
