@@ -41,10 +41,10 @@ class FDSysModsContent(object):
 
         self._all_attrs = [
             'download_url',  # used in get_binary_content
-            'fdsys_id',  # used in Docket.pacer_case_id
+            'fdsys_id',  # used in Docket.fdsys_case_id
             'court_id',  # used in Count.id
             'docket_number',  # used in Docket.docket_number
-            'court_location',  # todo not sure where to use it
+            'court_location',  # todo not sure where to use it, ignore for now
             'parties',  # todo not sure where to use it
             'case_name',  # used to get the case_name_short and Docket.case_name
             'documents',
@@ -105,6 +105,7 @@ class FDSysModsContent(object):
 
     @staticmethod
     def _get_party(party_node):
+        # todo add another model with these fields and a FK to Docket -- DONE
         return {
             'name_first': ''.join(xpath(party_node, './@firstName')),
             'name_last': ''.join(xpath(party_node, './@lastName')),
@@ -129,7 +130,8 @@ class FDSysModsContent(object):
             'description': description,
             'date_filed': ''.join(xpath(document_node, './m:originInfo/m:dateIssued/text()')),
             # 'type': self._get_document_type(description),
-            'number': ''.join(xpath(document_node, './/m:partNumber/text()')),  # todo not sure where to use it, because it differs from the one in pacer
+            # todo not sure where to use it, because it differs from the one in pacer, we don't need it
+            # 'number': ''.join(xpath(document_nodes, './/m:partNumber/text()')),
         }
 
     @staticmethod
