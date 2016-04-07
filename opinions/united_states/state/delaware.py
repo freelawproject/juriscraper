@@ -5,12 +5,8 @@ Creator: Andrei Chelaru
 Reviewer: mlr
 """
 
-import time
-from datetime import date
-
 from juriscraper.OpinionSite import OpinionSite
-from urlparse import urljoin
-from lxml import html
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
@@ -19,36 +15,33 @@ class Site(OpinionSite):
         self.url = 'http://courts.delaware.gov/opinions/list.aspx?ag=supreme%20court'
         # Note that we can't do the usual thing here because 'del' is a Python keyword.
         self.court_id = 'juriscraper.opinions.united_states.state.del'
-        self.base_path = "//*[contains(concat(' ',@class,' '),'Row')]//"
 
     def _get_case_dates(self):
-        path = "{base}td[1]//text()[1]".format(base=self.base_path)
-        case_dates = []
-        for t in self.html.xpath(path):
-            case_dates.append(date.fromtimestamp(time.mktime(time.strptime(t, '%m/%d/%y'))))
-        return case_dates
+        return [convert_date_string(date.strip()) for date in self._get_nth_cell_data(2, text=True)]
 
     def _get_download_urls(self):
-        path = "{base}td[2]//a/@href[not(contains(., 'mailto'))]".format(base=self.base_path)
-        # The reason this call to urljoin is necessary is unknown. For some reason, the usual function in AbstractSite
-        # that makes links absolute doesn't work on this site's html. Even lxml's iterlinks() method doesn't identify
-        # the links on this site.
-        return [urljoin(self.url, url) for url in self.html.xpath(path)]
+        return [url.strip() for url in self._get_nth_cell_data(1, href=True)]
 
     def _get_case_names(self):
-        path = "{base}td[2]//a[not(contains(./@href, 'mailto'))]/text()[1]".format(base=self.base_path)
-        return [case_name.strip() for case_name in self.html.xpath(path)]
+        return [name.strip() for name in self._get_nth_cell_data(1, link_text=True)]
 
     def _get_docket_numbers(self):
-        path = "{base}td[3]".format(base=self.base_path)
-        docket_numbers = []
-        for e in self.html.xpath(path):
-            docket_numbers.append(html.tostring(e, method='text', encoding='unicode'))
-        return docket_numbers
+        return [docket.strip() for docket in self._get_nth_cell_data(3, link_text=True)]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_dates)
 
     def _get_judges(self):
-        path = "{base}td[5]//text()[1]".format(base=self.base_path)
-        return [judge.strip() for judge in self.html.xpath(path)]
+        # We need special logic here because they use <br> tags in the cell text
+        return [' '.join(cell.xpath('text()')) for cell in self.html.xpath('//table/tr/td[6]')]
+
+    def _get_nth_cell_data(self, cell_number, text=False, href=False, link_text=False):
+        # Retrieve specific types of data from all nTH cells in the table
+        path = '//table/tr/td[%d]' % cell_number
+        if text:
+            path += '/text()'
+        elif href:
+            path += '/a/@href'
+        elif link_text:
+            path += '/a/text()'
+        return self.html.xpath(path)
