@@ -13,6 +13,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()
+        today = date(2016, 4, 5)
         self.crawl_date = today
         self.url = 'http://supremecourt.ne.gov/coa/opinions/%s' % today.strftime('%Y-%m-%d')
         #self.url = 'http://supremecourt.ne.gov/coa/opinions/2013-06-18'  # For testing...
@@ -44,18 +45,6 @@ class Site(OpinionSite):
     def _get_docket_numbers(self):
         path = '//tr[contains(@class, "opinion")]/td[1]//text()[normalize-space() != ""]'
         return list(self.html.xpath(path))
-
-    def _get_west_state_citations(self):
-        path = '//tr[contains(@class, "opinion")]/td[2]'
-        cites = []
-        for e in self.html.xpath(path):
-            s = html.tostring(e, method='text', encoding='unicode')
-            if s.strip():
-                cites.append(s.strip())
-            else:
-                # It's a memorandum opinion, s.strip() == ""
-                cites.append(None)
-        return cites
 
     def _download_backwards(self, i):
         host = 'http://supremecourt.ne.gov'
