@@ -13,7 +13,6 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()
-        today = date(2016, 4, 5)
         self.crawl_date = today
         self.url = 'http://supremecourt.ne.gov/coa/opinions/%s' % today.strftime('%Y-%m-%d')
         #self.url = 'http://supremecourt.ne.gov/coa/opinions/2013-06-18'  # For testing...
