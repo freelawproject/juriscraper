@@ -45,8 +45,7 @@ class Site(OralArgumentSite):
         path = "//td[contains(@class,'views-field-field-case-number')]//text()"
         return [s.strip() for s in self.html.xpath(path)]
 
-    def _download_backwards(self, date_str):
-        d = convert_date_string(date_str)
+    def _download_backwards(self, d):
         self.url = self.url = 'http://www.cafc.uscourts.gov/oral-argument-recordings?field_date_value2[value][date]={date}'.format(
                 date=d.strftime('%Y-%m-%d')
         )
