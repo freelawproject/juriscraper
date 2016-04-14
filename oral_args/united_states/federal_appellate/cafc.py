@@ -3,12 +3,15 @@ CourtID: cafc
 Court Short Name: cafc
 Author: Andrei Chelaru
 Reviewer: mlr
-Date created: 18 July 2014
+History:
+ - created by Andrei Chelaru, 18 July 2014
+ - Updated/rewritten by mlr, 2016-04-14
 """
 
-from datetime import datetime, date
-
+from datetime import date
+from dateutil.rrule import DAILY, rrule
 from juriscraper.OralArgumentSite import OralArgumentSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OralArgumentSite):
@@ -16,22 +19,36 @@ class Site(OralArgumentSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         d = date.today()
-        self.url = 'http://www.cafc.uscourts.gov/oral-argument-recordings/{date}/all'.format(
-            date=d.strftime('%Y-%m')
+        self.url = 'http://www.cafc.uscourts.gov/oral-argument-recordings?field_date_value2[value][date]={date}'.format(
+            date=d.strftime('%Y-%m-%d')
         )
+        self.back_scrape_iterable(i.date() for i in rrule(
+            DAILY,
+            interval=1,  # Every days
+            dtstart=date(2010, 7, 10),
+            until=date(2016, 4, 14),
+        ))
 
     def _get_download_urls(self):
-        path = "id('searchResults')//tr[position() > 2]/td[4]//@href"
+        path = "//td[contains(@class,'views-field-field-filename')]//@href"
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
-        path = "id('searchResults')//tr[position() > 2]/td[3]/text()"
+        path = "//td[contains(@class,'views-field-title')]//text()"
         return [' '.join(s.split()) for s in self.html.xpath(path)]
 
     def _get_case_dates(self):
-        path = "id('searchResults')//tr[position() > 2]/td[1]/text()"
-        return [datetime.strptime(s.strip(), '%Y-%m-%d').date() for s in self.html.xpath(path)]
+        path = "//span[@class='date-display-single']/@content"
+        return [convert_date_string(s.strip()) for s in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
-        path = "id('searchResults')//tr[position() > 2]/td[2]/text()"
+        path = "//td[contains(@class,'views-field-field-case-number')]//text()"
         return [s.strip() for s in self.html.xpath(path)]
+
+    def _download_backwards(self, date_str):
+        d = convert_date_string(date_str)
+        self.url = self.url = 'http://www.cafc.uscourts.gov/oral-argument-recordings?field_date_value2[value][date]={date}'.format(
+                date=d.strftime('%Y-%m-%d')
+        )
+        self.html = self._download()
+
