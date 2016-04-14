@@ -22,12 +22,12 @@ class Site(OralArgumentSite):
         self.url = 'http://www.cafc.uscourts.gov/oral-argument-recordings?field_date_value2[value][date]={date}'.format(
             date=d.strftime('%Y-%m-%d')
         )
-        self.back_scrape_iterable(i.date() for i in rrule(
+        self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
-            interval=1,  # Every days
-            dtstart=date(2010, 7, 10),
+            interval=1,  # Every day
+            dtstart=date(2015, 7, 10),
             until=date(2016, 4, 14),
-        ))
+        )]
 
     def _get_download_urls(self):
         path = "//td[contains(@class,'views-field-field-filename')]//@href"
