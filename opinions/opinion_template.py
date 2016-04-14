@@ -7,7 +7,6 @@ History:
   YYYY-MM-DD: Created by XXX
 """
 
-from datetime import datetime
 
 from lxml import html
 from juriscraper.OpinionSite import OpinionSite
