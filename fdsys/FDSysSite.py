@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 import glob
 import json
+import hashlib
 from collections import defaultdict
 from pprint import pprint
 
 import re
-import requests
-from juriscraper.AbstractSite import AbstractSite
 from datetime import date
 
 from lxml import etree
+import requests
 from requests.exceptions import MissingSchema
+from requests.adapters import HTTPAdapter
+
+from juriscraper.AbstractSite import AbstractSite
 
 
 def get_tree(url):
@@ -34,20 +37,23 @@ def xpath(tree, query):
 
 
 class FDSysModsContent(object):
-
     def __init__(self, url):
 
         self._all_attrs = [
-            'download_url',
-            'fdsys_id',
-            'court_id',
-            'docket_number',
-            'court_location',
-            'parties',
-            'case_name',
-            'documents'
+            'download_url',  # used in get_binary_content
+            'fdsys_id',  # used in Docket.fdsys_case_id
+            'court_id',  # used in Count.id
+            'docket_number',  # used in Docket.docket_number
+            'court_location',  # ignore for now
+            'parties',  # used in CaseParties
+            'case_name',  # used to get the case_name_short and Docket.case_name
+            'documents',
         ]
+        self.cookies = {}  # used in get_binary_content
+        self.url = url
         self.tree = None
+        self.hash = None  # used by DupChecker
+        self.method = 'GET'  # used by get_binary_content
         mods_url = self._get_mods_file_url(url)
         self.parse(mods_url)
 
@@ -65,6 +71,13 @@ class FDSysModsContent(object):
 
         for attr in self._all_attrs:
             self.__setattr__(attr, getattr(self, '_get_%s' % attr)())
+        self._make_hash()
+
+    def _make_hash(self):
+        """Make a unique ID. ETag and Last-Modified from courts cannot be
+        trusted
+        """
+        self.hash = hashlib.sha1(str(self.documents)).hexdigest()
 
     def _get_download_url(self):
         return ''.join(xpath(self.tree, "(//m:identifier[@type='uri'])[1]/text()")).strip()
@@ -107,16 +120,15 @@ class FDSysModsContent(object):
         return map(self._get_document, document_nodes)
 
     def _get_document(self, document_node):
-        desription = ' '.join(''.join(
-                            xpath(document_node, './/m:subTitle/text()')
-                    ).split()
+        description = ' '.join(''.join(
+            xpath(document_node, './/m:subTitle/text()')
+        ).split()
                               )
         return {
             'download_url': ''.join(xpath(document_node, './m:relatedItem/@xlink:href')).strip(),
-            'description': desription,
+            'description': description,
             'date_filed': ''.join(xpath(document_node, './m:originInfo/m:dateIssued/text()')),
-            # 'type': self._get_document_type(desription),
-            'number': ''.join(xpath(document_node, './/m:partNumber/text()')),
+            'entry_number': ''.join(xpath(document_node, './/m:partNumber/text()')),
         }
 
     @staticmethod
@@ -124,9 +136,8 @@ class FDSysModsContent(object):
         """replaces content-detail.html with mods.xml"""
         return url.replace('content-detail.html', 'mods.xml')
 
-    # def _get_document_type(self, description):
-    #     # get the first 5 words
-    #     return ''
+    def _get_adapter_instance(self):
+        return HTTPAdapter()
 
 
 class FDSysSite(AbstractSite):
@@ -147,13 +158,13 @@ class FDSysSite(AbstractSite):
 
     def __iter__(self):
         for i, url in enumerate(xpath(self.html, "//s:loc/text()")):
-            self.save_mods_file(url)
+            # self.save_mods_file(url)
             mods_file = FDSysModsContent(url)
-            yield mods_file.get_content()
+            yield mods_file
 
     def __getitem__(self, i):
         mods_file = FDSysModsContent(xpath(self.html, "//s:loc/text()")[i])
-        return mods_file.get_content()
+        return mods_file
 
     def __len__(self):
         return len(xpath(self.html, "//s:loc/text()"))
@@ -248,15 +259,14 @@ def get_the_first_5_words():
 
 if __name__ == '__main__':
     # get_court_locations_list()
-    get_the_first_5_words()
+    # get_the_first_5_words()
     # for f in glob.glob('./examples/*/*.xml'):
     #     fm = FDSysModsContent(f)
     #
     #     pprint(fm.get_content())
-    # f = FDSysSite()
+    f = FDSysSite()
     # f.url = "./sitemaps_examples/2006_USCOURTS_sitemap.xml"
-    # f.parse()
+    f.parse()
     # for i in f:
     #     print i
     # #     pprint(i)0
-
