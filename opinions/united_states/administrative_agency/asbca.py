@@ -8,18 +8,19 @@ History:
     2016-03-17: Website and phone are dead. Scraper disabled in __init__.py.
 """
 
+import re
 from datetime import datetime
 
-import re
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import convert_date_string
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
-        self.url = 'http://www.asbca.mil/Decisions/decisions%d.html' \
-                   % datetime.today().year
+        self.url = 'http://www.asbca.mil/Decisions/decisions%d.html' % datetime.today().year
+        print(self.url)
         self.columns = None
         self.back_scrape_iterable = range(2013, 2000 - 1, -1)
 
@@ -45,13 +46,12 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         self.parse_column_names()
-        path = "//table/tr[td/a]/td[%d]/text()" \
-               % (self.columns['Decision Date'])
+        path = "//table/tr[td/a]/td[%d]/text()" % (self.columns['Decision Date'])
+        return [self._get_date_object_from_string(date_string) for date_string in self.html.xpath(path)]
 
-        def sanitize_date(s):
-            return s.strip().replace(' ,', ', ').replace('2104', '2014')
-        return [datetime.strptime(sanitize_date(date_string), '%B %d, %Y').date()
-                for date_string in self.html.xpath(path)]
+    def _get_date_object_from_string(self, date_string):
+        date_string = date_string.strip().replace(' ,', ', ').replace('2104', '2014')
+        return convert_date_string(date_string)
 
     def _get_case_names(self):
         path = "//table/tr/td/a[1]"
