@@ -20,7 +20,6 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www.asbca.mil/Decisions/decisions%d.html' % datetime.today().year
-        print(self.url)
         self.columns = None
         self.back_scrape_iterable = range(2013, 2000 - 1, -1)
 
