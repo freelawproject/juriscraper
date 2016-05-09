@@ -1,7 +1,7 @@
 __all__ = [
-    # 'acca_memorandum',
-    # 'acca_p',
-    # 'acca_summary',
+     'acca_memorandum',
+     'acca_p',
+     'acca_summary',
     'afcca',
     'armfor',
     'cavc',
